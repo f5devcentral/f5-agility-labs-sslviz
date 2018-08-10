@@ -8,7 +8,7 @@
 classname = "F5 BIG-IP SSL Orchestrator Training Lab"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
-github_repo = "https://github.com/fancydos/f5-agility-labs-sslo"
+github_repo = "https://github.com/f5devcentral/f5-agility-labs-sslviz"
 
 #
 # END CONFIG

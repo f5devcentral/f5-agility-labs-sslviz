@@ -18,6 +18,6 @@ Support
 -------
 
 Bug and enhancement requests can be made by opening an
-[issue](https://github.com/fancydos/f5-agility-labs-sslo/issues) within
-the [GitHub repository](https://github.com/fancydos/f5-agility-labs-sslo).
+[issue](https://github.com/f5devcentral/f5-agility-labs-sslviz/issues) within
+the [GitHub repository](https://github.com/f5devcentral/f5-agility-labs-sslviz).
 
