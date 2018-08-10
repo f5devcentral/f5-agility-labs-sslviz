@@ -1,8 +1,23 @@
-# F5 Agility 2017 SSL Visibility Labs
+# F5 SSL Orchestrator Training Lab Guide
 
-https://github.com/f5devcentral/f5-agility-labs-sslviz
+This repository contains the source for F5 SSL Orchestrator Training
+Lab Guide.
 
-http://f5-agility-labs-sslviz.readthedocs.io/en/latest/
+## Class 1: SSL Orchestration
 
-git clone https://github.com/f5devcentral/f5-agility-labs-sslviz.git
+This introductory class covers the following topics:
+
+ - SSLO Deployment Settings
+ - Security Services Creation
+ - Classification and Interception Rules
+ - Outbound and Inbound Use cases
+
+Expected time to complete: **4 hours**
+
+Support
+-------
+
+Bug and enhancement requests can be made by opening an
+[issue](https://github.com/fancydos/f5-agility-labs-sslo/issues) within
+the [GitHub repository](https://github.com/fancydos/f5-agility-labs-sslo).
 
