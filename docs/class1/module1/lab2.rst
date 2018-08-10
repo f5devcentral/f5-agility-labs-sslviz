@@ -1,60 +1,61 @@
-Lab 2: Create a 1-box Explicit Proxy SSLO
-==========================================
+Lab 1.2: HTTP Service
+---------------------
 
-An explicit proxy is fundamentally a proxy service that the client is
-aware of; and there are a number of facilities by which to get client
-traffic to an explicit proxy. The easiest option, and the one used in
-this lab, is to manually configure the client browser for explicit proxy
-access and point it at the SSL Orchestrator’s explicit proxy ingress
-listener. Other options include Proxy Auto-Configuration (PAC) scripts
-and Web Proxy Autodiscovery Protocol (WPAD), two techniques often
-employed by gateway devices to more intelligently steer traffic through
-potentially multiple outbound paths. In this lab you’ll be modifying the
-transparent proxy configuration from Lab 1 to support explicit proxy.
-All other settings, including security service definitions, service
-chains and traffic classifiers, can remain unchanged.
+Task 1 - Create SSLO HTTP Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Step 1: Un-deploy the transparent proxy SSLO configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This process will create additional ingress listening services in the
-SSL Orchestrator configuration, so it’s important to first un-deploy the
-deployed SSLO before moving on.
-
-Step 2: Configure the SSL Orchestrator General Properties
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In the General Properties section of the SSL Orchestrator configuration,
-make the following modifications:
-
--  **Which proxy schemes do you want to implement?** – select
-   ``Implement explicit proxy only``.
-
--  **On which VLAN(s) should the explicit proxy listen?** – select the
-   client side inbound VLAN.
-
--  **What IPv4 address and port should the explicit proxy use?** – enter
-   an IP address in the client side inbound VLAN subnet, which in this
-   case is ``10.20.0.0/24``. So for example, ``10.20.0.150`` and the
-   common explicit proxy port ``3128`` or ``8080``.
-
--  Click the **Finished** button.
-
-Step 3: Save and deploy the configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A service is a collection of security devices that will receive decrypted traffic from the SSLO solution. In this section, the HTTP Service will be created. An HTTP Service would typically be a Secure Web Proxy. The proxy could explicit or transparent.
 
 
-Click the **Save** button and then the **Deploy** button. This will
-create an additional ingress listener on the IPv4 address and port
-specified above.
+1. Login to the BIG-IP with Firefox
 
-Step 4: Test
-~~~~~~~~~~~~
+2. Navigate to :menuselection:`SSL Orchestrator --> Deployment --> Deployment Settings` and
+   click:
 
-On a browser on the Windows client desktop, change the browser’s proxy
-settings to match the IPv4 address and port defined above, and then test
-outbound access.
+   |image4|
 
-You can also test from cURL using the following command line syntax:
+3. On the menu across the top of the main window pane, navigate to :menuselection:`Services --> HTTP Services` and click:
 
-``curl -vk --proxy 10.20.0.150:3128 https://www.bing.com``
+   |image9|
+
+4. Click :guilabel:`Create` on the far right:
+
+   |image10|
+
+5. Enter the following information:
+
+   .. list-table::
+      :widths: 50 50
+      :header-rows: 1
+      :stub-columns: 1
+
+
+      * - **Property**
+        - **Value**
+      * - Name
+        - ssloS_HTTP_service
+      * - Proxy Type
+        - Explicit
+      * - To Service VLAN
+        - ssloN_HTTP_in.app/ssloN_HTTP_in
+      * - Node --> IP Address
+        - 198.19.96.66 (click :guilabel:`Add`)
+      * - From Service VLAN
+        - ssloN_HTTP_out.app/ssloN_HTTP_out
+
+   .. NOTE:: 
+      For :guilabel:`To Service VLAN` and :guilabel:`From Service VLAN`,
+      use the drop-down menu to select the correct value.
+
+6. Once your settings look like the following screenshot, click :guilabel:`Finish`:
+
+   |image11|
+
+.. |image4| image:: /_static/image4.png
+.. |image9| image:: /_static/image9.png
+    :width: 80%
+.. |image10| image:: /_static/image10.png
+    :width: 80%
+.. |image11| image:: /_static/image11.png
+    :width: 80%
+

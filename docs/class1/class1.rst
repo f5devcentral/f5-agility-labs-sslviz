@@ -1,62 +1,35 @@
-Class 1: SSL Orchestrator 2.0
-=============================
+Class 1: SSL Orchestration
+==========================
 
-F5 SSL Orchestrator (SSLO) provides an all-in-one appliance solution
-designed specifically to optimize the SSL infrastructure, provide
-security devices with visibility of SSL/TLS encrypted traffic, and
-maximize efficient use of that existing security investment. This
-solution supports policy-based management and steering of traffic flows
-to existing security devices, designed to easily integrate into existing
-architectures, and centralizes the SSL decrypt/encrypt function by
-delivering the latest SSL encryption technologies across the entire
-security infrastructure.
+F5 SSL Orchestrator provides high-performance decryption of inbound and
+outbound SSL/TLS traffic, enabling security inspection to expose threats
+and stop attacks. Dynamic service chaining and policy-based traffic
+steering allow organizations to intelligently manage encrypted traffic
+flows across the entire security chain with optimal availability.
 
-**Multi-Layered Security**
+SSL Orchestrator ensures encrypted traffic can be decrypted, inspected
+by security controls, then re-encrypted, delivering enhanced visibility
+to mitigate threats traversing the network. As a result, organizations
+maximize their security services investment for malware, data loss
+prevention (DLP), ransomware, and next-generation firewalls (NGFW),
+thereby preventing inbound and outbound threats, including exploitation,
+callback, and data exfiltration.
 
-In order to solve specific security challenges, security administrators
-are accustomed to manually chaining together multiple point products,
-creating a bare-bones “security stack” consisting of multiple services.
-A typical stack may include components like Data Leak Prevention (DLP)
-scanners, Web Application Firewalls (WAF), Intrusion Prevention and
-Detection Systems (IPS and IDS), Malware Analysis tools, and more. In
-this model, all user sessions are provided the same level of security,
-as this “daisy chain” of services is hard-wired.
+This class covers the following topics:
 
-**Dynamic Service Chaining**
+-  SSLO Deployment Settings
+-  Security Services Creation
+-  Classification and Interception Rules
+-  Outbound and Inbound Use cases
 
-Dynamic Service Chaining processes specific connections based on context
-provided by the Classification Engine. These service chains can include
-four types of services (Layer 2 in-line services, Layer 3 in-line
-services, receive-only services, and ICAP services) you define, as well
-as any decrypt zone between separate ingress and egress devices).
+Expected time to complete: **4 hours**
 
-**Classification Engine**
-
-Classification Engine provides a rich set of methods based on context to
-dynamically determine how best to optimize the flow through the security
-stack. Context can come from the following:
-
--  Source IP/subnet
-
--  Destination IP/subnet
-
--  IP intelligence category - Subscription
-
--  IP geolocation
-
--  Host and domain name
-
--  URL filtering category - Subscription
-
--  Destination port
-
--  Protocol
+To continue please review the information about the Lab Environment.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
    :glob:
 
-   labinfo
+   labinfo/labinfo
    module*/module*
-   appendix*
+

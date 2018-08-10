@@ -1,15 +1,11 @@
-|classname|
-===========
-
-Welcome to the |classbold| lab at F5 Agility |year|
-
-|repoinfo|
+F5 SSL Orchestrator Training Lab
+================================
 
 .. toctree::
    :maxdepth: 3
-   :numbered:
    :caption: Contents:
    :glob:
 
+   intro
    class*/class*
-   
+
