@@ -29,7 +29,6 @@ IDS/IPS or DLP solution. Some refer to this as a "Bump in the Wire."
    .. list-table::
       :widths: 50 50
       :header-rows: 1
-      :stub-columns: 1
 
 
       * - **Property**

@@ -19,7 +19,6 @@ Task 1 - Interception Rules
    .. list-table::
       :widths: 50 50
       :header-rows: 1
-      :stub-columns: 1
 
 
       * - **Property**

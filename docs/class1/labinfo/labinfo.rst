@@ -10,7 +10,6 @@ Lab Topology
 .. list-table::
    :widths: 15 30 30
    :header-rows: 1
-   :stub-columns: 1
 
 
    * - **Environment**
@@ -36,7 +35,6 @@ Lab Topology
 .. list-table::
    :widths: 15 30 30
    :header-rows: 1
-   :stub-columns: 1
 
 
    * - **VLAN**

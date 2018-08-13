@@ -29,7 +29,6 @@ typically be an IDS/IPS, DLP, or Next-Gen Firewall (NGFW).
    .. list-table::
       :widths: 50 50
       :header-rows: 1
-      :stub-columns: 1
 
 
       * - **Property**

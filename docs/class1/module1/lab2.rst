@@ -27,7 +27,6 @@ A service is a collection of security devices that will receive decrypted traffi
    .. list-table::
       :widths: 50 50
       :header-rows: 1
-      :stub-columns: 1
 
 
       * - **Property**

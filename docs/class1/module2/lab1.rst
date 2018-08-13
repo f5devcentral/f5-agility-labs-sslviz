@@ -25,7 +25,6 @@ wildcard virtual server listening on port 443.
    .. list-table::
       :widths: 50 50
       :header-rows: 1
-      :stub-columns: 1
 
 
       * - **Property**
@@ -68,7 +67,6 @@ wildcard virtual server listening on port 443.
    .. list-table::
       :widths: 50 50
       :header-rows: 1
-      :stub-columns: 1
 
 
       * - **Property**
@@ -107,7 +105,6 @@ will accept connections.
    .. list-table::
       :widths: 50 50
       :header-rows: 1
-      :stub-columns: 1
 
 
       * - **Property**
