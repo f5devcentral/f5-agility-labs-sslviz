@@ -1,8 +1,8 @@
 Participant Hands-on Lab Guide
 
-|image0|
+.. image:: images/image1.png
 
-    Last Updated: *12.2018*
+Last Updated: *12.2018*
 
 ©2016 F5 Networks, Inc. All rights reserved. F5, F5 Networks, and the F5
 logo are trademarks of F5 Networks, Inc. in the U.S. and in certain
@@ -83,7 +83,7 @@ security stack. Context can minimally come from the following:
 +========================================================+=======================+
 +--------------------------------------------------------+-----------------------+
 
-|image1|
+.. image:: images/image2.png
 
 What’s new in SSLO 4.0 and 5.0?
 ===============================
@@ -423,11 +423,10 @@ streamlined user experience. This workflow-based architecture provides
 intuitive, re-entrant configuration steps tailored to the selected
 topology.
 
-|image2|
+.. image:: images/image3.png
 
 The following steps will walk through the Guided Configuration (GC) to
 build a simple transparent forward proxy.
-
 The following provides verbose details on each setting. For a more
 concise set of lab steps, without details, skip to the bottom of this
 lab (Lab 1).
@@ -436,7 +435,7 @@ lab (Lab 1).
    new BIG-IP build, upon first access, GC will automatically load and
    deploy the built-in SSLO package.
 
-   |image3|
+   .. image:: images/image4.png
 
 -  \ **Configuration review and prerequisites** – take a moment to
    review the topology options and workflow configuration steps
@@ -448,9 +447,9 @@ lab (Lab 1).
 
    NTP settings have already been defined in this lab.
 
-   |image4|
+   .. image:: images/image5.png
 
-   |image5|
+   .. image:: images/image6.png
 
 -  \ **Topology Properties** – SSLO now creates *discreet*
    configurations based on the selected topology. For example, in
@@ -529,7 +528,7 @@ lab (Lab 1).
       SSLO-type access policy and per-request policy that can easily be
       consumed by an LTM virtual server.
 
-      |image6|
+      .. image:: images/image7.png
 
       For this lab,
 
@@ -544,7 +543,7 @@ lab (Lab 1).
 
    -  Click Save & Next.
 
-|image7|
+.. image:: images/image8.png
 
 -  \ **SSL Configurations** – this page defines the specific SSL
    settings for the selected topology, in this case a forward proxy, and
@@ -668,7 +667,7 @@ lab (Lab 1).
 
    -  Click Save & Next.
 
-      |image8|
+.. image:: images/image9.png
 
 -  \ **Services List** – the Services List page is used to define
    security services that attach to SSLO. The 5.0 SSLO Guided
@@ -678,12 +677,11 @@ lab (Lab 1).
    “generic” security services. Depending on screen resolution, it may
    be necessary to scroll down to see additional services.
 
-    |image9|
+   .. image:: images/image10.png
 
-    This lab will create one of each type of security service. Click Add
-    Service, then either select a service from the catalog and click
-    Add, or simply double-click the service to go to its configuration
-    page.
+   This lab will create one of each type of security service. Click Add
+   Service, then either select a service from the catalog and click Add, or
+   simply double-click the service to go to its configuration page.
 
 -  **Inline layer 2 service** – select the FireEye Inline Layer 2
    service from the catalog and click Add, or simply double-click the
@@ -1036,7 +1034,7 @@ lab (Lab 1).
 
 -  Click Save & Next.
 
-|image10|
+.. image:: images/image11.png
 
 -  \ **Service Chain List** – service chains are arbitrarily-ordered
    lists of security devices. Based on environmental requirements,
@@ -1047,7 +1045,7 @@ lab (Lab 1).
    subset, and traffic destined to a financial service URL can bypass
    decryption and still flow through a smaller set of security services.
 
-    |image11|
+   .. image:: images/image12.png
 
 -  Click Add to create a new service chain containing all of the
    security services.
@@ -1074,7 +1072,7 @@ lab (Lab 1).
 
 -  Click Save & Next.
 
-   |image12|
+.. image:: images/image13.png
 
 -  \ **Security Policy** – security policies are the set of rules that
    govern how traffic is processed in SSLO. The “actions” a rule can
@@ -1090,7 +1088,7 @@ lab (Lab 1).
     drag-and-drop user interface for the definition of security
     policies.
 
-    |image13|
+    .. image:: images/image14.png
 
     In the background, SSLO maintains these security policies as visual
     per-request policies. If traffic processing is required that exceeds
@@ -1124,7 +1122,7 @@ and Services” and “Health and Medicine” URL categories.
 
    -  Click OK.
 
-      |image14|
+      .. image:: images/image15.png
 
     Notice in the list of rules that the **All Traffic** rule intercepts
     but does not send traffic to a service chain. For the lab, edit this
@@ -1137,11 +1135,11 @@ and Services” and “Health and Medicine” URL categories.
 
 -  Click OK.
 
-|image15|
+.. image:: images/image16.png
 
-    Click Save & Next.
+-  Click Save & Next.
 
-|image16|
+.. image:: images/image17.png
 
 -  \ **Interception Rule** – interception rules are based on the
    selected topology and define the “listeners”, analogous to LTM
@@ -1164,7 +1162,7 @@ and Services” and “Health and Medicine” URL categories.
 
    -  Click Save & Next.
 
-|image17|
+.. image:: images/image18.png
 
 \ **Egress Setting** – traffic egress settings are now defined
 per-topology and manage both the gateway route and outbound SNAT
@@ -1190,7 +1188,7 @@ settings.
 
 -  Click Save & Next.
 
-|image18|
+.. image:: images/image19.png
 
 -  \ **Summary** – the summary page presents an expandable list of all
    of the workflow-configured objects. To expand the details for any
@@ -1204,12 +1202,12 @@ settings.
 Upon successfully deploying the configuration, SSL Orchestrator will now
 display a **Dashboard** view:
 
-|image19|
+.. image:: images/image20.png
 
 The **Interception Rules** tab shows the listeners that were created per
 the selected topology.
 
-|image20|
+.. image:: images/image21.png
 
 In the above,
 
@@ -1233,12 +1231,14 @@ To test the deployed solution, use the following options:
 
 -  **Server certificate test**
 
-    |image21|\ Open a browser on the client system and navigate to any
+    Open a browser on the client system and navigate to any
     remote HTTPS site, for example, https://www.google.com. Once the
     site opens in the browser, check the server certificate of the site
     and verify that it has been issued by the local CA configured in
     SSLO. This confirms that the SSL forward proxy functionality enabled
     by SSL Orchestrator is working correctly.
+
+    .. image:: images/image22.png
 
 -  **Decrypted traffic analysis on the F5**
 
@@ -1697,13 +1697,13 @@ Enabling explicit proxy authentication in SSLO requires two steps,
 -  **Create an SWG-Explicit access policy** – explicit proxy
    authentication is defined as an access policy of type SWG-Explicit.
 
-   |image22|
+   .. image:: images/image23.png
 
    This policy will typically contain an HTTP 407 Response challenge,
    and then some form of authentication, which could HTTP Basic, NTLM or
    Kerberos.
 
-   |image23|
+   .. image:: images/image24.png
 
 -  **Create or edit an Explicit Proxy SSLO topology and attach the
    SWG-Explicit access policy** – to attach the SWG-Explicit access
@@ -1844,7 +1844,7 @@ Lab 5 – Manage the SSLO security policy
 SSL Orchestrator provides a rich, interactive, rules-based security
 policy through the Guided Configuration.
 
-|image24|
+.. image:: images/image25.png
 
 The security policy itself is a front-end to an access per-request
 engine that converts the rules into visual elements in this policy. Also
@@ -1852,7 +1852,7 @@ note that the order of rules affects the order of events in the visual
 policy. Rules are read top-to-bottom and converted into corresponding
 visual agents nesting from left to right.
 
-|image25|
+.. image:: images/image26.png
 
 While security policy rules work well for most traffic processing
 scenarios, it may be necessary to go beyond their capabilities and
@@ -1908,29 +1908,29 @@ The following are a few examples of security policy use cases,
    outbound desktop client’s subnet, intercepts SSL, and sends to a
    service chain. All other traffic is bypassed with no service chain.
 
-   |image26|
+   .. image:: images/image27.png
 
 -  Add a rule to the above security policy that matches a specific URL
    category, bypasses SSL and sends to a service chain. Move this rule
    to the top of the list.
 
-   |image27|
+   .. image:: images/image28.png
 
 -  Add a new rule to the above security policy that matches a specific
    destination IP and blocks this traffic. Move this rule below the URL
    category rule, but above the client network rule.
 
-   |image28|
+   .. image:: images/image29.png
 
 -  Click Deploy, then navigate to the **Security Policies** tab in the
    SSL Orchestrator UI. For the newly-created security policy, click the
    link under the **Per Request Policies** header. This will open a new
    tab to the visual per-request policy.
 
-   |image29|
+   .. image:: images/image30.png
 
-    Notice that the visual policy elements are nested in accordance with
-    the ordered set of rules,
+   Notice that the visual policy elements are nested in accordance with
+   the ordered set of rules,
 
 -  If the URL category is “Financial Data and Services” (urlf\_bypass),
    bypass SSL and send to a service chain.
@@ -2617,7 +2617,7 @@ This lab environment contains an additional BIG-IP machine named “BIG-IP
 Extra Services” and has no specific use in the previously-described demo
 environment.
 
-|image30|
+.. image:: images/image31.png
 
 However, a BIG-IP can be a useful tool in an SSL Orchestrator
 environment. In most cases it just needs to be re-licensed and
@@ -3046,97 +3046,3 @@ Lab 3 demo script
 2. Local Forwarding Nameserver(s): 10.1.20.1
 
 3. Click Deploy
-
-.. |image0| image:: images/image1.png
-   :width: 1.93667in
-   :height: 0.61667in
-.. |image1| image:: images/image3.emf
-   :width: 5.52777in
-   :height: 1.83660in
-.. |image2| image:: images/image4.emf
-   :width: 7.05000in
-   :height: 0.60069in
-.. |image3| image:: images/image5.png
-   :width: 4.00000in
-   :height: 1.70331in
-.. |image4| image:: images/image6.png
-   :width: 3.89781in
-   :height: 1.79686in
-.. |image5| image:: images/image7.emf
-   :width: 7.05000in
-   :height: 0.65417in
-.. |image6| image:: images/image8.png
-   :width: 6.50902in
-   :height: 0.94378in
-.. |image7| image:: images/image9.emf
-   :width: 7.05000in
-   :height: 0.65417in
-.. |image8| image:: images/image10.emf
-   :width: 7.05000in
-   :height: 0.65417in
-.. |image9| image:: images/image11.png
-   :width: 6.57147in
-   :height: 1.40984in
-.. |image10| image:: images/image12.emf
-   :width: 7.05000in
-   :height: 0.65417in
-.. |image11| image:: images/image13.emf
-   :width: 6.51721in
-   :height: 0.76073in
-.. |image12| image:: images/image14.emf
-   :width: 7.05000in
-   :height: 0.65417in
-.. |image13| image:: images/image15.png
-   :width: 6.50000in
-   :height: 1.00714in
-.. |image14| image:: images/image16.png
-   :width: 4.59722in
-   :height: 2.15278in
-.. |image15| image:: images/image17.png
-   :width: 7.05000in
-   :height: 1.31875in
-.. |image16| image:: images/image18.emf
-   :width: 7.05000in
-   :height: 0.65417in
-.. |image17| image:: images/image18.emf
-   :width: 7.05000in
-   :height: 0.65417in
-.. |image18| image:: images/image19.emf
-   :width: 7.05000in
-   :height: 0.65417in
-.. |image19| image:: images/image20.png
-   :width: 7.05000in
-   :height: 3.99583in
-.. |image20| image:: images/image21.png
-   :width: 7.05000in
-   :height: 2.83611in
-.. |image21| image:: images/image22.emf
-   :width: 2.51181in
-   :height: 3.15278in
-.. |image22| image:: images/image23.png
-   :width: 4.34412in
-   :height: 1.40000in
-.. |image23| image:: images/image24.png
-   :width: 4.50737in
-   :height: 1.47179in
-.. |image24| image:: images/image25.png
-   :width: 6.30140in
-   :height: 1.33323in
-.. |image25| image:: images/image26.png
-   :width: 6.23611in
-   :height: 1.41667in
-.. |image26| image:: images/image27.png
-   :width: 6.48125in
-   :height: 1.62353in
-.. |image27| image:: images/image28.png
-   :width: 6.48125in
-   :height: 1.93278in
-.. |image28| image:: images/image29.png
-   :width: 6.46715in
-   :height: 1.59746in
-.. |image29| image:: images/image30.png
-   :width: 6.45927in
-   :height: 1.82482in
-.. |image30| image:: images/image31.png
-   :width: 4.41667in
-   :height: 4.41667in
