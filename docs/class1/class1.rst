@@ -1,5 +1,5 @@
-Class 1: SSL Orchestration
-==========================
+Class 1: SSL Orchestration v4
+=============================
 
 F5 SSL Orchestrator provides high-performance decryption of inbound and
 outbound SSL/TLS traffic, enabling security inspection to expose threats
