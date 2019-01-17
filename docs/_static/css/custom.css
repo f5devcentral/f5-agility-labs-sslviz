@@ -34,3 +34,7 @@
     margin-left: auto;
     margin-right: 0;
 }
+
+.red {
+    color: rgb(192, 0, 0);
+}
