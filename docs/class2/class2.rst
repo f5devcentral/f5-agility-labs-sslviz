@@ -1,22 +1,3 @@
-Participant Hands-on Lab Guide
-
-.. image:: images/image1.png
-
-Last Updated: *12.2018*
-
-©2016 F5 Networks, Inc. All rights reserved. F5, F5 Networks, and the F5
-logo are trademarks of F5 Networks, Inc. in the U.S. and in certain
-other countries. Other F5 trademarks are identified at f5.com.
-
-Any other products, services, or company names referenced herein may be
-trademarks of their respective owners with no endorsement or
-affiliation, express or implied, claimed by F5.
-
-These training materials and documentation are F5 Confidential
-Information and are subject to the F5 Networks Reseller Agreement. You
-may not share these training materials and documentation with any third
-party without the express written permission of F5.
-
 What is the F5 SSL Orchestrator?
 ================================
 
