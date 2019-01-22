@@ -39,5 +39,5 @@ before starting the iApp:
   use a gateway pool defined within SSLO`.
 
 .. note:: As a general rule, avoid using names with dashes (ex. sslo-demo-1)
-   while creating objects in SSL Orchestrator. Underscores (ex. sslo\_demo\_1)
+   while creating objects in SSL Orchestrator. Underscores (ex. sslo_demo_1)
    and camel-casing (ex. ssloDemo1) are preferred.

@@ -69,23 +69,23 @@ send inbound and outbound SSLO traffic flows through this device.
 
 ## Inbound interface
 
-inbound\_interface=eth1.10
+inbound_interface=eth1.10
 
-inbound\_ip=198.19.64.65
+inbound_ip=198.19.64.65
 
-inbound\_mask=25
+inbound_mask=25
 
-inbound\_gw=198.19.64.7
+inbound_gw=198.19.64.7
 
 ## Outbound interface
 
-outbound\_interface=eth1.20
+outbound_interface=eth1.20
 
-outbound\_ip=198.19.64.130
+outbound_ip=198.19.64.130
 
-outbound\_mask=25
+outbound_mask=25
 
-outbound\_gw=198.19.64.245
+outbound_gw=198.19.64.245
 
 ### ---------------------------------------------- ###
 
@@ -93,13 +93,13 @@ outbound\_gw=198.19.64.245
 
 ## static table names
 
-inbound\_table=av\_in
+inbound_table=av_in
 
-outbound\_table=av\_out
+outbound_table=av_out
 
 ## function to get network from mask and IP
 
-get\_network () {
+get_network () {
 
 IFS=. read -r io1 io2 io3 io4 <<< "$2"
 
@@ -107,9 +107,9 @@ set -- $(( 5 - ($1 / 8) )) 255 255 255 255 $(( (255 << (8 - ($1 % 8))) & 255 )) 
 
 [ $1 -gt 1 ] && shift $1 \|\| shift
 
-NET\_ADDR="$((${io1} & ${1-0})).$((${io2} & ${2-0})).$((${io3} & ${3-0})).$((${io4} & ${4-0}))"
+NET_ADDR="$((${io1} & ${1-0})).$((${io2} & ${2-0})).$((${io3} & ${3-0})).$((${io4} & ${4-0}))"
 
-echo "$NET\_ADDR"
+echo "$NET_ADDR"
 
 }
 
@@ -125,48 +125,48 @@ fi
 
 ## create the ipproute2 tables
 
-if ! grep -q ${inbound\_table} /etc/iproute2/rt\_tables; then
+if ! grep -q ${inbound_table} /etc/iproute2/rt_tables; then
 
-echo "200 ${inbound\_table}" >> /etc/iproute2/rt\_tables
+echo "200 ${inbound_table}" >> /etc/iproute2/rt_tables
 
 fi
 
-if ! grep -q ${outbound\_table} /etc/iproute2/rt\_tables; then
+if ! grep -q ${outbound_table} /etc/iproute2/rt_tables; then
 
-echo "201 ${outbound\_table}" >> /etc/iproute2/rt\_tables
+echo "201 ${outbound_table}" >> /etc/iproute2/rt_tables
 
 fi
 
 ## get the inbound and outbound networks from function
 
-inbound\_net=$(get\_network ${inbound\_mask} ${inbound\_ip})
+inbound_net=$(get_network ${inbound_mask} ${inbound_ip})
 
-outbound\_net=$(get\_network ${outbound\_mask} ${outbound\_ip})
+outbound_net=$(get_network ${outbound_mask} ${outbound_ip})
 
 ## create policy routes
 
-ip rule add iif ${inbound\_interface} table ${inbound\_table}
+ip rule add iif ${inbound_interface} table ${inbound_table}
 
-ip rule add iif ${outbound\_interface} table ${outbound\_table}
+ip rule add iif ${outbound_interface} table ${outbound_table}
 
-ip addr add ${inbound\_ip}/${inbound\_mask} brd + dev
-${inbound\_interface}
+ip addr add ${inbound_ip}/${inbound_mask} brd + dev
+${inbound_interface}
 
-ip addr add ${outbound\_ip}/${outbound\_mask} brd + dev
-${outbound\_interface}
+ip addr add ${outbound_ip}/${outbound_mask} brd + dev
+${outbound_interface}
 
-ip route add ${inbound\_net}/${inbound\_mask} dev ${inbound\_interface}
-src ${inbound\_ip} table ${inbound\_table}
+ip route add ${inbound_net}/${inbound_mask} dev ${inbound_interface}
+src ${inbound_ip} table ${inbound_table}
 
-ip route add ${inbound\_net}/${inbound\_mask} dev ${inbound\_interface}
-src ${inbound\_ip} table ${outbound\_table}
+ip route add ${inbound_net}/${inbound_mask} dev ${inbound_interface}
+src ${inbound_ip} table ${outbound_table}
 
-ip route add ${outbound\_net}/${outbound\_mask} dev
-${outbound\_interface} src ${outbound\_ip} table ${inbound\_table}
+ip route add ${outbound_net}/${outbound_mask} dev
+${outbound_interface} src ${outbound_ip} table ${inbound_table}
 
-ip route add ${outbound\_net}/${outbound\_mask} dev
-${outbound\_interface} src ${outbound\_ip} table ${outbound\_table}
+ip route add ${outbound_net}/${outbound_mask} dev
+${outbound_interface} src ${outbound_ip} table ${outbound_table}
 
-ip route add default via ${outbound\_gw} table ${inbound\_table}
+ip route add default via ${outbound_gw} table ${inbound_table}
 
-ip route add default via ${inbound\_gw} table ${outbound\_table}
+ip route add default via ${inbound_gw} table ${outbound_table}

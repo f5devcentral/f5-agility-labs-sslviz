@@ -16,7 +16,7 @@ view, select the Topologies tab (bottom) and click Add.
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. "sslo\_inbound\_1")
+  - **Name**: provide some name (ex. "sslo_inbound_1")
 
   - **Protocol**: TCP
 
@@ -95,7 +95,7 @@ view, select the Topologies tab (bottom) and click Add.
      (reverse proxy) traffic at the same time. Please see the appendix,
      "Routing considerations for layer 3 devices" for more details.
 
-  Minimally remove the built-in "Pinners\_Rule", edit the "All Traffic" policy
+  Minimally remove the built-in "Pinners_Rule", edit the "All Traffic" policy
   to add the service chain with the L2 and TAP services (only), and click Save
   & Next.
 

@@ -52,9 +52,9 @@ b. Network Configuration
 
 - Ratio: 1
 
-- From BIGIP VLAN: Create New, name (ex. FireEye\_in), int 1.6
+- From BIGIP VLAN: Create New, name (ex. FireEye_in), int 1.6
 
-- To BIGIP VLAN: Create New, name (ex. FireEye\_out), int 1.7
+- To BIGIP VLAN: Create New, name (ex. FireEye_out), int 1.7
 
 - Click Done
 
@@ -76,7 +76,7 @@ d. To Service Configuration
 
 - To Service: 198.19.64.7/25
 
-- VLAN: Create New, name (ex. IPS\_in), interface 1.3, tag 50
+- VLAN: Create New, name (ex. IPS_in), interface 1.3, tag 50
 
 e. Service Action Down: Ignore
 
@@ -86,7 +86,7 @@ g. From Service Configuration
 
 - From Service: 198.19.64.245/25
 
-- VLAN: Create New, name (ex. IP\_out), interface 1.3, tag 60
+- VLAN: Create New, name (ex. IP_out), interface 1.3, tag 60
 
 h. Enable Port Remap: Enabled, 8181
 
@@ -108,7 +108,7 @@ e. To Service Configuration
 
 - To Service: 198.19.96.7/25
 
-- VLAN: Create New, name (ex. Proxy\_in), interface 1.3, tag 110
+- VLAN: Create New, name (ex. Proxy_in), interface 1.3, tag 110
 
 f. Service Action Down: Ignore
 
@@ -118,7 +118,7 @@ h. From Service Configuration
 
 - From Service: 198.19.96.245/25
 
-- VLAN: Create New, name (ex. Proxy\_out), interface 1.3, tag 120
+- VLAN: Create New, name (ex. Proxy_out), interface 1.3, tag 120
 
 i. Manage SNAT Settings: None
 
@@ -150,7 +150,7 @@ a. Some Name (ex. TAP)
 
 b. Mac Address: 12:12:12:12:12:12
 
-c. VLAN: Create New, name (ex. TAP\_in)
+c. VLAN: Create New, name (ex. TAP_in)
 
 d. Interface: 1.4
 
@@ -184,7 +184,7 @@ c. Click Save
 
 1. Add a new rule
 
-a. Name: some name (ex. urlf\_bypass)
+a. Name: some name (ex. urlf_bypass)
 
 b. Conditions
 
@@ -283,7 +283,7 @@ Lab 2 demo script
 
 **Security Policy**
 
-1. Remove Pinners\_Rule
+1. Remove Pinners_Rule
 
 2. Edit All Traffic rule and add L2/TAP service chain
 

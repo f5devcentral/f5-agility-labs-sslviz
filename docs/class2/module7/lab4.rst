@@ -41,13 +41,13 @@ remain and cannot be deleted, one of the following steps can be used:
 
 *#!/bin/bash*
 
-*user\_pass='admin:admin'*
+*user_pass='admin:admin'*
 
 * *
 
 *for svc in \`curl -sk -X GET
 "*\ `*https://localhost/mgmt/tm/sys/application/service* <https://localhost/mgmt/tm/sys/application/service>`__\ *"
--u ${user\_pass} \| jq -r '.items[].fullPath' \|sed 's/\\/Common\\///g'
+-u ${user_pass} \| jq -r '.items[].fullPath' \|sed 's/\\/Common\\///g'
 \|grep ^sslo\`; do*
 
 *tmsh modify sys application service ${svc} strict-updates disabled*
@@ -60,16 +60,16 @@ remain and cannot be deleted, one of the following steps can be used:
 
 *for block in \`curl -sk -X GET
 '*\ `*https://localhost/mgmt/shared/iapp/blocks?$select=id,state,name&$filter=state%20eq%20%27\*%27%20and%20state%20ne%20%27TEMPLATE%27* <https://localhost/mgmt/shared/iapp/blocks?$select=id,state,name&$filter=state%20eq%20%27*%27%20and%20state%20ne%20%27TEMPLATE%27>`__\ *'
--u ${user\_pass} \| jq -r '.items[] \| [.name, .id] \|join(":")' \|grep
+-u ${user_pass} \| jq -r '.items[] \| [.name, .id] \|join(":")' \|grep
 -E '^sslo\|f5-ssl-orchestrator' \| awk -F":" '{print $2}'\`; do*
 
 *curl -sk -X PATCH
 "*\ `*https://localhost/mgmt/shared/iapp/blocks/${block}* <https://localhost/mgmt/shared/iapp/blocks/$%7bblock%7d>`__\ *"
--d '{state:"UNBINDING"}' -u ${user\_pass}*
+-d '{state:"UNBINDING"}' -u ${user_pass}*
 
 *curl -sk -X DELETE
 "*\ `*https://localhost/mgmt/shared/iapp/blocks/${block}* <https://localhost/mgmt/shared/iapp/blocks/$%7bblock%7d>`__\ *"
--u ${user\_pass}*
+-u ${user_pass}*
 
 *done*
 

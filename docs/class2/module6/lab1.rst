@@ -12,7 +12,7 @@ Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. "proxy\_sc\_dns")
+  - **Name**: provide some name (ex. "proxy_sc_dns")
   - **Protocol**: UDP
   - **IP Family**: IPv4
   - **Topology**: select L3 Outbound
@@ -47,7 +47,7 @@ Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
   - **Port** – this will be port 53 for DNS.
 
   - **VLANs** – this will be the security service’s outbound-side VLAN, so in
-    this case the Proxy\_out VLAN.
+    this case the Proxy_out VLAN.
 
   - **Protocol Settings (L7 Profile Type)** – select None.
 

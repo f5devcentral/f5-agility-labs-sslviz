@@ -28,21 +28,21 @@ To test the deployed solution, use the following options:
   source and destination VLANs for inline security devices, and those VLANs
   will be encapsulated within separate application service paths. For example,
   given an inline layer 2 service named "FireEye" with its "From BIGIP VLAN"
-  named "**FireEye\_in**", and its "To BIGIP VLAN" named "**FireEye\_out**",
+  named "**FireEye_in**", and its "To BIGIP VLAN" named "**FireEye_out**",
   its corresponding BIG-IP VLANs would be accessible via the following syntax:
 
-  **ssloN\_** + [network name] + **.app/ssloN\_** + [network name]
+  **ssloN_** + [network name] + **.app/ssloN_** + [network name]
 
   Example:
 
-  *ssloN\_FireEye\_in.app/ssloN\_FireEye\_in*
+  *ssloN_FireEye_in.app/ssloN_FireEye_in*
 
-  *ssloN\_FireEye\_in.app/ssloN\_FireEye\_in*
+  *ssloN_FireEye_in.app/ssloN_FireEye_in*
 
   A tcpdump on the source side VLAN of this FireEye service would therefore
   look like this:
 
-  *tcpdump -lnni ssloN\_FireEye\_in.app/ssloN\_FireEye\_in -Xs0*
+  *tcpdump -lnni ssloN_FireEye_in.app/ssloN_FireEye_in -Xs0*
 
   The security service VLANs and their corresponding application services are
   all visible from the BIG-IP UI under Network -> VLANs.

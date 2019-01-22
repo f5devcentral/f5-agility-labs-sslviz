@@ -9,7 +9,7 @@ Lab 4.2: Configure an Existing Application deployment through Guided Configurati
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. "existing\_app\_1")
+  - **Name**: provide some name (ex. "existing_app_1")
 
   - **IP Family**: IPv4
 
@@ -36,7 +36,7 @@ Lab 4.2: Configure an Existing Application deployment through Guided Configurati
      (reverse proxy) traffic at the same time. Please see the appendix,
      "Routing considerations for layer 3 devices" for more details.
 
-  Minimally remove the built-in "Pinners\_Rule", edit the "All Traffic" policy
+  Minimally remove the built-in "Pinners_Rule", edit the "All Traffic" policy
   to add the service chain with the L2 and TAP services (only), and click Save
   & Next.
 

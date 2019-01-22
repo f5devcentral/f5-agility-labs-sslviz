@@ -34,13 +34,13 @@ The following are a few examples of security policy use cases:
   Notice that the visual policy elements are nested in accordance with the
   ordered set of rules,
 
-  - If the URL category is "Financial Data and Services" (urlf\_bypass), bypass
+  - If the URL category is "Financial Data and Services" (urlf_bypass), bypass
     SSL and send to a service chain.
 
-  - Otherwise, if the destination IP is 93.184.216.34/32 (host\_block), reject
+  - Otherwise, if the destination IP is 93.184.216.34/32 (host_block), reject
     the traffic.
 
-  - Otherwise, if the client IP matches 10.0.0.0/8 (client\_network), send to a
+  - Otherwise, if the client IP matches 10.0.0.0/8 (client_network), send to a
     service chain (SSL interception implied).
 
   - Otherwise, bypass SSL and do not send to a service chain.

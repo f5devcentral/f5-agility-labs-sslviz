@@ -45,7 +45,7 @@ SSL settings for this workflow. For this lab, create a new SSL profile.
     SSL Settings minimally require RSA-based template and CA certificates
     but can also support Elliptic Curve (ECDSA) certificates. In this case,
     SSLO would forge an EC certificate to the client if the TLS handshake
-    negotiated an ECDHE\_ECDSA cipher. To enable EC forging support, add
+    negotiated an ECDHE_ECDSA cipher. To enable EC forging support, add
     both an EC template certificate and key, and EC CA certificate and key.
 
   - **[Advanced] Bypass on Handshake Alert** – this setting allows the
@@ -101,9 +101,9 @@ SSL settings for this workflow. For this lab, create a new SSL profile.
   - **[Advanced] OCSP** – this setting selects an existing or can create a
     new OCSP profile for server-side Online Certificate Status Protocol
     (OCSP) and OCSP stapling. With this enabled, if a client issues a
-    Status\_Request message in its ClientHello message (an indication that
+    Status_Request message in its ClientHello message (an indication that
     it supports OCSP stapling), SSLO will issue a corresponding
-    Status\_Request message in its server-side TLS handshake. SSLO will
+    Status_Request message in its server-side TLS handshake. SSLO will
     then forge the returned OCSP stapling response back to the client. If
     the server does not respond with a staple but contains an Authority
     Info Access (AIA) field that points to an OCSP responder URL, SSLO will

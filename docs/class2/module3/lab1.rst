@@ -13,7 +13,7 @@ Lab 3.1: Configure an explicit proxy SSLO deployment through Guided Configuratio
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. "sslo\_explicit")
+  - **Name**: provide some name (ex. "sslo_explicit")
 
   - **Protocol**: TCP
 

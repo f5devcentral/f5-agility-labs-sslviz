@@ -35,13 +35,13 @@ double-click the service to go to its configuration page.
 
     - **From BIGIP VLAN** – this is the interface taking traffic to the
       inline service. Select the Create New option, enter a unique name (ex.
-      FireEye\_in), select the F5 interface connecting to the inbound side of
+      FireEye_in), select the F5 interface connecting to the inbound side of
       the service, and add a VLAN tag value if required. For this lab, select
       interface 1.6.
 
     - **To BIGIP VLAN** – this is the interface receiving traffic from the
       inline service. Select the Create New option, enter a unique name (ex.
-      FireEye\_out), select the F5 interface connecting to the outbound side
+      FireEye_out), select the F5 interface connecting to the outbound side
       of the service, and add a VLAN tag value if required. For this lab,
       select interface 1.7.
 
@@ -105,7 +105,7 @@ double-click the service to go to its configuration page.
       the 198.19.64.7/25 address intact.
 
     - **VLAN** – select the Create New option, provide a unique name (ex.
-      IPS\_in), select the F5 interface connecting to the inbound side of the
+      IPS_in), select the F5 interface connecting to the inbound side of the
       service, and add a VLAN tag value if required. For this lab, select
       interface 1.3 and VLAN tag 50.
 
@@ -129,7 +129,7 @@ double-click the service to go to its configuration page.
       leave the 198.19.64.245/25 address intact.
 
     - **VLAN** – select the Create New option, provide a unique name (ex.
-      IPS\_out), select the F5 interface connecting to the outbound side of
+      IPS_out), select the F5 interface connecting to the outbound side of
       the service, and add a VLAN tag value if required. For this lab, select
       interface 1.3 and VLAN tag 60.
 
@@ -200,7 +200,7 @@ double-click the service to go to its configuration page.
       the 198.19.96.7/25 address intact.
 
     - **VLAN** – select the Create New option, provide a unique name (ex.
-      Proxy\_in), select the F5 interface connecting to the inbound side of
+      Proxy_in), select the F5 interface connecting to the inbound side of
       the service, and add a VLAN tag value if required. For this lab, select
       interface 1.3 and VLAN tag 110.
 
@@ -226,7 +226,7 @@ double-click the service to go to its configuration page.
       leave the 198.19.96.245/25 address intact.
 
     - **VLAN** – select the Create New option, provide a unique name (ex.
-      Proxy\_out), select the F5 interface connecting to the outbound side of
+      Proxy_out), select the F5 interface connecting to the outbound side of
       the service, and add a VLAN tag value if required. For this lab, select
       interface 1.3 and VLAN tag 120.
 
@@ -331,7 +331,7 @@ double-click the service to go to its configuration page.
     arbitrarily defined. For this lab, enter 12:12:12:12:12:12.
 
   - **VLAN** – this defines the interface connecting the F5 to the TAP
-    service. Click Create New and provide a unique name (ex. TAP\_in).
+    service. Click Create New and provide a unique name (ex. TAP_in).
 
   - **Interface** – select the 1.4 interface.
 

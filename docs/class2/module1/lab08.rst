@@ -33,7 +33,7 @@ Services" and "Health and Medicine" URL categories.
 
 - Click Add to create a new rule.
 
-  - **Name** – provide a unique name for the rule (ex. "urlf\_bypass").
+  - **Name** – provide a unique name for the rule (ex. "urlf_bypass").
 
   - **Conditions**
 
