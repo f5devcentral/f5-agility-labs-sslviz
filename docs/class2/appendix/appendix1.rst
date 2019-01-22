@@ -1,4 +1,4 @@
-Appendix – Common testing commands
+Appendix - Common Testing Commands
 ==================================
 
 The following are some simple, but powerful commands that are useful in

@@ -1,4 +1,4 @@
-Appendix – Demo Scripts
+Appendix - Demo Scripts
 =======================
 
 Lab 1 demo script

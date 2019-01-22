@@ -1,10 +1,11 @@
-Appendix – Things to do with the extra services BIG-IP
+Appendix - Things to do with the Extra Services BIG-IP
 ======================================================
 
 This lab environment contains an additional BIG-IP machine named “BIG-IP Extra
 Services” and has no specific use in the previously-described demo environment.
 
 .. image:: ../images/image31.png
+   :align: center
 
 However, a BIG-IP can be a useful tool in an SSL Orchestrator environment. In
 most cases it just needs to be re-licensed and reconfigured on required

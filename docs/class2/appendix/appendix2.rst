@@ -1,4 +1,4 @@
-Appendix – Routing considerations for layer 3 devices
+Appendix - Routing Considerations For Layer 3 Devices
 =====================================================
 
 SSL Orchestrator sends all traffic through an inline layer 3 or HTTP device in
@@ -40,7 +40,8 @@ flows:
 - Do not use the same layer 3 device for inbound and outbound flows – the
   simplest option, but not always possible in some environments.
 
-- Create a policy route, if the device supports it, to create multiple gateways.
+- Create a policy route, if the device supports it, to create multiple
+  gateways.
 
 We will explore the second and second options below.
 

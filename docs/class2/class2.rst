@@ -6,7 +6,8 @@ Class 2: SSL Orchestration v5 (Ravello)
    :maxdepth: 1
    :glob:
 
-   labinfo/labinfo
+   introduction
+   labinfo
    module*/module*
    appendix/appendix*
 
