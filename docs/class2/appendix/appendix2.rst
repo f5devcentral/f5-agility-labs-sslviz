@@ -5,7 +5,7 @@ SSL Orchestrator sends all traffic through an inline layer 3 or HTTP device in
 the same direction – entering through the inbound interface. It is likely,
 therefore, that the layer 3 device may not be able to correctly route both
 outbound (forward proxy) and inbound (reverse proxy) traffic at the same time.
-Please see the appendix, “Routing considerations for layer 3 devices” for more
+Please see the appendix, "Routing considerations for layer 3 devices" for more
 details. For example, in a simple Linux-type environment there would be two
 routes needed for SSLO:
 

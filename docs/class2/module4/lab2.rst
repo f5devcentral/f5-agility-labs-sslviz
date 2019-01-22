@@ -9,7 +9,7 @@ Lab 4.2: Configure an Existing Application deployment through Guided Configurati
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. “existing\_app\_1”)
+  - **Name**: provide some name (ex. "existing\_app\_1")
 
   - **IP Family**: IPv4
 
@@ -31,12 +31,12 @@ Lab 4.2: Configure an Existing Application deployment through Guided Configurati
 
   .. note:: SSL Orchestrator sends all traffic through an inline layer 3 or
      HTTP device in the same direction – entering through the service’s
-     “inbound” interface. It is likely, therefore, that the layer 3 device may
+     "inbound" interface. It is likely, therefore, that the layer 3 device may
      not be able to correctly route both outbound (forward proxy) and inbound
      (reverse proxy) traffic at the same time. Please see the appendix,
-     “Routing considerations for layer 3 devices” for more details.
+     "Routing considerations for layer 3 devices" for more details.
 
-  Minimally remove the built-in “Pinners\_Rule”, edit the “All Traffic” policy
+  Minimally remove the built-in "Pinners\_Rule", edit the "All Traffic" policy
   to add the service chain with the L2 and TAP services (only), and click Save
   & Next.
 

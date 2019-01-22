@@ -22,20 +22,20 @@ SSL settings for this workflow. For this lab, create a new SSL profile.
     selected.
 
   - **Certificate Key Chain** – the certificate key chain represents the
-    certificate and private key used as the “template” for forged server
+    certificate and private key used as the "template" for forged server
     certificates. While re-issuing server certificates on-the-fly is
     generally easy, private key creation tends to be a CPU-intensive
     operation. For that reason, the underlying SSL Forward Proxy engine
     forges server certificates from a single defined private key. This
     setting gives customers the opportunity to apply their own template
     private key, and optionally store that key in a FIPS-certified HSM for
-    additional protection. The built-in “default” certificate and private
+    additional protection. The built-in "default" certificate and private
     key uses 2K RSA and is generated from scratch when the BIG-IP system is
     installed. The pre-defined default.crt and default.key can be left as
     is. Click Done.
 
   - **CA Certificate Key Chain** – an SSL forward proxy must re-sign, or
-    “forge” remote server certificate to local clients using a local
+    "forge" remote server certificate to local clients using a local
     certificate authority (CA) certificate, and local clients must trust
     this local CA. This setting defines the local CA certificate and
     private key used to perform the forging operation. Click the pencil

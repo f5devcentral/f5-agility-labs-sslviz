@@ -12,7 +12,7 @@ Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. “proxy\_sc\_dns”)
+  - **Name**: provide some name (ex. "proxy\_sc\_dns")
   - **Protocol**: UDP
   - **IP Family**: IPv4
   - **Topology**: select L3 Outbound
@@ -27,8 +27,8 @@ Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
   - Click Save & Next
 
 - **Security Policy** – service channel traffic cannot pass through the
-  inspection services, so the security policy must be empty, with the “All
-  Traffic” rule set to Allow, bypass SSL, and with no assigned service chain.
+  inspection services, so the security policy must be empty, with the "All
+  Traffic" rule set to Allow, bypass SSL, and with no assigned service chain.
 
   - Click Save & Next
 

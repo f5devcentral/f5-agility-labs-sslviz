@@ -4,7 +4,7 @@
 Lab 1.1: Review the lab environment and map out the services and endpoints
 --------------------------------------------------------------------------
 
-Review the “SSL Orchestrator Lab Environment” section above. This lab will
+Review the "SSL Orchestrator Lab Environment" section above. This lab will
 attach one of each type of security service (HTTP, ICAP, L2, L3, TAP) to SSLO
 for an outbound forward proxy traffic flow. Afterwards, an internal client will
 be able to access remote (Internet) resources through SSLO, providing

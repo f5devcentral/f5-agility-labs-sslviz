@@ -9,7 +9,7 @@ Lab 1.6: Services List
 The Services List page is used to define security services that attach to SSLO.
 The 5.0 SSLO Guided Configuration now includes a services catalog that contains
 common product integrations. Beneath each of these catalog options is one of
-the five basic service types. The service catalog also provides “generic”
+the five basic service types. The service catalog also provides "generic"
 security services. Depending on screen resolution, it may be necessary to
 scroll down to see additional services.
 
@@ -23,7 +23,7 @@ double-click the service to go to its configuration page.
   the catalog and click Add, or simply double-click the FireEye Inline Layer 2
   service, or any other Inline Layer 2 service in the catalog.
 
-  - **Name** – provide a unique name to this service (example “FireEye”).
+  - **Name** – provide a unique name to this service (example "FireEye").
 
   - **Network Configuration** – paths define the network interfaces that take
     inspectable traffic to the inline service and receive traffic from the
@@ -74,7 +74,7 @@ double-click the service to go to its configuration page.
   the catalog and click Add, or simply double-click the Generic Inline Layer 3
   service.
 
-  - **Name** – provide a unique name to this service (example “IPS”).
+  - **Name** – provide a unique name to this service (example "IPS").
 
   - **IP Family** – this setting defines the IP family used with this layer 3
     service. Leave it set to IPv4.
@@ -95,7 +95,7 @@ double-click the service to go to its configuration page.
        security devices from existing networks and place them entirely within
        the isolated enclave created and maintained by SSLO.
 
-  - **To Service Configuration** – the “To Service” defines the network
+  - **To Service Configuration** – the "To Service" defines the network
     connectivity from SSLO to the inline security device.
 
     - **To Service** – with the Auto Manage Addresses option enabled, this IP
@@ -119,7 +119,7 @@ double-click the service to go to its configuration page.
     balanced IP addresses can be defined here. Click Add, enter 198.19.64.64,
     then click Done.
 
-  - **From Service Configuration** – the “From Service” defines the network
+  - **From Service Configuration** – the "From Service" defines the network
     connectivity from the inline security device to SSLO.
 
     - **From Service** – with the Auto Manage Addresses option enabled, this
@@ -166,7 +166,7 @@ double-click the service to go to its configuration page.
   from the catalog and click Add, or simply double-click the WSA HTTP Proxy
   service, or any other HTTP Proxy service in the catalog.
 
-  - **Name** – provide a unique name to this service (example “Proxy”).
+  - **Name** – provide a unique name to this service (example "Proxy").
 
   - **IP Family** – this setting defines the IP family used with this layer 3
     service. Leave it set to IPv4.
@@ -190,7 +190,7 @@ double-click the service to go to its configuration page.
   - **Proxy Type** – this defines the proxy mode that the inline HTTP service
     is in. For this lab, set this option to Explicit.
 
-  - **To Service Configuration** – the “To Service” defines the network
+  - **To Service Configuration** – the "To Service" defines the network
     connectivity from SSLO to the inline security device.
 
     - **To Service** – with the Auto Manage Addresses option enabled, this IP
@@ -216,7 +216,7 @@ double-click the service to go to its configuration page.
     service, the IP address and listening port is required. Click Add, enter
     198.19.96.66 for the IP Address, and 3128 for the Port, then click Done.
 
-  - **From Service Configuration** – the “From Service” defines the network
+  - **From Service Configuration** – the "From Service" defines the network
     connectivity from the inline security device to SSLO.
 
     - **From Service** – with the Auto Manage Addresses option enabled, this
@@ -261,7 +261,7 @@ double-click the service to go to its configuration page.
   Guardian ICAP service from the catalog and click Add, or simply double-click
   the Digital Guardian ICAP service, or any other ICAP service in the catalog.
 
-  - **Name** – provide a unique name to this service (example “DLP”).
+  - **Name** – provide a unique name to this service (example "DLP").
 
   - **IP Family** – this setting defines the IP family used with this layer 3
     service. Leave it set to IPv4.
@@ -323,7 +323,7 @@ double-click the service to go to its configuration page.
   click Add, or simply Double-click the Cisco Sourcefire TAP service, or any
   other TAP service in the catalog.
 
-  - **Name** - provide a unique name to this service (example “TAP”).
+  - **Name** - provide a unique name to this service (example "TAP").
 
   - **Mac Address** – for a tap service that is not directly connected to the
     F5, enter the device’s MAC address. For a tap service that is directly

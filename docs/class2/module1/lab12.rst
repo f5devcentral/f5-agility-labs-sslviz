@@ -27,8 +27,8 @@ To test the deployed solution, use the following options:
   (source and destination) network. SSL Orchestrator will then create separate
   source and destination VLANs for inline security devices, and those VLANs
   will be encapsulated within separate application service paths. For example,
-  given an inline layer 2 service named “FireEye” with its “From BIGIP VLAN”
-  named “**FireEye\_in**”, and its “To BIGIP VLAN” named “**FireEye\_out**”,
+  given an inline layer 2 service named "FireEye" with its "From BIGIP VLAN"
+  named "**FireEye\_in**", and its "To BIGIP VLAN" named "**FireEye\_out**",
   its corresponding BIG-IP VLANs would be accessible via the following syntax:
 
   **ssloN\_** + [network name] + **.app/ssloN\_** + [network name]

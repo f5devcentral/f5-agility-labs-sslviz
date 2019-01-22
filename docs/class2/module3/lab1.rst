@@ -13,7 +13,7 @@ Lab 3.1: Configure an explicit proxy SSLO deployment through Guided Configuratio
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. “sslo\_explicit”)
+  - **Name**: provide some name (ex. "sslo\_explicit")
 
   - **Protocol**: TCP
 
@@ -30,9 +30,9 @@ Lab 3.1: Configure an explicit proxy SSLO deployment through Guided Configuratio
 
   - Click Save & Next
 
-    Whenever repurposing a topology setting, a warning will appear, “There are
+    Whenever repurposing a topology setting, a warning will appear, "There are
     other configuration items that are referencing this item. Editing this
-    item will affect the referencing ones mentioned below”. Click OK to
+    item will affect the referencing ones mentioned below". Click OK to
     acknowledge.
 
 - **Services List** – there are no new services to create.
@@ -73,7 +73,7 @@ Lab 3.1: Configure an explicit proxy SSLO deployment through Guided Configuratio
 - **Gateways** – enables per-topology instance gateway routing. Options are to
   use the system default route, to use an existing gateway pool, or to create a
   new gateway. For this lab, select Use Existing Gateway Pool, then select the
-  “-ex-pool-4” gateway pool.
+  "-ex-pool-4" gateway pool.
 
   - Click Save & Next
 

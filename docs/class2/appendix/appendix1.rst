@@ -53,7 +53,7 @@ any network-dependent issue.
 
 *tcpdump –lnni [VLAN] [-Xs0]*
 
-In-line services create “source” (S) and “destination” (D) VLANs, and ICAP and
+In-line services create "source" (S) and "destination" (D) VLANs, and ICAP and
 receive-only services attach to existing VLANs. Drop a probe at each point in
 the path and observe flow.
 

@@ -26,7 +26,7 @@ following would need to be configured manually in another environment.
   (reverse proxy) traffic flow use case, SSL traffic is terminated at the F5,
   and re-encrypted on the way to the internal application environment. A
   wildcard server certificate is installed to facilitate using any name under
-  the “*f5demolabs.com*” sub-domain.
+  the "*f5demolabs.com*" sub-domain.
 
 .. note:: It is a security best practice to isolate security devices within the
    protected network enclaves provided by SSLO. Customers will often desire NOT
@@ -35,7 +35,7 @@ following would need to be configured manually in another environment.
    network architecture could create a provide multiple points of data
    exposure. Usernames, passwords, credit card numbers and other sensitive
    information could be exposed to other devices on that network. Each inline
-   layer 3 security service definition includes an “Auto Manage” option. This
+   layer 3 security service definition includes an "Auto Manage" option. This
    option, enabled by default, provides internal network settings for security
    services to use, so that only the interface (and 802.1q VLAN tag as needed)
    is required to be defined for the inbound and outbound interfaces. Should

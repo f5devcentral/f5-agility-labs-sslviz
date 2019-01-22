@@ -10,7 +10,7 @@ before starting the iApp:
 
 - **Import the CA certificate and private key** – in order to terminate and
   re-encrypt outbound SSL traffic, SSL Forward Proxy must re-issue, or rather
-  “forge” a new server certificate to the client. In order to perform this
+  "forge" a new server certificate to the client. In order to perform this
   re-issuance process, the BIG-IP must possess a certificate authority (CA)
   certificate and associated private key. :red:`This lab environment already
   has a subordinate CA certificate and private key installed`.

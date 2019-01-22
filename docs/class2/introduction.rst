@@ -16,11 +16,11 @@ security infrastructure.
 **Multi-layered security**
    In order to solve specific security challenges, security administrators are
    accustomed to manually chaining together multiple point products, creating a
-   bare-bones “security stack” consisting of multiple services. A typical stack
+   bare-bones "security stack" consisting of multiple services. A typical stack
    may include components like Data Leak Prevention (DLP) scanners, Web
    Application Firewalls (WAF), Intrusion Prevention and Detection Systems
    (IPS and IDS), Malware Analysis tools, and more. In this model, all user
-   sessions are provided the same level of security, as this “daisy chain” of
+   sessions are provided the same level of security, as this "daisy chain" of
    services is hard-wired.
 
 **Dynamic service chaining**
@@ -76,12 +76,12 @@ versions. Here are the highlights:
   providing much greater flexibility in traffic management options.
 
 - Optimizes traffic flow through security services by replacing the complex
-  “proxy hops” with a new “tee connector” – essentially a mid-proxy tap – that
+  "proxy hops" with a new "tee connector" – essentially a mid-proxy tap – that
   allows decrypted traffic to flow through security devices out-of-band from
-  the main client-server proxy traffic. This is implemented as new “Service”
-  and “Connector” profiles.
+  the main client-server proxy traffic. This is implemented as new "Service"
+  and "Connector" profiles.
 
-- Introduces new “split session” client and server SSL profiles, that are now
+- Introduces new "split session" client and server SSL profiles, that are now
   responsible for carrying SNI signaling information across the inspection zone.
 
 - Further optimizes traffic flow by reducing the amount of iRule data plane
@@ -117,7 +117,7 @@ What’s new in SSLO 5.0?
 - Guided Configuration user experience, a complete refresh of the SSLO UI based
   on the Access Guided Configuration engine.
 
-- Discreet “topology” definitions and the ability to define how SSLO listens
+- Discreet "topology" definitions and the ability to define how SSLO listens
   for and processes traffic flows.
 
 - Re-entrant, wizard-driven workflows. Based on the selected topology, SSLO

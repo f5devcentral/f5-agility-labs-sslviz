@@ -78,8 +78,8 @@ remain and cannot be deleted, one of the following steps can be used:
   - Break any HA configuration
 
   - Issue the ‘clear-rest-storage [options]’ command, where the options are
-    “-l” (lowercase L) to delete the restjavad log files as well as the stored
-    state, and “-d” to reset the system configuration to default. This command
+    "-l" (lowercase L) to delete the restjavad log files as well as the stored
+    state, and "-d" to reset the system configuration to default. This command
     will remove all SSL Orchestrator objects from the restnoded database.
     After issuing this command, follow with ‘bigstart restart restnoded’ and
     'bigstart restart restjavad’, clear the browser cache, log out and back in.

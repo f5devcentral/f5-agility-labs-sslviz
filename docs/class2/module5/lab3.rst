@@ -34,7 +34,7 @@ The following are a few examples of security policy use cases:
   Notice that the visual policy elements are nested in accordance with the
   ordered set of rules,
 
-  - If the URL category is “Financial Data and Services” (urlf\_bypass), bypass
+  - If the URL category is "Financial Data and Services" (urlf\_bypass), bypass
     SSL and send to a service chain.
 
   - Otherwise, if the destination IP is 93.184.216.34/32 (host\_block), reject
@@ -58,4 +58,4 @@ The following are a few examples of security policy use cases:
   
   View the APM log to follow the policy logic:
 
-  tail -f /var/log/apm \|grep “Following rule”
+  tail -f /var/log/apm \|grep "Following rule"

@@ -36,7 +36,7 @@ The SSL Orchestrator Topologies option page presents six topologies:
 
 - **L3 Outbound** – this is the traditional transparent forward proxy.
 
-- **L3 Inbound** – this is a reverse proxy “gateway” configuration. In its
+- **L3 Inbound** – this is a reverse proxy "gateway" configuration. In its
   simplest form, this topology builds an SSLO environment designed to sit
   **in front of** another ADC or routed path. Advanced options allow it to
   define a pool for more directed traffic flow, but alone does not provide
@@ -56,7 +56,7 @@ The SSL Orchestrator Topologies option page presents six topologies:
   transparent path for outbound traffic flows.
 
   .. important:: It is important to distinguish SSLO’s layer 2 topology from
-     those of other traditional layer 2 SSL visibility vendors. “True” layer
+     those of other traditional layer 2 SSL visibility vendors. "True" layer
      2 solutions like Blue Coat’s SSL visibility appliance (SSLVA) limit the
      types of devices that can be inserted into the inspection zone to layer
      2 and below, and devices must be directly connected to the appliance.
@@ -77,7 +77,7 @@ The SSL Orchestrator Topologies option page presents six topologies:
 
 For this lab:
 
-- **Name**: some name (ex. “demo”)
+- **Name**: some name (ex. "demo")
 - **Protocol**: :red:`Any` – this will create separate TCP, UDP and non-TCP/UDP
   interception rules.
 - **IP Family**: :red:`IPv4`

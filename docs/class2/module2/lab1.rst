@@ -45,5 +45,5 @@ options below.
    device in the same direction – entering through the inbound interface. It is
    likely, therefore, that the layer 3 device may not be able to correctly
    route both outbound (forward proxy) and inbound (reverse proxy) traffic at
-   the same time. Please see the appendix, “Routing considerations for layer 3
-   devices” for more details.
+   the same time. Please see the appendix, "Routing considerations for layer 3
+   devices" for more details.

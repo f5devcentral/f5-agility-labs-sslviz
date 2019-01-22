@@ -4,7 +4,7 @@
 Lab 8.1: Troubleshoot
 ---------------------
 
-It is important to first define “normal” behavior. If the SSL Orchestrator
+It is important to first define "normal" behavior. If the SSL Orchestrator
 deployment process was successful, it will be possible to access remote
 Internet sites from the client workstation without issue, and HTTPS sites
 appear to have a locally-trusted, re-issued server certificate. This would be

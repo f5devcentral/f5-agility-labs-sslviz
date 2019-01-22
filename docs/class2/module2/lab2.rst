@@ -16,7 +16,7 @@ view, select the Topologies tab (bottom) and click Add.
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. “sslo\_inbound\_1”)
+  - **Name**: provide some name (ex. "sslo\_inbound\_1")
 
   - **Protocol**: TCP
 
@@ -93,21 +93,21 @@ view, select the Topologies tab (bottom) and click Add.
      "inbound" interface. It is likely, therefore, that the layer 3 device may
      not be able to correctlyroute both outbound (forward proxy) and inbound
      (reverse proxy) traffic at the same time. Please see the appendix,
-     “Routing considerations for layer 3 devices” for more details.
+     "Routing considerations for layer 3 devices" for more details.
 
-  Minimally remove the built-in “Pinners\_Rule”, edit the “All Traffic” policy
+  Minimally remove the built-in "Pinners\_Rule", edit the "All Traffic" policy
   to add the service chain with the L2 and TAP services (only), and click Save
   & Next.
 
 - **Interception Rule** – here is where a gateway-mode topology and the
   existing application topology generally differ. Where an explicit application
-  topology “bolts onto” an existing application that performs its own SSL
+  topology "bolts onto" an existing application that performs its own SSL
   management (SSL offload), traffic management (pools) and traffic intelligence
   (iRules, profiles), the gateway-mode SSLO topology provides a single, generic
   entry point for potentially multiple applications, and would sit in front of
   another ADC or routing device. This is mostly useful when an SSL visibility
   device must sit closer to the outer edge of an environment, and/or when the
-  SSL visibility product “owner” does not otherwise own the applications or
+  SSL visibility product "owner" does not otherwise own the applications or
   ADC(s).
 
   It is possible to configure an L3 Inbound topology configuration with a
