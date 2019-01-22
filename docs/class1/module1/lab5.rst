@@ -51,16 +51,16 @@ typically be an IDS/IPS, DLP, or Next-Gen Firewall (NGFW).
    |image20|
 
 
-.. |image4| image:: /_static/image4.png
+.. |image4| image:: ../images/image4.png
    :width: 3.69444in
    :height: 2.95833in
-.. |image18| image:: /_static/image18.png
+.. |image18| image:: ../images/image18.png
    :width: 5.25000in
    :height: 1.69391in
-.. |image19| image:: /_static/image19.png
+.. |image19| image:: ../images/image19.png
    :width: 4.59191in
    :height: 0.95370in
-.. |image20| image:: /_static/image20.png
+.. |image20| image:: ../images/image20.png
    :width: 4.90741in
    :height: 6.74902in
 

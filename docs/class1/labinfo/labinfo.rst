@@ -71,5 +71,5 @@ Lab Topology
      - 1.2
      - 10.30.0.100
 
-.. |image0| image:: /_static/image0.png
+.. |image0| image:: ../images/image0.png
     :width: 80%

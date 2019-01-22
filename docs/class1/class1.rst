@@ -1,5 +1,5 @@
-Class 1: SSL Orchestration v4
-=============================
+Class 1: SSL Orchestration v4 (Agility)
+=======================================
 
 F5 SSL Orchestrator provides high-performance decryption of inbound and
 outbound SSL/TLS traffic, enabling security inspection to expose threats
@@ -32,4 +32,3 @@ To continue please review the information about the Lab Environment.
 
    labinfo/labinfo
    module*/module*
-

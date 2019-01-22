@@ -50,14 +50,14 @@ solution and the appropriate :guilabel:`Preview Max Length`.
 
    |image14|
 
-.. |image4| image:: /_static/image4.png
-.. |image12| image:: /_static/image12.png
+.. |image4| image:: ../images/image4.png
+.. |image12| image:: ../images/image12.png
    :width: 4.37963in
    :height: 1.57358in
-.. |image13| image:: /_static/image13.png
+.. |image13| image:: ../images/image13.png
    :width: 4.62963in
    :height: 1.04661in
-.. |image14| image:: /_static/image14.png
+.. |image14| image:: ../images/image14.png
    :width: 4.37037in
    :height: 4.58515in
 

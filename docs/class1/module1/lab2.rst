@@ -50,11 +50,11 @@ A service is a collection of security devices that will receive decrypted traffi
 
    |image11|
 
-.. |image4| image:: /_static/image4.png
-.. |image9| image:: /_static/image9.png
+.. |image4| image:: ../images/image4.png
+.. |image9| image:: ../images/image9.png
     :width: 80%
-.. |image10| image:: /_static/image10.png
+.. |image10| image:: ../images/image10.png
     :width: 80%
-.. |image11| image:: /_static/image11.png
+.. |image11| image:: ../images/image11.png
     :width: 80%
 

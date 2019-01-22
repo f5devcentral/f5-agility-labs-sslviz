@@ -19,7 +19,7 @@ configuration:
 
    lab*
 
-.. |image1| image:: /_static/image1.png
+.. |image1| image:: ../images/image1.png
    :width: 80%
-.. |image2| image:: /_static/image2.png
+.. |image2| image:: ../images/image2.png
    :width: 80%

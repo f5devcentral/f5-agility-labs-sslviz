@@ -38,3 +38,20 @@
 .red {
     color: rgb(192, 0, 0);
 }
+
+.bred {
+    color: rgb(192, 0, 0);
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+ul.simple {
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

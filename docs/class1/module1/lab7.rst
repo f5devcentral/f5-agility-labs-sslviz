@@ -72,43 +72,43 @@ Task 1 - Interception Rules
 
 #. Click :guilabel:`Finish`.
 
-.. |image29| image:: /_static/image25.png
+.. |image29| image:: ../images/image25.png
    :width: 6.29167in
    :height: 1.34722in
-.. |image30| image:: /_static/image26.png
+.. |image30| image:: ../images/image26.png
    :width: 6.50000in
    :height: 0.71111in
-.. |image31| image:: /_static/image27.png
+.. |image31| image:: ../images/image27.png
    :width: 6.50000in
    :height: 2.03125in
-.. |image32| image:: /_static/image28.png
+.. |image32| image:: ../images/image28.png
    :width: 5.86111in
    :height: 1.08333in
-.. |image33| image:: /_static/image29.png
+.. |image33| image:: ../images/image29.png
    :width: 6.50000in
    :height: 1.38750in
-.. |image34| image:: /_static/image30.png
+.. |image34| image:: ../images/image30.png
    :width: 5.72222in
    :height: 1.68056in
-.. |image35| image:: /_static/image31.png
+.. |image35| image:: ../images/image31.png
    :width: 6.50000in
    :height: 1.57153in
-.. |image36| image:: /_static/image32.png
+.. |image36| image:: ../images/image32.png
    :width: 6.50000in
    :height: 2.06667in
-.. |image37| image:: /_static/image33.png
+.. |image37| image:: ../images/image33.png
    :width: 6.50000in
    :height: 2.72292in
-.. |image38| image:: /_static/image34.png
+.. |image38| image:: ../images/image34.png
    :width: 6.50000in
    :height: 1.66528in
-.. |image39| image:: /_static/image35.png
+.. |image39| image:: ../images/image35.png
    :width: 6.37500in
    :height: 0.94444in
-.. |image40| image:: /_static/image36.png
+.. |image40| image:: ../images/image36.png
    :width: 6.50000in
    :height: 3.63472in
-.. |image41| image:: /_static/image37.png
+.. |image41| image:: ../images/image37.png
    :width: 6.50000in
    :height: 1.26528in
 
