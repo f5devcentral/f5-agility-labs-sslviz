@@ -4,7 +4,7 @@
 Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
 ---------------------------------------------------------------------------
 
-.. note:: For this lab, the inline proxy service simply needs external DNS
+.. note:: For this module, the inline proxy service simply needs external DNS
    access to 8.8.8.8 UDP.
 
 - **Configuration review and prerequisites** - take a moment to review the
@@ -69,7 +69,7 @@ Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
 
   .. code-block:: bash
      
-     dig @8.8.8.8 `www.example.com <http://www.example.com>`__
+     dig @8.8.8.8 www.example.com
 
   Assuming this works, the proxy service can be configured to use this DNS
   service. Additional service channels can be created to provide direct access

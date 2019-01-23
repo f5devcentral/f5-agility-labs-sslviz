@@ -25,8 +25,8 @@ per-request policies. If traffic processing is required that exceeds the
 capabilities of the rule-based user interface, the underlying per-request
 policy can be managed directly.
 
-.. note:: That once the per-request policy is manipulated, the rules-based
-   interface can no longer be used.
+.. note:: Once the per-request policy is manipulated, the rules-based interface
+   can no longer be used.
 
 For the lab, create an additional rule to bypass SSL for "Financial Data and
 Services" and "Health and Medicine" URL categories.

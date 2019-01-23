@@ -24,7 +24,7 @@ selected topology.
 
 .. image:: ../images/image21.png
 
-In the above,
+In the above list:
 
 - The **-in-t-4** listener defines normal TCP IPv4 traffic.
 
@@ -32,11 +32,10 @@ In the above,
 
 - The **-ot-4** listener defines normal non-TCP/non-UDP IPv4 traffic.
 
-- The **-ftp**, **-ftps**, **-pop3**, **-smtp25** and **-smtp587**
-  listeners create paths for each respective protocol.
+- The **-ftp, -ftps, -pop3, -smtp25, -smtp587** listeners create paths for each
+  respective protocol.
 
-.. note:: This completes the configuration of SSL Orchestrator as a transparent
-   forward proxy. At this point an internal client should be able to browse out
-   to external (Internet) resources, and decrypted traffic will flow across the
-   security services.
-
+.. attention:: This completes the configuration of SSL Orchestrator as a
+   transparent forward proxy. At this point an internal client should be able
+   to browse out to external (Internet) resources, and decrypted traffic will
+   flow across the security services.

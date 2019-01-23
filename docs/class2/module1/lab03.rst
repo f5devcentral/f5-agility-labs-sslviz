@@ -16,9 +16,9 @@ topology.
 The following steps will walk through the Guided Configuration (GC) to build a
 simple transparent forward proxy. 
 
-.. note:: The following provides verbose details on each setting. For a more
-   concise set of lab steps, without details, skip to the bottom of this lab
-   (Lab 1).
+.. attention:: The following provides verbose details on each setting. For a
+   more concise set of lab steps, without details, skip to
+   `Appendix - Demo Scripts <../appendix/appendix4.html>`_
 
 - **Initialization** - if this is the first time accessing SSLO in a new BIG-IP
   build, upon first access, GC will automatically load and deploy the built-in

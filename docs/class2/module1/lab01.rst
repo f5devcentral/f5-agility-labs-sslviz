@@ -4,11 +4,12 @@
 Lab 1.1: Review the lab environment and map out the services and endpoints
 --------------------------------------------------------------------------
 
-Review the "SSL Orchestrator Lab Environment" section above. This lab will
-attach one of each type of security service (HTTP, ICAP, L2, L3, TAP) to SSLO
-for an outbound forward proxy traffic flow. Afterwards, an internal client will
-be able to access remote (Internet) resources through SSLO, providing
-decrypted, inspectable traffic to the security services.
+If needed review the previous section
+`SSL Orchestrator Lab Environment <../labinfo.html>`_
+This lab will attach one of each type of security service (HTTP, ICAP, L2, L3,
+TAP) to SSLO for an outbound forward proxy traffic flow. Afterwards, an
+internal client will be able to access remote (Internet) resources through
+SSLO, providing decrypted, inspectable traffic to the security services.
 
 - The client is attached to a :red:`10.20.0.0/24` network and is assigned the
   IP :red:`10.20.0.60`. This network is attached to the BIG-IP 1.1 interface.
@@ -46,5 +47,5 @@ decrypted, inspectable traffic to the security services.
 - The outbound network is attached to the BIG-IP :red:`1.2` interface, in the
   :red:`10.30.0.0/24` subnet, and has a gateway of :red:`10.30.0.1`.
 
-- In the lab, client inbound, Internet outbound, and DLP VLANs and self-IPs are
-  already created.
+.. attention:: In the lab, client inbound, Internet outbound, and DLP VLANs and
+   self-IPs are already created.

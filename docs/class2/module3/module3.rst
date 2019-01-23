@@ -7,15 +7,16 @@ proxy workflow minimally creates an explicit proxy listener and relying
 transparent proxy listener attached to the explicit proxy tunnel. If a separate
 transparent proxy workflow was created, the resulting listener would not
 conflict with or overlap the existing transparent proxy listener. Therefore,
-assuming a transparent forward proxy already exists from Lab 1, the following
-workflow will create a separate set of non-overlapping listeners to satisfy an
-explicit forward proxy use case.
+assuming a transparent forward proxy already exists from Module 1, the
+following workflow will create a separate set of non-overlapping listeners to
+satisfy an explicit forward proxy use case.
 
 .. note:: This lab will consist of an abbreviated set of steps, as all of the
-   objects created in Lab 1 (SSL settings, services, service chains and
+   objects created in Module 1 (SSL settings, services, service chains and
    security policies) will be fully re-usable here. If any of these objects
-   have not been created, please review Lab 1 for more detailed configuration
-   instructions.
+   have not been created, please review `Module 1 - Create a Transparent
+   Forward Procy SSLO <../module1/module1.html>`_ for more detailed
+   configuration instructions.
 
 .. toctree::
    :maxdepth: 1

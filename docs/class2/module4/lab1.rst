@@ -4,11 +4,7 @@
 Lab 4.1: Create an LTM application
 ----------------------------------
 
-.. note:: Review the lab diagram and map out the services and endpoints.
-   This lab uses the exact same environment. SSL settings, services, service
-   chains and security policy will be re-used.
-
-For the lab, create a simple LTM application,
+For the lab, create a simple LTM application:
 
 - **Create a pool** - use one (or multiple) of the internal webserver IPs and
   select port 80.
@@ -42,7 +38,6 @@ For the lab, create a simple LTM application,
   accessible via HTTPS request to the LTM virtual server.
 
   - Optionally create a Hosts entry on the client by editing /etc/hosts
-    (as root) to point :red:`10.30.0.205` to
-    `www.f5demolabs.com <http://www.f5demolabs.com>`__, and test access to
-    https://www.f5demolabs.com. The certificate is a wildcard, so any
-    \*.f5demolabs.com hostname would also work.
+    (as root) to point :red:`10.30.0.205` to :red:`www.f5demolabs.com`, and
+    test access to https://www.f5demolabs.com. The certificate is a wildcard,
+    so any \*.f5demolabs.com hostname would also work.

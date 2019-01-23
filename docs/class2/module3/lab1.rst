@@ -4,10 +4,6 @@
 Lab 3.1: Configure an Explicit Proxy deployment through Guided Configuration
 ----------------------------------------------------------------------------
 
-.. note:: Review the same step in Module 1 for more details. This lab uses the
-   exact same environment, so SSL settings, services, service chains and
-   security policy will be re-used.
-
 - **Configuration review and prerequisites** - take a moment to review the
   topology options and workflow configuration, then click :red:`Next`.
 
@@ -31,10 +27,10 @@ Lab 3.1: Configure an Explicit Proxy deployment through Guided Configuration
 
   - Click :red:`Save & Next`
 
-    .. note:: Whenever repurposing a topology setting, a warning will appear,
-       "There are other configuration items that are referencing this item.
-       Editing this item will affect the referencing ones mentioned below".
-       Click OK to acknowledge.
+    .. attention:: Whenever repurposing a topology setting, a warning will
+       appear, "There are other configuration items that are referencing this
+       item. Editing this item will affect the referencing ones mentioned
+       below". Click OK to acknowledge.
 
 - **Services List** - there are no new services to create.
 

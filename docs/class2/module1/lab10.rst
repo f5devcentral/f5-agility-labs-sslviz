@@ -22,7 +22,7 @@ gateway route and outbound SNAT settings.
 - **Ratio** - multiple gateway IP addresses are load balanced in an LTM pool,
   and the ratio setting allows SSLO to proportion traffic to the gateway
   members, as required. A ratio on 1 for all members evenly distributes the
-  load across them. For this lab, select 1.
+  load across them. For this lab, select :red:`1`.
 
 - **Address** - this is the next hop gateway IP address. For this lab, enter
   :red:`10.30.0.1`.

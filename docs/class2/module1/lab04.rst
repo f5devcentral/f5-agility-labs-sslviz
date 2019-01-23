@@ -65,13 +65,13 @@ The SSL Orchestrator Topologies option page presents six topologies:
      HTTP services can still function normally.
 
 - **Existing Application** - this topology is designed to work with existing
-   LTM applications. Whereas the L3 Inbound topology provides an inbound
-   gateway function for SSLO, Existing Application works with LTM virtual
-   servers that already perform their own SSL handling and client-server
-   traffic management. The Existing Application workflow proceeds directly to
-   service creation and security policy definition, then exits with an
-   SSLO-type access policy and per-request policy that can easily be consumed
-   by an LTM virtual server.
+  LTM applications. Whereas the L3 Inbound topology provides an inbound
+  gateway function for SSLO, Existing Application works with LTM virtual
+  servers that already perform their own SSL handling and client-server
+  traffic management. The Existing Application workflow proceeds directly to
+  service creation and security policy definition, then exits with an
+  SSLO-type access policy and per-request policy that can easily be consumed
+  by an LTM virtual server.
 
 .. image:: ../images/image7.png
 

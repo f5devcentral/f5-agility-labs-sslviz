@@ -40,3 +40,4 @@ party without the express written permission of F5.
 
 .. image:: /_static/f5logo.png
    :align: center
+   :scale: 50%

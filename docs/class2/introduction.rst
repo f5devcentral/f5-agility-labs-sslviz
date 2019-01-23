@@ -124,7 +124,7 @@ What's new in SSLO 5.0?
   5.0 presents an intuitive workflow UI that walks the user through a
   simplified object creation process.
 
-.. important:: Viprion chassis platform support is not available in SSLO 4.0 and 5.0.
+.. attention:: Viprion chassis platform support is not available in SSLO 4.0 and 5.0.
 
 What's new in SSLO 5.1?
 -----------------------
@@ -144,6 +144,6 @@ https://downloads.f5.com, under the SSL Orchestrator section, as
 .. note:: This lab guide and corresponding Ravello lab environment are prepared
    for SSLO 5.1. If installing a fresh BIG-IP 14.1 instance, it is recommended
    to immediately download the 5.1 package and install over the built-in 5.0
-   version. To do this, in the SSLO UI, click on **SSL Orchestrator** ->
-   **Configuration** -> **Upgrade SSL Orchestrator**, choose the downloaded
+   version. To do this, in the SSLO UI, click on **SSL Orchestrator** -->
+   **Configuration** --> **Upgrade SSL Orchestrator**, choose the downloaded
    SSLO 5.1 package and then upload and install.

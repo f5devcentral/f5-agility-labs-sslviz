@@ -10,11 +10,12 @@ skips SSL management and interception rules, and ultimately produces an
 SSLO-type per-request policy that can be attached to an existing LTM virtual
 server.
 
-.. note:: This lab will consist of an abbreviated set of steps, as all of the
-   relevant objects created in Lab 1 (services, service chains and security
-   policies) will be fully re-usable here. If any of these objects have not
-   been created, please review Lab 1 for more detailed configuration
-   instructions.
+.. note:: This module will consist of an abbreviated set of steps, as all of
+   the relevant objects created in Module 1 (services, service chains and
+   security policies) will be fully re-usable here. If any of these objects
+   have not been created, please review `Module 1 - Create a Transparent
+   Forward Procy SSLO <../module1/module1.html>`_ for more detailed
+   configuration instructions.
 
 .. toctree::
    :maxdepth: 1

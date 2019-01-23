@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-Lab 5.3: Practice creating Security Policies
---------------------------------------------
+Practice creating Security Policies
+-----------------------------------
 
 The following are a few examples of security policy use cases:
 
@@ -52,12 +52,12 @@ The following are a few examples of security policy use cases:
 
   Apply the new rule to an existing outbound topology and test that:
 
-  a) financial sites are bypassed.
-  b) https://www.example.com is blocked.
-  c) and all other client traffic flows through the defined service chain.
+  a. financial sites are bypassed.
+  #. https://www.example.com is blocked.
+  #. and all other client traffic flows through the defined service chain.
   
   View the APM log to follow the policy logic:
 
-.. code-block:: bash
+  .. code-block:: bash
    
-   tail -f /var/log/apm \|grep "Following rule"
+     tail -f /var/log/apm | grep "Following rule"

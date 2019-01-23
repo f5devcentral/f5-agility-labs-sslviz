@@ -9,10 +9,11 @@ single pool of resources. This lab will be re-using the security services
 created in the first lab to create a single inbound "gateway" service SSLO
 configuration.
 
-.. note:: This lab will consist of an abbreviated set of steps, as some of the
-   objects created in Lab 1 (services and service chains) will be fully
+.. note:: This module will consist of an abbreviated set of steps, as some of
+   the objects created in Module 1 (Services and Service Chains) will be fully
    re-usable here. If any of these objects have not been created, please review
-   Lab 1 for more detailed configuration instructions.
+   `Module 1 - Create a Transparent Forward Procy SSLO
+   <../module1/module1.html>`_ for more detailed configuration instructions.
 
 .. toctree::
    :maxdepth: 1

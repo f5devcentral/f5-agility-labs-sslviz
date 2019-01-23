@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-Lab 4.2: Configure an Existing App deployment through Guided Configuration
---------------------------------------------------------------------------
+Lab 4.2: Configure an Existing Application deployment through Guided Config
+---------------------------------------------------------------------------
 
 - **Configuration review and prerequisites** - take a moment to review the
   topology options and workflow configuration, then click :red:`Next`.

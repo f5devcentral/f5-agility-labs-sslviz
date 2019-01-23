@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-Lab 5.1: Review and edit the existing policy
---------------------------------------------
+Review and edit the existing security policy rules
+--------------------------------------------------
 
 In the SSLO dashboard view, navigate to the Security Policies tab and click on
 a :red:`security policy (Name)`. The Guided Configuration will present the
@@ -17,6 +17,9 @@ block (reject), and to send traffic to a service chain.
 Additional rules can use **AND** (Match All) or **OR** (Match Any) logic to
 create complex decisions. Review the **Conditions** options to see the
 possibilities.
+
+Review and edit the visual per-request policy
+---------------------------------------------
 
 To view the underlying :red:`visual security policy`, in the SSLO dashboard
 view, navigate to the Security Policies tab and click on a security policy (Per

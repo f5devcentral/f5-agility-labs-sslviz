@@ -12,5 +12,3 @@ Class 2: SSL Orchestration v5 (Ravello)
    appendix/appendix*
 
 Expected time to complete: **4 hours**
-
-To continue please review the information about the Lab Environment.
