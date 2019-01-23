@@ -25,13 +25,15 @@ Below is a reasonably-ordered list of troubleshooting steps.
   logging will very often reveal important issues. Specifically, it will
   indicate traffic classification matches, mismatches or deployment issues.
 
-  *tail –f /var/log/apm*
+  .. code-block:: bash
 
-  *tail -f /var/log/restnoded/restnoded.log*
+     tail –f /var/log/apm
 
-  *tail -f /vr/log/restjavad.0.log*
+     tail -f /var/log/restnoded/restnoded.log
 
-- If the SSL Orchestrator deployment process succeeds, but traffic isn’t
+     tail -f /vr/log/restjavad.0.log
+
+- If the SSL Orchestrator deployment process succeeds, but traffic isn't
   flowing through the environment made evident by lack of access to remote
   sites from the client:
 
@@ -71,15 +73,19 @@ Below is a reasonably-ordered list of troubleshooting steps.
     packet analysis to determine if SSL if failing between the BIG-IP egress
     point and the remote server.
 
-    *tcpdump –i 0.0:nnn –nn –Xs0 –vv –w <file.pcap> <any additional filters>*
+    .. code-block:: bash
 
-    Then either export this capture to WireShark are send to ssldump:
+       tcpdump –i 0.0:nnn –nn –Xs0 –vv –w <file.pcap> <any additional filters>
 
-    *ssldump –nr <file.pcap> -H –S crypto > text-file.txt*
+    Then either export this capture to WireShark or send to ssldump:
+
+    .. code-block:: bash
+
+       ssldump –nr <file.pcap> -H –S crypto > text-file.txt
 
   - If the WireShark or ssldump analysis verifies an SSL issue:
 
-    - Plug the site’s address into the SSLLabs.com server test site at:
+    - Plug the site's address into the SSLLabs.com server test site at:
 
       https://www.ssllabs.com/ssltest/
 
@@ -90,8 +96,9 @@ Below is a reasonably-ordered list of troubleshooting steps.
       the correct cipher string to match the requirements of this site. To do
       that, perform the following command at the BIG-IP command line:
 
-      *tmm --clientciphers ‘CIPHER STRING AS DISPLAYED IN SERVER SSL
-      PROFILES’*
+      .. code-block:: bash
+
+         tmm --clientciphers 'CIPHER STRING AS DISPLAYED IN SERVER SSL PROFILES'
 
     - Further SSL/TLS issues are beyond the depth of this lab guide. Seek
       assistance.

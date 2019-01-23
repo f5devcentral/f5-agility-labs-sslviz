@@ -12,7 +12,7 @@ arrow icon on the far right. To edit any given setting, click the corresponding
 pencil icon. Clicking the pencil icon will send the workflow back to the
 selected settings page.
 
-- When satisfied with the defined settings, click Deploy.
+- When satisfied with the defined settings, click :red:`Deploy`.
 
 Upon successfully deploying the configuration, SSL Orchestrator will now
 display a **Dashboard** view:

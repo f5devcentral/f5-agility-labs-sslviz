@@ -19,10 +19,10 @@ flow through a smaller set of security services.
 - Click :red:`Add` to create a new service chain containing all of the security
   services.
 
-  - **Name** – provide a unique name to this service
+  - **Name** - provide a unique name to this service
     (ex.":red:`my_service_chain`").
 
-  - **Services** – select any number of desired service and move them into the
+  - **Services** - select any number of desired service and move them into the
     **Selected Service Chain Order** column, optionally also ordering them as
     required. In this lab, select :red:`all of the services`.
 
@@ -31,10 +31,10 @@ flow through a smaller set of security services.
 - Click Add to create a new service chain for just the L2 (ex. FireEye) and TAP
   services.
 
-  - **Name** – provide a unique name to this service (ex.
+  - **Name** - provide a unique name to this service (ex.
     ":red:`my_sub_service_chain`").
 
-  - **Services** – select the inline layer 2 (ex. FireEye) and TAP services.
+  - **Services** - select the inline layer 2 (ex. FireEye) and TAP services.
 
   - Click :red:`Save`.
 

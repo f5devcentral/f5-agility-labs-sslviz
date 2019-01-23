@@ -21,7 +21,9 @@ To test the deployed solution, use the following options:
   Perform a tcpdump on the F5 system to observe the decrypted clear text
   traffic. This confirms SSL interception by SSLO.
 
-  tcpdump –lnni [interface or VLAN name] -Xs0
+  .. code-block:: bash
+     
+     tcpdump –lnni [interface or VLAN name] -Xs0
 
   As a function of adding a new service, the UI requires a name for each
   (source and destination) network. SSL Orchestrator will then create separate
@@ -35,14 +37,16 @@ To test the deployed solution, use the following options:
 
   Example:
 
-  *ssloN_FireEye_in.app/ssloN_FireEye_in*
+  :red:`ssloN_FireEye_in.app/ssloN_FireEye_in`
 
-  *ssloN_FireEye_in.app/ssloN_FireEye_in*
+  :red:`ssloN_FireEye_in.app/ssloN_FireEye_in`
 
   A tcpdump on the source side VLAN of this FireEye service would therefore
   look like this:
 
-  *tcpdump -lnni ssloN_FireEye_in.app/ssloN_FireEye_in -Xs0*
+  .. code-block:: bash
+
+     tcpdump -lnni ssloN_FireEye_in.app/ssloN_FireEye_in -Xs0
 
   The security service VLANs and their corresponding application services are
   all visible from the BIG-IP UI under Network -> VLANs.
@@ -54,4 +58,6 @@ To test the deployed solution, use the following options:
   interface, to tail its capture logs, or to log into its management UI and
   capture analytics. A tcpdump capture usually requires root or sudo access.
 
-  *tcpdump -lnni [interface] -Xs0*
+  .. code-block:: bash
+
+     tcpdump -lnni [interface] -Xs0

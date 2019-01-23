@@ -10,10 +10,10 @@ and SSL settings. These can all be removed individually, however must be
 deleted in a hierarchical order. Once the topology and interception rules have
 been deleted,
 
-- SSL Settings can be deleted any time
+- :red:`SSL Settings` can be deleted any time
 
-- Delete any unused Security Policies
+- Delete any unused :red:`Security Policies`
 
-- Delete any unused Service Chains
+- Delete any unused :red:`Service Chains`
 
-- Delete any unused Services
+- Delete any unused :red:`Services`

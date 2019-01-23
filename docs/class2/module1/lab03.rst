@@ -10,6 +10,8 @@ intuitive, re-entrant configuration steps tailored to the selected
 topology.
 
 .. image:: ../images/image3.png
+   :align: center
+   :scale: 100%
 
 The following steps will walk through the Guided Configuration (GC) to build a
 simple transparent forward proxy. 
@@ -18,13 +20,15 @@ simple transparent forward proxy.
    concise set of lab steps, without details, skip to the bottom of this lab
    (Lab 1).
 
-- **Initialization** – if this is the first time accessing SSLO in a new BIG-IP
+- **Initialization** - if this is the first time accessing SSLO in a new BIG-IP
   build, upon first access, GC will automatically load and deploy the built-in
   SSLO package.
 
 .. image:: ../images/image4.png
+   :align: center
+   :scale: 50%
 
-- **Configuration review and prerequisites** – take a moment to review the
+- **Configuration review and prerequisites** - take a moment to review the
   topology options and workflow configuration steps involved. Optionally
   satisfy any of the :red:`DNS, NTP and Route` prerequisites from this page.
   Keep in mind, however, that aside from NTP, the SSLO GC will provide an
@@ -35,3 +39,4 @@ simple transparent forward proxy.
 
 .. image:: ../images/image5.png
    :align: center
+   :scale: 75%

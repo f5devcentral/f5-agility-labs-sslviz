@@ -31,25 +31,25 @@ policy can be managed directly.
 For the lab, create an additional rule to bypass SSL for "Financial Data and
 Services" and "Health and Medicine" URL categories.
 
-- Click Add to create a new rule.
+- Click :red:`Add` to create a new rule.
 
-  - **Name** – provide a unique name for the rule (ex. "urlf_bypass").
+  - **Name** - provide a unique name for the rule (ex. ":red:`urlf_bypass`").
 
   - **Conditions**
 
-    - **Category Lookup (All)** – add Financial Data and Services and Health
-      and Medicine.
+    - **Category Lookup (All)** - add :red:`Financial Data and Services` and
+      :red:`Health and Medicine`.
 
-      The Category Lookup (All) condition provides categorization for TLS
-      SNI, HTTP Connect and HTTP Host information.
+      .. note:: The Category Lookup (All) condition provides categorization for
+         TLS SNI, HTTP Connect and HTTP Host information.
 
-  - **Action** – select Allow.
+  - **Action** - select :red:`Allow`.
 
-  - **SSL Forward Proxy Action** – select Bypass.
+  - **SSL Forward Proxy Action** - select :red:`Bypass`.
 
-  - **Service Chain** – select the L2/TAP service chain.
+  - **Service Chain** - select the :red:`L2/TAP service chain`.
 
-  - Click OK.
+  - Click :red:`OK`.
 
     .. image:: ../images/image15.png
 
@@ -57,12 +57,13 @@ Services" and "Health and Medicine" URL categories.
   does not send traffic to a service chain. For the lab, edit this rule to
   send all intercepted traffic to a service chain.
 
-  - Click the pencil icon to edit this rule.
+  - Click the pencil icon to :red:`edit` this rule.
 
-  - Service Chain – select the service chain containing all of the services.
+  - Service Chain - select the service chain containing :red:`all` of the
+    services.
 
-  - Click OK.
+  - Click :red:`OK`.
 
   .. image:: ../images/image16.png
 
-  - Click Save & Next.
+  - Click  :red:`Save & Next`.

@@ -1,3 +1,6 @@
+.. role:: red
+.. role:: bred
+
 SSL Orchestrator Lab Environment
 ================================
 
@@ -5,28 +8,28 @@ The lab environment for this guide has provided some prerequisite settings that
 you should be aware of. These are provided to make the demo simpler. All of the
 following would need to be configured manually in another environment.
 
-- **Client side VLAN and subnet are defined** – this is the VLAN that an
+- **Client side VLAN and subnet are defined** - this is the VLAN that an
   internal client connects to for outbound traffic flows. SSLO does not define
   the client-side VLAN(s) and self-IP(s). A web server also exists on the
-  client side VLAN to facilitate an inbound (reverse proxy) use case – external
+  client side VLAN to facilitate an inbound (reverse proxy) use case - external
   client to an internal set of websites.
 
-- **Outbound side VLAN and subnet are defined** – this is the VLAN that traffic
+- **Outbound side VLAN and subnet are defined** - this is the VLAN that traffic
   egresses from SSLO to the Internet gateway. SSLO does not define the
   server-side VLAN(s) and self-IP(s).
 
-- **ICAP service VLAN and subnet are defined** – SSLO does not define the
+- **ICAP service VLAN and subnet are defined** - SSLO does not define the
   networking for this service type, so it has been pre-created in this lab.
 
-- **CA certificate and private key are installed** – this is the CA certificate
+- **CA certificate and private key are installed** - this is the CA certificate
   and private key that are used to re-issue (forge) remote server certificates
   to internal clients for outbound traffic flows.
 
-- **Server certificate and private key are installed** – for the inbound
+- **Server certificate and private key are installed** - for the inbound
   (reverse proxy) traffic flow use case, SSL traffic is terminated at the F5,
   and re-encrypted on the way to the internal application environment. A
   wildcard server certificate is installed to facilitate using any name under
-  the "*f5demolabs.com*" sub-domain.
+  the ":red:`.f5demolabs.com`" sub-domain.
 
 .. note:: It is a security best practice to isolate security devices within the
    protected network enclaves provided by SSLO. Customers will often desire NOT

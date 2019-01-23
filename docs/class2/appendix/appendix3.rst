@@ -17,10 +17,10 @@ quick list of things you can do with it.
 - Create an explicit proxy security service.
 
 - Create an upstream routed path to serve as an alternate path to the
-  Internet – this would test the ability to use the Proxy Select agent in the
+  Internet - this would test the ability to use the Proxy Select agent in the
   SSLO service visual policy to redirect flows through alternate gateways.
 
-- Create an upstream explicit proxy path – this would also serve to test the
+- Create an upstream explicit proxy path - this would also serve to test the
   ability to use the Proxy Select agent for alternate explicit proxy gateway
   paths.
 

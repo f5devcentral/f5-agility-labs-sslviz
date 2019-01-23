@@ -65,7 +65,7 @@ security infrastructure.
 
 .. image:: images/image2.png
 
-What’s new in SSLO 4.0?
+What's new in SSLO 4.0?
 -----------------------
 
 SSLO 4.0 provides significant architectural improvements over previous
@@ -76,7 +76,7 @@ versions. Here are the highlights:
   providing much greater flexibility in traffic management options.
 
 - Optimizes traffic flow through security services by replacing the complex
-  "proxy hops" with a new "tee connector" – essentially a mid-proxy tap – that
+  "proxy hops" with a new "tee connector" - essentially a mid-proxy tap - that
   allows decrypted traffic to flow through security devices out-of-band from
   the main client-server proxy traffic. This is implemented as new "Service"
   and "Connector" profiles.
@@ -111,7 +111,7 @@ SSLO 4.0 also includes the following new functionality features:
 - vCMP support - ability to select existing VLANs for inbound and outbound
   to/from inline services.
 
-What’s new in SSLO 5.0?
+What's new in SSLO 5.0?
 -----------------------
 
 - Guided Configuration user experience, a complete refresh of the SSLO UI based

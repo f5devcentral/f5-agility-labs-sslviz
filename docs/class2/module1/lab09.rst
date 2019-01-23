@@ -12,16 +12,16 @@ different types of traffic (ex. TCP, UDP, other). The resulting LTM virtual
 servers will bind the SSL settings, VLANs, IPs, and security policies created
 in the topology workflow.
 
-- **Ingress Network (VLANs)** – this defines the VLANs through which traffic
+- **Ingress Network (VLANs)** - this defines the VLANs through which traffic
   will enter. For a transparent forward proxy topology, this would be a
-  client-side VLAN. Select client-net.
+  client-side VLAN. Select :red:`client-net`.
 
-- **L7 Interception Rules** – FTP and email protocol traffic are all
+- **L7 Interception Rules** - FTP and email protocol traffic are all
   "server-speaks-first" protocols, and therefore SSLO must process these
   separately from typical client-speaks-first protocols like HTTP. This
   selection enables processing of each of these protocols, which create
-  separate port-based listeners for each. As required, selectively enable
-  the additional protocols that need to be decrypted and inspected through
+  separate port-based listeners for each. As required, :red:`selectively enable
+  the additional protocols that need to be decrypted and inspected` through
   SSLO.
 
-- Click Save & Next.
+- Click :red:`Save & Next`.

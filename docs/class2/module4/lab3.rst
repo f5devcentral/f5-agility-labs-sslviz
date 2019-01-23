@@ -9,7 +9,7 @@ policy. To attach this to the LTM virtual server, edit the virtual server
 properties.
 
 - **Access Policy (Access Profile**): attach the single
-  "ssloDefault_accessProfile".
+  ":red:`ssloDefault_accessProfile`".
 
-- **Access Policy (Per-Request Policy)**: attach the existing application
-  per-request policy.
+- **Access Policy (Per-Request Policy)**: attach the :red:`existing application
+  per-request policy`.
