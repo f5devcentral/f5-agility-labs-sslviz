@@ -44,14 +44,14 @@ IDS/IPS or DLP solution. Some refer to this as a "Bump in the Wire."
 
    |image17|
 
-.. |image4| image:: /_static/image4.png
-.. |image15| image:: /_static/image15.png
+.. |image4| image:: ../images/image4.png
+.. |image15| image:: ../images/image15.png
    :width: 5.27778in
    :height: 1.76681in
-.. |image16| image:: /_static/image16.png
+.. |image16| image:: ../images/image16.png
    :width: 4.66042in
    :height: 1.00926in
-.. |image17| image:: /_static/image17.png
+.. |image17| image:: ../images/image17.png
    :width: 4.63168in
    :height: 5.13889in
 

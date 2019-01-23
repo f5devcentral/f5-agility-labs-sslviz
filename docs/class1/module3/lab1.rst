@@ -112,61 +112,61 @@ Task 3 - Modify Service Chain
 
    |image75|
 
-.. |image57| image:: /_static/image52.png
+.. |image57| image:: ../images/image52.png
    :width: 6.50000in
    :height: 1.43472in
-.. |image58| image:: /_static/image53.png
+.. |image58| image:: ../images/image53.png
    :width: 6.50000in
    :height: 1.64097in
-.. |image59| image:: /_static/image54.png
+.. |image59| image:: ../images/image54.png
    :width: 6.50000in
    :height: 2.56806in
-.. |image60| image:: /_static/image54.png
+.. |image60| image:: ../images/image54.png
    :width: 6.50000in
    :height: 2.56806in
-.. |image61| image:: /_static/image55.png
+.. |image61| image:: ../images/image55.png
    :width: 6.50000in
    :height: 1.48056in
-.. |image62| image:: /_static/image56.png
+.. |image62| image:: ../images/image56.png
    :width: 6.50000in
    :height: 5.24375in
-.. |image63| image:: /_static/image57.png
+.. |image63| image:: ../images/image57.png
    :width: 6.50000in
    :height: 3.73611in
-.. |image64| image:: /_static/image58.png
+.. |image64| image:: ../images/image58.png
    :width: 6.50000in
    :height: 4.60625in
-.. |image65| image:: /_static/image59.png
+.. |image65| image:: ../images/image59.png
    :width: 6.50000in
    :height: 4.38333in
-.. |image66| image:: /_static/image60.png
+.. |image66| image:: ../images/image60.png
    :width: 6.50000in
    :height: 5.72500in
-.. |image67| image:: /_static/image61.png
+.. |image67| image:: ../images/image61.png
    :width: 6.50000in
    :height: 1.32639in
-.. |image68| image:: /_static/image62.png
+.. |image68| image:: ../images/image62.png
    :width: 4.54167in
    :height: 5.73958in
-.. |image69| image:: /_static/image63.png
+.. |image69| image:: ../images/image63.png
    :width: 6.50000in
    :height: 1.25625in
-.. |image70| image:: /_static/image64.png
+.. |image70| image:: ../images/image64.png
    :width: 6.50000in
    :height: 0.81528in
-.. |image71| image:: /_static/image65.png
+.. |image71| image:: ../images/image65.png
    :width: 5.47917in
    :height: 2.32292in
-.. |image72| image:: /_static/image66.png
+.. |image72| image:: ../images/image66.png
    :width: 6.50000in
    :height: 1.17153in
-.. |image73| image:: /_static/image66.png
+.. |image73| image:: ../images/image66.png
    :width: 6.50000in
    :height: 1.17153in
-.. |image74| image:: /_static/image67.png
+.. |image74| image:: ../images/image67.png
    :width: 6.50000in
    :height: 5.74375in
-.. |image75| image:: /_static/image68.png
+.. |image75| image:: ../images/image68.png
    :width: 6.50000in
    :height: 7.42986in
 

@@ -74,22 +74,22 @@ screen looks like the following, click :guilabel:`Finished`:
     recommends that you leave the setting enabled.
 
 
-.. |image3| image:: /_static/image3.png
+.. |image3| image:: ../images/image3.png
    :width: 5.52778in
    :height: 1.01389in
-.. |image4| image:: /_static/image4.png
+.. |image4| image:: ../images/image4.png
    :width: 3.69444in
    :height: 2.95833in
-.. |image5| image:: /_static/image5.png
+.. |image5| image:: ../images/image5.png
    :width: 4.00000in
    :height: 1.69608in
-.. |image6| image:: /_static/image6.png
+.. |image6| image:: ../images/image6.png
    :width: 4.83333in
    :height: 1.23209in
-.. |image7| image:: /_static/image7.png
+.. |image7| image:: ../images/image7.png
    :width: 2.75000in
    :height: 0.51684in
-.. |image8| image:: /_static/image8.png
+.. |image8| image:: ../images/image8.png
    :width: 4.59705in
    :height: 5.61111in
 

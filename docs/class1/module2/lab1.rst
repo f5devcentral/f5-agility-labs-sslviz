@@ -135,34 +135,34 @@ will accept connections.
 
 #. Click :guilabel:`Finish`
 
-.. |image45| image:: /_static/image41.png
+.. |image45| image:: ../images/image41.png
    :width: 5.75000in
    :height: 1.44444in
-.. |image46| image:: /_static/image42.png
+.. |image46| image:: ../images/image42.png
    :width: 6.50000in
    :height: 2.19792in
-.. |image47| image:: /_static/image43.png
+.. |image47| image:: ../images/image43.png
    :width: 6.50000in
    :height: 3.01111in
-.. |image48| image:: /_static/image44.png
+.. |image48| image:: ../images/image44.png
    :width: 5.54167in
    :height: 1.09722in
-.. |image49| image:: /_static/image45.png
+.. |image49| image:: ../images/image45.png
    :width: 6.50000in
    :height: 1.77292in
-.. |image50| image:: /_static/image46.png
+.. |image50| image:: ../images/image46.png
    :width: 6.50000in
    :height: 1.59722in
-.. |image51| image:: /_static/image47.png
+.. |image51| image:: ../images/image47.png
    :width: 6.50000in
    :height: 1.24514in
-.. |image52| image:: /_static/image48.png
+.. |image52| image:: ../images/image48.png
    :width: 6.50000in
    :height: 3.18264in
-.. |image53| image:: /_static/image49.png
+.. |image53| image:: ../images/image49.png
    :width: 6.50000in
    :height: 2.93958in
-.. |image54| image:: /_static/image50.png
+.. |image54| image:: ../images/image50.png
    :width: 6.50000in
    :height: 1.69931in
-.. |serverside_ssl| image:: /_static/class1-module2-lab1-serverssl.png
+.. |serverside_ssl| image:: ../images/class1-module2-lab1-serverssl.png

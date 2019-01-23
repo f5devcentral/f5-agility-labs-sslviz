@@ -20,10 +20,10 @@ Lab 2.2: Testing
 
    |image56|
 
-.. |image55| image:: /_static/image51.png
+.. |image55| image:: ../images/image51.png
    :width: 4.79167in
    :height: 2.93056in
-.. |image56| image:: /_static/image40.png
+.. |image56| image:: ../images/image40.png
    :width: 6.50000in
    :height: 2.63819in
 

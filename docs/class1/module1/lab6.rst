@@ -49,14 +49,14 @@ typically be an IDS/IPS.
 
    |image23|
 
-.. |image4| image:: /_static/image4.png
-.. |image21| image:: /_static/image21.png
+.. |image4| image:: ../images/image4.png
+.. |image21| image:: ../images/image21.png
    :width: 5.41667in
    :height: 1.76678in
-.. |image22| image:: /_static/image22.png
+.. |image22| image:: ../images/image22.png
    :width: 5.01852in
    :height: 1.01067in
-.. |image23| image:: /_static/image23.png
+.. |image23| image:: ../images/image23.png
    :width: 4.97222in
    :height: 3.33091in
 

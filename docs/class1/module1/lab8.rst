@@ -25,10 +25,10 @@ Task 1 - Issuing Requests
 
    |image44|
 
-.. |image43| image:: /_static/image39.png
+.. |image43| image:: ../images/image39.png
    :width: 6.50000in
    :height: 7.11250in
-.. |image44| image:: /_static/image40.png
+.. |image44| image:: ../images/image40.png
    :width: 6.50000in
    :height: 2.63819in
 

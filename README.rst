@@ -1,16 +1,17 @@
-# F5 SSL Orchestrator Training Lab Guide
+F5 SSL Orchestrator Training Lab Guide
+======================================
 
 This repository contains the source for F5 SSL Orchestrator Training
 Lab Guide.
 
-## Class 1: SSL Orchestration
+## Class 1: SSL Orchestration v4 (Agility)
 
 This introductory class covers the following topics:
 
- - SSLO Deployment Settings
- - Security Services Creation
- - Classification and Interception Rules
- - Outbound and Inbound Use cases
+- SSLO Deployment Settings
+- Security Services Creation
+- Classification and Interception Rules
+- Outbound and Inbound Use cases
 
 Expected time to complete: **4 hours**
 
