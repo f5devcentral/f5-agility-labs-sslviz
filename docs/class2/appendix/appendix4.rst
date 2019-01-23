@@ -1,3 +1,6 @@
+.. role:: red
+.. role:: bred
+
 Appendix - Demo Scripts
 =======================
 
@@ -6,398 +9,292 @@ Lab 1 demo script
 
 **Configuration review and prerequisites**
 
-1. Optionally define DNS, NTP and gateway route
-
-2. Click Next
+#. Optionally define DNS, NTP and gateway route
+#. Click :red:`Next`
 
 **Topology Properties**
 
-1. Name - some name
-
-2. Protocol: Any
-
-3. IP Family: IPv4
-
-4. Topology: L3 Outbound
-
-5. Click Save & Next
+#. Name - some name
+#. Protocol: :red:`Any`
+#. IP Family: :red:`IPv4`
+#. Topology: :red:`L3 Outbound`
+#. Click :red:`Save & Next`
 
 **SSL Configuration**
 
-1. Create a New SSL Profile
-
-2. Client-side SSL (Cipher Type): Cipher String
-
-3. Client-side SSL (Cipher String): DEFAULT
-
-4. Client-side SSL (Certificate Key Chain): default.crt and default.key
-
-5. Client-side SSL (CA Certificate Key Chain): subca.f5demolabs.com
-
-6. Server-side SSL (Cipher Type): Cipher String
-
-7. Server-side SSL (Cipher String): DEFAULT
-
-8. Server-side SSL (Trusted Certificate Authority): ca-bundle.crt
-
-9. Click Save & Next
+#. :red:`Create a New` SSL Profile
+#. Client-side SSL (Cipher Type): :red:`Cipher String`
+#. Client-side SSL (Cipher String): :red:`DEFAULT`
+#. Client-side SSL (Certificate Key Chain): :red:`default.crt and default.key`
+#. Client-side SSL (CA Certificate Key Chain): :red:`subca.f5demolabs.com`
+#. Server-side SSL (Cipher Type): :red:`Cipher String`
+#. Server-side SSL (Cipher String): :red:`DEFAULT`
+#. Server-side SSL (Trusted Certificate Authority): :red:`ca-bundle.crt`
+#. Click :red:`Save & Next`
 
 **Service List**
 
-1. **Inline Layer 2 service**
+1. Inline Layer 2 service
 
-a. Name: some name (ex. FireEye)
+   a. Name: some name (ex. :red:`FireEye`)
+   #. Network Configuration
 
-b. Network Configuration
+      - Ratio: :red:`1`
+      - From BIGIP VLAN: Create New, name (ex. FireEye_in), :red:`int 1.6`
+      - To BIGIP VLAN: Create New, name (ex. FireEye_out), :red:`int 1.7`
+      - Click :red:`Done`
 
-- Ratio: 1
+   #. Service Action Down: :red:`Ignore`
+   #. Enable Port Remap: Enable, :red:`8080`
+   #. Click :red:`Save`
 
-- From BIGIP VLAN: Create New, name (ex. FireEye_in), int 1.6
+#. Inline layer 3 service
 
-- To BIGIP VLAN: Create New, name (ex. FireEye_out), int 1.7
+   a. Name: some name (ex. :red:`IPS`)
+   #. IP Family: :red:`IPv4`
+   #. Auto Manage: :red:`Enabled`
+   #. To Service Configuration
 
-- Click Done
+      - To Service: :red:`198.19.64.7/25`
+      - VLAN: Create New, name (ex. IPS_in), :red:`interface 1.3, tag 50`
 
-c. Service Action Down: Ignore
+   #. Service Action Down: :red:`Ignore`
+   #. L3 Devices: :red:`198.19.64.64`
+   #. From Service Configuration
 
-d. Enable Port Remap: Enable, 8080
+      - From Service: :red:`198.19.64.245/25`
+      - VLAN: Create New, name (ex. IP_out), :red:`interface 1.3, tag 60`
 
-3. Click Save
+   #. Enable Port Remap: Enabled, :red:`8181`
+   #. Manage SNAT Settings: :red:`None`
+   #. Click: :red:`Save`
 
-2. **Inline layer 3 service**
+#. Inline HTTP service
 
-a. Name: some name (ex. IPS)
+   a. Name: some name (ex. :red:`Proxy`)
+   #. IP Family: :red:`IPv4`
+   #. Auto Manage: :red:`Enabled`
+   #. Proxy Type: :red:`Explicit`
+   #. To Service Configuration
 
-b. IP Family: IPv4
+      - To Service: :red:`198.19.96.7/25`
+      - VLAN: Create New, name (ex. Proxy_in), :red:`interface 1.3, tag 110`
 
-c. Auto Manage: Enabled
+   #. Service Action Down: :red:`Ignore`
+   #. HTTP Proxy Devices: :red:`198.19.96.66, Port 3128`
+   #. From Service Configuration
 
-d. To Service Configuration
+      - From Service: :red:`198.19.96.245/25`
+      - VLAN: Create New, name (ex. Proxy_out), :red:`interface 1.3, tag 120`
 
-- To Service: 198.19.64.7/25
+   #. Manage SNAT Settings: :red:`None`
+   #. Authentication Offload: :red:`Disabled`
+   #. Click :red:`Save`
 
-- VLAN: Create New, name (ex. IPS_in), interface 1.3, tag 50
+#. ICAP Service
 
-e. Service Action Down: Ignore
+   a. name: some name (ex. :red:`DLP`)
+   #. IP Family: :red:`IPv4`
+   #. ICAP Devices: :red:`10.70.0.10, Port 1344`
+   #. Request URI Path: :red:`/squidclamav`
+   #. Response URI Path: :red:`/squidclamav`
+   #. Preview Max Length(bytes): :red:`524288`
+   #. Service Action Down: :red:`Ignore`
+   #. Click :red:`Save`
 
-f. L3 Devices: 198.19.64.64
+#. TAP Service
 
-g. From Service Configuration
-
-- From Service: 198.19.64.245/25
-
-- VLAN: Create New, name (ex. IP_out), interface 1.3, tag 60
-
-h. Enable Port Remap: Enabled, 8181
-
-i. Manage SNAT Settings: None
-
-j. Click Save
-
-3. **Inline HTTP service**
-
-a. Name: some name (ex. Proxy)
-
-b. IP Family: IPv4
-
-c. Auto Manage: Enabled
-
-d. Proxy Type: Explicit
-
-e. To Service Configuration
-
-- To Service: 198.19.96.7/25
-
-- VLAN: Create New, name (ex. Proxy_in), interface 1.3, tag 110
-
-f. Service Action Down: Ignore
-
-g. HTTP Proxy Devices: 198.19.96.66, Port 3128
-
-h. From Service Configuration
-
-- From Service: 198.19.96.245/25
-
-- VLAN: Create New, name (ex. Proxy_out), interface 1.3, tag 120
-
-i. Manage SNAT Settings: None
-
-j . Authentication Offload: Disabled
-
-k. Click Save
-
-4. **ICAP Service**
-
-a. name: some name (ex. DLP)
-
-b. IP Family: IPv4
-
-c. ICAP Devices: 10.70.0.10, Port 1344
-
-d. Request URI Path: /squidclamav
-
-e. Response URI Path: /squidclamav
-
-f. Preview Max Length(bytes): 524288
-
-g. Service Action Down: Ignore
-
-h. Click Save
-
-5. **TAP Service**
-
-a. Some Name (ex. TAP)
-
-b. Mac Address: 12:12:12:12:12:12
-
-c. VLAN: Create New, name (ex. TAP_in)
-
-d. Interface: 1.4
-
-e. Service Action Down: Ignore
-
-f. Click Save
-
-6. Click Save & Next
+   a. Some Name (ex. :red:`TAP`)
+   #. Mac Address: :red:`12:12:12:12:12:12`
+   #. VLAN: Create New, name (ex. :red:`TAP_in`)
+   #. Interface: :red:`1.4`
+   #. Service Action Down: :red:`Ignore`
+   #. Click :red:`Save`
+   
+#. Click :red:`Save & Next`
 
 **Service Chain List**
 
-1. Add
+#. Add
 
-a. Name: some name (ex. my-service-chain)
+   a. Name: some name (ex. :red:`my-service-chain`)
+   #. Services: :red:`all of the services`
+   #. Click :red:`Save`
 
-b. Services: all of the services
+#. Add
 
-c. Click Save
+   a. name: some name (ex. :red:`my-sub-service-chain`)
+   #. Services: :red:`L2 and TAP services`
+   #. Click :red:`Save`
 
-2. Add
-
-a. name: some name (ex. my-sub-service-chain)
-
-b. Services: L2 and TAP services
-
-c. Click Save
-
-3. Click Save & Next
+#. Click :red:`Save & Next`
 
 **Security Policy**
 
-1. Add a new rule
+#. Add a new rule
 
-a. Name: some name (ex. urlf_bypass)
+   a. Name: some name (ex. :red:`urlf_bypass`)
+   b. Conditions
 
-b. Conditions
+      - Category Lookup :red:`(All)`
+      - SNI Category: :red:`Financial Data and Services, Health and Medicine`
 
-- Category Lookup (All)
+   c. Action: :red:`Allow`
+   d. SSL Forward Proxy Action: :red:`bypass`
+   e. Service Chain: :red:`L2/TAP service chain`
+   f. Click :red:`OK`
 
-- SNI Category: Financial Data and Services, Health and Medicine
+#. Modify the All rule
 
-c. Action: Allow
+   a. Service Chain: :red:`all services chain`
+   #. Click :red:`OK`
 
-d. SSL Forward Proxy Action: bypass
-
-e. Service Chain: L2/TAP service chain
-
-f. Click OK
-
-2. Modify the All rule
-
-a. Service Chain: all services chain
-
-b. Click OK
-
-3. Click Save & Next
+#. Click :red:`Save & Next`
 
 **Interception Rule**
 
-a. Select Outbound Rule Type: Default
-
-b. Ingress Network (VLANs): client-side
-
-c. L7 Interception Rules: apply FTP and email protocols as required
-
-d. Click Save & Next
+#. Select Outbound Rule Type: :red:`Default`
+#. Ingress Network (VLANs): :red:`client-side`
+#. L7 Interception Rules: :red:`Apply FTP and email protocols as required.`
+#. Click :red:`Save & Next`
 
 **Egress Setting**
 
-a. Manage SNAT Settings: Auto Map
-
-b. Gateways: New, ratio 1, 10.30.0.1
+#. Manage SNAT Settings: :red:`Auto Map`
+#. Gateways: :red:`New, ratio 1, 10.30.0.1`
 
 **Summary**
 
-a. Review configuration
-
-b. Click Deploy
+#. Review configuration
+#. Click :red:`Deploy`
 
 Lab 2 demo script
 -----------------
 
 **Configuration review and prerequisites**
 
-1. Optionally define DNS, NTP and gateway route
-
-2. Click Next
+#. Optionally define DNS, NTP and gateway route
+#. Click :red:`Next`
 
 **Topology Properties**
 
-1. Name: some name (ex. sslo-inbound-1)
-
-2. Protocol: TCP
-
-3. IP Family: IPv4
-
-4. Topology: L3 Inbound
-
-5. Click Save & Next
+#. Name: some name (ex. :red:`sslo-inbound-1`)
+#. Protocol: :red:`TCP`
+#. IP Family: :red:`IPv4`
+#. Topology: :red:`L3 Inbound`
+#. Click :red:`Save & Next`
 
 **SSL Configuration**
 
-1. Show Advanced Setting
-
-2. Client-side SSL (Cipher Type): Cipher String
-
-3. Client-side SSL (Cipher String): DEFAULT
-
-4. Client-side SSL (Certificate Key Chain): default.crt and default.key
-
-5. Server-side SSL (Cipher Type): Cipher String
-
-6. Server-side SSL (Cipher String): DEFAULT
-
-7. Server-side SSL (Trusted Certificate Authority): ca-bundle.crt
-
-8. Advanced (Expire Certificate Control): Ignore
-
-9. Advanced (Untrusted Certificate Authority): Ignore
-
-10. Click Save & Next
+#. :red:`Show Advanced Setting`
+#. Client-side SSL (Cipher Type): :red:`Cipher String`
+#. Client-side SSL (Cipher String): :red:`DEFAULT`
+#. Client-side SSL (Certificate Key Chain): :red:`default.crt and default.key`
+#. Server-side SSL (Cipher Type): :red:`Cipher String`
+#. Server-side SSL (Cipher String): :red:`DEFAULT`
+#. Server-side SSL (Trusted Certificate Authority): :red:`ca-bundle.crt`
+#. Advanced (Expire Certificate Control): :red:`Ignore`
+#. Advanced (Untrusted Certificate Authority): :red:`Ignore`
+#. Click :red:`Save & Next`
 
 **Services List**
 
-1. Click Save & Next
+#. Click :red:`Save & Next`
 
 **Service Chain List**
 
-1. Click Save & Next
+#. Click :red:`Save & Next`
 
 **Security Policy**
 
-1. Remove Pinners_Rule
-
-2. Edit All Traffic rule and add L2/TAP service chain
-
-3. Click Save & Next
+#. Remove :red:`Pinners_Rule`
+#. Edit All Traffic rule and add :red:`L2/TAP service chain`
+#. Click :red:`Save & Next`
 
 **Interception Rule**
 
-1. Gateway-mode
+#. Gateway-mode
 
-a. Hide Advanced Setting
+   a. :red:`Hide Advanced Setting`
+   #. Source Address: :red:`0.0.0.0/0`
+   #. Destination Address/Mask: :red:`0.0.0.0/0`
+   #. Port: :red:`443`
+   #. VLANs: :red:`outbound`
 
-b. Source Address: 0.0.0.0/0
+#. Targeted-mode
 
-c. Destination Address/Mask: 0.0.0.0/0
+   a. :red:`Show Advanced Setting`
+   #. Source Address: :red:`0.0.0.0/0`
+   #. Destination Address: :red:`10.30.0.200`
+   #. Port: :red:`443`
+   #. VLANs: :red:`outbound`
+   #. Pool: :red:`webserver-pool`
 
-d. Port: 443
-
-e. VLANs: outbound
-
-2. Targeted-mode
-
-a. Show Advanced Setting
-
-b. Source Address: 0.0.0.0/0
-
-c. Destination Address: 10.30.0.200
-
-d. Port: 443
-
-e. VLANs: outbound
-
-f. Pool: webserver-pool
-
-3. Click Save & Next
+#. Click :red:`Save & Next`
 
 **Egress Settings**
 
-1. Manage SNAT Settings: Auto Map
-
-2. Gateways: Default Route
+#. Manage SNAT Settings: :red:`Auto Map`
+#. Gateways: :red:`Default Route`
 
 **Summary**
 
-1. Review configuration
-
-2. Click Deploy
+#. Review configuration
+#. Click :red:`Deploy`
 
 Lab 3 demo script
 -----------------
 
 **Configuration review and prerequisites**
 
-1. Optionally define DNS, NTP and gateway route
-
-2. Click Next
+#. Optionally define DNS, NTP and gateway route
+#. Click :red:`Next`
 
 **Topology Properties**
 
-1. Name: some name (ex. sslo-explicit)
-
-2. Protocol: TCP
-
-3. IP Family: IPv4
-
-4. Topology: L3 Explicit Proxy
-
-5. Click Save & Next
+#. Name: some name (ex. :red:`sslo-explicit`)
+#. Protocol: :red:`TCP`
+#. IP Family: :red:`IPv4`
+#. Topology: :red:`L3 Explicit Proxy`
+#. Click :red:`Save & Next`
 
 **SSL Configuration**
 
-1. SSL Profile: Use Existing, existing outbound SSL settings
-
-2. Click Save & Next
+#. SSL Profile: :red:`Use Existing, existing outbound SSL settings`
+#. Click :red:`Save & Next`
 
 **Services List**
 
-1. Click Save & Next
+#. Click :red:`Save & Next`
 
 **Service Chain List**
 
-1. Click Save & Next
+#. Click :red:`Save & Next`
 
 **Security Policy**
 
-1. Type: Use Existing, existing outbound security policy
-
-2. Click Save & Next
+#. Type: :red:`Use Existing, existing outbound security policy`
+#. Click :red:`Save & Next`
 
 **Interception Rule**
 
-1. IPV4 Address: 10.20.0.150
-
-2. Port: 3128
-
-3. VLANs: client-net
-
-4. Click Save & Next
+#. IPV4 Address: :red:`10.20.0.150`
+#. Port: :red:`3128`
+#. VLANs: :red:`client-net`
+#. Click :red:`Save & Next`
 
 **Egress Settings**
 
-1. Manage SNAT Settings: Auto Map
-
-2. Gateways: Existing Gateway Pool, -ex-pool-4 pool
+#. Manage SNAT Settings: :red:`Auto Map`
+#. Gateways: :red:`Existing Gateway Pool, -ex-pool-4 pool`
 
 **Summary**
 
-1. Review configuration
-
-2. Click Deploy
+#. Review configuration
+#. Click :red:`Deploy`
 
 **System Settings**
 
-1. DNS Query Resolution: Local Forwarding Nameserver
-
-2. Local Forwarding Nameserver(s): 10.1.20.1
-
-3. Click Deploy
+#. DNS Query Resolution: :red:`Local Forwarding Nameserver`
+#. Local Forwarding Nameserver(s): :red:`10.1.20.1`
+#. Click :red:`Deploy`
