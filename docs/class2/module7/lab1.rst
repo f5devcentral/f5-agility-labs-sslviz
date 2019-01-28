@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-Deleting a topology
--------------------
+Lab 7.1: Deleting a topology
+----------------------------
 
 Deleting a topology will also delete any relying Interception Rules. The
 deletion process performs a complex set of REST-based tasks, therefore only one
@@ -11,7 +11,7 @@ the Delete button. Confirm that both the topology and respective interception
 rules are removed.
 
 Deleting other objects
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 While deleting a topology also removes its respective interception rules, it
 does not remove the other objects - services, service chains, security policies
@@ -25,7 +25,7 @@ been deleted,
 - Delete any unused :red:`Services`
 
 Deleting everything
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 To completely remove the SSLO configuration and start from scratch:
 
