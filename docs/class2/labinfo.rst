@@ -1,12 +1,16 @@
 .. role:: red
 .. role:: bred
 
-SSL Orchestrator Lab Environment
-================================
+SSL Orchestrator Lab Environment (Ravello)
+==========================================
 
-The lab environment for this guide has provided some prerequisite settings that
-you should be aware of. These are provided to make the demo simpler. All of the
-following would need to be configured manually in another environment.
+.. important:: The lab environment for this guide has provided some
+   prerequisite settings that you should be aware of. These are provided to
+   make the demo simpler. All of the following would need to be configured
+   manually in another environment.
+   
+   The following information is based on our custom **Ravello** blue print
+   "SSL Orchestrator 5.1 Lab".
 
 - **Client side VLAN and subnet are defined** - this is the VLAN that an
   internal client connects to for outbound traffic flows. SSLO does not define
