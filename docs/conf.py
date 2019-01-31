@@ -106,9 +106,14 @@ if git_branch_name in branch_map:
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+
 extensions = [
   'sphinxjp.themes.basicstrap',
   'sphinx.ext.todo',
+  'sphinx.ext.extlinks',
+  'sphinx.ext.graphviz',
+  'sphinxcontrib.nwdiag',
+  'sphinxcontrib.blockdiag'
   #'sphinx.ext.autosectionlabel'
 ]
 
@@ -221,6 +226,10 @@ def setup(app):
 
 if on_rtd:
     templates_path = ['_templates']
+
+extlinks = {
+    'issues':( ("%s/issues/%%s" % github_repo), 'issue ' )
+}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
