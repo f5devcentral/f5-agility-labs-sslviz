@@ -10,6 +10,9 @@ classname = "F5 BIG-IP SSL Orchestrator Training Lab"
 # OPTIONAL: The URL to the GitHub Repository for this class
 github_repo = "https://github.com/f5devcentral/f5-agility-labs-sslviz"
 
+# OPTIONAL: Google Analytics
+# googleanalytics_id = 'UA-85156643-4'
+
 #
 # END CONFIG
 # ----------
@@ -60,7 +63,7 @@ if 'github_repo' in locals() and len(github_repo) > 0:
     rst_prolog += """
 .. |repoinfo| replace:: The content contained here leverages a full DevOps CI/CD
               pipeline and is sourced from the GitHub repository at %s.
-              Bugs and Requests for enhancements can be made using by
+              Bugs and Requests for enhancements can be made by
               opening an Issue within the repository.
 """ % (github_repo)
 else:
@@ -106,11 +109,7 @@ if git_branch_name in branch_map:
 extensions = [
   'sphinxjp.themes.basicstrap',
   'sphinx.ext.todo',
-  'sphinx.ext.extlinks',
-  'sphinx.ext.graphviz',
-  'sphinxcontrib.nwdiag',
-  'sphinxcontrib.blockdiag'
-#  'sphinx.ext.autosectionlabel'
+  #'sphinx.ext.autosectionlabel'
 ]
 
 if 'googleanalytics_id' in locals() and len(googleanalytics_id) > 0:
@@ -194,7 +193,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**disabled*']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -215,18 +214,13 @@ html_theme_options = {
                         'site_name': 'Community Training Classes & Labs',
                         'next_prev_link': True
                      }
+html_last_updated_fmt = '%Y-%m-%d %I:%M:%S'
 
 def setup(app):
     app.add_stylesheet('css/f5_agility_theme.css')
 
 if on_rtd:
     templates_path = ['_templates']
-
-extlinks = {
-    'raw_github_url':( ("https://raw.githubusercontent.com/f5devcentral/f5-automation-labs/%s%%s" % git_branch_name), None),
-    'issues':( ("%s/issues/%%s" % github_repo), 'issue ' )
-}
-
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
