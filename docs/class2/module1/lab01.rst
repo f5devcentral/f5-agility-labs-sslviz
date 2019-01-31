@@ -42,7 +42,7 @@ SSLO, providing decrypted, inspectable traffic to the security services.
   and has an IP of :red:`198.19.96.66/25`. Its outbound interface (traffic
   coming from it) is attached to the BIG-IP :red:`1.3 (VLAN tag 120)` interface
   and has an IP of :red:`198.19.96.136/25`. Its default gateway is
-  :red:`198.19.96.245:red:`, which will be a VLAN self-IP on the BIG-IP.
+  :red:`198.19.96.245`, which will be a VLAN self-IP on the BIG-IP.
 
 - The outbound network is attached to the BIG-IP :red:`1.2` interface, in the
   :red:`10.30.0.0/24` subnet, and has a gateway of :red:`10.30.0.1`.
