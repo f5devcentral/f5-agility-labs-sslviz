@@ -108,7 +108,6 @@ if git_branch_name in branch_map:
 # ones.
 
 extensions = [
-  'sphinxjp.themes.basicstrap',
   'sphinx.ext.todo',
   'sphinx.ext.extlinks',
   'sphinx.ext.graphviz',
