@@ -47,7 +47,8 @@ Services" and "Health and Medicine" URL categories.
 
   - **SSL Forward Proxy Action** - select :red:`Bypass`.
 
-  - **Service Chain** - select the :red:`L2/TAP service chain`.
+  - **Service Chain** - select the FireEye/TAP service chain
+    :red:`sub_service_chain`.
 
   - Click :red:`OK`.
 

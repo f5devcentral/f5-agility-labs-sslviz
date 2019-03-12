@@ -77,7 +77,7 @@ The SSL Orchestrator Topologies option page presents six topologies:
 
 For this lab:
 
-- **Name**: some name (ex. ":red:`demo`")
+- **Name**: some name (ex. ":red:`lab1_outbound`")
 - **Protocol**: :red:`Any` - this will create separate TCP, UDP and non-TCP/UDP
   interception rules.
 - **IP Family**: :red:`IPv4`

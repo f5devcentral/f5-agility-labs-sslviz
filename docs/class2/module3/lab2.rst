@@ -1,19 +1,22 @@
 .. role:: red
 .. role:: bred
 
-Lab 3.2: Add DNS and Logging settings
--------------------------------------
+Lab 3.2: [Optional] Add explicit proxy authentication
+-----------------------------------------------------
 
-Minimally an explicit proxy requires DNS settings. To enable this for the L3
-Explicit topology, in the SSLO UI click System Settings.
+Enabling explicit proxy authentication in SSLO requires two steps:
 
-- **DNS Query Resolution** - select :red:`Local Forwarding Nameserver`.
+#. **Create an SWG-Explicit access policy** - explicit proxy authentication is
+   defined as an access policy of type SWG-Explicit.
 
-- **Local Forwarding Nameserver(s)** - enter :red:`10.30.0.1`.
+   .. image:: ../images/image23.png
 
-- **[Optional] Logging Level** - select the logging level most appropriate for
-  the deployment. Keep in mind, however, that DEBUG logging produces an
-  enormous amount of local Syslog traffic and is not recommended when
-  processing production traffic flows.
+   This policy will typically contain an HTTP 407 Response challenge, and then
+   some form of authentication, which could be HTTP Basic, NTLM or Kerberos.
 
-- Click :red:`Deploy` to commit the changes.
+   .. image:: ../images/image24.png
+
+#. **Apply the new access policy to an Explicit Proxy topology** - attach the
+   SWG-Explicit access policy by creating or editing an Explicit proxy SSLO
+   topology. On the Interception Rules page, select the new policy under the
+   :red:`Access Profile` option.

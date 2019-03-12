@@ -14,7 +14,7 @@ Lab 1 demo script
 
 **Topology Properties**
 
-#. Name - some name
+#. Name: :red:`Some_name`
 #. Protocol: :red:`Any`
 #. IP Family: :red:`IPv4`
 #. Topology: :red:`L3 Outbound`
@@ -117,13 +117,13 @@ Lab 1 demo script
 
 #. Add
 
-   a. Name: some name (ex. :red:`my-service-chain`)
+   a. Name: some name (ex. :red:`all_service_chain`)
    #. Services: :red:`all of the services`
    #. Click :red:`Save`
 
 #. Add
 
-   a. name: some name (ex. :red:`my-sub-service-chain`)
+   a. name: some name (ex. :red:`sub_service_chain`)
    #. Services: :red:`L2 and TAP services`
    #. Click :red:`Save`
 
@@ -178,7 +178,7 @@ Lab 2 demo script
 
 **Topology Properties**
 
-#. Name: some name (ex. :red:`sslo-inbound-1`)
+#. Name: some_name (ex. :red:`inbound_1`)
 #. Protocol: :red:`TCP`
 #. IP Family: :red:`IPv4`
 #. Topology: :red:`L3 Inbound`

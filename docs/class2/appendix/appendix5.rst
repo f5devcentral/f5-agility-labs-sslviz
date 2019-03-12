@@ -20,9 +20,8 @@ following steps detail that configuration for SSLO 5.0.
    following prerequisites are required:**
 
    - The BIG-IP must have defined, separate VLANs for the client-side and
-     server-side networks.
+     server-side networks. These VLAN's must be on the same IP subnet.
    - The BIG-IP must NOT have self-IPs configured on these VLANs.
-   - The client and server must be on the same IP subnet.
 
 Configure the software-based layer 2 topology
 ---------------------------------------------
@@ -92,6 +91,9 @@ Configure the software-based layer 2 topology
 
       - Protocol: TCP
       - Topology: L3 Outbound
+        
+        .. attention:: This is not a typo.  For "inbound topology" the "L3
+           Outbound" topology must be selected.
 
    #. SSL Configurations – define as required for outbound SSL inspection.
    #. Services List – add new security services as required, or re-use existing
@@ -109,7 +111,7 @@ Configure the software-based layer 2 topology
       - Destination: 0.0.0.0/0 (this is an L2 configuration, so nothing else
         makes sense)
       - Port: 443 (or as required)
-      - VLANs: server-side VLAN
+      - VLANs: ingress VLAN
       - L7 Profile Type: HTTP (or as required)
       - L7 Profile: /Common/http (or as required)
 

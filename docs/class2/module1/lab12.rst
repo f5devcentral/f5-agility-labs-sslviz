@@ -4,7 +4,10 @@
 Lab 1.12: Test the solution
 ---------------------------
 
-To test the deployed solution, use the following options:
+To test the deployed solution, RDP to the :bred:`Outbound Win7 Client` and do
+the following:
+
+.. hint:: Username = :red:`student` / Password = :red:`agility`
 
 - **Server certificate test**
 
@@ -20,6 +23,9 @@ To test the deployed solution, use the following options:
 
   Perform a tcpdump on the F5 system to observe the decrypted clear text
   traffic. This confirms SSL interception by SSLO.
+
+  .. hint:: You can use the RDP session to the test client or directly attach
+     to the BIG-IP CLI via Putty or any SSH client.
 
   .. code-block:: bash
      
@@ -41,15 +47,13 @@ To test the deployed solution, use the following options:
 
   :red:`ssloN_FireEye_in.app/ssloN_FireEye_in`
 
-  A tcpdump on the source side VLAN of this FireEye service would therefore
-  look like this:
+  The security service VLANs and their corresponding application services are
+  all visible from the BIG-IP UI under Network --> VLANs. A tcpdump on the
+  source side VLAN of this FireEye service would therefore look like this:
 
   .. code-block:: bash
 
      tcpdump -lnni ssloN_FireEye_in.app/ssloN_FireEye_in -Xs0
-
-  The security service VLANs and their corresponding application services are
-  all visible from the BIG-IP UI under Network -> VLANs.
 
 - **Decrypted traffic analysis on the security services**
 
