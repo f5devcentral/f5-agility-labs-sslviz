@@ -4,40 +4,42 @@
 Lab 4.1: Create an LTM application
 ----------------------------------
 
-For the lab, create a simple LTM application:
+For the lab, create a simple LTM Virtual Server:
 
-- **Create a pool** - use one (or multiple) of the internal webserver IPs and
-  select port 80.
+#. **Create a pool** - go to Local Traffic --> Pools --> Pool List and click
+   :red:`Create`. Set a name of your choice and add the following pool members
+   using (the internal webserver IPs) and select port 80.
 
-  - 10.20.0.90:80
+   - 10.20.0.90:80
+   - 10.20.0.91:80
+   - 10.20.0.92:80
 
-  - 10.20.0.91:80
+#. **Create a client SSL profile** - go to Local Traffic --> Profiles --> SSL
+   --> Client and click :red:`Create`. Set a name of your choice and use the
+   :red:`wildcard.f5labs.com` certificate and private key.
 
-  - 10.20.0.92:80
+#. **Create an LTM virtual server** - go to Local Traffic --> Virtual Server
+   List and click :red:`Create`. Set a name of your choice and use the
+   following basic settings:
 
-- **Create a client SSL profile** - use the :red:`wildcard.f5demolabs.com`
-  certificate and private key.
+   - **Destination Address/Mask**: :red:`10.30.0.205`
+   - **Service Port**: :red:`443`
+   - **HTTP Profile**: :red:`http`
+   - **SSL Profile (Client)**: :red:`previously created Client SSL profile`
+   - **VLANs and Tunnels**: :red:`outbound VLAN`
+   - **Source Address Translation**: :red:`Auto Map`
+   - **Pool**: :red:`previously created pool`
 
-- **Create an LTM virtual server** - use the following basic settings:
+#. **Test access to the LTM virtual server**
 
-  - **Destination Address/Mask**: :red:`10.30.0.205`
+   - RDP to the **Inbound** Windows client.
+   - The webserver should be accessible via HTTPS request to the LTM virtual
+     server IP.
+   - Optionally add a static host entry in the local Windows hosts file
+     (C:\Windows\System32\drivers\etc\hosts) for:
 
-  - **Service Port**: :red:`443`
-
-  - **HTTP Profile**: :red:`http`
-
-  - **SSL Profile (Client)**: :red:`wildcard.f5demolabs.com SSL profile`
-
-  - **VLANs and Tunnels**: :red:`outbound VLAN`
-
-  - **Source Address Translation**: :red:`Auto Map`
-
-  - **Pool**: :red:`previously-created pool`
-
-- **Test access to the LTM virtual server** - the webserver should be
-  accessible via HTTPS request to the LTM virtual server.
-
-  - Optionally create a Hosts entry on the client by editing /etc/hosts
-    (as root) to point :red:`10.30.0.205` to :red:`www.f5demolabs.com`, and
-    test access to https://www.f5demolabs.com. The certificate is a wildcard,
-    so any \*.f5demolabs.com hostname would also work.
+     - www.f5labs.com = 10.30.0.205
+     - Test access to https://www.f5labs.com. 
+     
+     .. note:: The certificate is a wildcard, so any \*.f5labs.com hostname
+        would also work.

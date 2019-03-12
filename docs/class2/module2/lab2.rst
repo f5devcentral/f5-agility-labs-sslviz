@@ -9,14 +9,14 @@ service. It will listen on a wildcard VIP (0.0.0.0/0), or otherwise specific
 subnet (vs. a dedicated single IP), and terminate inbound TLS traffic flows via
 wildcard or subject alternative name (SAN) certificate. Follow the :red:`L3
 Inbound` topology workflow to build this solution. In the SSL Orchestrator
-dashboard view, select the Topologies tab (bottom) and click :red:`Add`.
+dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
 
 - **Configuration review and prerequisites** - take a moment to review the
   topology options and workflow configuration, then click :red:`Next`.
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. ":red:`sslo_inbound_1`")
+  - **Name**: provide some name (ex. ":red:`inbound_1`")
 
   - **Protocol**: :red:`TCP`
 
@@ -43,7 +43,7 @@ dashboard view, select the Topologies tab (bottom) and click :red:`Add`.
       certificate in the event the SSLO inbound listener was intended to
       service multiple sites. In this lab a wildcard certificate has been
       provided. Select the pencil icon to edit, then select the
-      :red:`wildcard.f5demolabs.com` certificate and private key and click
+      :red:`wildcard.f5labs.com` certificate and private key and click
       :red:`Done`.
 
       .. note:: SSL Settings minimally require RSA-based template and CA
@@ -95,11 +95,11 @@ dashboard view, select the Topologies tab (bottom) and click :red:`Add`.
      (reverse proxy) traffic at the same time. Please see the appendix,
      "Routing considerations for layer 3 devices" for more details.
 
-  Minimally remove the built-in "Pinners_Rule", edit the "All Traffic" policy
-  to add the service chain with the L2 and TAP services (only), and click
-  :red:`Save& Next`.
+  - Minimally remove the built-in "Pinners_Rule"
+  - Edit the "All Traffic" policy to add the :red:`sub_service_chain` with the
+    FireEye and TAP services (only), and click :red:`Save & Next`.
 
-- **Interception Rule** - here is where a gateway-mode topology and the
+- **Interception Rule** - Here is where the gateway-mode topology and the
   existing application topology generally differ. Where an explicit application
   topology "bolts onto" an existing application that performs its own SSL
   management (SSL offload), traffic management (pools) and traffic intelligence
@@ -183,4 +183,4 @@ dashboard view, select the Topologies tab (bottom) and click :red:`Add`.
   setting, click the corresponding pencil icon. Clicking the pencil icon will
   send the workflow back to the selected settings page.
 
-  - When satisfied with the defined settings, click :red:`Deploy`.
+- When satisfied with the defined settings, click :red:`Deploy`.

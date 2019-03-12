@@ -10,16 +10,18 @@ This page defines the specific SSL settings for the selected topology, in this
 case a forward proxy, and controls both client-side and server-side SSL
 options. If existing SSL settings are available (from a previous workflow), it
 can be selected and re-used. Otherwise the SSL Configurations page creates new
-SSL settings for this workflow. For this lab, :red:`create a new SSL profile`.
+SSL settings for this workflow. For this lab select :red:`Create New`.
+
+- Click :red:`Show Advanced Setting`
 
 - **Client-side SSL**
 
   - **Cipher Type** - cipher type can be a Cipher Group or Cipher String.
     If the former, select a previously-defined cipher group (from Local
     Traffic - Ciphers - Groups). If the latter, enter a cipher string that
-    appropriately represents the client-side TLS requirement. For most
-    environments, :red:`DEFAULT` is optimal. For this lab, lease
-    :red:`Cipher String` selected.
+    appropriately represents the client-side TLS requirement. For this lab,
+    leave :red:`Cipher String` selected and for most environments, **Cipher**
+    using the :red:`DEFAULT` is optimal. 
 
   - **Certificate Key Chain** - the certificate key chain represents the
     certificate and private key used as the "template" for forged server
@@ -39,7 +41,7 @@ SSL settings for this workflow. For this lab, :red:`create a new SSL profile`.
     certificate authority (CA) certificate, and local clients must trust
     this local CA. This setting defines the local CA certificate and
     private key used to perform the forging operation. Click the pencil
-    icon to :red:`Edit`, then select :red:`subca.f5demolabs.com` for both
+    icon to :red:`Edit`, then select :red:`subrsa.f5demolabs.com` for both
     Certificate and Key, and click :red:`Done`.
 
     .. note:: SSL Settings minimally require RSA-based template and CA
@@ -70,8 +72,9 @@ SSL settings for this workflow. For this lab, :red:`create a new SSL profile`.
   - **Cipher Type** - cipher type can be a Cipher Group or Cipher String.
     If the former, select a previously-defined cipher group (from Local
     Traffic - Ciphers - Groups). If the latter, enter a cipher string that
-    appropriately represents the server-side TLS requirement. For most
-    environments, :red:`DEFAULT` is optimal.
+    appropriately represents the server-side TLS requirement. For this lab,
+    leave :red:`Cipher String` selected and for most environments, **Cipher**
+    using the :red:`DEFAULT` is optimal.
 
   - **Trusted Certificate Authority** - browser vendors routinely update
     the CA certificate stores in their products to keep up with industry

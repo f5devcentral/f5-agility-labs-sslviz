@@ -13,7 +13,7 @@ Lab 4.2: Configure an Existing Application deployment through Guided Config
 
   - **IP Family**: :red:`IPv4`
 
-  - **Topology**: :red:`select Existing Application`
+  - **Topology**: select :red:`Existing Application`
 
   - Click :red:`Save & Next`
 
@@ -36,9 +36,9 @@ Lab 4.2: Configure an Existing Application deployment through Guided Config
      (reverse proxy) traffic at the same time. Please see the appendix,
      "Routing considerations for layer 3 devices" for more details.
 
-  Minimally remove the built-in "Pinners_Rule", edit the "All Traffic" policy
-  to add the service chain with the L2 and TAP services (only), and click
-  :red:`Save & Next`.
+  - Minimally remove the built-in "Pinners_Rule"
+  - Edit the "All Traffic" policy to add the :red:`sub_service_chain` with the
+    FireEye and TAP services (only), and click :red:`Save & Next`.
 
 - **Summary** - the summary page presents an expandable list of all of the
   workflow-configured objects. To expand the details for any given setting,
@@ -46,4 +46,4 @@ Lab 4.2: Configure an Existing Application deployment through Guided Config
   setting, click the corresponding pencil icon. Clicking the pencil icon will
   send the workflow back to the selected settings page.
 
-  - When satisfied with the defined settings, click :red:`Deploy`.
+- When satisfied with the defined settings, click :red:`Deploy`.

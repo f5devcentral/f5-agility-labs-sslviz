@@ -20,7 +20,7 @@ flow through a smaller set of security services.
   services.
 
   - **Name** - provide a unique name to this service
-    (ex.":red:`my_service_chain`").
+    (ex.":red:`all_service_chain`").
 
   - **Services** - select any number of desired service and move them into the
     **Selected Service Chain Order** column, optionally also ordering them as
@@ -32,9 +32,9 @@ flow through a smaller set of security services.
   services.
 
   - **Name** - provide a unique name to this service (ex.
-    ":red:`my_sub_service_chain`").
+    ":red:`sub_service_chain`").
 
-  - **Services** - select the inline layer 2 (ex. FireEye) and TAP services.
+  - **Services** - select the :red:`FireEye` and :red:`TAP` services.
 
   - Click :red:`Save`.
 

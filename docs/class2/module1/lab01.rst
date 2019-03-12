@@ -47,5 +47,5 @@ SSLO, providing decrypted, inspectable traffic to the security services.
 - The outbound network is attached to the BIG-IP :red:`1.2` interface, in the
   :red:`10.30.0.0/24` subnet, and has a gateway of :red:`10.30.0.1`.
 
-.. attention:: In the lab, client inbound, Internet outbound, and DLP VLANs and
+.. note:: In the lab, client inbound, Internet outbound, and DLP VLANs and
    self-IPs are already created.
