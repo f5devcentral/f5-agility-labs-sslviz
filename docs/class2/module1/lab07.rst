@@ -14,7 +14,7 @@ of the security services, while non-HTTP traffic goes through a subset, and
 traffic destined to a financial service URL can bypass decryption and still
 flow through a smaller set of security services.
 
-  .. image:: ../images/image12.png
+.. image:: ../images/image12.png
 
 - Click :red:`Add` to create a new service chain containing all of the security
   services.

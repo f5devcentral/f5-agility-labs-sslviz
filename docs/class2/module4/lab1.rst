@@ -43,10 +43,13 @@ For the lab, create a simple LTM Virtual Server:
    - The webserver should be accessible via HTTPS request to the LTM virtual
      server IP.
    - Optionally add a static host entry in the local Windows hosts file
-     (C:\Windows\System32\drivers\etc\hosts) for:
+     (C:\\Windows\\System32\\drivers\\etc\\hosts) for:
 
      - www.f5labs.com = 10.30.0.205
-     - Test access to https://www.f5labs.com. 
+
+     .. note:: A shortcut to the "hosts" file can be found on the desktop.
+   
+   - Test access to https://www.f5labs.com. 
      
-     .. note:: The certificate is a wildcard, so any \*.f5labs.com hostname
-        would also work.
+   .. note:: The certificate is a wildcard, so any \*.f5labs.com hostname
+      would also work.

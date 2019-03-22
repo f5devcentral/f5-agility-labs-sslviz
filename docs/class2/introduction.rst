@@ -126,24 +126,23 @@ What's new in SSLO 5.0?
 
 .. attention:: Viprion chassis platform support is not available in SSLO 4.0 and 5.0.
 
-What's new in SSLO 5.1?
+What's new in SSLO 5.X?
 -----------------------
 
 SSLO 5.1 was released on December 17, 2018, a few days after the release of
 BIG-IP 14.1 with SSLO 5.0. SSLO 5.1 contains significant updates to the product
-and is therefore recommended (over 5.0) for customer environments.
+and is therefore recommended (over 5.0) for customer environments. 
 
-Additional information about SSLO 5.1, including updates and fixes, can be
-found in the official release notes:
-https://support.f5.com/kb/en-us/products/ssl-orchestrator/releasenotes/product/relnote-ssl-orchestrator-14-1-0-iapp-5-1.html
+As of today two more updates have been released, 5.2 and 5.3. Additional
+information about this updates can be found in the official release notes at:
+https://support.f5.com/csp/knowledge-center/software/F5%20App%20Protect?module=F5%20SSL%20Orchestrator&version=14.1.0
 
-SSL Orchestrator 5.1 is available on the F5 downloads site,
-https://downloads.f5.com, under the SSL Orchestrator section, as
-:bred:`f5-iappslx-ssl-orchestrator-14.1.0-5.1.254.rpm`
+All updates are available on the F5 downloads site, https://downloads.f5.com,
+under the SSL Orchestrator section.
 
 .. note:: This lab guide and corresponding Ravello lab environment are prepared
-   for SSLO 5.1. If installing a fresh BIG-IP 14.1 instance, it is recommended
-   to immediately download the 5.1 package and install over the built-in 5.0
+   for SSLO 5.3. If installing a fresh BIG-IP 14.1 instance, it is recommended
+   to immediately download the 5.3 package and install over the built-in 5.0
    version. To do this, in the SSLO UI, click on **SSL Orchestrator** -->
    **Configuration** --> **Upgrade SSL Orchestrator**, choose the downloaded
-   SSLO 5.1 package and then upload and install.
+   SSLO 5.3 package and then upload and install.

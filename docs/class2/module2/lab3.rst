@@ -24,7 +24,9 @@ Lab 2.3: Testing
   .. image:: ../images/lab2.3-test-results.png
 
 - :bred:`targeted-mode testing`, add a static host entry in the local Windows
-  hosts file (C:\Windows\System32\drivers\etc\hosts) for:
+  hosts file (C:\\Windows\\System32\\drivers\\etc\\hosts) for:
+
+  .. note:: A shortcut to the "hosts" file can be found on the desktop.
 
   - www.f5labs.com = 10.30.0.200
 

@@ -9,10 +9,6 @@ streamlined user experience. This workflow-based architecture provides
 intuitive, re-entrant configuration steps tailored to the selected
 topology.
 
-.. image:: ../images/image3.png
-   :align: center
-   :scale: 100%
-
 The following steps will walk through the Guided Configuration (GC) to build a
 simple transparent forward proxy. 
 
@@ -26,7 +22,9 @@ simple transparent forward proxy.
 
 .. image:: ../images/image4.png
    :align: center
-   :scale: 50%
+   :scale: 100%
+
+- Once Initialized click :red:`Add` on the Topologies section (bottom left).
 
 - **Configuration review and prerequisites** - take a moment to review the
   topology options and workflow configuration steps involved. Optionally
@@ -34,8 +32,6 @@ simple transparent forward proxy.
   Keep in mind, however, that aside from NTP, the SSLO GC will provide an
   opportunity to define DNS and route settings later in the workflow. No other
   configurations are required on this page, so click :red:`Next`.
-
-.. note:: NTP settings have already been defined in this lab.
 
 .. image:: ../images/image5.png
    :align: center
