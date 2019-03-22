@@ -28,7 +28,7 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. ":red:`explicit`")
+  - **Name**: provide some name (ex. ":red:`lab3_explicit`")
 
   - **Protocol**: :red:`TCP`
 
@@ -41,17 +41,15 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
 - **SSL Configurations** - the existing outbound SSL settings from Lab 1 can be
   re-used here.
 
-  - **SSL Profile**: :red:`Use Existing`, select the existing "outbound" SSL
-    profile.
-
+  - Select :red:`Use Existing`, and select the existing :red:`lab1_outbound`
+    SSL profile.
   - Click :red:`Save & Next`
+  - Click :red:`OK` to acknowledge the profile warning.
 
     .. warning:: Whenever repurposing a topology setting, a warning will
        appear, "There are other configuration items that are referencing this
        item. Editing this item will affect the referencing ones mentioned
        below".
-       
-       Click :red:`OK` to acknowledge.
 
 - **Services List** - there are no new services to create.
 
@@ -64,8 +62,8 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
 - **Security Policy** - the existing outbound Security Policy from Lab 1 can be
   re-used here.
 
-  - Select: :red:`Use Existing`, and select the existing "outbound" Security
-    policy.
+  - Select :red:`Use Existing`, and select the existing :red:`lab1_outbound`
+    Security policy.
   - Click :red:`Save & Next`
   - Click :red:`OK` to acknowledge the profile warning.
 
@@ -92,7 +90,7 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
   - **Gateways** - enables per-topology instance gateway routing. Options are
     to use the system default route, to use an existing gateway pool, or to
     create a new gateway. For this lab, select :red:`Use Existing Gateway
-    Pool`, then select the ":red:`-ex-pool-4`" gateway pool.
+    Pool`, then select the ":red:`lab1_outbound-ex-pool-4`" gateway pool.
 
   - Click :red:`Save & Next`
 
@@ -103,30 +101,3 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
   send the workflow back to the selected settings page.
 
 - When satisfied with the defined settings, click :red:`Deploy`.
-
-- **Testing** - To test the deployed solution, RDP to the
-  :bred:`Outbound Win7 Client` and do the following:
-
-  .. hint:: Username = :red:`student` / Password = :red:`agility`
-
-  - Configure the client browser to use :red:`10.20.0.150:3128` for explicit
-    proxy access.
-
-  - SSH to BIG-IP CLI and run the following tcpdump command to view the browser
-    traffic hitting the explicit proxy IP.
-
-    .. code-block:: bash
-
-       tcpdump -nni client-net port 3128
-  
-  - Test by browsing to url of choice.  You should see the traffic stream
-    across tcpdump from previous command.
-
-  - An explicit proxy request test can also be done using command-line cURL:
-
-    .. code-block:: bash
-
-       curl -vk –proxy 10.20.0.150:3128 https://www.example.com
-
-    Again watch the tcpdump from the previous test to confirm explicit proxy
-    use.

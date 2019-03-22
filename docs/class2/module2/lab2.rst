@@ -16,7 +16,7 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
 
 - **Topology Properties**
 
-  - **Name**: provide some name (ex. ":red:`inbound_1`")
+  - **Name**: provide some name (ex. ":red:`lab2_inbound`")
 
   - **Protocol**: :red:`TCP`
 
@@ -95,7 +95,7 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
      (reverse proxy) traffic at the same time. Please see the appendix,
      "Routing considerations for layer 3 devices" for more details.
 
-  - Minimally remove the built-in "Pinners_Rule"
+  - Remove the built-in :red:`"Pinners_Rule"` rule.
   - Edit the "All Traffic" policy to add the :red:`sub_service_chain` with the
     FireEye and TAP services (only), and click :red:`Save & Next`.
 
@@ -142,7 +142,7 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
 
     - **Source Address**: :red:`0.0.0.0/0`
 
-    - **Destination Address/Mask**: :red:`10.30.0.200`
+    - **Destination Address/Mask**: :red:`10.30.0.200/32`
 
     - **Port**: :red:`443`
 

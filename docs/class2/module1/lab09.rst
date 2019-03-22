@@ -24,4 +24,7 @@ in the topology workflow.
   the additional protocols that need to be decrypted and inspected` through
   SSLO.
 
+  .. note:: This is optional. Including or not including has no bearing on the
+     lab. This is for reference only.
+
 - Click :red:`Save & Next`.
