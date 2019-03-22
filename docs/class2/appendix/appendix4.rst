@@ -14,7 +14,7 @@ Lab 1 demo script
 
 **Topology Properties**
 
-#. Name: :red:`Some_name`
+#. Name: :red:`lab1_outbound`
 #. Protocol: :red:`Any`
 #. IP Family: :red:`IPv4`
 #. Topology: :red:`L3 Outbound`
@@ -178,7 +178,7 @@ Lab 2 demo script
 
 **Topology Properties**
 
-#. Name: some_name (ex. :red:`inbound_1`)
+#. Name: some_name (ex. :red:`lab2_inbound`)
 #. Protocol: :red:`TCP`
 #. IP Family: :red:`IPv4`
 #. Topology: :red:`L3 Inbound`
@@ -252,7 +252,7 @@ Lab 3 demo script
 
 **Topology Properties**
 
-#. Name: some name (ex. :red:`sslo-explicit`)
+#. Name: some name (ex. :red:`lab3_explicit`)
 #. Protocol: :red:`TCP`
 #. IP Family: :red:`IPv4`
 #. Topology: :red:`L3 Explicit Proxy`

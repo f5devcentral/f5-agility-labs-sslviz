@@ -4,6 +4,9 @@
 Lab 4.2: Configure an Existing Application deployment through Guided Config
 ---------------------------------------------------------------------------
 
+In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
+(bottom) and click :red:`Add`.
+
 - **Configuration review and prerequisites** - take a moment to review the
   topology options and workflow configuration, then click :red:`Next`.
 
@@ -36,7 +39,7 @@ Lab 4.2: Configure an Existing Application deployment through Guided Config
      (reverse proxy) traffic at the same time. Please see the appendix,
      "Routing considerations for layer 3 devices" for more details.
 
-  - Minimally remove the built-in "Pinners_Rule"
+  - Remove the built-in :red:`"Pinners_Rule"` rule.
   - Edit the "All Traffic" policy to add the :red:`sub_service_chain` with the
     FireEye and TAP services (only), and click :red:`Save & Next`.
 

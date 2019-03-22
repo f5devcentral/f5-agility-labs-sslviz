@@ -41,7 +41,7 @@ SSL settings for this workflow. For this lab select :red:`Create New`.
     certificate authority (CA) certificate, and local clients must trust
     this local CA. This setting defines the local CA certificate and
     private key used to perform the forging operation. Click the pencil
-    icon to :red:`Edit`, then select :red:`subrsa.f5demolabs.com` for both
+    icon to :red:`Edit`, then select :red:`subrsa.f5labs.com` for both
     Certificate and Key, and click :red:`Done`.
 
     .. note:: SSL Settings minimally require RSA-based template and CA
