@@ -22,6 +22,12 @@ previously created.
    
 #. Test your virtual servers with the attached SSLO policy.
 
-   - RDP to the **Inbound** Windows client.
+   - RDP to the :bred:`Inbound Windows client`.
    - Browse to https://10.30.0.205 or if you added a host entry earlier
      https://www.f5labs.com
+   - SSH to the SSLO appliance. A tcpdump on the source side FireEye VLAN
+     should showthe VS traffic traversing FireEye:
+
+  .. code-block:: bash
+
+     tcpdump -lnni ssloN_FireEye_in.app/ssloN_FireEye_in -Xs0 host 10.30.0.205

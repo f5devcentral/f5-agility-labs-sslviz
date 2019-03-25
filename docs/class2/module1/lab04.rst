@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-.. image:: ../images/image6.png
+.. image:: ../images/image7.png
 
 Lab 1.4: Topology Properties
 ----------------------------
@@ -72,8 +72,6 @@ The SSL Orchestrator Topologies option page presents six topologies:
   service creation and security policy definition, then exits with an
   SSLO-type access policy and per-request policy that can easily be consumed
   by an LTM virtual server.
-
-.. image:: ../images/image7.png
 
 For this lab:
 

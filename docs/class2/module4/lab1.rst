@@ -39,7 +39,7 @@ For the lab, create a simple LTM Virtual Server:
 
 #. **Test access to the LTM virtual server**
 
-   - RDP to the **Inbound** Windows client.
+   - RDP to the :bred:`Inbound Windows client`.
    - The webserver should be accessible via HTTPS request to the LTM virtual
      server IP.
    - Optionally add a static host entry in the local Windows hosts file
@@ -53,3 +53,6 @@ For the lab, create a simple LTM Virtual Server:
      
    .. note:: The certificate is a wildcard, so any \*.f5labs.com hostname
       would also work.
+
+   .. image:: ../images/vs-test.png
+   

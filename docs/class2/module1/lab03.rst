@@ -22,9 +22,6 @@ simple transparent forward proxy.
 
 .. image:: ../images/image4.png
    :align: center
-   :scale: 100%
-
-- Once Initialized click :red:`Add` on the Topologies section (bottom left).
 
 - **Configuration review and prerequisites** - take a moment to review the
   topology options and workflow configuration steps involved. Optionally
@@ -35,4 +32,3 @@ simple transparent forward proxy.
 
 .. image:: ../images/image5.png
    :align: center
-   :scale: 75%
