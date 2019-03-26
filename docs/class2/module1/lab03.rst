@@ -16,9 +16,10 @@ simple transparent forward proxy.
    more concise set of lab steps, without details, skip to
    `Appendix - Demo Scripts <../appendix/appendix4.html>`_
 
-- **Initialization** - if this is the first time accessing SSLO in a new BIG-IP
-  build, upon first access, GC will automatically load and deploy the built-in
-  SSLO package.
+- **Initialization** - From the left-hand menu, navigate to
+  :menuselection:`SSL Orchestrator --> Configuration`. If this is the first
+  time accessing SSLO in a new BIG-IP build, upon first access Guided
+  Configuration will automatically load and deploy the built-in SSLO package.
 
 .. image:: ../images/image4.png
    :align: center
@@ -28,7 +29,7 @@ simple transparent forward proxy.
   satisfy any of the :red:`DNS, NTP and Route` prerequisites from this page.
   Keep in mind, however, that aside from NTP, the SSLO GC will provide an
   opportunity to define DNS and route settings later in the workflow. No other
-  configurations are required on this page, so click :red:`Next`.
+  configurations are required on this page, so click :guilabel:`Next`.
 
 .. image:: ../images/image5.png
    :align: center
