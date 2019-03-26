@@ -47,16 +47,16 @@ Guide" and the VM's you'll spend all of your time attached to.
   the ":red:`.f5demolabs.com`" sub-domain.
 
 .. tip:: It is a security best practice to isolate security devices within the
-   protected network enclaves provided by SSLO. Customers will often desire NOT
+   protected network enclave provided by SSLO. Customers will often desire NOT
    to move or change existing security services. However, while possible with
    SSLO 4.0 and beyond, passing this decrypted traffic to points on an existing
-   network architecture could create a provide multiple points of data
-   exposure. Usernames, passwords, credit card numbers and other sensitive
-   information could be exposed to other devices on that network. Each inline
-   layer 3 security service definition includes an "Auto Manage" option. This
-   option, enabled by default, provides internal network settings for security
-   services to use, so that only the interface (and 802.1q VLAN tag as needed)
-   is required to be defined for the inbound and outbound interfaces. Should
+   network architecture could create multiple points of data exposure.
+   Usernames, passwords, credit card numbers and other sensitive information
+   could be exposed to other devices on that network. Each inline layer 3
+   security service definition includes an "Auto Manage" option. This option,
+   enabled by default, provides internal network settings for security services
+   to use, so that only the interface (and 802.1q VLAN tag as needed) is
+   required to be defined for the inbound and outbound interfaces. Should
    customers opt to not follow security best practices, or simply need
    different networking settings, you can disable the Auto Manage option and
    define all of the required inbound and outbound networking setting manually.
