@@ -10,7 +10,7 @@ SSLO now creates discreet configurations based on the selected topology. For
 example, in previous versions of SSLO, a transparent and explicit forward proxy
 might be defined together. In SSLO 5.0, these are configured separately. An
 explicit forward proxy topology will ultimately create an explicit proxy
-listener and its relying transparent proxy lister, but the transparent listener
+listener and its dependent transparent proxy listener, but the transparent listener
 will be bound only to the explicit proxy tunnel. If a subsequent transparent
 forward proxy topology is configured, it will not overlap the existing explicit
 proxy objects. The Topology Properties page provides the following options:
@@ -18,7 +18,7 @@ proxy objects. The Topology Properties page provides the following options:
 The Protocol option presents four protocol types:
 
 - **TCP** - this option creates a single TCP wildcard interception rule for
-  the L3 Inbound, L3 Outbound L3, and L3 Explicit Proxy topologies.
+  the L3 Inbound, L3 Outbound, and L3 Explicit Proxy topologies.
 
 - **UDP** - this option creates a single UDP wildcard interception rule for
   L3 Inbound and L3 Outbound topologies.
@@ -80,4 +80,4 @@ For this lab:
   interception rules.
 - **IP Family**: :red:`IPv4`
 - **Topology**: :red:`L3 Outbound`
-- Click :red:`Save & Next.`
+- Click :guilabel:`Save & Next.`
