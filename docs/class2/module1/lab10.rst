@@ -27,4 +27,4 @@ gateway route and outbound SNAT settings.
 - **Address** - this is the next hop gateway IP address. For this lab, enter
   :red:`10.30.0.1`.
 
-- Click :red:`Save & Next`.
+- Click :guilabel:`Save & Next`.
