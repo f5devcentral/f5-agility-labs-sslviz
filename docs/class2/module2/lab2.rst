@@ -9,10 +9,10 @@ service. It will listen on a wildcard VIP (0.0.0.0/0), or otherwise specific
 subnet (vs. a dedicated single IP), and terminate inbound TLS traffic flows via
 wildcard or subject alternative name (SAN) certificate. Follow the :red:`L3
 Inbound` topology workflow to build this solution. In the SSL Orchestrator
-dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
+dashboard view, select the :guilabel:`Topologies` tab (bottom) and click :guilabel:`Add`.
 
 - **Configuration review and prerequisites** - take a moment to review the
-  topology options and workflow configuration, then click :red:`Next`.
+  topology options and workflow configuration, then click :guilabel:`Next`.
 
 - **Topology Properties**
 
@@ -24,17 +24,17 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
 
   - **Topology**: :red:`select L3 Inbound`
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **SSL Configuration** - an inbound topology requires different SSL settings.
 
-  - Click :red:`Show Advanced Setting`
+  - Click :guilabel:`Show Advanced Setting`
 
   - **Client-side SSL**
 
     - **Cipher Type**: :red:`Cipher String`
 
-    - **Cipher String**: :red:`DEFAULT`
+    - **Cipher**: :red:`DEFAULT`
 
     - **Certificate Key Chain** - the certificate key chain represents the
       certificate and private key of an endpoint server instance (the target
@@ -42,9 +42,9 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
       would typically be a wildcard of Subject Alternative Name (SAN)
       certificate in the event the SSLO inbound listener was intended to
       service multiple sites. In this lab a wildcard certificate has been
-      provided. Select the pencil icon to edit, then select the
+      provided. Select the pencil icon to :guilabel:`Edit`, then select the
       :red:`wildcard.f5labs.com` certificate and private key and click
-      :red:`Done`.
+      :guilabel:`Done`.
 
       .. note:: SSL Settings minimally require RSA-based template and CA
          certificates but can also support Elliptic Curve (ECDSA) certificates.
@@ -53,7 +53,7 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
 
     - **Cipher Type**: :red:`Cipher String`
 
-    - **Cipher String**: :red:`DEFAULT`
+    - **Ciphera**: :red:`DEFAULT`
 
     - **Trusted Certificate Authority** - as an inbound solution, the
       server-side SSL would be pointing to internal servers. While definitely
@@ -76,13 +76,13 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
       needed, any CRL configuration will cause the connection to fail, so
       leave this :red:`as is`.
 
-  - Click :red:`Save & Next`.
+  - Click :guilabel:`Save & Next`.
 
 - **Services List** - the same services can be leveraged here, so simply click
-  :red:`Save & Next`.
+  :guilabel:`Save & Next`.
 
 - **Service Chain List** - the same service chains can be leveraged here, so
-  simply click :red:`Save & Next`.
+  simply click :guilabel:`Save & Next`.
 
 - **Security Policy** - the security policy requirements are specific to each
   organization, though an inbound security policy would likely be less complex
@@ -97,7 +97,8 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
 
   - Remove the built-in :red:`"Pinners_Rule"` rule.
   - Edit the "All Traffic" policy to add the :red:`sub_service_chain` with the
-    FireEye and TAP services (only), and click :red:`Save & Next`.
+    FireEye and TAP services (only), and click :guilabel:`OK`.
+  - Click :guilabel:`Save & Next`
 
 - **Interception Rule** - Here is where the gateway-mode topology and the
   existing application topology generally differ. Where an explicit application
@@ -118,7 +119,7 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
   - **Gateway mode** - interception rule listening on a wildcard IP, port 443,
     with a wildcard or SAN certificate. Clients route through SSLO.
 
-    - :red:`Hide Advanced Setting`
+    - :guilabel:`Hide Advanced Setting`
 
     - **Source Address**: :red:`0.0.0.0/0`
 
@@ -138,7 +139,7 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
   - **Targeted mode** - interception rule listening on a dedicated IP, port
     443, with any server certificate. Clients route to SSLO.
 
-    - :red:`Show Advanced Setting`
+    - :guilabel:`Show Advanced Setting`
 
     - **Source Address**: :red:`0.0.0.0/0`
 
@@ -165,7 +166,7 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
 
     - **Pool** - :red:`webserver-pool` (pre-created server pool)
 
-  Click :red:`Save & Next`
+  Click :guilabel:`Save & Next`
 
 - **Egress Settings** - traffic egress settings are now defined per-topology
   and manage both the gateway route and outbound SNAT settings.
@@ -177,10 +178,12 @@ dashboard view, select the :red:`Topologies` tab (bottom) and click :red:`Add`.
     to use the system default route, to use an existing gateway pool, or to
     create a new gateway. For this lab, select :red:`Default Route`.
 
+  - Click :guilabel:`Save & Next`
+
 - **Summary** - the summary page presents an expandable list of all of the
   workflow-configured objects. To expand the details for any given setting,
   click the corresponding arrow icon on the far right. To edit any given
   setting, click the corresponding pencil icon. Clicking the pencil icon will
   send the workflow back to the selected settings page.
 
-- When satisfied with the defined settings, click :red:`Deploy`.
+- When satisfied with the defined settings, click :guilabel:`Deploy`.

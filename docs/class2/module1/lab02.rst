@@ -34,8 +34,8 @@ before starting the iApp:
 
 - **Create the default internet route for outbound traffic** - the iApp
   provides an option to leverage a defined gateway pool or use the system
-  default route. If a gateway pool is not used, they system route table will
-  need to have a default route used to reach Internet destination. :red:`We'll
+  default route. If a gateway pool is not used, the system route table will
+  need to have a default route used to reach Internet destinations. :red:`We'll
   use a gateway pool defined within SSLO`.
 
 .. tip:: As a general rule, avoid using names with dashes (ex. sslo-demo-1)

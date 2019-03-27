@@ -12,8 +12,8 @@ the following:
 - Configure the client browser to use :red:`10.20.0.150:3128` for explicit
   proxy access.
 
-  - This setting for Chrome can be find in Settings --> Advanced --> Open proxy
-    settings.
+  - This setting for Chrome can be find in :menuselection:`Settings -->
+    Advanced --> Open proxy settings`.
 
 - SSH to BIG-IP CLI and run the following tcpdump command to view the browser
   traffic hitting the explicit proxy IP.

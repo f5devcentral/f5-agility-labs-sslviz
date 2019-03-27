@@ -5,7 +5,9 @@ Lab 3.1: Configure an Explicit Proxy deployment through Guided Configuration
 ----------------------------------------------------------------------------
 
 Minimally an explicit proxy requires DNS settings to be configured. To enable
-this in the SSLO UI click :red:`System Settings`.
+this navigate to the SSLO Dashboard by selecting
+:menuselection:`SSL Orchestrator --> Configuration` on the left menu. Once the
+dashboard has loaded, click :guilabel:`System Settings`.
 
 In the DNS Settings section make the following modifications:
 
@@ -18,13 +20,13 @@ In the DNS Settings section make the following modifications:
   enormous amount of local Syslog traffic and is not recommended when
   processing production traffic flows.
 
-- Click :red:`Deploy` to commit the changes.
+- Click :guilabel:`Deploy` to commit the changes.
 
-In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
-(bottom) and click :red:`Add`.
+In the SSL Orchestrator dashboard view, select the :guilabel:`Topologies` tab
+(bottom) and click :guilabel:`Add`.
 
 - **Configuration review and prerequisites** - take a moment to review the
-  topology options and workflow configuration, then click :red:`Next`.
+  topology options and workflow configuration, then click :guilabel:`Next`.
 
 - **Topology Properties**
 
@@ -36,15 +38,15 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
 
   - **Topology**: select :red:`L3 Explicit Proxy`
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **SSL Configurations** - the existing outbound SSL settings from Lab 1 can be
   re-used here.
 
-  - Select :red:`Use Existing`, and select the existing :red:`lab1_outbound`
+  - Select :guilabel:`Use Existing`, and select the existing :red:`lab1_outbound`
     SSL profile.
-  - Click :red:`Save & Next`
-  - Click :red:`OK` to acknowledge the profile warning.
+  - Click :guilabel:`Save & Next`
+  - Click :guilabel:`OK` to acknowledge the profile warning.
 
     .. warning:: Whenever repurposing a topology setting, a warning will
        appear, "There are other configuration items that are referencing this
@@ -53,19 +55,19 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
 
 - **Services List** - there are no new services to create.
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Service Chain List** - there are no new service chains to create.
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Security Policy** - the existing outbound Security Policy from Lab 1 can be
   re-used here.
 
-  - Select :red:`Use Existing`, and select the existing :red:`lab1_outbound`
+  - Select :guilabel:`Use Existing`, and select the existing :red:`lab1_outbound`
     Security policy.
-  - Click :red:`Save & Next`
-  - Click :red:`OK` to acknowledge the profile warning.
+  - Click :guilabel:`Save & Next`
+  - Click :guilabel:`OK` to acknowledge the profile warning.
 
 - **Interception Rule** - an explicit proxy requires a unique IP address and
   port listener.
@@ -75,11 +77,12 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
   - **Port**: :red:`3128`
 
   - **Access Profile**: if enabling explicit proxy authentication, select an
-    existing SWG-Explicit access profile here.
+    existing SWG-Explicit access profile here. For this lab, leave it set to
+    :red:`None`.
 
-  - **VLANs**: select :red:`client-net`
+  - **VLANs**: select :red:`client-net` and move it to the right column
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Egress Setting** - traffic egress settings are now defined per-topology and
   manage both the gateway route and outbound SNAT settings.
@@ -92,7 +95,7 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
     create a new gateway. For this lab, select :red:`Use Existing Gateway
     Pool`, then select the ":red:`lab1_outbound-ex-pool-4`" gateway pool.
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Summary** - the summary page presents an expandable list of all of the
   workflow-configured objects. To expand the details for any given setting,
@@ -100,4 +103,4 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
   setting, click the corresponding pencil icon. Clicking the pencil icon will
   send the workflow back to the selected settings page.
 
-- When satisfied with the defined settings, click :red:`Deploy`.
+- When satisfied with the defined settings, click :guilabel:`Deploy`.

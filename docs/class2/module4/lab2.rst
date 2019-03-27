@@ -4,29 +4,31 @@
 Lab 4.2: Configure an Existing Application deployment through Guided Config
 ---------------------------------------------------------------------------
 
-In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
-(bottom) and click :red:`Add`.
+In the SSL Orchestrator dashboard view, select the :guilabel:`Topologies` tab
+(bottom) and click :guilabel:`Add`.
 
 - **Configuration review and prerequisites** - take a moment to review the
-  topology options and workflow configuration, then click :red:`Next`.
+  topology options and workflow configuration, then click :guilabel:`Next`.
 
 - **Topology Properties**
 
   - **Name**: provide some name (ex. ":red:`existing_app_1`")
 
+  - **Protocol**: :red:`TCP`
+
   - **IP Family**: :red:`IPv4`
 
   - **Topology**: select :red:`Existing Application`
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Services List** - there are no new services to create.
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Services Chain List** - there are no new service chains to create.
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Security Policy** - the security policy requirements are specific to each
   organization, though an inbound security policy would likely be less complex
@@ -41,7 +43,7 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
 
   - Remove the built-in :red:`"Pinners_Rule"` rule.
   - Edit the "All Traffic" policy to add the :red:`sub_service_chain` with the
-    FireEye and TAP services (only), and click :red:`Save & Next`.
+    FireEye and TAP services (only), and click :guilabel:`Save & Next`.
 
 - **Summary** - the summary page presents an expandable list of all of the
   workflow-configured objects. To expand the details for any given setting,
@@ -49,4 +51,4 @@ In the SSL Orchestrator dashboard view, select the :red:`Topologies` tab
   setting, click the corresponding pencil icon. Clicking the pencil icon will
   send the workflow back to the selected settings page.
 
-- When satisfied with the defined settings, click :red:`Deploy`.
+- When satisfied with the defined settings, click :guilabel:`Deploy`.

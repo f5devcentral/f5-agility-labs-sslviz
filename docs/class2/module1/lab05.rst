@@ -10,9 +10,11 @@ This page defines the specific SSL settings for the selected topology, in this
 case a forward proxy, and controls both client-side and server-side SSL
 options. If existing SSL settings are available (from a previous workflow), it
 can be selected and re-used. Otherwise the SSL Configurations page creates new
-SSL settings for this workflow. For this lab select :red:`Create New`.
+SSL settings for this workflow.
 
-- Click :red:`Show Advanced Setting`
+- For this lab select :guilabel:`Create New`.
+
+- Click :guilabel:`Show Advanced Setting`
 
 - **Client-side SSL**
 
@@ -20,8 +22,8 @@ SSL settings for this workflow. For this lab select :red:`Create New`.
     If the former, select a previously-defined cipher group (from Local
     Traffic - Ciphers - Groups). If the latter, enter a cipher string that
     appropriately represents the client-side TLS requirement. For this lab,
-    leave :red:`Cipher String` selected and for most environments, **Cipher**
-    using the :red:`DEFAULT` is optimal. 
+    leave the :guilabel:`Cipher String` option selected. The default **Cipher**
+    string of :red:`DEFAULT` is optimal for most environments.
 
   - **Certificate Key Chain** - the certificate key chain represents the
     certificate and private key used as the "template" for forged server
@@ -34,20 +36,22 @@ SSL settings for this workflow. For this lab select :red:`Create New`.
     additional protection. The built-in "default" certificate and private
     key uses 2K RSA and is generated from scratch when the BIG-IP system is
     installed. The pre-defined :red:`default.crt` and :red:`default.key` can be
-    left as is. Click :red:`Done`.
+    left as is.
 
   - **CA Certificate Key Chain** - an SSL forward proxy must re-sign, or
     "forge" remote server certificate to local clients using a local
     certificate authority (CA) certificate, and local clients must trust
     this local CA. This setting defines the local CA certificate and
-    private key used to perform the forging operation. Click the pencil
-    icon to :red:`Edit`, then select :red:`subrsa.f5labs.com` for both
-    Certificate and Key, and click :red:`Done`.
+    private key used to perform the forging operation.
+    
+    Click the pencil icon to :guilabel:`Edit`, then select
+    :red:`subrsa.f5labs.com` for both :guilabel:`Certificate` and
+    :guilabel:`Key`, and click :guilabel:`Done`.
 
     .. note:: SSL Settings minimally require RSA-based template and CA
        certificates but can also support Elliptic Curve (ECDSA) certificates.
        In this case, SSLO would forge an EC certificate to the client if the
-       TLS handshake negotiated an ECDHE_ECDSA cipher. To enable EC forging
+       TLS handshake negotiated an :red:`ECDHE_ECDSA` cipher. To enable EC forging
        support, add both an EC template certificate and key, and EC CA
        certificate and key.
 
@@ -73,19 +77,19 @@ SSL settings for this workflow. For this lab select :red:`Create New`.
     If the former, select a previously-defined cipher group (from Local
     Traffic - Ciphers - Groups). If the latter, enter a cipher string that
     appropriately represents the server-side TLS requirement. For this lab,
-    leave :red:`Cipher String` selected and for most environments, **Cipher**
-    using the :red:`DEFAULT` is optimal.
+    leave the :guilabel:`Cipher String` option selected. The default **Cipher**
+    string of :red:`DEFAULT` is optimal for most environments.
 
   - **Trusted Certificate Authority** - browser vendors routinely update
     the CA certificate stores in their products to keep up with industry
     security trends, and to account for new and revoked CAs. In the SSL
     forward proxy use case, however, the SSL visibility product now
-    performs all server-side certificate validation, in lieu of the client
+    performs all server-side certificate validation in lieu of the client
     browser, and should therefore do its best to maintain the *same*
     industry security trends. BIG-IP ships with a CA certificate bundle
     that maintains a list of CA certificates common to the browser vendors.
     However, a more comprehensive bundle can be obtained from the F5
-    Downloads site. For this lab, select the built-in :red:`ca-bundle.crt`.
+    Downloads site. For this lab, select the built-in :red:`/Common/ca-bundle.crt`.
 
   - **[Advanced] Expire Certificate Response** - SSLO performs validation
     on remote server certificates and can control what happens if it
@@ -119,4 +123,4 @@ SSL settings for this workflow. For this lab select :red:`Create New`.
     validation. With this enabled, SSLO attempts to match server
     certificates to locally-cached CRLs.
 
-- Click :red:`Save & Next`.
+- Click :guilabel:`Save & Next`.
