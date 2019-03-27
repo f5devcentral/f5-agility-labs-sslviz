@@ -31,7 +31,7 @@ policy can be managed directly.
 For the lab, create an additional rule to bypass SSL for "Financial Data and
 Services" and "Health and Medicine" URL categories.
 
-- Click :red:`Add` to create a new rule.
+- Click :guilabel:`Add` to create a new rule.
 
   - **Name** - provide a unique name for the rule (ex. ":red:`urlf_bypass`").
 
@@ -50,21 +50,21 @@ Services" and "Health and Medicine" URL categories.
   - **Service Chain** - select the FireEye/TAP service chain
     :red:`sub_service_chain`.
 
-  - Click :red:`OK`.
+  - Click :guilabel:`OK`.
 
     .. image:: ../images/image15.png
 
-  Notice in the list of rules that the **All Traffic** rule intercepts but
-  does not send traffic to a service chain. For the lab, edit this rule to
-  send all intercepted traffic to a service chain.
+Notice in the list of rules that the **All Traffic** rule intercepts but
+does not send traffic to a service chain. For the lab, edit this rule to
+send all intercepted traffic to a service chain.
 
-  - Click the pencil icon to :red:`edit` this rule.
+  - Click the pencil icon to :guilabel:`edit` this rule.
 
   - Service Chain - select the service chain containing :red:`all` of the
     services.
 
-  - Click :red:`OK`.
+  - Click :guilabel:`OK`.
 
   .. image:: ../images/image16.png
 
-  - Click  :red:`Save & Next`.
+  - Click :guilabel:`Save & Next`.
