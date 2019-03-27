@@ -14,7 +14,8 @@ in the topology workflow.
 
 - **Ingress Network (VLANs)** - this defines the VLANs through which traffic
   will enter. For a transparent forward proxy topology, this would be a
-  client-side VLAN. Select :red:`client-net`.
+  client-side VLAN. Select :red:`client-net` and move it to the right-hand
+  side.
 
 - **L7 Interception Rules** - FTP and email protocol traffic are all
   "server-speaks-first" protocols, and therefore SSLO must process these
@@ -27,4 +28,4 @@ in the topology workflow.
   .. note:: This is optional. Including or not including has no bearing on the
      lab. This is for reference only.
 
-- Click :red:`Save & Next`.
+- Click :guilabel:`Save & Next`.
