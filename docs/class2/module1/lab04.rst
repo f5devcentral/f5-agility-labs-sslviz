@@ -6,7 +6,7 @@
 Lab 1.4: Topology Properties
 ----------------------------
 
-SSLO now creates discreet configurations based on the selected topology. For
+SSLO now creates discrete configurations based on the selected topology. For
 example, in previous versions of SSLO, a transparent and explicit forward proxy
 might be defined together. In SSLO 5.0, these are configured separately. An
 explicit forward proxy topology will ultimately create an explicit proxy
