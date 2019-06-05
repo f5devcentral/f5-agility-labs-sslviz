@@ -59,7 +59,7 @@ The following are a few examples of security policy use cases:
 
   .. image:: ../images/image29.png
 
-- Click :guiselect:`Deploy`, then navigate to the **Security Policies** tab in
+- Click :guilabel:`Deploy`, then navigate to the **Security Policies** tab in
   the SSL Orchestrator UI. For the newly-created security policy, click the
   link under the **Per Request Policies** header. This will open a new tab to
   the visual per-request policy.
