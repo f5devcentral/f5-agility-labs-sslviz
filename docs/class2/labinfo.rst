@@ -44,7 +44,7 @@ Guide" and the VM's you'll spend all of your time attached to.
   (reverse proxy) traffic flow use case, SSL traffic is terminated at the F5,
   and re-encrypted on the way to the internal application environment. A
   wildcard server certificate is installed to facilitate using any name under
-  the ":red:`.f5demolabs.com`" sub-domain.
+  the ":red:`.f5labs.com`" sub-domain.
 
 .. tip:: It is a security best practice to isolate security devices within the
    protected network enclave provided by SSLO. Customers will often desire NOT

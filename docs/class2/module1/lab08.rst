@@ -54,9 +54,9 @@ Services" and "Health and Medicine" URL categories.
 
     .. image:: ../images/image15.png
 
-Notice in the list of rules that the **All Traffic** rule intercepts but
-does not send traffic to a service chain. For the lab, edit this rule to
-send all intercepted traffic to a service chain.
+  Notice in the list of rules that the **All Traffic** rule intercepts but
+  does not send traffic to a service chain. For the lab, edit this rule to
+  send all intercepted traffic to a service chain.
 
   - Click the pencil icon to :guilabel:`edit` this rule.
 

@@ -36,7 +36,7 @@ Lab 1 demo script
 
 1. Inline Layer 2 service
 
-   a. FireEye Inline Layer 2
+   a. FireEye NX Inline Layer 2
    #. Name: some name (ex. :red:`FireEye`)
    #. Network Configuration
 
@@ -73,7 +73,7 @@ Lab 1 demo script
 
 #. Inline HTTP service
 
-   a. WSA HTTP Proxy
+   a. Cisco WSA HTTP Proxy
    #. Name: some name (ex. :red:`Proxy`)
    #. IP Family: :red:`IPv4`
    #. Auto Manage: :red:`Enabled`
@@ -96,7 +96,7 @@ Lab 1 demo script
 
 #. ICAP Service
 
-   a. Digital Guardian ICAP
+   a. Squid ICAP
    #. name: some name (ex. :red:`DLP`)
    #. IP Family: :red:`IPv4`
    #. ICAP Devices: :red:`10.70.0.10, Port 1344`
@@ -108,7 +108,7 @@ Lab 1 demo script
 
 #. TAP Service
 
-   a. Cisco Sourcefire TAP
+   a. Cisco Firepower Thread Defense TAP
    #. Some Name (ex. :red:`TAP`)
    #. Mac Address: :red:`12:12:12:12:12:12`
    #. VLAN: Create New, name (ex. :red:`TAP_in`)

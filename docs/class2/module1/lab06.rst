@@ -19,7 +19,7 @@ This lab will create one of each type of security service.
 
 - To begin adding services, click :guilabel:`Add Service`
 
-- **Inline layer 2 service** - select the :guilabel:`FireEye Inline Layer 2`
+- **Inline layer 2 service** - select the :guilabel:`FireEye NX Inline Layer 2`
   service from the catalog and click :guilabel:`Add`, or simply double-click
   it.
 
@@ -165,7 +165,7 @@ This lab will create one of each type of security service.
 
 - **Inline HTTP service** - an inline HTTP service is defined as an explicit or
   transparent proxy for HTTP (web) traffic. Select the
-  :guilabel:`WSA HTTP Proxy` service from the catalog and click 
+  :guilabel:`Cisco WSA HTTP Proxy` service from the catalog and click 
   :guilabel:`Add`, or simply double-click it.
 
   - **Name** - provide a unique name to this service (example ":red:`Proxy`").
@@ -262,7 +262,7 @@ This lab will create one of each type of security service.
 
 - **ICAP service** - an ICAP service is an RFC 3507-defined service that
   provides some set of services over the ICAP protocol. Select the
-  :guilabel:`Digital Guardian ICAP` service from the catalog and click
+  :guilabel:`Squid ICAP` service from the catalog and click
   :guilabel:`Add`, or simply double-click it.
 
   - **Name** - provide a unique name to this service (example ":red:`DLP`").
@@ -323,8 +323,8 @@ This lab will create one of each type of security service.
   - Click :guilabel:`Save` and then :guilabel:`Add Service`.
 
 - **TAP service** - a TAP service is a passive device that simply receives a
-  copy of traffic. Select the :guilabel:`Cisco Sourcefire TAP` service from the
-  catalog and click :red:`Add`, or simply double-click it.
+  copy of traffic. Select the :guilabel:`Cisco Firepower Thread Defense TAP`
+  service from the catalog and click :red:`Add`, or simply double-click it.
 
   - **Name** - provide a unique name to this service (example ":red:`TAP`").
 
