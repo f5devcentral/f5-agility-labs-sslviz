@@ -26,7 +26,7 @@ Lab 1 demo script
 #. Client-side SSL (Cipher Type): :red:`Cipher String`
 #. Client-side SSL (Cipher String): :red:`DEFAULT`
 #. Client-side SSL (Certificate Key Chain): :red:`default.crt and default.key`
-#. Client-side SSL (CA Certificate Key Chain): :red:`subca.f5demolabs.com`
+#. Client-side SSL (CA Certificate Key Chain): :red:`subrsa.f5labs.com`
 #. Server-side SSL (Cipher Type): :red:`Cipher String`
 #. Server-side SSL (Cipher String): :red:`DEFAULT`
 #. Server-side SSL (Trusted Certificate Authority): :red:`ca-bundle.crt`
@@ -36,7 +36,8 @@ Lab 1 demo script
 
 1. Inline Layer 2 service
 
-   a. Name: some name (ex. :red:`FireEye`)
+   a. FireEye Inline Layer 2
+   #. Name: some name (ex. :red:`FireEye`)
    #. Network Configuration
 
       - Ratio: :red:`1`
@@ -50,7 +51,8 @@ Lab 1 demo script
 
 #. Inline layer 3 service
 
-   a. Name: some name (ex. :red:`IPS`)
+   a. Generic Inline Layer 3
+   #. Name: some name (ex. :red:`IPS`)
    #. IP Family: :red:`IPv4`
    #. Auto Manage: :red:`Enabled`
    #. To Service Configuration
@@ -71,7 +73,8 @@ Lab 1 demo script
 
 #. Inline HTTP service
 
-   a. Name: some name (ex. :red:`Proxy`)
+   a. WSA HTTP Proxy
+   #. Name: some name (ex. :red:`Proxy`)
    #. IP Family: :red:`IPv4`
    #. Auto Manage: :red:`Enabled`
    #. Proxy Type: :red:`Explicit`
@@ -93,7 +96,8 @@ Lab 1 demo script
 
 #. ICAP Service
 
-   a. name: some name (ex. :red:`DLP`)
+   a. Digital Guardian ICAP
+   #. name: some name (ex. :red:`DLP`)
    #. IP Family: :red:`IPv4`
    #. ICAP Devices: :red:`10.70.0.10, Port 1344`
    #. Request URI Path: :red:`/squidclamav`
@@ -104,7 +108,8 @@ Lab 1 demo script
 
 #. TAP Service
 
-   a. Some Name (ex. :red:`TAP`)
+   a. Cisco Sourcefire TAP
+   #. Some Name (ex. :red:`TAP`)
    #. Mac Address: :red:`12:12:12:12:12:12`
    #. VLAN: Create New, name (ex. :red:`TAP_in`)
    #. Interface: :red:`1.4`

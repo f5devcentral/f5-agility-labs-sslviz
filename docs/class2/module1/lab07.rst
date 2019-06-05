@@ -16,8 +16,8 @@ flow through a smaller set of security services.
 
 .. image:: ../images/image12.png
 
-- Click :guilabel:`Add` to create a new service chain containing all of the security
-  services.
+- Click :guilabel:`Add` to create a new service chain containing all of the
+  security services.
 
   - **Name** - provide a unique name to this service
     (ex.":red:`all_service_chain`").
@@ -30,8 +30,8 @@ flow through a smaller set of security services.
 
   - Click :guilabel:`Save`.
 
-- Click :guilabel:`Add` to create a new service chain for just the L2 (ex. FireEye) and TAP
-  services.
+- Click :guilabel:`Add` to create a new service chain for just the L2 (ex.
+  FireEye) and TAP services.
 
   - **Name** - provide a unique name to this service (ex.
     ":red:`sub_service_chain`").
