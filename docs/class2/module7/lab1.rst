@@ -31,22 +31,25 @@ To completely remove the SSLO configuration and start from scratch:
 
 #. In the SSLO UI
 
-   - click :red:`Delete Configurations` and then click :red:`OK`.
+   - click :guilabel:`Delete Configurations` and then click :guilabel:`OK`.
    
-   .. note::This process will take some time as SSLO walks through all of the
+   .. note:: This process will take some time as SSLO walks through all of the
       objects and dependencies to remove all configurations.
 
-#. Under the iApps menu --> Application Services --> Applications LX
+#. Under the
+   :menuselection:`iApps menu --> Application Services --> Applications LX`
    
    - "un-deploy" any remaining SSL orchestrator objects. If using any other
      Guided Configuration engine (ex. Access GC), ensure that only SSLO objects
      are deleted here.
 
-#. Under the iApps menu --> Templates --> Templates LX
+#. Under the
+   :menuselection:`iApps menu --> Templates --> Templates LX`
 
    - Delete all of the SSL Orchestrator templates.
 
-#. Under the iApps menu --> Package management LX
+#. Under the
+   :menuselection:`iApps menu --> Package management LX`
 
    - Delete the SSL Orchestrator package.
 

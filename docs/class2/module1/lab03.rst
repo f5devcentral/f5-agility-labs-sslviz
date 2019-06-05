@@ -29,7 +29,7 @@ simple transparent forward proxy.
   satisfy any of the :red:`DNS, NTP and Route` prerequisites from this page.
   Keep in mind, however, that aside from NTP, the SSLO GC will provide an
   opportunity to define DNS and route settings later in the workflow. No other
-  configurations are required on this page, so click :guilabel:`Next`.
+  configurations are required on this page, click :guilabel:`Next`.
 
 .. image:: ../images/image5.png
    :align: center

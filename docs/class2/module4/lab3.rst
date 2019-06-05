@@ -8,8 +8,8 @@ The Existing Application topology workflow produces a single SSLO per-request
 policy. To attach this to the LTM virtual server, edit the virtual server
 previously created.
 
-#. Go to :menuselection:`Local Traffic --> Virtul Servers` and select your virtual server
-   created in Lab 4.1. Modify the following properties:
+#. Go to :menuselection:`Local Traffic --> Virtul Servers` and select your
+   virtual server created in Lab 4.1. Modify the following properties:
 
    - **Access Policy (Access Profile**): attach the single
      ":red:`ssloDefault_accessProfile`".

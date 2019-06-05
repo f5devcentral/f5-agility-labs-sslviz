@@ -19,8 +19,9 @@ This lab will create one of each type of security service.
 
 - To begin adding services, click :guilabel:`Add Service`
 
-- **Inline layer 2 service** - select the :guilabel:`FireEye Inline Layer 2` service
-  from the catalog and click :guilabel:`Add`, or simply double-click it.
+- **Inline layer 2 service** - select the :guilabel:`FireEye Inline Layer 2`
+  service from the catalog and click :guilabel:`Add`, or simply double-click
+  it.
 
   - **Name** - provide a unique name to this service (example
     ":red:`FireEye`").
@@ -34,14 +35,14 @@ This lab will create one of each type of security service.
       members. Enter :red:`1`.
 
     - **From BIGIP VLAN** - this is the interface taking traffic to the inline
-      service. Select the :guilabel:`Create New` option, enter a unique name (ex.
-      :red:`FireEye_in`), select the F5 interface connecting to the inbound
-      side of the service, and add a VLAN tag value if required. For this lab,
-      select interface :red:`1.6` without a tag.
+      service. Select the :guilabel:`Create New` option, enter a unique name
+      (ex. :red:`FireEye_in`), select the F5 interface connecting to the
+      inbound side of the service, and add a VLAN tag value if required. For
+      this lab, select interface :red:`1.6` without a tag.
 
     - **To BIGIP VLAN** - this is the interface receiving traffic from the
-      inline service. Select the :guilabel:`Create New` option, enter a unique name
-      (ex. :red:`FireEye_out`), select the F5 interface connecting to the
+      inline service. Select the :guilabel:`Create New` option, enter a unique
+      name (ex. :red:`FireEye_out`), select the F5 interface connecting to the
       outbound side of the service, and add a VLAN tag value if required. For
       this lab, select interface :red:`1.7` without a tag.
 
@@ -56,8 +57,8 @@ This lab will create one of each type of security service.
     HTTPS traffic flowing across this service. This is advantageous when a
     security service defines port 443 traffic as encrypted HTTPS and natively
     ignores it. By remapping HTTPS traffic to, say, port 8080, the security
-    service will inspect the traffic. For this lab, :red:`enable (check)` this option
-    and enter a port value value (ex. :red:`8080`).
+    service will inspect the traffic. For this lab, :red:`enable (check)` this
+    option and enter a port value value (ex. :red:`8080`).
 
   - **iRules** - SSLO now allows for the insertion of additional iRule logic
     at different points. An iRule defined at the service only affects traffic
@@ -70,8 +71,9 @@ This lab will create one of each type of security service.
 
   - Click :guilabel:`Save` and then :guilabel:`Add Service`.
 
-- **Inline layer 3 service** - select the :guilabel:`Generic Inline Layer 3` service
-  from the catalog and click :guilabel:`Add`, or simply double-click it.
+- **Inline layer 3 service** - select the :guilabel:`Generic Inline Layer 3`
+  service from the catalog and click :guilabel:`Add`, or simply double-clic
+  it.
 
   - **Name** - provide a unique name to this service (example ":red:`IPS`").
 
@@ -136,8 +138,8 @@ This lab will create one of each type of security service.
     HTTPS traffic flowing across this service. This is advantageous when a
     security service defines port 443 traffic as encrypted HTTPS and natively
     ignores it. By remapping HTTPS traffic to, say, port 8181, the security
-    service will inspect the traffic. For this lab, :red:`enable (check)` this option
-    and enter a port value value (ex. :red:`8181`).
+    service will inspect the traffic. For this lab, :red:`enable (check)` this
+    option and enter a port value value (ex. :red:`8181`).
 
   - **Manage SNAT Settings** - SSLO now defines an option to enable SNAT
     (source NAT) across an inline layer 3/HTTP service. The primary use case
@@ -162,8 +164,9 @@ This lab will create one of each type of security service.
   - Click :guilabel:`Save` and then :guilabel:`Add Service`.
 
 - **Inline HTTP service** - an inline HTTP service is defined as an explicit or
-  transparent proxy for HTTP (web) traffic. Select the :guilabel:`WSA HTTP Proxy`
-  service from the catalog and click :guilabel:`Add`, or simply double-click it.
+  transparent proxy for HTTP (web) traffic. Select the
+  :guilabel:`WSA HTTP Proxy` service from the catalog and click 
+  :guilabel:`Add`, or simply double-click it.
 
   - **Name** - provide a unique name to this service (example ":red:`Proxy`").
 
@@ -212,9 +215,9 @@ This lab will create one of each type of security service.
     inline HTTP service, used for passing traffic to this device. Multiple
     load balanced IP addresses can be defined here. For a transparent proxy
     HTTP service, only an IP address is required. For an explicit proxy HTTP
-    service, the IP address and listening port is required. Click :guilabel:`Add`,
-    enter :red:`198.19.96.66` for the IP Address, and :red:`3128` for the Port,
-    then click :guilabel:`Done`.
+    service, the IP address and listening port is required. Click
+    :guilabel:`Add`, enter :red:`198.19.96.66` for the IP Address, and
+    :red:`3128` for the Port, then click :guilabel:`Done`.
 
   - **From Service Configuration** - the "From Service" defines the network
     connectivity from the inline security device to SSLO.
@@ -225,8 +228,8 @@ This lab will create one of each type of security service.
       option disabled, the IP address must be defined manually. For this lab,
       leave the :red:`198.19.96.245/25` address intact.
 
-    - **VLAN** - select the :guilabel:`Create New` option, provide a unique name
-      (ex. :red:`Proxy_out`), select the F5 interface connecting to the
+    - **VLAN** - select the :guilabel:`Create New` option, provide a unique
+      name (ex. :red:`Proxy_out`), select the F5 interface connecting to the
       outbound side of the service, and add a VLAN tag value if required. For
       this lab, select interface :red:`1.3` and VLAN tag :red:`120`.
 
@@ -259,8 +262,8 @@ This lab will create one of each type of security service.
 
 - **ICAP service** - an ICAP service is an RFC 3507-defined service that
   provides some set of services over the ICAP protocol. Select the
-  :guilabel:`Digital Guardian ICAP` service from the catalog and click :guilabel:`Add`,
-  or simply double-click it.
+  :guilabel:`Digital Guardian ICAP` service from the catalog and click
+  :guilabel:`Add`, or simply double-click it.
 
   - **Name** - provide a unique name to this service (example ":red:`DLP`").
 
@@ -269,8 +272,8 @@ This lab will create one of each type of security service.
 
   - **ICAP Devices** - this defines the IP address of the ICAP service, used
     for passing traffic to this device. Multiple load balanced IP addresses
-    can be defined here. Click :guilabel:`Add`, enter :red:`10.70.0.10` for the IP
-    Address, and :red:`1344` for the Port, and then click :guilabel:`Done`.
+    can be defined here. Click :guilabel:`Add`, enter :red:`10.70.0.10` for the
+    IP Address, and :red:`1344` for the Port, and then click :guilabel:`Done`.
 
   - **ICAP Headers** - select either **Default** or **Custom** to specify
     additional ICAP headers. To add custom headers, select Custom, otherwise

@@ -8,7 +8,7 @@ Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
    access to 8.8.8.8 UDP.
 
 - **Configuration review and prerequisites** - take a moment to review the
-  topology options and workflow configuration, then click :red:`Next`.
+  topology options and workflow configuration, then click :guilabel:`Next`.
 
 - **Topology Properties**
 
@@ -16,26 +16,26 @@ Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
   - **Protocol**: :red:`UDP`
   - **IP Family**: :red:`IPv4`
   - **Topology**: select :red:`L3 Outbound`
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Services List** - there are no new services to create.
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Services Chain List** - there are no new service chains to create.
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Security Policy** - service channel traffic cannot pass through the
   inspection services, so the security policy must be empty, with the "All
   Traffic" rule set to Allow, bypass SSL, and with no assigned service chain.
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Interception Rule**
 
-  - Select Custom outbound rule type and click :red:`Show Advanced Setting`
-    (top right).
+  - Select Custom outbound rule type and click
+    :guilabel:`Show Advanced Setting` (top right).
 
   - **Source Address** - this will be the source address of the inline proxy
     server. The proxy server's default route is through its outbound
@@ -50,11 +50,11 @@ Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
   - **VLANs** - this will be the security service's outbound-side VLAN, so in
     this case the :red:`Proxy_out` VLAN.
 
-  - **Protocol Settings (L7 Profile Type)** - select :red:`None`.
+  - **Protocol Settings (L7 Profile Type)** - select :guilabel:`None`.
 
-  - **Protocol Settings (L7 Profile)** - select :red:`None`.
+  - **Protocol Settings (L7 Profile)** - select :guilabel:`None`.
 
-  - Click :red:`Save & Next`
+  - Click :guilabel:`Save & Next`
 
 - **Summary** - the summary page presents an expandable list of all of the
   workflow-configured objects. To expand the details for any given setting,
@@ -62,7 +62,7 @@ Lab 6.1: Create an L3 Outbound service channel through Guided Configuration
   setting, click the corresponding pencil icon. Clicking the pencil icon will
   send the workflow back to the selected settings page.
 
-  - When satisfied with the defined settings, click :red:`Deploy`.
+  - When satisfied with the defined settings, click :guilabel:`Deploy`.
 
 - **Test** - to verify the service channel is working, SSH to the proxy service
   and attempt to perform a DNS query to 8.8.8.8.

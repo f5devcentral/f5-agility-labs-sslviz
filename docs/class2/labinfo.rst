@@ -21,7 +21,7 @@ Guide" and the VM's you'll spend all of your time attached to.
    tab and goto https://<assigned_IP>
 
    The following information is based on our custom :bred:`Ravello` blue print
-   "SSL Orchestrator 5.3 Lab".
+   "SSL Orchestrator 5.4 Lab".
 
 - **Client side VLAN and subnet are defined** - this is the VLAN that an
   internal client connects to for outbound traffic flows. SSLO does not define

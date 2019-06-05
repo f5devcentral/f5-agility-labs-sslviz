@@ -9,7 +9,8 @@ service. It will listen on a wildcard VIP (0.0.0.0/0), or otherwise specific
 subnet (vs. a dedicated single IP), and terminate inbound TLS traffic flows via
 wildcard or subject alternative name (SAN) certificate. Follow the :red:`L3
 Inbound` topology workflow to build this solution. In the SSL Orchestrator
-dashboard view, select the :guilabel:`Topologies` tab (bottom) and click :guilabel:`Add`.
+dashboard view, select the :guilabel:`Topologies` tab (bottom) and click
+:guilabel:`Add`.
 
 - **Configuration review and prerequisites** - take a moment to review the
   topology options and workflow configuration, then click :guilabel:`Next`.
@@ -116,55 +117,55 @@ dashboard view, select the :guilabel:`Topologies` tab (bottom) and click :guilab
   However, an L3 Inbound topology must re-encrypt the inbound traffic.
   Therefore, there are two options for this lab (choose one):
 
-  - **Gateway mode** - interception rule listening on a wildcard IP, port 443,
-    with a wildcard or SAN certificate. Clients route through SSLO.
+  1. **Gateway mode** - interception rule listening on a wildcard IP, port 443,
+     with a wildcard or SAN certificate. Clients route through SSLO.
 
-    - :guilabel:`Hide Advanced Setting`
+     - :guilabel:`Hide Advanced Setting`
+ 
+     - **Source Address**: :red:`0.0.0.0/0`
 
-    - **Source Address**: :red:`0.0.0.0/0`
+     - **Destination Address/Mask**: :red:`0.0.0.0/0`
 
-    - **Destination Address/Mask**: :red:`0.0.0.0/0`
+     - **Port**: :red:`443`
 
-    - **Port**: :red:`443`
+     - **VLANs**: :red:`outbound` (this is the server-side VLAN)
 
-    - **VLANs**: :red:`outbound` (this is the server-side VLAN)
+     - **[Protocol Settings] L7 Profile Type** - this setting enables or
+       disables HTTP processing.
 
-    - **[Protocol Settings] L7 Profile Type** - this setting enables or
-      disables HTTP processing.
+     - **[Protocol Settings] L7 Profile** - if the above option is set to
+       HTTP, this option selects a specific HTTP profile. Set both to
+       :red:`None`, or both to :red:`HTTP` and :red:`/Common/http`.
 
-    - **[Protocol Settings] L7 Profile** - if the above option is set to
-      HTTP, this option selects a specific HTTP profile. Set both to
-      :red:`None`, or both to :red:`HTTP` and :red:`/Common/http`.
+  2. **Targeted mode** - interception rule listening on a dedicated IP, port
+     443, with any server certificate. Clients route to SSLO.
 
-  - **Targeted mode** - interception rule listening on a dedicated IP, port
-    443, with any server certificate. Clients route to SSLO.
+     - :guilabel:`Show Advanced Setting`
 
-    - :guilabel:`Show Advanced Setting`
+     - **Source Address**: :red:`0.0.0.0/0`
 
-    - **Source Address**: :red:`0.0.0.0/0`
+     - **Destination Address/Mask**: :red:`10.30.0.200/32`
 
-    - **Destination Address/Mask**: :red:`10.30.0.200/32`
+     - **Port**: :red:`443`
 
-    - **Port**: :red:`443`
+     - **VLANs**: :red:`outbound` (this is the server-side VLAN)
 
-    - **VLANs**: :red:`outbound` (this is the server-side VLAN)
+     - **[Protocol Settings] Client TCP Profile** - allows setting a custom
+       client-side TCP profile.
 
-    - **[Protocol Settings] Client TCP Profile** - allows setting a custom
-      client-side TCP profile.
+     - **[Protocol Settings] Server TCP Profile** - allows setting a custom 
+       server-side TCP profile.
 
-    - **[Protocol Settings] Server TCP Profile** - allows setting a custom 
-      server-side TCP profile.
+     - **[Protocol Settings] SSL Configuration** - allows setting a custom SSL
+       setting.
 
-    - **[Protocol Settings] SSL Configuration** - allows setting a custom SSL
-      setting.
+     - **[Protocol Settings] L7 Profile Type** - this setting enables or
+       disables HTTP processing.
 
-    - **[Protocol Settings] L7 Profile Type** - this setting enables or
-      disables HTTP processing.
+     - **[Protocol Settings] L7 Profile** - if the above option is set to
+       HTTP, this option selects a specific HTTP profile.
 
-    - **[Protocol Settings] L7 Profile** - if the above option is set to
-      HTTP, this option selects a specific HTTP profile.
-
-    - **Pool** - :red:`webserver-pool` (pre-created server pool)
+     - **Pool** - :red:`webserver-pool` (pre-created server pool)
 
   Click :guilabel:`Save & Next`
 

@@ -39,13 +39,14 @@ the following:
   named "**FireEye_in**", and its "To BIGIP VLAN" named "**FireEye_out**",
   its corresponding BIG-IP VLANs would be accessible via the following syntax:
 
-  **ssloN_** + [network name] + **.app/ssloN_** + [network name]
+  .. code-block:: bash
+   
+     ssloN_ + [network name] + .app/ssloN_ + [network name]
 
-  Example:
+     Example:
 
-  :red:`ssloN_FireEye_in.app/ssloN_FireEye_in`
-
-  :red:`ssloN_FireEye_in.app/ssloN_FireEye_in`
+     ssloN_FireEye_in.app/ssloN_FireEye_in
+     ssloN_FireEye_in.app/ssloN_FireEye_in
 
   The security service VLANs and their corresponding application services are
   all visible from the BIG-IP UI under Network --> VLANs. A tcpdump on the

@@ -1,8 +1,56 @@
-Appendix - Common Testing Commands
-==================================
+Appendix 1 - Common Testing Commands
+====================================
 
 The following are some simple, but powerful commands that are useful in
 developing and troubleshooting SSL visibility projects.
+
+**Packet capture**
+
+Second only to debug logging, packet captures are crucial to troubleshooting
+(and simply validating) network and service-related issues. Each security
+service is connected to separate “ingress” and “egress” VLANs, traffic going
+into the service from the F5, and traffic leaving the service back to the F5,
+respectively. To verify that traffic is entering, or leaving a security device,
+insert a tcpdump “tap” on the appropriate VLAN.
+
+.. code-block:: bash
+   
+   tcpdump –lnni [VLAN]:nnn -Xs0
+
+.. note:: The service VLANs reside with application service containers, so must
+   be referenced accordingly. The easiest way to derive this path is from the
+   BIG-IP UI. Navigate to the Network – VLANs menu. In the “Partition / Path”
+   column for the desired VLAN, copy the path beyond the “Common/” string. For
+   example, if the path is “Common/ssloN_IPS_in.app”, copy “ssloN_IPS_in.app”.
+   The full path will be this value, plus the same string again without the
+   “.app” extension. The VLAN path will therefore look like this:
+
+   .. code-block:: bash
+
+      ssloN_IPS_in.app/ssloN_IPS_in
+
+From the BIG-IP command line, insert the tcpdump tap on the ingress side of
+this IPS service like this:
+
+.. code-block:: bash
+   
+   tcpdump -lnni ssloN_IPS_in.app/ssloN_IPS_in
+
+Pass traffic through SSLO to verify that data is flowing to the inline service.
+Switch the VLAN value to the egress VLAN to also verify data is flowing out of
+the inline service. To view decrypted traffic, add “-Xs0” (zero) to the tcpdump
+command.
+
+.. code-block:: bash
+   
+   tcpdump -lnni ssloN_IPS_in.app/ssloN_IPS_in -Xs0
+
+And to filter out ICMP traffic and other unneeded flows, add filters to the end
+of the capture.
+
+.. code-block:: bash
+   
+   tcpdump -lnni ssloN_IPS_in.app/ssloN_IPS_in not icmp
 
 **Control the SSLFWD certificate cache**
 
@@ -48,19 +96,6 @@ leave debug logging enabled.
 .. code-block:: bash
 
    tail –f /var/log/apm
-
-**Packet capture**
-
-Second only to debug logging, packet captures are crucial to troubleshooting
-any network-dependent issue.
-
-.. code-block:: bash
-
-   tcpdump –lnni [VLAN] [-Xs0]
-
-In-line services create "source" (S) and "destination" (D) VLANs, and ICAP and
-receive-only services attach to existing VLANs. Drop a probe at each point in
-the path and observe flow.
 
 **SSL inspection**
 
