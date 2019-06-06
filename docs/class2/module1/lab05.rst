@@ -14,7 +14,7 @@ SSL settings for this workflow.
 
 - For this lab select :guilabel:`Create New`.
 
-- Click :guilabel:`Show Advanced Setting`
+- Click :guilabel:`Show Advanced Setting` (Middle-right / top of the page)
 
 - **Client-side SSL**
 

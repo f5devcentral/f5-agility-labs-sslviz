@@ -43,8 +43,8 @@ In the SSL Orchestrator dashboard view, select the :guilabel:`Topologies` tab
 - **SSL Configurations** - the existing outbound SSL settings from Lab 1 can be
   re-used here.
 
-  - Select :guilabel:`Use Existing`, and select the existing :red:`lab1_outbound`
-    SSL profile.
+  - Select :guilabel:`Use Existing`, and select the existing
+    :red:`lab1_outbound` SSL profile.
   - Click :guilabel:`Save & Next`
   - Click :guilabel:`OK` to acknowledge the profile warning.
 
@@ -64,8 +64,8 @@ In the SSL Orchestrator dashboard view, select the :guilabel:`Topologies` tab
 - **Security Policy** - the existing outbound Security Policy from Lab 1 can be
   re-used here.
 
-  - Select :guilabel:`Use Existing`, and select the existing :red:`lab1_outbound`
-    Security policy.
+  - Select :guilabel:`Use Existing`, and select the existing
+    :red:`lab1_outbound` Security policy.
   - Click :guilabel:`Save & Next`
   - Click :guilabel:`OK` to acknowledge the profile warning.
 

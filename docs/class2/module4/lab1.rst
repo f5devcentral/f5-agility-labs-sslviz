@@ -6,7 +6,8 @@ Lab 4.1: Create an LTM application
 
 For the lab, create a simple LTM Virtual Server:
 
-#. **Create a pool** - go to :menuselection:`Local Traffic --> Pools --> Pool List` and click
+#. **Create a pool** - go to
+   :menuselection:`Local Traffic --> Pools --> Pool List` and click
    :guilabel:`Create`.
 
    - Set a name of your choice
@@ -20,23 +21,26 @@ For the lab, create a simple LTM Virtual Server:
 
    - Click :guilabel:`Finished`
 
-#. **Create a client SSL profile** - go to :menuselection:`Local Traffic --> Profiles --> SSL
-   --> Client` and click :guilabel:`Create`.
+#. **Create a client SSL profile** - go to
+   :menuselection:`Local Traffic --> Profiles --> SSL --> Client` and click
+   :guilabel:`Create`.
    
    - Set a name of your choice
    - Modify the "Certificate Key Chain" by adding :red:`wildcard.f5labs.com`
      certificate and private key.
    - Click :guilabel:`Finished`
 
-#. **Create an LTM virtual server** - go to :menuselection:`Local Traffic --> Virtual Server
-   List` and click :guilabel:`Create`.
+#. **Create an LTM virtual server** - go to
+   :menuselection:`Local Traffic --> Virtual Server List` and click
+   :guilabel:`Create`.
    
    - Set a name of your choice
    - **Destination Address/Mask**: :red:`10.30.0.205`
    - **Service Port**: :red:`443`
    - **HTTP Profile**: :red:`http`
    - **SSL Profile (Client)**: :red:`previously created Client SSL profile`
-   - **VLANs and Tunnels**: Select :red:`Enabled on...` option, and then :red:`outbound` VLAN
+   - **VLANs and Tunnels**: Select :red:`Enabled on...` option, and then
+     :red:`outbound` VLAN
    - **Source Address Translation**: :red:`Auto Map`
    - **Default Pool**: :red:`previously created pool`
    - Click :guilabel:`Finished`

@@ -1,305 +1,128 @@
-.. role:: red
-.. role:: bred
-
-Appendix - Demo Scripts
-=======================
-
-Lab 1 demo script
------------------
-
-**Configuration review and prerequisites**
-
-#. Optionally define DNS, NTP and gateway route
-#. Click :red:`Next`
-
-**Topology Properties**
-
-#. Name: :red:`lab1_outbound`
-#. Protocol: :red:`Any`
-#. IP Family: :red:`IPv4`
-#. Topology: :red:`L3 Outbound`
-#. Click :red:`Save & Next`
-
-**SSL Configuration**
-
-#. :red:`Create a New` SSL Profile
-#. Client-side SSL (Cipher Type): :red:`Cipher String`
-#. Client-side SSL (Cipher String): :red:`DEFAULT`
-#. Client-side SSL (Certificate Key Chain): :red:`default.crt and default.key`
-#. Client-side SSL (CA Certificate Key Chain): :red:`subrsa.f5labs.com`
-#. Server-side SSL (Cipher Type): :red:`Cipher String`
-#. Server-side SSL (Cipher String): :red:`DEFAULT`
-#. Server-side SSL (Trusted Certificate Authority): :red:`ca-bundle.crt`
-#. Click :red:`Save & Next`
-
-**Service List**
-
-1. Inline Layer 2 service
-
-   a. FireEye Inline Layer 2
-   #. Name: some name (ex. :red:`FireEye`)
-   #. Network Configuration
-
-      - Ratio: :red:`1`
-      - From BIGIP VLAN: Create New, name (ex. FireEye_in), :red:`int 1.6`
-      - To BIGIP VLAN: Create New, name (ex. FireEye_out), :red:`int 1.7`
-      - Click :red:`Done`
-
-   #. Service Action Down: :red:`Ignore`
-   #. Enable Port Remap: Enable, :red:`8080`
-   #. Click :red:`Save`
-
-#. Inline layer 3 service
-
-   a. Generic Inline Layer 3
-   #. Name: some name (ex. :red:`IPS`)
-   #. IP Family: :red:`IPv4`
-   #. Auto Manage: :red:`Enabled`
-   #. To Service Configuration
-
-      - To Service: :red:`198.19.64.7/25`
-      - VLAN: Create New, name (ex. IPS_in), :red:`interface 1.3, tag 50`
-
-   #. Service Action Down: :red:`Ignore`
-   #. L3 Devices: :red:`198.19.64.64`
-   #. From Service Configuration
-
-      - From Service: :red:`198.19.64.245/25`
-      - VLAN: Create New, name (ex. IP_out), :red:`interface 1.3, tag 60`
-
-   #. Enable Port Remap: Enabled, :red:`8181`
-   #. Manage SNAT Settings: :red:`None`
-   #. Click: :red:`Save`
-
-#. Inline HTTP service
-
-   a. WSA HTTP Proxy
-   #. Name: some name (ex. :red:`Proxy`)
-   #. IP Family: :red:`IPv4`
-   #. Auto Manage: :red:`Enabled`
-   #. Proxy Type: :red:`Explicit`
-   #. To Service Configuration
-
-      - To Service: :red:`198.19.96.7/25`
-      - VLAN: Create New, name (ex. Proxy_in), :red:`interface 1.3, tag 110`
-
-   #. Service Action Down: :red:`Ignore`
-   #. HTTP Proxy Devices: :red:`198.19.96.66, Port 3128`
-   #. From Service Configuration
-
-      - From Service: :red:`198.19.96.245/25`
-      - VLAN: Create New, name (ex. Proxy_out), :red:`interface 1.3, tag 120`
-
-   #. Manage SNAT Settings: :red:`None`
-   #. Authentication Offload: :red:`Disabled`
-   #. Click :red:`Save`
-
-#. ICAP Service
-
-   a. Digital Guardian ICAP
-   #. name: some name (ex. :red:`DLP`)
-   #. IP Family: :red:`IPv4`
-   #. ICAP Devices: :red:`10.70.0.10, Port 1344`
-   #. Request URI Path: :red:`/squidclamav`
-   #. Response URI Path: :red:`/squidclamav`
-   #. Preview Max Length(bytes): :red:`524288`
-   #. Service Action Down: :red:`Ignore`
-   #. Click :red:`Save`
-
-#. TAP Service
-
-   a. Cisco Sourcefire TAP
-   #. Some Name (ex. :red:`TAP`)
-   #. Mac Address: :red:`12:12:12:12:12:12`
-   #. VLAN: Create New, name (ex. :red:`TAP_in`)
-   #. Interface: :red:`1.4`
-   #. Service Action Down: :red:`Ignore`
-   #. Click :red:`Save`
-   
-#. Click :red:`Save & Next`
-
-**Service Chain List**
-
-#. Add
-
-   a. Name: some name (ex. :red:`all_service_chain`)
-   #. Services: :red:`all of the services`
-   #. Click :red:`Save`
-
-#. Add
-
-   a. name: some name (ex. :red:`sub_service_chain`)
-   #. Services: :red:`L2 and TAP services`
-   #. Click :red:`Save`
-
-#. Click :red:`Save & Next`
-
-**Security Policy**
-
-#. Add a new rule
-
-   a. Name: some name (ex. :red:`urlf_bypass`)
-   b. Conditions
-
-      - Category Lookup :red:`(All)`
-      - SNI Category: :red:`Financial Data and Services, Health and Medicine`
-
-   c. Action: :red:`Allow`
-   d. SSL Forward Proxy Action: :red:`bypass`
-   e. Service Chain: :red:`L2/TAP service chain`
-   f. Click :red:`OK`
-
-#. Modify the All rule
-
-   a. Service Chain: :red:`all services chain`
-   #. Click :red:`OK`
-
-#. Click :red:`Save & Next`
-
-**Interception Rule**
-
-#. Select Outbound Rule Type: :red:`Default`
-#. Ingress Network (VLANs): :red:`client-side`
-#. L7 Interception Rules: :red:`Apply FTP and email protocols as required.`
-#. Click :red:`Save & Next`
-
-**Egress Setting**
-
-#. Manage SNAT Settings: :red:`Auto Map`
-#. Gateways: :red:`New, ratio 1, 10.30.0.1`
-
-**Summary**
-
-#. Review configuration
-#. Click :red:`Deploy`
-
-Lab 2 demo script
------------------
-
-**Configuration review and prerequisites**
-
-#. Optionally define DNS, NTP and gateway route
-#. Click :red:`Next`
-
-**Topology Properties**
-
-#. Name: some_name (ex. :red:`lab2_inbound`)
-#. Protocol: :red:`TCP`
-#. IP Family: :red:`IPv4`
-#. Topology: :red:`L3 Inbound`
-#. Click :red:`Save & Next`
-
-**SSL Configuration**
-
-#. :red:`Show Advanced Setting`
-#. Client-side SSL (Cipher Type): :red:`Cipher String`
-#. Client-side SSL (Cipher String): :red:`DEFAULT`
-#. Client-side SSL (Certificate Key Chain): :red:`default.crt and default.key`
-#. Server-side SSL (Cipher Type): :red:`Cipher String`
-#. Server-side SSL (Cipher String): :red:`DEFAULT`
-#. Server-side SSL (Trusted Certificate Authority): :red:`ca-bundle.crt`
-#. Advanced (Expire Certificate Control): :red:`Ignore`
-#. Advanced (Untrusted Certificate Authority): :red:`Ignore`
-#. Click :red:`Save & Next`
-
-**Services List**
-
-#. Click :red:`Save & Next`
-
-**Service Chain List**
-
-#. Click :red:`Save & Next`
-
-**Security Policy**
-
-#. Remove :red:`Pinners_Rule`
-#. Edit All Traffic rule and add :red:`L2/TAP service chain`
-#. Click :red:`Save & Next`
-
-**Interception Rule**
-
-#. Gateway-mode
-
-   a. :red:`Hide Advanced Setting`
-   #. Source Address: :red:`0.0.0.0/0`
-   #. Destination Address/Mask: :red:`0.0.0.0/0`
-   #. Port: :red:`443`
-   #. VLANs: :red:`outbound`
-
-#. Targeted-mode
-
-   a. :red:`Show Advanced Setting`
-   #. Source Address: :red:`0.0.0.0/0`
-   #. Destination Address: :red:`10.30.0.200`
-   #. Port: :red:`443`
-   #. VLANs: :red:`outbound`
-   #. Pool: :red:`webserver-pool`
-
-#. Click :red:`Save & Next`
-
-**Egress Settings**
-
-#. Manage SNAT Settings: :red:`Auto Map`
-#. Gateways: :red:`Default Route`
-
-**Summary**
-
-#. Review configuration
-#. Click :red:`Deploy`
-
-Lab 3 demo script
------------------
-
-**Configuration review and prerequisites**
-
-#. Optionally define DNS, NTP and gateway route
-#. Click :red:`Next`
-
-**Topology Properties**
-
-#. Name: some name (ex. :red:`lab3_explicit`)
-#. Protocol: :red:`TCP`
-#. IP Family: :red:`IPv4`
-#. Topology: :red:`L3 Explicit Proxy`
-#. Click :red:`Save & Next`
-
-**SSL Configuration**
-
-#. SSL Profile: :red:`Use Existing, existing outbound SSL settings`
-#. Click :red:`Save & Next`
-
-**Services List**
-
-#. Click :red:`Save & Next`
-
-**Service Chain List**
-
-#. Click :red:`Save & Next`
-
-**Security Policy**
-
-#. Type: :red:`Use Existing, existing outbound security policy`
-#. Click :red:`Save & Next`
-
-**Interception Rule**
-
-#. IPV4 Address: :red:`10.20.0.150`
-#. Port: :red:`3128`
-#. VLANs: :red:`client-net`
-#. Click :red:`Save & Next`
-
-**Egress Settings**
-
-#. Manage SNAT Settings: :red:`Auto Map`
-#. Gateways: :red:`Existing Gateway Pool, -ex-pool-4 pool`
-
-**Summary**
-
-#. Review configuration
-#. Click :red:`Deploy`
-
-**System Settings**
-
-#. DNS Query Resolution: :red:`Local Forwarding Nameserver`
-#. Local Forwarding Nameserver(s): :red:`10.1.20.1`
-#. Click :red:`Deploy`
+Appendix 4 - Routing Considerations For Layer 3 Devices
+=======================================================
+
+SSL Orchestrator sends all traffic through an inline layer 3 or HTTP device in
+the same direction - entering through the inbound interface. It is likely,
+therefore, that the layer 3 device may not be able to correctly route both
+outbound (forward proxy) and inbound (reverse proxy) traffic at the same time.
+Please see the appendix, "Routing considerations for layer 3 devices" for more
+details. For example, in a simple Linux-type environment there would be two
+routes needed for SSLO:
+
+- The default gateway to send traffic back to SSLO through the service's
+  outbound interface
+
+- A static return route to allow client traffic to return through the service's
+  inbound interface
+
+Example:
+
+.. code-block:: bash
+
+   Destination   Gateway         Genmask        Flags    Metric   iFace
+   default       198.19.64.245   0.0.0.0        UG       0        eth2
+   10.1.10.0     198.19.64.7     255.255.255.0  UG       0        eth1
+
+In the above, configured for an outbound traffic flow, the default gateway is
+on the outbound side interface (eth2), with a static route for 10.1.10.0/24
+(client-sourced) traffic flowing back through the inbound interface (eth1). An
+inbound flow, however, would require the opposite:
+
+.. code-block:: bash
+
+   Destination    Gateway        Genmask        Flags    Metric   iFace
+   default        198.19.64.7    0.0.0.0        UG       0        eth1
+   10.1.10.0      198.19.64.245  255.255.255.0  UG       0        eth2
+
+There are generally a few options for handling inbound and outbound traffic
+flows:
+
+- Do not use the same layer 3 device for inbound and outbound flows - the
+  simplest option, but not always possible in some environments.
+
+- Create a policy route, if the device supports it, to create multiple
+  gateways.
+
+We will explore the second and second options below.
+
+**Configuring a policy route on the layer 3 device**
+
+If a service supports it, policy routing allows you to create multiple gateways
+on a layer 3 (routed) device. In lieu of creating separate inbound and outbound
+services, and service chains for a single L3 device, all traffic in this use
+case still flows through the inbound side interface, but the policy route will
+effectively steer traffic in the correct direction. Policy routing can be a
+complex topic in and of itself, and each security product will have its own way
+of configuring policy routing anyway, so it cannot be covered in total in this
+guide. Please refer to product-specific documentation to learn more about your
+policy routing options.
+
+The following is an example script to enable a policy route on a generic Linux
+device (most of which have iproute2 installed by default). In the script, it is
+only necessary to modify the top eight variables, defining attributes of the
+inbound and outbound networks. Once complete, chmod the script to make it
+executable, test it, and then call it from a startup process like /etc/rc.local
+or /etc/init.d/rc.local. If the script is successful, you should be able to
+send inbound and outbound SSLO traffic flows through this device.
+
+.. code-block:: bash
+
+   #!/bin/bash
+
+   ## Inbound interface
+   inbound_interface=eth1.10
+   inbound_ip=198.19.64.65
+   inbound_mask=25
+   inbound_gw=198.19.64.7
+
+   ## Outbound interface
+   outbound_interface=eth1.20
+   outbound_ip=198.19.64.130
+   outbound_mask=25
+   outbound_gw=198.19.64.245
+
+   ### ---------------------------------------------- ###
+   ### ---------------------------------------------- ###
+
+   ## static table names
+   inbound_table=av_in
+   outbound_table=av_out
+
+   ## function to get network from mask and IP
+   get_network () {
+      IFS=. read -r io1 io2 io3 io4 <<< "$2"
+      set -- $(( 5 - ($1 / 8) )) 255 255 255 255 $(( (255 << (8 - ($1 % 8))) & 255 )) 0 0 0
+      [ $1 -gt 1 ] && shift $1 \|\| shift
+      NET_ADDR="$((${io1} & ${1-0})).$((${io2} & ${2-0})).$((${io3} & ${3-0})).$((${io4} & ${4-0}))"
+      echo "$NET_ADDR"
+   }
+
+   ## stop if iproute2 isn not installed
+   if ! [ -d "/etc/iproute2/" ]; then
+      echo "iproute2 policy routing is not available on this system - exiting"
+      exit
+   fi
+
+   ## create the ipproute2 tables
+   if ! grep -q ${inbound_table} /etc/iproute2/rt_tables; then
+      echo "200 ${inbound_table}" >> /etc/iproute2/rt_tables
+   fi
+   if ! grep -q ${outbound_table} /etc/iproute2/rt_tables; then
+      echo "201 ${outbound_table}" >> /etc/iproute2/rt_tables
+   fi
+
+   ## get the inbound and outbound networks from function
+   inbound_net=$(get_network ${inbound_mask} ${inbound_ip})
+   outbound_net=$(get_network ${outbound_mask} ${outbound_ip})
+
+   ## create policy routes
+   ip rule add iif ${inbound_interface} table ${inbound_table}
+   ip rule add iif ${outbound_interface} table ${outbound_table}
+   ip addr add ${inbound_ip}/${inbound_mask} brd + dev ${inbound_interface}
+   ip addr add ${outbound_ip}/${outbound_mask} brd + dev ${outbound_interface}
+   ip route add ${inbound_net}/${inbound_mask} dev ${inbound_interface} src ${inbound_ip} table ${inbound_table}
+   ip route add ${inbound_net}/${inbound_mask} dev ${inbound_interface} src ${inbound_ip} table ${outbound_table}
+   ip route add ${outbound_net}/${outbound_mask} dev ${outbound_interface} src ${outbound_ip} table ${inbound_table}
+   ip route add ${outbound_net}/${outbound_mask} dev ${outbound_interface} src ${outbound_ip} table ${outbound_table}
+   ip route add default via ${outbound_gw} table ${inbound_table}
+   ip route add default via ${inbound_gw} table ${outbound_table}

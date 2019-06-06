@@ -8,7 +8,7 @@ Review and edit the existing security policy rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the SSLO dashboard view, navigate to the Security Policies tab and click on
-a :red:`security policy (Name)`. The Guided Configuration will present the
+a :guilabel:`security policy (Name)`. The Guided Configuration will present the
 rules engine previously seen as part of the topology workflow. New rules can be
 added, and existing rules edited. Notice also that the "All Traffic" rule is
 anchored to the security policy and cannot be moved or removed. This is the
@@ -59,10 +59,10 @@ The following are a few examples of security policy use cases:
 
   .. image:: ../images/image29.png
 
-- Click :red:`Deploy`, then navigate to the **Security Policies** tab in the
-  SSL Orchestrator UI. For the newly-created security policy, click the link
-  under the **Per Request Policies** header. This will open a new tab to the
-  visual per-request policy.
+- Click :guilabel:`Deploy`, then navigate to the **Security Policies** tab in
+  the SSL Orchestrator UI. For the newly-created security policy, click the
+  link under the **Per Request Policies** header. This will open a new tab to
+  the visual per-request policy.
 
   .. image:: ../images/image30.png
 

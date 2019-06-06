@@ -21,7 +21,7 @@ Guide" and the VM's you'll spend all of your time attached to.
    tab and goto https://<assigned_IP>
 
    The following information is based on our custom :bred:`Ravello` blue print
-   "SSL Orchestrator 5.3 Lab".
+   "SSL Orchestrator 5.4 Lab".
 
 - **Client side VLAN and subnet are defined** - this is the VLAN that an
   internal client connects to for outbound traffic flows. SSLO does not define
@@ -44,7 +44,7 @@ Guide" and the VM's you'll spend all of your time attached to.
   (reverse proxy) traffic flow use case, SSL traffic is terminated at the F5,
   and re-encrypted on the way to the internal application environment. A
   wildcard server certificate is installed to facilitate using any name under
-  the ":red:`.f5demolabs.com`" sub-domain.
+  the ":red:`.f5labs.com`" sub-domain.
 
 .. tip:: It is a security best practice to isolate security devices within the
    protected network enclave provided by SSLO. Customers will often desire NOT

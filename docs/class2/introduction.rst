@@ -65,8 +65,8 @@ security infrastructure.
 
 .. image:: images/image2.png
 
-What's new in SSLO 4.0?
------------------------
+What's new in SSLO 4.0 and 5.0?
+-------------------------------
 
 SSLO 4.0 provides significant architectural improvements over previous
 versions. Here are the highlights:
@@ -111,8 +111,7 @@ SSLO 4.0 also includes the following new functionality features:
 - vCMP support - ability to select existing VLANs for inbound and outbound
   to/from inline services.
 
-What's new in SSLO 5.0?
------------------------
+SSLO 5.0 includes the following updates:
 
 - Guided Configuration user experience, a complete refresh of the SSLO UI based
   on the Access Guided Configuration engine.
@@ -129,20 +128,43 @@ What's new in SSLO 5.0?
 What's new in SSLO 5.X?
 -----------------------
 
-SSLO 5.1 was released on December 17, 2018, a few days after the release of
-BIG-IP 14.1 with SSLO 5.0. SSLO 5.1 contains significant updates to the product
-and is therefore recommended (over 5.0) for customer environments. 
+**SSL Orchestrator 5.4** contains bugfix updates to the product and is
+therefore recommended (over 5.3) for customer environments. Additional
+information about SSLO 5.4, including updates and fixes, can be found in the
+official release notes: https://techdocs.f5.com/kb/en-us/products/ssl-orchestrator/releasenotes/product/relnote-sslorchestrator-14-1-0-iapp-5-4.html
+SSL Orchestrator 5.4 is available on the F5 downloads site,
+https://downloads.f5.com, under the SSL Orchestrator section, as
+:bred:`f5-iappslx-ssl-orchestrator-14.1.0-5.4.47.rpm`.
 
-As of today two more updates have been released, 5.2 and 5.3. Additional
-information about this updates can be found in the official release notes at:
-https://support.f5.com/csp/knowledge-center/software/F5%20App%20Protect?module=F5%20SSL%20Orchestrator&version=14.1.0
 
-All updates are available on the F5 downloads site, https://downloads.f5.com,
-under the SSL Orchestrator section.
+**SSL Orchestrator 5.3** contains bugfix updates to the product and is
+therefore recommended (over 5.2) for customer environments. Additional
+information about SSLO 5.3, including updates and fixes, can be found in the
+official release notes: https://techdocs.f5.com/kb/en-us/products/ssl-orchestrator/releasenotes/product/relnote-sslorchestrator-14-1-0-iapp-5-3.html
+SSL Orchestrator 5.3 is available on the F5 downloads site,
+https://downloads.f5.com, under the SSL Orchestrator section, as
+:bred:`f5-iappslx-ssl-orchestrator-14.1.0-5.3.7.rpm`.
+
+**SSL Orchestrator 5.2** contains bugfix updates to the product and is
+therefore recommended (over 5.1) for customer environments. Additional
+information about SSLO 5.2, including updates and fixes, can be found in the
+official release notes: https://support.f5.com/kb/en-us/products/ssl-orchestrator/releasenotes/product/relnote-sslorchestrator-14-1-0-iapp-5-2.html
+SSL Orchestrator 5.2 is available on the F5 downloads site,
+https://downloads.f5.com, under the SSL Orchestrator section, as
+:bred:`f5-iappslx-ssl-orchestrator-14.1.0-5.2.261.rpm`.
+
+**SSL Orchestrator 5.1** was released on December 17th, 2018, a few days after
+the release of BIG-IP 14.1 with SSLO 5.0. SSLO 5.1 contains significant updates
+to the product and is therefore recommended (over 5.0) for customer
+environments. Additional information about SSLO 5.1, including updates and
+fixes, can be found in the official release notes: https://support.f5.com/kb/en-us/products/ssl-orchestrator/releasenotes/product/relnote-sslorchestrator-14-1-0-iapp-5-1.html
+SSL Orchestrator 5.1 is available on the F5 downloads site,
+https://downloads.f5.com, under the SSL Orchestrator section, as
+:bred:`f5-iappslx-ssl-orchestrator-14.1.0-5.1.254.rpm`.
 
 .. note:: This lab guide and corresponding Ravello lab environment are prepared
-   for SSLO 5.3. If installing a fresh BIG-IP 14.1 instance, it is recommended
-   to immediately download the 5.3 package and install over the built-in 5.0
-   version. To do this, in the SSLO UI, click on **SSL Orchestrator** -->
-   **Configuration** --> **Upgrade SSL Orchestrator**, choose the downloaded
-   SSLO 5.3 package and then upload and install.
+   for SSLO 5.4. If installing a fresh BIG-IP 14.1 instance, it is recommended
+   to immediately download the 5.4 package and install over the built-in 5.0
+   version. To do this, in the SSLO UI, click on :menuselection:`
+   SSL Orchestrator --> Configuration --> Upgrade SSL Orchestrator`, choose the
+   downloaded SSLO 5.4 package and then upload and install.
