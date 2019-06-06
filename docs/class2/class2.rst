@@ -1,4 +1,4 @@
-Class 2: SSL Orchestration v5 (Ravello)
+Class 2: SSL Orchestration v5 (RAVELLO)
 =======================================
 
 .. toctree::
