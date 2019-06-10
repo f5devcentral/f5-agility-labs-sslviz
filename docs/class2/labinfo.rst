@@ -167,7 +167,7 @@ Guide" and the VM's you'll spend all of your time attached to.
 
    * - Login
      - student:agility
-   * - IP Addresses (\*.f5demolabs.com)
+   * - IP Addresses (\*.f5labs.com)
      - 10.20.0.90
    * - 
      - 10.20.0.91

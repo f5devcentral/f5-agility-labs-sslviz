@@ -323,7 +323,7 @@ This lab will create one of each type of security service.
   - Click :guilabel:`Save` and then :guilabel:`Add Service`.
 
 - **TAP service** - a TAP service is a passive device that simply receives a
-  copy of traffic. Select the :guilabel:`Cisco Firepower Thread Defense TAP`
+  copy of traffic. Select the :guilabel:`Cisco Firepower Threat Defense TAP`
   service from the catalog and click :red:`Add`, or simply double-click it.
 
   - **Name** - provide a unique name to this service (example ":red:`TAP`").

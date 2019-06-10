@@ -177,9 +177,9 @@ instructions assume the UDF blueprint:
   able to ping the webservers at 10.1.20.90-92. Assuming that works, a client
   browser should be able to navigate to one of the internal test URLs:
 
-  - test0.f5demolabs.com
-  - test1.f5demolabs.com
-  - test2.f5demolabs.com
+  - test0.f5labs.com
+  - test1.f5labs.com
+  - test2.f5labs.com
 
 - SSH or console to the webserver and tcpdump on its eth1 interface (tcpdump
   -lnni eth1 not icmp and not arp). This traffic is re-encrypted so you won’t

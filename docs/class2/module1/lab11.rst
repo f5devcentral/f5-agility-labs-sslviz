@@ -14,6 +14,8 @@ selected settings page.
 
 - When satisfied with the defined settings, click :guilabel:`Deploy`.
 
+.. attention:: Be patient it can take a few minutes to deploy the topology.
+
 Upon successfully deploying the configuration, SSL Orchestrator will now
 display a **Dashboard** view:
 

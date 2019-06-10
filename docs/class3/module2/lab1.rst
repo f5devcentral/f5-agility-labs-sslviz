@@ -39,7 +39,7 @@ Lab 2.1: Review the lab diagram and map out the services and endpoints
   - :red:`test3.f5labs.com`
   - :red:`test4.f5labs.com`
 
-- A wildcard (:red:`\*.f5demolabs.com`) server certificate and private key have
+- A wildcard (:red:`\*.f5labs.com`) server certificate and private key have
   been installed on the SSL Orchestrator.
 
 The external client has two options for accessing the internal websites: via
