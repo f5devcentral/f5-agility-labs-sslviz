@@ -8,6 +8,6 @@ F5 SSL Orchestrator Training Lab
 
    intro
    class*/class*
-   2020-Agility*/introduction.rst
-   2020-Agility*/labinfo.rst
+   2020-Agility*/introduction*
+   2020-Agility*/labinfo*
    2020-Agility*/lab*/lab*
