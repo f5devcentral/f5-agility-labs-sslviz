@@ -1,5 +1,5 @@
 .. raw:: html
-   <style> .red {color:#aa0060} </style>
+   <style> .red {color:red} </style>
 
 .. role:: red
 
