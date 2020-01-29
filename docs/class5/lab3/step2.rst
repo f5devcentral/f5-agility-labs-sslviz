@@ -13,7 +13,7 @@ Step 2: Attach the security policy to the SSL Orchestrator configuration
 
 |image33|
 
--  Select :red: *sslo\_f5labs\_explicit-xp-4*
+-  Select :red:*sslo\_f5labs\_explicit-xp-4*
 
 -  Select */Common/f5labs-ntlm-ap* from the ***Access Profile*** pull
    down menu
