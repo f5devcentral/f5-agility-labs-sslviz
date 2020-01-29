@@ -10,5 +10,5 @@ F5 SSL Orchestrator Training Lab
    class*/class*
    2020*/introduction
    2020*/labinfo
-   2020*/lab*/lab*
+   2020*/lab*
    
