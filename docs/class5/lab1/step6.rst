@@ -1,3 +1,6 @@
+.. role:: red
+.. role:: bred
+
 Step 6: Verify that everything is working as expected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,7 +57,7 @@ Step 6: Verify that everything is working as expected
       should see some recognizable text – to verify type the following
       commnd
 
-      -  *tcpdump -nnnni eth1 not arp and not icmp -X \| egrep
+      -  :red: *tcpdump -nnnni eth1 not arp and not icmp -X \| egrep
          "Agility"*
 
    -  While still visiting the an encrypted website, since we are

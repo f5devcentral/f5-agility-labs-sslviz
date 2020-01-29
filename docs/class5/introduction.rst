@@ -152,7 +152,7 @@ SSLO 5.0 includes the following updates:
 
 
 
-.. tip:: **Note**: Viprion chassis platform support is not available in SSLO 4.0
+.. note:: **Note**: Viprion chassis platform support is not available in SSLO 4.0
 and 5.0.
 
 SSLO 6.0 includes the following updates:

@@ -42,7 +42,7 @@ in another environment.
 
 
 
-.. tip:: **Note**: It is a security best practice to isolate security devices
+.. note:: **Note**: It is a security best practice to isolate security devices
 within the protected network enclaves provided by SSLO. Customers will
 often desire NOT to move or change existing security services. However,
 while possible with SSLO 4.0 and beyond, passing this decrypted traffic
@@ -183,12 +183,6 @@ inbound and outbound networking setting manually.
 +--------------------------------------------------------------------------------------------------------------+-------------------------------+------------------------------------+---------------------------------------+------------------------+------------------------+----+
 |                                                                                                              |                               |                                    |     Security-Admins/sa-user1, 2 & 3   |                        |     Same as username   |    |
 +--------------------------------------------------------------------------------------------------------------+-------------------------------+------------------------------------+---------------------------------------+------------------------+------------------------+----+
-
-+----+----+----+----+----+----+----+----+
-|    |    |    |    |    |    |    |    |
-+====+====+====+====+====+====+====+====+
-+----+----+----+----+----+----+----+----+
-
 
 .. |image3| image:: media/image004.png
    :width: 7.20972in

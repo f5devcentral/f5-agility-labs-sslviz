@@ -1,3 +1,6 @@
+.. role:: red
+.. role:: bred
+
 Step 2: Create a new service for the Cisco Firepower device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -18,26 +21,26 @@ Step 2: Create a new service for the Cisco Firepower device
    -  **Name –** provide a unique name to this service (example
       *Cisco\_FP*).
 
-   -  **Description –** provide a description as needed (example *Cisco
+   -  **Description –** provide a description as needed (example :red: *Cisco
       Firepower Tap device*).
 
    -  **MAC Address –** for a tap service that is not directly connected
       to the F5, enter the device’s actual mac address. For a tap
       service that is directly connected to the F5, the Mac Address does
       not matter and can be arbitrarily defined. For this lab, enter
-      *12:12:12:12:12:12.*
+      :red: *12:12:12:12:12:12.*
 
    -  **VLAN –** this defines the interface connecting the F5 to the TAP
-      service. Click *Create New* and provide a unique name (example
+      service. Click *Create New* and provide a unique name (example :red: 
       *TAP\_in*).
 
-   -  **Interface –** select the *1.3* interface.
+   -  **Interface –** select the :red: *1.3* interface.
 
    -  **Tag –** this is the 802.1q VLAN tag for service. Leave it
-      *empty* as we will be using an untagged interface.
+      :red: *empty* as we will be using an untagged interface.
 
    -  **Enable Port Remap –** this setting allows SSLO to remap thee
       port of HTTPS traffic flowing to this service. For this lab, leave
-      the option *disabled (unchecked)*.
+      the option :red: *disabled (unchecked)*.
 
--  Click *Save & Next* button.
+-  Click :red: *Save & Next* button.

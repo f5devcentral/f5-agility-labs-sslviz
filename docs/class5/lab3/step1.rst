@@ -1,3 +1,6 @@
+.. role:: red
+.. role:: bred
+
 Step 1: Review the Security Objects and Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -19,7 +22,7 @@ Step 1: Review the Security Objects and Access Policy
 
    |image31|
 
--  Click on the ***Edit*** button next to the *f5labs-ntlm-ap* Access
+-  Click on the ***Edit*** button next to the :red: *f5labs-ntlm-ap* Access
    Profile Name. The following Access Policy should present itself.
 
 |image32|

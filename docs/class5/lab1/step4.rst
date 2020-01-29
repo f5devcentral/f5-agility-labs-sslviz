@@ -1,3 +1,7 @@
+.. role:: red
+.. role:: bred
+
+
 Step 4: Create a new Service Chain for just the Cisco Firepower service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -6,12 +10,12 @@ Step 4: Create a new Service Chain for just the Cisco Firepower service
 -  Click on ***Add.***
 
 -  **Name –** provide a unique name for this service chain (example
-   *Cisco\_TAP*)
+   :red: *Cisco\_TAP*)
 
 -  **Description –** provide a description for this service chain
-   (example *Cisco Firepower TAP only*)
+   (example :red: *Cisco Firepower TAP only*)
 
--  **Services –** Select *ssloS\_Cisco\_FP* services from the
+-  **Services –** Select :red: *ssloS\_Cisco\_FP* services from the
    ***Services Available*** and move it to the ***Selected Service Chain
    Order*** section
 

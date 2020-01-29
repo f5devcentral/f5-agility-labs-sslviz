@@ -1,3 +1,6 @@
+.. role:: red
+.. role:: bred
+
 Step 2: Add Dropbox to Pinned Certificate list
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -6,7 +9,7 @@ Step 2: Add Dropbox to Pinned Certificate list
    -  Ensure that the ***Default Action*** dropdown menu has *Allow*
       selected
 
-   -  Enter `*https://\*.dropbox.com/* <https://*.dropbox.com/>`__ in
+   -  Enter :red: `*https://\*.dropbox.com/* <https://*.dropbox.com/>`__ in
       the ***URL*** text box. The trailing ***‘/’*** is important and
       cannot be omitted
 

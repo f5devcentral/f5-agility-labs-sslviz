@@ -53,14 +53,14 @@ Step 0: Verify that the current solution works
 -  Close the ***Options*** tab and **close and re-open** the Firefox
    browser
 
--  Re-visit `*https://www.google.com* <https://www.google.com>`__
+-  Re-visit :red: `*https://www.google.com* <https://www.google.com>`__
 
 -  Verify that verification is done by ***f5labs.com*** now
 
 |image11|
 
 -  Visit a financial institution (*example*
-   `*https://www.chase.com* <https://www.chase.com>`__) and verify that
+   :red: `*https://www.chase.com* <https://www.chase.com>`__) and verify that
    we are not intercepting traffic by ensuring that the verification is
    done by a trusted PKI issuer (*example JPMorgan Chase and
    Co./Entrust, Inc.*). If the traffic was intercepted we would see the
@@ -74,7 +74,7 @@ Step 0: Verify that the current solution works
 -  From the lab deployment screen select ***Access->WEB SHELL*** from
    the ***Service - ExpProxy*** system
 
--  Type *tail -F /var/log/squid3/access.log* in the web console terminal
+-  Type :red: *tail -F /var/log/squid3/access.log* in the web console terminal
 
 -  Visit a few secure(https) websites in the RDP client and verify that
    access is being logged even though we are visiting a secure website.
