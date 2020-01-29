@@ -13,7 +13,7 @@ Step 2: Add Dropbox to Pinned Certificate list
       the ***URL*** text box. The trailing ***‘/’*** is important and
       cannot be omitted
 
-   -  Verify that ***Glob Pattern Match*** checkbox is *Checked*
+   -  Verify that ***Glob Pattern Match*** checkbox is :raw-html:`<i><font color="red">Checked</font></i>`
 
    -  Click on ***Add*** below the **Glob Pattern Match**
 

@@ -1,3 +1,6 @@
+.. role:: raw-html(raw)
+   :format: html
+
 Step 4: Verify that user information is being identified on the F5 SSL Orchestrator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -12,9 +15,9 @@ Step 4: Verify that user information is being identified on the F5 SSL Orchestra
 
    -  In the address bar of the Firefox browser type in *about:config*
 
-   -  Type in *ntlm* in the search box on the top of the browser. Modify
-      the *network.automatic-ntlm-auth.allow-non-fqdn* and
-      *network.automatic-ntlm.trusted-uris* such that the screen looks
+   -  Type in :raw-html:`<i><font color="red">ntlm</font></i>` in the search box on the top of the browser. Modify
+      the :raw-html:`<i><font color="red">network.automatic-ntlm-auth.allow-non-fqdn</font></i>` and
+      :raw-html:`<i><font color="red">network.automatic-ntlm.trusted-uris</font></i>` such that the screen looks
       like below
 
 |image37|
@@ -30,7 +33,7 @@ Step 4: Verify that user information is being identified on the F5 SSL Orchestra
 
 |image38|
 
--  Click on *View* for the session – there is a lot of information that
+-  Click on :raw-html:`<i><font color="red">View</font></i>` for the session – there is a lot of information that
    is displayed that is obtained from active directory. This confirms
    that the user has been authenticated and has been successfully looked
    up in Active Directory.

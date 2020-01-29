@@ -27,7 +27,7 @@ Step 6: Verify that everything is working as expected
 -  From the lab deployment screen select ***Access->WEB SHELL*** from
    the ***Service - ExpProxy*** system
 
--  Type *tail -F /var/log/squid3/access.log* in the web console terminal
+-  Type :raw-html:`<i><font color="red">tail -F /var/log/squid3/access.log</font></i>` in the web console terminal
 
 -  Visit a few secure(https) websites in the RDP client and verify that
    access is being logged even though we are visiting a secure website.

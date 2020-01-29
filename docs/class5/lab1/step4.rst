@@ -9,7 +9,7 @@ Step 4: Create a new Service Chain for just the Cisco Firepower service
 -  Click on ***Add.***
 
 -  **Name –** provide a unique name for this service chain (example
-   :red: *Cisco\_TAP*)
+   :raw-html:`<i><font color="red">Cisco\_TAP</font></i>`)
 
 -  **Description –** provide a description for this service chain
    (example :raw-html:`<i><font color="red">Cisco Firepower TAP only</font></i>`)

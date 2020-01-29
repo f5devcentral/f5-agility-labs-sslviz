@@ -9,7 +9,7 @@ Step 3: Create a new Service Chain with HTTP service and the Cisco Firepower ser
 -  Click on ***Add.***
 
 -  **Name –** provide a unique name for this service chain (example
-   :red: *all\_devices*)
+   :raw-html:`<i><font color="red">all\_devices</font></i>`)
 
 -  **Description –** provide a description for this service chain
    (example :raw-html:`<i><font color="red">Squid Proxy and Cisco Firepower TAP</font></i>`)
