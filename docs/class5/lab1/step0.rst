@@ -6,20 +6,20 @@ Step 0: Verify that the current solution works
 
 -  **Validate that current SSLO deployment works**
 
-   -  From the Lab deployment page, Select ***Components***. Screenshot
+   -  From the Lab deployment page, Select **Components**. Screenshot
       shown below
 
 |image5|
 
--  For the ***AD server & Testing Client*** system in the ***Systems***
-   section of the interface click on ***Access->RDP***
+-  For the **AD server & Testing Client** system in the **Systems**
+   section of the interface click on **Access->RDP**
 
 -  Save the link for the RDP session and open the file
 
 -  An RDP session to the AD server and Client should open using
    Microsoft RDP client
 
--  Login in as ***cs-user1/cs-user1*** for the domain ***f5labs***
+-  Login in as **cs-user1/cs-user1** for the domain **f5labs**
 
 -  Double-click on the FireFox icon on the desktop
 
@@ -27,9 +27,9 @@ Step 0: Verify that the current solution works
 
 -  Click on the |image6|\ icon in the address bar
 
--  Click on the |image7|\ adjacent to the ***Connection Secure***
+-  Click on the |image7|\ adjacent to the **Connection Secure**
 
--  Verify the verification is done by ***Google Trust Services***.
+-  Verify the verification is done by **Google Trust Services**.
 
 |image8|
 
@@ -37,24 +37,24 @@ Step 0: Verify that the current solution works
 
    -  Click on |image9|\ menu in FireFox to access FireFox settings
 
-   -  Select ***Options*** and type in ***proxy*** in the Search box on
+   -  Select **Options** and type in **proxy** in the Search box on
       the top right side of the FireFox window
 
-   -  Select ***Settings*** for ***Configure how Firefox connects to the
-      internet.*** menu option.
+   -  Select **Settings** for **Configure how Firefox connects to the
+      internet.** menu option.
 
    -  Please modify the settings to reflect the screenshot below
 
 |image10|
 
--  Click ***OK***
+-  Click **OK**
 
--  Close the ***Options*** tab and **close and re-open** the Firefox
+-  Close the **Options** tab and **close and re-open** the Firefox
    browser
 
 -  Re-visit :raw-html:`<i><font color="red">https://www.google.com</font></i>`
 
--  Verify that verification is done by ***f5labs.com*** now
+-  Verify that verification is done by **f5labs.com** now
 
 |image11|
 
@@ -63,15 +63,15 @@ Step 0: Verify that the current solution works
    we are not intercepting traffic by ensuring that the verification is
    done by a trusted PKI issuer (*example JPMorgan Chase and
    Co./Entrust, Inc.*). If the traffic was intercepted we would see the
-   that the verification would have been done by ***f5labs.com***. Since
-   we are bypassing ***Financial Institutions*** and this website is a
+   that the verification would have been done by **f5labs.com**. Since
+   we are bypassing **Financial Institutions** and this website is a
    financial institution, the verification is done by the original
    issuer.
 
 -  **Verify that the HTTP Proxy is seeing decrypted traffic**
 
--  From the lab deployment screen select ***Access->WEB SHELL*** from
-   the ***Service - ExpProxy*** system
+-  From the lab deployment screen select **Access->WEB SHELL** from
+   the **Service - ExpProxy** system
 
 -  Type :raw-html:`<i><font color="red">tail -F /var/log/squid3/access.log</font></i>` in the web console terminal
 

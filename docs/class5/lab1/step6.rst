@@ -4,11 +4,11 @@
 Step 6: Verify that everything is working as expected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Revisit the sites visited from ***Step 0:***
+-  Revisit the sites visited from **Step 0:**
 
 -  Re-visit :raw-html:`<i><font color="red">https://www.google.com</font></i>`
 
--  Verify that verification is done by ***f5labs.com*** now
+-  Verify that verification is done by **f5labs.com** now
 
 .. image:: ../media/image012.png
 
@@ -17,19 +17,19 @@ Step 6: Verify that everything is working as expected
    we are not intercepting traffic by ensuring that the verification is
    done by a trusted PKI issuer (*example JPMorgan Chase and
    Co./Entrust, Inc.*). If the traffic was intercepted we would see the
-   that the verification would have been done by ***f5labs.com***. Since
-   we are bypassing ***Financial Institutions*** and this website is a
+   that the verification would have been done by **f5labs.com**. Since
+   we are bypassing **Financial Institutions** and this website is a
    financial institution, the verification is done by the original
    issuer.
 
 -  **Verify that the HTTP Proxy is seeing decrypted traffic**
 
--  From the lab deployment screen select ***Access->WEB SHELL*** from
-   the ***Service - ExpProxy*** system
+   -  From the lab deployment screen select **Access->WEB SHELL** from
+   the **Service - ExpProxy** system
 
--  Type :raw-html:`<i><font color="red">tail -F /var/log/squid3/access.log</font></i>` in the web console terminal
+   -  Type :raw-html:`<i><font color="red">tail -F /var/log/squid3/access.log</font></i>` in the web console terminal
 
--  Visit a few secure(https) websites in the RDP client and verify that
+   -  Visit a few secure(https) websites in the RDP client and verify that
    access is being logged even though we are visiting a secure website.
    You should see the log scrolling by and logging the sites and URLs
    visited. Your screen should have something similar to the screenshot
@@ -40,8 +40,8 @@ Step 6: Verify that everything is working as expected
 -  **Verify that the Cisco TAP is seeing both intercepted and bypassed
    traffic**
 
-   -  From the lab deployment screen select ***Access->WEB SHELL*** from
-      the ***Service – TAP*** system
+   -  From the lab deployment screen select **Access->WEB SHELL** from
+      the **Service – TAP** system
 
    -  Type the following command to verify that the traffic is being
       sent to the tap device: *tcpdump -nnnni eth1 not arp and not icmp
@@ -57,7 +57,7 @@ Step 6: Verify that everything is working as expected
       should see some recognizable text – to verify type the following
       commnd
 
-      -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp -X \| egrep
+      -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp -X | egrep
          'Agility'</font></i>`
 
    -  While still visiting the an encrypted website, since we are

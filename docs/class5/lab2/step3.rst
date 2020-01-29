@@ -1,7 +1,7 @@
 Step 3: Verify problem fixed with client and browser
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Perform the same steps from ***Step 0:***
+-  Perform the same steps from **Step 0:**
 
    -  The browser will reflect that the traffic is not being intercepted
       and should show that the certificate is validated by the original
@@ -16,11 +16,11 @@ Step 3: Verify problem fixed with client and browser
 
 N\ |image28|
 
--  .. note:: ***Note:** When added to the Pinners list, the default action is that
+-  .. note:: **Note:** When added to the Pinners list, the default action is that
    the SSL Orchestrator bypasses the traffic. In this lab example, since
    we have enabled a Layer 2 TAP device for all Intercepted as well
    Bypassed traffic, we still have some visibility. However, since the
-   traffic is not de-crypted, the payload is still encrypted.*
+   traffic is not de-crypted, the payload is still encrypted.
 
 **
 **

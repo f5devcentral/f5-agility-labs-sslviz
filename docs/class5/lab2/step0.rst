@@ -4,7 +4,7 @@
 Step 0: Verify complaint
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
--  On the Firefox browser in the ***AD server & Testing Client***, visit
+-  On the Firefox browser in the **AD server & Testing Client**, visit
    :raw-html:`<i><font color"red">https://www.dropbox.com</font></i>`
 
 -  Verify that the SSL Orchestrator is intercepting it by checking the
@@ -21,7 +21,7 @@ Step 0: Verify complaint
 |image23|
 
 -  To handle such issues, the default SSL Orchestrator Security Policy
-   includes a rule called ***Pinners\_Rule*** that is the first rule in
+   includes a rule called **Pinners\_Rule** that is the first rule in
    any Security Policy.
 
 |image24|

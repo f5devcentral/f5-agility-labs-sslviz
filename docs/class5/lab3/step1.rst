@@ -4,8 +4,8 @@
 Step 1: Review the Security Objects and Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  From the main menu select ***Access->Authentication->NTLM->NTLM Auth
-   Configuration*** and select :raw-html:`<i><font color="red">f5labs.com-NTLM-AAA</font></i>` from the presented
+-  From the main menu select **Access->Authentication->NTLM->NTLM Auth
+   Configuration** and select :raw-html:`<i><font color="red">f5labs.com-NTLM-AAA</font></i>` from the presented
    list (should be only one item in the list). The following screen
    should be presented.
 
@@ -16,13 +16,13 @@ Step 1: Review the Security Objects and Access Policy
    contains a list of the domain servers. In this lab environment we are
    using the Testing Client as the AD server as well.
 
--  From the main menu select ***Access->Profiles/Policies/Access
-   Profiles (Per-Session Policies)***. The following screen will be
+-  From the main menu select **Access->Profiles/Policies/Access
+   Profiles (Per-Session Policies)**. The following screen will be
    presented.
 
    |image31|
 
--  Click on the ***Edit*** button next to the :raw-html:`<i><font color="red">f5labs-ntlm-ap</font></i>` Access
+-  Click on the **Edit** button next to the :raw-html:`<i><font color="red">f5labs-ntlm-ap</font></i>` Access
    Profile Name. The following Access Policy should present itself.
 
 |image32|

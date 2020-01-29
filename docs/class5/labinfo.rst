@@ -21,8 +21,8 @@ in another environment.
        define the networking for this service type, so it has been
        pre-created in this lab.
 
--  **Required objects and Access policy for password-less authentication
-       have been pre-created –** These objects are created using the APM
+-  **Required objects and Access policy for password-less authentication**
+       have been pre-created – These objects are created using the APM
        module of F5. To maintain the focus on SSLO, these have been
        pre-created and provided for easy configuration for SSLO. In a
        production environment these will have to be created from
@@ -43,20 +43,20 @@ in another environment.
 
 
 .. note:: **Note**: It is a security best practice to isolate security devices
-within the protected network enclaves provided by SSLO. Customers will
-often desire NOT to move or change existing security services. However,
-while possible with SSLO 4.0 and beyond, passing this decrypted traffic
-to points on an existing network architecture could create multiple
-points of data exposure. Usernames, passwords, credit card numbers and
-other sensitive information could be exposed to other devices on that
-network. Each inline layer 3 security service definition includes an
-“Auto Manage” option. This option, enabled by default, provides internal
-network settings for security services to use, so that only the
-interface (and 802.1q VLAN tag as needed) is required to be defined for
-the inbound and outbound interfaces. Should customers opt to not follow
-security best practices, or simply need different networking settings,
-you can disable the Auto Manage option and define all of the required
-inbound and outbound networking setting manually.
+       within the protected network enclaves provided by SSLO. Customers will
+       often desire NOT to move or change existing security services. However,
+       while possible with SSLO 4.0 and beyond, passing this decrypted traffic
+       to points on an existing network architecture could create multiple
+       points of data exposure. Usernames, passwords, credit card numbers and
+       other sensitive information could be exposed to other devices on that
+       network. Each inline layer 3 security service definition includes an
+       “Auto Manage” option. This option, enabled by default, provides internal
+       network settings for security services to use, so that only the
+       interface (and 802.1q VLAN tag as needed) is required to be defined for
+       the inbound and outbound interfaces. Should customers opt to not follow
+       security best practices, or simply need different networking settings,
+       you can disable the Auto Manage option and define all of the required
+       inbound and outbound networking setting manually.
 
 +----------------------------------+----------------------------+------------------------------------------------------------------+----------------------------------+--------------+------------------------+------------------------+----+
 |                                  |     BIG-IP management IP   |     10.1.1.x (UDF-managed)                                       |                                  |              |                        |
@@ -184,6 +184,3 @@ inbound and outbound networking setting manually.
 |                                                                                                              |                               |                                    |     Security-Admins/sa-user1, 2 & 3   |                        |     Same as username   |    |
 +--------------------------------------------------------------------------------------------------------------+-------------------------------+------------------------------------+---------------------------------------+------------------------+------------------------+----+
 
-.. |image3| image:: media/image004.png
-   :width: 7.20972in
-   :height: 2.27986in

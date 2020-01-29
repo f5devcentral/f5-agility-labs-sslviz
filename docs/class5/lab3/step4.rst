@@ -4,16 +4,16 @@
 Step 4: Verify that user information is being identified on the F5 SSL Orchestrator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  From the main menu select ***Access->Overview->Active Sessions***
+-  From the main menu select **Access->Overview->Active Sessions**
 
--  On the ***AD server and Testing Client*** open up the Firefox browser
+-  On the **AD server and Testing Client** open up the Firefox browser
    and navigate through to any website
 
 -  Notice that the user is now being prompted for credentials in
    Firefox. This is because Firefox needs to be told on which sites to
    automatically provide NTLM credentials
 
-   -  In the address bar of the Firefox browser type in *about:config*
+   -  In the address bar of the Firefox browser type in :raw-html:`<i><font color="red">about:config</font></i>`
 
    -  Type in :raw-html:`<i><font color="red">ntlm</font></i>` in the search box on the top of the browser. Modify
       the :raw-html:`<i><font color="red">network.automatic-ntlm-auth.allow-non-fqdn</font></i>` and
@@ -22,7 +22,7 @@ Step 4: Verify that user information is being identified on the F5 SSL Orchestra
 
 |image37|
 
--  In the ***AD server & Testing Client*** machine browser, browse
+-  In the **AD server & Testing Client** machine browser, browse
    through a few websites. You should now be able to browse without
    supplying credentials.
 

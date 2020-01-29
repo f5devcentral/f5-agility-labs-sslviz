@@ -5,38 +5,38 @@
 Step 2: Attach the security policy to the SSL Orchestrator configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Select ***SSL Orchestrator->Configuration*** from the main menu
+-  Select **SSL Orchestrator->Configuration** from the main menu
 
--  Select ***Interception Rules.*** The following screen will then be
+-  Select **Interception Rules.** The following screen will then be
    presented.
 
 |image33|
 
--  Select :raw-html:`<i><font color="red">sslo\_f5labs\_explicit-xp-4</font></i>`
+-  Select :raw-html:`<i><font color="red">sslo_f5labs_explicit-xp-4</font></i>`
 
--  Select :raw-html:`<i><font color=red>/Common/f5labs-ntlm-ap</font></i>` from the ***Access Profile*** pull
+-  Select :raw-html:`<i><font color=red>/Common/f5labs-ntlm-ap</font></i>` from the **Access Profile** pull
    down menu
 
--  Press ***Deploy*** at the bottom of the screen
+-  Press **Deploy** at the bottom of the screen
 
--  Select ***Services*** from the ***SSL Orchestrator->Configuration***
+-  Select **Services** from the **SSL Orchestrator->Configuration**
    screen
 
--  Select *ssloS\_SQID* from the ***Services*** list
+-  Select *ssloS\_SQID* from the **Services** list
 
 -  Click on the |image34|\ icon to the right of |image35|\ menu
    selection
 
--  Scroll down and click on the ***Authentication Offload*** checkbox
-   and have the checkbox *Checked*
+-  Scroll down and click on the **Authentication Offload** checkbox
+   and have the checkbox :raw-html:`<i><font color="red">Checked</font></i>`
 
--  Click on ***Save & Next***
+-  Click on **Save & Next**
 
--  Click ***OK*** in the ***Continue Save?*** popup.
+-  Click **OK** in the **Continue Save?** popup.
 
--  Click on ***Save & Next*** on the next screen
+-  Click on **Save & Next** on the next screen
 
--  Click on ***Deploy.*** This will take a few seconds. Please verify
+-  Click on **Deploy.** This will take a few seconds. Please verify
    that the Deployment was completed successfully without errors.
 
 .. |image33| image:: ../media/image032.png

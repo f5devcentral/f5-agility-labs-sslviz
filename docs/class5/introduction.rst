@@ -58,46 +58,29 @@ The SSLO Security Policy provides a rich set of context-aware methods to
 dynamically determine how best to optimize traffic flow through the
 security stack. Context can minimally come from the following:
 
-+-------------------------------------------+---------------------------------------------------------+------------------------+----------------------+
-| • Source and destination address/subnet   |     •                                                   |     Destination port   |
-+===========================================+=========================================================+========================+======================+
-| •                                         |     URL filtering and IP intelligence - Subscriptions   |     •                  |     IP geolocation   |
-+-------------------------------------------+---------------------------------------------------------+------------------------+----------------------+
-| •                                         |     Host and domain name                                |     •                  |     Protocol         |
-+-------------------------------------------+---------------------------------------------------------+------------------------+----------------------+
-
++---------------------------------------------------+---------------------------------------------------------+
+| Source and destination address/subnet             |     Destination port                                    |
++===================================================+=========================================================+
+| URL filtering and IP intelligence - Subscriptions |     IP geolocation                                      |
++---------------------------------------------------+---------------------------------------------------------+
+| Host and domain name                              |     Protocol                                            |
++---------------------------------------------------+---------------------------------------------------------+
+   
 |image1|
-
-    Topology System Settings SSL Configuration Service Service Chain
-    Security Policy Interception Rule Summary
-
-    **Users/Devices**
-
-**SSL Orchestrator**
-
-    Firewall Internet
-
-    User
-
-    Scalable services architecture
-
-    Device-agnostic design
-
-    Web Gateway DLP/ICAP IDS/TAP IPS/NGFW
 
 WHAT’S NEW IN SSLO?
 ===================
 
-SSLO 4.0 provides significant architectural improvements over previous
+**SSLO 4.0** provides significant architectural improvements over previous
 versions. Here are just a few of those updates:
 
--  SSLO 4.0 replaces the complex iRules-based traffic classification and
-       service chaining functions of previous versions with an Access
+-  SSLO 4.0 replaces the complex iRules-based traffic classification 
+       and service chaining functions of previous versions with an Access
        per-request policy engine, providing much greater flexibility in
        traffic management options.
 
--  SSLO 4.0 optimizes traffic flow through security services by
-       replacing the complex “proxy hops” with a new “tee connector” –
+-  SSLO 4.0 optimizes traffic flow through security services
+       by replacing the complex “proxy hops” with a new “tee connector” –
        essentially a mid-proxy tap – that allows decrypted traffic to
        flow through security devices out-of-band from the main
        client-server proxy traffic. This is implemented as new “Service”
@@ -107,16 +90,16 @@ versions. Here are just a few of those updates:
        profiles, that are now responsible for carrying SNI signaling
        information across the inspection zone.
 
--  SSLO 4.0 further optimizes traffic flow by reducing the amount of
-       iRule data plane management, also making it easier to add
+-  SSLO 4.0 further optimizes traffic flow 
+       by reducing the amount of iRule data plane management, also making it easier to add
        customization iRules.
 
--  SSLO 4.0 introduces three new network topologies. Along with the
-       existing outbound transparent and explicit proxy flows, 4.0 now
+-  SSLO 4.0 introduces three new network topologies 
+       Along with the existing outbound transparent and explicit proxy flows, 4.0 now
        also supports inbound layer 3 (reverse proxy) inspection, and
        layer 2 transparent inbound and outbound topologies.
 
-SSLO 4.0 also includes the following new functionality features:
+**SSLO 4.0** also includes the following new functionality features:
 
 -  Explicit and transparent web proxy devices as an inline security
        service.
@@ -138,7 +121,7 @@ SSLO 4.0 also includes the following new functionality features:
 -  vCMP support - ability to select existing VLANs for inbound and
        outbound to/from inline services.
 
-SSLO 5.0 includes the following updates:
+**SSLO 5.0 includes the following updates:**
 
 -  Guided Configuration user experience, a complete refresh of the SSLO
        UI based on the Access Guided Configuration engine.
@@ -155,7 +138,7 @@ SSLO 5.0 includes the following updates:
 .. note:: **Note**: Viprion chassis platform support is not available in SSLO 4.0
 and 5.0.
 
-SSLO 6.0 includes the following updates:
+**SSLO 6.0 includes the following updates:**
 
 -  Transparent proxy captive portal authentication – In transparent
        forward proxy mode, an APM authentication profile

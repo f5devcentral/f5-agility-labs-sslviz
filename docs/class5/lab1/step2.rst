@@ -4,19 +4,19 @@
 Step 2: Create a new service for the Cisco Firepower device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Select ***SSL Orchestrator->Configuration*** from the main menu
+-  Select **SSL Orchestrator->Configuration** from the main menu
 
--  Select ***Services*** from the menu on the displayed screen on the
+-  Select **Services** from the menu on the displayed screen on the
    right. Notice that the already configured HTTP Type inspection
-   service ***ssloS\_SQID*** is already present.
+   service **ssloS\_SQID** is already present.
 
--  Press the ***Add*** button shown below the menu display line
+-  Press the **Add** button shown below the menu display line
 
--  Type \ *firepower* in the ***Search*** box below the ***Service
-   Settings***
+-  Type \ *firepower* in the **Search** box below the **Service
+   Settings**
 
--  Select ***Cisco Firepower Threat Defense TAP*** and press the
-   ***Add*** button and enter values as shown below
+-  Select **Cisco Firepower Threat Defense TAP** and press the
+   **Add** button and enter values as shown below
 
    -  **Name –** provide a unique name to this service (example
       :raw-html:`<i><font color="red">Cisco\_FP</font></i>`).
