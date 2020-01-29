@@ -9,5 +9,5 @@ F5 SSL Orchestrator Training Lab
    introduction
    labinfo
    lab*/lab*
-   lab*/lab*/step*
+   lab*/step*
    
