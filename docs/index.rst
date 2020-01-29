@@ -10,10 +10,5 @@ F5 SSL Orchestrator Training Lab
    class*/class*
    2020-Agillity_Orlando-SSLo_201_Class/introduction
    2020-Agillity_Orlando-SSLo_201_Class/lab*/lab*
-   2020-Agillity_Orlando-SSLo_201_Class/lab*/lab*/step*
-
-
-
-
-
-   
+   2020-Agillity_Orlando-SSLo_201_Class/lab*/step*
+     
