@@ -1,5 +1,5 @@
-Class 4: Agility 2020 Orlando - SSLo Lab 201 v7.1 (RAVELLO)
-===========================================================
+F5 SSL Orchestrator Training Lab
+================================
 
 .. toctree::
    :maxdepth: 2
