@@ -2,7 +2,7 @@ F5 SSL Orchestrator Training Lab
 ================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
    :glob:
 
@@ -10,5 +10,5 @@ F5 SSL Orchestrator Training Lab
    class*/class*
    2020*/introduction
    2020*/labinfo
-   2020*/lab*
+   2020*/lab*/lab*
    
