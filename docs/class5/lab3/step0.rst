@@ -1,3 +1,6 @@
+.. role:: raw-html(raw)
+   :format: html
+
 Step 0: Verify that we are not authenticating users
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -12,7 +15,7 @@ Step 0: Verify that we are not authenticating users
 -  Refresh the previously shown screen and notice that no sessions are
    being created.
 
--  Modify the ***Auto Refresh Setting*** to *30 seconds*
+-  Modify the ***Auto Refresh Setting*** to :raw-html:`<i><font color="red">30 seconds</font></i>`
 
 .. |image29| image:: ../media/image028.png
    :width: 7.05556in
