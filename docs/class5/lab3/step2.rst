@@ -1,8 +1,6 @@
-.. raw:: html
+.. role:: raw-html(raw)
+   :format: html
 
-   <style> .red {color:red} </style>
-
-.. role:: red
 
 Step 2: Attach the security policy to the SSL Orchestrator configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14,9 +12,9 @@ Step 2: Attach the security policy to the SSL Orchestrator configuration
 
 |image33|
 
--  Select :red:*sslo\_f5labs\_explicit-xp-4*
+-  Select :raw-html:`<font color="red">*sslo\_f5labs\_explicit-xp-4*</font>`
 
--  Select :red:*/Common/f5labs-ntlm-ap* from the ***Access Profile*** pull
+-  Select :raw-html:`<font color=red>*/Common/f5labs-ntlm-ap*</font>` from the ***Access Profile*** pull
    down menu
 
 -  Press ***Deploy*** at the bottom of the screen
