@@ -1,5 +1,8 @@
+.. raw:: html
+   <style> .red {color:red} </style>
+
 .. role:: red
-.. role:: bred
+
 
 Step 3: Create a new Service Chain with HTTP service and the Cisco Firepower service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

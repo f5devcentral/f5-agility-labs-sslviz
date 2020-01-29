@@ -1,5 +1,7 @@
+.. raw:: html
+   <style> .red {color:red} </style>
+
 .. role:: red
-.. role:: bred
 
 Step 1: Review the Security Objects and Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

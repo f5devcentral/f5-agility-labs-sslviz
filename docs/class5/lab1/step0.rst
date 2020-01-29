@@ -1,5 +1,7 @@
+.. raw:: html
+   <style> .red {color:red} </style>
+
 .. role:: red
-.. role:: bred
 
 
 Step 0: Verify that the current solution works

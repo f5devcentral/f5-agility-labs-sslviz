@@ -1,5 +1,7 @@
+.. raw:: html
+   <style> .red {color:red} </style>
+
 .. role:: red
-.. role:: bred
 
 Step 2: Create a new service for the Cisco Firepower device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

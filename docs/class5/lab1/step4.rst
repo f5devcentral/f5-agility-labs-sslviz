@@ -1,5 +1,7 @@
+.. raw:: html
+   <style> .red {color:red} </style>
+
 .. role:: red
-.. role:: bred
 
 
 Step 4: Create a new Service Chain for just the Cisco Firepower service
