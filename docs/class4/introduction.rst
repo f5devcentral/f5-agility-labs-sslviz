@@ -150,9 +150,9 @@ SSLO 5.0 includes the following updates:
        SSLO 5.0 presents an intuitive workflow UI that walks the user
        through a simplified object creation process.
 
-|image2|
 
-**Note**: Viprion chassis platform support is not available in SSLO 4.0
+
+.. tip:: **Note**: Viprion chassis platform support is not available in SSLO 4.0
 and 5.0.
 
 SSLO 6.0 includes the following updates:
