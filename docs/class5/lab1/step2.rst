@@ -1,7 +1,5 @@
-.. raw:: html
-   <style> .red {color:red} </style>
-
-.. role:: red
+.. role:: raw-html(raw)
+   :format: html
 
 Step 2: Create a new service for the Cisco Firepower device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -23,26 +21,26 @@ Step 2: Create a new service for the Cisco Firepower device
    -  **Name –** provide a unique name to this service (example
       *Cisco\_FP*).
 
-   -  **Description –** provide a description as needed (example :red: *Cisco
-      Firepower Tap device*).
+   -  **Description –** provide a description as needed (example :raw-html:`<i><font color="red">Cisco
+      Firepower Tap device</font></i>`).
 
    -  **MAC Address –** for a tap service that is not directly connected
       to the F5, enter the device’s actual mac address. For a tap
       service that is directly connected to the F5, the Mac Address does
       not matter and can be arbitrarily defined. For this lab, enter
-      :red: *12:12:12:12:12:12.*
+      :raw-html:`<i><font color="red">12:12:12:12:12:12</font></i>`
 
    -  **VLAN –** this defines the interface connecting the F5 to the TAP
       service. Click *Create New* and provide a unique name (example :red: 
       *TAP\_in*).
 
-   -  **Interface –** select the :red: *1.3* interface.
+   -  **Interface –** select the :raw-html:`<i><font color="red">1.3</font></i>` interface.
 
    -  **Tag –** this is the 802.1q VLAN tag for service. Leave it
-      :red: *empty* as we will be using an untagged interface.
+      :raw-html:`<i><font color="red">empty</font></i>` as we will be using an untagged interface.
 
    -  **Enable Port Remap –** this setting allows SSLO to remap thee
       port of HTTPS traffic flowing to this service. For this lab, leave
-      the option :red: *disabled (unchecked)*.
+      the option :raw-html:`<i><font color="red">disabled (unchecked)</font></i>`.
 
--  Click :red: *Save & Next* button.
+-  Click :raw-html:`<i><font color="red">Save & Next</font></i>` button.

@@ -1,21 +1,19 @@
-.. raw:: html
-   <style> .red {color:red} </style>
-
-.. role:: red
+.. role:: raw-html(raw)
+   :format: html
 
 Step 6: Verify that everything is working as expected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Revisit the sites visited from ***Step 0:***
 
--  Re-visit `*https://www.google.com* <https://www.google.com>`__
+-  Re-visit :raw-html:`<i><font color="red">https://www.google.com</font></i>`
 
 -  Verify that verification is done by ***f5labs.com*** now
 
 .. image:: ../media/image012.png
 
 -  Visit a financial institution (*example*
-   `*https://www.chase.com* <https://www.chase.com>`__) and verify that
+   :raw-html:`<i><font color="red">https://www.chase.com</font></i>`) and verify that
    we are not intercepting traffic by ensuring that the verification is
    done by a trusted PKI issuer (*example JPMorgan Chase and
    Co./Entrust, Inc.*). If the traffic was intercepted we would see the
@@ -59,13 +57,13 @@ Step 6: Verify that everything is working as expected
       should see some recognizable text – to verify type the following
       commnd
 
-      -  :red: *tcpdump -nnnni eth1 not arp and not icmp -X \| egrep
-         "Agility"*
+      -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp -X \| egrep
+         'Agility'</font></i>`
 
    -  While still visiting the an encrypted website, since we are
       intercepting and decrypting it, we are able to see the payload and
       therefore the search above should return results when we search
-      for “Agility 2020” in the browser.
+      for :raw-html:`<i><font color="red">'Agility 2020'</font></i>` in the browser.
 
    -  We should see something similar to the screenshot below
 

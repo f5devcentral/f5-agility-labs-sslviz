@@ -1,13 +1,11 @@
-.. raw:: html
-   <style> .red {color:red} </style>
-
-.. role:: red
+.. role:: raw-html(raw)
+   :format: html
 
 Step 0: Verify complaint
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  On the Firefox browser in the ***AD server & Testing Client***, visit
-   :red: `*https://www.dropbox.com* <https://www.dropbox.com>`__
+   :raw-html:`<i><font color"red">https://www.dropbox.com</font></i>`
 
 -  Verify that the SSL Orchestrator is intercepting it by checking the
    entity verifying the certificate

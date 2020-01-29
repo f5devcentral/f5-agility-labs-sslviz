@@ -1,8 +1,5 @@
-.. raw:: html
-   <style> .red {color:red} </style>
-
-.. role:: red
-
+.. role:: raw-html(raw)
+   :format: html
 
 Step 0: Verify that the current solution works
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -26,7 +23,7 @@ Step 0: Verify that the current solution works
 
 -  Double-click on the FireFox icon on the desktop
 
--  Navigate to `*https://www.google.com* <https://www.google.com>`__
+-  Navigate to :raw-html:`<i><font color="red">https://www.google.com</font></i>`
 
 -  Click on the |image6|\ icon in the address bar
 
@@ -55,14 +52,14 @@ Step 0: Verify that the current solution works
 -  Close the ***Options*** tab and **close and re-open** the Firefox
    browser
 
--  Re-visit :red: `*https://www.google.com* <https://www.google.com>`__
+-  Re-visit :raw-html:`<i><font color="red">https://www.google.com</font></i>`
 
 -  Verify that verification is done by ***f5labs.com*** now
 
 |image11|
 
 -  Visit a financial institution (*example*
-   :red: `*https://www.chase.com* <https://www.chase.com>`__) and verify that
+   :raw-html:`<i><font color="red">https://www.chase.com</font></i>`) and verify that
    we are not intercepting traffic by ensuring that the verification is
    done by a trusted PKI issuer (*example JPMorgan Chase and
    Co./Entrust, Inc.*). If the traffic was intercepted we would see the
@@ -76,7 +73,7 @@ Step 0: Verify that the current solution works
 -  From the lab deployment screen select ***Access->WEB SHELL*** from
    the ***Service - ExpProxy*** system
 
--  Type :red: *tail -F /var/log/squid3/access.log* in the web console terminal
+-  Type :raw-html:`<i><font color="red">tail -F /var/log/squid3/access.log</font></i>` in the web console terminal
 
 -  Visit a few secure(https) websites in the RDP client and verify that
    access is being logged even though we are visiting a secure website.

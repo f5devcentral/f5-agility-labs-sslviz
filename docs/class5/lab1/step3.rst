@@ -1,8 +1,5 @@
-.. raw:: html
-   <style> .red {color:red} </style>
-
-.. role:: red
-
+.. role:: raw-html(raw)
+   :format: html
 
 Step 3: Create a new Service Chain with HTTP service and the Cisco Firepower service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15,7 +12,7 @@ Step 3: Create a new Service Chain with HTTP service and the Cisco Firepower ser
    :red: *all\_devices*)
 
 -  **Description –** provide a description for this service chain
-   (example :red: *Squid Proxy and Cisco Firepower TAP*)
+   (example :raw-html:`<i><font color="red">Squid Proxy and Cisco Firepower TAP</font></i>`)
 
 -  **Services –** Select both services from the ***Services Available***
    and move it to the ***Selected Service Chain Order*** section

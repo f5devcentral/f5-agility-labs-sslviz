@@ -12,9 +12,9 @@ Step 2: Attach the security policy to the SSL Orchestrator configuration
 
 |image33|
 
--  Select :raw-html:`<i><font color="red">*sslo\_f5labs\_explicit-xp-4*</font></i>`
+-  Select :raw-html:`<i><font color="red">sslo\_f5labs\_explicit-xp-4</font></i>`
 
--  Select :raw-html:`<i><font color=red>*/Common/f5labs-ntlm-ap*</font></i>` from the ***Access Profile*** pull
+-  Select :raw-html:`<i><font color=red>/Common/f5labs-ntlm-ap</font></i>` from the ***Access Profile*** pull
    down menu
 
 -  Press ***Deploy*** at the bottom of the screen

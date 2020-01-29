@@ -1,7 +1,5 @@
-.. raw:: html
-   <style> .red {color:red} </style>
-
-.. role:: red
+.. role:: raw-html(raw)
+   :format: html
 
 Step 2: Add Dropbox to Pinned Certificate list
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -11,7 +9,7 @@ Step 2: Add Dropbox to Pinned Certificate list
    -  Ensure that the ***Default Action*** dropdown menu has *Allow*
       selected
 
-   -  Enter :red: `*https://\*.dropbox.com/* <https://*.dropbox.com/>`__ in
+   -  Enter :raw-html:`<i><font color="red">https://\*.dropbox.com/*</font></i>` in
       the ***URL*** text box. The trailing ***‘/’*** is important and
       cannot be omitted
 

@@ -1,8 +1,5 @@
-.. raw:: html
-   <style> .red {color:red} </style>
-
-.. role:: red
-
+.. role:: raw-html(raw)
+   :format: html
 
 Step 4: Create a new Service Chain for just the Cisco Firepower service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15,9 +12,9 @@ Step 4: Create a new Service Chain for just the Cisco Firepower service
    :red: *Cisco\_TAP*)
 
 -  **Description –** provide a description for this service chain
-   (example :red: *Cisco Firepower TAP only*)
+   (example :raw-html:`<i><font color="red">Cisco Firepower TAP only</font></i>`)
 
--  **Services –** Select :red: *ssloS\_Cisco\_FP* services from the
+-  **Services –** Select :raw-html:`<i><font color="red">ssloS\_Cisco\_FP</font></i>` services from the
    ***Services Available*** and move it to the ***Selected Service Chain
    Order*** section
 
