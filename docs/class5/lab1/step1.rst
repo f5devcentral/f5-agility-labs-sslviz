@@ -6,16 +6,16 @@ Step 1: Review the current SSL Orchestrator deployment
    deployment should be present. It will take a few seconds to render
    this page.
 
-|image13|
+   |image13|
 
 -  Select **Security Policies** from the screen shown above. You
    should now be presented with following screen.
 
-|image14|
+   |image14|
 
-Select the **ssloP\_f5labs\_explicit** security policy and you should
-be able to see the security policy that is currently present as shown at
-the start of this lab.
+-  Select the **ssloP\_f5labs\_explicit** security policy and you should
+   be able to see the security policy that is currently present as shown at
+   the start of this lab.
 
 .. |image13| image:: ../media/image014.png
    :width: 7.05556in

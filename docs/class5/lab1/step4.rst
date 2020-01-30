@@ -9,12 +9,12 @@ Step 4: Create a new Service Chain for just the Cisco Firepower service
 -  Click on **Add.**
 
 -  **Name –** provide a unique name for this service chain (example
-   :raw-html:`<i><font color="red">Cisco\_TAP</font></i>`)
+   :raw-html:`<i><font color="red">Cisco_TAP</font></i>`)
 
 -  **Description –** provide a description for this service chain
    (example :raw-html:`<i><font color="red">Cisco Firepower TAP only</font></i>`)
 
--  **Services –** Select :raw-html:`<i><font color="red">ssloS\_Cisco\_FP</font></i>` services from the
+-  **Services –** Select :raw-html:`<i><font color="red">ssloS_Cisco_FP</font></i>` services from the
    **Services Available** and move it to the **Selected Service Chain
    Order** section
 
@@ -30,7 +30,7 @@ Step 4: Create a new Service Chain for just the Cisco Firepower service
 -  When successfully deployed, the screen should look like the
    following.
 
-|image15|
+   |image15|
 
 .. |image15| image:: ../media/image016.png
    :width: 7.05556in

@@ -7,7 +7,7 @@ Step 0: Verify that we are not authenticating users
 -  From the main menu, select **Access->Overview->Active Sessions**.
    The following screen should be presented.
 
-|image29|
+   |image29|
 
 -  Browse through different websites on the **AD server & Test
    Client** browser.

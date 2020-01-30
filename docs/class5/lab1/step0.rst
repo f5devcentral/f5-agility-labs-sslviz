@@ -9,7 +9,7 @@ Step 0: Verify that the current solution works
    -  From the Lab deployment page, Select **Components**. Screenshot
       shown below
 
-|image5|
+   |image5|
 
 -  For the **AD server & Testing Client** system in the **Systems**
    section of the interface click on **Access->RDP**
@@ -31,7 +31,7 @@ Step 0: Verify that the current solution works
 
 -  Verify the verification is done by **Google Trust Services**.
 
-|image8|
+   |image8|
 
 -  Modify proxy settings to traverse the SSLo setup
 
@@ -45,7 +45,7 @@ Step 0: Verify that the current solution works
 
    -  Please modify the settings to reflect the screenshot below
 
-|image10|
+   |image10|
 
 -  Click **OK**
 
@@ -68,20 +68,20 @@ Step 0: Verify that the current solution works
    financial institution, the verification is done by the original
    issuer.
 
--  **Verify that the HTTP Proxy is seeing decrypted traffic**
+-  Verify that the HTTP Proxy is seeing decrypted traffic
 
--  From the lab deployment screen select **Access->WEB SHELL** from
+   -  From the lab deployment screen select **Access->WEB SHELL** from
    the **Service - ExpProxy** system
 
--  Type :raw-html:`<i><font color="red">tail -F /var/log/squid3/access.log</font></i>` in the web console terminal
+   -  Type :raw-html:`<i><font color="red">tail -F /var/log/squid3/access.log</font></i>` in the web console terminal
 
--  Visit a few secure(https) websites in the RDP client and verify that
-   access is being logged even though we are visiting a secure website.
-   You should see the log scrolling by and logging the sites and URLs
-   visited. Your screen should have something similar to the screenshot
-   shown below.
+   -  Visit a few secure(https) websites in the RDP client and verify that
+      access is being logged even though we are visiting a secure website.
+      You should see the log scrolling by and logging the sites and URLs
+      visited. Your screen should have something similar to the screenshot
+      shown below.
 
-|image12|
+      |image12|
 
 .. |image5| image:: ../media/image006.png
    :width: 7.05556in

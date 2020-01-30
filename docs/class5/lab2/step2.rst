@@ -6,7 +6,7 @@ Step 2: Add Dropbox to Pinned Certificate list
 
 -  In the Pinners list **Category Properties**
 
-   -  Ensure that the **Default Action** dropdown menu has *Allow*
+   -  Ensure that the **Default Action** dropdown menu has **Allow**
       selected
 
    -  Enter :raw-html:`<i><font color="red">https://\*.dropbox.com/*</font></i>` in

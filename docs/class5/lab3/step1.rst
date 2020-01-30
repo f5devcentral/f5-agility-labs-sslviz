@@ -9,7 +9,7 @@ Step 1: Review the Security Objects and Access Policy
    list (should be only one item in the list). The following screen
    should be presented.
 
-|image30|
+   |image30|
 
 -  Machine Account Name is the name of the security object that is added
    to the domain as a Computer Account and Domain Controller FQDN List
@@ -25,7 +25,7 @@ Step 1: Review the Security Objects and Access Policy
 -  Click on the **Edit** button next to the :raw-html:`<i><font color="red">f5labs-ntlm-ap</font></i>` Access
    Profile Name. The following Access Policy should present itself.
 
-|image32|
+   |image32|
 
 -  Close the newly opened tab
 

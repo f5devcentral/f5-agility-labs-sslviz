@@ -10,7 +10,7 @@ Step 6: Verify that everything is working as expected
 
 -  Verify that verification is done by **f5labs.com** now
 
-.. image:: ../media/image012.png
+   .. image:: ../media/image012.png
 
 -  Visit a financial institution (*example*
    :raw-html:`<i><font color="red">https://www.chase.com</font></i>`) and verify that
@@ -25,17 +25,17 @@ Step 6: Verify that everything is working as expected
 -  **Verify that the HTTP Proxy is seeing decrypted traffic**
 
    -  From the lab deployment screen select **Access->WEB SHELL** from
-   the **Service - ExpProxy** system
+      the **Service - ExpProxy** system
 
    -  Type :raw-html:`<i><font color="red">tail -F /var/log/squid3/access.log</font></i>` in the web console terminal
 
    -  Visit a few secure(https) websites in the RDP client and verify that
-   access is being logged even though we are visiting a secure website.
-   You should see the log scrolling by and logging the sites and URLs
-   visited. Your screen should have something similar to the screenshot
-   shown below.
+      access is being logged even though we are visiting a secure website.
+      You should see the log scrolling by and logging the sites and URLs
+      visited. Your screen should have something similar to the screenshot
+      shown below.
 
-|image20|
+   |image20|
 
 -  **Verify that the Cisco TAP is seeing both intercepted and bypassed
    traffic**
@@ -44,8 +44,9 @@ Step 6: Verify that everything is working as expected
       the **Service – TAP** system
 
    -  Type the following command to verify that the traffic is being
-      sent to the tap device: *tcpdump -nnnni eth1 not arp and not icmp
-      -X*
+      sent to the tap device: 
+      -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp
+         -X</font></i>`
 
    -  Visit a financial website that is bypassed and verify that traffic
       is still flowing through the tap device
@@ -67,7 +68,7 @@ Step 6: Verify that everything is working as expected
 
    -  We should see something similar to the screenshot below
 
-|image21|
+   |image21|
 
 .. |image20| image:: ../media/image013.png
    :width: 7.05556in

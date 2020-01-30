@@ -12,7 +12,7 @@ Step 2: Create a new service for the Cisco Firepower device
 
 -  Press the **Add** button shown below the menu display line
 
--  Type \ *firepower* in the **Search** box below the **Service
+-  Type  :raw-html:`<i><font color="red">firepower</font></i>` in the **Search** box below the **Service
    Settings**
 
 -  Select **Cisco Firepower Threat Defense TAP** and press the

@@ -10,7 +10,7 @@ Step 0: Verify complaint
 -  Verify that the SSL Orchestrator is intercepting it by checking the
    entity verifying the certificate
 
-|image22|
+   |image22|
 
 -  Start the Dropbox client. The Dropbox client will be unable to
    connect to the server and show the following error. This error occurs
@@ -18,13 +18,13 @@ Step 0: Verify complaint
    intercepted by the SSL Orchestrator and client uses Certificate
    Pinning.
 
-|image23|
+   |image23|
 
 -  To handle such issues, the default SSL Orchestrator Security Policy
    includes a rule called **Pinners\_Rule** that is the first rule in
    any Security Policy.
 
-|image24|
+   |image24|
 
 .. |image22| image:: ../media/image021.png
    :width: 7.05556in

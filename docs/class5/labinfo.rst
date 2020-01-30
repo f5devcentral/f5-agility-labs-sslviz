@@ -2,43 +2,43 @@ SSL ORCHESTRATOR LAB ENVIRONMENT
 ================================
 
 The lab environment for this guide has provided some prerequisite
-settings that you should be aware of. These are provided to make the
-demo simpler. All of the following would need to be configured manually
-in another environment.
+       settings that you should be aware of. These are provided to make the
+       demo simpler. All of the following would need to be configured manually
+       in another environment.
 
--  **Client side VLAN and subnet are pre-defined** – this is the VLAN
-       that an internal client connects to for outbound traffic flows.
-       SSLO does not define the client-side VLAN(s) and self-IP(s). A
-       web server also exists on the client side VLAN to facilitate an
-       inbound (reverse proxy) use case – external client to an internal
-       set of websites.
+       -  **Client side VLAN and subnet are pre-defined** – this is the VLAN
+              that an internal client connects to for outbound traffic flows.
+              SSLO does not define the client-side VLAN(s) and self-IP(s). A
+              web server also exists on the client side VLAN to facilitate an
+              inbound (reverse proxy) use case – external client to an internal
+              set of websites.
 
--  **Outbound side VLAN and subnet are pre-defined** – this is the VLAN
-       that traffic egresses from SSLO to the Internet gateway. SSLO
-       does not define the server-side VLAN(s) and self-IP(s).
+       -  **Outbound side VLAN and subnet are pre-defined** – this is the VLAN
+              that traffic egresses from SSLO to the Internet gateway. SSLO
+              does not define the server-side VLAN(s) and self-IP(s).
 
--  **ICAP service VLAN and subnet are pre-defined** – SSLO does not
-       define the networking for this service type, so it has been
-       pre-created in this lab.
+       -  **ICAP service VLAN and subnet are pre-defined** – SSLO does not
+              define the networking for this service type, so it has been
+              pre-created in this lab.
 
--  **Required objects and Access policy for password-less authentication**
-       have been pre-created – These objects are created using the APM
-       module of F5. To maintain the focus on SSLO, these have been
-       pre-created and provided for easy configuration for SSLO. In a
-       production environment these will have to be created from
-       scratch.
+       -  **Required objects and Access policy for password-less authentication**
+              have been pre-created – These objects are created using the APM
+              module of F5. To maintain the focus on SSLO, these have been
+              pre-created and provided for easy configuration for SSLO. In a
+              production environment these will have to be created from
+              scratch.
 
--  **CA certificate and private key are installed** – this is the CA
-       certificate and private key that are used to re-issue (forge)
-       remote server certificates to internal clients for outbound
-       traffic flows.
+       -  **CA certificate and private key are installed** – this is the CA
+              certificate and private key that are used to re-issue (forge)
+              remote server certificates to internal clients for outbound
+              traffic flows.
 
--  **Server certificate and private key are installed** – for the
-       inbound (reverse proxy) traffic flow use case, SSL traffic is
-       terminated at the F5, and re-encrypted on the way to the internal
-       application environment. A wildcard server certificate is
-       installed to facilitate using any name under the
-       “.\ *f5labs.com*\ ” sub-domain.
+       -  **Server certificate and private key are installed** – for the
+              inbound (reverse proxy) traffic flow use case, SSL traffic is
+              terminated at the F5, and re-encrypted on the way to the internal
+              application environment. A wildcard server certificate is
+              installed to facilitate using any name under the
+              “.\ *f5labs.com*\ ” sub-domain.
 
 
 

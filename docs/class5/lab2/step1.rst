@@ -6,13 +6,13 @@ Step 1: Review Pinned Certificate list
    main menu and then **Secure Web Gateway->URL Categories**. The
    following screen should be presented.
 
-|image25|
+   |image25|
 
 -  Expand the **Custom Categories** (first item on the list) and
    select **Pinners (custom)** that will now appear. The URL list for
    Pinners should now be presented.
 
-|image26|
+   |image26|
 
 -  Verify that Dropbox.com is not in the list presented in the
    **Associated URLs** list

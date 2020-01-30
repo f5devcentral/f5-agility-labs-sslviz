@@ -10,7 +10,7 @@ Step 2: Attach the security policy to the SSL Orchestrator configuration
 -  Select **Interception Rules.** The following screen will then be
    presented.
 
-|image33|
+   |image33|
 
 -  Select :raw-html:`<i><font color="red">sslo_f5labs_explicit-xp-4</font></i>`
 

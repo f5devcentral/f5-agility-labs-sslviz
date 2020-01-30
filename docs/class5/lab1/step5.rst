@@ -14,7 +14,7 @@ Step 5: Modify the security policy to add the correct Service Chains
 -  In the section shown below – click on menu selection for **Service
    Chain->ssloSC\_Cisco\_TAP** and press **OK.**
 
-|image17|
+   |image17|
 
 -  Repeat the same process for **Finance\_Bypass**
 
@@ -23,7 +23,7 @@ Step 5: Modify the security policy to add the correct Service Chains
 
 -  The screen should now look like the picture shown below.
 
-|image18|
+   |image18|
 
 -  Press **Deploy** and select **Ok** from the **Continue Save?**
    pop up menu.
