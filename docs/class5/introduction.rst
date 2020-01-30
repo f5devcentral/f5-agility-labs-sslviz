@@ -135,8 +135,8 @@ WHAT’S NEW IN SSLO?
 
 
 
-.. note:: **Note**: Viprion chassis platform support is not available in SSLO 4.0
-       and 5.0.
+       .. note:: Viprion chassis platform support is not available in SSLO 4.0
+              and 5.0.
 
 **SSLO 6.0 includes the following updates:**
 
