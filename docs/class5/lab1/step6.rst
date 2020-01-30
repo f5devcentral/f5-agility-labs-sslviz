@@ -58,8 +58,7 @@ Step 6: Verify that everything is working as expected
       should see some recognizable text – to verify type the following
       commnd
 
-      -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp -X | egrep
-         'Agility'</font></i>`
+      -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp -X | egrep 'Agility'</font></i>`
 
    -  While still visiting the an encrypted website, since we are
       intercepting and decrypting it, we are able to see the payload and
