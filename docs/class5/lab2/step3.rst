@@ -17,10 +17,10 @@ Step 3: Verify problem fixed with client and browser
    |image28|
 
 -  .. note:: **Note:** When added to the Pinners list, the default action is that
-   the SSL Orchestrator bypasses the traffic. In this lab example, since
-   we have enabled a Layer 2 TAP device for all Intercepted as well
-   Bypassed traffic, we still have some visibility. However, since the
-   traffic is not de-crypted, the payload is still encrypted.
+      the SSL Orchestrator bypasses the traffic. In this lab example, since
+      we have enabled a Layer 2 TAP device for all Intercepted as well
+      Bypassed traffic, we still have some visibility. However, since the
+      traffic is not de-crypted, the payload is still encrypted.
 
 .. |image27| image:: ../media/image026.png
    :width: 7.05556in

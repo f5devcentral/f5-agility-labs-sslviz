@@ -12,8 +12,8 @@ Your manager lets you know that the company is looking to update its
 Lab overview:
 -------------
 
-This lab will continue work from the previous Lab 2. We will configure
-   the SSL Orchestrator to authenticate using NTLM (the security objects
-   and the Access Policy) have already been configured to keep this lab
-   relevant only to the SSL Orchestrator.
+-  This lab will continue work from the previous Lab 2. We will configure
+      the SSL Orchestrator to authenticate using NTLM (the security objects
+      and the Access Policy) have already been configured to keep this lab
+      relevant only to the SSL Orchestrator.
 

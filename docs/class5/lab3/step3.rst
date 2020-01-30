@@ -16,7 +16,7 @@ Step 3: Modify DNS settings to configure the AD server as DNS server (Lab only)
    address to the list :raw-html:`<i><font color="red">10.1.10.200</font></i>`. The configuration screen should
    look like the one shown below after the edit. 
 
--  Click *Update* at the bottom of the screen.
+-  Click **Update** at the bottom of the screen.
 
    |image36|
 

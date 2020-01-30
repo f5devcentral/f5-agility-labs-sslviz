@@ -35,7 +35,7 @@ Step 6: Verify that everything is working as expected
       visited. Your screen should have something similar to the screenshot
       shown below.
 
-   |image20|
+      |image20|
 
 -  **Verify that the Cisco TAP is seeing both intercepted and bypassed
    traffic**
@@ -44,9 +44,9 @@ Step 6: Verify that everything is working as expected
       the **Service – TAP** system
 
    -  Type the following command to verify that the traffic is being
-      sent to the tap device: 
-      -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp
-         -X</font></i>`
+         sent to the tap device: 
+         -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp
+            -X</font></i>`
 
    -  Visit a financial website that is bypassed and verify that traffic
       is still flowing through the tap device
@@ -68,7 +68,7 @@ Step 6: Verify that everything is working as expected
 
    -  We should see something similar to the screenshot below
 
-   |image21|
+      |image21|
 
 .. |image20| image:: ../media/image013.png
    :width: 7.05556in
