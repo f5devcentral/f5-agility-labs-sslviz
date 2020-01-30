@@ -45,8 +45,7 @@ Step 6: Verify that everything is working as expected
 
    -  Type the following command to verify that the traffic is being
          sent to the tap device: 
-         -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp
-            -X</font></i>`
+         -  :raw-html:`<i><font color="red">tcpdump -nnnni eth1 not arp and not icmp -X</font></i>`
 
    -  Visit a financial website that is bypassed and verify that traffic
       is still flowing through the tap device
