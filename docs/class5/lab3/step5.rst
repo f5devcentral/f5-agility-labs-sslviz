@@ -48,12 +48,12 @@ Step 5:  Configure and verify that the Squid Proxy can see user information (Op
 -   All done!  Thank you for participating and working through the labs.
 
 
-.. |image40| image:: media/image39.png
+.. |image40| image:: ../media/image039.png
    :width: 7.05556in
    :height: 2.39861in
-.. |image41| image:: media/image40.png
+.. |image41| image:: ../media/image040.png
    :width: 7.05556in
    :height: 1.09444in
-.. |image42| image:: media/image41.png
+.. |image42| image:: ../media/image041.png
    :width: 7.05556in
    :height: 2.96250in
