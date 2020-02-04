@@ -30,5 +30,6 @@ Expected time to complete: **2 hours**
    introduction
    labinfo
    module*/module*
-   appendix/appendix*
    conclusion
+   appendix/appendix*
+
