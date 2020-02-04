@@ -4,7 +4,7 @@
 SSL Orchestrator Lab Environment
 ================================
 
-.. TODO:: document instructions for Agility UDF portal
+.. TODO:: Update instructions for new Agility Lab portal when available
 
 To access your lab and lookup the necessary IP addresses, you should have
 received an email with your personal "Lab Portal Link". Once attached you
@@ -57,7 +57,7 @@ Guide" and the VM's you'll spend all of your time attached to.
    points of data exposure. Usernames, passwords, credit card numbers and
    other sensitive information could be exposed to other devices on that
    network. Each inline layer 3 security service definition includes an
-   “Auto Manage” option. This option, enabled by default, provides internal
+   "Auto Manage" option. This option, enabled by default, provides internal
    network settings for security services to use, so that only the
    interface (and 802.1q VLAN tag as needed) is required to be defined for
    the inbound and outbound interfaces. Should customers opt to not follow

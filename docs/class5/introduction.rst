@@ -21,12 +21,12 @@ security infrastructure.
 
 In order to solve specific security challenges, security administrators
 are accustomed to manually chaining together multiple point products,
-creating a bare-bones “security stack” consisting of multiple services.
+creating a bare-bones "security stack" consisting of multiple services.
 A typical stack may include components like Data Leak Prevention (DLP)
 scanners, Web Application Firewalls (WAF), Intrusion Prevention and
 Detection Systems (IPS and IDS), Malware Analysis tools, and more. In
 this model, all user sessions are provided the same level of security,
-as this “daisy chain” of services is hard-wired.
+as this "daisy chain" of services is hard-wired.
 
 **Dynamic service chaining**
 
@@ -147,13 +147,13 @@ versions. Here are just a few of those updates:
    traffic management options.
 
 -  SSLO 4.0 optimizes traffic flow through security services by
-   replacing the complex “proxy hops” with a new “tee connector” -
+   replacing the complex "proxy hops" with a new "tee connector" -
    essentially a mid-proxy tap - that allows decrypted traffic to flow
    through security devices out-of-band from the main client-server
-   proxy traffic. This is implemented as new “Service” and “Connector”
+   proxy traffic. This is implemented as new "Service" and "Connector"
    profiles.
 
--  SSLO 4.0 introduces new “split session” client and server SSL
+-  SSLO 4.0 introduces new "split session" client and server SSL
    profiles, that are now responsible for carrying SNI signaling
    information across the inspection zone.
 
@@ -193,7 +193,7 @@ SSLO 5.0 includes the following updates:
 -  Guided Configuration user experience, a complete refresh of the SSLO
    UI based on the Access Guided Configuration engine.
 
--  Discreet “topology” definitions and the ability to define how SSLO
+-  Discreet "topology" definitions and the ability to define how SSLO
    listens for and processes traffic flows.
 
 -  Re-entrant, wizard-driven workflows. Based on the selected topology,

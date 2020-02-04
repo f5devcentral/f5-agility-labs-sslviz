@@ -38,7 +38,7 @@ in another environment.
    terminated at the F5, and re-encrypted on the way to the internal
    application environment. A wildcard server certificate is
    installed to facilitate using any name under the
-   “.\ *f5labs.com*\ ” sub-domain.
+   ".\ *f5labs.com*\ " sub-domain.
 
 
 
@@ -50,7 +50,7 @@ in another environment.
    points of data exposure. Usernames, passwords, credit card numbers and
    other sensitive information could be exposed to other devices on that
    network. Each inline layer 3 security service definition includes an
-   “Auto Manage” option. This option, enabled by default, provides internal
+   "Auto Manage" option. This option, enabled by default, provides internal
    network settings for security services to use, so that only the
    interface (and 802.1q VLAN tag as needed) is required to be defined for
    the inbound and outbound interfaces. Should customers opt to not follow

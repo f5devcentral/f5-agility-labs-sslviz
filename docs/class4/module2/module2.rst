@@ -4,7 +4,7 @@ Module 2 - Create a Reverse Proxy SSLO
 The SSL Orchestrator inbound L3 topology generally describes two
 slightly different use cases for inbound traffic.
 
-The default use case is a “gateway” mode.
+The default use case is a 'gateway' mode.
 This is where SSLO sits in front of a separate
 ADC/load balancer or routed path. The primary attributes of the gateway
 mode are a wildcard (0.0.0.0/0) listener, no pool assignment and
@@ -15,7 +15,7 @@ from the external client therefore point to a location *behind* SSLO.
    :align: center
    :width: 80 %
 
-The alternate use case is an “application” mode, where the client’s
+The alternate use case is an 'application' mode, where the client’s
 destination address terminates at the F5. The primary attributes of the
 application mode are an IP-specific listener address, backend server
 pool assignment, and enabled address translation (destination NAT). An

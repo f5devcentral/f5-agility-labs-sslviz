@@ -33,9 +33,9 @@ In the SSL Orchestrator dashboard view, select the :guilabel:`Topologies` tab
   - Click :guilabel:`OK` to acknowledge the profile warning.
 
     .. warning:: Whenever repurposing a topology setting, a warning will
-       appear: “There are other configuration items that are referencing this
+       appear: "There are other configuration items that are referencing this
        item. Editing this item will affect the referencing ones mentioned
-       below”. Click OK to acknowledge.
+       below". Click OK to acknowledge.
 
 - **Services List** - there are no new services to create.
 
