@@ -1,7 +1,7 @@
 Welcome
 =======
 
-Welcome to F5's SSL Orchestration Training series. The intended audience
+Welcome to the F5 SSL Orchestration Training series. The intended audience
 for these labs are security engineers that would like to leverage the
 SSL Orchestration tools offered by the F5 platform and gain regulatory
 visibility into the encrypted traffic on their networks. If you require
@@ -25,7 +25,7 @@ Bugs and Requests for enhancements are handled in two ways:
 |
 |
 
-2016 F5 Networks, Inc. All rights reserved. F5, F5 Networks, and the F5
+(c) 2016-2020 F5 Networks, Inc. All rights reserved. F5, F5 Networks, and the F5
 logo are trademarks of F5 Networks, Inc. in the U.S. and in certain
 other countries. Other F5 trademarks are identified at f5.com.
 
