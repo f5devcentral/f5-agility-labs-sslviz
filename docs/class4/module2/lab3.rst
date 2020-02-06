@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Step 3: Testing the deployment
+Testing the deployment
 ==============================
 
 Gateway mode testing

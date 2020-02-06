@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Step 1: Review the lab diagram and map out the services and endpoints
+Review the lab diagram and map out the services and endpoints
 ---------------------------------------------------------------------
 
 .. note:: In this lab, there is a web server on the internal network (the

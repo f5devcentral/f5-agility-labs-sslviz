@@ -1,5 +1,5 @@
 ==================================================
-Module 1 - Create a Transparent Forward Proxy SSLO
+Create a Transparent Forward Proxy SSLO
 ==================================================
 
 The majority of enterprise forward proxy configurations will involve a

@@ -1,4 +1,4 @@
-Module 2 - Create a Reverse Proxy SSLO
+Create a Reverse Proxy SSLO
 ======================================
 
 The SSL Orchestrator inbound L3 topology generally describes two

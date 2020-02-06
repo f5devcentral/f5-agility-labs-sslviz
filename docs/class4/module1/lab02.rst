@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Step 2: Fulfill the SSL Orchestrator pre-requisites
+Fulfill the SSL Orchestrator pre-requisites
 ===================================================
 
 There are a number of objects that SSL Orchestrator does not create and expects

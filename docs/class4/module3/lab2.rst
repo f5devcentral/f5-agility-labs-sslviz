@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Step 2: Configure an Explicit Proxy deployment through Guided Configuration
+Configure an Explicit Proxy deployment through Guided Configuration
 ---------------------------------------------------------------------------
 
 In the SSL Orchestrator dashboard view, select the :guilabel:`Topologies` tab

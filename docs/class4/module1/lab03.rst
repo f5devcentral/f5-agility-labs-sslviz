@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Step 3: Create the SSL Orchestrator deployment through Guided Configuration
+Create the SSL Orchestrator deployment through Guided Configuration
 ===========================================================================
 
 The SSL Orchestrator Guided Configuration presents a completely new and
@@ -20,7 +20,7 @@ simple transparent forward proxy.
    `Appendix - Demo Scripts <../appendix/appendix2.html>`_
 
 
-3.1 Initialization
+Initialization
 ------------------
 
 From the left-hand menu, navigate to
@@ -31,7 +31,7 @@ Configuration will automatically load and deploy the built-in SSLO package.
 .. image:: ../images/module1-1.png
    :align: center
 
-3.2 Configuration review and prerequisites
+Configuration review and prerequisites
 -------------------------------------------
 
 Take a moment to review the topology options and workflow configuration steps
@@ -48,7 +48,7 @@ No other configurations are required on this page, click :guilabel:`Next`.
 .. image:: ../images/gc-path.png
    :align: center
 
-3.3 Topology Properties
+Topology Properties
 -----------------------
 
 SSLO creates discreet configurations based
@@ -140,7 +140,7 @@ topologies:
 
 - Click :guilabel:`Save & Next.`
 
-3.4 SSL Configurations
+SSL Configurations
 ----------------------
 
 This page defines the specific SSL settings for the selected topology (in this
@@ -284,7 +284,7 @@ Server-side SSL
 
 Click :guilabel:`Save & Next`.
 
-3.5 Services List
+Services List
 -----------------
 
 The Services List page is used to define security
@@ -666,7 +666,7 @@ A TAP service is a passive device that simply receives a copy of traffic.
 
 - Click :guilabel:`Save & Next`.
 
-3.6 Service Chain List
+Service Chain List
 ----------------------
 
 Service chains are arbitrarily-ordered lists of security devices. Based on
@@ -706,7 +706,7 @@ flow through a smaller set of security services.
 
 - Click :guilabel:`Save & Next`.
 
-3.7 Security Policy
+Security Policy
 -------------------
 
 Security policies are the set of rules that govern how traffic is processed in
@@ -785,7 +785,7 @@ send all intercepted traffic to a service chain.
 
 -  Click :guilabel:`Save & Next`.
 
-3.8 Interception Rule
+Interception Rule
 ---------------------
 
 Interception rules are based on the selected
@@ -845,7 +845,7 @@ workflow.
 
 -  Click :guilabel:`Save & Next`.
 
-3.9 Egress Setting
+Egress Setting
 ------------------
 
 Traffic egress settings are now defined per-topology and manage both the
@@ -871,7 +871,7 @@ gateway route and outbound SNAT settings.
 
 -  Click :guilabel:`Save & Next`.
 
-3.10 Log Settings
+Log Settings
 -----------------
 
 Log settings are defined per-topology. In
@@ -915,7 +915,7 @@ Multiple discreet logging options are available:
 
 -  Click :guilabel:`Save & Next`.
 
-3.11 Summary
+Summary
 ------------
 
 The summary page presents an expandable list of all of the workflow-configured

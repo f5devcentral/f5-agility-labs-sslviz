@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Step 1: Review the lab environment and map out the services and endpoints
+Review the lab environment and map out the services and endpoints
 =========================================================================
 
 If needed review the previous section

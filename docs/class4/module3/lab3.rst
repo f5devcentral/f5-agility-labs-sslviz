@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Step 3: Add DNS and Logging settings
+Add DNS and Logging settings
 ------------------------------------
 
 

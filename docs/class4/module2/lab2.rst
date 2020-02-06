@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Step 2: Configure an L3 inbound SSLO deployment through Guided Configuration
+Configure an L3 inbound SSLO deployment through Guided Configuration
 ----------------------------------------------------------------------------
 
 In this scenario, an SSLO L3 inbound listener is configured either as a

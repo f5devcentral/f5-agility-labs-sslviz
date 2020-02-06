@@ -1,4 +1,4 @@
-Module 3 - Create an Explicit Forward Proxy SSLO
+Create an Explicit Forward Proxy SSLO
 ================================================
 
 SSL Orchestrator creates discreet, non-overlapping interception rules

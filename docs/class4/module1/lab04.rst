@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Step 4: Testing the deployment
+Testing the deployment
 ==============================
 
 To test the deployed solution, RDP to the :bred:`Outbound Win7 Client` and do
