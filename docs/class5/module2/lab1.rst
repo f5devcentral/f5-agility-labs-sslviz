@@ -1,4 +1,4 @@
-Step 1: Review Pinned Certificate list
+Review Pinned Certificate list
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  To review the list of URLs that compromise the **Pinners**

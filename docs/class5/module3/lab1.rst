@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 1: Review the Security Objects and Access Policy
+Review the Security Objects and Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  From the main menu select **Access->Authentication->NTLM->NTLM Auth

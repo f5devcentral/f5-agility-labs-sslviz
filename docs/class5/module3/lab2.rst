@@ -2,7 +2,7 @@
    :format: html
 
 
-Step 2: Attach the security policy to the SSL Orchestrator configuration
+Attach the security policy to the SSL Orchestrator configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Select **SSL Orchestrator->Configuration** from the main menu

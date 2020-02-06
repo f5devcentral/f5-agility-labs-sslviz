@@ -19,6 +19,7 @@ Security Polices, and add Authentication to allow access to an Outbound SSL Orch
 Expected time to complete: **2 hours**
 
 .. toctree::
+   :numbered:
    :caption: This class covers the following topics:
    :maxdepth: 2
    :glob:

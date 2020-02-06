@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 3: Modify DNS settings to configure the AD server as DNS server (Lab only)
+Modify DNS settings to configure the AD server as DNS server (Lab only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *This step is required in this environment because of DHCP on the

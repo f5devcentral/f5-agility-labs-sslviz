@@ -1,23 +1,21 @@
-Module 2 - Working with pinned certificate sites
+Working with pinned certificate sites
 ================================================
 
-A few companies have chosen to enhance the protection of their SSL
-websites by adding a process called as **Pinning**.
+Some organizations have chosen to enhance the protection of their applications
+by using a process called **Certificate Pinning**. This requires that the application
+developer configures their native client to trust one (or more) specific certificate(s). When a
+certificate is pinned, the client will not accept a certificate issued by any other entity.
 
-Pinning requires a client that is controlled by the same company as well. When a
-certificate is pinned, the native client will not accept a certificate
-issued by any other entity. By intercepting traffic, we are issuing a
-certificate on the fly that is issued by **f5labs.com** in this lab.
+When SSL Orchestrator intercepts encrypted traffic, it issues a new certificate that is
+signed by a Certificate Authority which clients must trust (in this lab, the issuer is
+the **f5labs.com** CA). However, this will break applications that use Certificate
+Pinning since this forged certificate is not trusted by the client. One application that
+uses Certificate Pinning is **Dropbox**. The native (note: installed client, not web
+browser) Dropbox client will not connect to Dropbox servers if SSL/TLS interception is enabled.
 
-Since this certificate is not issued by the entity that is trusted by
-the native client, the client will not allow further function. A great
-example is Dropbox, with its Dropbox native client (not visiting the
-website through the browser).
-
-This lab is designed to demonstrate the impact of pinned certificates
-with SSLo Orchestrator intercepting the traffic and how-to workaround to
-make sure that these clients are enabled to work if required by company
-policy.
+This lab is designed to demonstrate the impact of Certificate Pinning
+when SSL Orchestrator intercepts the traffic. You will also learn how to apply a bypass
+to allow these client applications to function properly (when required by company policy).
 
 .. toctree::
    :maxdepth: 1

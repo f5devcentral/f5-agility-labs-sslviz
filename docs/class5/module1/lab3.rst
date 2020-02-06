@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 3: Create a new Service Chain with HTTP service and the Cisco Firepower service
+Create a new Service Chain with HTTP service and the Cisco Firepower service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  You should not be in the **Services Chain List** menu

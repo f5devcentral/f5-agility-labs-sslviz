@@ -1,4 +1,4 @@
-Step 1: Review the current SSL Orchestrator deployment
+Review the current SSL Orchestrator deployment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Select **SSL Orchestrator** from the Main Menu and select

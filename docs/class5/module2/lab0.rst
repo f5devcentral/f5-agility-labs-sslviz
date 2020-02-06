@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 0: Verify complaint
+Verify complaint
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  On the Firefox browser in the **AD server & Testing Client**, visit

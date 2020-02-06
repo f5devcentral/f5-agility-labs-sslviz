@@ -1,4 +1,4 @@
-Module 3 - Transparent authentication using NTLM
+Transparent authentication using NTLM
 ================================================
 
 While SSL Orchestrator provides visibility into SSL traffic, the amount

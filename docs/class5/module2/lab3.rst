@@ -1,4 +1,4 @@
-Step 3: Verify problem fixed with client and browser
+Verify problem fixed with client and browser
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Perform the same steps from **Step 0:**

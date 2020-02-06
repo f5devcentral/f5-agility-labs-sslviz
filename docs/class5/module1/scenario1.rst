@@ -26,6 +26,5 @@ following Security Policy
 .. image:: ../images/image005.png
    :align: center
 
-Please modify the above Security Policy to satisfy the requirements from
-the Scenario described. Please following the step by step directions
-that follow to successfully complete this task.
+You will modify the above Security Policy to satisfy the requirements from
+the Scenario described.

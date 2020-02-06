@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 0: Verify that we are not authenticating users
+Verify that we are not authenticating users
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  From the main menu, select **Access->Overview->Active Sessions**.

@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 4: Create a new Service Chain for just the Cisco Firepower service
+Create a new Service Chain for just the Cisco Firepower service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  You should be back at the **Services Chain List** interface again.

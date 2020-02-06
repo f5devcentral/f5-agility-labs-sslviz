@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 2: Create a new service for the Cisco Firepower device
+Create a new service for the Cisco Firepower device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Select **SSL Orchestrator->Configuration** from the main menu

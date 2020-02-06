@@ -1,4 +1,4 @@
-Step 5: Modify the security policy to add the correct Service Chains
+Modify the security policy to add the correct Service Chains
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  You should now be in the main **Configuration** section of the

@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 5:  Configure and verify that the Squid Proxy can see user information (Optional Step)
+Configure and verify that the Squid Proxy can see user information (Optional Step)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

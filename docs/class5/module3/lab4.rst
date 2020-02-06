@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 4: Verify that user information is being identified on the F5 SSL Orchestrator
+Verify that user information is being identified on the F5 SSL Orchestrator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  From the main menu select **Access->Overview->Active Sessions**

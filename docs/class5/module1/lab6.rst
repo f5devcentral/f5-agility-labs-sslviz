@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 6: Verify that everything is working as expected
+Verify that everything is working as expected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Revisit the sites visited from **Step 0:**

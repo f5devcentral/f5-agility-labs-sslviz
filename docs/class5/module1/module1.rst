@@ -1,4 +1,4 @@
-Module 1 - Modify inspection services
+Modify inspection services
 =====================================
 
 The majority of enterprise forward proxy configurations will involve a

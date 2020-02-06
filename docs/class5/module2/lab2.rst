@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 2: Add Dropbox to Pinned Certificate list
+Add Dropbox to Pinned Certificate list
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  In the Pinners list **Category Properties**

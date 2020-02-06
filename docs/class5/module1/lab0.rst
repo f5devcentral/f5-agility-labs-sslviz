@@ -1,10 +1,10 @@
 .. role:: raw-html(raw)
    :format: html
 
-Step 0: Verify that the current solution works
+Verify that the current solution works
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  **Validate that current SSLO deployment works**
+-  **Validate that the current SSLO deployment works**
 
    -  From the Lab deployment page, Select **Components**. Screenshot
       shown below
@@ -33,7 +33,7 @@ Step 0: Verify that the current solution works
 
    |image8|
 
--  Modify proxy settings to traverse the SSLo setup
+-  Modify proxy settings to traverse the SSLO setup
 
    -  Click on |image9|\ menu in FireFox to access FireFox settings
 
