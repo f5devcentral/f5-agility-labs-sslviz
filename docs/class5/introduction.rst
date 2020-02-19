@@ -126,7 +126,7 @@ information:
 
 https://techdocs.f5.com/kb/en-us/products/ssl-orchestrator/releasenotes/product/relnote-ssl-orchestrator-15-1-0-iapp-7-0.html
 
-Please refer to the official SSLO 7.1 release notes for details update
+Please refer to the official SSLO 7.1 release notes for detailed update
 information:
 
 https://techdocs.f5.com/kb/en-us/products/ssl-orchestrator/releasenotes/product/relnote-ssl-orchestrator-15-1-0-iapp-7-1.html
