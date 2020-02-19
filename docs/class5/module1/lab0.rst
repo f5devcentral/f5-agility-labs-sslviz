@@ -6,7 +6,7 @@ Verify that the current solution works
 
 -  **Validate that the current SSLO deployment works**
 
-   -  From the Lab deployment page, Select **Components**. Screenshot
+   -  From the Lab deployment page, select **Components**. Screenshot
       shown below
 
    |image5|
