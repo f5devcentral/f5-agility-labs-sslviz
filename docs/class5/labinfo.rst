@@ -2,9 +2,10 @@ SSL Orchestrator Lab Environment
 ================================
 
 The lab environment for this guide has provided some prerequisite
-settings that you should be aware of. These are provided to make the
-demo simpler. All of the following would need to be configured manually
-in another environment.
+settings that you should be aware of. These are provided to maximize the
+time available to focus on the learning objectives of the following labs.
+Some or all of the following objects would normally need to be configured
+to support SSLO.
 
 -  **Client side VLAN and subnet are pre-defined** - this is the VLAN
    that an internal client connects to for outbound traffic flows.
@@ -232,7 +233,7 @@ in another environment.
 
 |
 
-The following is a visual representation of this Ravello lab
+The following is a visual representation of this lab
 environment. The numbers inside the right edge of the SSL Orchestrator
 box indicate the port numbers assigned. The colored boxes to the right
 of the services indicate a few product examples for each respective
