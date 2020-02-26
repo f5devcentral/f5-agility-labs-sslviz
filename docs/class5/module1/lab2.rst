@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Create a new service for the Cisco Firepower device
+Create a new Cisco Firepower Threat Defense TAP service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Select **SSL Orchestrator->Configuration** from the main menu
