@@ -10,20 +10,20 @@ Modify the security policy to add the correct Service Chains
   -  Click on the pencil icon (|image16|) next to the **Pinners\_Rule** to modify this rule.
 
   -  In the properties section that appears, select **ssloSC\_Cisco\_TAP** from the **Service Chain** dropdown.
-  
-   |policy_rule_Cisco-TAP|
-   
-   - Click the **OK** button
 
-  -  Repeat the same process for **Finance\_Bypass**
+  |policy_rule_Cisco-TAP|
+
+  - Click the **OK** button
+
+  -  Repeat the same process for the **Finance\_Bypass** rule
 
   -  Now modify the **All Traffic** rule and select the **ssloSC\_all\_services** Service Chain and click the **OK** button.
 
   -  The Security Policy Rules should now look like this:
-  
+
   |updated_rules|
 
--  Click the **Deploy** button and then click the **OK** button on the pop-up to confirm you want to make the changes.
+  -  Click the **Deploy** button and then click the **OK** button on the pop-up to confirm you want to make the changes.
 
 .. |image16| image:: ../images/image017.png
    :width: 0.22917in
