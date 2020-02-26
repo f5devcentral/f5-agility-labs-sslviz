@@ -15,6 +15,6 @@ You now need to create a new Service Chain containing the Squid Proxy and the Ci
 
       -  **Services -** select both services under **Services Available** and move them to **Selected Service Chain Order**
 
-      -  Click the **Save** button
+-  Click the **Save** button
       
 -  You will be returned to the **Services Chain List** where you will add one more Service Chain. Details are on the next page. 
