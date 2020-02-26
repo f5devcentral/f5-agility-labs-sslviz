@@ -15,7 +15,7 @@ From the SSL Orchestrator **Configuration** screen:
 
 -  In the properties section that appears, select **ssloSC\_Cisco\_TAP** from the **Service Chain** dropdown.
 
-|policy_rule_Cisco-TAP|
+   |policy_rule_Cisco-TAP|
 
 -  Click the **OK** button
 
@@ -25,7 +25,7 @@ From the SSL Orchestrator **Configuration** screen:
 
 -  The Security Policy Rules should now look like this:
 
-|updated_rules|
+   |updated_rules|
 
 -  Click the **Deploy** button and then click the **OK** button on the pop-up to confirm you want to make the changes.
 
