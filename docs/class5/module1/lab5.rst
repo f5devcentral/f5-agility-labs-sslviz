@@ -1,42 +1,36 @@
 Modify the security policy to add the correct Service Chains
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  You should now be in the main **Configuration** section of the
-   **SSL Orchestrator** main menu.
+-  From the main SSL Orchestrator **Configuration** screen:
 
--  Select **Security Policies** from the list of options presented.
+  -  Click the **Security Policies** tab in the middle of the main display area.
 
--  Select **ssloP\_f5labs\_explicit** from the list shown in the list.
-   This should be the only selection on the list.
+  -  Click the Security Policy named **ssloP\_f5labs\_explicit**. This should be the only security policy in the list at this time.
 
--  Click on the pencil icon next to the **Pinners\_Rule** |image16|
+  -  Click on the pencil icon (|image16|) next to the **Pinners\_Rule** to modify this rule.
 
--  In the section shown below - click on menu selection for **Service
-   Chain->ssloSC\_Cisco\_TAP** and press **OK.**
+  -  In the properties section that appears, select **ssloSC\_Cisco\_TAP** from the **Service Chain** dropdown.
+  
+   |policy_rule_Cisco-TAP|
+   
+   - Click the **OK** button
 
-   |image17|
+  -  Repeat the same process for **Finance\_Bypass**
 
--  Repeat the same process for **Finance\_Bypass**
+  -  Now modify the **All Traffic** rule and select the **ssloSC\_all\_services** Service Chain and click the **OK** button.
 
--  Now select **All Traffic** and select **ssloSC\_all\_devices**
-   and press **OK**.
+  -  The Security Policy Rules should now look like this:
+  
+  |updated_rules|
 
--  The screen should now look like the picture shown below.
-
-   |image18|
-
--  Press **Deploy** and select **Ok** from the **Continue Save?**
-   pop up menu.
-
--  Click on **Deploy**. This action will take a few seconds. Verify
-   that the deployment was successful with no errors.
+-  Click the **Deploy** button and then click the **OK** button on the pop-up to confirm you want to make the changes.
 
 .. |image16| image:: ../images/image017.png
    :width: 0.22917in
    :height: 0.25000in
-.. |image17| image:: ../images/image018.png
-   :width: 4.45833in
-   :height: 1.06250in
-.. |image18| image:: ../images/image019.png
-   :width: 7.05556in
-   :height: 1.43681in
+.. |policy_rule_Cisco-TAP| image:: ../images/policy_rule_Cisco-TAP.png
+   :width: 466px
+   :height: 89px
+.. |updated_rules| image:: ../images/updated_rules.png
+   :width: 1005px
+   :height: 202px
