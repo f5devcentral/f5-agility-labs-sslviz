@@ -5,16 +5,14 @@ With the increase in the number of security incidents that have made the
 news lately, your organization has updated its security policy to log
 all user traffic flowing through the SSL Orchestrator irrespective of
 whether the traffic has been inspected or bypassed. A new appropriately
-sized Cisco Firepower L2 device has been purchased and has been cabled
+sized Cisco Firepower TAP device has been purchased and has been cabled
 to the SSL Orchestrator device. As the SSL Orchestrator Administrator,
-your manager is needing you to do the following things:
+your manager is asking you to do the following:
 
 1) In addition to the intercepted traffic being inspected by the Squid
-   Proxy device, the traffic needs to be directed to the Cisco Firepower
-   device
+   Proxy service, the traffic needs to be copied to a new security service, a Cisco Firepower
 
-2) For traffic that was being bypassed, the still encrypted traffic
-   needs to be directed to the Cisco Firepower device
+2) Traffic that was previously bypassed and sent directly to the internet needs to be copied (still encrypted) to the Cisco Firepower
 
 Lab Overview
 ------------
