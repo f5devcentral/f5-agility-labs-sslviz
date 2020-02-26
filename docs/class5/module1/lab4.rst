@@ -1,37 +1,34 @@
 .. role:: raw-html(raw)
    :format: html
 
-Create a new Service Chain for just the Cisco Firepower service
+Create a new "Cisco Firepower Only" Service Chain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You now need to create a new Service Chain containing only the Cisco Firepower TAP service.
 
--  You should be back at the **Services Chain List** interface again.
+-  On the **Services Chain List** screen click the **Add** button to create a new Service Chain
 
--  Click on **Add.**
+-  On the **Services Chain Properties** screen enter the following values:
 
--  **Name -** provide a unique name for this service chain (example
-   :raw-html:`<i><font color="red">Cisco_TAP</font></i>`)
+   -  **Name -** provide a unique name for this service chain (ex. :raw-html:`<i><font color="red">Cisco_TAP</font></i>`)
 
--  **Description -** provide a description for this service chain
-   (example :raw-html:`<i><font color="red">Cisco Firepower TAP only</font></i>`)
+   -  **Description -** provide a description for this service chain (ex. :raw-html:`<i><font color="red">Cisco Firepower TAP only</font></i>`)
 
--  **Services -** Select :raw-html:`<i><font color="red">ssloS_Cisco_FP</font></i>` services from the
-   **Services Available** and move it to the **Selected Service Chain
-   Order** section
+   -  **Services -** select the Cisco Firepower service (ex. :raw-html:`<i><font color="red">ssloS_Cisco_FP</font></i>`) under **Services Available** and move it to **Selected Service Chain Order**
 
--  Click **Save**
+-  Click the **Save** button
 
--  You should now have 3 items in the **Services Chain List** section
+-  You will be returned to the **Services Chain List**. You should now have three Service Chains in the **Services Chain List**
 
--  Click on **Save & Next**
+-  Click the **Save & Next** button
 
--  Click on **Deploy**. This action will take a few seconds. Verify
-   that the deployment was successful with no errors.
+-  Click the **Deploy** button. This action will take a few seconds. Verify that the deployment was successful with no errors.
 
--  When successfully deployed, the screen should look like the
-   following.
+-  When successfully deployed, the following pop-up should appear:
 
-   |image15|
+   |successful_deploy|
 
-.. |image15| image:: ../images/image016.png
-   :width: 7.05556in
-   :height: 5.77361in
+.. |successful_deploy| image:: ../images/successful_deploy.png
+   :width: 374px
+   :height: 219px
+
+-  Click the **OK** button to return to the SSL Orchestrator Configuration screen.
