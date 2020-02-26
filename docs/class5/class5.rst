@@ -7,8 +7,7 @@ required maintenance and regular upkeep of your security strategy. Maintenance c
 performed within the SSLO Dashboard. It also provides enhanced statistical information
 which is needed to differentiate between normal and abnormal traffic.
 
-In this lab, you will learn to navigate the SSL Orchestrator Dashboard, tune
-Security Policies, and add Authentication to allow access to an Outbound SSL Orchestrator topology by:
+This class covers the following topics:
 
 -  Establishing baselines to accurately determine anomalies or security events
 
