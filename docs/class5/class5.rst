@@ -17,13 +17,14 @@ This class covers the following topics:
 
 Expected time to complete: **2 hours**
 
+To continue please review the information about the Lab Environment.
+
 .. toctree::
    :numbered:
    :caption: This class covers the following topics:
    :maxdepth: 2
    :glob:
 
-   introduction
    labinfo
    module*/module*
    conclusion
