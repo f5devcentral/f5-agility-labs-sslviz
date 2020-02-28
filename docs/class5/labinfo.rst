@@ -21,7 +21,10 @@ service type.
      - 10.1.20.1
      -
    * - Login
-     - admin:admin \| root:default
+     - admin:admin root:default
+     -
+   * - 
+     - root:default
      -
    * - Interfaces
      - Client VLAN
@@ -30,13 +33,43 @@ service type.
      - Outbound VLAN
      - 1.2
    * -
-     - Explicit Proxy service
+     - Inline L2 service inbound
+     - 1.4
+   * -
+     - Inline L2 service outbound
+     - 1.5
+   * -
+     - Inline L3/HTTP services
      - 1.6 (tagged)
    * -
      - TAP service
      - 1.7
 
-.. list-table:: **Explicit proxy service**
+.. list-table:: **Inline Layer 2 service**
+   :header-rows: 0
+   :widths: auto
+
+   * - Login
+     - student:agility
+
+.. list-table:: **Inline Layer 3 service**
+   :header-rows: 0
+   :widths: auto
+
+   * - Login
+     - student:agility
+     -
+     -
+   * - Interfaces
+     - Inbound interface
+     - 1.6 tag 10
+     - 198.19.64.65/25
+   * -
+     - Outbound interface
+     - 1.6 tag 20
+     - 198.19.64.130/25
+
+.. list-table:: **Explicit proxy (HTTP) service**
    :header-rows: 0
    :widths: auto
 
@@ -70,33 +103,19 @@ service type.
    * - MAC Address
      - 12:12:12:12:12:12 (arbitrary if directly connected)
 
-.. list-table:: **Active Directory Server and Client machine to test password-less authentication (Windows 2016 server)**
+.. list-table:: **Windows 10 client**
    :header-rows: 0
    :widths: auto
 
-   * - Client VLAN address
-     - 10.1.10.200
+   * - IP address
+     - 10.1.10.50
      -
-   * - Login Credentials
-     - **AD Group/Username**
+   * - Logins
+     - **Username**
      - **Password**
    * -
-     - Accounting/ac-user1, 2 & 3
-     - Same as username
+     - F5LABS\\mike
+     - agility
    * -
-     - Content-creators/cc-user1, 2 & 3
-     - Same as username
-   * -
-     - CSO-Office/cs-user1, 2 & 3
-     - Same as username
-   * -
-     - HR/hr-user1, 2 & 3
-     - Same as username
-   * -
-     - IT/it-user1, 2 & 3
-     - Same as username
-   * -
-     - Security-Admins/sa-user1, 2 & 3
-     - Same as username
-
-|
+     - F5LABS\\jane
+     - agility
