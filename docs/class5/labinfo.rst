@@ -21,7 +21,7 @@ service type.
      - 10.1.20.1
      -
    * - Login
-     - admin:admin root:default
+     - admin:admin
      -
    * - 
      - root:default
