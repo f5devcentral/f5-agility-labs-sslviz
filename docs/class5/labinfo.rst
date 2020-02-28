@@ -45,6 +45,23 @@ service type.
      - TAP service
      - 1.7
 
+.. list-table:: **Windows 10 client**
+   :header-rows: 0
+   :widths: auto
+
+   * - IP address
+     - 10.1.10.50
+     -
+   * - Logins
+     - **Username**
+     - **Password**
+   * -
+     - F5LABS\\mike
+     - agility
+   * -
+     - F5LABS\\jane
+     - agility
+
 .. list-table:: **Inline Layer 2 service**
    :header-rows: 0
    :widths: auto
@@ -102,20 +119,3 @@ service type.
      - root:default
    * - MAC Address
      - 12:12:12:12:12:12 (arbitrary if directly connected)
-
-.. list-table:: **Windows 10 client**
-   :header-rows: 0
-   :widths: auto
-
-   * - IP address
-     - 10.1.10.50
-     -
-   * - Logins
-     - **Username**
-     - **Password**
-   * -
-     - F5LABS\\mike
-     - agility
-   * -
-     - F5LABS\\jane
-     - agility
