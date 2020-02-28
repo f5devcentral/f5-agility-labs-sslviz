@@ -1,46 +1,54 @@
+.. role:: red
+.. role:: bred
+
 SSL Orchestrator Lab Environment
 ================================
 
-The lab environment for this guide has provided some prerequisite
-settings that you should be aware of. These are provided to make the
-demo simpler. All of the following would need to be configured manually
-in another environment.
+.. TODO:: Update instructions for new Agility Lab portal when available
+
+
+To access your lab and lookup the necessary IP addresses, you should have
+received an email with your personal "Lab Portal Link". Once attached you
+should have something similar to the following image. Highlighted is the "Lab
+Guide" and the VM's you'll spend all of your time attached to.
+
+.. image:: images/labinfo-1.png
+
+.. important:: The lab environment for this guide has provided some
+   prerequisite settings that you should be aware of. These are provided to
+   make the demo simpler. All of the following would need to be configured
+   manually in another environment.
+
+.. attention:: Most of this lab can be accomplished by directly attaching to
+   the BIG-IP GUI. Within your assigned Ravello lab lookup the IP, open new
+   tab and goto https://<assigned_IP>
+
+   The following information is based on our custom :bred:`UDF` blue print
+   "SSL Orchestrator 7.1 Lab".
 
 -  **Client side VLAN and subnet are pre-defined** - this is the VLAN
-   that an internal client connects to for outbound traffic flows.
-   SSLO does not define the client-side VLAN(s) and self-IP(s). A
-   web server also exists on the client side VLAN to facilitate an
-   inbound (reverse proxy) use case - external client to an internal
-   set of websites.
+   that an internal client connects to for outbound traffic flows. SSLO
+   does not define the client-side VLAN(s) and self-IP(s). A web server
+   also exists on the client side VLAN to facilitate an inbound (reverse
+   proxy) use case - external client to an internal set of websites.
 
 -  **Outbound side VLAN and subnet are pre-defined** - this is the VLAN
-   that traffic egresses from SSLO to the Internet gateway. SSLO
-   does not define the server-side VLAN(s) and self-IP(s).
+   that traffic egresses from SSLO to the Internet gateway. SSLO does
+   not define the server-side VLAN(s) and self-IP(s).
 
 -  **ICAP service VLAN and subnet are pre-defined** - SSLO does not
    define the networking for this service type, so it has been
    pre-created in this lab.
 
--  **Required objects and Access policy for password-less authentication**
-   have been pre-created - These objects are created using the APM
-   module of F5. To maintain the focus on SSLO, these have been
-   pre-created and provided for easy configuration for SSLO. In a
-   production environment these will have to be created from
-   scratch.
-
 -  **CA certificate and private key are installed** - this is the CA
-   certificate and private key that are used to re-issue (forge)
-   remote server certificates to internal clients for outbound
-   traffic flows.
+   certificate and private key that are used to re-issue (forge) remote
+   server certificates to internal clients for outbound traffic flows.
 
 -  **Server certificate and private key are installed** - for the
    inbound (reverse proxy) traffic flow use case, SSL traffic is
    terminated at the F5, and re-encrypted on the way to the internal
-   application environment. A wildcard server certificate is
-   installed to facilitate using any name under the
-   ".\ *f5labs.com*\ " sub-domain.
-
-
+   application environment. A wildcard server certificate is installed
+   to facilitate using any name under the ":red:`.f5labs.com`" sub-domain.
 
 .. tip:: It is a security best practice to isolate security devices
    within the protected network enclaves provided by SSLO. Customers will
@@ -57,6 +65,7 @@ in another environment.
    security best practices, or simply need different networking settings,
    you can disable the Auto Manage option and define all of the required
    inbound and outbound networking setting manually.
+
 
 .. list-table:: **SSL Orchestrator**
    :header-rows: 0
@@ -197,39 +206,6 @@ in another environment.
    * - IP address
      - 10.1.20.55 (RDP and SSH)
 
-
-.. list-table:: **Active Directory Server and Client machine to test password-less authentication (Windows 2016 server)**
-   :header-rows: 0
-   :widths: auto
-
-   * - AD server management IP
-     - 10.1.1.x (UDF-managed)
-     -
-   * - Client VLAN address
-     - 10.1.10.200
-     -
-   * - Login Credentials
-     - **AD Group/Username**
-     - **Password**
-   * -
-     - Accounting/ac-user1, 2 & 3
-     - Same as username
-   * -
-     - Content-creators/cc-user1, 2 & 3
-     - Same as username
-   * -
-     - CSO-Office/cs-user1, 2 & 3
-     - Same as username
-   * -
-     - HR/hr-user1, 2 & 3
-     - Same as username
-   * -
-     - IT/it-user1, 2 & 3
-     - Same as username
-   * -
-     - Security-Admins/sa-user1, 2 & 3
-     - Same as username
-
 |
 
 The following is a visual representation of this Ravello lab
@@ -240,3 +216,4 @@ service type.
 
 .. image:: images/labinfo-2.png
    :align: center
+
