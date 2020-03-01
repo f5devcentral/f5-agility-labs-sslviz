@@ -10,10 +10,11 @@ Accessing the Virtual Lab
 
 .. TODO:: Update instructions for new Agility Lab portal when available
 
-To access your lab and lookup the necessary IP addresses, you should have
-received an email with your personal "Lab Portal Link". Once attached you
-should have something similar to the following image. Highlighted is the "Lab
-Guide" and the VM's you'll spend all of your time attached to.
+To access your lab:
+-  <fill in the blank>
+
+Once connected to your lab environment, you should see the following resources
+in the **Compenents** tab.
 
 .. image:: images/labinfo-1.png
 
@@ -30,8 +31,8 @@ Lab Details
    the BIG-IP GUI. Within your assigned lab lookup the IP, open new
    tab and goto https://<assigned_IP>
 
-   The following information is based on our custom :bred:`UDF` blue print
-   "SSL Orchestrator 7.1 Lab".
+   The following information is based on our custom :bred:`UDF` blue print named
+   :bred:`Agility 2020 - Essential SSL Visibility with SSLO`.
 
 -  **Client side VLAN and subnet are pre-defined** - this is the VLAN
    that an internal client connects to for outbound traffic flows. SSLO
