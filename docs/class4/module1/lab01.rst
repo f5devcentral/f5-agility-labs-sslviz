@@ -11,10 +11,11 @@ This lab will attach one of each type of security service (HTTP, ICAP, L2, L3,
 TAP) to SSLO for an outbound forward proxy traffic flow. Afterwards, an
 internal client will be able to access remote (Internet) resources
 through SSLO, providing decrypted, inspectable traffic to the security
-services.
+services. Open a **TMUI (HTTPS)** session from your browser (Chrome preferred)
+to the **BIGIP SSLO Primary**.
 
 -  The client is attached to a :red:`10.1.10.0/24` network and is assigned the
-   IP :red:`10.1.10.60`. This network is attached to the BIG-IP 1.1 interface.
+   IP :red:`10.1.10.50`. This network is attached to the BIG-IP 1.1 interface.
 
 -  The **L2 device** is an Ubuntu 14.04 LTS server configured to bridge its eth1
    and eth2 interfaces. Its inbound VLAN (traffic to it) is attached to the

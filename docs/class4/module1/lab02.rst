@@ -4,9 +4,7 @@
 Fulfill the SSL Orchestrator pre-requisites
 ===================================================
 
-There are a number of objects that SSL Orchestrator does not create and expects
-to exist before deploying the iApp. You must create the following objects
-before starting the iApp:
+There are a number of objects that SSL Orchestrator does not create and expects to exist before deploying an SSL Orchestrator configuration. You must create the following objects before starting the Guided Configuration:
 
 -  **Import the CA certificate and private key** - in order to terminate and
    re-encrypt outbound SSL traffic, SSL Forward Proxy must re-issue, or rather
@@ -35,7 +33,7 @@ before starting the iApp:
 -  **Create the default internet route for outbound traffic** - the iApp
    provides an option to leverage a defined gateway pool or use the system
    default route. If a gateway pool is not used, the system route table will
-   need to have a default route used to reach Internet destinations. :red:`We'll
+   need to have a default route used to reach Internet destinations. :red:`We will
    use a gateway pool defined within SSLO`.
 
 

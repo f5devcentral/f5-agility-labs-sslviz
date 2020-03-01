@@ -1,5 +1,5 @@
-Class 5: Agility 2020 - SSLO 201: More SSL Orchestrator Use Cases
-=================================================================
+Class 5: SSL Orchestration v7 - SSLO 201: More SSL Orchestrator Use Cases (Agility 2020 - 2 hours)
+==================================================================================================
 
 As organizational requirements change, so does the need to update security polices and apply
 additional features to existing F5 SSL Orchestrator deployments.  There is no need to fear

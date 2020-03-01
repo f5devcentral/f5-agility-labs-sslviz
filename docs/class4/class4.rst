@@ -1,5 +1,5 @@
-Class 4: Agility 2020 - SSLO 101: Essential SSL Visibility with SSL Orchestrator
-================================================================================
+Class 4: SSL Orchestration v7 - SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2020 - 2 hours)
+=================================================================================================================
 
 As the volume of data continues to grow at a rapid pace, more organizations are
 deploying Secure Socket Layer (SSL) and Transport Layer Security (TLS) solutions
@@ -23,6 +23,7 @@ Attend this lab to get a hands-on introduction to the F5 SSL Orchestrator soluti
 Expected time to complete: **2 hours**
 
 .. toctree::
+   :numbered:
    :caption: This class covers the following topics:
    :maxdepth: 2
    :glob:

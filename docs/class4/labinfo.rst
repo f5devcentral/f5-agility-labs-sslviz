@@ -4,8 +4,11 @@
 SSL Orchestrator Lab Environment
 ================================
 
-.. TODO:: Update instructions for new Agility Lab portal when available
 
+Accessing the Virtual Lab
+-------------------------
+
+.. TODO:: Update instructions for new Agility Lab portal when available
 
 To access your lab and lookup the necessary IP addresses, you should have
 received an email with your personal "Lab Portal Link". Once attached you
@@ -14,13 +17,17 @@ Guide" and the VM's you'll spend all of your time attached to.
 
 .. image:: images/labinfo-1.png
 
-.. important:: The lab environment for this guide has provided some
+
+Lab Details
+-----------
+
+.. IMPORTANT:: The lab environment for this guide has provided some
    prerequisite settings that you should be aware of. These are provided to
-   make the demo simpler. All of the following would need to be configured
+   make the lab simpler. All of the following items would need to be configured
    manually in another environment.
 
-.. attention:: Most of this lab can be accomplished by directly attaching to
-   the BIG-IP GUI. Within your assigned Ravello lab lookup the IP, open new
+.. ATTENTION:: Most of this lab can be accomplished by directly attaching to
+   the BIG-IP GUI. Within your assigned lab lookup the IP, open new
    tab and goto https://<assigned_IP>
 
    The following information is based on our custom :bred:`UDF` blue print
@@ -28,9 +35,7 @@ Guide" and the VM's you'll spend all of your time attached to.
 
 -  **Client side VLAN and subnet are pre-defined** - this is the VLAN
    that an internal client connects to for outbound traffic flows. SSLO
-   does not define the client-side VLAN(s) and self-IP(s). A web server
-   also exists on the client side VLAN to facilitate an inbound (reverse
-   proxy) use case - external client to an internal set of websites.
+   does not define the client-side VLAN(s) and self-IP(s).
 
 -  **Outbound side VLAN and subnet are pre-defined** - this is the VLAN
    that traffic egresses from SSLO to the Internet gateway. SSLO does
@@ -50,7 +55,7 @@ Guide" and the VM's you'll spend all of your time attached to.
    application environment. A wildcard server certificate is installed
    to facilitate using any name under the ":red:`.f5labs.com`" sub-domain.
 
-.. tip:: It is a security best practice to isolate security devices
+.. TIP:: It is a security best practice to isolate security devices
    within the protected network enclaves provided by SSLO. Customers will
    often desire NOT to move or change existing security services. However,
    while possible with SSLO 4.0 and beyond, passing this decrypted traffic
@@ -208,7 +213,7 @@ Guide" and the VM's you'll spend all of your time attached to.
 
 |
 
-The following is a visual representation of this Ravello lab
+The following is a visual representation of this lab
 environment. The numbers inside the right edge of the SSL Orchestrator
 box indicate the port numbers assigned. The colored boxes to the right
 of the services indicate a few product examples for each respective

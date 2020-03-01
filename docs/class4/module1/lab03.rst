@@ -12,12 +12,8 @@ topology.
 .. image:: ../images/gc-path.png
    :align: center
 
-The following steps will walk through the Guided Configuration (GC) to build a
+The following steps will walk through the **Guided Configuration (GC)** UI to build a
 simple transparent forward proxy.
-
-.. note:: The following provides verbose details on each setting. For a
-   more concise set of lab steps, without details, skip to
-   `Appendix - Demo Scripts <../appendix/appendix2.html>`_
 
 
 Initialization
@@ -25,11 +21,12 @@ Initialization
 
 From the left-hand menu, navigate to
 :menuselection:`SSL Orchestrator > Configuration`. If this is the first
-time accessing SSLO in a new BIG-IP build, upon first access, Guided
-Configuration will automatically load and deploy the built-in SSLO package.
+time accessing SSLO in a new BIG-IP build, the Guided Configuration UI will
+automatically load and deploy the built-in SSLO package.
 
 .. image:: ../images/module1-1.png
    :align: center
+
 
 Configuration review and prerequisites
 -------------------------------------------
@@ -40,7 +37,7 @@ from this page. Keep in mind, however, that aside from NTP, the SSLO GC will
 provide an opportunity to define DNS and route settings later in the workflow.
 No other configurations are required on this page, click :guilabel:`Next`.
 
-.. note:: DNS settings have already been defined in this lab.
+.. note:: DNS and NTP settings have already been defined in this lab.
 
 .. image:: ../images/module1-2.png
    :align: center
@@ -56,7 +53,7 @@ on the selected topology. For example, in previous versions of SSLO,
 a transparent and explicit forward proxy might be defined together.
 In SSLO 5.0 and above, these are configured separately. An explicit
 forward proxy topology will ultimately create an explicit proxy
-listener and its relying transparent proxy lister, but the
+listener and its relying transparent proxy listener, but the
 transparent listener will be bound only to the explicit proxy tunnel.
 If a subsequent transparent forward proxy topology is configured, it
 will not overlap the existing explicit proxy objects. The Topology
@@ -65,7 +62,7 @@ Properties page provides the following options:
 The **Protocol** option presents four protocol types:
 
 -  **TCP** - this option creates a single TCP wildcard interception
-   rule for the L3 Inbound, L3 Outbound L3, and L3 Explicit Proxy
+   rule for the L3 Inbound, L3 Outbound, and L3 Explicit Proxy
    topologies.
 
 -  **UDP** - this option creates a single UDP wildcard interception
@@ -85,7 +82,7 @@ topologies:
    proxy.
 
 -  **L3 Outbound** - this is the traditional transparent forward
-   proxy. An L3 inbound topology is effectively a "routed hop"
+   proxy. An L3 outbound topology is effectively a "routed hop"
    configuration, where the SSLO topology listener becomes a routed
    path on the way to external (ie. Internet) resources.
 
@@ -836,9 +833,8 @@ workflow.
    "server-speaks-first" protocols, and therefore SSLO must process these
    separately from typical client-speaks-first protocols like HTTP. This
    selection enables processing of each of these protocols, which create
-   separate port-based listeners for each. As required, :red:`selectively enable
-   the additional protocols that need to be decrypted and inspected` through
-   SSLO.
+   separate port-based listeners for each. In our lab, :red:`selectively enable
+   FTP` through SSLO.
 
    .. note:: This is optional. Including or not including has no bearing on the
       lab. This is for reference only.
@@ -944,10 +940,9 @@ In the above list:
 
 - The **-ot-4** listener defines normal non-TCP/non-UDP IPv4 traffic.
 
-- The **-ftp, -ftps, -pop3, -smtp25, -smtp587** listeners create paths for each
-  respective protocol.
+- The **-ftp, -ftps** listeners create paths for each respective protocol.
 
 .. note:: This completes the configuration of SSL Orchestrator as a
-   transparent forward proxy. At this point an internal client should be able
-   to browse out to external (Internet) resources, and decrypted traffic will
-   flow across the security services.
+   transparent forward proxy. At this point, an internal client
+   :red:`(Desktop-Outbound)` should be able to browse out to external (Internet)
+   resources, and decrypted traffic will flow across the security services.
