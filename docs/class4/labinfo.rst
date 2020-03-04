@@ -14,24 +14,31 @@ To access your lab:
 -  <fill in the blank>
 
 Once connected to your lab environment, you should see the following resources
-in the **Compenents** tab.
+in the **Components** tab.
 
 .. image:: images/labinfo-1.png
+   :align: center
+
+To connect to a component, click on the **ACCESS**
+drop-down and select either the **TMUI**, **SSH**, **RDP** option.
+
+.. image:: images/labinfo-2.png
+   :align: center
 
 
 Lab Details
 -----------
+
+Most of this lab can be accomplished by directly attaching to
+the BIG-IP GUI.
 
 .. IMPORTANT:: The lab environment for this guide has provided some
    prerequisite settings that you should be aware of. These are provided to
    make the lab simpler. All of the following items would need to be configured
    manually in another environment.
 
-.. ATTENTION:: Most of this lab can be accomplished by directly attaching to
-   the BIG-IP GUI. Within your assigned lab lookup the IP, open new
-   tab and goto https://<assigned_IP>
 
-   The following information is based on our custom :bred:`UDF` blue print named
+   The following information is based on a custom :bred:`UDF` blue print named
    :bred:`Agility 2020 - Essential SSL Visibility with SSLO`.
 
 -  **Client side VLAN and subnet are pre-defined** - this is the VLAN
@@ -77,7 +84,7 @@ Lab Details
    :header-rows: 0
    :widths: auto
 
-   * - BIG-IP Management IP
+   * - BIG-IP SSLO Management IP
      - 10.1.1.x (UDF-managed)
      -
    * - Gateway IP/DNS
@@ -220,6 +227,6 @@ box indicate the port numbers assigned. The colored boxes to the right
 of the services indicate a few product examples for each respective
 service type.
 
-.. image:: images/labinfo-2.png
+.. image:: images/labinfo-3.png
    :align: center
 

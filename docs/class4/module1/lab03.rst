@@ -35,18 +35,20 @@ Take a moment to review the topology options and workflow configuration steps
 involved. Optionally satisfy any of the :red:`DNS, NTP and Route` prerequisites
 from this page. Keep in mind, however, that aside from NTP, the SSLO GC will
 provide an opportunity to define DNS and route settings later in the workflow.
-No other configurations are required on this page, click :guilabel:`Next`.
 
-.. note:: DNS and NTP settings have already been defined in this lab.
+.. NOTE::
+   DNS and NTP settings have already been defined in this lab.
 
 .. image:: ../images/module1-2.png
    :align: center
 
-.. image:: ../images/gc-path.png
-   :align: center
+-  No other configurations are required on this page, click :guilabel:`Next`.
 
 Topology Properties
 -----------------------
+
+.. image:: ../images/gc-path-1.png
+   :align: center
 
 SSLO creates discreet configurations based
 on the selected topology. For example, in previous versions of SSLO,
@@ -121,10 +123,10 @@ topologies:
    SSLO-type access policy and per-request policy that can easily be
    consumed by an LTM virtual server.
 
-   .. image:: ../images/module1-3.png
-      :align: center
 
 **For this lab:**
+
+-  Click on the :guilabel:`Next` button at the bottom of the page.
 
 -  **Name**: Enter some name (ex. ":red:`demoL3`").
 
@@ -135,10 +137,19 @@ topologies:
 
 -  **Topology**: Select :guilabel:`L3 Outbound`
 
-- Click :guilabel:`Save & Next.`
+   .. image:: ../images/module1-3.png
+      :align: center
+
+The **Topology** settings have been configured.
+
+-  Click :guilabel:`Save & Next` to continue to the next stage.
+
 
 SSL Configurations
 ----------------------
+
+.. image:: ../images/gc-path-2.png
+   :align: center
 
 This page defines the specific SSL settings for the selected topology (in this
 case a forward proxy) and controls both client-side and server-side SSL
@@ -149,12 +160,13 @@ available when "Show Advanced Settings" is enabled (top right).
 
 For this lab, :guilabel:`Create a new SSL profile`.
 
+
 Client-side SSL
 ~~~~~~~~~~~~~~~
 
--  **[Advanced] Processing Options** - SSLO 7.1 now provides TLS
-   1.3 support for outbound topologies. TLS 1.3 configuration is
-   described in a later lab, so for now leave this as is.
+-  **[Advanced] Processing Options** - SSLO 7.1 added TLS 1.3 support
+   for outbound topologies, but does not enable it by default. In this lab,
+   leave this setting as is.
 
 -  **Cipher Type** - cipher type can be a Cipher Group or Cipher String.
    If the former, select a previously-defined cipher group (from Local
@@ -194,12 +206,13 @@ Client-side SSL
    :red:`subrsa.f5labs.com` for both Certificate and Key, and
    click :red:`Done`.
 
-.. NOTE:: SSL Settings minimally require RSA-based template and CA
-      certificates but can also support Elliptic Curve (ECDSA)
-      certificates. In this case, SSLO would forge an EC certificate
-      to the client if the TLS handshake negotiated an ECDHE_ECDSA
-      cipher. To enable EC forging support, add both an EC template
-      certificate and key, and EC CA certificate and key.
+.. NOTE::
+   SSL Settings minimally require RSA-based template and CA
+   certificates but can also support Elliptic Curve (ECDSA)
+   certificates. In this case, SSLO would forge an EC certificate
+   to the client if the TLS handshake negotiated an ECDHE_ECDSA
+   cipher. To enable EC forging support, add both an EC template
+   certificate and key, and EC CA certificate and key.
 
 -  **[Advanced] Bypass on Handshake Alert** - this setting allows
    the underlying SSL Forward Proxy process to bypass SSL
@@ -213,7 +226,8 @@ Client-side SSL
    certificate authentication. It is recommended to leave this
    :red:`disabled`.
 
-   .. note:: The above two Bypass options can create a security vulnerability. If
+   .. NOTE::
+      The above two Bypass options can create a security vulnerability. If
       a colluding client and server can force an SSL handshake error, or
       force client certificate authentication, they can effectively bypass
       SSL inspection. It is recommended that these settings be left
@@ -222,9 +236,9 @@ Client-side SSL
 Server-side SSL
 ~~~~~~~~~~~~~~~
 
--  **[Advanced] Processing Options** - SSLO 7.1 now provides TLS 1.3
-   support for outbound topologies. TLS 1.3 configuration is
-   described in a later lab, so for now leave this as is.
+-  **[Advanced] Processing Options** - SSLO 7.1 added TLS 1.3 support
+   for outbound topologies, but does not enable it by default. In this lab,
+   leave this setting as is.
 
 -  **Cipher Type** - cipher type can be a Cipher Group or Cipher
    String. If the former, select a previously-defined cipher group
@@ -279,10 +293,18 @@ Server-side SSL
    List (CRL) validation. With this enabled, SSLO attempts to match
    server certificates to locally-cached CRLs.
 
-Click :guilabel:`Save & Next`.
+The **SSL** settings have now been configured.
+
+-  Click :guilabel:`Save & Next` to continue to the next stage.
+
+.. image:: ../images/module1-4.png
+
 
 Services List
 -----------------
+
+.. image:: ../images/gc-path-3.png
+   :align: center
 
 The Services List page is used to define security
 services that attach to SSLO. The SSLO Guided Configuration now
@@ -292,7 +314,7 @@ five basic service types. The service catalog also provides "generic"
 security services. Depending on screen resolution, it may be
 necessary to scroll down to see additional services.
 
-.. image:: ../images/module1-4.png
+.. image:: ../images/module1-5.png
 
 This lab will create one of each type of security service. Click :guilabel:`Add
 Service`, then either select a service from the catalog and
@@ -332,8 +354,8 @@ Inline layer 2 service
 
    - Click :guilabel:`Done`.
 
--  **Device Monitor** - (v6.0+) security service definitions can use
-   specify custom monitors. For this lab, leave it set to the default
+-  **Device Monitor** - security service definitions can use
+   specific custom monitors. For this lab, leave it set to the default
    :red:`/Common/gateway_icmp`.
 
 -  **Service Action Down** - SSLO also natively monitors the load balanced
@@ -344,9 +366,9 @@ Inline layer 2 service
 -  **Enable Port Remap** - this setting allows SSLO to remap the port of
    HTTPS traffic flowing across this service. This is advantageous when a
    security service defines port 443 traffic as encrypted HTTPS and natively
-   ignores it. By remapping HTTPS traffic to, say, port 8080, the security
+   ignores it. By remapping HTTPS traffic to a different port number, the security
    service will inspect the traffic. For this lab, :red:`enable (check)` this
-   option and enter a port value (ex. :red:`8080`).
+   option and enter a Remap Port value of :red:`8080`.
 
 -  **iRules** - SSLO allows for the insertion of additional iRule logic
    at different points. An iRule defined at the service only affects traffic
@@ -355,7 +377,7 @@ Inline layer 2 service
    virtuals, etc.), but rather should be used to view/modify application
    layer protocol traffic. For example, an iRule assigned here could be used
    to view and modify HTTP traffic flowing to/from the service. Additional
-   iRules are not required, however, so leave this :red:`empty`.
+   iRules are not required here so leave this :red:`empty`.
 
 -  Click :guilabel:`Save`.
 
@@ -379,15 +401,15 @@ Inline layer 3 service
    must be configured manually. It is recommended to leave this option
    :red:`enabled (checked)`.
 
-   .. note:: In environments where SSLO is introduced to existing security
+   .. ATTENTION:: In environments where SSLO is introduced to existing security
       devices, it is a natural tendency to not want to have to move these
       devices. And while SSLO certainly allows it, by not moving the security
-      devices into SSLO-protected enclaves, customers run the risk of exposing
-      sensitive decrypted traffic, unintentionally, to other devices that may
-      be connected to these existing networks. It is therefore *highly*
-      recommended, and a security best practice, to remove SSLO-integrated
-      security devices from existing networks and place them entirely within
-      the isolated enclave created and maintained by SSLO.
+      devices into SSLO-protected enclaves, customers unintentionally run the
+      risk of exposing sensitive decrypted traffic to other devices that may
+      be connected to these existing networks. As a security best practice, it
+      is *highly* recommended to remove SSLO-integrated security devices from
+      existing networks and place them entirely within the isolated enclave
+      that is created and maintained by SSLO.
 
 -  **To Service Configuration** - the "To Service" defines the network
    connectivity from SSLO to the inline security device.
@@ -413,6 +435,10 @@ Inline layer 3 service
    balanced IP addresses can be defined here. Click :guilabel:`Add`, enter
    :red:`198.19.64.64`, then click :guilabel:`Done`.
 
+-  **Device Monitor** - security service definitions can use
+   specific custom monitors. For this lab, leave it set to the default
+   :red:`/Common/gateway_icmp`.
+
 -  **From Service Configuration** - the "From Service" defines the network
    connectivity from the inline security device to SSLO.
 
@@ -430,10 +456,9 @@ Inline layer 3 service
 -  **Enable Port Remap** - this setting allows SSLO to remap the port of
    HTTPS traffic flowing across this service. This is advantageous when a
    security service defines port 443 traffic as encrypted HTTPS and natively
-   ignores it. By remapping HTTPS traffic to a different port number (for
-   example, port 8181), the security service will inspect the traffic.
-   For this lab, :red:`enable (check)` this option and enter a port
-   value (ex. :red:`8181`).
+   ignores it. By remapping HTTPS traffic to a different port number, the security
+   service will inspect the traffic. For this lab, :red:`enable (check)` this
+   option and enter a Remap Port value of :red:`8181`.
 
 -  **Manage SNAT Settings** - SSLO offers an option to enable SNAT
    (source NAT) across an inline layer 3/HTTP service. The primary use case
@@ -478,15 +503,15 @@ An inline HTTP service is defined as an explicit or transparent proxy for HTTP (
    must be configured manually. It is recommended to leave this option
    :red:`enabled (checked)`.
 
-   .. note:: In environments where SSLO is introduced to existing security
+   .. ATTENTION:: In environments where SSLO is introduced to existing security
       devices, it is a natural tendency to not want to have to move these
       devices. And while SSLO certainly allows it, by not moving the security
-      devices into SSLO-protected enclaves, customers run the risk of exposing
-      sensitive decrypted traffic, unintentionally, to other devices that may
-      be connected to these existing networks. It is therefore *highly*
-      recommended, and a security best practice, to remove SSLO-integrated
-      security devices from existing networks and place them entirely within
-      the isolated enclave created and maintained by SSLO.
+      devices into SSLO-protected enclaves, customers unintentionally run the
+      risk of exposing sensitive decrypted traffic to other devices that may
+      be connected to these existing networks. As a security best practice, it
+      is *highly* recommended to remove SSLO-integrated security devices from
+      existing networks and place them entirely within the isolated enclave
+      that is created and maintained by SSLO.
 
 -  **Proxy Type** - this defines the proxy mode that the inline HTTP service
    is in. For this lab, set this option to :red:`Explicit`.
@@ -519,8 +544,8 @@ An inline HTTP service is defined as an explicit or transparent proxy for HTTP (
    :guilabel:`Add`, enter :red:`198.19.96.66` for the IP Address, and
    :red:`3128` for the Port, then click :guilabel:`Done`.
 
--  **Device Monitor** - (v6.0+) security service definitions can use
-   specify custom monitors. For this lab, leave it set to the default
+-  **Device Monitor** - security service definitions can use
+   specific custom monitors. For this lab, leave it set to the default
    :red:`/Common/gateway_icmp`.
 
 -  **From Service Configuration** - the "From Service" defines the network
@@ -585,9 +610,13 @@ provides some set of services over the ICAP protocol.
    can be defined here. Click :guilabel:`Add`, enter :red:`10.1.30.50` for the
    IP Address, and :red:`1344` for the Port, and then click :guilabel:`Done`.
 
--  **ICAP Headers** - select either **Default** or **Custom** to specify
-   additional ICAP headers. To add custom headers, select Custom, otherwise
-   leave as :red:`Default`.
+-  **Device Monitor** - security service definitions can use
+   specific custom monitors. For this lab, leave it set to the default
+   :red:`/Common/tcp`.
+
+-  **ICAP Headers** - options are **Default** or **Custom**. Selecting
+   **Custom** allows you to specify additional ICAP headers. For this lab,
+   leave the setting at :red:`Default`.
 
 -  **OneConnect** - the F5 OneConnect profile improves performance by reusing
    TCP connections to ICAP servers to process multiple transactions. If the
@@ -617,7 +646,7 @@ provides some set of services over the ICAP protocol.
    In this lab, enter :red:`524288`.
 
 -  **Service Down Action** - SSLO also natively monitors the load balanced
-   pool of security devices, and if all pool members fail, can actively
+   pool of security devices. If all pool members fail, SSLO can actively
    bypass this service (**Ignore**), or stop all traffic (**Reset**,
    **Drop**). For this lab, leave it set to :red:`Ignore`.
 
@@ -661,10 +690,17 @@ A TAP service is a passive device that simply receives a copy of traffic.
 
 - Click :guilabel:`Save`.
 
-- Click :guilabel:`Save & Next`.
+The **Services** for this lab have now been configured.
+
+- Click :guilabel:`Save & Next` to continue to the next stage.
+
+.. image:: ../images/module1-6.png
 
 Service Chain List
 ----------------------
+
+.. image:: ../images/gc-path-4.png
+   :align: center
 
 Service chains are arbitrarily-ordered lists of security devices. Based on
 environmental requirements, different service chains may contain different
@@ -674,15 +710,15 @@ of the security services, while non-HTTP traffic goes through a subset, and
 traffic destined to a financial service URL can bypass decryption and still
 flow through a smaller set of security services.
 
-.. image:: ../images/module1-5.png
+.. image:: ../images/module1-7.png
 
 -  Click :guilabel:`Add` to create a new service chain containing all of the
    security services.
 
-   -  **Name** - provide a unique name to this service
+   -  **Name** - provide a unique name to this service chain
       (ex.":red:`all_services`").
 
-  -  **Services** - select any number of desired service and move them into the
+   -  **Services** - select any number of desired service and move them into the
       :guilabel:`Selected Service Chain Order` column, optionally also ordering
       them as required. In this lab, select :red:`all of the services` and then
       click the :guilabel:`rightward-pointing arrow` to move them to the
@@ -693,18 +729,25 @@ flow through a smaller set of security services.
 -  Click :guilabel:`Add` to create a new service chain for just the L2 (ex.
    FireEye) and TAP services.
 
-   -  **Name** - provide a unique name to this service (ex.
+   -  **Name** - provide a unique name to this service chain (ex.
       ":red:`L2_services`").
 
    -  **Services** - select and then move the :red:`FireEye` and :red:`TAP`
       services to the right-hand side.
 
-- Click :guilabel:`Save`.
+   - Click :guilabel:`Save`.
 
-- Click :guilabel:`Save & Next`.
+.. image:: ../images/module1-8.png
+
+The **Service Chains** have now been configured.
+
+- Click :guilabel:`Save & Next` to continue to the next stage.
 
 Security Policy
 -------------------
+
+.. image:: ../images/gc-path-5.png
+   :align: center
 
 Security policies are the set of rules that govern how traffic is processed in
 SSLO. The "actions" a rule can take include:
@@ -718,33 +761,36 @@ SSLO. The "actions" a rule can take include:
 The SSLO Guided Configuration presents an intuitive rule-based, drag-and-drop
 user interface for the definition of security policies.
 
-.. image:: ../images/module1-6.png
+.. image:: ../images/module1-9.png
 
-In the background, SSLO maintains these security policies as visual
-per-request policies. If traffic processing is required that exceeds the
-capabilities of the rule-based user interface, the underlying per-request
-policy can be managed directly.
+.. NOTE::
+   In the background, SSLO maintains these security policies as visual
+   per-request policies. If traffic processing is required that exceeds the
+   capabilities of the rule-based user interface, the underlying per-request
+   policy can be modified directly.
 
-.. note:: Once the per-request policy is manipulated, the rules-based interface
-   can no longer be used.
-
-For the lab, create an additional rule to bypass SSL for "Financial Data and
-Services" and "Health and Medicine" URL categories.
+.. ATTENTION::
+   If the per-request policy is modifed directly (outside of the
+   SSLO Guide Configuration UI), the SSLO UI can no longer be used afterwards
+   without losing your direct per-request policy modifications.
 
 Add a New Rule
 ~~~~~~~~~~~~~~
+
+In this lab, create an additional rule to bypass SSL for "Financial Data and
+Services" and "Health and Medicine" URL categories.
 
 -  Click :guilabel:`Add` to create a new rule.
 
 -  **Name** - provide a unique name for the rule (ex. ":red:`urlf_bypass`").
 
--  **Conditions**
+-  **Conditions** - Select **Category Lookup (All)** from the drop-down list
+   and then add the :red:`Financial Data and Services` and :red:`Health and Medicine`
+   URL categories. Start typing the category name to narrow the list.
 
-   -  **Category Lookup (All)** - add :red:`Financial Data and Services` and
-      :red:`Health and Medicine`.
-
-      .. note:: The Category Lookup (All) condition provides categorization for
-         TLS SNI, HTTP Connect and HTTP Host information.
+   .. NOTE::
+      The **Category Lookup (All)** condition provides categorization for
+      TLS SNI, HTTP Connect and HTTP Host information.
 
 -  **Action** - select :red:`Allow`.
 
@@ -755,42 +801,51 @@ Add a New Rule
 
 -  Click :guilabel:`OK`.
 
-   .. image:: ../images/module1-7.png
+   .. image:: ../images/module1-10.png
 
-Notice in the list of rules that the **All Traffic** rule intercepts but
-does not send traffic to a service chain. For the lab, edit this rule to
+In the list of rules, notice that the **All Traffic** rule intercepts but
+does *not* send traffic to any service chain. For the lab, edit this rule to
 send all intercepted traffic to a service chain.
 
 -  Click the pencil icon to :guilabel:`edit` this rule.
 
--  Service Chain - select the service chain containing :red:`all` of the
+-  **Service Chain** - select the service chain containing :red:`all` of the
    services.
 
 -  Click :guilabel:`OK`.
 
-.. image:: ../images/module1-8.png
+   .. image:: ../images/module1-11.png
 
--  **Server Certificate Status Check** - (v6.0+) this option
+-  **Server Certificate Status Check** - this option
    inserts additional security policy logic to validate the remote
    server certificate and return a blocking page to the user if the
    certificate is untrusted or expired. One or both of the Certificate
    Response options on the SSL Configuration page (Expire Certificate
-   Response and Untrusted Certificate Response) must be set to ‘ignore’.
-   SSLO will "mask" the server certificate’s attributes in order to
-   present a blocking page with a valid forged certificate. For this
-   lab, either option (enabled or disabled) is acceptable.
+   Response and Untrusted Certificate Response) must be set to 'ignore'.
+   SSLO will "mask" the server certificate's attributes in order to
+   present a blocking page with a valid forged certificate. For this lab,
+   leave this option disabled.
 
--  Click :guilabel:`Save & Next`.
+-  Proxy Connect - this option allow you to add an upstream explicit proxy
+   to your security rule chaining. You can add multiple proxy devices, or
+   pool members, as necessary. For this lab, leave this option disabled.
+
+
+The **Security Policy** has now been configured.
+
+-  Click :guilabel:`Save & Next` to continue to the next stage.
+
 
 Interception Rule
 ---------------------
 
-Interception rules are based on the selected
-topology and define the "listeners", analogous to LTM virtual
-servers, that accept and process different types of traffic (ex. TCP,
-UDP, other). The resulting LTM virtual servers will bind the SSL
-settings, VLANs, IPs, and security policies created in the topology
-workflow.
+.. image:: ../images/gc-path-6.png
+   :align: center
+
+Interception rules are based on the selected topology and define the "listeners"
+that accept and process different types of traffic (ex. TCP, UDP, other). The
+resulting LTM virtual servers will bind the SSL settings, VLANs, IPs, and
+security policies created in the topology workflow.
 
 -  **Source Address** - the source address field provides a filter
    for incoming traffic based on source address and/or source subnet.
@@ -804,16 +859,17 @@ workflow.
    default :red:`0.0.0.0%0/0` setting applied to allow all
    outbound traffic to be processed.
 
--  **Ingress Network - VLANs** - this defines the VLANs through which
-   traffic will enter. For a transparent forward proxy topology, this
-   would be a client-side VLAN. Select :red:`client-vlan`.
+-  **Ingress Network - VLANs** - this defines the VLANs through which traffic
+   will enter. For a transparent forward proxy topology, this would be a
+   client-side VLAN. Select :red:`client-vlan` and move it to the right-hand
+   side.
 
 -  **Security Policy Settings - Access Profile** - the Access Profile
    selection is exposed for both explicit and transparent forward
    proxy topology deployments. In transparent forward proxy mode,
    this allows selection of an access policy to support captive
-   portal authentication (covered later in this guide). For this lab,
-   leave this setting as :red:`default`.
+   portal authentication. For this lab,
+   leave the default selection.
 
 -  **L7 Interception Rules - Protocols** - FTP and email protocol
    traffic are all "server-speaks-first" protocols, and therefore
@@ -824,51 +880,59 @@ workflow.
    enable the additional protocols that need to be decrypted and
    inspected` through SSLO.
 
--  **Ingress Network (VLANs)** - this defines the VLANs through which traffic
-   will enter. For a transparent forward proxy topology, this would be a
-   client-side VLAN. Select :red:`client-net` and move it to the right-hand
-   side.
+-  **L7 Interception Rules - Protocols** - FTP and email protocol traffic
+   are all "server-speaks-first" protocols, and therefore SSLO must process
+   these separately from typical client-speaks-first protocols like HTTP. This
+   *optional* selection enables processing of each of these protocols, which create
+   separate port-based listeners for each. In this lab, select :red:`FTP` and
+   move it to the right-hand side.
 
--  **L7 Interception Rules** - FTP and email protocol traffic are all
-   "server-speaks-first" protocols, and therefore SSLO must process these
-   separately from typical client-speaks-first protocols like HTTP. This
-   selection enables processing of each of these protocols, which create
-   separate port-based listeners for each. In our lab, :red:`selectively enable
-   FTP` through SSLO.
+.. image:: ../images/module1-12.png
 
-   .. note:: This is optional. Including or not including has no bearing on the
-      lab. This is for reference only.
+The **Interception Rules** have now been configured.
 
--  Click :guilabel:`Save & Next`.
+-  Click :guilabel:`Save & Next` to continue to the next stage.
+
 
 Egress Setting
 ------------------
 
+.. image:: ../images/gc-path-7.png
+   :align: center
+
 Traffic egress settings are now defined per-topology and manage both the
-gateway route and outbound SNAT settings.
+default gateway route and outbound SNAT settings.
 
 -  **Manage SNAT Settings** - enables per-topology instance SNAT settings. For
    this lab, select :red:`Auto Map`.
 
--  **Gateways** - enables per-topology instance gateway routing. Options are
-   to use the system default route, to use an existing gateway pool, or to
+-  **Gateways** - enables per-topology instance gateway routing. The options
+   include: use the system Default Route, use an existing gateway pool, or
    create a new gateway. For this lab, select :red:`Create New`.
 
 -  **IPv4 Outbound Gateways** - when creating a new gateway, this section
    provides the ratio and gateway address settings.
 
--  **Ratio** - multiple gateway IP addresses are load balanced in an LTM pool,
-   and the ratio setting allows SSLO to proportion traffic to the gateway
-   members, as required. A ratio on 1 for all members evenly distributes the
-   load across them. For this lab, select :red:`1`.
+   -  **Ratio** - multiple gateway IP addresses are load balanced in an LTM pool,
+      and the ratio setting allows SSLO to proportion traffic to the gateway
+      members, as required. A ratio of 1 for all members evenly distributes the
+      load across them. For this lab, select :red:`1`.
 
--  **Address** - this is the next hop gateway IP address. For this lab, enter
-   :red:`10.1.20.1`.
+   -  **Address** - this is the next hop gateway IP address. For this lab, enter
+      :red:`10.1.20.1`.
 
--  Click :guilabel:`Save & Next`.
+.. image:: ../images/module1-13.png
+
+The **Egress Settings** have now been configured.
+
+-  Click :guilabel:`Save & Next` to continue to the next stage.
+
 
 Log Settings
 -----------------
+
+.. image:: ../images/gc-path-8.png
+   :align: center
 
 Log settings are defined per-topology. In
 environments where multiple topologies are deployed, this can help to
@@ -881,38 +945,46 @@ Multiple discreet logging options are available:
    processing. In Debug mode, this log facility produces an enormous
    amount of traffic, so it is recommended to only set Debug mode for
    troubleshooting. Otherwise the most appropriate setting is :red:`Error`
-   to only log error conditions.
+   to log only error conditions.
 
 -  **FTP** - specifically logs error conditions for the built-in FTP
    listener when FTP is selected among the additional protocols in
    the Interception Rule configuration. The most appropriate setting
-   is :red:`Error` to only log error conditions.
+   is :red:`Error` to log only error conditions.
 
 -  **IMAP** - specifically logs error conditions for the built-in
    IMAP listener when IMAP is selected among the additional protocols
    in the Interception Rule configuration. The most appropriate
-   setting is :red:`Error` to only log error conditions.
+   setting is :red:`Error` to log only error conditions.
 
 -  **POP3** - specifically logs error conditions for the built-in
    POP3 listener when POP3 is selected among the additional protocols
    in the Interception Rule configuration. The most appropriate
-   setting is :red:`Error` to only log error conditions.
+   setting is :red:`Error` to log only error conditions.
 
 -  **SMTP** - specifically logs error conditions for the built-in
    SMTP listener when SMTP is selected among the additional protocols
    in the Interception Rule configuration. The most appropriate
-   setting is :red:`Error` to only log error conditions.
+   setting is :red:`Error` to log only error conditions.
 
 -  **SSL Orchestrator Generic** - provides log settings for generic
    SSLO processing. If Per-Request Policy logging is set to Error,
    and SSL Orchestrator Generic is set to Information, only the SSLO
    packet summary will be logged. Otherwise the most appropriate
-   setting is :red:`Error` to only log error conditions.
+   setting is :red:`Error` to log only error conditions.
 
--  Click :guilabel:`Save & Next`.
+
+.. image:: ../images/module1-14.png
+
+The **Log Settings** have now been configured.
+
+-  Click :guilabel:`Save & Next` to continue to the next stage.
 
 Summary
 ------------
+
+.. image:: ../images/gc-path-9.png
+   :align: center
 
 The summary page presents an expandable list of all of the workflow-configured
 objects. To expand the details for any given setting, click the corresponding
@@ -920,17 +992,20 @@ arrow icon on the far right. To edit any given setting, click the corresponding
 pencil icon. Clicking the pencil icon will send the workflow back to the
 selected settings page.
 
+
+.. image:: ../images/module1-15.png
+
 - When satisfied with the defined settings, click :guilabel:`Deploy`.
 
 Upon successfully deploying the configuration, SSL Orchestrator will now
 display a **Configure** view:
 
-.. image:: ../images/module1-9.png
+.. image:: ../images/module1-16.png
 
 The **Interception Rules** tab shows the listeners that were created per the
 selected topology.
 
-.. image:: ../images/module1-10.png
+.. image:: ../images/module1-17.png
 
 In the above list:
 
@@ -942,7 +1017,9 @@ In the above list:
 
 - The **-ftp, -ftps** listeners create paths for each respective protocol.
 
-.. note:: This completes the configuration of SSL Orchestrator as a
-   transparent forward proxy. At this point, an internal client
-   :red:`(Desktop-Outbound)` should be able to browse out to external (Internet)
-   resources, and decrypted traffic will flow across the security services.
+This completes the configuration of SSL Orchestrator as a
+transparent forward proxy.
+
+In the next section, you will use an internal client
+:red:`(Desktop-Outbound)` to browse to external (Internet)
+resources. Decrypted traffic will flow across the security services.

@@ -7,6 +7,16 @@ Appendix 2 - Common Testing Commands
 The following are some simple, but powerful commands that are useful in developing and troubleshooting SSL visibility projects.
 
 
+View TLS/SSL certificates using a command line tool
+---------------------------------------------------
+
+The **OpenSSL** tool can be used to establish a TLS session and display the certificate returned.
+
+.. code-block:: bash
+
+   openssl s_client -showcerts -connect www.google.com:443
+
+
 Packet capture
 --------------
 
@@ -41,8 +51,8 @@ And to filter out ICMP traffic and other unneeded flows, add filters to the end 
    tcpdump -lnni ssloN_IPS_in.app/ssloN_IPS_in not icmp
 
 
-Control the SSLFWD certificate cache
-------------------------------------
+Control the SSL Forward Proxy certificate cache
+-----------------------------------------------
 
 The behavior of the SSL Forward Proxy changes after a certificate is cached, which will make it difficult to troubleshoot some issues. The following allows you to both list and delete the certificates in the cache.
 
