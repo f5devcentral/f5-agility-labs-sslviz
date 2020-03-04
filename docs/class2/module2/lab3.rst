@@ -1,38 +1,30 @@
-.. role:: red
-.. role:: bred
+Verify problem fixed with client and browser
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lab 2.3: Testing
-----------------
+-  Perform the same steps from **Step 0:**
 
-- :bred:`gateway-mode testing`, the lab's inbound desktop client includes
-  static Hosts entries that match the real IPs of the internal web server:
+   -  The browser will reflect that the traffic is not being intercepted
+      and should show that the certificate is validated by the original
+      entity.
 
-  - test0.f5labs.com = 10.20.0.90
-  - test1.f5labs.com = 10.20.0.91
-  - test2.f5labs.com = 10.20.0.92
-  - test3.f5labs.com = 10.20.0.93
-  - test4.f5labs.com = 10.20.0.94
+   |image27|
 
-  And a static persistent route that points 10.20.0.0/24 traffic to the BIG-IP
-  outbound (external) VLAN self-IP (10.30.0.100).
+-  Restart the Dropbox client. The client should connect and the default
+   browser will open requesting sign in. This indicates that the client
+   has been able to establish a connection to the Dropbox server and is
+   now requesting credentials to open a specific Dropbox.
 
-  |
-  
-  From the :bred:`Inbound Win7 Client` you should see something like the
-  following when browsing to the above websites:
+   |image28|
 
-  .. image:: ../images/lab2.3-test-results.png
+-  .. note:: **Note:** When added to the Pinners list, the default action is that
+      the SSL Orchestrator bypasses the traffic. In this lab example, since
+      we have enabled a Layer 2 TAP device for all Intercepted as well
+      Bypassed traffic, we still have some visibility. However, since the
+      traffic is not de-crypted, the payload is still encrypted.
 
-- :bred:`targeted-mode testing`, add a static host entry in the local Windows
-  hosts file (C:\\Windows\\System32\\drivers\\etc\\hosts) for:
-
-  .. note:: A shortcut to the "hosts" file can be found on the desktop.
-
-  - www.f5labs.com = 10.30.0.200
-
-  |
-  
-  From the :bred:`Inbound Win7 Client` you should see something like the
-  following when browsing to the above websites:
-
-  .. image:: ../images/lab2.3-test-results2.png
+.. |image27| image:: ../images/image026.png
+   :width: 7.05556in
+   :height: 2.98958in
+.. |image28| image:: ../images/image027.png
+   :width: 7.05556in
+   :height: 4.02986in

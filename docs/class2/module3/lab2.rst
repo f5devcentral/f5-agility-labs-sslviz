@@ -1,22 +1,50 @@
-.. role:: red
-.. role:: bred
+.. role:: raw-html(raw)
+   :format: html
 
-Lab 3.2: [Optional] Add explicit proxy authentication
------------------------------------------------------
 
-Enabling explicit proxy authentication in SSLO requires two steps:
+Attach the security policy to the SSL Orchestrator configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. **Create an SWG-Explicit access policy** - explicit proxy authentication is
-   defined as an access policy of type SWG-Explicit.
+-  Select **SSL Orchestrator->Configuration** from the main menu
 
-   .. image:: ../images/image23.png
+-  Select **Interception Rules.** The following screen will then be
+   presented.
 
-   This policy will typically contain an HTTP 407 Response challenge, and then
-   some form of authentication, which could be HTTP Basic, NTLM or Kerberos.
+   |image33|
 
-   .. image:: ../images/image24.png
+-  Select :raw-html:`<i><font color="red">sslo_f5labs_explicit-xp-4</font></i>`
 
-#. **Apply the new access policy to an Explicit Proxy topology** - attach the
-   SWG-Explicit access policy by creating or editing an Explicit proxy SSLO
-   topology. On the Interception Rules page, select the new policy under the
-   :red:`Access Profile` option.
+-  Select :raw-html:`<i><font color=red>/Common/f5labs-ntlm-ap</font></i>` from the **Access Profile** pull
+   down menu
+
+-  Press **Deploy** at the bottom of the screen
+
+-  Select **Services** from the **SSL Orchestrator->Configuration**
+   screen
+
+-  Select *ssloS\_SQID* from the **Services** list
+
+-  Click on the |image34|\ icon to the right of |image35|\ menu
+   selection
+
+-  Scroll down and click on the **Authentication Offload** checkbox
+   and have the checkbox :raw-html:`<i><font color="red">Checked</font></i>`
+
+-  Click on **Save & Next**
+
+-  Click **OK** in the **Continue Save?** popup.
+
+-  Click on **Save & Next** on the next screen
+
+-  Click on **Deploy.** This will take a few seconds. Please verify
+   that the Deployment was completed successfully without errors.
+
+.. |image33| image:: ../images/image032.png
+   :width: 7.05556in
+   :height: 3.35694in
+.. |image34| image:: ../images/image033.png
+   :width: 0.26042in
+   :height: 0.29167in
+.. |image35| image:: ../images/image034.png
+   :width: 1.86458in
+   :height: 0.56250in

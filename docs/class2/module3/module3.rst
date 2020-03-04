@@ -1,25 +1,22 @@
-Module 3 - Create an Explicit Forward Proxy SSLO
+Transparent authentication using NTLM
 ================================================
 
-SSL Orchestrator creates discreet, non-overlapping interception rules
-(listeners) based on the selected topology. For example, the explicit forward
-proxy workflow minimally creates an explicit proxy listener and relying
-transparent proxy listener attached to the explicit proxy tunnel. If a separate
-transparent proxy workflow was created, the resulting listener would not
-conflict with or overlap the existing transparent proxy listener. Therefore,
-assuming a transparent forward proxy already exists from Module 1, the
-following workflow will create a separate set of non-overlapping listeners to
-satisfy an explicit forward proxy use case.
+While SSL Orchestrator provides visibility into SSL traffic, the amount
+of data that is logged is large. This prevents easy troubleshooting and
+a mapping of traffic to originating person can be a difficulty process
+especially if there are shared computers in the workplace.
 
-.. note:: This lab will consist of an abbreviated set of steps, as all of the
-   objects created in Module 1 (SSL settings, services, service chains and
-   security policies) will be fully re-usable here. If any of these objects
-   have not been created, please review `Module 1 - Create a Transparent
-   Forward Procy SSLO <../module1/module1.html>`_ for more detailed
-   configuration instructions.
+To help with this and provide better manageability, SSL Orchestrator
+provides the ability to enable transparent password-less authentication
+using industry tested mechanisms like NTLM and Kerberos authentication.
+
+This lab shows the process that is required enable NTLM authentication.
+The authentication objects and Access Policy required for the completion
+of this lab have already been completed and setup for you.
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
+   scenario*
    lab*

@@ -1,25 +1,18 @@
-Module 1: Outbound SSLO
-=======================
+==================================================
+Create a Transparent Forward Proxy SSLO
+==================================================
 
-|image1|
+The majority of enterprise forward proxy configurations will involve a
+single or HA pair of F5 platforms performing the SSL visibility task.
+The SSL Orchestrator has been designed with that principle in mind and
+performs robust and dynamic service chaining of security devices.
 
-In this module we will learn the basic concepts required to deploy
-Outbound SSLO. Additionally, we will walk through creating services and
-interception rules. It’s important to note that this module will focus
-on demonstrating an **Outbound** SSLO.
-
-We will be following the workflow in the following diagram for the SSLO
-configuration:
-
-|image2|
+SSL Orchestrator makes configuration of a single-box deployment
+simple and intuitive. Please follow the steps below to create a
+transparent forward proxy SSL Orchestrator configuration.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
 
    lab*
-
-.. |image1| image:: ../images/image1.png
-   :width: 80%
-.. |image2| image:: ../images/image2.png
-   :width: 80%

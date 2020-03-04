@@ -1,5 +1,7 @@
-Class 1: SSL Orchestration v4 (Agility)
-=======================================
+[Archived] SSL Orchestrator v6 (Ravello | 4 hours)
+===================================================
+
+Created for use in Ravello
 
 F5 SSL Orchestrator provides high-performance decryption of inbound and
 outbound SSL/TLS traffic, enabling security inspection to expose threats
@@ -27,8 +29,13 @@ Expected time to complete: **4 hours**
 To continue please review the information about the Lab Environment.
 
 .. toctree::
+   :caption: This class covers the following topics:
    :maxdepth: 1
    :glob:
 
-   labinfo/labinfo
+   introduction
+   labinfo
    module*/module*
+   appendix/appendix*
+
+Expected time to complete: **4 hours**

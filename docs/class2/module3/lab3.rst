@@ -1,34 +1,25 @@
-.. role:: red
-.. role:: bred
+.. role:: raw-html(raw)
+   :format: html
 
-Lab 3.3: Testing the Explicit Proxy deployment
-----------------------------------------------
+Modify DNS settings to configure the AD server as DNS server (Lab only)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To test the deployed solution, RDP to the :bred:`Outbound Win7 Client` and do
-the following:
+*This step is required in this environment because of DHCP on the
+management interface. The DNS settings are modified to default DHCP
+settings periodically.*
 
-.. hint:: Username = :red:`student` / Password = :red:`agility`
+*Usually the F5 devices IP addresses are managed manually and this step
+is not required.*
 
-- Configure the client browser to use :red:`10.20.0.150:3128` for explicit
-  proxy access.
+-  From the main menu select **System->Configuration->Device->DNS**
+   and delete the **DNS Lookup Server List** and add the following IP
+   address to the list :raw-html:`<i><font color="red">10.1.10.200</font></i>`. The configuration screen should
+   look like the one shown below after the edit.
 
-  - This setting for Chrome can be find in :menuselection:`Settings -->
-    Advanced --> Open proxy settings`.
+-  Click **Update** at the bottom of the screen.
 
-- SSH to BIG-IP CLI and run the following tcpdump command to view the browser
-  traffic hitting the explicit proxy IP.
+   |image36|
 
-  .. code-block:: bash
-
-     tcpdump -nni client-net port 3128
-  
-- Test by browsing to url of choice.  You should see the traffic stream
-  across tcpdump from previous command.
-
-- An explicit proxy request test can also be done using command-line cURL:
-
-  .. code-block:: bash
-
-     curl -vk –proxy 10.20.0.150:3128 https://www.example.com
-
-  Again watch the tcpdump from the previous test to confirm explicit proxy use.
+.. |image36| image:: ../images/image035.png
+   :width: 7.05556in
+   :height: 6.96528in
