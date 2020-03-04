@@ -17,8 +17,8 @@ Additional information about the NTOPNG utility can be found at:
 Accessing the ntopng Tool
 -------------------------
 
--  In the UDF UI, select the "Access" drop down selection on the "Service – Inline L3" VM, then select "NTOPNG". This will open a new browser tab and display the NTOPNG UI.
+-  In the UDF UI, select the **Access** drop down selection on the **Service - Inline L3** VM, then select **NTOPNG**. This will open a new browser tab and display the NTOPNG UI.
 
--  If it prompts for credentials, login is 'admin' with password 'ntopng'.
+-  If it prompts for credentials, login as user :red:`admin` with password :red:`ntopng`.
 
 -  Browse internet on the Outbound Client to pass traffic through SSLO to view real-time analysis of traffic through the Inline L3 service.
