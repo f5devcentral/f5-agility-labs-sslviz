@@ -74,8 +74,8 @@ Test Access to Client & Update Proxy Settings
    :height: 304px
    :alt: Verified By: f5labs.com
 .. |ff-menu| image:: ../images/ff-menu.png
-   :width: 39px
-   :height: 39px
+   :width: 14px
+   :height: 14px
    :alt: Firefox Menu
 .. |ff-digicert-verified| image:: ../images/ff-digicert-verified.png
    :width: 466px
