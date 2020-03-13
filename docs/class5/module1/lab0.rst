@@ -1,109 +1,91 @@
 .. role:: raw-html(raw)
    :format: html
 
-Verify that the current solution works
+Test Access to Client & Update Proxy Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  **Validate that the current SSLO deployment works**
+-  Start an RDP session to the **Windows 10 Desktop** *(Components > Windows 10 Desktop > ACCESS > RDP)*
 
-   -  From the Lab deployment page, select **Components**. Screenshot
-      shown below
+-  Login in as **f5labs\\mike** (pw: **agility**)
 
-   |image5|
+-  Open the **Firefox** browser
 
--  For the **AD server & Testing Client** system in the **Systems**
-   section of the interface click on **Access->RDP**
+-  Browse to ``https://www.example.com/``
 
--  Save the link for the RDP session and open the file
+-  Click on the padlock icon in the address bar
 
--  An RDP session to the AD server and Client should open using
-   Microsoft RDP client
+   |ff-padlock|
 
--  Login in as **cs-user1/cs-user1** for the domain **f5labs**
+-  Click the arrow to the right of **Connection secure**
 
--  Double-click on the FireFox icon on the desktop
+   |ff-conn-expand|
 
--  Navigate to :raw-html:`<i><font color="red">https://www.google.com</font></i>`
+-  Confirm that the connection/certificate is verified by **DigiCert Inc**
 
--  Click on the |image6|\ icon in the address bar
+   |ff-digicert-verified|
 
--  Click on the |image7|\ adjacent to the **Connection Secure**
+-  Modify the client's proxy settings to point to F5 SSL Orchestrator
 
--  Verify the verification is done by **Google Trust Services**.
+   -  In Firefox, click on the menu (|ff-menu|) in the top right of the window
 
-   |image8|
+   -  Select **Options** on the menu
+   
+   -  In the **Find in Options** search field at the top, type ``proxy``
+   
+   -  Click the **Settings...** button
+   
+   -  Select the **_M_anual proxy configuration** radio button. Ensure the proxy settings appear as follows before proceeding:
+   
+      |ff-connection-settings|
 
--  Modify proxy settings to traverse the SSLO setup
+-  Click the **OK** button
 
-   -  Click on |image9|\ menu in FireFox to access FireFox settings
+-  **Close and relaunch** the Firefox browser
 
-   -  Select **Options** and type in **proxy** in the Search box on
-      the top right side of the FireFox window
+-  Browse to ``https://www.example.com/`` once again
 
-   -  Select **Settings** for **Configure how Firefox connects to the
-      internet.** menu option.
+-  Confirm that the connection/certificate is now verified by **f5labs.com**
 
-   -  Please modify the settings to reflect the screenshot below
+   |ff-f5labs-verified|
 
-   |image10|
+-  Visit a financial institution (ex. \https://www.chase.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by f5labs.com. Because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
 
--  Click **OK**
+-  Confirm that the explicit proxy service is seeing decrypted traffic:
 
--  Close the **Options** tab and **close and re-open** the Firefox
-   browser
+   -  Start a console session to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
 
--  Re-visit :raw-html:`<i><font color="red">https://www.google.com</font></i>`
+   -  Type ``tailf /var/log/squid3/access.log`` in the web console
 
--  Verify that verification is done by **f5labs.com** now
+   -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is being logged even though we are visiting a secure website. You should see log entries of the sites and URLs visited, similar to the example below:
 
-|image11|
+      |proxy-access-log|
 
--  Visit a financial institution (*example*
-   :raw-html:`<i><font color="red">https://www.chase.com</font></i>`) and verify that
-   we are not intercepting traffic by ensuring that the verification is
-   done by a trusted PKI issuer (*example JPMorgan Chase and
-   Co./Entrust, Inc.*). If the traffic was intercepted we would see the
-   that the verification would have been done by **f5labs.com**. Since
-   we are bypassing **Financial Institutions** and this website is a
-   financial institution, the verification is done by the original
-   issuer.
 
--  Verify that the HTTP Proxy is seeing decrypted traffic
-
-   -  From the lab deployment screen select **Access->WEB SHELL** from
-      the **Service - ExpProxy** system
-
-   -  Type :raw-html:`<i><font color="red">tail -F /var/log/squid3/access.log</font></i>` in the web console terminal
-
-   -  Visit a few secure(https) websites in the RDP client and verify that
-      access is being logged even though we are visiting a secure website.
-      You should see the log scrolling by and logging the sites and URLs
-      visited. Your screen should have something similar to the screenshot
-      shown below.
-
-      |image12|
-
-.. |image5| image:: ../images/image006.png
-   :width: 7.05556in
-   :height: 5.93264in
-.. |image6| image:: ../images/image007.png
-   :width: 0.23958in
-   :height: 0.31250in
-.. |image7| image:: ../images/image008.png
-   :width: 0.42708in
-   :height: 0.51042in
-.. |image8| image:: ../images/image009.png
-   :width: 4.67708in
-   :height: 3.03125in
-.. |image9| image:: ../images/image010.png
-   :width: 0.41667in
-   :height: 0.43750in
-.. |image10| image:: ../images/image011.png
-   :width: 7.05556in
-   :height: 7.73125in
-.. |image11| image:: ../images/image012.png
-   :width: 4.57292in
-   :height: 3.35417in
-.. |image12| image:: ../images/image013.png
-   :width: 7.05556in
-   :height: 3.32778in
+.. |ff-padlock| image:: ../images/ff-padlock.png
+   :width: 336px
+   :height: 32px
+   :alt: Connection Padlock
+.. |ff-conn-expand| image:: ../images/ff-conn-expand.png
+   :width: 466px
+   :height: 209px
+   :alt: Site Information
+.. |ff-f5labs-verified| image:: ../images/ff-f5labs-verified.png
+   :width: 467px
+   :height: 304px
+   :alt: Verified By: f5labs.com
+.. |ff-menu| image:: ../images/ff-menu.png
+   :width: 39px
+   :height: 39px
+   :alt: Firefox Menu
+.. |ff-digicert-verified| image:: ../images/ff-digicert-verified.png
+   :width: 466px
+   :height: 221px
+   :alt: Verified By: DigiCert Inc
+.. |ff-connection-settings| image:: ../images/ff-connection-settings.png
+   :width: 777px
+   :height: 877px
+   :alt: Firefox Connection Settings
+.. |proxy-access-log| image:: ../images/proxy-access-log.png
+   :width: 1912px
+   :height: 842px
+   :alt: Proxy Access Log
