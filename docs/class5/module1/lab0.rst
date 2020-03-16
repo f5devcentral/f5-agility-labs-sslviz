@@ -32,9 +32,9 @@ Test Access to Client & Update Proxy Settings
    
    -  In the **Find in Options** search field at the top, type ``proxy``
    
-   -  Click the **Settings...** button
+   -  Click the **Settings...** button under Network Settings
    
-   -  Select the **_M_anual proxy configuration** radio button. Ensure the proxy settings appear as follows before proceeding:
+   -  Select the **Manual proxy configuration** radio button. Ensure the proxy settings appear as follows:
    
       |ff-connection-settings|
 
