@@ -111,7 +111,7 @@ service type.
      - Port 8080
      -
 
-.. list-table:: **Receive-only service**
+.. list-table:: **Receive-only (TAP) service**
    :header-rows: 0
    :widths: auto
 
