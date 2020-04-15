@@ -1,21 +1,15 @@
 Review the current SSL Orchestrator deployment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Select **SSL Orchestrator** from the Main Menu and select
-   **Configuration** from the submenu. The following existing
-   deployment should be present. It will take a few seconds to render
-   this page.
+-  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**. When the SSL Orchestrator dashboard finishes loading the following deployment should already be present.
 
    |image13|
 
--  Select **Security Policies** from the screen shown above. You
-   should now be presented with following screen.
+-  Select **Security Policies** from the horizontal menu. You should now be presented with following screen:
 
    |image14|
 
--  Select the **ssloP\_f5labs\_explicit** security policy and you should
-   be able to see the security policy that is currently present as shown at
-   the start of this lab.
+-  Click on **ssloP\_f5labs\_explicit** and you will see the rules that are currently configured under this security policy.
 
 .. |image13| image:: ../images/image014.png
    :width: 7.05556in
