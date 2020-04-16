@@ -48,8 +48,6 @@ Test Access to Client & Update Proxy Settings
 
    |ff-f5labs-verified|
 
--  Visit a financial institution (ex. \https://www.chase.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by f5labs.com. Because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
-
 -  Confirm that the explicit proxy service is seeing decrypted traffic:
 
    -  Start a console session to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
@@ -59,6 +57,10 @@ Test Access to Client & Update Proxy Settings
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is being logged even though we are visiting a secure website. You should see log entries of the sites and URLs visited, similar to the example below:
 
       |proxy-access-log|
+      
+-  Visit a financial institution (ex. \https://www.chase.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by f5labs.com. Because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
+
+-  Confirm that the explicit proxy service is not seeing the bypassed (encrypted) traffic.
 
 
 .. |ff-padlock| image:: ../images/ff-padlock.png
