@@ -5,9 +5,9 @@ Create a new "Cisco Firepower Only" Service Chain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You now need to create a new Service Chain containing only the Cisco Firepower TAP service.
 
--  On the **Services Chain List** screen click the **Add** button to create a new Service Chain
+-  On the **Service Chain List** screen click the **Add** button to create a new Service Chain
 
--  On the **Services Chain Properties** screen enter the following values:
+-  On the **Service Chain Properties** screen enter the following values:
 
    -  **Name -** provide a unique name for this service chain (ex. :raw-html:`<i><font color="red">Cisco_TAP</font></i>`)
 
@@ -17,11 +17,11 @@ You now need to create a new Service Chain containing only the Cisco Firepower T
 
 -  Click the **Save** button
 
--  You will be returned to the **Services Chain List**. You should now have three Service Chains in the **Services Chain List**
+-  You will be returned to the **Service Chain List**. You should now have three Service Chains in the **Service Chain List**
 
 -  Click the **Save & Next** button
 
--  Click the **Deploy** button. This action will take a few seconds. Verify that the deployment was successful with no errors.
+-  Click the **Deploy** button. This action will take a moment. Verify that the deployment was successful with no errors.
 
 -  When successfully deployed, the following pop-up should appear:
 
