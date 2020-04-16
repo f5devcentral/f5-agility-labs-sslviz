@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Test Access to Client & Update Proxy Settings
+Pre-existing environment validation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Start an RDP session to the **Windows 10 Desktop** *(Components > Windows 10 Desktop > ACCESS > RDP)*
