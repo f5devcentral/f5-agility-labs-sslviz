@@ -11,10 +11,10 @@ You now need to create a new Service Chain containing the Squid Proxy and the Ci
 
    -  **Name -** provide a unique name for this service chain (ex. :raw-html:`<i><font color="red">all_services</font></i>`)
 
-   -  **Description -** provide a description for this service chain (ex. :raw-html:`<i><font color="red">Squid Proxy and Cisco Firepower TAP</font></i>`)
+   -  **Description -** provide a description for this service chain (ex. :raw-html:`<i><font color="red">All services</font></i>`)
 
    -  **Services -** select both services under **Services Available** and move them to **Selected Service Chain Order**
 
 -  Click the **Save** button
       
--  You will be returned to the **Services Chain List** where you will add one more Service Chain. Details are on the next page. 
+-  You will be returned to the **Services Chain List** where you will add one more Service Chain (see next page).
