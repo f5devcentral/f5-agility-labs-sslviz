@@ -9,7 +9,7 @@ You now need to create a new Service Chain containing the Squid Proxy and the Ci
    
 -  On the **Service Chain Properties** screen enter the following values:
 
-   -  **Name -** provide a unique name for this service chain (ex. :raw-html:`<i><font color="red">all_services</font></i>`)
+   -  **Name -** provide a unique name for this service chain (ex. :raw-html:`<i><font color="red">All_Services</font></i>`)
 
    -  **Description -** provide a description for this service chain (ex. :raw-html:`<i><font color="red">All services</font></i>`)
 
