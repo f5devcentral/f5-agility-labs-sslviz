@@ -13,28 +13,28 @@ From the SSL Orchestrator **Configuration** screen:
 
 -  Click on the pencil icon (|pencil|) next to the **Pinners\_Rule** to modify this rule.
 
--  In the properties section that appears, select **ssloSC\_Cisco\_TAP** from the **Service Chain** dropdown.
+-  In the properties section that appears, select **ssloSC\_CiscoFP\_TAP** from the **Service Chain** dropdown.
 
-   |policy_rule_Cisco-TAP|
+   |policy-rule-CiscoFP-TAP|
 
 -  Click the **OK** button
 
 -  Repeat the same process for the **Finance\_Bypass** rule
 
--  Now modify the **All Traffic** rule and select the **ssloSC\_all\_services** Service Chain and click the **OK** button.
+-  Now modify the **All Traffic** rule and select the **ssloSC\_All\_Services** Service Chain and click the **OK** button.
 
 -  The Security Policy Rules should now look like this:
 
-   |updated_rules|
+   |updated-security-policy|
 
 -  Click the **Deploy** button and then click the **OK** button on the pop-up to confirm you want to make the changes.
 
 .. |pencil| image:: ../images/pencil.png
    :width: 20px
    :height: 20px
-.. |policy_rule_Cisco-TAP| image:: ../images/policy_rule_Cisco-TAP.png
-   :width: 466px
-   :height: 89px
-.. |updated_rules| image:: ../images/updated_rules.png
+.. |policy-rule-CiscoFP-TAP| image:: ../images/policy-rule-CiscoFP-TAP.png
+   :width: 481px
+   :height: 85px
+.. |updated-security-policy| image:: ../images/updated-security-policy.png
    :width: 1005px
-   :height: 202px
+   :height: 201px
