@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
    :format: html
 
-Create a new "Cisco Firepower Only" Service Chain
+Create a new "Cisco Firepower" Service Chain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You now need to create a new Service Chain containing only the Cisco Firepower TAP service.
 
@@ -9,11 +9,11 @@ You now need to create a new Service Chain containing only the Cisco Firepower T
 
 -  On the **Service Chain Properties** screen enter the following values:
 
-   -  **Name -** provide a unique name for this service chain (ex. :raw-html:`<i><font color="red">Cisco_TAP</font></i>`)
+   -  **Name -** provide a unique name for this service chain (ex. :raw-html:`<i><font color="red">CiscoFP_TAP</font></i>`)
 
    -  **Description -** provide a description for this service chain (ex. :raw-html:`<i><font color="red">Cisco Firepower TAP only</font></i>`)
 
-   -  **Services -** select the Cisco Firepower service (ex. :raw-html:`<i><font color="red">ssloS_Cisco_FP</font></i>`) under **Services Available** and move it to **Selected Service Chain Order**
+   -  **Services -** select the Cisco Firepower service (ex. :raw-html:`<i><font color="red">ssloS_CiscoFP</font></i>`) under **Services Available** and move it to **Selected Service Chain Order**
 
 -  Click the **Save** button
 
