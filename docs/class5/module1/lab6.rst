@@ -16,11 +16,11 @@ Confirm Service Chain and Security Policy rules are working as expected
 
    -  Type ``tailf /var/log/squid3/access.log`` in the web console and hit Enter
 
-   -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is being logged even though we are visiting a secure website. You should see log entries of the sites and URLs visited.
+   -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is being logged. You should see log entries of the URLs visited.
    
-   -  Visit a financial institution (ex. https://www.chase.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by f5labs.com. Because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
+   -  Visit a financial institution (ex. https://www.chase.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by f5labs.com. Because you are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
    
-   -  Confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic.
+   -  Confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic
 
 -  Verify that the Cisco Firepower TAP is seeing both intercepted and bypassed traffic:
 
@@ -40,19 +40,13 @@ Confirm Service Chain and Security Policy rules are working as expected
 
             ``tcpdump -nnni eth1 not arp and not icmp -X | egrep 'Agility'``
 
-   -  Since you are intercepting/decrypting https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``'Agility 2020'`` in the browser, similar to the example below:
+   -  Since SSL Orchestrator is intercepting/decrypting https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``'Agility 2020'`` in the browser, similar to the example below:
 
       |image20|
 
 .. |ff-f5labs-verified| image:: ../images/ff-f5labs-verified.png
    :width: 467px
    :height: 304px
-.. |image12| image:: ../images/image012.png
-   :width: 439px
-   :height: 322px
-.. |image13| image:: ../images/image013.png
-   :width: 1253px
-   :height: 591px
 .. |image20| image:: ../images/image020.png
    :width: 810px
    :height: 140px
