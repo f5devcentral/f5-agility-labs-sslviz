@@ -1,7 +1,7 @@
 Scenario
 --------
 
-With the increase in the number of security incidents that have made the news lately, your organization has updated its security policy to log all user traffic flowing through SSL Orchestrator, irrespective of whether the traffic will be inspected or bypassed. A new appropriately sized Cisco Firepower TAP device has been purchased and has been cabled to the SSL Orchestrator device. As the Administrator of SSL Orchestrator, your manager is asking you to do the following:
+With the increase in the number of security incidents that have made the news lately, your organization has updated its security policy to log all user traffic flowing through SSL Orchestrator, irrespective of whether the traffic will be inspected or bypassed. A new appropriately sized Cisco Firepower has been purchased and has been cabled to the SSL Orchestrator device. As the Administrator of SSL Orchestrator, your manager is asking you to do the following:
 
 1) In addition to sending Internet-bound traffic to a Squid proxy, this traffic now needs to be copied to a Cisco Firepower
 
