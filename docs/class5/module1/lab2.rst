@@ -24,7 +24,7 @@ Create a new Cisco Firepower Threat Defense TAP service
 
    -  **VLAN -** this defines the interface connecting F5 SSLO to the TAP service. Select **Create New** and provide a unique name (ex. :raw-html:`<i><font color="red">TAP_in</font></i>`).
 
-   -  **Interface -** select the :raw-html:`<i><font color="red">1.3</font></i>` interface.
+   -  **Interface -** select the :raw-html:`<i><font color="red">1.7</font></i>` interface.
 
    -  **Tag -** this is the 802.1q VLAN tag for service. Leave it :raw-html:`<i><font color="red">empty</font></i>` since this service is connected to an untagged interface.
 
