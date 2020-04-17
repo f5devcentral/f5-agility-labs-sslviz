@@ -16,7 +16,7 @@ Create a new Cisco Firepower Threat Defense TAP service
    
 -  On the **Service Properties** screen enter the following values:
 
-   -  **Name -** provide a unique name to this service (ex. :raw-html:`<i><font color="red">Cisco_FP</font></i>`).
+   -  **Name -** provide a unique name to this service (ex. :raw-html:`<i><font color="red">CiscoFP</font></i>`).
 
    -  **Description -** provide a description as needed (ex. :raw-html:`<i><font color="red">Cisco Firepower TAP</font></i>`).
 
