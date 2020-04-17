@@ -12,7 +12,9 @@ Lab Overview
 
 This lab assumes familiarity with SSL Orchestrator. This lab is pre-configured with the following Security Policy:
 
-.. image:: ../images/image005.png
-   :align: center
+.. image:: ../images/initial-security-policy.png
+   :width: 1006px
+   :height: 202px
+   :alt: Initial Security Policy
 
 By the end of this module you will have modified the existing Security Policy to satisfy the requirements from the scenario described.
