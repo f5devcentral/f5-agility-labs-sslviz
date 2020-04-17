@@ -28,7 +28,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
    -  Type the following command to verify that traffic is being sent to the TAP service:
 
-         ``tcpdump -nnni eth1 not arp and not icmp -X``
+         ``tcpdump -nni eth1 not arp and not icmp -X``
 
    -  Visit a financial institution website that is bypassed and verify that a copy of the traffic is seen on the TAP device
 
@@ -38,9 +38,9 @@ Confirm Service Chain and Security Policy rules are working as expected
    
       -  To verify, type the following command:
 
-            ``tcpdump -nnni eth1 not arp and not icmp -X | egrep 'Agility'``
+            ``tcpdump -nni eth1 not arp and not icmp -X | egrep -i 'agility'``
 
-   -  Since SSL Orchestrator is intercepting/decrypting https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``'Agility 2020'`` in the browser, similar to the example below:
+   -  Since SSL Orchestrator is intercepting/decrypting https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``Agility 2020`` in the browser, similar to the example below:
 
       |image20|
 
