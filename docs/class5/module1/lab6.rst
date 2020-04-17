@@ -8,7 +8,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
 -  Verify that :raw-html:`<i><font color="red">https://www.example.com</font></i>` is still being intercepted by confirming the certificate is signed/verified by **f5labs.com** 
 
-   |ff-digicert-verified|
+   |ff-f5labs-verified|
 
 -  Verify that the Squid Proxy is seeing decrypted traffic:
 
@@ -44,9 +44,9 @@ Confirm Service Chain and Security Policy rules are working as expected
 
       |image20|
 
-.. |ff-digicert-verified| image:: ../images/ff-digicert-verified.png
-   :width: 466px
-   :height: 221px
+.. |ff-f5labs-verified| image:: ../images/ff-f5labs-verified.png
+   :width: 467px
+   :height: 304px
 .. |image12| image:: ../images/image012.png
    :width: 439px
    :height: 322px
