@@ -38,15 +38,17 @@ Confirm Service Chain and Security Policy rules are working as expected
    
       -  To verify, type the following command:
 
-            ``tcpdump -nnXi eth1 not arp and not icmp | egrep -i 'agility'``
+            ``tcpdump -nnXi eth1 not arp and not icmp | egrep -i "agility"``
 
    -  Since SSL Orchestrator is intercepting/decrypting https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``Agility 2020`` in the browser, similar to the example below:
 
-      |image20|
+      |tcpdump-grep-agility|
 
 .. |ff-f5labs-verified| image:: ../images/ff-f5labs-verified.png
    :width: 467px
    :height: 304px
-.. |image20| image:: ../images/image020.png
-   :width: 810px
-   :height: 140px
+   :alt: Verified By: f5labs.com
+.. |tcpdump-grep-agility| image:: ../images/tcpdump-grep-agility.png
+   :width: 728px
+   :height: 128px
+   :alt: tcpdump of TAP service
