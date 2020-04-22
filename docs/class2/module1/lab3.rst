@@ -1,21 +1,20 @@
 .. role:: raw-html(raw)
    :format: html
 
-Create a new Service Chain with HTTP service and the Cisco Firepower service
+Create a new "All Services" Service Chain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You now need to create a new Service Chain containing the Squid Proxy and the Cisco Firepower TAP services.
 
--  You should not be in the **Services Chain List** menu
+-  On the **Service Chain List** screen click the **Add** button to create a new Service Chain
+   
+-  On the **Service Chain Properties** screen enter the following values:
 
--  Click on **Add.**
+   -  **Name -** provide a unique name for this service chain (ex. :raw-html:`<i><font color="red">All_Services</font></i>`)
 
--  **Name -** provide a unique name for this service chain (example
-   :raw-html:`<i><font color="red">all_devices</font></i>`)
+   -  **Description -** provide a description for this service chain (ex. :raw-html:`<i><font color="red">All services</font></i>`)
 
--  **Description -** provide a description for this service chain
-   (example :raw-html:`<i><font color="red">Squid Proxy and Cisco Firepower TAP</font></i>`)
+   -  **Services -** select both services under **Services Available** and move them to **Selected Service Chain Order**
 
--  **Services -** Select both services from the **Services Available**
-   and move it to the **Selected Service Chain Order** section
-
--  Click **Save**
-
+-  Click the **Save** button
+      
+-  You will be returned to the **Service Chain List** where you will add one more Service Chain (see next page).
