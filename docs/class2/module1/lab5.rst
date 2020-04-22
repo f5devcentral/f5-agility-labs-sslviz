@@ -1,42 +1,40 @@
-Modify the security policy to add the correct Service Chains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. role:: raw-html(raw)
+   :format: html
 
--  You should now be in the main **Configuration** section of the
-   **SSL Orchestrator** main menu.
+Update Service Chains on existing Security Policy rules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Update the existing Security Policy rules to use the new Service Chains you just created.
 
--  Select **Security Policies** from the list of options presented.
+From the SSL Orchestrator **Configuration** screen:
 
--  Select **ssloP\_f5labs\_explicit** from the list shown in the list.
-   This should be the only selection on the list.
+-  Click the **Security Policies** tab in the middle of the main display area.
 
--  Click on the pencil icon next to the **Pinners\_Rule** |image16|
+-  Click the Security Policy named **ssloP\_f5labs\_explicit**. This should be the only security policy in the list at this time.
 
--  In the section shown below - click on menu selection for **Service
-   Chain->ssloSC\_Cisco\_TAP** and press **OK.**
+-  Click on the pencil icon (|pencil|) next to the **Pinners\_Rule** to modify this rule.
 
-   |image17|
+-  In the properties section that appears, select **ssloSC\_CiscoFP\_TAP** from the **Service Chain** dropdown.
 
--  Repeat the same process for **Finance\_Bypass**
+   |policy-rule-CiscoFP-TAP|
 
--  Now select **All Traffic** and select **ssloSC\_all\_devices**
-   and press **OK**.
+-  Click the **OK** button
 
--  The screen should now look like the picture shown below.
+-  Repeat the same process for the **Finance\_Bypass** rule
 
-   |image18|
+-  Now modify the **All Traffic** rule and select the **ssloSC\_All\_Services** Service Chain and click the **OK** button.
 
--  Press **Deploy** and select **Ok** from the **Continue Save?**
-   pop up menu.
+-  The Security Policy Rules should now look like this:
 
--  Click on **Deploy**. This action will take a few seconds. Verify
-   that the deployment was successful with no errors.
+   |updated-security-policy|
 
-.. |image16| image:: ../images/image017.png
-   :width: 0.22917in
-   :height: 0.25000in
-.. |image17| image:: ../images/image018.png
-   :width: 4.45833in
-   :height: 1.06250in
-.. |image18| image:: ../images/image019.png
-   :width: 7.05556in
-   :height: 1.43681in
+-  Click the **Deploy** button and then click the **OK** button on the pop-up to confirm you want to make the changes.
+
+.. |pencil| image:: ../images/pencil.png
+   :width: 20px
+   :height: 20px
+.. |policy-rule-CiscoFP-TAP| image:: ../images/policy-rule-CiscoFP-TAP.png
+   :width: 481px
+   :height: 85px
+.. |updated-security-policy| image:: ../images/updated-security-policy.png
+   :width: 1005px
+   :height: 201px

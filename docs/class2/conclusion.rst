@@ -4,4 +4,4 @@
 Conclusion
 ==========
 
-This is the end of the **SSLO 201: More SSL Orchestrator Use Cases** lab.
+This is the end of the **SSLO 201: Real World Use Cases / Putting It to Use** lab.
