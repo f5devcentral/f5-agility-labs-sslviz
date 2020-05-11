@@ -1,50 +1,35 @@
-.. role:: raw-html(raw)
-   :format: html
+.. role:: red
 
-
-Attach the security policy to the SSL Orchestrator configuration
+Enable NTLM authentication on explicit proxy topology
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Select **SSL Orchestrator->Configuration** from the main menu
+-  From the Main menu on the left, select **SSL Orchestrator > Configuration**
 
--  Select **Interception Rules.** The following screen will then be
-   presented.
+-  In the Topology list click on **sslo_f5labs_explicit**. The topology summary screen will appear.
 
-   |image33|
+-  Click the edit icon (|pencil|) to the right of **Interception Rule**
 
--  Select :raw-html:`<i><font color="red">sslo_f5labs_explicit-xp-4</font></i>`
+   |topology-summary-IR-edit|
 
--  Select :raw-html:`<i><font color=red>/Common/f5labs-ntlm-ap</font></i>` from the **Access Profile** pull
-   down menu
+-  Select :red:`/Common/f5labs-ntlm-ap` from the **Access Profile** drop down menu
 
--  Press **Deploy** at the bottom of the screen
+-  Click **Save & Next** at the bottom of the screen
 
--  Select **Services** from the **SSL Orchestrator->Configuration**
-   screen
+-  The **Egress Settings** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button (see example below).
 
--  Select *ssloS\_SQID* from the **Services** list
+   |egress-settings-deploy-ribbon|
 
--  Click on the |image34|\ icon to the right of |image35|\ menu
-   selection
+-  Click **OK** to acknowledge the successful deployment
 
--  Scroll down and click on the **Authentication Offload** checkbox
-   and have the checkbox :raw-html:`<i><font color="red">Checked</font></i>`
-
--  Click on **Save & Next**
-
--  Click **OK** in the **Continue Save?** popup.
-
--  Click on **Save & Next** on the next screen
-
--  Click on **Deploy.** This will take a few seconds. Please verify
-   that the Deployment was completed successfully without errors.
-
-.. |image33| image:: ../images/image032.png
-   :width: 7.05556in
-   :height: 3.35694in
-.. |image34| image:: ../images/image033.png
-   :width: 0.26042in
-   :height: 0.29167in
-.. |image35| image:: ../images/image034.png
-   :width: 1.86458in
-   :height: 0.56250in
+.. |topology-summary-IR-edit| image:: ../images/topology-summary-IR-edit.png
+   :width: 1057px
+   :height: 491px
+   :alt: Edit Interception Rule from Topology Summary
+.. |pencil| image:: ../images/pencil.png
+   :width: 20px
+   :height: 20px
+   :alt: Pencil Icon
+.. |egress-settings-deploy-ribbon| image:: ../images/egress-settings-deploy-ribbon.png
+   :width: 612px
+   :height: 343px
+   :alt: Deploy Ribbon on Egress Settings

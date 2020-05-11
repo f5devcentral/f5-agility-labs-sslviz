@@ -1,37 +1,18 @@
-.. role:: raw-html(raw)
-   :format: html
+Overview of SSL Orchestrator logging
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Verify complaint
-~~~~~~~~~~~~~~~~~~~~~~~~
+In SSL Orchestrator (v6 and above) log settings are defined per-topology. In environments where multiple topologies are deployed, this can help to streamline troubleshooting by limiting debug logging to the affected topology. Multiple logging options are available:
 
--  On the Firefox browser in the **AD server & Testing Client**, visit
-   :raw-html:`<i><font color"red">https://www.dropbox.com</font></i>`
+-  **Per-Request Policy** – logs events related to security policy processing. When set to Debug, this log facility produces an enormous amount of traffic, so it is recommended to only set this to Debug for troubleshooting. Otherwise the most appropriate setting is Error, which will only log error conditions.
 
--  Verify that the SSL Orchestrator is intercepting it by checking the
-   entity verifying the certificate
+-  **FTP** – specifically logs error conditions for the built-in FTP listener when FTP is selected among the additional protocols in the Interception Rule configuration. The most appropriate setting is Error, which will only log error conditions.
 
-   |image22|
+-  **IMAP** – specifically logs error conditions for the built-in IMAP listener when IMAP is selected among the additional protocols in the Interception Rule configuration. The most appropriate setting is Error, which will only log error conditions.
 
--  Start the Dropbox client. The Dropbox client will be unable to
-   connect to the server and show the following error. This error occurs
-   because as we can see from the previous step, Dropbox.com is being
-   intercepted by the SSL Orchestrator and client uses Certificate
-   Pinning.
+-  **POP3** – specifically logs error conditions for the built-in POP3 listener when POP3 is selected among the additional protocols in the Interception Rule configuration. The most appropriate setting is Error, which will only log error conditions.
 
-   |image23|
+-  **SMTP** – specifically logs error conditions for the built-in SMTP listener when SMTP is selected among the additional protocols in the Interception Rule configuration. The most appropriate setting is Error, which will only log error conditions.
 
--  To handle such issues, the default SSL Orchestrator Security Policy
-   includes a rule called **Pinners\_Rule** that is the first rule in
-   any Security Policy.
+-  **SSL Orchestrator Generic** – logs events related to generic SSLO processing, such as a summary of how a connection/flow was handled. If Per-Request Policy logging is set to Error, and SSL Orchestrator Generic is set to Information, only the connection/flow summary will be logged. If connection/flow summary logging is not required the most appropriate setting is Error, which will only log error conditions.
 
-   |image24|
-
-.. |image22| image:: ../images/image021.png
-   :width: 7.05556in
-   :height: 3.04444in
-.. |image23| image:: ../images/image022.png
-   :width: 4.63542in
-   :height: 1.29167in
-.. |image24| image:: ../images/image023.png
-   :width: 7.05556in
-   :height: 1.43264in
+For the vast majority of troubleshooting cases the logging data from Per-Request Policy and SSL Orchestrator Generic (set to Debug and Information, respectively) are the most relevant. For ongoing connection summary logging to a system such as a SIEM, the SSL Orchestrator Generic log (set to Information) is usually the most relevant.

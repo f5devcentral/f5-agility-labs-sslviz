@@ -1,30 +1,10 @@
-Verify problem fixed with client and browser
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Local Traffic logging
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Perform the same steps from **Step 0:**
+While not the primary log destination for SSL Orchestrator some pertinent information may be logged to the Local Traffic log (/var/log/ltm). Log messages concerning pool and pool member availability (i.e. security service availability) and SSL/TLS handshake errors will appear in this log file and may help you ascertain why a particular connection (or multiple connections) are failing.
 
-   -  The browser will reflect that the traffic is not being intercepted
-      and should show that the certificate is validated by the original
-      entity.
+An example of an SSL handshake failure can be seen in the example below:
 
-   |image27|
+``May  4 14:05:35 sslo1 warning tmm2[11526]: 01260013:4: SSL Handshake failed for TCP 10.1.10.50:61863 -> 93.184.216.34:443``
 
--  Restart the Dropbox client. The client should connect and the default
-   browser will open requesting sign in. This indicates that the client
-   has been able to establish a connection to the Dropbox server and is
-   now requesting credentials to open a specific Dropbox.
-
-   |image28|
-
--  .. note:: **Note:** When added to the Pinners list, the default action is that
-      the SSL Orchestrator bypasses the traffic. In this lab example, since
-      we have enabled a Layer 2 TAP device for all Intercepted as well
-      Bypassed traffic, we still have some visibility. However, since the
-      traffic is not de-crypted, the payload is still encrypted.
-
-.. |image27| image:: ../images/image026.png
-   :width: 7.05556in
-   :height: 2.98958in
-.. |image28| image:: ../images/image027.png
-   :width: 7.05556in
-   :height: 4.02986in
+While not overly descriptive on its own, this message indicates that either the client-side (client to SSLO) or server-side (SSLO to server) SSL/TLS handshake was unsuccessful. This can be due to a number of reasons, such as a handshake timeout or negotiation failure. To troubleshoot this further, an administrator may refer to `K15292: Troubleshooting SSL/TLS handshake failures <https://support.f5.com/csp/article/K15292>`_ for next steps.

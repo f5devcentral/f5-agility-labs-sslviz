@@ -1,22 +1,19 @@
-.. role:: raw-html(raw)
-   :format: html
+.. role:: red
 
-Verify that we are not authenticating users
+Verify authentication is currently disabled
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  From the main menu, select **Access->Overview->Active Sessions**.
-   The following screen should be presented.
+-  Start a TMUI session on **SSL Orchestrator** and log in if prompted *(Components > SSL Orchestrator > ACCESS > TMUI)*
 
-   |image29|
+-  From the Main menu on the left, select **Access > Overview > Active Sessions**. The following screen should appear. You should see an **Active Session Count** of **0** and that there are no sessions listed in the table.
 
--  Browse through different websites on the **AD server & Test
-   Client** browser.
+   |active-sessions-none|
 
--  Refresh the previously shown screen and notice that no sessions are
-   being created.
+-  On the **Windows 10 Desktop** browse to various websites using Firefox
 
--  Modify the **Auto Refresh Setting** to :raw-html:`<i><font color="red">30 seconds</font></i>`
+-  Refresh the previously shown screen. You should still see an **Active Session Count** of **0**.
 
-.. |image29| image:: ../images/image028.png
-   :width: 7.05556in
-   :height: 3.10764in
+.. |active-sessions-none| image:: ../images/active-sessions-none.png
+   :width: 639px
+   :height: 330px
+   :alt: Active Sessions (None)

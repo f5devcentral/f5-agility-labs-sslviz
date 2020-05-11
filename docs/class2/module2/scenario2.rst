@@ -1,29 +1,14 @@
 Scenario
 --------
 
-To prevent large attachments from clogging up the email system, your
-company has enacted a new policy that restricts the size of email
-attachments from the previously generous 10MB to 500K or less. When this
-policy was enacted, employees were unable to send presentations or
-office documents to each other. This prevented collaboration.
+Your company recently experienced a network intrusion and an outside consulting firm was brought in to conduct a forensic analysis. One of the findings identified in the report was the lack of a system in your company that provides real-time analysis of network events and long-term storage of analytics and log data.
 
-To fix this problem, your company signed up for Dropbox to facilitate
-easy file transfers between employees. While this worked flawlessly
-prior to deploying SSL Orchestrator, employees are no longer able to
-access Dropbox using the native client after SSL Orchestrator has been
-deployed. They are however able to visit Dropbox and do their operations
-using a browser. However, the client provides certain functions that
-cannot be replicated by the browser and the native client also provides
-a richer and more convenient user experience.
+To address this finding, your company recently implemented a new Security Information and Event Management (SIEM) solution. Your manager has asked you to make the necessary changes to send SSL Orchestrator log data to the newly implemented SIEM.
 
-You are tasked with fixing this such that both browser and native client
-have unhindered access. Your manager has empowered you to do what is
-necessary to get this working.
+You are tasked with configuring SSL Orchestrator to log connection summary data to your company's SIEM.
 
 Lab Overview
 ------------
 
-This lab will continue work from the previous Lab 1. We will be
-reviewing the Pinned certificates category and see how to modify it to
-find a solution to the stated problem.
+This lab continues on from the previous lab. You will be reviewing the logging capabilities of SSL Orchestrator and configuring SSL Orchestrator to send logs off-box to a remote high-speed logging (HSL) server.
 

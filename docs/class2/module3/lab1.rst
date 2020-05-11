@@ -1,40 +1,35 @@
-.. role:: raw-html(raw)
-   :format: html
+.. role:: red
 
-Review the Security Objects and Access Policy
+Review the Access Policy and AAA configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  From the main menu select **Access->Authentication->NTLM->NTLM Auth
-   Configuration** and select :raw-html:`<i><font color="red">f5labs.com-NTLM-AAA</font></i>` from the presented
-   list (should be only one item in the list). The following screen
-   should be presented.
+-  From the Main menu on the left, select **Access > Authentication > NTLM > NTLM Auth Configuration**.
 
-   |image30|
+-  Select :red:`f5labs.com_ntlm_aaa` from the NTLM Auth Configuration list. The following screen should appear:
 
--  Machine Account Name is the name of the security object that is added
-   to the domain as a Computer Account and Domain Controller FQDN List
-   contains a list of the domain servers. In this lab environment we are
-   using the Testing Client as the AD server as well.
+   |f5labs.com_ntlm_aaa|
 
--  From the main menu select **Access->Profiles/Policies/Access
-   Profiles (Per-Session Policies)**. The following screen will be
-   presented.
+-  Machine Account Name is the name of the security object that is added to the domain as a Computer Account. Domain Controller FQDN List contains a list of the domain servers (in this lab there is only one).
 
-   |image31|
+-  From the main menu select **Access > Profiles / Policies > Access Profiles (Per-Session Policies)**. The following screen should appear:
 
--  Click on the **Edit** button next to the :raw-html:`<i><font color="red">f5labs-ntlm-ap</font></i>` Access
-   Profile Name. The following Access Policy should present itself.
+   |access_profile_list|
 
-   |image32|
+-  Click on the **Edit** button next to the :red:`f5labs-ntlm-ap` access profile. The following Access Policy should appear in the Visual Policy Editor:
 
--  Close the newly opened tab
+   |f5labs-ntlm-ap_vpe|
 
-.. |image30| image:: ../images/image029.png
-   :width: 6.87500in
-   :height: 4.37500in
-.. |image31| image:: ../images/image030.png
-   :width: 7.05556in
-   :height: 2.34097in
-.. |image32| image:: ../images/image031.png
-   :width: 6.37500in
-   :height: 2.61458in
+-  Close the Visual Policy Editor
+
+.. |f5labs.com_ntlm_aaa| image:: ../images/f5labs.com_ntlm_aaa.png
+   :width: 694px
+   :height: 386px
+   :alt: f5labs.com NTLM Auth Configuration
+.. |access_profile_list| image:: ../images/access_profile_list.png
+   :width: 806px
+   :height: 246px
+   :alt: Access Profile List
+.. |f5labs-ntlm-ap_vpe| image:: ../images/f5labs-ntlm-ap_vpe.png
+   :width: 752px
+   :height: 168px
+   :alt: f5labs-ntlm-ap Access Policy (VPE)

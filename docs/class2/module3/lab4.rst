@@ -1,52 +1,43 @@
-.. role:: raw-html(raw)
-   :format: html
+.. role:: red
 
-Verify that user information is being identified on the F5 SSL Orchestrator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enable authentication offload
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  From the main menu select **Access->Overview->Active Sessions**
+-  Start a console session to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
 
--  On the **AD server and Testing Client** open up the Firefox browser
-   and navigate through to any website
+-  Type ``tail -f /var/log/squid3/access.log`` in the web console and hit Enter
 
--  Notice that the user is now being prompted for credentials in
-   Firefox. This is because Firefox needs to be told on which sites to
-   automatically provide NTLM credentials
+-  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is still being logged. You should see log entries of the sites and URLs visited but the username field (immediately after the URI) will be blank ("-"), similar to the example below:
 
-   -  In the address bar of the Firefox browser type in :raw-html:`<i><font color="red">about:config</font></i>`
+   |proxy-access-log-nouser|
 
-   -  Type in :raw-html:`<i><font color="red">ntlm</font></i>` in the search box on the top of the browser. Modify
-      the :raw-html:`<i><font color="red">network.automatic-ntlm-auth.allow-non-fqdn</font></i>` and
-      :raw-html:`<i><font color="red">network.automatic-ntlm.trusted-uris</font></i>` such that the screen looks
-      like below
+-  SSL Orchestrator does not pass authenticated usernames to a proxy service unless explicitly configured to do so. In the next step you will enable this feature.
 
-      |image37|
+-  On SSL Orchestrator select **SSL Orchestrator > Configuration** from the Main menu on the left
 
--  In the **AD server & Testing Client** machine browser, browse
-   through a few websites. You should now be able to browse without
-   supplying credentials.
+-  Click **Services** on the horizontal menu and then click on **ssloS_SquidProxy**. The Summary page will load for the Squid proxy service.
 
--  On the F5 device navigate to the ***Access->Overview->Active
-   Sessions*** menu item from the main menu
+-  Click the edit icon (|pencil|) to the right of **Service**
 
--  You should be presented with session information and the username
+-  Scroll down the Service Properties screen and select the **Authentication Offload** checkbox. Doing so will cause SSL Orchestrator to inject an "X-Authenticated-User" header into the HTTP payload of traffic it directs to the Squid proxy service.
 
-   |image38|
+-  Click the **Save & Next** button and confirm by clicking the **OK** button in the pop-up that appears
 
--  Click on :raw-html:`<i><font color="red">View</font></i>` for the session - there is a lot of information that
-   is displayed that is obtained from active directory. This confirms
-   that the user has been authenticated and has been successfully looked
-   up in Active Directory.
+-  The **Service Chain List** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button.
 
-   |image39|
+-  Visit a few more secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop. You should now see your username logged along with the HTTP requests you sent, similar to the example below:
 
+   |proxy-access-log-mike|
 
-.. |image37| image:: ../images/image036.png
-   :width: 7.05556in
-   :height: 2.46111in
-.. |image38| image:: ../images/image037.png
-   :width: 7.05556in
-   :height: 2.49722in
-.. |image39| image:: ../images/image038.png
-   :width: 7.05556in
-   :height: 8.12986in
+.. |proxy-access-log-nouser| image:: ../images/proxy-access-log-nouser.png
+   :width: 1076px
+   :height: 118px
+   :alt: Proxy Access Log
+.. |pencil| image:: ../images/pencil.png
+   :width: 20px
+   :height: 20px
+   :alt: Pencil Icon
+.. |proxy-access-log-mike| image:: ../images/proxy-access-log-mike.png
+   :width: 1100px
+   :height: 118px
+   :alt: Proxy Access Log with Mike's Username

@@ -1,6 +1,3 @@
-.. role:: raw-html(raw)
-   :format: html
-
 Pre-existing environment validation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -52,7 +49,7 @@ Pre-existing environment validation
 
    -  Start a console session to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
 
-   -  Type ``tailf /var/log/squid3/access.log`` in the web console and hit Enter
+   -  Type ``tail -f /var/log/squid3/access.log`` in the web console and hit Enter
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is being logged even though we are visiting a secure website. You should see log entries of the sites and URLs visited, similar to the example below:
 
@@ -88,6 +85,6 @@ Pre-existing environment validation
    :height: 877px
    :alt: Firefox Connection Settings
 .. |proxy-access-log| image:: ../images/proxy-access-log.png
-   :width: 1912px
-   :height: 842px
+   :width: 1076px
+   :height: 118px
    :alt: Proxy Access Log
