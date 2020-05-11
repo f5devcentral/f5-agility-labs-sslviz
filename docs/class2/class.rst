@@ -1,5 +1,5 @@
 SSL Orchestrator v7 - SSLO 201: Real World Use Cases / Putting It to Use (Agility | 2 hours)
-====================================================================================
+============================================================================================
 
 Created for use at F5 Agility 2020
 
@@ -14,8 +14,6 @@ This class covers the following topics:
 -  Integrating authentication and group membership checks to customize user experiences
 
 Expected time to complete: **2 hours**
-
-To continue please review the information about the Lab Environment.
 
 .. toctree::
    :numbered:

@@ -1,19 +1,13 @@
 Scenario
 --------
 
-Your manager lets you know that the company is looking to update its
-Security Policy to log the usernames for all intercepted traffic. You
-are tasked with developing a working Proof of Concept and are asked to
-come up with an action plan to do so with the following restrictions:
+Your manager lets you know that the company's updated security policy requires the logging of usernames for all intercepted traffic. You are tasked with developing a working Proof of Concept and are asked to come up with an action plan to do so, with the following restrictions:
 
--  This process needs to be transparent to the user that has already
-   authenticated to the domain
+-  This process needs to be transparent to a user that has already authenticated to the domain (ex. is logged into a domain-joined computer)
 
 Lab Overview
 ------------
 
-This lab will continue work from the previous Lab 2. We will configure
-the SSL Orchestrator to authenticate using NTLM (the security objects
-and the Access Policy) have already been configured to keep this lab
-relevant only to the SSL Orchestrator.
+This lab continues on from the work you already completed in the previous labs. You will configure SSL Orchestrator to enable NTLM authentication and provide the authenticated username to the Squid security service.
 
+.. NOTE:: The Access Policy and associated authentication objects required for this lab have already been configured for you.

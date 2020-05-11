@@ -1,11 +1,8 @@
-.. role:: raw-html(raw)
-   :format: html
-
 Update Service Chains on existing Security Policy rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Update the existing Security Policy rules to use the new Service Chains you just created.
 
-From the SSL Orchestrator **Configuration** screen:
+From the SSL Orchestrator Configuration screen:
 
 -  Click the **Security Policies** tab in the middle of the main display area.
 
@@ -23,7 +20,7 @@ From the SSL Orchestrator **Configuration** screen:
 
 -  Now modify the **All Traffic** rule and select the **ssloSC\_All\_Services** Service Chain and click the **OK** button.
 
--  The Security Policy Rules should now look like this:
+-  The Security Policy rules should now look like this:
 
    |updated-security-policy|
 

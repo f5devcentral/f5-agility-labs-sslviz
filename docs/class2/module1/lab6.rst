@@ -1,12 +1,11 @@
-.. role:: raw-html(raw)
-   :format: html
+.. role:: red
 
 Confirm Service Chain and Security Policy rules are working as expected
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Browse to ``https://www.example.com`` on your Windows client
+-  Browse to ``https://www.example.com`` on your Windows 10 Desktop
 
--  Verify that :raw-html:`<i><font color="red">https://www.example.com</font></i>` is still being intercepted by confirming the certificate is signed/verified by **f5labs.com** 
+-  Verify that :red:`https://www.example.com` is still being intercepted by confirming the certificate is signed/verified by **f5labs.com** 
 
    |ff-f5labs-verified|
 
@@ -14,11 +13,11 @@ Confirm Service Chain and Security Policy rules are working as expected
 
    -  Start a console session to **Service - ExpProxy** (Components > Service - ExpProxy > ACCESS > Web Shell)
 
-   -  Type ``tailf /var/log/squid3/access.log`` in the web console and hit Enter
+   -  Type ``tail -f /var/log/squid3/access.log`` in the web console and hit Enter
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is being logged. You should see log entries of the URLs visited.
    
-   -  Visit a financial institution (ex. https://www.chase.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by f5labs.com. Because you are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
+   -  Visit a financial institution (ex. \https://www.chase.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by f5labs.com. Because you are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
    
    -  Confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic
 
@@ -40,7 +39,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
             ``tcpdump -nnXi eth1 not arp and not icmp | egrep -i "agility"``
 
-   -  Since SSL Orchestrator is intercepting/decrypting https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``Agility 2020`` in the browser, similar to the example below:
+   -  Since SSL Orchestrator is intercepting/decrypting \https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``Agility 2020`` in the browser, similar to the example below:
 
       |tcpdump-grep-agility|
 

@@ -1,25 +1,27 @@
-.. role:: raw-html(raw)
-   :format: html
+.. role:: red
 
-Modify DNS settings to configure the AD server as DNS server (Lab only)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Verify that user information is being identified on the F5 SSL Orchestrator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*This step is required in this environment because of DHCP on the
-management interface. The DNS settings are modified to default DHCP
-settings periodically.*
+-  On the **Windows 10 Desktop** open up the Firefox browser and browse to a few websites
 
-*Usually the F5 devices IP addresses are managed manually and this step
-is not required.*
+-  On SSL Orchestrator select **Access > Overview > Active Sessions** from the Main menu on the left
 
--  From the main menu select **System->Configuration->Device->DNS**
-   and delete the **DNS Lookup Server List** and add the following IP
-   address to the list :raw-html:`<i><font color="red">10.1.10.200</font></i>`. The configuration screen should
-   look like the one shown below after the edit.
+-  You should now see an active session similar to the example below.
 
--  Click **Update** at the bottom of the screen.
+   |active-sessions-mike|
 
-   |image36|
+.. TIP:: Click the **Refresh Session Table** button if the table is empty
 
-.. |image36| image:: ../images/image035.png
-   :width: 7.05556in
-   :height: 6.96528in
+-  Click on the **View** link to the left of the username you are logged in with to see more attributes associated with that user's access session, including attributes retrieved from Active Directory, such as: memberOf, sAMAccountName, and userPrincipalName.
+
+   |session-variables-mike|
+
+.. |active-sessions-mike| image:: ../images/active-sessions-mike.png
+   :width: 706px
+   :height: 332px
+   :alt: Active Sessions
+.. |session-variables-mike| image:: ../images/session-variables-mike.png
+   :width: 1042px
+   :height: 705px
+   :alt: Mike's Session Variables
