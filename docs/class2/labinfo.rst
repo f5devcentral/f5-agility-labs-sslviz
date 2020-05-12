@@ -1,7 +1,11 @@
+.. role:: bred
+
 SSL Orchestrator Lab Environment
 ================================
 
 The following is a visual representation of this lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers assigned. The colored boxes to the right of the services indicate a few product examples for each respective service type.
+
+The following information is based on a custom UDF blue print named :bred:`Agility 2020 - SSL Orchestrator 201`.
 
 .. image:: images/labinfo-2.png
    :align: center
