@@ -9,7 +9,9 @@ Before enabling connection summary logging, view the logging activity when all S
 
 - Type the following command to watch for new output in /var/log/apm:
 
-  ``tail -f /var/log/apm``
+.. code-block:: bash
+  
+   tail -f /var/log/apm
 
 - In another window/tab, start an RDP session to the **Windows 10 Desktop** *(Components > Windows 10 Desktop > ACCESS > RDP)*
 

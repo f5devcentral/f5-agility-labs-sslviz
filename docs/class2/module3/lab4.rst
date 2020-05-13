@@ -5,7 +5,9 @@ Enable authentication offload
 
 -  Start a console session to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
 
--  Type ``tail -f /var/log/squid3/access.log`` in the web console and hit Enter
+-  Type the following command in the web console and hit Enter:
+
+      ``tail -f /var/log/squid3/access.log``
 
 -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is still being logged. You should see log entries of the sites and URLs visited but the username field (immediately after the URI) will be blank ("-"), similar to the example below:
 
