@@ -7,8 +7,6 @@ An example of the logging that is produced by the SSL Orchestrator Generic facil
 
 .. code-block:: shell-session
 
-   tcpdump -lnni ssloN_IPS_in.app/ssloN_IPS_in
-
    May  5 12:11:49 sslo1 debug tmm[11503]: 01c4ffff:7: /Common/sslo_f5labs_explicit.app
     /sslo_f5labs_explicit_accessProfile:Common:2cd3ff97: /Common/sslo_f5labs_explicit.app
     /sslo_f5labs_explicit-in-t-4 CLIENT_ACCEPTED TCP from 10.1.10.50_64258 to
