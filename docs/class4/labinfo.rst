@@ -4,9 +4,6 @@
 SSL Orchestrator Lab Environment
 ================================
 
-.. TODO:: Update instructions for new Agility Lab portal when available
-
-
 To access your lab and lookup the necessary IP addresses, you should have
 received an email with your personal "Lab Portal Link". Once attached you
 should have something similar to the following image. Highlighted is the "Lab
