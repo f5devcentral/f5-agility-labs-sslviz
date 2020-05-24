@@ -4,27 +4,28 @@
 SSL Orchestrator Lab Environment
 ================================
 
-
 Accessing the Virtual Lab
 -------------------------
 
-.. TODO:: Update instructions for new Agility Lab portal when available
+If you are not familiar with the process for joining a training course, refer to:
 
-To access your lab:
--  <fill in the blank>
+- `How to join a training course <https://help.udf.f5.com/en/articles/3832165-how-to-join-a-training-course>`_
+- `How to use the training course interface <https://help.udf.f5.com/en/articles/3832340-training-course-interface>`_
 
-Once connected to your lab environment, you should see the following resources
-in the **Components** tab.
+.. NOTE::
 
-.. image:: images/labinfo-1.png
-   :align: center
+   All of your lab exercise work will be done from a single jump host (accessed via Remove Desktop Protocol (RDP) client).
+   
+   You will not need to use SSH to access the UDF lab environment, so no SSH Key needs to be conffigured.
 
-To connect to a component, click on the **ACCESS**
-drop-down and select either the **TMUI**, **SSH**, **RDP** option.
+From the :bred:`DEPLOYMENT` tab, you will access the :bred:`DESKTOP-OUTBOUND` system over RDP. 
+You can select the window resolution for the RDP session. An RDP file will be downloaded to your local
+system and you will need to open it to connect.
+
+|
 
 .. image:: images/labinfo-2.png
    :align: center
-
 
 Lab Details
 -----------
@@ -34,9 +35,7 @@ the BIG-IP GUI.
 
 .. IMPORTANT:: The lab environment for this guide has provided some
    prerequisite settings that you should be aware of. These are provided to
-   make the lab simpler. All of the following items would need to be configured
-   manually in another environment.
-
+   make the lab simpler.
 
    The following information is based on a custom :bred:`UDF` blue print named
    :bred:`Agility 2020 - Essential SSL Visibility with SSLO`.
@@ -229,4 +228,3 @@ service type.
 
 .. image:: images/labinfo-3.png
    :align: center
-
