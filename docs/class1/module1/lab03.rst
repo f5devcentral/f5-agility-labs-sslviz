@@ -50,7 +50,7 @@ Topology Properties
 .. image:: ../images/gc-path-1.png
    :align: center
 
-SSLO creates discreet configurations based
+SSLO creates discrete configurations based
 on the selected topology. For example, in previous versions of SSLO,
 a transparent and explicit forward proxy might be defined together.
 In SSLO 5.0 and above, these are configured separately. An explicit
@@ -195,7 +195,6 @@ Client-side SSL
    certificate and private key uses 2K RSA and is generated from
    scratch when the BIG-IP system is installed. The pre-defined
    :red:`default.crt` and :red:`default.key` can be left as is.
-   Click :red:`Done`.
 
 -  **CA Certificate Key Chain** - an SSL forward proxy must
    re-sign, or "forge" remote server certificate to local clients
@@ -433,7 +432,7 @@ Inline layer 3 service
 -  **L3 Devices** - this defines the inbound-side IP address of the inline
    layer 3 service, used for routing traffic to this device. Multiple load
    balanced IP addresses can be defined here. Click :guilabel:`Add`, enter
-   :red:`198.19.64.64`, then click :guilabel:`Done`.
+   :red:`198.19.64.65`, then click :guilabel:`Done`.
 
 -  **Device Monitor** - security service definitions can use
    specific custom monitors. For this lab, leave it set to the default
@@ -870,15 +869,6 @@ security policies created in the topology workflow.
    this allows selection of an access policy to support captive
    portal authentication. For this lab,
    leave the default selection.
-
--  **L7 Interception Rules - Protocols** - FTP and email protocol
-   traffic are all "server-speaks-first" protocols, and therefore
-   SSLO must process these separately from typical
-   client-speaks-first protocols like HTTP. This selection enables
-   processing of each of these protocols, which create separate
-   port-based listeners for each. As required, :red:`selectively
-   enable the additional protocols that need to be decrypted and
-   inspected` through SSLO.
 
 -  **L7 Interception Rules - Protocols** - FTP and email protocol traffic
    are all "server-speaks-first" protocols, and therefore SSLO must process

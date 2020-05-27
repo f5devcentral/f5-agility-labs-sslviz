@@ -45,7 +45,7 @@ Let's check if we see data on the TAP device.
 -  In the UDF UI, select the **Access** drop down selection on the **Service - TAP** VM,
    then select **WEB SHELL**.
 
--  In the web shell window, use perform a packet capture using **tcpdump**. The
+-  In the web shell window, perform a packet capture using **tcpdump**. The
    client machine's IP address is :red:`10.1.10.50`.
 
 .. code-block:: bash
@@ -64,7 +64,7 @@ observe the decrypted clear text traffic.
 -  In the UDF UI, select the **Access** drop down selection on the
    **Service - Inline L3** VM, then select **WEB SHELL**.
 
--  In the web shell window, use perform a packet capture using **tcpdump**. The
+-  In the web shell window, perform a packet capture using **tcpdump**. The
    client machine's IP address is :red:`10.1.10.50`. Recall that port remap was
    enabled so the unecrypted traffic will be seen on destination port 8181.
 
