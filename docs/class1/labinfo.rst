@@ -4,7 +4,6 @@
 SSL Orchestrator Lab Environment
 ================================
 
-<<<<<<< HEAD:docs/class1/labinfo.rst
 Accessing the Virtual Lab
 -------------------------
 
@@ -12,12 +11,11 @@ If you are not familiar with the process for joining a training course, refer to
 
 - `How to join a training course <https://help.udf.f5.com/en/articles/3832165-how-to-join-a-training-course>`_
 - `How to use the training course interface <https://help.udf.f5.com/en/articles/3832340-training-course-interface>`_
-=======
+
 To access your lab and lookup the necessary IP addresses, you should have
 received an email with your personal "Lab Portal Link". Once attached you
 should have something similar to the following image. Highlighted is the "Lab
 Guide" and the VM's you'll spend all of your time attached to.
->>>>>>> master:docs/class4/labinfo.rst
 
 .. NOTE::
 
