@@ -1,25 +1,17 @@
-Module 3 - Create an Explicit Forward Proxy SSLO
+Transparent authentication using NTLM
 ================================================
 
-SSL Orchestrator creates discreet, non-overlapping interception rules
-(listeners) based on the selected topology. For example, the explicit forward
-proxy workflow minimally creates an explicit proxy listener and relying
-transparent proxy listener attached to the explicit proxy tunnel. If a separate
-transparent proxy workflow was created, the resulting listener would not
-conflict with or overlap the existing transparent proxy listener. Therefore,
-assuming a transparent forward proxy already exists from Module 1, the
-following workflow will create a separate set of non-overlapping listeners to
-satisfy an explicit forward proxy use case.
+While SSL Orchestrator is providing visibility into SSL traffic, a large amount of data may be collected and logged by the orchestrated security services. The volume of data and lack of easily identifiable client traffic can hinder troubleshooting efforts, especially if there are shared computers in the workplace or if users are coming from behind a NAT. In addition to facilitating more detailed logging, security services may use this additional information to make policy decisions (ex. an HTTP proxy allowing access to specific resources based on username or group membership).
 
-.. note:: This lab will consist of an abbreviated set of steps, as all of the
-   objects created in Module 1 (SSL settings, services, service chains and
-   security policies) will be fully re-usable here. If any of these objects
-   have not been created, please review `Module 1 - Create a Transparent
-   Forward Procy SSLO <../module1/module1.html>`_ for more detailed
-   configuration instructions.
+SSL Orchestrator, combined with BIG-IP Access Policy Manager (APM), provides the ability to enable transparent passwordless authentication via NTLM and Kerberos. Data from the authenticated user (ex. username) can then be passed on to security services, such as an HTTP proxy service.
+
+This lab walks you through the process required to enable NTLM authentication and to send the authenticated username to the Squid proxy service.
+
+.. NOTE:: The Access Policy and associated authentication objects required for this lab have already been configured for you.
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
+   scenario*
    lab*

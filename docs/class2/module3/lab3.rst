@@ -1,34 +1,27 @@
 .. role:: red
-.. role:: bred
 
-Lab 3.3: Testing the Explicit Proxy deployment
-----------------------------------------------
+Verify that user information is being identified on the F5 SSL Orchestrator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To test the deployed solution, RDP to the :bred:`Outbound Win7 Client` and do
-the following:
+-  On the **Windows 10 Desktop** open up the Firefox browser and browse to a few websites
 
-.. hint:: Username = :red:`student` / Password = :red:`agility`
+-  On SSL Orchestrator select **Access > Overview > Active Sessions** from the Main menu on the left
 
-- Configure the client browser to use :red:`10.20.0.150:3128` for explicit
-  proxy access.
+-  You should now see an active session similar to the example below.
 
-  - This setting for Chrome can be find in :menuselection:`Settings -->
-    Advanced --> Open proxy settings`.
+   |active-sessions-mike|
 
-- SSH to BIG-IP CLI and run the following tcpdump command to view the browser
-  traffic hitting the explicit proxy IP.
+.. TIP:: Click the **Refresh Session Table** button if the table is empty
 
-  .. code-block:: bash
+-  Click on the **View** link to the left of the username you are logged in with to see more attributes associated with that user's access session, including attributes retrieved from Active Directory, such as: memberOf, sAMAccountName, and userPrincipalName.
 
-     tcpdump -nni client-net port 3128
-  
-- Test by browsing to url of choice.  You should see the traffic stream
-  across tcpdump from previous command.
+   |session-variables-mike|
 
-- An explicit proxy request test can also be done using command-line cURL:
-
-  .. code-block:: bash
-
-     curl -vk –proxy 10.20.0.150:3128 https://www.example.com
-
-  Again watch the tcpdump from the previous test to confirm explicit proxy use.
+.. |active-sessions-mike| image:: ../images/active-sessions-mike.png
+   :width: 706px
+   :height: 332px
+   :alt: Active Sessions
+.. |session-variables-mike| image:: ../images/session-variables-mike.png
+   :width: 1042px
+   :height: 705px
+   :alt: Mike's Session Variables

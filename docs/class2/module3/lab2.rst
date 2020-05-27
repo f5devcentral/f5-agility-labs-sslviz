@@ -1,22 +1,35 @@
 .. role:: red
-.. role:: bred
 
-Lab 3.2: [Optional] Add explicit proxy authentication
------------------------------------------------------
+Enable NTLM authentication on explicit proxy topology
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Enabling explicit proxy authentication in SSLO requires two steps:
+-  From the Main menu on the left, select **SSL Orchestrator > Configuration**
 
-#. **Create an SWG-Explicit access policy** - explicit proxy authentication is
-   defined as an access policy of type SWG-Explicit.
+-  In the Topology list click on **sslo_f5labs_explicit**. The topology summary screen will appear.
 
-   .. image:: ../images/image23.png
+-  Click the edit icon (|pencil|) to the right of **Interception Rule**
 
-   This policy will typically contain an HTTP 407 Response challenge, and then
-   some form of authentication, which could be HTTP Basic, NTLM or Kerberos.
+   |topology-summary-IR-edit|
 
-   .. image:: ../images/image24.png
+-  Select :red:`/Common/f5labs-ntlm-ap` from the **Access Profile** drop down menu
 
-#. **Apply the new access policy to an Explicit Proxy topology** - attach the
-   SWG-Explicit access policy by creating or editing an Explicit proxy SSLO
-   topology. On the Interception Rules page, select the new policy under the
-   :red:`Access Profile` option.
+-  Click **Save & Next** at the bottom of the screen
+
+-  The **Egress Settings** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button (see example below).
+
+   |egress-settings-deploy-ribbon|
+
+-  Click **OK** to acknowledge the successful deployment
+
+.. |topology-summary-IR-edit| image:: ../images/topology-summary-IR-edit.png
+   :width: 1057px
+   :height: 491px
+   :alt: Edit Interception Rule from Topology Summary
+.. |pencil| image:: ../images/pencil.png
+   :width: 20px
+   :height: 20px
+   :alt: Pencil Icon
+.. |egress-settings-deploy-ribbon| image:: ../images/egress-settings-deploy-ribbon.png
+   :width: 612px
+   :height: 343px
+   :alt: Deploy Ribbon on Egress Settings
