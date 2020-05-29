@@ -30,7 +30,7 @@ Bugs and Requests for enhancements are handled in two ways:
    :glob:
 
    class*/class*
-   archive*/class*
+   archive*/archive*
 
 |
 
