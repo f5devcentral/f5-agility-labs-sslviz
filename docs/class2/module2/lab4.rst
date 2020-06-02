@@ -5,7 +5,7 @@ Enabling SSL Orchestrator connection summary logging
 
 Before enabling connection summary logging, view the logging activity when all SSL Orchestrator logging facilities are set to their default value of Error:
 
-- Start a console session to **SSL Orchestrator** (Components > SSL Orchestrator > ACCESS > Web Shell)
+- Start a Web Shell to **SSL Orchestrator** (Components > SSL Orchestrator > ACCESS > Web Shell)
 
 - Type the following command to watch for new output in /var/log/apm:
 
