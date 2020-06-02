@@ -11,7 +11,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
 -  Verify that the Squid Proxy is seeing decrypted traffic:
 
-   -  Start a console session to **Service - ExpProxy** (Components > Service - ExpProxy > ACCESS > Web Shell)
+   -  Start a Web Shell to **Service - ExpProxy** (Components > Service - ExpProxy > ACCESS > Web Shell)
 
    -  Type ``tail -f /var/log/squid3/access.log`` in the web console and hit Enter
 
@@ -23,7 +23,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
 -  Verify that the Cisco Firepower TAP is seeing both intercepted and bypassed traffic:
 
-   -  Start a console session to **Service - TAP** (Components > Service - TAP > ACCESS > Web Shell)
+   -  Start a Web Shell to **Service - TAP** (Components > Service - TAP > ACCESS > Web Shell)
 
    -  Type the following command to verify that traffic is being sent to the TAP service:
 
