@@ -3,7 +3,7 @@
 Enable authentication offload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Start a console session to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
+-  Start a Web Shell to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
 
 -  Type the following command in the web console and hit Enter:
 
