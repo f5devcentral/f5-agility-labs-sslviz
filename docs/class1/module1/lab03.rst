@@ -20,7 +20,7 @@ Initialization
 ------------------
 
 From the left-hand menu, navigate to
-:menuselection:`SSL Orchestrator > Configuration`. If this is the first
+:red:`SSL Orchestrator > Configuration`. If this is the first
 time accessing SSLO in a new BIG-IP build, the Guided Configuration UI will
 automatically load and deploy the built-in SSLO package.
 
@@ -42,7 +42,7 @@ provide an opportunity to define DNS and route settings later in the workflow.
 .. image:: ../images/module1-2.png
    :align: center
 
--  No other configurations are required on this page, click :guilabel:`Next`.
+-  No other configurations are required on this page, click :red:`Next`.
 
 Topology Properties
 -----------------------
@@ -126,23 +126,23 @@ topologies:
 
 **For this lab:**
 
--  Click on the :guilabel:`Next` button at the bottom of the page.
+-  Click on the :red:`Next` button at the bottom of the page.
 
 -  **Name**: Enter some name (ex. ":red:`demoL3`").
 
--  **Protocol**: Select :guilabel:`Any` - this will create separate
+-  **Protocol**: Select :red:`Any` - this will create separate
    TCP, UDP and non-TCP/UDP interception rules.
 
--  **IP Family**: Select :guilabel:`IPv4`
+-  **IP Family**: Select :red:`IPv4`
 
--  **Topology**: Select :guilabel:`L3 Outbound`
+-  **Topology**: Select :red:`L3 Outbound`
 
    .. image:: ../images/module1-3.png
       :align: center
 
 The **Topology** settings have been configured.
 
--  Click :guilabel:`Save & Next` to continue to the next stage.
+-  Click :red:`Save & Next` to continue to the next stage.
 
 
 SSL Configurations
@@ -158,7 +158,7 @@ can be selected and re-used. Otherwise, the SSL Configurations page creates new
 SSL settings for this workflow. The **[Advanced]** options below are
 available when "Show Advanced Settings" is enabled (top right).
 
-For this lab, :guilabel:`Create a new SSL profile`.
+For this lab, :red:`Create a new SSL profile`.
 
 
 Client-side SSL
@@ -172,15 +172,8 @@ Client-side SSL
    If the former, select a previously-defined cipher group (from Local
    Traffic - Ciphers - Groups). If the latter, enter a cipher string that
    appropriately represents the client-side TLS requirement. For this lab,
-   leave the :guilabel:`Cipher String` option selected. The default **Cipher**
+   leave the :red:`Cipher String` option selected. The default **Cipher**
    string of :red:`DEFAULT` is optimal for most environments.
-
--  **Cipher Type** - cipher type can be a Cipher Group or Cipher
-   String. If the former, select a previously-defined cipher group
-   (from Local Traffic - Ciphers - Groups). If the latter, enter a
-   cipher string that appropriately represents the client-side TLS
-   requirement. For most environments, :red:`DEFAULT` is optimal. For
-   this lab, leave :red:`Cipher String` selected.
 
 -  **Certificate Key Chain** - the certificate key chain
    represents the certificate and private key used as the
@@ -294,7 +287,7 @@ Server-side SSL
 
 The **SSL** settings have now been configured.
 
--  Click :guilabel:`Save & Next` to continue to the next stage.
+-  Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png
 
@@ -315,16 +308,16 @@ necessary to scroll down to see additional services.
 
 .. image:: ../images/module1-5.png
 
-This lab will create one of each type of security service. Click :guilabel:`Add
+This lab will create one of each type of security service. Click :red:`Add
 Service`, then either select a service from the catalog and
-click :guilabel:`Add`, or simply double-click the service to go
+click :red:`Add`, or simply double-click the service to go
 to its configuration page.
 
 Inline layer 2 service
 ~~~~~~~~~~~~~~~~~~~~~~
 
--  Select the :guilabel:`FireEye NX Inline Layer 2` service from
-   the catalog and click :guilabel:`Add`, or simply double-click
+-  Select the :red:`FireEye NX Inline Layer 2` service from
+   the catalog and click :red:`Add`, or simply double-click
    the FireEye NX Inline Layer 2 service (or any other
    Inline Layer 2 service in the catalog).
 
@@ -333,25 +326,25 @@ Inline layer 2 service
 
 -  **Network Configuration** - paths define the network interfaces that take
    inspectable traffic to the inline service and receive traffic from the
-   service. Click :guilabel:`Add`.
+   service. Click :red:`Add`.
 
    -  **Ratio** - inline security services are natively load balanced, so
       this setting defines a ratio, if any for the load balanced pool
       members. Enter :red:`1`.
 
    -  **From BIGIP VLAN** - this is the interface taking traffic to the inline
-      service. Select the :guilabel:`Create New` option, enter a unique name
+      service. Select the :red:`Create New` option, enter a unique name
       (ex. :red:`FireEye_in`), select the F5 interface connecting to the
       inbound side of the service, and add a VLAN tag value if required. For
       this lab, select interface :red:`1.4` without a VLAN tag.
 
    -  **To BIGIP VLAN** - this is the interface receiving traffic from the
-      inline service. Select the :guilabel:`Create New` option, enter a unique
+      inline service. Select the :red:`Create New` option, enter a unique
       name (ex. :red:`FireEye_out`), select the F5 interface connecting to the
       outbound side of the service, and add a VLAN tag value if required. For
       this lab, select interface :red:`1.5` without a VLAN tag.
 
-   - Click :guilabel:`Done`.
+   - Click :red:`Done`.
 
 -  **Device Monitor** - security service definitions can use
    specific custom monitors. For this lab, leave it set to the default
@@ -378,15 +371,15 @@ Inline layer 2 service
    to view and modify HTTP traffic flowing to/from the service. Additional
    iRules are not required here so leave this :red:`empty`.
 
--  Click :guilabel:`Save`.
+-  Click :red:`Save`.
 
 Inline layer 3 service
 ~~~~~~~~~~~~~~~~~~~~~~
 
--  Click on :guilabel:`Add Service`.
+-  Click on :red:`Add Service`.
 
--  Select the :guilabel:`Generic Inline Layer 3`
-   service from the catalog and click :guilabel:`Add`, or simply double-click
+-  Select the :red:`Generic Inline Layer 3`
+   service from the catalog and click :red:`Add`, or simply double-click
    it.
 
 -  **Name** - enter a unique name to this service (example ":red:`IPS`").
@@ -419,7 +412,7 @@ Inline layer 3 service
       disabled, the IP address must be defined manually. For this lab, leave
       the :red:`198.19.64.7/25` address intact.
 
-   -  **VLAN** - select the :guilabel:`Create New` option, provide a unique name
+   -  **VLAN** - select the :red:`Create New` option, provide a unique name
       (ex. :red:`IPS_in`), select the F5 interface connecting to the inbound
       side of the service, and add a VLAN tag value if required. For this lab,
       select interface :red:`1.6` and VLAN tag :red:`10`.
@@ -431,8 +424,8 @@ Inline layer 3 service
 
 -  **L3 Devices** - this defines the inbound-side IP address of the inline
    layer 3 service, used for routing traffic to this device. Multiple load
-   balanced IP addresses can be defined here. Click :guilabel:`Add`, enter
-   :red:`198.19.64.65`, then click :guilabel:`Done`.
+   balanced IP addresses can be defined here. Click :red:`Add`, enter
+   :red:`198.19.64.65`, then click :red:`Done`.
 
 -  **Device Monitor** - security service definitions can use
    specific custom monitors. For this lab, leave it set to the default
@@ -447,7 +440,7 @@ Inline layer 3 service
       option disabled, the IP address must be defined manually. For this lab,
       leave the :red:`198.19.64.245/25` address intact.
 
-   -  **VLAN** - select the :guilabel:`Create New` option, provide a unique name
+   -  **VLAN** - select the :red:`Create New` option, provide a unique name
       (ex. :red:`IPS_out`), select the F5 interface connecting to the outbound
       side of the service, and add a VLAN tag value if required. For this lab,
       select interface :red:`1.6` and VLAN tag :red:`20`.
@@ -479,17 +472,17 @@ Inline layer 3 service
    to view and modify HTTP traffic flowing to/from the service. Additional
    iRules are not required in this lab, so leave this :red:`empty`.
 
--  Click :guilabel:`Save`.
+-  Click :red:`Save`.
 
 Inline HTTP service
 ~~~~~~~~~~~~~~~~~~~
 
 An inline HTTP service is defined as an explicit or transparent proxy for HTTP (web) traffic.
 
--  Click on :guilabel:`Add Service`.
+-  Click on :red:`Add Service`.
 
--  Select the :guilabel:`Cisco WSA HTTP Proxy` service from the catalog
-   and click :guilabel:`Add`, or simply double-click it.
+-  Select the :red:`Cisco WSA HTTP Proxy` service from the catalog
+   and click :red:`Add`, or simply double-click it.
 
    -  **Name** - provide a unique name to this service (example ":red:`Proxy`").
 
@@ -524,7 +517,7 @@ An inline HTTP service is defined as an explicit or transparent proxy for HTTP (
       disabled, the IP address must be defined manually. For this lab, leave
       the :red:`198.19.96.7/25` address intact.
 
-   -  **VLAN** - select the :guilabel:`Create New` option, provide a unique name
+   -  **VLAN** - select the :red:`Create New` option, provide a unique name
       (ex. :red:`Proxy_in`), select the F5 interface connecting to the inbound
       side of the service, and add a VLAN tag value if required. For this lab,
       select interface :red:`1.6` and VLAN tag :red:`30`.
@@ -540,8 +533,8 @@ An inline HTTP service is defined as an explicit or transparent proxy for HTTP (
    load balanced IP addresses can be defined here. For a transparent proxy
    HTTP service, only an IP address is required. For an explicit proxy HTTP
    service, the IP address and listening port is required. Click
-   :guilabel:`Add`, enter :red:`198.19.96.66` for the IP Address, and
-   :red:`3128` for the Port, then click :guilabel:`Done`.
+   :red:`Add`, enter :red:`198.19.96.66` for the IP Address, and
+   :red:`3128` for the Port, then click :red:`Done`.
 
 -  **Device Monitor** - security service definitions can use
    specific custom monitors. For this lab, leave it set to the default
@@ -556,7 +549,7 @@ An inline HTTP service is defined as an explicit or transparent proxy for HTTP (
       option disabled, the IP address must be defined manually. For this lab,
       leave the :red:`198.19.96.245/25` address intact.
 
-   -  **VLAN** - select the :guilabel:`Create New` option, provide a unique
+   -  **VLAN** - select the :red:`Create New` option, provide a unique
       name (ex. :red:`Proxy_out`), select the F5 interface connecting to the
       outbound side of the service, and add a VLAN tag value if required. For
       this lab, select interface :red:`1.6` and VLAN tag :red:`40`.
@@ -586,7 +579,7 @@ An inline HTTP service is defined as an explicit or transparent proxy for HTTP (
    to view and modify HTTP traffic flowing to/from the service. Additional
    iRules are not required, however, so leave this :red:`empty`.
 
-- Click :guilabel:`Save`.
+- Click :red:`Save`.
 
 ICAP service
 ~~~~~~~~~~~~
@@ -594,10 +587,10 @@ ICAP service
 An ICAP service is an RFC 3507-defined service that
 provides some set of services over the ICAP protocol.
 
--  Click on :guilabel:`Add Service`.
+-  Click on :red:`Add Service`.
 
--  Select the :guilabel:`Digital Guardian ICAP` service from the
-   catalog and click :guilabel:`Add`, or simply double-click it.
+-  Select the :red:`Digital Guardian ICAP` service from the
+   catalog and click :red:`Add`, or simply double-click it.
 
 -  **Name** - provide a unique name to this service (example ":red:`DLP`").
 
@@ -606,8 +599,8 @@ provides some set of services over the ICAP protocol.
 
 -  **ICAP Devices** - this defines the IP address of the ICAP service, used
    for passing traffic to this device. Multiple load balanced IP addresses
-   can be defined here. Click :guilabel:`Add`, enter :red:`10.1.30.50` for the
-   IP Address, and :red:`1344` for the Port, and then click :guilabel:`Done`.
+   can be defined here. Click :red:`Add`, enter :red:`10.1.30.50` for the
+   IP Address, and :red:`1344` for the Port, and then click :red:`Done`.
 
 -  **Device Monitor** - security service definitions can use
    specific custom monitors. For this lab, leave it set to the default
@@ -658,16 +651,16 @@ provides some set of services over the ICAP protocol.
    ICAP CPM policy can be used to disable the request and/or response ADAPT
    profiles. Leave this :red:`blank (--Select--)`
 
--  Click :guilabel:`Save`.
+-  Click :red:`Save`.
 
 TAP service
 ~~~~~~~~~~~
 
 A TAP service is a passive device that simply receives a copy of traffic.
 
--  Click on :guilabel:`Add Service`.
+-  Click on :red:`Add Service`.
 
--  Select the :guilabel:`Cisco Firepower Thread Defense TAP`
+-  Select the :red:`Cisco Firepower Thread Defense TAP`
    service from the catalog and click :red:`Add`, or simply double-click it.
 
 -  **Name** - provide a unique name to this service (example ":red:`TAP`").
@@ -678,7 +671,7 @@ A TAP service is a passive device that simply receives a copy of traffic.
    arbitrarily defined. For this lab, enter :red:`12:12:12:12:12:12`.
 
 -  **VLAN** - this defines the interface connecting the F5 to the TAP
-   service. Click :guilabel:`Create New` and provide a unique name (ex.
+   service. Click :red:`Create New` and provide a unique name (ex.
    :red:`TAP_in`).
 
 -  **Interface** - select the :red:`1.7` interface without a tag.
@@ -687,11 +680,11 @@ A TAP service is a passive device that simply receives a copy of traffic.
    HTTPS traffic flowing to this service. For this lab, leave the option
    :red:`disabled (unchecked)`.
 
-- Click :guilabel:`Save`.
+- Click :red:`Save`.
 
 The **Services** for this lab have now been configured.
 
-- Click :guilabel:`Save & Next` to continue to the next stage.
+- Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-6.png
 
@@ -709,23 +702,27 @@ of the security services, while non-HTTP traffic goes through a subset, and
 traffic destined to a financial service URL can bypass decryption and still
 flow through a smaller set of security services.
 
+|
+
 .. image:: ../images/module1-7.png
 
--  Click :guilabel:`Add` to create a new service chain containing all of the
+|
+
+-  Click :red:`Add` to create a new service chain containing all of the
    security services.
 
    -  **Name** - provide a unique name to this service chain
       (ex.":red:`all_services`").
 
    -  **Services** - select any number of desired service and move them into the
-      :guilabel:`Selected Service Chain Order` column, optionally also ordering
+      :red:`Selected Service Chain Order` column, optionally also ordering
       them as required. In this lab, select :red:`all of the services` and then
-      click the :guilabel:`rightward-pointing arrow` to move them to the
-      :guilabel:`Selected Service Chain Order` side.
+      click the :red:`rightward-pointing arrow` to move them to the
+      :red:`Selected Service Chain Order` side.
 
-   -  Click :guilabel:`Save`.
+   -  Click :red:`Save`.
 
--  Click :guilabel:`Add` to create a new service chain for just the L2 (ex.
+-  Click :red:`Add` to create a new service chain for just the L2 (ex.
    FireEye) and TAP services.
 
    -  **Name** - provide a unique name to this service chain (ex.
@@ -734,13 +731,13 @@ flow through a smaller set of security services.
    -  **Services** - select and then move the :red:`FireEye` and :red:`TAP`
       services to the right-hand side.
 
-   - Click :guilabel:`Save`.
+   - Click :red:`Save`.
 
 .. image:: ../images/module1-8.png
 
 The **Service Chains** have now been configured.
 
-- Click :guilabel:`Save & Next` to continue to the next stage.
+- Click :red:`Save & Next` to continue to the next stage.
 
 Security Policy
 -------------------
@@ -779,7 +776,7 @@ Add a New Rule
 In this lab, create an additional rule to bypass SSL for "Financial Data and
 Services" and "Health and Medicine" URL categories.
 
--  Click :guilabel:`Add` to create a new rule.
+-  Click :red:`Add` to create a new rule.
 
 -  **Name** - provide a unique name for the rule (ex. ":red:`urlf_bypass`").
 
@@ -798,7 +795,7 @@ Services" and "Health and Medicine" URL categories.
 -  **Service Chain** - select the FireEye/TAP service chain
    :red:`L2_services`.
 
--  Click :guilabel:`OK`.
+-  Click :red:`OK`.
 
    .. image:: ../images/module1-10.png
 
@@ -806,12 +803,12 @@ In the list of rules, notice that the **All Traffic** rule intercepts but
 does *not* send traffic to any service chain. For the lab, edit this rule to
 send all intercepted traffic to a service chain.
 
--  Click the pencil icon to :guilabel:`edit` this rule.
+-  Click the pencil icon to :red:`edit` this rule.
 
 -  **Service Chain** - select the service chain containing :red:`all` of the
    services.
 
--  Click :guilabel:`OK`.
+-  Click :red:`OK`.
 
    .. image:: ../images/module1-11.png
 
@@ -832,7 +829,7 @@ send all intercepted traffic to a service chain.
 
 The **Security Policy** has now been configured.
 
--  Click :guilabel:`Save & Next` to continue to the next stage.
+-  Click :red:`Save & Next` to continue to the next stage.
 
 
 Interception Rule
@@ -881,7 +878,7 @@ security policies created in the topology workflow.
 
 The **Interception Rules** have now been configured.
 
--  Click :guilabel:`Save & Next` to continue to the next stage.
+-  Click :red:`Save & Next` to continue to the next stage.
 
 
 Egress Setting
@@ -915,7 +912,7 @@ default gateway route and outbound SNAT settings.
 
 The **Egress Settings** have now been configured.
 
--  Click :guilabel:`Save & Next` to continue to the next stage.
+-  Click :red:`Save & Next` to continue to the next stage.
 
 
 Log Settings
@@ -968,7 +965,7 @@ Multiple discreet logging options are available:
 
 The **Log Settings** have now been configured.
 
--  Click :guilabel:`Save & Next` to continue to the next stage.
+-  Click :red:`Save & Next` to continue to the next stage.
 
 Summary
 ------------
@@ -985,7 +982,7 @@ selected settings page.
 
 .. image:: ../images/module1-15.png
 
-- When satisfied with the defined settings, click :guilabel:`Deploy`.
+- When satisfied with the defined settings, click :red:`Deploy`.
 
 Upon successfully deploying the configuration, SSL Orchestrator will now
 display a **Configure** view:
@@ -1011,5 +1008,5 @@ This completes the configuration of SSL Orchestrator as a
 transparent forward proxy.
 
 In the next section, you will use an internal client
-:red:`(Desktop-Outbound)` to browse to external (Internet)
+**(Desktop-Outbound)** to browse to external (Internet)
 resources. Decrypted traffic will flow across the security services.
