@@ -1,5 +1,5 @@
-F5 SSL Orchestrator Training Labs
-=================================
+[Archived] SSL Orchestrator v7 (Agility 2020) Training Labs
+============================================================
 
 Welcome to the F5 SSL Orchestration Training series. The intended audience
 for these labs are security engineers that would like to leverage the
@@ -30,11 +30,10 @@ Bugs and Requests for enhancements are handled in two ways:
    :glob:
 
    class*/class*
-   archive*/archive*
 
 |
 
-(c) 2016-2021 F5 Networks, Inc. All rights reserved. F5, F5 Networks, and the F5
+(c) 2016-2020 F5 Networks, Inc. All rights reserved. F5, F5 Networks, and the F5
 logo are trademarks of F5 Networks, Inc. in the U.S. and in certain
 other countries. Other F5 trademarks are identified at f5.com.
 
