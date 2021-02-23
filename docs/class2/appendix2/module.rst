@@ -1,5 +1,5 @@
-Understanding SSL Orchestrator logging
-================================================
+Appendix 2 - Understanding SSL Orchestrator logging
+======================================================
 
 As an administrator it is important that you understand how to interpret SSL Orchestrator logs, as they are an invaluable tool when troubleshooting. It is equally important from an organizational perspective to collect log data on a system such as a security information and event management (SIEM) system for real-time monitoring and long-term log storage.
 

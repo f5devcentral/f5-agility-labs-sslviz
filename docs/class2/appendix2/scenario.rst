@@ -10,5 +10,5 @@ You are tasked with configuring SSL Orchestrator to log connection summary data 
 Lab Overview
 ------------
 
-This lab continues on from the previous lab. You will be reviewing the logging capabilities of SSL Orchestrator and configuring SSL Orchestrator to send logs off-box to a remote high-speed logging (HSL) server.
+This lab depends on having a working SSL Orchestrator outbound topology. You will be reviewing the logging capabilities of SSL Orchestrator and configuring SSL Orchestrator to send logs off-box to a remote high-speed logging (HSL) server.
 
