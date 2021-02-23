@@ -1,7 +1,7 @@
-SSL Orchestrator v7 - SSLO 201: Real World Use Cases / Putting It to Use (Agility | 2 hours)
+SSL Orchestrator v8 - SSLO 201: Real World Use Cases (Agility 2021 | 2 hours)
 ============================================================================================
 
-Created for use at F5 Agility 2020
+Created for use at F5 Agility
 
 As organizational requirements change, so does the need to update security polices and apply additional features to existing F5 SSL Orchestrator deployments.  There is no need to fear required maintenance and regular upkeep of your security strategy. Maintenance can be performed within the SSLO Dashboard. It also provides enhanced statistical information which is needed to differentiate between normal and abnormal traffic.
 
@@ -24,3 +24,4 @@ Expected time to complete: **2 hours**
    labinfo
    module*/module*
    conclusion
+   appendix*/module*
