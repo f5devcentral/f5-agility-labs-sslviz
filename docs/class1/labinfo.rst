@@ -21,7 +21,7 @@ Guide" and the VM's you'll spend all of your time attached to.
 
    All of your lab exercise work will be done from a single jump host (accessed via Remove Desktop Protocol (RDP) client).
    
-   You will not need to use SSH to access the UDF lab environment, so no SSH Key needs to be conffigured.
+   You will not need to use SSH to access the UDF lab environment, so no SSH Key needs to be configured.
 
 From the :bred:`DEPLOYMENT` tab, you will access the :bred:`DESKTOP-OUTBOUND` system over RDP. 
 You can select the window resolution for the RDP session. An RDP file will be downloaded to your local
@@ -43,7 +43,7 @@ the BIG-IP GUI.
    make the lab simpler.
 
    The following information is based on a custom :bred:`UDF` blue print named
-   :bred:`Agility 2020 - Essential SSL Visibility with SSLO`.
+   :bred:`Agility 2021 - Essential SSL Visibility with SSLO`.
 
 -  **Client side VLAN and subnet are pre-defined** - this is the VLAN
    that an internal client connects to for outbound traffic flows. SSLO

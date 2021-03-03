@@ -1,10 +1,15 @@
 .. role:: red
 .. role:: bred
 
-Fulfill the SSL Orchestrator pre-requisites
+Review the default SSL Orchestrator pre-requisites
 ===================================================
 
-There are a number of objects that SSL Orchestrator does not create and expects to exist before deploying an SSL Orchestrator configuration. You must create the following objects before starting the Guided Configuration:
+When
+using the UDF blueprint, most of these have been pre-configured for you.
+The only exception is the default route, which will be explicitly addressed
+in a later section.
+
+.. note:: There are no additional steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the pre-requisites.
 
 -  **Import the CA certificate and private key** - in order to terminate and
    re-encrypt outbound SSL traffic, SSL Forward Proxy must re-issue, or rather
