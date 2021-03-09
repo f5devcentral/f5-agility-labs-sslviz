@@ -1,11 +1,24 @@
 .. role:: red
+.. role:: bred
 
 Pre-existing environment validation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Start an RDP session to the **Windows 10 Desktop** *(Components > Windows 10 Desktop > ACCESS > RDP)*
+-  Start an RDP session to the **Ubuntu18.04 Client** (**Components > Ubuntu18.04 Client > ACCESS > XRDP**)
 
--  Login in as **f5labs\\mike** (pw: **agility**)
+.. image:: ../images/ubuntu-client-rdp-1.png
+
+-  At the ubuntu Login prompt, click on the **OK** button to continue.
+
+.. image:: ../images/ubuntu-client-rdp-2.png
+
+|
+
+.. note::
+
+   If the RDP session times out later, the password for the **student** user is ``agility``.
+
+|
 
 -  Open the **Firefox** browser
 
@@ -27,9 +40,9 @@ Pre-existing environment validation
 
    -  In Firefox, click on the menu (|ff-menu|) in the top right of the window
 
-   -  Select **Options** on the menu
+   -  Select **Preferences** on the menu
    
-   -  In the **Find in Options** search field at the top, type :red:`proxy`
+   -  In the **Find in Preferences** search field at the top, type ``proxy``
    
    -  Click the **Settings...** button under Network Settings
    
@@ -49,7 +62,7 @@ Pre-existing environment validation
 
 -  Confirm that the explicit proxy service is seeing decrypted traffic:
 
-   -  Start a Web Shell to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
+   -  Start a Web Shell to **Ubuntu18.04 Services** (**Components > Ubuntu18.04 Services > ACCESS > Web Shell**)
 
    -  Type the following command in the web console and hit Enter:
 

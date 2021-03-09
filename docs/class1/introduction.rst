@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-What is the F5 SSL Orchestrator?
+What is F5 SSL Orchestrator?
 ================================
 
 Overview
