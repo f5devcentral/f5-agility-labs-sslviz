@@ -31,24 +31,33 @@ The following is a visual representation of this lab environment. The numbers in
      - Outbound VLAN
      - 1.2
    * -
+     - Inline L3, HTTP, and ICAP services
+     - 1.3 (tagged)
+   * -
      - Inline L2 service inbound
      - 1.4
    * -
      - Inline L2 service outbound
      - 1.5
    * -
-     - Inline L3, HTTP, and ICAP services
-     - 1.3 (tagged)
-   * -
      - TAP service
      - 1.6
 
-.. list-table:: **Windows 10 client**
+.. list-table:: **Ubuntu18.04 Client** (used for most of the lab exercises)
    :header-rows: 0
-   :widths: auto
+   :widths: 200 800
 
    * - IP address
      - 10.1.10.50
+   * - Login
+     - student:agility
+     
+.. list-table:: **Windows Client** (only for NTLM Authentication lab exercise)
+   :header-rows: 0
+   :widths: 200 400 400
+
+   * - IP address
+     - 10.1.10.70
      -
    * - Logins
      - **Username**
@@ -60,12 +69,30 @@ The following is a visual representation of this lab environment. The numbers in
      - F5LABS\\jane
      - agility
 
+.. list-table:: **Windows Server** (only for NTLM Authentication lab exercise)
+   :header-rows: 0
+   :widths: 200 800
+
+   * - IP address
+     - 10.1.10.80
+   * - Login
+     - N/A
+
 .. list-table:: **Inline Layer 2 service**
    :header-rows: 0
    :widths: auto
 
    * - Login
      - student:agility
+     - 
+   * - Interfaces
+     - Inbound (TO service) interface
+     - 1.4
+   * - 
+     - Outbound (FROM service) interface
+     - 1.5
+   
+
 
 .. list-table:: **Inline Layer 3 service**
    :header-rows: 0
@@ -76,11 +103,11 @@ The following is a visual representation of this lab environment. The numbers in
      -
      -
    * - Interfaces
-     - Inbound interface
+     - Inbound (TO service) interface
      - 1.3 tag 60
      - 198.19.64.7/25
    * -
-     - Outbound interface
+     - Outbound (FROM service) interface
      - 1.3 tag 70
      - 198.19.64.245/25
    * - Services
@@ -97,11 +124,11 @@ The following is a visual representation of this lab environment. The numbers in
      -
      -
    * - Interfaces
-     - Inbound interface
+     - Inbound (TO service) interface
      - 1.3 tag 30
      - 198.19.96.7/25
    * -
-     - Outbound interface
+     - Outbound (FROM service) interface
      - 1.3 tag 40
      - 198.19.96.245/25
    * - Services
@@ -118,11 +145,11 @@ The following is a visual representation of this lab environment. The numbers in
      -
      -
    * - Interface
-     - Inbound interface
+     - Inbound (TO service) interface
      - 1.3 tag 50
      - 198.19.97.1/25
    * - Services
-     - Squid ClamAV
+     - SquidClamAV
      - Port 1433
      - 198.19.97.50/25
 
@@ -139,5 +166,10 @@ The following is a visual representation of this lab environment. The numbers in
 
    * - Login
      - root:default
+     - 
+   * - Interface
+     - Inbound (TO service) interface
+     - 1.6
    * - MAC Address
      - 12:12:12:12:12:12 (arbitrary if directly connected)
+     - 

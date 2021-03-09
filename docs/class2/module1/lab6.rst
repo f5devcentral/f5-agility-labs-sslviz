@@ -11,23 +11,25 @@ Confirm Service Chain and Security Policy rules are working as expected
 
 -  Verify that the Squid Proxy is seeing decrypted traffic:
 
-   -  Start a Web Shell to **Service - ExpProxy** (Components > Service - ExpProxy > ACCESS > Web Shell)
+   -  Return to the **Ubuntu18.04 Services** Web Shell (**Components > Ubuntu18.04 Services > ACCESS > Web Shell**)
 
-   -  Type ``tail -f /var/log/squid3/access.log`` in the web console and hit Enter
+   -  Type the following command in the web console and hit Enter:
 
-   -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is being logged. You should see log entries of the URLs visited.
+         ``docker exec -it explicit-proxy tail -f /var/log/squid/access.log`` 
+
+   -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the **Ubuntu18.04 Client** machine and confirm that access is being logged. You should see log entries of the URLs visited.
    
-   -  Visit a financial institution (ex. \https://www.chase.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by f5labs.com. Because you are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
+   -  Visit a financial institution (ex. \https://www.bankofamerica.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by **f5labs.com**. Because you are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
    
    -  Confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic
 
 -  Verify that the Cisco Firepower TAP is seeing both intercepted and bypassed traffic:
 
-   -  Start a Web Shell to **Service - TAP** (Components > Service - TAP > ACCESS > Web Shell)
+   -  Return to the **Ubuntu18.04 Services** Web Shell (**Components > Ubuntu18.04 Services > ACCESS > Web Shell**)
 
    -  Type the following command to verify that traffic is being sent to the TAP service:
 
-         ``tcpdump -nnXi eth1 not arp and not icmp``
+         ``tcpdump -nnXi ens9 not arp and not icmp``
 
    -  Visit a financial institution website that is bypassed and verify that a copy of the traffic is seen on the TAP device
 
@@ -37,11 +39,13 @@ Confirm Service Chain and Security Policy rules are working as expected
    
       -  To verify, type the following command:
 
-            ``tcpdump -nnXi eth1 not arp and not icmp | egrep -i "agility"``
+            ``tcpdump -nnXi ens9 not arp and not icmp | egrep -i "agility"``
 
-   -  Since SSL Orchestrator is intercepting/decrypting \https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``Agility 2020`` in the browser, similar to the example below:
+   -  Since SSL Orchestrator is intercepting/decrypting \https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``F5 Agility`` in the browser, similar to the example below:
 
       |tcpdump-grep-agility|
+
+
 
 .. |ff-f5labs-verified| image:: ../images/ff-f5labs-verified.png
    :width: 467px
