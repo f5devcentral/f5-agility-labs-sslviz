@@ -15,13 +15,10 @@ of the security services, while non-HTTP traffic goes through a subset, and
 traffic destined to a financial service URL can bypass decryption and still
 flow through a smaller set of security services.
 
-|
+.. warning:: The diagram below is an example of one way to to build policies and service chains.  Please note that it does not match this lab's configuration.
 
-The diagram below is an example of one way to to build service chains.  Please note that it does not match this lab's service chain.
 
 .. image:: ../images/module1-7.png
-
-|
 
 -  Click :red:`Add` to create a new service chain.
 
@@ -33,10 +30,13 @@ The diagram below is an example of one way to to build service chains.  Please n
 
    -  Click :red:`Save`.
 
-.. image:: ../images/module1-8.png
+.. image:: ../images/allserviceschain.png
+
+.. image:: ../images/chaincomplete.png
 
 A **Service Chain** has now been configured.
 
-- Click :red:`Save & Next` to continue to the next stage.
 
-For further details about the options available on this scren, click here.
+-  Click :red:`Save & Next` to continue to the next stage.
+
+.. image:: ../images/module1-4.png

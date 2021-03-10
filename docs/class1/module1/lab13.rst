@@ -33,7 +33,7 @@ Open a web browser (e.g., Firefox, Chromium) on the outbound client system and
 navigate to any remote HTTPS site (e.g., https://www.google.com). Once the
 site opens in the browser, check the server certificate of the site and notice
 that it is signed by a public certificate authority (CA). This confirms that
-the SSL forward proxy functionality provided by SSL Orchestrator is currently disabled.
+the SSL forward proxy and certificate re-write functionality provided by SSL Orchestrator is currently disabled.
 
 .. image:: ../images/module1-19-2.png
    :scale: 50 %

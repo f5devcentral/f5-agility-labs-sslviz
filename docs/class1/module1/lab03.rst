@@ -8,20 +8,21 @@ The SSL Orchestrator Guided Configuration presents a streamlined user experience
 intuitive, re-entrant configuration steps tailored to the selected
 topology.
 
-.. image:: ../images/gc-path.png
-   :align: center
-
 The following steps will walk through the **Guided Configuration (GC)** UI to build a
 simple transparent forward proxy.
 
 
 Initialization
 ------------------
-
 From the left-hand menu, navigate to
-:red:`SSL Orchestrator > Configuration`. If this is the first
+:red:`SSL Orchestrator > Configuration`. 
+
+.. image:: ../images/gcstart.png
+   :align: center
+
+If this is the first
 time accessing SSLO in a new BIG-IP build, the Guided Configuration UI will
-automatically load and deploy the built-in SSLO package.
+automatically load and deploy the built-in SSLO package as shown below.
 
 .. image:: ../images/module1-1.png
    :align: center
@@ -41,4 +42,4 @@ provide an opportunity to define DNS and route settings later in the workflow.
 .. image:: ../images/module1-2.png
    :align: center
 
--  Click :red:`Next` to continue to the next stage.
+Click :red:`Next` to continue to the next stage.

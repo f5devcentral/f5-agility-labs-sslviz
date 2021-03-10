@@ -28,11 +28,11 @@ default gateway route and outbound SNAT settings.
    -  **Address** - this is the next hop gateway IP address. For this lab, enter
       :red:`10.1.20.1`.
 
-.. image:: ../images/module1-13.png
+.. image:: ../images/egress.png
 
 The **Egress Settings** have now been configured.
 
 -  Click :red:`Save & Next` to continue to the next stage.
 
-For further details about the options available on this screen, click here.
 
+.. image:: ../images/module1-4.png

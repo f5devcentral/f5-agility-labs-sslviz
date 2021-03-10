@@ -23,7 +23,7 @@ Guide" and the VM's you'll spend all of your time attached to.
    
    You will not need to use SSH to access the UDF lab environment, so no SSH Key needs to be configured.
 
-From the :bred:`DEPLOYMENT` tab, you will access the :bred:`DESKTOP-OUTBOUND` system over RDP. 
+From the :bred:`DEPLOYMENT` tab, you will access the :bred:`Ubuntu18.04 Client` system over RDP. 
 You can select the window resolution for the RDP session. An RDP file will be downloaded to your local
 system and you will need to open it to connect.
 
@@ -104,8 +104,14 @@ the BIG-IP GUI.
      - Outbound VLAN
      - 1.2
    * -
+     - Inline L3 service
+     - 1.3 (tagged)
+   * -
+     - Explicit Proxy (HTTP) service
+     - 1.3 (tagged) 
+   * -
      - ICAP service
-     - 1.3
+     - 1.3 (tagged)
    * -
      - Inline L2 service inbound
      - 1.4
@@ -113,18 +119,8 @@ the BIG-IP GUI.
      - Inline L2 service outbound
      - 1.5
    * -
-     - Inline L3/HTTP services
-     - 1.6 (tagged)
-   * -
-     - TAP service
-     - 1.7
-
-.. list-table:: **Inline layer 2 service**
-   :header-rows: 0
-   :widths: auto
-
-   * - Login
-     - student:agility
+     - Receive-only (TAP) service
+     - 1.6
 
 .. list-table:: **Inline layer 3 service**
    :header-rows: 0
@@ -136,14 +132,14 @@ the BIG-IP GUI.
      -
    * - Interfaces
      - Inbound interface
-     - 1.6 tag 10
-     - 198.19.64.65/25
+     - 1.3 tag 60
+     - 198.19.64.7/25
    * -
      - Outbound interface
-     - 1.6 tag 20
-     - 198.19.64.130/25
+     - 1.3 tag 70
+     - 198.19.64.245/25
 
-.. list-table:: **Explicit proxy service**
+.. list-table:: **Explicit proxy (HTTP) service**
    :header-rows: 0
    :widths: auto
 
@@ -153,12 +149,12 @@ the BIG-IP GUI.
      -
    * - Interfaces
      - Inbound interface
-     - 1.6 tag 30
-     - 198.19.96.66/25
+     - 1.3 tag 30
+     - 198.19.96.7/25
    * -
      - Outbound interface
-     - 1.6 tag 40
-     - 198.19.96.131/25
+     - 1.3 tag 40
+     - 198.19.96.245/25
    * - Services
      - Squid
      - Port 31281
@@ -168,7 +164,28 @@ the BIG-IP GUI.
      - Port 8080
      -
 
-.. list-table:: **Receive-only service**
+.. list-table:: **ICAP service**
+   :header-rows: 0
+   :widths: auto
+
+   * - Login
+     - root:default
+     -
+   * - Interface
+     - 1.3 tag 50
+     - 198.19.97.50:1344
+   * - REQ/RES URLs
+     - /avscan
+     -
+
+.. list-table:: **Inline layer 2 service**
+   :header-rows: 0
+   :widths: auto
+
+   * - Login
+     - student:agility
+
+.. list-table:: **Receive-only (TAP) service**
    :header-rows: 0
    :widths: auto
 
@@ -177,53 +194,32 @@ the BIG-IP GUI.
    * - MAC Address
      - 12:12:12:12:12:12 (arbitrary if directly connected)
 
-.. list-table:: **ICAP service**
-   :header-rows: 0
-   :widths: auto
-
-   * - Login
-     - root:default
-   * - IP Address:port
-     - 10.1.30.50:1344
-   * - REQ/RES URLs
-     - /squidclamav
-
-.. list-table:: **Internal web server**
+.. list-table:: **Internal web server - Apache2**
    :header-rows: 0
    :widths: auto
 
    * - Login
      - root:default
    * - IP Addresses (\*.f5labs.com)
-     - 10.1.10.90
+     - 192.168.100.10 : 80 & 443
 
-       10.1.10.91
+       192.168.100.11 : 80 & 443
 
-       10.1.10.92 (Apache2 instances listening on HTTPS port 443)
+       192.168.100.12 : 80 & 443
 
-       10.1.10.93
+       192.168.100.13 : 80 & 443
 
-       10.1.10.94
-
-.. list-table:: **Outbound client**
+.. list-table:: **Client**
    :header-rows: 0
    :widths: auto
 
    * - Login
      - student:agility
-   * - IP address
+   * - Inbound IP Address
      - 10.1.10.50 (RDP and SSH)
-
-.. list-table:: **Inbound client**
-   :header-rows: 0
-   :widths: auto
-
-   * - Login
-     - student:agility
-   * - IP address
+   * - Outbound IP Address
      - 10.1.20.55 (RDP and SSH)
 
-|
 
 The following is a visual representation of this lab
 environment. The numbers inside the right edge of the SSL Orchestrator

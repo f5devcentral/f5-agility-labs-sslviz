@@ -18,15 +18,19 @@ selected settings page.
 
 - When satisfied with the defined settings, click :red:`Deploy`.
 
+
+.. image:: ../images/deploysuccessful.png
+
 Upon successfully deploying the configuration, SSL Orchestrator will now
 display a **Configure** view:
 
-.. image:: ../images/module1-16.png
+.. image:: ../images/configureview.png
 
 The **Interception Rules** tab shows the listeners that were created per the
 selected topology.
 
-.. image:: ../images/module1-17.png
+.. image:: ../images/interceptionrules.png
+
 
 In the above list:
 

@@ -12,6 +12,14 @@ find the row labeled :red:`Security Policy`. Click on the pencil on the right.
 Add a New Rule
 ~~~~~~~~~~~~~~
 
+
+
+Rule list before URL-based selective decryption
+
+- Click Add
+
+   .. image:: ../images/addurlf.png
+
 Create a an additional rule for "Financial Data and
 Services" and "Health and Medicine" URL categories.
 
@@ -35,7 +43,14 @@ Services" and "Health and Medicine" URL categories.
 
 -  Click :red:`OK`.
 
-   .. image:: ../images/module1-10.png
+   .. image:: ../images/urlfdetails.png
+
+Rule list after URL-based selective decryption
+   .. image:: ../images/updatedpolicylist.png
+
+.. image:: ../images/reentrantdeploy.png
+   :scale: 50 %
+   :align: center
 
 Financial and Medical site test
 -------------------------------
@@ -46,6 +61,10 @@ navigate to https://bcbs.com. Once the site opens in the browser,
 check the server certificate of the site and notice that it is still issued 
 by the local CA configured in SSLO. This is because even though we created a rule
 for financial and medical sites, the SSL Forward Proxy Action is set to Intercept.
+
+   .. image:: ../images/bcbsafter.png
+
+   .. image:: ../images/wellsafter.png
 
 Reconfiguring the SSLO Security Policy to bypass Financial and Medical sites
 ============================================================================

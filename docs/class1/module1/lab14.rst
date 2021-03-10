@@ -13,6 +13,10 @@ on the right.
 
 -  **SSL Forward Proxy Action** - select the :red:`intercept` option.
 
+.. image:: ../images/reentrantdeploy.png
+   :scale: 50 %
+   :align: center
+
 Server certificate test
 -----------------------
 
@@ -21,7 +25,7 @@ Open a web browser (e.g., Firefox, Chromium) on the outbound client system and
 navigate to any remote HTTPS site (e.g., https://www.google.com). Once the
 site opens in the browser, check the server certificate of the site and verify
 that it is now issued by the local CA configured in SSLO. This confirms that
-the SSL forward proxy functionality enabled by SSL Orchestrator is now working correctly.
+the SSL forward proxy and certificate re-write functionality enabled by SSL Orchestrator is now working correctly.
 
 .. image:: ../images/module1-20.png
    :scale: 50 %
@@ -36,5 +40,9 @@ navigate to https://eicar.org/?page_id=3950. Scroll down to the section labeled
 This is a non-malicious file that antivirus products will detect for testing purposes. 
 The decrypted malware test file is scanned by CLAM_AV.  This time, the download is prevented
 and the user is presented a block page.
+
+.. image:: ../images/virus.png
+   :scale: 50 %
+   :align: center
 
 In the next section, you will test selective decryption based on URL category.

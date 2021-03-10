@@ -15,7 +15,11 @@ five basic service types. The service catalog also provides "generic"
 security services. Depending on screen resolution, it may be
 necessary to scroll down to see additional services.
 
-.. image:: ../images/module1-5.png
+The image below shows the blank service list.  We will now add an ICAP service.
+
+.. image:: ../images/blankservices.png
+
+.. image:: ../images/pickicap.png
 
 We will initially create one ICAP security service. If time allows, you may create more services using the subsequent optional labs.  
 
@@ -23,7 +27,7 @@ For this lab,
 
 - Click :red:`Add Service`, and select Generic ICAP Service from the catalog and click :red:`Add`, or simply double-click the service to go to its configuration page.
 
-- The only fields that need to be edited are the ones explicitly mentioned in these bullets.
+- The only fields that need to be edited are the ones explicitly mentioned in these bullets.  The other fields may be left with their default value.
 
 - Name - CLAM_AV
 
@@ -37,9 +41,21 @@ For this lab,
 
 -  Click :red:`Save`.
 
+.. image:: ../images/icapservice.png
+   :align: center
 
 
-.. note:: There are no additional steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the ICAP Service.
+
+The image below shows the service list with the new ICAP service.
+
+.. image:: ../images/servicelisticap.png
+
+
+-  Click :red:`Save & Next` to continue to the next stage.
+
+.. image:: ../images/module1-4.png
+
+.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the ICAP Service.
 
 
 ICAP service
@@ -111,8 +127,4 @@ provides some set of services over the ICAP protocol.
    the HTTP request or response. ICAP processing is enabled by default, so an
    ICAP CPM policy can be used to disable the request and/or response ADAPT
    profiles. Leave this :red:`blank (--Select--)`
-
--  Click :red:`Save`.
-
-.. image:: ../images/module1-6.png
 

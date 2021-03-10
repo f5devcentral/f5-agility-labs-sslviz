@@ -20,7 +20,7 @@ Properties page provides the following options:
 
 **For this lab:**
 
--  Click on the :red:`Next` button at the bottom of the page.
+.. note:: The only fields that need to be edited are the ones explicitly mentioned in these bullets.  The other fields may be left with their default value.
 
 -  **Name**: Enter some name (ex. ":red:`demoL3`").
 
@@ -31,12 +31,16 @@ Properties page provides the following options:
 
 -  **Topology**: Select :red:`L3 Outbound`
 
-   .. image:: ../images/module1-3.png
+   .. image:: ../images/topstart.png
       :align: center
 
 The **Topology** settings have been configured.
 
-.. note:: There are no additional steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the Topology.
+Click :red:`Save & Next` to continue to the next stage.
+
+.. image:: ../images/module1-4.png
+
+.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the Topology.
 
 
 The **Protocol** option presents four protocol types:
@@ -81,7 +85,7 @@ topologies:
    no IP addresses on its outer edges. The L2 Outbound topology
    provides a transparent path for outbound traffic flows.
 
-   .. important:: It is important to distinguish SSLO's layer 2 topology from those
+   .. note:: It is important to distinguish SSLO's layer 2 topology from those
       of other traditional layer 2 SSL visibility vendors. Layer 2
       solutions such as the Blue Coat SSL visibility appliance (SSLVA)
       limit the types of devices that can be inserted into the
@@ -102,6 +106,3 @@ topologies:
    consumed by an LTM virtual server.
 
 
--  Click :red:`Save & Next` to continue to the next stage.
-
-.. image:: ../images/module1-4.png

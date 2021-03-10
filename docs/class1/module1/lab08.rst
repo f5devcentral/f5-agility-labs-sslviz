@@ -16,21 +16,33 @@ SSLO. The "actions" a rule can take include:
 
 - Which service chain (if any) to pass the traffic through
 
+.. image:: ../images/policy1.png
+   :align: center
+
 The SSLO Guided Configuration presents an intuitive rule-based, drag-and-drop
 user interface for the definition of security policies.
 
-.. image:: ../images/module1-9.png
+.. image:: ../images/policy2.png
+   :align: center
 
-.. NOTE::
+The **Security Policy** has now been configured.
+
+Click :red:`Save & Next` to continue to the next stage.
+
+.. image:: ../images/module1-4.png
+
+.. tip::
    In the background, SSLO maintains these security policies as visual
    per-request policies. If traffic processing is required that exceeds the
    capabilities of the rule-based user interface, the underlying per-request
    policy can be modified directly.
 
-.. ATTENTION::
+.. warning::
    If the per-request policy is modifed directly (outside of the
    SSLO Guide Configuration UI), the SSLO UI can no longer be used afterwards
    without losing your direct per-request policy modifications.
+
+.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the ICAP Service.
 
 Add a New Rule
 ~~~~~~~~~~~~~~
@@ -92,6 +104,5 @@ send all intercepted traffic to a service chain.
    pool members, as necessary. For this lab, leave this option disabled.
 
 
-The **Security Policy** has now been configured.
 
--  Click :red:`Save & Next` to continue to the next stage.
+
