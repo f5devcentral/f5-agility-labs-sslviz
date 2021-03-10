@@ -4,13 +4,12 @@
 Verify authentication is currently disabled
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Start a TMUI session on **SSL Orchestrator** and log in if prompted **Components > SSL Orchestrator > ACCESS > TMUI**)
+-  Start a TMUI session on **SSL Orchestrator** and log in if prompted (*Components > SSL Orchestrator > ACCESS > TMUI*)
 
 -  From the Main menu on the left, select **Access > Overview > Active Sessions**. The following screen should appear. You should see an **Active Session Count** of **0** and that there are no sessions listed in the table.
 
-   |active-sessions-none|
-
-|
+.. image:: ../images/active-sessions-none.png
+   :alt: Active Sessions (None)
 
 .. important::
 
@@ -18,9 +17,10 @@ Verify authentication is currently disabled
    that you used in the other lab exercises.
 
 
--  Start an RDP session to the **Windows Client** (**Components > Windows Client > ACCESS > RDP**)
+-  Start an RDP session to the **Windows Client** (*Components > Windows Client > ACCESS > RDP*)
 
 .. image:: ../images/windows-client-rdp.png
+   :alt: Windows Client RDP Access
 
 -  Login in as user: ``F5LABS\mike``
 
@@ -30,7 +30,3 @@ Verify authentication is currently disabled
 
 -  Refresh the previously shown TMUI screen. You should still see an **Active Session Count** of **0**.
 
-.. |active-sessions-none| image:: ../images/active-sessions-none.png
-   :width: 639px
-   :height: 330px
-   :alt: Active Sessions (None)

@@ -11,7 +11,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
 -  Verify that the Squid Proxy is seeing decrypted traffic:
 
-   -  Return to the **Ubuntu18.04 Services** Web Shell (**Components > Ubuntu18.04 Services > ACCESS > Web Shell**)
+   -  Return to the **Ubuntu18.04 Services** Web Shell (*Components > Ubuntu18.04 Services > ACCESS > Web Shell*)
 
    -  Type the following command in the web console and hit Enter:
 
@@ -25,7 +25,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
 -  Verify that the Cisco Firepower TAP is seeing both intercepted and bypassed traffic:
 
-   -  Return to the **Ubuntu18.04 Services** Web Shell (**Components > Ubuntu18.04 Services > ACCESS > Web Shell**)
+   -  Return to the **Ubuntu18.04 Services** Web Shell (*Components > Ubuntu18.04 Services > ACCESS > Web Shell*)
 
    -  Type the following command to verify that traffic is being sent to the TAP service:
 
@@ -48,10 +48,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
 
 .. |ff-f5labs-verified| image:: ../images/ff-f5labs-verified.png
-   :width: 467px
-   :height: 304px
    :alt: Verified By: f5labs.com
+
 .. |tcpdump-grep-agility| image:: ../images/tcpdump-grep-agility.png
-   :width: 728px
-   :height: 128px
    :alt: tcpdump of TAP service
