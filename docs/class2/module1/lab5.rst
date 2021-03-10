@@ -14,6 +14,7 @@ From the SSL Orchestrator Configuration screen:
 
    |policy-rule-CiscoFP-TAP|
 
+
 -  Click the **OK** button
 
 -  Repeat the same process for the **Finance\_Bypass** rule
@@ -24,14 +25,18 @@ From the SSL Orchestrator Configuration screen:
 
    |updated-security-policy|
 
+
 -  Click the **Deploy** button and then click the **OK** button on the pop-up to confirm you want to make the changes.
+
+
 
 .. |pencil| image:: ../images/pencil.png
    :width: 20px
    :height: 20px
+   :alt: pencil
+
 .. |policy-rule-CiscoFP-TAP| image:: ../images/policy-rule-CiscoFP-TAP.png
-   :width: 481px
-   :height: 85px
+   :alt: Policy rule for Cisco Firepower TAP service 
+
 .. |updated-security-policy| image:: ../images/updated-security-policy.png
-   :width: 1005px
-   :height: 201px
+   :alt: Updated security policy

@@ -29,5 +29,4 @@ You now need to create a new Service Chain containing only the Cisco Firepower T
 -  Click the **OK** button to return to the SSL Orchestrator Configuration screen.
 
 .. |successful_deploy| image:: ../images/successful_deploy.png
-   :width: 374px
-   :height: 219px
+   :alt: Deployment Success

@@ -1,7 +1,11 @@
 SSL Orchestrator v8 - SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2021 | 2 hours)
-=======================================================================================================
+=========================================================================================================
 
-Created for use at F5 Agility 2021
+.. note::
+
+   Requires UDF Blueprint: "Agility 2021 - SSL Orchestrator 101"
+
+   BIG-IP 16.0 / SSL Orchestrator 8.2
 
 As the volume of data continues to grow at a rapid pace, more organizations are
 deploying Secure Socket Layer (SSL) and Transport Layer Security (TLS) solutions

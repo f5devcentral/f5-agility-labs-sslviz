@@ -1,7 +1,7 @@
 .. role:: red
 
-Test Office 365 bypass security policy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test the New Security Policy Rule
+====================================
 
 .. TODO:: write lab instructions
 
