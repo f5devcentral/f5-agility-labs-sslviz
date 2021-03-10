@@ -21,14 +21,10 @@ Review the current SSL Orchestrator deployment
 
 
 .. |config-dashboard| image:: ../images/config-dashboard.png
-   :width: 1046px
-   :height: 541px
    :alt: SSL Orchestrator Configuration Dashboard
+
 .. |security-policy-overview| image:: ../images/security-policy-overview.png
-   :width: 1042px
-   :height: 187px
    :alt: Security Policy Overview
+
 .. |initial-security-policy| image:: ../images/initial-security-policy.png
-   :width: 1006px
-   :height: 202px
    :alt: Security Policy Rules

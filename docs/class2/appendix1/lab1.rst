@@ -30,8 +30,4 @@ In this step, create a new **Security Policy** rule to bypass SSL decryption and
 
 -  Click :red:`OK`.
 
-   .. image:: ../images/appendix1-1-2.png
-      :align: center
-
-
 -  Click :red:`Save & Next` to continue to the next stage.
