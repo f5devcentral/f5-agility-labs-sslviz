@@ -31,7 +31,7 @@ Pre-existing environment validation
 
    |ff-conn-expand|
 
--  Confirm that the connection/certificate is verified by **DigiCert Inc**
+-  Confirm that the connection/certificate is signed/verified by **DigiCert Inc**
 
    |ff-digicert-verified|
 
@@ -61,21 +61,22 @@ Pre-existing environment validation
 
 -  Confirm that the explicit proxy service is seeing decrypted traffic:
 
-   -  Start a Web Shell to **Ubuntu18.04 Services** (**Components > Ubuntu18.04 Services > ACCESS > Web Shell**)
+   -  Start a Web Shell to **Ubuntu18.04 Services** (*Components > Ubuntu18.04 Services > ACCESS > Web Shell*)
 
       .. image:: ../images/ubuntu-services.png
+         :alt: Ubuntu18.04 Services Web Shell
 
    -  Type the following command in the web console and hit Enter:
 
-         ``docker exec -it explicit-proxy tail -f /var/log/squid/access.log`` 
+         ``tail -f /var/log/squid/access.log`` 
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the **Ubuntu18.04 Client** machine and confirm that access is being logged even though we are visiting a secure website. You should see log entries of the sites and URLs visited, similar to the example below:
 
       |proxy-access-log|
       
-   -  Visit a financial institution (ex. \https://www.bankofamerica.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by **f5labs.com**. Because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
+   -  Visit a financial web site such as \https://www.bankofamerica.com and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see "Verified by: f5labs.com." because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy.
 
--  Confirm that the explicit proxy service is not seeing the bypassed (encrypted) traffic.
+   -  Confirm that the explicit proxy service is not seeing the bypassed (encrypted) traffic.
 
 
 .. |ff-padlock| image:: ../images/ff-padlock.png

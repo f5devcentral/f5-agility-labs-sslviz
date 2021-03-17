@@ -16,7 +16,10 @@ You now need to create a new Service Chain containing only the Cisco Firepower T
 
 -  Click the **Save** button
 
--  You will be returned to the Service Chain List. You should now have three Service Chains in the Service Chain List
+-  You will be returned to the **Service Chain List**. You should now have three Service Chains.
+
+   .. image:: ../images/new-service-chain-list.png
+      :alt: Updated Service Chain List
 
 -  Click the **Save & Next** button
 
@@ -24,9 +27,8 @@ You now need to create a new Service Chain containing only the Cisco Firepower T
 
 -  When successfully deployed, the following pop-up should appear:
 
-   |successful_deploy|
+   .. image:: ../images/successful_deploy.png
+      :alt: Successful Deployment
 
 -  Click the **OK** button to return to the SSL Orchestrator Configuration screen.
 
-.. |successful_deploy| image:: ../images/successful_deploy.png
-   :alt: Deployment Success

@@ -1,58 +1,64 @@
 .. role:: red
-
-Implement SSL Orchestrator topology steering
-==============================================
+.. role:: bred
 
 
-**Installation**
+Create "Topology Director" Virtual Server and iRule
+=======================================================
 
-#. Import this SSLOLIB iRule (name "SSLOLIB")
+-  First,  import the **SSLOLIB** and **sslo-layer-rule.tcl** files from the Github repository. This has already been done for you.
 
-#. Build a set of "dummy" VLANs. A topology must be bound to a unique VLAN. But since the topologies in this architecture
-   won't be listening on an actual client-facing VLAN, you will need to create a separate dummy VLAN for each topology you
-   intend to create. A dummy VLAN is basically a VLAN with no interface assigned. In the BIG-IP UI, under Network -> VLANs,
-   click Create. Give your VLAN a name and click Finished. It will ask you to confirm since you're not attaching an interface.
-   Click OK to continue. Repeat this step by creating unique VLAN names for each topology you are planning to use.
+   - `SSLOLIB <https://github.com/f5devcentral/sslo-script-tools/blob/main/internal-layered-architecture/SSLOLIB>`_
 
-#. Build semi-static SSL Orchestrator topologies based on common actions (ex. allow, intercept, service chain)
+   - `SSLO-Topology-Director (sslo-layering-rule.tcl) <https://raw.githubusercontent.com/f5devcentral/sslo-script-tools/main/internal-layered-architecture/sslo-layering-rule.tcl>`_
 
-   Minimally create a normal "intercept" topology and a separate "bypass" topology
+-  Navigate to  **Local Traffic > Virtual Servers > iRules** and review each iRule.
 
-   Intercept topology:
-
-   L3 outbound topology configuration, normal topology settings, SSL config, services, service chain
-   No security policy rules - just a single ALL rule with TLS intercept action (and service chain)
-   Attach to a "dummy" VLAN
-   Bypass topology:
-
-   L3 outbound topology configuration, skip SSL config, re-use services, service chains
-   No security policy rules - just a single ALL rule with TLS bypass action (and service chain)
-   Attached to a separate "dummy" VLAN
-   Create any additional topologies as required, as separate functions based on discrete actions (allow/block, intercept/bypass, service chain)
-
-#. Import the traffic switching iRule
-
-   Set necessary static configuration values in RULE_INIT as required
-
-   Define any URL category lists in RULE_INIT as required (see example). Use the following command to get a list of URL categories:
+.. image:: ../images/internal-layered-irules-1.png
+   :alt: Internal Layered Architecture iRules
 
 
-   .. code-block:: bash
+-  Make the following changes to the **SSLO-Topology-Director** iRule:
 
-      tmsh list sys url-db url-category |grep "sys url-db url-category " |awk -F" " '{print $4}'
+   -  Set necessary static configuration values in RULE_INIT as required ...
 
-#. Create a client-facing topology switching VIP
+   -  Modify the **SSLO-Topology-Director** iRule with the following steering commands:
+   -  x
 
-   Type: Standard
-   Source: 0.0.0.0/0
-   Destination: 0.0.0.0/0:0
-   Protocol: TCP
-   VLAN: client-facing VLAN
-   Address/Port Translation: disabled
-   Default Persistence Profile: ssl
-   iRule: traffic switching iRule
 
-#. Modify the traffic switching iRule with the required detection commands. See below.
+-  Navigate to **Local Traffic > Virtual Servers > Virtual Server List** to create the layered topology virtual server.
+
+-  Click on the **Create** button to add a new Virtual Server and configure the following setings:
+
+   -  Name: ``Topology-Director_vs``
+   -  Type: ``Standard``
+   -  Source: ``0.0.0.0/0``
+   -  Destination Address: ``10.1.10.200``
+   -  Destination Port: ``3128``
+   -  Protocol: ``TCP``
+   -  VLAN Enabled On: ``client-vlan``
+   -  Address/Port Translation: ``disabled``
+   -  Default Persistence Profile: ``ssl``
+   -  iRule: ``SSLO-Topology-Director``
+
+.. image:: ../images/topology-director-vs-1.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1b.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1c.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1d.png
+   :alt: 
+
+|
 
 
 **Traffic selector commands** (to be used in traffic switching iRule)

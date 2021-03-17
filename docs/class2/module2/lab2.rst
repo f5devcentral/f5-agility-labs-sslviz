@@ -22,14 +22,12 @@ Enable NTLM authentication on explicit proxy topology
 -  Click **OK** to acknowledge the successful deployment
 
 .. |topology-summary-IR-edit| image:: ../images/topology-summary-IR-edit.png
-   :width: 1057px
-   :height: 491px
    :alt: Edit Interception Rule from Topology Summary
+
 .. |pencil| image:: ../images/pencil.png
    :width: 20px
    :height: 20px
    :alt: Pencil Icon
+
 .. |egress-settings-deploy-ribbon| image:: ../images/egress-settings-deploy-ribbon.png
-   :width: 612px
-   :height: 343px
    :alt: Deploy Ribbon on Egress Settings

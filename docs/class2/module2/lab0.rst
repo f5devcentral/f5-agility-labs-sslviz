@@ -22,11 +22,28 @@ Verify authentication is currently disabled
 .. image:: ../images/windows-client-rdp.png
    :alt: Windows Client RDP Access
 
--  Login in as user: ``F5LABS\mike``
+- Open the RDP file to connect.
 
--  Enter password: ``agility``
-  
+- At the authentication prompt, click on **More choices** to show additional logon options. Then click on **Use a different account**.
+
+.. image:: ../images/windows-logon-1.png
+   :alt: RDP Client Logon - Use a different account
+
+-  Login in as user: ``F5LABS\mike`` with password: ``agility``
+
+.. image:: ../images/windows-logon-2.png
+   :alt: Windows Logon - domain\user and password
+
+
+.. note::
+   Please be patient. The Windows machines are running resource limited, so may be slow at times.
+
+
 -  Using Firefox, browse to various websites.
+
+.. note::
+   Firefox is already configured to use 10.1.10.150 as its Internet access proxy.
+
 
 -  Refresh the previously shown TMUI screen. You should still see an **Active Session Count** of **0**.
 

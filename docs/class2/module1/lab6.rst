@@ -3,9 +3,9 @@
 Confirm Service Chain and Security Policy rules are working as expected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Browse to ``https://www.example.com`` on your Windows 10 Desktop
+-  Browse to ``https://www.example.com`` on your Windows Client machine.
 
--  Verify that :red:`https://www.example.com` is still being intercepted by confirming the certificate is signed/verified by **f5labs.com** 
+-  Verify that the web site is still being intercepted by confirming that the certificate is signed/verified by **f5labs.com** .
 
    |ff-f5labs-verified|
 
@@ -15,11 +15,11 @@ Confirm Service Chain and Security Policy rules are working as expected
 
    -  Type the following command in the web console and hit Enter:
 
-         ``docker exec -it explicit-proxy tail -f /var/log/squid/access.log`` 
+         ``tail -f /var/log/squid/access.log`` 
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the **Ubuntu18.04 Client** machine and confirm that access is being logged. You should see log entries of the URLs visited.
    
-   -  Visit a financial institution (ex. \https://www.bankofamerica.com) and verify that SSL Orchestrator is not intercepting by confirming that the verification is done by a trusted CA (ex. Entrust, Inc.). If the traffic was intercepted the connection/certificate would have been verified by **f5labs.com**. Because you are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy and this website is a financial institution, the origin server's public certificate is presented to the client.
+   -  Visit a financial web site such as \https://www.bankofamerica.com and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see "Verified by: f5labs.com." because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy.
    
    -  Confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic
 
@@ -37,14 +37,20 @@ Confirm Service Chain and Security Policy rules are working as expected
 
    -  Visit ``https://www.google.com/`` and you should see some recognizable text in the packet dump
    
-      -  To verify, type the following command:
+   -  Press Control-C to stop the tcpdump tool
 
-            ``tcpdump -nnXi ens9 not arp and not icmp | egrep -i "agility"``
+   -  As another test, enter the following command:
 
-   -  Since SSL Orchestrator is intercepting/decrypting \https://www.google.com, you are able to see into the payload of this communication and therefore the grep filter you applied should display output when you search for ``F5 Agility`` in the browser, similar to the example below:
+            ``tcpdump -nnXi ens9 not arp and not icmp | grep -i "agility"``
+
+   -  Now, use Google to search for ``F5 Agility``. Since SSL Orchestrator is intercepting/decrypting this web site, you are able to see into the payload of this communication. The grep filter you applied should display output similar to the example below:
 
       |tcpdump-grep-agility|
 
+
+
+.. attention::
+   This is the end of this lab exercise.
 
 
 .. |ff-f5labs-verified| image:: ../images/ff-f5labs-verified.png

@@ -6,7 +6,7 @@ From the SSL Orchestrator Configuration screen:
 
 -  Click the **Security Policies** tab in the middle of the main display area.
 
--  Click the Security Policy named **ssloP\_f5labs\_explicit**. This should be the only security policy in the list at this time.
+-  Click the Security Policy named **ssloP\_f5labs\_explicit**.
 
 -  Click on the pencil icon (|pencil|) next to the **Pinners\_Rule** to modify this rule.
 
