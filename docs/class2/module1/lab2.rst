@@ -5,7 +5,7 @@ Create a new Cisco Firepower Threat Defense TAP service
 
 -  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**
 
--  Select the **Services** tab in the middle of the main display area. Notice that the already configured HTTP Service, **ssloS\_Squid_Proxy**, is already present.
+-  Select the **Services** tab in the middle of the main display area. Notice that the already configured HTTP Service, **ssloS\_SquidProxy**, is already present.
 
 -  Click the **Add** button above the list of services
 
