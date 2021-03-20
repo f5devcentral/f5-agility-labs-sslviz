@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC Interception Rule
-====================
+Guided Configuration Interception Rule
+========================================
 
 .. image:: ../images/gc-path-6.png
    :align: center
@@ -43,11 +43,9 @@ security policies created in the topology workflow.
    separate port-based listeners for each. For this lab,
    leave the default selection.
 
-.. image:: ../images/module1-12.png
+.. image:: ../images/intercept.png
 
-The **Interception Rules** have now been configured.
+The **Interception Rule** has now been configured.
+Click :red:`Save & Next` to continue to the next stage.
 
--  Click :red:`Save & Next` to continue to the next stage.
-
-For further details about the options available on this scren, click here.
-
+.. image:: ../images/module1-4.png

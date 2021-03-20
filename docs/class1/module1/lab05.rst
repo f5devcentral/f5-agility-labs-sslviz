@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC SSL Configurations
-----------------------
+Guided Configuration SSL Configurations
+==========================================
 
 .. image:: ../images/gc-path-2.png
    :align: center
@@ -14,19 +14,30 @@ can be selected and re-used. Otherwise, the SSL Configurations page creates new
 SSL settings for this workflow. The **[Advanced]** options below are
 available when "Show Advanced Settings" is enabled (top right).
 
-For this lab, 
+**For this lab:**
 
-- :red:`Create a new SSL profile`.
+.. note:: The only fields that need to be edited are the ones explicitly mentioned in these bullets.  The other fields may be left with their default value.
 
 - Edit CA Certificate Key Chain (NOT Certificate Key Chain) - Click the pencil icon to Edit, then select subrsa.f5labs.com for both Certificate and Key, and click Done.
 
-.. image:: ../images/module5-1.png
+.. note:: This is the self-signed CA certificate and private key that will by used by SSL Orchestrator to sign the re-issued or "forged" certificates delivered to clients for forward proxy (outbound) traffic.  This is also the CA certificate that will be imported into the client's browser certificate store.
+
+.. image:: ../images/clientssl.png
    :align: center
 
 |
 
-.. image:: ../images/module5-2.png
-.. note:: There are no additional steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the SSL Configurations.
+.. warning:: Ensure you are editing the CA Certificate Key Chain shown above in red, not the Certificate Key Chain.  They look very similar.
+
+The **SSL** settings have now been configured.
+
+-  Click :red:`Save & Next` to continue to the next stage.
+
+.. image:: ../images/module1-4.png
+
+|
+
+.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the SSL Configurations.
 
 Client-side SSL
 ~~~~~~~~~~~~~~~
@@ -151,10 +162,4 @@ Server-side SSL
    create a new CRL profile for server-side Certificate Revocation
    List (CRL) validation. With this enabled, SSLO attempts to match
    server certificates to locally-cached CRLs.
-
-The **SSL** settings have now been configured.
-
--  Click :red:`Save & Next` to continue to the next stage.
-
-.. image:: ../images/module1-4.png
 

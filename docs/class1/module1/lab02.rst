@@ -6,10 +6,10 @@ Review the default SSL Orchestrator pre-requisites
 
 When
 using the UDF blueprint, most of these have been pre-configured for you.
-The only exception is the default route, which will be explicitly addressed
+The only exception is the default route, which will be explicitly configured
 in a later section.
 
-.. note:: There are no additional steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the pre-requisites.
+.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the pre-requisites for a production environment.
 
 -  **Import the CA certificate and private key** - in order to terminate and
    re-encrypt outbound SSL traffic, SSL Forward Proxy must re-issue, or rather
@@ -29,11 +29,11 @@ in a later section.
    that's the :red:`10.1.20.0/24` subnet and interface :red:`1.2` on the BIG-IP.
    :red:`This lab environment already has this VLAN and self-IP created.`
 
--  **Create the DLP VLAN and self-IP** - if it is desired to isolate the
+-  **Create the DLP/ICAP VLAN and self-IP** - if it is desired to isolate the
    DLP/ICAP device, create the VLAN and self-IP that connects the DLP device to
-   the BIG-IP. In this lab that's the :red:`10.1.30.0/24` subnet and interface
-   :red:`1.3` on the BIG-IP. The DLP security device is listening on
-   :red:`10.1.30.10` and ICAP is listening on port :red:`1344`.
+   the BIG-IP. In this lab that's the :red:`197.19.97.0/25` subnet and interface
+   :red:`1.3 (tag 50)` on the BIG-IP. The DLP security device is listening on
+   :red:`198.19.97.7` and ICAP is listening on port :red:`1344`.
    :red:`This lab environment already has this VLAN and self-IP created`.
 
 -  **Create the default internet route for outbound traffic** - the iApp

@@ -1,13 +1,13 @@
 .. role:: red
 .. role:: bred
 
-GC Egress Setting
-=================
+Guided Configuration Egress Setting
+===================================
 
 .. image:: ../images/gc-path-7.png
    :align: center
 
-Traffic egress settings are now defined per-topology and manage both the
+Traffic egress settings are defined per-topology and manage both the
 default gateway route and outbound SNAT settings.
 
 -  **Manage SNAT Settings** - enables per-topology instance SNAT settings. For
@@ -28,11 +28,11 @@ default gateway route and outbound SNAT settings.
    -  **Address** - this is the next hop gateway IP address. For this lab, enter
       :red:`10.1.20.1`.
 
-.. image:: ../images/module1-13.png
+.. image:: ../images/egress.png
 
 The **Egress Settings** have now been configured.
 
 -  Click :red:`Save & Next` to continue to the next stage.
 
-For further details about the options available on this screen, click here.
 
+.. image:: ../images/module1-4.png

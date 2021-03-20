@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC Log Settings
-===============
+Guided Configuration Log Settings
+======================================
 
 .. image:: ../images/gc-path-8.png
    :align: center
@@ -12,7 +12,15 @@ environments where multiple topologies are deployed, this can help to
 streamline troubleshooting by reducing debug logging to the affected
 topology.
 
-.. note:: There are no additional steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on Log Settings.
+
+.. image:: ../images/module1-14.png
+
+
+The **Log Settings** have now been configured.
+
+-  Click :red:`Save & Next` to continue to the next stage.
+
+.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on Log Settings.
 
 
 Multiple discreet logging options are available:
@@ -50,11 +58,3 @@ Multiple discreet logging options are available:
    setting is :red:`Error` to log only error conditions.
 
 
-.. image:: ../images/module1-14.png
-
-For further details about the options available on this screen, click here.
-
-
-The **Log Settings** have now been configured.
-
--  Click :red:`Save & Next` to continue to the next stage.

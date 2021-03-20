@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC Summary
-==========
+Guided Configuration Summary
+=============================
 
 .. image:: ../images/gc-path-9.png
    :align: center
@@ -18,15 +18,19 @@ selected settings page.
 
 - When satisfied with the defined settings, click :red:`Deploy`.
 
+
+.. image:: ../images/deploysuccessful.png
+
 Upon successfully deploying the configuration, SSL Orchestrator will now
 display a **Configure** view:
 
-.. image:: ../images/module1-16.png
+.. image:: ../images/configureview.png
 
 The **Interception Rules** tab shows the listeners that were created per the
 selected topology.
 
-.. image:: ../images/module1-17.png
+.. image:: ../images/interceptionrules.png
+
 
 In the above list:
 
@@ -36,7 +40,7 @@ In the above list:
 
 - The **-ot-4** listener defines normal non-TCP/non-UDP IPv4 traffic.
 
-This completes the configuration of SSL Orchestrator as a
+This completes the Guided Configuration of SSL Orchestrator as a
 transparent forward proxy.
 
 In the next section, you will use an internal client
