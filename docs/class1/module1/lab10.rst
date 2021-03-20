@@ -1,13 +1,13 @@
 .. role:: red
 .. role:: bred
 
-GC Egress Setting
-=================
+Guided Configuration Egress Setting
+===================================
 
 .. image:: ../images/gc-path-7.png
    :align: center
 
-Traffic egress settings are now defined per-topology and manage both the
+Traffic egress settings are defined per-topology and manage both the
 default gateway route and outbound SNAT settings.
 
 -  **Manage SNAT Settings** - enables per-topology instance SNAT settings. For

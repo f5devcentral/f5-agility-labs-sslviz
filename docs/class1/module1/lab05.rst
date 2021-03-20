@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC SSL Configurations
-----------------------
+Guided Configuration SSL Configurations
+==========================================
 
 .. image:: ../images/gc-path-2.png
    :align: center
@@ -25,6 +25,8 @@ available when "Show Advanced Settings" is enabled (top right).
 .. image:: ../images/clientssl.png
    :align: center
 
+|
+
 .. warning:: Ensure you are editing the CA Certificate Key Chain shown above in red, not the Certificate Key Chain.  They look very similar.
 
 The **SSL** settings have now been configured.
@@ -33,7 +35,7 @@ The **SSL** settings have now been configured.
 
 .. image:: ../images/module1-4.png
 
-
+|
 
 .. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the SSL Configurations.
 

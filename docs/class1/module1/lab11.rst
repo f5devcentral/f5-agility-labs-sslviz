@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC Log Settings
-===============
+Guided Configuration Log Settings
+======================================
 
 .. image:: ../images/gc-path-8.png
    :align: center

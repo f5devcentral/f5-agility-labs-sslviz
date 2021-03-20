@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC Topology
-===========
+Guided Configuration Topology
+================================
 
 .. image:: ../images/gc-path-1.png
    :align: center
@@ -33,6 +33,7 @@ Properties page provides the following options:
 
    .. image:: ../images/topstart.png
       :align: center
+
 
 The **Topology** settings have been configured.
 
@@ -87,7 +88,7 @@ topologies:
 
    .. note:: It is important to distinguish SSLO's layer 2 topology from those
       of other traditional layer 2 SSL visibility vendors. Layer 2
-      solutions such as the Blue Coat SSL visibility appliance (SSLVA)
+      solutions such as the Symantec SSL visibility appliance (SSLVA)
       limit the types of devices that can be inserted into the
       inspection zone to layer 2 and below, and devices must be directly
       connected to the appliance. An SSLO layer 2 topology only exists at

@@ -13,9 +13,7 @@ If you are not familiar with the process for joining a training course, refer to
 - `How to use the training course interface <https://help.udf.f5.com/en/articles/3832340-training-course-interface>`_
 
 To access your lab and lookup the necessary IP addresses, you should have
-received an email with your personal "Lab Portal Link". Once attached you
-should have something similar to the following image. Highlighted is the "Lab
-Guide" and the VM's you'll spend all of your time attached to.
+received an email with your personal "Lab Portal Link". You will see the Lab Guide link and the VM's you'll spend all of your time attached to.
 
 .. NOTE::
 
@@ -27,9 +25,7 @@ From the :bred:`DEPLOYMENT` tab, you will access the :bred:`Ubuntu18.04 Client` 
 You can select the window resolution for the RDP session. An RDP file will be downloaded to your local
 system and you will need to open it to connect.
 
-|
-
-.. image:: images/labinfo-2.png
+.. image:: images/clientrdp.png
    :align: center
 
 Lab Details

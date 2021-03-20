@@ -1,89 +1,45 @@
 .. role:: red
 .. role:: bred
 
-Testing the additional services (optional - time permitting)
-============================================================
-
-To test the deployed solution, RDP to the :red:`Ubuntu18.04 Client` client
-machine.
-
-- At the **Login to xrdp** window, click on the :red:`OK` button.
-
-.. image:: ../images/module1-18.png
+Associate new services to service chains (Optional - time permitting)
+=========================================================================
+.. image:: ../images/gc-path-4.png
    :align: center
+
+The section will highlight many of the other types of services that are supported by SSL Orchestrator.
+|
+
+.. image:: ../images/module1-7.png
 
 |
 
-You will then see the Client desktop.
+-  Click :red:`Add` to create a new service chain containing all of the
+   security services.
 
-.. image:: ../images/module1-19.png
-   :scale: 50 %
-   :align: center
+   -  **Name** - provide a unique name to this service chain
+      (ex.":red:`all_services`").
 
+   -  **Services** - select any number of desired service and move them into the
+      :red:`Selected Service Chain Order` column, optionally also ordering
+      them as required. In this lab, select :red:`all of the services` and then
+      click the :red:`rightward-pointing arrow` to move them to the
+      :red:`Selected Service Chain Order` side.
 
-|
+   -  Click :red:`Save`.
 
-Server certificate test
------------------------
+-  Click :red:`Add` to create a new service chain for just the L2 (ex.
+   FireEye) and TAP services.
 
-Open a web browser (e.g., Firefox, Chrome) on the outbound client system and
-navigate to any remote HTTPS site (e.g., https://www.google.com). Once the
-site opens in the browser, check the server certificate of the site and verify
-that it has been issued by the local CA configured in SSLO. This confirms that
-the SSL forward proxy functionality enabled by SSL Orchestrator is working correctly.
+   -  **Name** - provide a unique name to this service chain (ex.
+      ":red:`L2_services`").
 
-.. image:: ../images/module1-20.png
-   :scale: 50 %
-   :align: center
+   -  **Services** - select and then move the :red:`FireEye` and :red:`TAP`
+      services to the right-hand side.
 
-|
+   - Click :red:`Save`.
 
-Decrypted traffic analysis on the security services
----------------------------------------------------
+.. image:: ../images/module1-8.png
 
-Depending on the type of security service, it may be easier to log into the
-console shell and run a similar tcpdump capture on the inbound or outbound
-interface. A tcpdump capture usually requires *root* or *sudo* access.
+The **Service Chains** have now been configured.
 
-Let's check if we see data on the TAP device.
-
--  In the UDF UI, select the :red:`Access` drop down selection on the :red:`Service - TAP` VM,
-   then select :red:`WEB SHELL`.
-
--  In the web shell window, perform a packet capture using :red:`tcpdump`. The
-   client machine's IP address is :red:`10.1.10.50`.
-
-.. code-block:: bash
-
-   sudo tcpdump -lnni eth1 -Xs0 host 10.1.10.50
-
--  Browse to an HTTPS web site (e.g., https://www.cnn.com) from the
-   :red:`Ubuntu18.04 Client` machine (RDP session)
-   and notice that the TAP device is receiving traffic unencrypted.
-
--  Return to the web shell and press :red:`<CTRL-C>` to stop the tcpdump.
-
-Let's check another security device. Perform a tcpdump on the IPS device to
-observe the decrypted clear text traffic.
-
--  In the UDF UI, select the :red:`Access` drop down selection on the
-   :red:`Service - Inline L3` VM, then select :red:`WEB SHELL`.
-
--  In the web shell window, perform a packet capture using :red:`tcpdump`. The
-   client machine's IP address is :red:`10.1.10.50`. Recall that port remap was
-   enabled so the unecrypted traffic will be seen on destination port 8181.
-
-.. code-block:: bash
-
-   sudo tcpdump -lnni eth1.10 -Xs0 host 10.1.10.50 and port 8181
-
--  Browse to an HTTPS web site (e.g., :red:`https://www.cnn.com`) from the
-   :red:`Ubuntu18.04 Client` machine (RDP session)
-   and notice that the IPS device is receiving traffic unencrypted.
-
--  Return to the web shell and press :red:`<CTRL-C>` to stop the tcpdump.
-
--  Close out (exit) all Webshell windows.
-
-.. ATTENTION::
-   This is the end of the lab module.
+- Click :red:`Save & Next` to continue to the next stage.

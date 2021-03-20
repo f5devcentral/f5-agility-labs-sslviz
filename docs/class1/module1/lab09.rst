@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC Interception Rule
-====================
+Guided Configuration Interception Rule
+========================================
 
 .. image:: ../images/gc-path-6.png
    :align: center
@@ -45,7 +45,7 @@ security policies created in the topology workflow.
 
 .. image:: ../images/intercept.png
 
-The **Interception Rules** have now been configured.
+The **Interception Rule** has now been configured.
 Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png

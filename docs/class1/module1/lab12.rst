@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC Summary
-==========
+Guided Configuration Summary
+=============================
 
 .. image:: ../images/gc-path-9.png
    :align: center
@@ -40,7 +40,7 @@ In the above list:
 
 - The **-ot-4** listener defines normal non-TCP/non-UDP IPv4 traffic.
 
-This completes the configuration of SSL Orchestrator as a
+This completes the Guided Configuration of SSL Orchestrator as a
 transparent forward proxy.
 
 In the next section, you will use an internal client

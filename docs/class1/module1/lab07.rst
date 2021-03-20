@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC Service Chain List
-=====================
+Guided Configuration Service Chain List
+=======================================
 
 .. image:: ../images/gc-path-4.png
    :align: center
@@ -15,7 +15,7 @@ of the security services, while non-HTTP traffic goes through a subset, and
 traffic destined to a financial service URL can bypass decryption and still
 flow through a smaller set of security services.
 
-.. warning:: The diagram below is an example of one way to to build policies and service chains.  Please note that it does not match this lab's configuration.
+.. warning:: The diagram below is designed to illustrate the power of SSL Orchestrator's dynamic service chains. Please note that it does not match this lab's specific configuration.
 
 
 .. image:: ../images/module1-7.png
@@ -34,7 +34,7 @@ flow through a smaller set of security services.
 
 .. image:: ../images/chaincomplete.png
 
-A **Service Chain** has now been configured.
+The preliminary :red:`Service Chain` has now been configured.
 
 
 -  Click :red:`Save & Next` to continue to the next stage.

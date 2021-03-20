@@ -7,10 +7,12 @@ Login and review the UDF lab hosts and endpoints
 If needed, review the previous section
 `SSL Orchestrator Lab Environment <../labinfo.html>`_.
 
--  Using your web browser (Chrome preferred), open a :red:`TMUI (HTTPS)` session 
-   to the :red:`BIGIP SSLO Primary` component.
+**For this lab:**
+
+-  Using your web browser (Chrome/Chromium preferred), open a :red:`TMUI (HTTPS)` session 
+   to the :red:`SSLO Primary` component via UDF.
    
--  Login as :red:`admin` with password :red:`admin`.
+-  Login as :red:`admin` with password :red:`agility`.
 
 .. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context regarding how the UDF lab hosts are connected and how they relate to each other.
 

@@ -1,21 +1,18 @@
 .. role:: red
 .. role:: bred
 
-GC Services List
-================
+Guided Configuration Services List
+===================================
 
 .. image:: ../images/gc-path-3.png
    :align: center
 
 The Services List page is used to define security
-services that attach to SSLO. The SSLO Guided Configuration now
-includes a services catalog that contains common product
+services that attach to SSLO. The SSLO Guided Configuration includes a services catalog that contains common product
 integrations. Beneath each of these catalog options is one of the
 five basic service types. The service catalog also provides "generic"
 security services. Depending on screen resolution, it may be
 necessary to scroll down to see additional services.
-
-The image below shows the blank service list.  We will now add an ICAP service.
 
 .. image:: ../images/blankservices.png
 
@@ -27,7 +24,7 @@ For this lab,
 
 - Click :red:`Add Service`, and select Generic ICAP Service from the catalog and click :red:`Add`, or simply double-click the service to go to its configuration page.
 
-- The only fields that need to be edited are the ones explicitly mentioned in these bullets.  The other fields may be left with their default value.
+.. note:: The only fields that need to be edited are the ones explicitly mentioned in these bullets.  The other fields may be left with their default value.
 
 - Name - CLAM_AV
 
@@ -50,6 +47,7 @@ The image below shows the service list with the new ICAP service.
 
 .. image:: ../images/servicelisticap.png
 
+The first :red:`Service` has now been configured.
 
 -  Click :red:`Save & Next` to continue to the next stage.
 

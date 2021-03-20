@@ -1,8 +1,8 @@
 .. role:: red
 .. role:: bred
 
-GC Security Policy
-==================
+Guided Configuration Security Policy
+=====================================
 
 .. image:: ../images/gc-path-5.png
    :align: center
@@ -16,16 +16,27 @@ SSLO. The "actions" a rule can take include:
 
 - Which service chain (if any) to pass the traffic through
 
+The SSLO Guided Configuration presents an intuitive rule-based, drag-and-drop
+user interface for the definition of security policies.
+
 .. image:: ../images/policy1.png
    :align: center
 
-The SSLO Guided Configuration presents an intuitive rule-based, drag-and-drop
-user interface for the definition of security policies.
+-  In the Security Policy, click the pencil at the far right of the :red:`All Traffic` rule.
+
+
 
 .. image:: ../images/policy2.png
    :align: center
 
-The **Security Policy** has now been configured.
+
+- Select the :red:`SSL Forward Bypass Action` drop down menu and select :red:`Bypass`.
+
+- Select the :red:`Service Chain` drop down menu and select :red:`ssloSC_all_services`.
+
+-  Click :red:`OK`.
+
+The preliminary :red:`Security Policy` has now been configured.
 
 Click :red:`Save & Next` to continue to the next stage.
 

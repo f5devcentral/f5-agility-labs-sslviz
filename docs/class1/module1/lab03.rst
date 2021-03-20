@@ -1,14 +1,14 @@
 .. role:: red
 .. role:: bred
 
-Begin creating the initial deployment via Guided Configuration (GC)
+Begin creating the initial deployment via Guided Configuration
 ========================================================================================
 
 The SSL Orchestrator Guided Configuration presents a streamlined user experience. This workflow-based architecture provides
 intuitive, re-entrant configuration steps tailored to the selected
 topology.
 
-The following steps will walk through the **Guided Configuration (GC)** UI to build a
+The following steps will walk through the :red:`Guided Configuration` UI to build a
 simple transparent forward proxy.
 
 
