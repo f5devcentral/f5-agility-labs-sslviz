@@ -15,10 +15,6 @@ of the security services, while non-HTTP traffic goes through a subset, and
 traffic destined to a financial service URL can bypass decryption and still
 flow through a smaller set of security services.
 
-.. warning:: The diagram below is designed to illustrate the power of SSL Orchestrator's dynamic service chains. Please note that it does not match this lab's specific configuration.
-
-
-.. image:: ../images/module1-7.png
 
 -  Click :red:`Add` to create a new service chain.
 
@@ -30,9 +26,9 @@ flow through a smaller set of security services.
 
    -  Click :red:`Save`.
 
-.. image:: ../images/allserviceschain.png
+.. image:: ../images/module1-38.png
 
-.. image:: ../images/chaincomplete.png
+.. image:: ../images/module1-39.png
 
 The preliminary :red:`Service Chain` has now been configured.
 

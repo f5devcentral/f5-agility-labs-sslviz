@@ -4,26 +4,21 @@
 Configure and Test Selective Decryption by URL Category
 =======================================================
 
-This test will demonstrate that:
-
-- Traffic to select URLs (Financial and Medical) are no longer decrypted.
+This test will demonstrate that traffic to select URLs (Financial and Medical) are no longer decrypted.
 
 Enable SSL bypass
 ------------------ 
 
-Return to your SSL Orchestrator configuration browser tab on your local workstation. 
-From the left-hand menu, navigate to :red:`SSL Orchestrator > Configuration`. 
-Click on the :red:`sslo_L3_out` topology. In the list presented in black text, 
-find the row labeled :red:`Security Policy`. Click on the pencil on the right.  
+- Return to SSL Orchestrator Guided Configuration.  
 
-Rule list before URL-based selective decryption
+- Click on the :red:`sslo_demoL3` topology.
 
-- Click Add
+- In the configuration summary, find the row labeled :red:`Security Policy` and click on the pencil at the far right.
 
-   .. image:: ../images/addurlf.png
-
-Create a an additional rule for "Financial Data and
+Here, you will create a an additional rule for "Financial Data and
 Services" and "Health and Medicine" URL categories.
+
+   .. image:: ../images/module1-30.png
 
 -  Click :red:`Add` to create a new rule.
 
@@ -39,43 +34,45 @@ Services" and "Health and Medicine" URL categories.
 
 -  **Action** - select :red:`Allow`.
 
--  **SSL Forward Proxy Action** - select :red:`Intercept`.
+-  **SSL Forward Proxy Action** - select :red:`Bypass`.
 
 -  **Service Chain** - select the :red:`all_services` service chain.
 
 -  Click :red:`OK`.
 
-   .. image:: ../images/urlfdetails.png
+   .. image:: ../images/module1-29.png
 
 Rule list after URL-based selective decryption
-   .. image:: ../images/updatedpolicylist.png
+   .. image:: ../images/module1-28.png
 
-.. image:: ../images/reentrantdeploy.png
+- Click :red:`Save & Next`.
+
+- Pause for a few seconds and the yellow banner shown below will appear at the very top of the :red:`Interception Rule` settings.
+
+
+.. image:: ../images/module1-22.png
    :scale: 50 %
    :align: center
 
-Financial and Medical site test
+- Click :red:`Deploy`.
+
+Financial and medical site test
 ---------------------------------
 
-Return to your Ubuntu client RDP session.
-Open a web browser (e.g., Firefox, Chromium) on the outbound client system and
-navigate to https://bcbs.com. Once the site opens in the browser, 
-check the server certificate of the site and notice that it is still issued 
-by the local CA configured in SSLO. This is because even though we created a rule
-for financial and medical sites, the SSL Forward Proxy Action is set to Intercept.
+- Return to your Ubuntu client RDP session.
 
-   .. image:: ../images/bcbsafter.png
+- Open a web browser (e.g., Firefox, Chromium) on the outbound client system and navigate to https://bcbs.com. 
 
-   .. image:: ../images/wellsafter.png
+- Once the site opens in the browser, check the server certificate of the site.
 
-Reconfiguring the SSLO Security Policy to bypass Financial and Medical sites
-============================================================================
+   .. image:: ../images/module1-27.png
 
-Return to your SSL Orchestrator configuration browser tab on your local workstation. 
-From the left-hand menu, navigate to :red:`SSL Orchestrator > Configuration`. 
-Click on the :red:`sslo_L3_out` topology. In the list presented in black text, 
-find the row labeled :red:`Security Policy`. Click on the pencil on the right. 
-In the security policy, find the rule named :red:`urlf_bypass` and click on the pencil
-on the right.  
+**Notice that it now shows it is issued by a public CA (not SSL Orchestrator).  This means that this traffic is not decrypted because it belongs to the Health and Medicine URL category.**
 
--  **SSL Forward Proxy Action** - select the :red:`bypass` option.
+- Try the same test for https://wellsfargo.com.  This certificate should also be signed by a public CA, and therefore not decrypted, as it belongs to the Financial Data and Services URL category.
+
+   .. image:: ../images/module1-26.png
+
+**This certificate should also be signed by a public CA, and therefore not decrypted, as it belongs to the Financial Data and Services URL category.**
+
+In the next section, you will review the SSL Orchestrator Dashboard.

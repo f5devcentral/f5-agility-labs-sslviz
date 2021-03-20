@@ -14,9 +14,9 @@ five basic service types. The service catalog also provides "generic"
 security services. Depending on screen resolution, it may be
 necessary to scroll down to see additional services.
 
-.. image:: ../images/blankservices.png
+.. image:: ../images/module1-40.png
 
-.. image:: ../images/pickicap.png
+.. image:: ../images/module1-41.png
 
 We will initially create one ICAP security service. If time allows, you may create more services using the subsequent optional labs.  
 
@@ -38,14 +38,14 @@ For this lab,
 
 -  Click :red:`Save`.
 
-.. image:: ../images/icapservice.png
+.. image:: ../images/module1-41.png
    :align: center
 
 
 
 The image below shows the service list with the new ICAP service.
 
-.. image:: ../images/servicelisticap.png
+.. image:: ../images/module1-42.png
 
 The first :red:`Service` has now been configured.
 

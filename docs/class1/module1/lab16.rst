@@ -11,16 +11,16 @@ For this lab:
 
 -  Navigate back to the SSL Orchestrator GUI.
 
--  Instead of re-entering the Toplogy's Guided Configuration, click on :red:`Dashboard` as shown in the image below.
+-  Instead of re-entering the toplogy, click on :red:`Dashboard` as shown in the image below.
 
-.. image:: ../images/enterdashboard.png
+.. image:: ../images/module1-24.png
    :scale: 50 %
    :align: center
 
 
 -  Review your dashboard, which should look similar to the image below.
 
-.. image:: ../images/dashboard.png
+.. image:: ../images/module1-25.png
    :scale: 50 %
    :align: center
 

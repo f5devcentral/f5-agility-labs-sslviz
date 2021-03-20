@@ -19,14 +19,12 @@ SSLO. The "actions" a rule can take include:
 The SSLO Guided Configuration presents an intuitive rule-based, drag-and-drop
 user interface for the definition of security policies.
 
-.. image:: ../images/policy1.png
+.. image:: ../images/module1-36.png
    :align: center
 
 -  In the Security Policy, click the pencil at the far right of the :red:`All Traffic` rule.
 
-
-
-.. image:: ../images/policy2.png
+.. image:: ../images/module1-37.png
    :align: center
 
 

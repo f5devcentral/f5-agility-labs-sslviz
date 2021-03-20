@@ -1,32 +1,31 @@
 .. role:: red
 .. role:: bred
 
-Associate updated service chains to security policy (Optional - time permitting)
-================================================================================
-.. image:: ../images/gc-path-5.png
-   :align: center
+Test the new TAP service (optional - time permitting)
+============================================================
 
-Security policies are the set of rules that govern how traffic is processed in
-SSLO. The "actions" a rule can take include:
+One way to see if the security service is seeing decrypted traffic is to log into the 
+console shell and run a  tcpdump capture on the
+interface. A tcpdump capture usually requires *root* or *sudo* access.
 
-- Whether or not to allow the traffic
 
-- Whether or not to decrypt the traffic
+Let's check if we see clear-text data on the TAP device.
 
-- Which service chain (if any) to pass the traffic through
+-  In the UDF UI, select the :red:`Access` drop down selection on the :red:`Ubuntu18.04 Services` VM,
+   then select :red:`WEB SHELL`.
 
-The SSLO Guided Configuration presents an intuitive rule-based, drag-and-drop
-user interface for the definition of security policies.
+-  In the web shell window, perform a packet capture using :red:`tcpdump`. The
+   client machine's IP address is :red:`10.1.10.50`.
 
-.. image:: ../images/module1-9.png
+.. code-block:: bash
 
-.. NOTE::
-   In the background, SSLO maintains these security policies as visual
-   per-request policies. If traffic processing is required that exceeds the
-   capabilities of the rule-based user interface, the underlying per-request
-   policy can be modified directly.
+   sudo tcpdump -lnni br0 -Xs0 host 10.1.10.50
+
+-  Browse to an HTTPS web site (e.g., https://www.cnn.com) from the
+   :red:`Ubuntu18.04 Client` machine (RDP session)
+   and notice that the TAP device is receiving traffic unencrypted.
+
+-  Return to the web shell and press :red:`<CTRL-C>` to stop the tcpdump.
 
 .. ATTENTION::
-   If the per-request policy is modifed directly (outside of the
-   SSLO Guide Configuration UI), the SSLO UI can no longer be used afterwards
-   without losing your direct per-request policy modifications.
+   This is the end of the lab.  Be sure to check out the SSL Orchestrator 201 lab for more.
