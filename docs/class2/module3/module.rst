@@ -6,9 +6,9 @@ In this lab, you will learn how to implement an *internal* layered SSL Orchestra
 
 .. note::
    This methodology is documented in the following Github repository:
-   `F5 SSL Orchestrator Layered Architecture Configuration <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_.
+   `f5devcentral/sslo-script-tools/internal-layered-architecture <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_.
    
-   It consists of a set of iRules which reduce deployment complexity by treating SSL Orchestator topologies as functions.
+   It consists of a set of iRules which reduce deployment complexity by treating SSL Orchestrator topologies as functions.
 
 
 .. toctree::

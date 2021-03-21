@@ -51,7 +51,7 @@ Pre-existing environment validation
 
 -  Click the **OK** button
 
--  **Close and relaunch** the Firefox browser
+-  **Close and relaunch** the web browser
 
 -  Browse to ``https://www.example.com/`` once again
 

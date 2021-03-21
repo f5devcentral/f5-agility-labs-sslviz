@@ -12,7 +12,7 @@ Enable authentication offload
 
       ``tail -f /var/log/squid/access.log`` 
 
--  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows Client and confirm that access is still being logged. You should see log entries of the sites and URLs visited but the username field (immediately after the URI) will be blank ("-"), similar to the example below:
+-  Visit a few secure (HTTPS) websites (non-banking) using Chrome on the Windows Client and confirm that access is still being logged. You should see log entries of the sites and URLs visited but the username field (immediately after the URI) will be blank ("-"), similar to the example below:
 
    |proxy-access-log-nouser|
 
@@ -32,7 +32,7 @@ SSL Orchestrator does not pass authenticated usernames to a proxy service unless
 
 -  The **Service Chain List** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button.
 
--  Visit a few more secure (HTTPS) websites (non-banking) using Firefox on the Windows Client. You should now see your username logged along with the HTTP requests you sent, similar to the example below:
+-  Visit a few more secure (HTTPS) websites (non-banking) using Chrome on the Windows Client. You should now see your username logged along with the HTTP requests you sent, similar to the example below:
 
    |proxy-access-log-mike|
 

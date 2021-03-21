@@ -26,8 +26,11 @@ From the SSL Orchestrator Configuration screen:
    |updated-security-policy|
 
 
--  Click the **Deploy** button and then click the **OK** button on the pop-up to confirm you want to make the changes.
+-  Click the **Deploy** button.
 
+-  On the pop-up dialog, click the **OK** button to confirm that you want to make the changes.
+
+-  When successfully deployed, click the **OK** button to return to the SSL Orchestrator Configuration screen.
 
 
 .. |pencil| image:: ../images/pencil.png

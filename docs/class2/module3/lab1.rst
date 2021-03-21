@@ -1,33 +1,29 @@
 .. role:: red
 .. role:: bred
 
-Add a new L3 Explicit topology
-===================================
+Create Empty VLAN
+===================
 
-A topology must be bound to a unique VLAN. But since the topologies in this architecture
-won't be listening on an actual client-facing VLAN, you will need to create a separate dummy VLAN for each topology you
-intend to create. A dummy VLAN is basically a VLAN with no interface assigned. In the BIG-IP UI, under Network -> VLANs,
-click Create. Give your VLAN a name and click Finished. It will ask you to confirm since you're not attaching an interface.
-Click OK to continue.
+A topology must be bound to a unique VLAN. Since the topologies in this architecture
+won't be listening on an actual client-facing VLAN, you will need to create a separate empty VLAN for each topology you
+intend to create. A empty VLAN has no interfaces assigned.
 
 - Navigate to **Network > VLANs** and click on the **Create** button to add a new VLAN
 - Name this VLAN:  ``zzz-vlan`` and then click on **Finished**. Do not select any interfaces.
 
-.. image:: ../images/create-vlan.png
-   :alt: New 'dummy' VLAN
+   .. image:: ../images/create-vlan.png
+      :alt: Empty VLAN
+
+- Since you are not attaching any interfaces to this VLAN, you will receive a confirmation pop-up.
+
+   .. image:: ../images/vlan-confirm-empty.png
+      :alt: Empty VLAN Confirmation
+
+-  Click on **OK** to continue.
+
+|
+
+   .. image:: ../images/vlan-empty.png
+      :alt: Empty VLAN Confirmation
 
 
-Now, create a new L3 Explicit topology for the outbound application server traffic. This topology will decrypt TLS and send traffic to a service chain consisting of:
-
-   -  New ICAP-based antivirus service
-   -  Existing Cisco Firepower TAP service
-
--  Navigate to **SSL Orchestrator > Configuration** and **Add** a new topology.
-
-
-new service - ICAP
-new service chain - AV_CiscoFP
-
-zzz-vlan
-
-You should now have two L3 Explicit topologies.
