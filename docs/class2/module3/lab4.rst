@@ -2,8 +2,8 @@
 .. role:: bred
 
 
-Test SSL Orchestrator Deployment
-======================================
+Test Layered SSL Orchestrator Topology Deployment
+================================================================================
 
 Test Internet access from the two *client* machines to verify that the internal layered SSL Orchestrator deployment is working as designed.
 

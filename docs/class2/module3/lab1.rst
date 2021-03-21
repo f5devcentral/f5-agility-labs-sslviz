@@ -2,7 +2,7 @@
 .. role:: bred
 
 Create Empty VLAN
-===================
+================================================================================
 
 A topology must be bound to a unique VLAN. Since the topologies in this architecture
 won't be listening on an actual client-facing VLAN, you will need to create a separate empty VLAN for each topology you

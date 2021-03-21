@@ -1,7 +1,8 @@
 .. role:: red
+.. role:: bred
 
 Review the Access Policy and AAA configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
 
 -  From the Main menu on the left, select **Access > Authentication > NTLM > NTLM Auth Configuration**.
 

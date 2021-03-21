@@ -1,5 +1,5 @@
 Scenario
-========
+================================================================================
 
 **Background**
 
@@ -29,7 +29,7 @@ You receive a request from the Applications team to inspect outbound traffic fro
 
 
 Lab Overview
-============
+================================================================================
 
 .. note::
    Completion of the first two lab exercises is a pre-requisite.

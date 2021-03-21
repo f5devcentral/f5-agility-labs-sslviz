@@ -1,7 +1,8 @@
 .. role:: red
+.. role:: bred
 
 Create a new Cisco Firepower Threat Defense TAP service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
 
 -  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**
 

@@ -2,7 +2,7 @@
 .. role:: bred
 
 Create Secondary Topology
-===========================
+================================================================================
 
 You will need to add an L3 Explicit topology for the outbound application server traffic. This topology will decrypt TLS and send traffic to a service chain consisting of:
 

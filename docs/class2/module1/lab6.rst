@@ -1,7 +1,8 @@
 .. role:: red
+.. role:: bred
 
 Confirm Service Chain and Security Policy rules are working as expected
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
 
 -  Browse to ``https://www.example.com`` on your Windows Client machine.
 

@@ -2,7 +2,7 @@
 .. role:: bred
 
 Pre-existing environment validation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
 
 -  Start an RDP session to the **Ubuntu18.04 Client** (*Components > Ubuntu18.04 Client > ACCESS > XRDP*)
 

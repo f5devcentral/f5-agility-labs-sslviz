@@ -1,9 +1,10 @@
-Managing Security Services and Service Chains
-===============================================
+.. role:: red
+.. role:: bred
 
-The majority of enterprise forward proxy configurations will involve an HA pair of BIG-IPs performing SSL orchestration functions. 
-F5 SSL Orchestrator has been designed with that principle in mind and performs robust and dynamic service chaining of security devices. 
-This lab is designed to help leverage dynamic service chaining of security devices.
+Managing Security Services and Service Chains
+================================================================================
+
+In the SSL Orchestrator 101 lab, you configured a single toplogy with multiple services as part of a single guided configuration workflow. Now, you will learn how to add another service and service chain to an existing topology.
 
 .. toctree::
    :maxdepth: 1

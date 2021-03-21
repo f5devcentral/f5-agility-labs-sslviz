@@ -1,5 +1,9 @@
+.. role:: red
+.. role:: bred
+
 Update Service Chains on existing Security Policy rules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
+
 Update the existing Security Policy rules to use the new Service Chains you just created.
 
 From the SSL Orchestrator Configuration screen:

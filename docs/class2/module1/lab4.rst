@@ -1,7 +1,9 @@
 .. role:: red
+.. role:: bred
 
 Create a new "Cisco Firepower" Service Chain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
+
 You now need to create a new Service Chain containing only the Cisco Firepower TAP service.
 
 -  On the **Service Chain List** screen click the **Add** button to create a new Service Chain

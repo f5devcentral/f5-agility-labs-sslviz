@@ -1,7 +1,9 @@
 .. role:: red
+.. role:: bred
 
 Create a new "All Services" Service Chain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
+
 You now need to create a new Service Chain containing the Squid Proxy and the Cisco Firepower TAP services.
 
 -  On the **Service Chain List** screen click the **Add** button to create a new Service Chain

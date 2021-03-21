@@ -1,9 +1,8 @@
 .. role:: red
 .. role:: bred
 
-
 Verify Pre-requisite SSL Orchestrator Configuration
-=====================================================
+================================================================================
 
 -  If not already connected to the **SSL Orchestrator** TMUI, log into the TMUI *(Components > SSL Orchestrator > ACCESS > TMUI)*
 

@@ -1,7 +1,8 @@
 .. role:: red
+.. role:: bred
 
 Verify that user information is being identified on the F5 SSL Orchestrator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
 
 -  On the **Windows Client**, use Chrome to browse to a few websites
 

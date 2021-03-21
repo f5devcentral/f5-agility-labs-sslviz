@@ -1,7 +1,8 @@
 .. role:: red
+.. role:: bred
 
 Enable authentication offload
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
 
 -  Start a Web Shell to **Ubuntu18.04 Services** (**Components > Ubuntu18.04 Services > ACCESS > Web Shell**)
 

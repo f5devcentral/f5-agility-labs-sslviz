@@ -1,7 +1,8 @@
 .. role:: red
+.. role:: bred
 
 Enable NTLM authentication on explicit proxy topology
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
 
 -  From the Main menu on the left, select **SSL Orchestrator > Configuration**
 
