@@ -39,7 +39,7 @@ site opens in the browser, check the server certificate of the site and notice
 that it is signed by a public certificate authority (CA). 
 
 
-.. image:: ../images/module1-19-2.png
+.. image:: ../images/module1-33.png
    :scale: 50 %
    :align: center
 
@@ -54,7 +54,7 @@ navigate to https://eicar.org/?page_id=3950. Scroll down to the section labeled
 :red:`Download area using the secure, SSL enabled protocol HTTPS` and click on :red:`eicar.com`. 
 This is a non-malicious file that antivirus products will detect for testing purposes. 
 
-.. image:: ../images/module1-19-3.png
+.. image:: ../images/module1-34.png
    :scale: 50 %
    :align: center
 

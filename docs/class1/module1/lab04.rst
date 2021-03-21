@@ -31,7 +31,7 @@ Properties page provides the following options:
 
 -  **Topology**: Select :red:`L3 Outbound`
 
-   .. image:: ../images/topstart.png
+   .. image:: ../images/module1-44.png
       :align: center
 
 

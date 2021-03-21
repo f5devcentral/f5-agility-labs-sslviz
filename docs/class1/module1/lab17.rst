@@ -3,26 +3,23 @@
 
 Add the remaining services (Optional - time permitting)
 ============================================================
-.. image:: ../images/gc-path-3.png
-   :align: center
 
-The Services List page is used to define security
-services that attach to SSLO. The SSLO Guided Configuration now
-includes a services catalog that contains common product
-integrations. Beneath each of these catalog options is one of the
-five basic service types. The service catalog also provides "generic"
-security services. Depending on screen resolution, it may be
-necessary to scroll down to see additional services.
+This lab will create one of each remaining type of security service. 
+
+- Return to SSL Orchestrator Guided Configuration.  
+
+- Click on the :red:`sslo_demoL3` topology.
+
+- In the configuration summary, find the row labeled :red:`Service` and click on the pencil at the far right.
 
 .. image:: ../images/module1-5.png
 
-This lab will create one of each type of security service. Click :red:`Add
-Service`, then either select a service from the catalog and
-click :red:`Add`, or simply double-click the service to go
-to its configuration page.
+- Click :red:`Add Service`, then either select a service from the catalog.
+
+- click :red:`Add`, or simply double-click the service to go to its configuration page.
 
 Inline layer 2 service
-~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 -  Select the :red:`FireEye NX Inline Layer 2` service from
    the catalog and click :red:`Add`, or simply double-click
@@ -82,7 +79,7 @@ Inline layer 2 service
 -  Click :red:`Save`.
 
 Inline layer 3 service
-~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 -  Click on :red:`Add Service`.
 
@@ -133,7 +130,7 @@ Inline layer 3 service
 -  **L3 Devices** - this defines the inbound-side IP address of the inline
    layer 3 service, used for routing traffic to this device. Multiple load
    balanced IP addresses can be defined here. Click :red:`Add`, enter
-   :red:`198.19.64.65`, then click :red:`Done`.
+   :red:`198.19.64.30`, then click :red:`Done`.
 
 -  **Device Monitor** - security service definitions can use
    specific custom monitors. For this lab, leave it set to the default
@@ -183,7 +180,7 @@ Inline layer 3 service
 -  Click :red:`Save`.
 
 Inline HTTP service
-~~~~~~~~~~~~~~~~~~~
+----------------------
 
 An inline HTTP service is defined as an explicit or transparent proxy for HTTP (web) traffic.
 
@@ -290,13 +287,13 @@ An inline HTTP service is defined as an explicit or transparent proxy for HTTP (
 - Click :red:`Save`.
 
 TAP service
-~~~~~~~~~~~
+---------------
 
 A TAP service is a passive device that simply receives a copy of traffic.
 
 -  Click on :red:`Add Service`.
 
--  Select the :red:`Cisco Firepower Thread Defense TAP`
+-  Select the :red:`Cisco Firepower Threat Defense TAP`
    service from the catalog and click :red:`Add`, or simply double-click it.
 
 -  **Name** - provide a unique name to this service (example ":red:`TAP`").
@@ -318,9 +315,12 @@ A TAP service is a passive device that simply receives a copy of traffic.
 
 - Click :red:`Save`.
 
+.. image:: ../images/module1-23.png
+
 The **Services** for this lab have now been configured.
 
 - Click :red:`Save & Next` to continue to the next stage.
 
-.. image:: ../images/module1-6.png
+In the next section, you will associate these new services to service chains.
+
 

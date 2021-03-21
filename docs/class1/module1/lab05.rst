@@ -22,7 +22,7 @@ available when "Show Advanced Settings" is enabled (top right).
 
 .. note:: This is the self-signed CA certificate and private key that will by used by SSL Orchestrator to sign the re-issued or "forged" certificates delivered to clients for forward proxy (outbound) traffic.  This is also the CA certificate that will be imported into the client's browser certificate store.
 
-.. image:: ../images/clientssl.png
+.. image:: ../images/module1-43.png
    :align: center
 
 |
