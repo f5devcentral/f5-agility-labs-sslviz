@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Associate new services to service chains (Optional - time permitting)
+Associate new services to service chains (optional - time permitting)
 =========================================================================
 
 
@@ -28,6 +28,8 @@ In this section, you will associate the newly created services to service chains
 - Click :red:`Save`.
 
 .. image:: ../images/module1-21.png
+   :scale: 50 %
+   :align: center
 
 The **Service Chains** have now been configured.
 

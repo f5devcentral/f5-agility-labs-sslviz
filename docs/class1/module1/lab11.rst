@@ -1,11 +1,12 @@
 .. role:: red
 .. role:: bred
 
-Guided Configuration Log Settings
+Guided configuration log settings
 ======================================
 
 .. image:: ../images/gc-path-8.png
    :align: center
+   :scale: 50
 
 Log settings are defined per-topology. In
 environments where multiple topologies are deployed, this can help to
@@ -14,7 +15,8 @@ topology.
 
 
 .. image:: ../images/module1-14.png
-
+   :scale: 50 %
+   :align: center
 
 The **Log Settings** have now been configured.
 

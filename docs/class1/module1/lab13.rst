@@ -13,13 +13,22 @@ This test will demonstrate that:
 RDP to the :red:`Ubuntu18.04 Client` machine
 ---------------------------------------------------
 
+- From UDF, find the :red:`Ubuntu18.04Client`.
+
+- Click :red:`Access`.
+
+- Under xRDP, choose your preferred resolution.
+
+.. image:: ../images/module1-50.png
+   :scale: 50 %
+   :align: center 
+
 - At the **Login to xrdp** window, click on the :red:`OK` button.
 
 .. image:: ../images/module1-18.png
    :scale: 50 %
    :align: center
 
-|
 
 You will then see the Client desktop.
 
@@ -28,7 +37,6 @@ You will then see the Client desktop.
    :align: center
 
 
-|
 
 Server certificate test
 -----------------------

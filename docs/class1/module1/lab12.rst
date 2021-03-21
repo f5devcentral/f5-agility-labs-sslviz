@@ -1,11 +1,12 @@
 .. role:: red
 .. role:: bred
 
-Guided Configuration Summary
+Guided configuration summary
 =============================
 
 .. image:: ../images/gc-path-9.png
    :align: center
+   :scale: 50
 
 The summary page presents an expandable list of all of the workflow-configured
 objects. To expand the details for any given setting, click the corresponding
@@ -15,6 +16,8 @@ selected settings page.
 
 
 .. image:: ../images/module1-15.png
+   :scale: 50 %
+   :align: center
 
 - When satisfied with the defined settings, click :red:`Deploy`.
 
@@ -24,13 +27,16 @@ selected settings page.
 Upon successfully deploying the configuration, SSL Orchestrator will now
 display a **Configure** view:
 
-.. image:: ../images/configureview.png
+.. image:: ../images/module1-46.png
+   :scale: 50 %
+   :align: center
 
 The **Interception Rules** tab shows the listeners that were created per the
 selected topology.
 
-.. image:: ../images/interceptionrules.png
-
+.. image:: ../images/module1-47.png
+   :scale: 50 %
+   :align: center
 
 In the above list:
 

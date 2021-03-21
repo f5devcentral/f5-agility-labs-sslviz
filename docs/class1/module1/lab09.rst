@@ -1,11 +1,12 @@
 .. role:: red
 .. role:: bred
 
-Guided Configuration Interception Rule
+Guided configuration interception rule
 ========================================
 
 .. image:: ../images/gc-path-6.png
    :align: center
+   :scale: 50
 
 Interception rules are based on the selected topology and define the "listeners"
 that accept and process different types of traffic (ex. TCP, UDP, other). The
@@ -44,8 +45,12 @@ security policies created in the topology workflow.
    leave the default selection.
 
 .. image:: ../images/module1-35.png
+   :scale: 50 %
+   :align: center
 
 The **Interception Rule** has now been configured.
 Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png
+   :scale: 50 %
+   :align: center

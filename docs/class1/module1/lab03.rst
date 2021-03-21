@@ -18,14 +18,16 @@ From the left-hand menu, navigate to
 :red:`SSL Orchestrator > Configuration`. 
 
 .. image:: ../images/module1-45.png
+   :scale: 50 %
    :align: center
 
 If this is the first
-time accessing SSLO in a new BIG-IP build, the Guided Configuration UI will
+time accessing SSLO in a new BIG-IP build, the guided configuration UI will
 automatically load and deploy the built-in SSLO package as shown below.
 
 .. image:: ../images/module1-1.png
    :align: center
+   :scale: 50
 
 
 Configuration review and prerequisites
@@ -41,5 +43,6 @@ provide an opportunity to define DNS and route settings later in the workflow.
 
 .. image:: ../images/module1-2.png
    :align: center
+   :scale: 50
 
 Click :red:`Next` to continue to the next stage.
