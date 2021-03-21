@@ -1,11 +1,12 @@
 .. role:: red
 .. role:: bred
 
-Guided Configuration Services List
+Guided configuration services list
 ===================================
 
 .. image:: ../images/gc-path-3.png
    :align: center
+   :scale: 50
 
 The Services List page is used to define security
 services that attach to SSLO. The SSLO Guided Configuration includes a services catalog that contains common product
@@ -15,14 +16,24 @@ security services. Depending on screen resolution, it may be
 necessary to scroll down to see additional services.
 
 .. image:: ../images/module1-40.png
+   :scale: 50 %
+   :align: center
 
 .. image:: ../images/module1-41.png
+   :scale: 50 %
+   :align: center
 
 We will initially create one ICAP security service. If time allows, you may create more services using the subsequent optional labs.  
 
 For this lab, 
 
-- Click :red:`Add Service`, and select Generic ICAP Service from the catalog and click :red:`Add`, or simply double-click the service to go to its configuration page.
+- Click :red:`Add`, and select Generic ICAP Service from the catalog and click :red:`Add`, or simply double-click the service to go to its configuration page.
+
+
+.. image:: ../images/module1-41.png
+   :align: center
+   :scale: 50
+
 
 .. note:: The only fields that need to be edited are the ones explicitly mentioned in these bullets.  The other fields may be left with their default value.
 
@@ -38,20 +49,23 @@ For this lab,
 
 -  Click :red:`Save`.
 
-.. image:: ../images/module1-41.png
+.. image:: ../images/module1-49.png
+   :scale: 50 %
    :align: center
-
-
 
 The image below shows the service list with the new ICAP service.
 
 .. image:: ../images/module1-42.png
+   :scale: 50 %
+   :align: center
 
 The first :red:`Service` has now been configured.
 
 -  Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png
+   :scale: 50 %
+   :align: center
 
 .. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the ICAP Service.
 

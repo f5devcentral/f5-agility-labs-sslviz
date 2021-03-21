@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Add the remaining services (Optional - time permitting)
+Add the remaining services (optional - time permitting)
 ============================================================
 
 This lab will create one of each remaining type of security service. 
@@ -13,6 +13,8 @@ This lab will create one of each remaining type of security service.
 - In the configuration summary, find the row labeled :red:`Service` and click on the pencil at the far right.
 
 .. image:: ../images/module1-5.png
+   :scale: 50 %
+   :align: center
 
 - Click :red:`Add Service`, then either select a service from the catalog.
 
@@ -316,6 +318,8 @@ A TAP service is a passive device that simply receives a copy of traffic.
 - Click :red:`Save`.
 
 .. image:: ../images/module1-23.png
+   :scale: 50 %
+   :align: center
 
 The **Services** for this lab have now been configured.
 

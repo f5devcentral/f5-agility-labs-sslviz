@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Configure and Test Selective Decryption by URL Category
+Configure and test selective decryption by URL category
 =======================================================
 
 This test will demonstrate that traffic to select URLs (Financial and Medical) are no longer decrypted.
@@ -19,6 +19,8 @@ Here, you will create a an additional rule for "Financial Data and
 Services" and "Health and Medicine" URL categories.
 
    .. image:: ../images/module1-30.png
+   :scale: 50 %
+   :align: center
 
 -  Click :red:`Add` to create a new rule.
 
@@ -41,9 +43,13 @@ Services" and "Health and Medicine" URL categories.
 -  Click :red:`OK`.
 
    .. image:: ../images/module1-29.png
+   :scale: 50 %
+   :align: center
 
 Rule list after URL-based selective decryption
    .. image:: ../images/module1-28.png
+   :scale: 50 %
+   :align: center
 
 - Click :red:`Save & Next`.
 
@@ -65,13 +71,17 @@ Financial and medical site test
 
 - Once the site opens in the browser, check the server certificate of the site.
 
-   .. image:: ../images/module1-27.png
+.. image:: ../images/module1-27.png
+   :scale: 50 %
+   :align: center
 
 **Notice that it now shows it is issued by a public CA (not SSL Orchestrator).  This means that this traffic is not decrypted because it belongs to the Health and Medicine URL category.**
 
 - Try the same test for https://wellsfargo.com.  This certificate should also be signed by a public CA, and therefore not decrypted, as it belongs to the Financial Data and Services URL category.
 
-   .. image:: ../images/module1-26.png
+.. image:: ../images/module1-26.png
+   :scale: 50 %
+   :align: center
 
 **This certificate should also be signed by a public CA, and therefore not decrypted, as it belongs to the Financial Data and Services URL category.**
 

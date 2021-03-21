@@ -1,11 +1,12 @@
 .. role:: red
 .. role:: bred
 
-Guided Configuration Topology
+Guided configuration topology
 ================================
 
 .. image:: ../images/gc-path-1.png
    :align: center
+   :scale: 50
 
 SSLO creates discrete configurations based
 on the selected topology. For example, in previous versions of SSLO,
@@ -33,6 +34,7 @@ Properties page provides the following options:
 
    .. image:: ../images/module1-44.png
       :align: center
+      :scale: 50
 
 
 The **Topology** settings have been configured.
@@ -40,6 +42,8 @@ The **Topology** settings have been configured.
 Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png
+   :scale: 50 %
+   :align: center
 
 .. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the Topology.
 
