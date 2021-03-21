@@ -17,7 +17,7 @@ Initialization
 From the left-hand menu, navigate to
 :red:`SSL Orchestrator > Configuration`. 
 
-.. image:: ../images/gcstart.png
+.. image:: ../images/module1-45.png
    :align: center
 
 If this is the first

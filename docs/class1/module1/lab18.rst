@@ -3,43 +3,40 @@
 
 Associate new services to service chains (Optional - time permitting)
 =========================================================================
-.. image:: ../images/gc-path-4.png
-   :align: center
 
-The section will highlight many of the other types of services that are supported by SSL Orchestrator.
-|
 
-.. image:: ../images/module1-7.png
+In this section, you will associate the newly created services to service chains.
 
-|
+- Return to SSL Orchestrator Guided Configuration.  
 
--  Click :red:`Add` to create a new service chain containing all of the
-   security services.
+- In the configuration summary, find the row labeled :red:`Service Chain` and click on the pencil at the far right.
 
-   -  **Name** - provide a unique name to this service chain
-      (ex.":red:`all_services`").
+- Click on the :red:`ssloSC_all_services` service chain.
 
-   -  **Services** - select any number of desired service and move them into the
-      :red:`Selected Service Chain Order` column, optionally also ordering
-      them as required. In this lab, select :red:`all of the services` and then
-      click the :red:`rightward-pointing arrow` to move them to the
-      :red:`Selected Service Chain Order` side.
+- Add all of the newly created services in the :red:`Services Available` column to the :red:`Selected Service Chain Order` column.
 
-   -  Click :red:`Save`.
+- Click :red:`Save`.
 
--  Click :red:`Add` to create a new service chain for just the L2 (ex.
-   FireEye) and TAP services.
+- Click :red:`OK` on the :red:`Continue Save?` confirmation.
 
-   -  **Name** - provide a unique name to this service chain (ex.
-      ":red:`L2_services`").
+- Check :red:`Add` to add a new service chain.
 
-   -  **Services** - select and then move the :red:`FireEye` and :red:`TAP`
-      services to the right-hand side.
+- Enter a name such as :red:`L2_services`
 
-   - Click :red:`Save`.
+- Select the :red:`FireEye` :red:`TAP services` in the :red:`Services Available` column to the :red:`Selected Service Chain Order` column.
 
-.. image:: ../images/module1-8.png
+- Click :red:`Save`.
+
+.. image:: ../images/module1-21.png
 
 The **Service Chains** have now been configured.
 
-- Click :red:`Save & Next` to continue to the next stage.
+- Pause for a few seconds and the yellow banner shown below will appear at the very top of the :red:`Interception Rule` settings.
+
+.. image:: ../images/module1-22.png
+   :scale: 50 %
+   :align: center
+
+- Click :red:`Deploy`.
+
+In the next section, you will test the newly created TAP service.

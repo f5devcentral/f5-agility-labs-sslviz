@@ -39,10 +39,10 @@ Verify authentication is currently disabled
    Please be patient. The Windows machines are running resource limited, so may be slow at times.
 
 
--  Using Firefox, browse to various websites.
+-  Using Chrome, browse to various websites.
 
 .. note::
-   Firefox is already configured to use 10.1.10.150 as its Internet access proxy.
+   Chrome is already configured to use 10.1.10.150 as its Internet access proxy.
 
 
 -  Refresh the previously shown TMUI screen. You should still see an **Active Session Count** of **0**.

@@ -6,7 +6,7 @@ SSL Orchestrator Lab Environment
 The following is a visual representation of this lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers assigned. The colored boxes to the right of the services indicate a few product examples for each respective service type.
 
 .. image:: images/labinfo-1.png
-   :align: center
+   :align: left
 
 .. list-table:: **SSL Orchestrator**
    :header-rows: 0

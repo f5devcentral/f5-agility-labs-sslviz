@@ -1,120 +1,210 @@
 .. role:: red
 .. role:: bred
 
+Create Secondary Topology
+===========================
 
-Create "Topology Director" Virtual Server and iRule
-=======================================================
+You will need to add an L3 Explicit topology for the outbound application server traffic. This topology will decrypt TLS and send traffic to a service chain consisting of:
 
--  First,  import the **SSLOLIB** and **sslo-layer-rule.tcl** files from the Github repository. This has already been done for you.
-
-   - `SSLOLIB <https://github.com/f5devcentral/sslo-script-tools/blob/main/internal-layered-architecture/SSLOLIB>`_
-
-   - `SSLO-Topology-Director (sslo-layering-rule.tcl) <https://raw.githubusercontent.com/f5devcentral/sslo-script-tools/main/internal-layered-architecture/sslo-layering-rule.tcl>`_
-
--  Navigate to  **Local Traffic > Virtual Servers > iRules** and review each iRule.
-
-.. image:: ../images/internal-layered-irules-1.png
-   :alt: Internal Layered Architecture iRules
+   #. New ICAP-based antivirus service
+   #. Existing Cisco Firepower TAP service
 
 
--  Make the following changes to the **SSLO-Topology-Director** iRule:
+L3 Explicit Topology
+------------------------
 
-   -  Set necessary static configuration values in RULE_INIT as required ...
+-  Navigate to **SSL Orchestrator > Configuration** and **Add** a new topology.
 
-   -  Modify the **SSLO-Topology-Director** iRule with the following steering commands:
-   -  x
+-  Scroll to the bottom of the page and click on the **Next** button.
+
+-  Enter ``appsvr_explicit`` as the topology name.
+
+-  Select the **L3 Explicit Proxy** topology type.
+
+-  Click the **Save & Next** button to continue.
 
 
--  Navigate to **Local Traffic > Virtual Servers > Virtual Server List** to create the layered topology virtual server.
+SSL Configurations
+-------------------
 
--  Click on the **Create** button to add a new Virtual Server and configure the following setings:
+-  In the **CA Certificate Key Chain** section, click on the pencil icon to edit.
 
-   -  Name: ``Topology-Director_vs``
-   -  Type: ``Standard``
-   -  Source: ``0.0.0.0/0``
-   -  Destination Address: ``10.1.10.200``
-   -  Destination Port: ``3128``
-   -  Protocol: ``TCP``
-   -  VLAN Enabled On: ``client-vlan``
-   -  Address/Port Translation: ``disabled``
-   -  Default Persistence Profile: ``ssl``
-   -  iRule: ``SSLO-Topology-Director``
+-  Select **subrsa.f5labs.com** for both **Certificate** and **Key**.
 
-.. image:: ../images/topology-director-vs-1.png
-   :alt: 
+.. note:: This is the self-signed CA certificate and private key that will by used by SSL Orchestrator to sign the re-issued or "forged" certificates delivered to clients for outbound SSL forward proxy traffic.  This is also the CA certificate that must be imported into the client's browser trusted certificates store.
+
+.. image:: ../images/clientssl.png
+   :align: left
+
+.. warning:: 
+   Ensure that you are editing the **CA Certificate Key Chain** shown above, not the *Certificate Key Chain*.  They look very similar.
 
 |
 
-.. image:: ../images/topology-director-vs-1b.png
+-  Click **Done**. The **SSL** settings have now been configured.
+
+-  Click the **Save & Next** button to continue.
+
+
+ICAP service
+---------------
+
+-  On the **Services List** screen, click the **Add** button.
+
+-  Type  ``icap`` in the **Search** box
+
+-  Select **Generic ICAP** and click the **Add** button
+
+.. image:: ../images/service-icap-1.png
+   :alt: ICAP Service
+   :align: left
+
+
+-  On the **Service Properties** screen, enter the following values:
+
+   -  Enter ``CLAM_AV`` in the **Name** field.
+
+   -  Enter ``ClamAV`` in the **Description** field.
+
+   -  In the **ICAP Devices** section, click on the **Add** button.
+
+   -  Enter ``198.19.97.50`` in the **IP Address** field.
+
+   -  Leave the **Port** set to ``1344`` (default for ICAP).
+
+   -  Click on **Done** to add the ICAP device.
+
+   .. image:: ../images/service-icap-2.png
+      :alt: ICAP Service
+      :align: left
+
+   -  Enter ``/avscan`` in the **Request Modification URI Path** field.
+   
+   -  Enter ``/avscan`` in the **Response Modification URI Path** field.
+
+   -  Enter ``1048576`` in the **Preview Max Length(bytes)** field.
+
+   .. image:: ../images/service-icap-3.png
+      :alt: ICAP Service
+      :align: left
+
+   -  Click **Save** to return to the **Services List**.
+
+
+.. image:: ../images/services-after-icap.png
+   :alt: Services List After Adding ICAP
+   :align: left
+
+-  Click the **Save & Next** button to continue.
+
+
+Service Chain
+----------------
+
+You now need to create a new Service Chain containing the CLAM_AV and Cisco Firepower TAP services.
+
+-  On the **Services Chain List** screen, click the **Add** button.
+
+-  On the **Services Chain Properties** screen, enter the following values:
+
+   -  Enter ``CAV_CiscoFP`` in the **Name** field.
+
+   -  Enter ``ClamAV and Cisco Firepower TAP`` in the **Description** field.
+
+   -  **Services -** select the **CLAM_AV** and **CiscoFP_TAP** services under **Services Available** and move them to **Selected Service Chain Order**
+
+   .. image:: ../images/internal-layered-new-sc.png
+      :alt: New service chain for Clam AV and Cisco Firepower TAP
+      :align: left
+
+-  Click the **Save** button to return to the **Service Chain List**.
+
+-  Click the **Save & Next** button to continue.
+
+
+Security Policy
+-----------------
+
+You now need to create a new Security Policy for the **appsvr_explicit** topology.
+
+-  On the **Security Policy** screen, select the **Create New** radio button to reveal the configuration options.
+
+-  Modify the **All Traffic** rule by clicking on the pencil icon.
+
+-  Select the **ssloSC\_SC\_CAV\_CiscoFP** Service Chain.
+
+-  Click the **OK** button.
+
+.. image:: ../images/internal-layered-policy.png
+   :alt: New security policy for application server traffic
+   :align: left
+
+-  Click the **Save & Next** button to continue.
+
+
+Interception Rule / Proxy Server Settings
+-------------------------------------------
+
+-  Skip down to the **Proxy Server Settings** section.
+
+-  Enter ``10.1.10.175`` in the  **IPV4 Address** field.
+
+-  Leave the **Port** set to ``3128`` (default value).
+
+-  In the **VLANs** section, select the **/Common/zzz-vlan** VLAN and and move it to Selected column.
+
+
+.. image:: ../images/internal-layered-interception.png
+   :alt: New security policy for application server traffic
+   :align: left
+
+
+-  Click the **Save & Next** button.
+
+Egress Settings
+-----------------
+
+-  On the Egress Setting screen, select **Auto Map** in the **Manage SNAT Settings** field.
+
+.. image:: ../images/internal-layered-egress.png
    :alt: 
+   :align: left
 
-|
 
-.. image:: ../images/topology-director-vs-1c.png
+-  Click the **Save & Next** button.
+
+Log Settings
+--------------
+
+-  On the Log Settings screen, leave all the default values.
+
+.. image:: ../images/internal-layered-log.png
    :alt: 
+   :align: left
 
-|
 
-.. image:: ../images/topology-director-vs-1d.png
+-  Click the **Save & Next** button to continue.
+
+
+Summary
+----------
+
+.. image:: ../images/internal-layered-deploy.png
    :alt: 
+   :align: left
 
-|
+
+-  Click the **Deploy** button.
+
+-  Click the **OK** button to confirm that you want to make the changes.
+
+-  When successfully deployed, click the **OK** button to return to the SSL Orchestrator Configuration screen.
 
 
-**Traffic selector commands** (to be used in traffic switching iRule)
 
--  Call the "target" proc with the following parameters ([topology name], ${sni}, [message])
+You should now have two L3 Explicit topologies. The third topology is an L3 Outbound (transparent) topology that is not applicable to your lab exercises.
 
-   -  [topology name] is the base name of the defined topology
-   -  ${sni} is static here and returns the server name indication value (SNI) for logging
-   -  [message] is any string message to send to the log (ex. which rule matched)
-   -  return is added at the end of each command to cancel any further matching
-   -  Example: call SSLOLIB::target "bypass" ${sni} "SRCIP"
+.. image:: ../images/internal-layered-dashboard.png
+   :alt: 
+   :align: left
 
--  Use the following commands to query the proc function for matches (all return true or false) All commands run in CLIENTSSL_CLIENTHELLO to act on SSL traffic.
-
-   .. code-block:: bash
-
-      Source IP Detection (static IP, IP subnet, data group match)
-         SRCIP IP:<ip/subnet>
-         SRCIP DG:<data group name> (address-type data group)
-         if { [call SSLOLIB::SRCIP IP:10.1.0.0/16] } { call SSLOLIB::target "topology name" ${sni} "SRCIP" ; return }
-         if { [call SSLOLIB::SRCIP DG:my_sip_list] } { call SSLOLIB::target "topology name" ${sni} "SRCIP" ; return }
-
-      Source Port Detection (static port, port range, data group match)
-         SRCPORT PORT:<port/port-range>
-         SRCPORT DG:<data group name> (integer-type data group)
-         if { [call SSLOLIB::SRCPORT PORT:15000] } { call SSLOLIB::target "topology name" ${sni} "SRCPORT" ; return }
-         if { [call SSLOLIB::SRCPORT PORT:1000-60000] } { call SSLOLIB::target "topology name" ${sni} "SRCPORT" ; return }
-         if { [call SSLOLIB::SRCPORT DG:my-sport-list] } { call SSLOLIB::target "topology name" ${sni} "SRCPORT" ; return }
-
-      Destination IP Detection (static IP, IP subnet, data group match)
-         DSTIP IP:<ip/subnet>
-         DSTIP DG:<data group name> (address-type data group)
-         if { [call SSLOLIB::DSTIP IP:93.184.216.34] } { call SSLOLIB::target "topology name" ${sni} "DSTIP" ; return }
-         if { [call SSLOLIB::DSTIP DG:my-dip-list] } { call SSLOLIB::target "topology name" ${sni} "DSTIP" ; return }
-
-      Destination Port Detection (static port, port range, data group match)
-         DSTPORT PORT:<port/port-range>
-         DSTPORT DG:<data group name> (integer-type data group)
-         if { [call SSLOLIB::DSTPORT PORT:443] } { call SSLOLIB::target "topology name" ${sni} "DSTPORT" ; return }
-         if { [call SSLOLIB::DSTPORT PORT:1-1024] } { call SSLOLIB::target "topology name" ${sni} "DSTPORT" ; return }
-         if { [call SSLOLIB::DSTPORT DG:my-dport-list] } { call SSLOLIB::target "topology name" ${sni} "DSTPORT" ; return }
-
-      SNI Detection (static URL, category match, data group match)
-         SNI URL:<static url>
-         SNI URLGLOB:<static url> (ends_with match)
-         if { [call SSLOLIB::SNI URL:www.example.com] } { call SSLOLIB::target "topology name" ${sni} "SNIURL" ; return }
-         if { [call SSLOLIB::SNI URLGLOB:.example.com] } { call SSLOLIB::target "topology name" ${sni} "SNIURLGLOB" ; return }
-
-         SNI CAT:<category name or list of categories>
-         if { [call SSLOLIB::SNI CAT:/Common/Financial_Data_and_Services] } { call SSLOLIB::target "topology name" ${sni} "SNICAT" ; return }
-         if { [call SSLOLIB::SNI CAT:$static::URLCAT_Finance_Health] } { call SSLOLIB::target "topology name" ${sni} "SNICAT" ; return }
-
-         SNI DG:<data group name> (string-type data group)
-         SNI DGGLOB:<data group name> (ends_with match)
-         if { [call SSLOLIB::SNI DG:my-sni-list] } { call SSLOLIB::target "topology name" ${sni} "SNIDG" ; return }
-         if { [call SSLOLIB::SNI DGGLOB:my-sniglob-list] } { call SSLOLIB::target "topology name" ${sni} "SNIDGGLOB" ; return }
-
-      Combinations: above selectors can be used in combinations as required. Example:
-         if { ([call SSLOLIB::SRCIP IP:10.1.0.0/16]) and ([call SSLOLIB::DSTIP IP:93.184.216.34]) }

@@ -15,7 +15,7 @@ Enable decryption within the security policy
 
 - Return to SSL Orchestrator Guided Configuration.  
 
-- Click on the :red:`sslo_L3_out` topology.
+- Click on the :red:`sslo_demoL3` topology.
 
 - In the configuration summary, find the row labeled :red:`Security Policy` and click on the pencil at the far right.
 
@@ -29,13 +29,13 @@ Enable decryption within the security policy
 
 - Pause for a few seconds and the yellow banner shown below will appear at the very top of the :red:`Interception Rule` settings.
 
-.. image:: ../images/reentrantdeploy.png
+.. image:: ../images/module1-22.png
    :scale: 50 %
    :align: center
 
 - Click :red:`Deploy`.
 
-.. image:: ../images/deploysuccessful.png
+.. image:: ../images/module1-31.png
 
 - Click :red:`OK`.
 
@@ -61,7 +61,7 @@ Decrypted traffic test on the security service
 
 - Navigate once again to https://eicar.org/?page_id=3950. Scroll down to the section labeled :red:`Download area using the secure, SSL enabled protocol HTTPS` and click on :red:`eicar.com`. 
 
-.. image:: ../images/virus.png
+.. image:: ../images/module1-32.png
    :scale: 50 %
    :align: center
 

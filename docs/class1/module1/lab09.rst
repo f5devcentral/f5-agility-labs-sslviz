@@ -43,7 +43,7 @@ security policies created in the topology workflow.
    separate port-based listeners for each. For this lab,
    leave the default selection.
 
-.. image:: ../images/intercept.png
+.. image:: ../images/module1-35.png
 
 The **Interception Rule** has now been configured.
 Click :red:`Save & Next` to continue to the next stage.
