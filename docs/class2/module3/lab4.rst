@@ -24,13 +24,13 @@ Layered Virtual Server and Topology Steering iRule
 
 |
 
-The SSLOLIB iRule contains functions that allow the topology steering rule to easily match on various attributes and then target specific SSL Orchestrator topologies.
+The SSLOLIBEXP iRule contains functions that allow the topology steering rule to easily match on various attributes and then target specific SSL Orchestrator topologies.
 
 .. warning::
-   Do not modify the SSLOLIB iRule.
+   Do not modify the SSLOLIBEXP iRule.
 
 .. image:: ../images/irule-sslolib.png
-   :alt: View SSLOLIB iRule
+   :alt: View SSLOLIBEXP iRule
 
 |
 
