@@ -55,56 +55,17 @@ Click :red:`Save & Next` to continue to the next stage.
    SSLO Guide Configuration UI), the SSLO UI can no longer be used afterwards
    without losing your direct per-request policy modifications.
 
-.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the ICAP Service.
+.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the security policy.
 
-Add a New Rule
-~~~~~~~~~~~~~~
-
-In this lab, create an additional rule to bypass SSL for "Financial Data and
-Services" and "Health and Medicine" URL categories.
-
--  Click :red:`Add` to create a new rule.
-
--  **Name** - provide a unique name for the rule (ex. ":red:`urlf_bypass`").
-
--  **Conditions** - Select **Category Lookup (All)** from the drop-down list
-   and then add the :red:`Financial Data and Services` and :red:`Health and Medicine`
-   URL categories. Start typing the category name to narrow the list.
+Security policy
+----------------
 
    .. NOTE::
       The **Category Lookup (All)** condition provides categorization for
       TLS SNI, HTTP Connect and HTTP Host information.
 
--  **Action** - select :red:`Allow`.
-
--  **SSL Forward Proxy Action** - select :red:`Bypass`.
-
-.. ATTENTION::
-  Bypass will not decrypt.  We setting bypass temporarily so we can validate the original behavior, after which we will enable decryption.
-
--  **Service Chain** - select the FireEye/TAP service chain
-   :red:`L2_services`.
-
--  Click :red:`OK`.
-
-   .. image:: ../images/module1-10.png
-    :scale: 50 %
-   :align: center
-
 In the list of rules, notice that the **All Traffic** rule intercepts but
-does *not* send traffic to any service chain. For the lab, edit this rule to
-send all intercepted traffic to a service chain.
-
--  Click the pencil icon to :red:`edit` this rule.
-
--  **Service Chain** - select the service chain containing :red:`all` of the
-   services.
-
--  Click :red:`OK`.
-
-   .. image:: ../images/module1-11.png
-   :scale: 50 %
-   :align: center
+does *not* send traffic to any service chain. 
 
 -  **Server Certificate Status Check** - this option
    inserts additional security policy logic to validate the remote
