@@ -71,7 +71,7 @@ The first :red:`Service` has now been configured.
 
 
 ICAP service
-~~~~~~~~~~~~
+-------------
 
 An ICAP service is an RFC 3507-defined service that
 provides some set of services over the ICAP protocol.
