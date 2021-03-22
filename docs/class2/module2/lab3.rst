@@ -1,13 +1,14 @@
 .. role:: red
+.. role:: bred
 
 Verify that user information is being identified on the F5 SSL Orchestrator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
 
--  On the **Windows Client**, use Chrome to browse to a few websites
+-  On the **Windows Client**, use Chrome to browse to a few websites.
 
--  On SSL Orchestrator select, **Access > Overview > Active Sessions** from the Main menu on the left
-
--  You should now see an active session similar to the example below.
+-  On SSL Orchestrator select, **Access > Overview > Active Sessions** from the Main menu on the left.
+  
+   You should now see an active session similar to the example below.
 
    |active-sessions-mike|
 

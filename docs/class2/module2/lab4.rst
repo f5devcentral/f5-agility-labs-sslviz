@@ -1,9 +1,10 @@
 .. role:: red
+.. role:: bred
 
-Enable authentication offload
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enable and test authentication offload
+================================================================================
 
--  Start a Web Shell to **Ubuntu18.04 Services** (**Components > Ubuntu18.04 Services > ACCESS > Web Shell**)
+-  Start a Web Shell to **Ubuntu18.04 Services** (**Systems > Ubuntu18.04 Services > ACCESS > Web Shell**)
 
    .. image:: ../images/ubuntu-services.png
       :alt: Unbuntu Services Web Shell Access
@@ -28,13 +29,23 @@ SSL Orchestrator does not pass authenticated usernames to a proxy service unless
 
 -  Scroll down the Service Properties screen and select the **Authentication Offload** checkbox. Doing so will cause SSL Orchestrator to inject an "X-Authenticated-User" header into the HTTP payload of traffic it directs to the Squid proxy service.
 
--  Click the **Save & Next** button and confirm by clicking the **OK** button in the pop-up that appears
+
+.. image:: ../images/auth-offload.png
+   :alt: Authentication Offload Option
+
+
+-  Click the **Save & Next** button and confirm by clicking the **OK** button in the pop-up that appears.
 
 -  The **Service Chain List** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button.
+
+-  Click **OK** to acknowledge the successful deployment.
 
 -  Visit a few more secure (HTTPS) websites (non-banking) using Chrome on the Windows Client. You should now see your username logged along with the HTTP requests you sent, similar to the example below:
 
    |proxy-access-log-mike|
+
+
+-  Press Control-C to stop the *tail* tool.
 
 
 .. attention::

@@ -1,7 +1,10 @@
 .. role:: red
+.. role:: bred
 
 Enable NTLM authentication on explicit proxy topology
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
+
+The **f5labs_explicit** topology does not perform user authentication by default. You will now enable NTLM authentication for all users who connect to the explicit proxy.
 
 -  From the Main menu on the left, select **SSL Orchestrator > Configuration**
 
@@ -13,13 +16,20 @@ Enable NTLM authentication on explicit proxy topology
 
 -  Select :red:`/Common/f5labs-ntlm-ap` from the **Access Profile** drop down menu
 
+
+.. image:: ../images/ntlm-access-profile.png
+   :alt: Access Profile for NTLM Authentication
+
+
 -  Click **Save & Next** at the bottom of the screen
+
+|
 
 -  The **Egress Settings** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button (see example below).
 
    |egress-settings-deploy-ribbon|
 
--  Click **OK** to acknowledge the successful deployment
+-  Click **OK** to acknowledge the successful deployment.
 
 .. |topology-summary-IR-edit| image:: ../images/topology-summary-IR-edit.png
    :alt: Edit Interception Rule from Topology Summary

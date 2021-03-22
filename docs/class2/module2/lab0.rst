@@ -2,7 +2,7 @@
 .. role:: bred
 
 Verify authentication is currently disabled
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
 
 -  Start a TMUI session on **SSL Orchestrator** and log in if prompted (*Components > SSL Orchestrator > ACCESS > TMUI*)
 
@@ -17,7 +17,7 @@ Verify authentication is currently disabled
    that you used in the other lab exercises.
 
 
--  Start an RDP session to the **Windows Client** (*Components > Windows Client > ACCESS > RDP*)
+-  Start an RDP session to the **Windows Client** (*Systems > Windows Client > ACCESS > RDP*)
 
 .. image:: ../images/windows-client-rdp.png
    :alt: Windows Client RDP Access
@@ -34,9 +34,10 @@ Verify authentication is currently disabled
 .. image:: ../images/windows-logon-2.png
    :alt: Windows Logon - domain\user and password
 
+-  Accept any connection/security prompts.
 
 .. note::
-   Please be patient. The Windows machines are running resource limited, so may be slow at times.
+   Please be patient. The Windows machines are running with limited resources, so may be slow at times.
 
 
 -  Using Chrome, browse to various websites.

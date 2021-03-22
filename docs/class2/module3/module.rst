@@ -1,5 +1,8 @@
+.. role:: red
+.. role:: bred
+
 Internal Layered SSL Orchestrator Architecture
-================================================
+================================================================================
 
 In this lab, you will learn how to implement an *internal* layered SSL Orchestrator architecture to conditionally steer traffic to various SSLO topologies. This 2-tiered architecture enables support for more complex deployment scenarios, while also helping to simplify the SSL Orchestrator configuration.
 
