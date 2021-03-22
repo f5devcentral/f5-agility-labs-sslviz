@@ -1,16 +1,11 @@
 .. role:: red
 .. role:: bred
 
-Layered Virtual Server and Topology Steering iRule -- **BROKEN**
+Layered Virtual Server and Topology Steering iRule
 ================================================================================
 
-
-.. attention::
-   :bred:`This section currently does not produce a working configuration. The topology steering iRule needs to be tweaked for explicit proxy topologies. Stay tuned for an update shortly.`
-
-
 .. note::
-   The **SSLOLIB** and **sslo-layer-rule.tcl** files from the `f5devcentral/sslo-script-tools <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_ Github repository have already been imported for you. You will review the contents of these iRules shortly.
+   The **SSLOLIBEXP** and **sslo-layering-explicit.tcl** files from the `f5devcentral/sslo-script-tools <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_ Github repository have already been imported for you. You will review the contents of these iRules shortly.
 
 -  Navigate to  **Local Traffic > Virtual Servers > iRules > Datagroup List** to view the data groups.
 
@@ -39,21 +34,21 @@ The SSLOLIB iRule contains functions that allow the topology steering rule to ea
 
 |
 
-The topology steering iRule ('SSLO-Topology-Director') contains your steering logic and defines the topology steering conditions.
+The topology steering iRule contains your steering logic and defines the topology steering conditions.
 
--  Modify the **SSLO-Topology-Director** iRule with the following values:
+-  Modify the **SSLO-layering-explicit** iRule with the following values:
 
-   -  **Line 21:** Replace ``intercept`` with ``f5labs_explicit``. This defines the default SSL Orchestrator topology to use (if there is no other match).
-   -  Insert 2 blank lines after **line 39**.
-   -  Copy **line 43** into **line 40**.
-   -  **Line 40**: Uncomment this line by removing the '#' from the beginning of the line.
-   -  **Line 40**: Replace ``my-srcip-dg`` with ``appserver_list``. This defines the data group to check for source address matches.
-   -  **Line 40**: Replace ``bypass`` with ``appsvr_explicit``. This defines the topology to use if there is a source address match.
+   -  **Line 21:** Replace ``interceptexp`` with ``f5labs_explicit``. This defines the default SSL Orchestrator topology to use (if there is no other match).
+   -  Insert 2 blank lines after **line 41**.
+   -  Copy **line 45** into **line 41**.
+   -  **Line 41**: Uncomment this line by removing the '#' from the beginning of the line.
+   -  **Line 41**: Replace ``my-srcip-dg`` with ``appserver_list``. This defines the data group to check for source address matches.
+   -  **Line 41**: Replace ``bypassexp`` with ``appsvr_explicit``. This defines the topology to use if there is a source address match.
 
 .. attention::
    Ensure that there are not typographical errors in the iRule, or it will not function properly.
 
-.. image:: ../images/irule-topology-director.png
+.. image:: ../images/irule-layering-explicit.png
    :alt: Changes to SSLO-Topology-Director iRule
 
 -  Click on the **Update** button to save the iRule changes.
@@ -73,8 +68,8 @@ The topology steering iRule ('SSLO-Topology-Director') contains your steering lo
    -  VLAN and Tunnel Traffic > **Enabled On...**: **client-vlan**
    -  Address Translation: **disabled**
    -  Port Translation: **disabled**
-   -  Default Persistence Profile: **ssl**
-   -  iRule: **SSLO-Topology-Director**
+   
+   -  iRule: **SSLO-layering-explicit**
 
 .. image:: ../images/topology-director-vs-1.png
    :alt: 
