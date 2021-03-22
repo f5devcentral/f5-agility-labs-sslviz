@@ -25,8 +25,9 @@ From the :bred:`DEPLOYMENT` tab, you will access the :bred:`Ubuntu18.04 Client` 
 You can select the window resolution for the RDP session. An RDP file will be downloaded to your local
 system and you will need to open it to connect.
 
-.. image:: images/clientrdp.png
+.. image:: images/module1-50.png
    :align: center
+   :scale: 50
 
 Lab Details
 -----------
@@ -91,7 +92,7 @@ the BIG-IP GUI.
      - 10.1.20.1
      -
    * - Login
-     - admin:admin \| root:default
+     - admin:agility \| root:default
      -
    * - Interfaces
      - Client VLAN
@@ -214,7 +215,7 @@ the BIG-IP GUI.
    * - Inbound IP Address
      - 10.1.10.50 (RDP and SSH)
    * - Outbound IP Address
-     - 10.1.20.55 (RDP and SSH)
+     - 10.1.20.50 (RDP and SSH)
 
 
 The following is a visual representation of this lab
