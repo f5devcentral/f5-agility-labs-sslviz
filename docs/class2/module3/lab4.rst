@@ -65,6 +65,7 @@ The topology steering iRule contains your steering logic and defines the topolog
    -  Destination Address: ``10.1.10.150``
    -  Destination Port: ``3128``
    -  Protocol: **TCP**
+   -  HTTP Profile (Client): **sslo-default-http-explicit**
    -  VLAN and Tunnel Traffic > **Enabled On...**: **client-vlan**
    -  Address Translation: **disabled**
    -  Port Translation: **disabled**
@@ -72,6 +73,11 @@ The topology steering iRule contains your steering logic and defines the topolog
    -  iRule: **SSLO-layering-explicit**
 
 .. image:: ../images/topology-director-vs-1.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1a.png
    :alt: 
 
 |
