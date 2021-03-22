@@ -1,87 +1,211 @@
 .. role:: red
 .. role:: bred
 
-
-.. role:: red
-.. role:: bred
-
-Layered Virtual Server and Topology Steering iRule
+Create Secondary Topology
 ================================================================================
 
--  The **SSLOLIB** and **sslo-layer-rule.tcl** files from the `f5devcentral/sslo-script-tools <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_ Github repository have already been imported for you. You can skip to the next step.
+You will need to add an L3 Explicit topology for the outbound application server traffic. This topology will decrypt TLS and send traffic to a service chain consisting of:
 
--  Navigate to  **Local Traffic > Virtual Servers > iRules > Datagroup List** to view the data groups.
-
-.. image:: ../images/dg-appservers_list-1.png
-   :alt: View Data Groups
-
--  Click on the **appserver_list** data group to view the list of server subnets/addresses. Traffic from these source IPs will be directed to the **appserver_explicit** topology. Note that IP address **10.1.10.50** is the **Ubuntu18.04 Client** machine (representing an application server).
-
-.. image:: ../images/dg-appservers_list-2.png
-   :alt: Data Group: appservers_list
-
--  Navigate to  **Local Traffic > Virtual Servers > iRules > iRules List** and review the two iRules.
-
-.. image:: ../images/internal-layered-irules-1.png
-   :alt: Internal Layered Architecture iRules
+   #. New ICAP-based antivirus service
+   #. Existing Cisco Firepower TAP service
 
 
-The SSLOLIB iRule contains functions that allow the topology steering rule to easily match on various attributes and then target specific SSL Orchestrator topologies.
+L3 Explicit Topology
+------------------------
 
-.. warning::
-   Do not modify the SSLOLIB iRule.
+-  Navigate to **SSL Orchestrator > Configuration** and **Add** a new topology.
 
-.. image:: ../images/irule-sslolib.png
-   :alt: View SSLOLIB iRule
+-  Scroll to the bottom of the Configuration introduction page and click on the **Next** button.
 
-The topology steering iRule ('SSLO-Topology-Director') contains your steering logic and defines the topology steering conditions.
+-  Enter ``appsvr_explicit`` as the topology name.
 
--  Modify the **SSLO-Topology-Director** iRule with the following values:
+-  Select the **L3 Explicit Proxy** topology type.
 
-   -  **Line 21:** Replace ``intercept`` with ``f5labs_explicit``. This defines the default SSL Orchestrator topology to use (if there is no other match).
-   -  Insert 2 blank lines at **line 40**.
-   -  Copy **line 43** into **line 40**.
-   -  **Line 40**: Replace ``my-srcip-dg`` with ``appserver_list``. This defines the data group to check for source address matches.
-   -  **Line 40**: Replace ``bypass`` with ``appserver_explicit``. This defines the topology to use if there is a source address match.
-
-.. image:: ../images/irule-topology-director.png
-   :alt: Changes to SSLO-Topology-Director iRule
-
-.. note::
-   Lines beginning with '#' (green colored) are code comments and act as documentation for these iRules.
+.. image:: ../images/l3-explicit-topology.png
+   :alt: L3 Explicit Proxy
 
 
--  Navigate to **Local Traffic > Virtual Servers > Virtual Server List** to create the topology steering virtual server.
+-  Click the **Save & Next** button to continue.
 
--  Click on the **Create** button to add a new Virtual Server and configure the following settings:
 
-   -  Name: ``Topology-Director_vs``
-   -  Type: **Standard**
-   -  Source: ``0.0.0.0/0``
-   -  Destination Address: ``10.1.10.200``
-   -  Destination Port: ``3128``
-   -  Protocol: **TCP**
-   -  VLAN Enabled On: **client-vlan**
-   -  Address/Port Translation: **disabled**
-   -  Default Persistence Profile: **ssl**
-   -  iRule: **SSLO-Topology-Director**
+SSL Configurations
+-------------------
 
-.. image:: ../images/topology-director-vs-1.png
-   :alt: 
+-  In the **CA Certificate Key Chain** section, click on the pencil icon to edit.
+
+-  Select **subrsa.f5labs.com** for both **Certificate** and **Key**.
+
+.. warning:: 
+   Ensure that you are editing the **CA Certificate Key Chain** shown above, not the *Certificate Key Chain*.  They look very similar.
+
+-  Click **Done**. The **SSL** settings have now been configured.
+
+.. image:: ../images/clientssl.png
+   :align: left
 
 |
 
-.. image:: ../images/topology-director-vs-1b.png
+-  Click the **Save & Next** button to continue.
+
+
+ICAP service
+---------------
+
+-  On the **Services List** screen, click the **Add** button.
+
+-  Type  ``icap`` in the **Search** box
+
+-  Select **Generic ICAP Service** and click the **Add** button
+
+.. image:: ../images/service-icap-1.png
+   :alt: ICAP Service
+   :align: left
+
+
+-  On the **Service Properties** screen, enter the following values:
+
+   -  Enter ``CLAM_AV`` in the **Name** field.
+
+   -  Enter ``ClamAV`` in the **Description** field.
+
+   -  In the **ICAP Devices** section, click on the **Add** button.
+
+   -  Enter ``198.19.97.50`` in the **IP Address** field.
+
+   -  Leave the **Port** set to ``1344`` (default for ICAP).
+
+   -  Click on **Done** to add the ICAP device.
+
+   .. image:: ../images/service-icap-2.png
+      :alt: ICAP Service
+      :align: left
+
+   -  Enter ``/avscan`` in the **Request Modification URI Path** field.
+   
+   -  Enter ``/avscan`` in the **Response Modification URI Path** field.
+
+   -  Enter ``1048576`` in the **Preview Max Length(bytes)** field.
+
+   .. image:: ../images/service-icap-3.png
+      :alt: ICAP Service
+      :align: left
+
+   -  Click **Save** to return to the **Services List**.
+
+
+.. image:: ../images/services-after-icap.png
+   :alt: Services List After Adding ICAP
+   :align: left
+
+-  Click the **Save & Next** button to continue.
+
+
+Service Chain
+----------------
+
+You now need to create a new Service Chain containing the CLAM_AV and Cisco Firepower TAP services.
+
+-  On the **Services Chain List** screen, click the **Add** button.
+
+-  On the **Services Chain Properties** screen, enter the following values:
+
+   -  Enter ``CAV_CiscoFP`` in the **Name** field.
+
+   -  Enter ``ClamAV and Cisco Firepower TAP`` in the **Description** field.
+
+   -  **Services -** select the **CLAM_AV** and **CiscoFP_TAP** services under **Services Available** and move them to **Selected Service Chain Order**
+
+   .. image:: ../images/internal-layered-new-sc.png
+      :alt: New service chain for Clam AV and Cisco Firepower TAP
+      :align: left
+
+-  Click the **Save** button to return to the **Service Chain List**.
+
+-  Click the **Save & Next** button to continue.
+
+
+Security Policy
+-----------------
+
+You now need to create a new Security Policy for the **appsvr_explicit** topology.
+
+-  On the **Security Policy** screen, modify the **All Traffic** rule by clicking on the pencil icon.
+
+-  Select the **ssloSC\_SC\_CAV\_CiscoFP** Service Chain.
+
+-  Click the **OK** button.
+
+.. image:: ../images/internal-layered-policy.png
+   :alt: New security policy for application server traffic
+   :align: left
+
+-  Click the **Save & Next** button to continue.
+
+
+Interception Rule / Proxy Server Settings
+-------------------------------------------
+
+-  Skip down to the **Proxy Server Settings** section.
+
+-  Enter ``10.1.10.175`` in the  **IPV4 Address** field.
+
+   .. note::
+      An IP address is required for an explicit proxy configuration, but it won't actually be referenced in this design since it is associated with an empty VLAN.
+
+-  Leave the **Port** set to ``3128`` (default value).
+
+-  In the **VLANs** section, select the **/Common/zzz-vlan** VLAN and and move it to Selected column.
+
+
+.. image:: ../images/internal-layered-interception.png
+   :alt: New security policy for application server traffic
+   :align: left
+
+
+-  Click the **Save & Next** button.
+
+Egress Settings
+-----------------
+
+-  On the Egress Settings screen, select **Auto Map** in the **Manage SNAT Settings** field.
+
+.. image:: ../images/internal-layered-egress.png
    :alt: 
+   :align: left
 
-|
 
-.. image:: ../images/topology-director-vs-1c.png
+-  Click the **Save & Next** button.
+
+Log Settings
+--------------
+
+-  On the Log Settings screen, leave all the default values.
+
+.. image:: ../images/internal-layered-log.png
    :alt: 
+   :align: left
 
-|
 
-.. image:: ../images/topology-director-vs-1d.png
+-  Click the **Save & Next** button to continue.
+
+
+Summary
+----------
+
+.. image:: ../images/internal-layered-deploy.png
    :alt: 
+   :align: left
 
-- Click on **Finished** to create the new virtual server.
+
+-  Click the **Deploy** button.
+
+-  When successfully deployed, click the **OK** button to return to the SSL Orchestrator Configuration screen.
+
+
+
+You should now have two L3 Explicit topologies. The third topology is an L3 Outbound (transparent) topology that is not applicable to this lab exercise.
+
+.. image:: ../images/internal-layered-dashboard.png
+   :alt: 
+   :align: left
+

@@ -16,6 +16,12 @@ You now need to create a new Service Chain containing the Squid Proxy and the Ci
 
    -  **Services -** select both services under **Services Available** and move them to **Selected Service Chain Order**
 
+
+.. image:: ../images/ciscofp-3.png
+   :alt: Cisco Firepower Service Configuration
+
+|
+
 -  Click the **Save** button
       
--  You will be returned to the **Service Chain List** where you will add one more Service Chain (see next page).
+-  You will return to the **Service Chain List** where you will add one more Service Chain (see next page).

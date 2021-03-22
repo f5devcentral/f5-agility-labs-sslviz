@@ -8,10 +8,7 @@ While SSL Orchestrator is providing visibility into SSL traffic, a large amount 
 
 SSL Orchestrator, combined with BIG-IP Access Policy Manager (APM), provides the ability to enable transparent passwordless authentication via NTLM and Kerberos. Data from the authenticated user (ex. username) can then be passed on to security services, such as an HTTP proxy service.
 
-This lab walks you through the process required to enable NTLM authentication and to send the authenticated username to the Squid proxy service.
-
-.. note::
-   The Access Policy and associated authentication objects required for this lab have already been configured for you.
+This lab takes you through the process required to enable NTLM authentication and to send the authenticated username to the Squid proxy service.
 
 
 .. toctree::

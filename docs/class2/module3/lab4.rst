@@ -1,110 +1,97 @@
 .. role:: red
 .. role:: bred
 
-
-Test Layered SSL Orchestrator Topology Deployment
+Layered Virtual Server and Topology Steering iRule -- **BROKEN**
 ================================================================================
-
-Test Internet access from the two *client* machines to verify that the internal layered SSL Orchestrator deployment is working as designed.
-
-
-Application Server Test
-------------------------
-Traffic from source addresses matching the **appserver_list** data group will be sent through the **appserver_explicit** topology.
-
--  RDP to the **Ubuntu18.04 Client** machine.
-
--  Launch **Firefox** and change the proxy settings to point to the new topology steering virtual server.
-
-   -  Click on the menu (|ff-menu|) in the top right of the window.
-
-   -  Select **Preferences** on the menu.
-   
-   -  In the **Find in Preferences** search field at the top, type ``proxy``
-   
-   -  Click on the **Settings...** button under Network Settings.
-   
-   -  Under **Manual proxy configuration**, enter ``10.1.10.200`` beside **HTTP Proxy**
-   -  Leave the **Port** set to ``3128``
-   
-      .. image:: ../images/ff-connection-settings-2.png
-         :alt: Firefox Connection Settings
-
--  Click on the **OK** button.
-
--  **Close and relaunch** the web browser.
-
--  Browse to a financial website (ex: Bank of America) and check the certificate that was received. The issuer should be **subrsa.f5labs.com** since the **appserver_explicit** topology does not bypass TLS decryption for financial websites.
-
--  Browse to https://www.eicar.org/?page_id=3950 and attempt to download the **eicar.com** malware test file.
-
-.. image:: ../images/test-eicar-download.png
-   :alt: Eicar malware download test
-
--  This should be blocked by the antivirus service.
-
-.. image:: ../images/test-eicar-blocked.png
-   :alt: Eicar malware download test
-
--  Check **Access > Overview > Active Sessions**. There should be no sessions listed since user authentication is not enabled for the **appserver_explicit** topology.
-
-.. image:: ../images/test-apm-ubuntu.png
-   :alt: APM user sessions
-
-
-Corporate User Test
---------------------
-
-All of the traffic that doesn't match the application server conditions (i.e., source address matching the **appserver_list** data group) will flow through the default **f5labs_explicit** topology.
-
--  RDP to the **Windows Client** machine.
-
--  Launch **Chrome** and change the computer's proxy settings to use the new topology steering virtual server. Click on the Chrome menu icon at top right corner.
-
-.. image:: ../images/chrome-settings.png
-   :alt: Chrome menu
-
-- Enter ``proxy`` into the Search box.
-- Click on **Open your computer's proxy settings**.
-
-.. image:: ../images/chrome-proxy-1.png
-   :alt: Chrome proxy
-
-
--  In the **Manual proxy setup** section, change the **Address** to ``10.1.10.200``
-
--  Leave the port set at ``3128``.
-
--  Click on the **Save** button.
-
-.. image:: ../images/chrome-proxy-2.png
-   :alt: Computer proxy settings
-
-
--  **Close and relaunch** the web browser.
-
--  Browse to a financial website (ex: Bank of America) and check the certificate that was received. The issuer should **NOT** be **subrsa.f5labs.com** since the **f5labs_explicit** topology bypasses TLS decryption for financial websites.
-
--  Browse to https://www.eicar.org/?page_id=3950 and attempt to download the **eicar.com** malware test file. This should **NOT** be blocked since there is no antivirus service in the service chain for the **f5labs_explicit** topology.
-
-
-.. image:: ../images/test-eicar-download.png
-   :alt: Eicar malware download blocked
-
-
--  Check **Access > Overview > Active Sessions**. There should be a user session listed for user **mike**.
-
-.. image:: ../images/test-apm-windows.png
-   :alt: APM user sessions
-
 
 
 .. attention::
-   This is the end of this lab exercise.
+   :bred:`This section currently does not produce a working configuration. The topology steering iRule needs to be tweaked for explicit proxy topologies. Stay tuned for an update shortly.`
 
 
+.. note::
+   The **SSLOLIB** and **sslo-layer-rule.tcl** files from the `f5devcentral/sslo-script-tools <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_ Github repository have already been imported for you. You will review the contents of these iRules shortly.
 
-.. |ff-menu| image:: ../images/ff-menu.png
-   :width: 14px
-   :height: 14px
-   :alt: Firefox Menu
+-  Navigate to  **Local Traffic > Virtual Servers > iRules > Datagroup List** to view the data groups.
+
+.. image:: ../images/dg-appservers_list-1.png
+   :alt: View Data Groups
+
+-  Click on the **appserver_list** data group to view the list of server subnets/addresses. Traffic from these source IPs will be directed to the **appserver_explicit** topology. Note that IP address **10.1.10.50** is the **Ubuntu18.04 Client** machine (representing an application server).
+
+.. image:: ../images/dg-appservers_list-2.png
+   :alt: Data Group: appservers_list
+
+-  Navigate to  **Local Traffic > Virtual Servers > iRules > iRules List** and review the two iRules.
+
+.. image:: ../images/internal-layered-irules-1.png
+   :alt: Internal Layered Architecture iRules
+
+|
+
+The SSLOLIB iRule contains functions that allow the topology steering rule to easily match on various attributes and then target specific SSL Orchestrator topologies.
+
+.. warning::
+   Do not modify the SSLOLIB iRule.
+
+.. image:: ../images/irule-sslolib.png
+   :alt: View SSLOLIB iRule
+
+|
+
+The topology steering iRule ('SSLO-Topology-Director') contains your steering logic and defines the topology steering conditions.
+
+-  Modify the **SSLO-Topology-Director** iRule with the following values:
+
+   -  **Line 21:** Replace ``intercept`` with ``f5labs_explicit``. This defines the default SSL Orchestrator topology to use (if there is no other match).
+   -  Insert 2 blank lines after **line 39**.
+   -  Copy **line 43** into **line 40**.
+   -  **Line 40**: Uncomment this line by removing the '#' from the beginning of the line.
+   -  **Line 40**: Replace ``my-srcip-dg`` with ``appserver_list``. This defines the data group to check for source address matches.
+   -  **Line 40**: Replace ``bypass`` with ``appsvr_explicit``. This defines the topology to use if there is a source address match.
+
+.. attention::
+   Ensure that there are not typographical errors in the iRule, or it will not function properly.
+
+.. image:: ../images/irule-topology-director.png
+   :alt: Changes to SSLO-Topology-Director iRule
+
+-  Click on the **Update** button to save the iRule changes.
+
+|
+
+-  Navigate to **Local Traffic > Virtual Servers > Virtual Server List** to create the topology steering virtual server.
+
+-  Click on the **Create** button to add a new Virtual Server and configure the following settings:
+
+   -  Name: ``Topology-Director_vs``
+   -  Type: **Standard**
+   -  Source: ``0.0.0.0/0``
+   -  Destination Address: ``10.1.10.150``
+   -  Destination Port: ``3128``
+   -  Protocol: **TCP**
+   -  VLAN and Tunnel Traffic > **Enabled On...**: **client-vlan**
+   -  Address Translation: **disabled**
+   -  Port Translation: **disabled**
+   -  Default Persistence Profile: **ssl**
+   -  iRule: **SSLO-Topology-Director**
+
+.. image:: ../images/topology-director-vs-1.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1b.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1c.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1d.png
+   :alt: 
+
+- Click on **Finished** to create the new virtual server.

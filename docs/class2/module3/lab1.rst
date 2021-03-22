@@ -1,14 +1,13 @@
 .. role:: red
 .. role:: bred
 
-Create Empty VLAN
+Create Two Empty VLANs
 ================================================================================
 
-A topology must be bound to a unique VLAN. Since the topologies in this architecture
-won't be listening on an actual client-facing VLAN, you will need to create a separate empty VLAN for each topology you
-intend to create. A empty VLAN has no interfaces assigned.
+A topology must be bound to a unique VLAN. Since the layer topologies won't be listening on actual client-facing VLANs, you will need to create a separate empty VLAN for each topology you intend to create. An empty VLAN has no interfaces assigned.
 
-- Navigate to **Network > VLANs** and click on the **Create** button to add a new VLAN
+- Navigate to **Network > VLANs** and click on the **Create** button to add a new VLAN.
+
 - Name this VLAN:  ``zzz-vlan`` and then click on **Finished**. Do not select any interfaces.
 
    .. image:: ../images/create-vlan.png
@@ -19,11 +18,15 @@ intend to create. A empty VLAN has no interfaces assigned.
    .. image:: ../images/vlan-confirm-empty.png
       :alt: Empty VLAN Confirmation
 
--  Click on **OK** to continue.
+-  Click on **OK** to continue and return to the VLAN List.
+
+- Click on the **Create** button again to add a second empty VLAN.
+
+- Name this VLAN:  ``yyy-vlan`` and then click on **Finished**.
+
+- Since you are not attaching any interfaces to this VLAN, you will receive a confirmation pop-up. Click on **OK** to continue and return to the VLAN List.
 
 |
 
-   .. image:: ../images/vlan-empty.png
-      :alt: Empty VLAN Confirmation
-
-
+.. image:: ../images/vlan-empty.png
+   :alt: Empty VLANs

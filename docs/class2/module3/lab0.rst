@@ -23,3 +23,4 @@ Verify Pre-requisite SSL Orchestrator Configuration
    .. image:: ../images/updated-security-policy.png
       :alt: Security Policy Rules
 
+-  Click on **Cancel** to return to the Topology list.

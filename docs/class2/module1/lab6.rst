@@ -1,10 +1,10 @@
 .. role:: red
 .. role:: bred
 
-Confirm Service Chain and Security Policy rules are working as expected
+Test new Service Chain and Security Policy rules
 ================================================================================
 
--  Browse to ``https://www.example.com`` on your Windows Client machine.
+-  Browse to ``https://www.example.com`` on your **Ubuntu18.04 Client** machine.
 
 -  Verify that the web site is still being intercepted by confirming that the certificate is signed/verified by **f5labs.com** .
 
@@ -20,7 +20,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the **Ubuntu18.04 Client** machine and confirm that access is being logged. You should see log entries of the URLs visited.
    
-   -  Visit a financial web site such as \https://www.bankofamerica.com and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see "Verified by: f5labs.com." because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy.
+   -  Visit a financial web site such as \https://www.bankofamerica.com and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see "Verified by: f5labs.com." because we are bypassing **Financial Data and Services** URLs in the SSL Orchestrator Security Policy.
    
    -  Confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic
 
@@ -48,6 +48,9 @@ Confirm Service Chain and Security Policy rules are working as expected
 
       |tcpdump-grep-agility|
 
+   -  Press Control-C to stop the tcpdump tool
+
+-  Close the web browser.
 
 
 .. attention::

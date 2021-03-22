@@ -13,7 +13,12 @@ Create a new Cisco Firepower Threat Defense TAP service
 -  Type  :red:`firepower` in the **Search** box
 
 -  Select **Cisco Firepower Threat Defense TAP** and click the **Add** button
-   
+
+.. image:: ../images/ciscofp-1.png
+   :alt: Cisco Firepower Service Configuration
+
+|
+
 -  On the **Service Properties** screen enter the following values:
 
    -  **Name -** provide a unique name to this service (ex. :red:`CiscoFP`).
@@ -29,5 +34,11 @@ Create a new Cisco Firepower Threat Defense TAP service
    -  **Tag -** this is the 802.1q VLAN tag for service. Leave it :red:`empty` since this service is connected to an untagged interface.
 
    -  **Enable Port Remap -** this setting allows SSLO to remap the port of HTTPS traffic flowing to this service. For this lab, leave the option :red:`disabled (unchecked)`.
+
+
+.. image:: ../images/ciscofp-2.png
+   :alt: Cisco Firepower Service Configuration
+
+|
 
 -  Click the **Save & Next** button.

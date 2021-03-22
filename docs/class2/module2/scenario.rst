@@ -12,7 +12,8 @@ Your manager lets you know that the company's updated security policy requires t
 Lab Overview
 ================================================================================
 
-This lab continues on from the work you already completed in the previous lab. You will configure SSL Orchestrator to enable NTLM authentication and provide the authenticated username to the Squid security service.
+This lab continues on from the work that you completed in the previous lab. You will configure SSL Orchestrator to enable NTLM authentication and provide the authenticated username to the Squid security service where it can be logged with each HTTP request.
 
 .. note::
    The Access Policy and associated authentication objects required for this lab have already been configured for you.
+

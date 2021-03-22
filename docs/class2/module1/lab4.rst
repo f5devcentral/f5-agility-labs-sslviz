@@ -18,7 +18,13 @@ You now need to create a new Service Chain containing only the Cisco Firepower T
 
 -  Click the **Save** button
 
--  You will be returned to the **Service Chain List**. You should now have three Service Chains.
+
+.. image:: ../images/ciscofp-4.png
+   :alt: Cisco Firepower Service Configuration
+
+|
+
+-  You will return to the **Service Chain List** where you should see three Service Chains.
 
    .. image:: ../images/new-service-chain-list.png
       :alt: Updated Service Chain List
