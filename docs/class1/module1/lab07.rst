@@ -1,11 +1,12 @@
 .. role:: red
 .. role:: bred
 
-Guided Configuration Service Chain List
+Guided configuration service chain list
 =======================================
 
 .. image:: ../images/gc-path-4.png
    :align: center
+   :scale: 50
 
 Service chains are arbitrarily-ordered lists of security devices. Based on
 environmental requirements, different service chains may contain different
@@ -27,8 +28,12 @@ flow through a smaller set of security services.
    -  Click :red:`Save`.
 
 .. image:: ../images/module1-38.png
+   :scale: 50 %
+   :align: center
 
 .. image:: ../images/module1-39.png
+   :scale: 50 %
+   :align: center
 
 The preliminary :red:`Service Chain` has now been configured.
 
@@ -36,3 +41,5 @@ The preliminary :red:`Service Chain` has now been configured.
 -  Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png
+   :scale: 50 %
+   :align: center

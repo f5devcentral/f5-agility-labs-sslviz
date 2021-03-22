@@ -33,7 +33,7 @@ in a later section.
    DLP/ICAP device, create the VLAN and self-IP that connects the DLP device to
    the BIG-IP. In this lab that's the :red:`197.19.97.0/25` subnet and interface
    :red:`1.3 (tag 50)` on the BIG-IP. The DLP security device is listening on
-   :red:`198.19.97.7` and ICAP is listening on port :red:`1344`.
+   :red:`198.19.97.50` and ICAP is listening on port :red:`1344`.
    :red:`This lab environment already has this VLAN and self-IP created`.
 
 -  **Create the default internet route for outbound traffic** - the iApp

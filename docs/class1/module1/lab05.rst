@@ -1,11 +1,12 @@
 .. role:: red
 .. role:: bred
 
-Guided Configuration SSL Configurations
+Guided configuration SSL configurations
 ==========================================
 
 .. image:: ../images/gc-path-2.png
    :align: center
+   :scale: 50
 
 This page defines the specific SSL settings for the selected topology (in this
 case a forward proxy) and controls both client-side and server-side SSL
@@ -24,7 +25,7 @@ available when "Show Advanced Settings" is enabled (top right).
 
 .. image:: ../images/module1-43.png
    :align: center
-
+   :scale: 50
 |
 
 .. warning:: Ensure you are editing the CA Certificate Key Chain shown above in red, not the Certificate Key Chain.  They look very similar.
@@ -34,7 +35,8 @@ The **SSL** settings have now been configured.
 -  Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png
-
+   :scale: 50 %
+   :align: center
 |
 
 .. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the SSL Configurations.

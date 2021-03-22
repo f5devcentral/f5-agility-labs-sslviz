@@ -36,6 +36,8 @@ Enable decryption within the security policy
 - Click :red:`Deploy`.
 
 .. image:: ../images/module1-31.png
+   :scale: 50 %
+   :align: center
 
 - Click :red:`OK`.
 
