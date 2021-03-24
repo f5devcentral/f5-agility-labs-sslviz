@@ -40,7 +40,7 @@ Verify authentication is currently disabled
    Please be patient. The Windows machines are running with limited resources, so may be slow at times.
 
 
--  Using Chrome, browse to various websites.
+-  Using Chrome, browse to ``https:\\www.f5.com``.
 
 .. note::
    Chrome is already configured to use 10.1.10.150 as its Internet access proxy.

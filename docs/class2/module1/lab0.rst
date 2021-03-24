@@ -82,9 +82,10 @@ Pre-existing environment validation
 
       |
 
-   -  Enter the following command in the Web Shell:
+   -  Enter the following commands in the Web Shell:
 
-         ``tail -f /var/log/squid/access.log`` 
+         ``clear``
+         ``tail -f -n 0 /var/log/squid/access.log`` 
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the **Ubuntu18.04 Client** machine and confirm that access is being logged even though we are visiting a secure website. You should see log entries of the sites and URLs visited, similar to the example below:
 

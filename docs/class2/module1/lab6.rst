@@ -14,17 +14,19 @@ Test new Service Chain and Security Policy rules
 
    -  Return to the **Ubuntu18.04 Services** Web Shell (*Components > Ubuntu18.04 Services > ACCESS > Web Shell*)
 
-   -  Enter the following command in the Web Shell:
+   -  Enter the following commands in the Web Shell:
 
-         ``tail -f /var/log/squid/access.log`` 
+         ``clear``
+         ``tail -f -n 0 /var/log/squid/access.log`` 
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the **Ubuntu18.04 Client** machine and confirm that access is being logged. You should see log entries of the URLs visited.
    
    -  Visit a financial web site such as \https://www.bankofamerica.com and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see "Verified by: f5labs.com." because we are bypassing **Financial Data and Services** URLs in the SSL Orchestrator Security Policy.
    
-   -  Check the Squid access log to confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic. Enter the following command in the Web Shell:
+   -  Check the Squid access log to confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic. Enter the following commands in the Web Shell:
 
-         ``tail -f /var/log/squid/access.log`` 
+         ``clear``
+         ``tail -f -n 0 /var/log/squid/access.log`` 
 
       .. note: 
          You may still see log entries for analytics web sites that are associated with the financial web site.

@@ -9,9 +9,10 @@ Enable and test authentication offload
    .. image:: ../images/ubuntu-services.png
       :alt: Unbuntu Services Web Shell Access
 
--  Enter the following command in the Web Shell:
+-  Enter the following commands in the Web Shell:
 
-      ``tail -f /var/log/squid/access.log`` 
+      ``clear``
+      ``tail -f -n 0 /var/log/squid/access.log`` 
 
 -  Visit a few secure (HTTPS) websites (non-banking) using Chrome on the Windows Client and confirm that access is still being logged. You should see log entries of the sites and URLs visited but the username field (immediately after the URI) will be blank ("-"), similar to the example below:
 
