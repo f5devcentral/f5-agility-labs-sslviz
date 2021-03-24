@@ -8,7 +8,7 @@ This is the end of the **SSLO 201: Real World Use Cases** lab. Thank you for par
 
 |
 
-You may not exit the UDF lab environment. It will shut down automatically at the end of the scheduled class period.
+You may now exit the UDF lab environment. It will shut down automatically at the end of the scheduled class time.
 
 |
 
