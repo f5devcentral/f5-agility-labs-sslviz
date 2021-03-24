@@ -62,7 +62,7 @@ Test new Service Chain and Security Policy rules
 
 
 .. attention::
-   This is the end of this lab exercise.
+   This is the end of the lab module.
 
 
 .. |ff-f5labs-verified| image:: ../images/ff-f5labs-verified.png

@@ -49,7 +49,7 @@ SSL Orchestrator does not pass authenticated usernames to a proxy service unless
 
 
 .. attention::
-   This is the end of this lab exercise.
+   This is the end of the lab module.
 
 
 

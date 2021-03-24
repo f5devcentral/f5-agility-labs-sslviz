@@ -17,7 +17,7 @@ L3 Explicit Topology
 
 -  Scroll to the bottom of the Configuration introduction page and click on the **Next** button.
 
--  Enter ``appsvr_explicit`` as the topology name.
+-  Enter ``appsvr_explicit`` as the topology name. Ensure that the name is entered exactly as shown because it will be referenced in a later step.
 
 -  Select the **L3 Explicit Proxy** topology type.
 

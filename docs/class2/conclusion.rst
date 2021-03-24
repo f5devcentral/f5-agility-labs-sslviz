@@ -8,7 +8,8 @@ This is the end of the **SSLO 201: Real World Use Cases** lab. Thank you for par
 
 |
 
-You may now exit the UDF lab environment. It will shut down automatically at the end of the scheduled class time.
+.. attention::
+   You may now exit the UDF lab environment. It will shut down automatically at the end of the scheduled class time.
 
 |
 
@@ -20,9 +21,9 @@ following GitHub repository:
 
 Bugs and Requests for enhancements are handled in two ways:
 
-- Fork the Github Repo, fix or enhance as required, and submit a Pull Request
+-  Fork the Github Repo, fix or enhance as required, and submit a Pull Request
 
-  - https://help.github.com/articles/creating-a-pull-request-from-a-fork/
+   - https://help.github.com/articles/creating-a-pull-request-from-a-fork/
 
-- Open an :issues:`Issue <>` within the repository.
+-  Open an :issues:`Issue <>` within the repository.
 

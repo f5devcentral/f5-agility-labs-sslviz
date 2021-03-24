@@ -85,7 +85,7 @@ All of the traffic that doesn't match the application server conditions (i.e., s
 |
 
 .. attention::
-   This is the end of this lab exercise.
+   This is the end of the lab module.
 
 
 
