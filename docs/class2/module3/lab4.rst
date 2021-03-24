@@ -5,7 +5,7 @@ Layered Virtual Server and Topology Steering iRule
 ================================================================================
 
 .. note::
-   The **SSLOLIBEXP** and **sslo-layering-explicit.tcl** files from the `f5devcentral/sslo-script-tools <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_ Github repository have already been imported for you. You will review the contents of these iRules shortly.
+   The **SSLOLIBEXP** and **sslo-layering-exp-rule** files from the `f5devcentral/sslo-script-tools <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_ Github repository have already been imported for you. You will review the contents of these iRules shortly.
 
 -  Navigate to  **Local Traffic > iRules > Datagroup List** to view the data groups.
 
