@@ -9,7 +9,7 @@ Enable and test authentication offload
    .. image:: ../images/ubuntu-services.png
       :alt: Unbuntu Services Web Shell Access
 
--  Type the following command in the web console and hit Enter:
+-  Enter the following command in the Web Shell:
 
       ``tail -f /var/log/squid/access.log`` 
 
@@ -45,7 +45,7 @@ SSL Orchestrator does not pass authenticated usernames to a proxy service unless
    |proxy-access-log-mike|
 
 
--  Press Control-C to stop the *tail* tool.
+-  Press Control+C to stop the *tail* tool.
 
 
 .. attention::

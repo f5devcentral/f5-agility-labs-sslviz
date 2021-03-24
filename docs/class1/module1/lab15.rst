@@ -19,8 +19,8 @@ Here, you will create a an additional rule for "Financial Data and
 Services" and "Health and Medicine" URL categories.
 
    .. image:: ../images/module1-30.png
-   :scale: 50 %
-   :align: center
+      :scale: 50 %
+      :align: center
 
 -  Click :red:`Add` to create a new rule.
 
@@ -43,13 +43,13 @@ Services" and "Health and Medicine" URL categories.
 -  Click :red:`OK`.
 
    .. image:: ../images/module1-29.png
-   :scale: 50 %
-   :align: center
+      :scale: 50 %
+      :align: center
 
 Rule list after URL-based selective decryption
    .. image:: ../images/module1-28.png
-   :scale: 50 %
-   :align: center
+      :scale: 50 %
+      :align: center
 
 - Click :red:`Save & Next`.
 

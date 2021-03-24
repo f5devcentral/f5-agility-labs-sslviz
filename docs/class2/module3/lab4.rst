@@ -7,7 +7,7 @@ Layered Virtual Server and Topology Steering iRule
 .. note::
    The **SSLOLIBEXP** and **sslo-layering-explicit.tcl** files from the `f5devcentral/sslo-script-tools <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_ Github repository have already been imported for you. You will review the contents of these iRules shortly.
 
--  Navigate to  **Local Traffic > Virtual Servers > iRules > Datagroup List** to view the data groups.
+-  Navigate to  **Local Traffic > iRules > Datagroup List** to view the data groups.
 
 .. image:: ../images/dg-appservers_list-1.png
    :alt: View Data Groups
@@ -17,7 +17,7 @@ Layered Virtual Server and Topology Steering iRule
 .. image:: ../images/dg-appservers_list-2.png
    :alt: Data Group: appservers_list
 
--  Navigate to  **Local Traffic > Virtual Servers > iRules > iRules List** and review the two iRules.
+-  Navigate to  **Local Traffic > iRules > iRules List** and review the two iRules.
 
 .. image:: ../images/internal-layered-irules-1.png
    :alt: Internal Layered Architecture iRules
@@ -40,13 +40,13 @@ The topology steering iRule contains your steering logic and defines the topolog
 
    -  **Line 21:** Replace ``interceptexp`` with ``f5labs_explicit``. This defines the default SSL Orchestrator topology to use (if there is no other match).
    -  Insert 2 blank lines after **line 41**.
-   -  Copy **line 45** into **line 41**.
-   -  **Line 41**: Uncomment this line by removing the '#' from the beginning of the line.
-   -  **Line 41**: Replace ``my-srcip-dg`` with ``appserver_list``. This defines the data group to check for source address matches.
-   -  **Line 41**: Replace ``bypassexp`` with ``appsvr_explicit``. This defines the topology to use if there is a source address match.
+   -  Copy **line 45** into **line 42**.
+   -  **Line 42**: Uncomment this line by removing the '#' from the beginning of the line.
+   -  **Line 42**: Replace ``my-srcip-dg`` with ``appserver_list``. This defines the data group to check for source address matches.
+   -  **Line 42**: Replace ``bypassexp`` with ``appsvr_explicit``. This defines the topology to use if there is a source address match.
 
 .. attention::
-   Ensure that there are not typographical errors in the iRule, or it will not function properly.
+   Ensure that there are no typographical errors in the iRule, or it will not function properly.
 
 .. image:: ../images/irule-layering-explicit.png
    :alt: Changes to SSLO-Topology-Director iRule

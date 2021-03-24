@@ -5,7 +5,7 @@
 Test Layered SSL Orchestrator Topology Deployment
 ================================================================================
 
-Test Internet access from the two *client* machines to verify that the internal layered SSL Orchestrator deployment is working as designed.
+Test Internet access from the two *client* machines to verify that the internal layered SSL Orchestrator deployment is working as intended.
 
 
 Application Server Test
@@ -18,9 +18,7 @@ Traffic from source addresses matching the **appserver_list** data group will be
 
    If your previous RDP session timed out, the password for the **student** user is ``agility``.
 
--  Launch the **Firefox** web browser.
-
-   Recall that the browser was configured to use 10.1.10.150:3128 as its Internet proxy. Since the new **Topology Director virtual server** is now listening on that address on the **client-vlan**, it will accept the explicit proxy connections from the web browser and steer the traffic according to the logic defined in the iRule.
+-  Launch the **Firefox** web browser. Recall that the browser was configured to use **10.1.10.150:3128** as its Internet proxy. Since the new **Topology Director virtual server** is now listening on that address and on the **client-vlan** VLAN, it will accept the explicit proxy connections from the web browser and steer the traffic according to the logic defined in the iRule.
 
 -  Browse to a financial website (ex: Bank of America) and check the certificate that was received. The issuer should be **subrsa.f5labs.com** since the **appserver_explicit** topology does not bypass TLS decryption for financial websites.
 
@@ -32,12 +30,12 @@ Traffic from source addresses matching the **appserver_list** data group will be
 .. image:: ../images/test-eicar-download.png
    :alt: Eicar malware download test
 
--  This should be blocked by the antivirus service.
+-  The request should be blocked by the antivirus service.
 
 .. image:: ../images/test-eicar-blocked.png
    :alt: Eicar malware download test
 
--  Check **Access > Overview > Active Sessions**. There should be no sessions listed since user authentication is not enabled for the **appserver_explicit** topology.
+-  In the SSL Orchestrator TMUI, check **Access > Overview > Active Sessions**. Since user authentication is not enabled for the **appserver_explicit** topology, there should be no new sessions listed (except for possibly the user **mike** who logged in from the **Windows Client** machine earlier).
 
 .. image:: ../images/test-apm-ubuntu.png
    :alt: APM user sessions
@@ -48,22 +46,35 @@ Corporate User Test
 
 All of the traffic that doesn't match the application server conditions (i.e., source address matching the **appserver_list** data group) will flow through the default **f5labs_explicit** topology.
 
+-  If there is an active session for user **mike**, remove it:
+
+   -  Click on the checkbox in the first column to select the session.
+
+   -  Click on the **Kill Selected Sessions** button.
+
+      .. image:: ../images/active-sessions-mike-remove-1.png
+         :alt: Delete APM user session
+
+   -  Click on the **Delete** button of the confirmation page. 
+
+      .. image:: ../images/active-sessions-mike-remove-2.png
+         :alt: Confirm delete
+
+
 -  RDP to the **Windows Client** machine.
 
--  Launch the **Chrome** web browser. 
-
-   Recall that the browser was configured to use 10.1.10.150:3128 as its Internet proxy. Since the new **Topology Director virtual server** is now listening on that address on the **client-vlan**, it will accept the explicit proxy connections from the web browser and steer the traffic according to the logic defined in the iRule.
+-  Launch the **Chrome** web browser. Recall that the browser was configured to use **10.1.10.150:3128** as its Internet proxy. Since the new **Topology Director virtual server** is now listening on that address and on the **client-vlan** VLAN, it will accept the explicit proxy connections from the web browser and steer the traffic according to the logic defined in the iRule.
 
 -  Browse to a financial website (ex: Bank of America) and check the certificate that was received. The issuer should **NOT** be **subrsa.f5labs.com** since the **f5labs_explicit** topology bypasses TLS decryption for financial websites.
 
--  Browse to https://www.eicar.org/?page_id=3950 and attempt to download the **eicar.com** malware test file. This should **NOT** be blocked since there is no antivirus service in the service chain for the **f5labs_explicit** topology.
+-  Browse to https://www.eicar.org/?page_id=3950 and attempt to download the **eicar.com** malware test file. The request should **NOT** be blocked by the ClamAV antivirus service since it is not in the service chain for the **f5labs_explicit** topology.
 
 
 .. image:: ../images/test-eicar-download.png
-   :alt: Eicar malware download blocked
+   :alt: Eicar malware download
 
 
--  Check **Access > Overview > Active Sessions**. There should be a user session listed for user **mike**.
+-  In the SSL Orchestrator TMUI, check **Access > Overview > Active Sessions**. There should be a user session listed for user **mike**.
 
 .. image:: ../images/test-apm-windows.png
    :alt: APM user sessions

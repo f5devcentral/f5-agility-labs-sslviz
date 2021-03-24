@@ -82,7 +82,7 @@ Pre-existing environment validation
 
       |
 
-   -  Type the following command in the web console and hit Enter:
+   -  Enter the following command in the Web Shell:
 
          ``tail -f /var/log/squid/access.log`` 
 
@@ -94,7 +94,12 @@ Pre-existing environment validation
 
    -  Visit a financial web site such as \https://www.bankofamerica.com and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see "Verified by: f5labs.com." because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy.
 
-   -  Confirm that the explicit proxy service is not seeing the bypassed (encrypted) traffic. There should be no log entries for the financial web site in the **access.log** file.
+   -  Confirm that the explicit proxy service is not seeing the bypassed (encrypted) traffic. There should be no log entries for the financial web site itself in the **access.log** file.
+
+      .. note: 
+         You may still see log entries for analytics web sites that are associated with the financial web site.
+
+   -  Press Control+C to stop the *tail* tool.
 
 
 .. |ff-padlock| image:: ../images/ff-padlock.png

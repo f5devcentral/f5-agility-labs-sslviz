@@ -14,7 +14,7 @@ Test new Service Chain and Security Policy rules
 
    -  Return to the **Ubuntu18.04 Services** Web Shell (*Components > Ubuntu18.04 Services > ACCESS > Web Shell*)
 
-   -  Type the following command in the web console and hit Enter:
+   -  Enter the following command in the Web Shell:
 
          ``tail -f /var/log/squid/access.log`` 
 
@@ -22,7 +22,15 @@ Test new Service Chain and Security Policy rules
    
    -  Visit a financial web site such as \https://www.bankofamerica.com and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see "Verified by: f5labs.com." because we are bypassing **Financial Data and Services** URLs in the SSL Orchestrator Security Policy.
    
-   -  Confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic
+   -  Check the Squid access log to confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic. Enter the following command in the Web Shell:
+
+         ``tail -f /var/log/squid/access.log`` 
+
+      .. note: 
+         You may still see log entries for analytics web sites that are associated with the financial web site.
+
+   -  Press Control+C to stop the *tail* tool.
+
 
 -  Verify that the Cisco Firepower TAP is seeing both intercepted and bypassed traffic:
 
@@ -38,7 +46,7 @@ Test new Service Chain and Security Policy rules
 
    -  Visit ``https://www.google.com/`` and you should see some recognizable text in the packet dump
    
-   -  Press Control-C to stop the tcpdump tool
+   -  Press Control+C to stop the *tcpdump* tool
 
    -  As another test, enter the following command:
 
@@ -48,7 +56,7 @@ Test new Service Chain and Security Policy rules
 
       |tcpdump-grep-agility|
 
-   -  Press Control-C to stop the tcpdump tool
+   -  Press Control+C to stop the *tcpdump* tool
 
 -  Close the web browser.
 
