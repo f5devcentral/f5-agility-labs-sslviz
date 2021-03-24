@@ -22,7 +22,7 @@ selected settings page.
 - When satisfied with the defined settings, click :red:`Deploy`.
 
 
-.. image:: ../images/deploysuccessful.png
+.. image:: ../images/module1-31.png
 
 Upon successfully deploying the configuration, SSL Orchestrator will now
 display a **Configure** view:
