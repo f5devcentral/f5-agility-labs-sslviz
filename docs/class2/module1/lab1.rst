@@ -17,7 +17,7 @@ Review the current SSL Orchestrator deployment
    |security-policy-overview|
 
 
-   -  Click on **ssloP\_f5labs\_explicit** and you will see the rules that are currently configured under this security policy.
+   -  Click on **ssloP\_f5labs\_explicit** (in the **Name** column) and you will see the rules that are currently configured under this security policy.
 
    |initial-security-policy|
 

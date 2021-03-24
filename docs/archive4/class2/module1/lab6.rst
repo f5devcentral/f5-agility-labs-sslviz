@@ -13,7 +13,7 @@ Confirm Service Chain and Security Policy rules are working as expected
 
    -  Start a Web Shell to **Service - ExpProxy** (Components > Service - ExpProxy > ACCESS > Web Shell)
 
-   -  Type ``tail -f /var/log/squid3/access.log`` in the web console and hit Enter
+   -  Enter ``tail -f /var/log/squid3/access.log`` in the Web Shell.
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is being logged. You should see log entries of the URLs visited.
    

@@ -8,6 +8,10 @@ This is the end of the **SSLO 201: Real World Use Cases** lab. Thank you for par
 
 |
 
+You may not exit the UDF lab environment. It will shut down automatically at the end of the scheduled class period.
+
+|
+
 The content contained here adheres to a DevOps methodology and
 automation pipeline.  All content contained here is sourced from the
 following GitHub repository:

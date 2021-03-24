@@ -51,7 +51,7 @@ Pre-existing environment validation
 
    -  Start a Web Shell to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
 
-   -  Type the following command in the web console and hit Enter:
+   -  Enter the following command in the Web Shell:
 
          ``tail -f /var/log/squid3/access.log`` 
 
