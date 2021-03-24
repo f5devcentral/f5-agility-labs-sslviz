@@ -73,6 +73,9 @@ All of the traffic that doesn't match the application server conditions (i.e., s
 .. image:: ../images/test-eicar-download.png
    :alt: Eicar malware download
 
+.. note::
+   When the malware test file is downloaded to the **Windows Client** machine, the local antivirus software will block it. You will see a notification for that.
+
 
 -  In the SSL Orchestrator TMUI, check **Access > Overview > Active Sessions**. There should be a user session listed for user **mike**.
 
@@ -82,7 +85,7 @@ All of the traffic that doesn't match the application server conditions (i.e., s
 |
 
 .. attention::
-   This is the end of this lab exercise.
+   This is the end of the lab module.
 
 
 

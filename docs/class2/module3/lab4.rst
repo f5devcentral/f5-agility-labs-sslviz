@@ -38,12 +38,12 @@ The topology steering iRule contains your steering logic and defines the topolog
 
 -  Modify the **SSLO-layering-explicit** iRule with the following values:
 
-   -  **Line 21:** Replace ``interceptexp`` with ``f5labs_explicit``. This defines the default SSL Orchestrator topology to use (if there is no other match).
+   -  **Line 21:** Replace ``interceptexp`` with ``f5labs_explicit`` (name of the original/existing L3 Explicit Topology). This defines the default SSL Orchestrator topology to use (if there is no other match).
    -  Insert 2 blank lines after **line 41**.
    -  Copy **line 45** into **line 42**.
    -  **Line 42**: Uncomment this line by removing the '#' from the beginning of the line.
    -  **Line 42**: Replace ``my-srcip-dg`` with ``appserver_list``. This defines the data group to check for source address matches.
-   -  **Line 42**: Replace ``bypassexp`` with ``appsvr_explicit``. This defines the topology to use if there is a source address match.
+   -  **Line 42**: Replace ``bypassexp`` with ``appsvr_explicit`` (name of the new L3 Explicit Topology that you created in the previous section). This defines the topology to use if there is a source address match.
 
 .. attention::
    Ensure that there are no typographical errors in the iRule, or it will not function properly.

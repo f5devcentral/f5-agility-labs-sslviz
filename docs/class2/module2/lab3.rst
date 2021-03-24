@@ -4,7 +4,7 @@
 Verify that user information is being identified on the F5 SSL Orchestrator
 ================================================================================
 
--  On the **Windows Client**, use Chrome to browse to a few websites.
+-  On the **Windows Client**, use Chrome to browse to ``https:\\www.f5.com``.
 
 -  On SSL Orchestrator select, **Access > Overview > Active Sessions** from the Main menu on the left.
   

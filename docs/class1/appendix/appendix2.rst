@@ -87,7 +87,7 @@ There is simply nothing better than debug logging for troubleshooting SSL interc
 
 .. code-block:: bash
 
-   tail -f /var/log/apm
+   tail -f -n 0 /var/log/apm
 
 
 SSL Inspection
