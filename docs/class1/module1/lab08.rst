@@ -51,9 +51,11 @@ Click :red:`Save & Next` to continue to the next stage.
    policy can be modified directly.
 
 .. warning::
-   If the per-request policy is modifed directly (outside of the
-   SSLO Guide Configuration UI), the SSLO UI can no longer be used afterwards
-   without losing your direct per-request policy modifications.
+   In a production environment, additional policy customization is possible 
+   manually outside of guided configuration, but strong caution should be taken.
+   If the per-request policy is modified directly, any
+   future guided configuration changes will overwrite the manual changes.
+
 
 .. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the security policy.
 
