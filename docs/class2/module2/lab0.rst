@@ -6,6 +6,8 @@ Verify authentication is currently disabled
 
 -  Start a TMUI session on **SSL Orchestrator** and log in if prompted (*Components > SSL Orchestrator > ACCESS > TMUI*)
 
+      `Link to user credentials (if needed) <../labinfo.html>`_
+
 -  From the Main menu on the left, select **Access > Overview > Active Sessions**. The following screen should appear. You should see an **Active Session Count** of **0** and that there are no sessions listed in the table.
 
 .. image:: ../images/active-sessions-none.png

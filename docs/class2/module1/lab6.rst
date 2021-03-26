@@ -16,8 +16,10 @@ Test new Service Chain and Security Policy rules
 
    -  Enter the following commands in the Web Shell:
 
-         ``clear``
-         ``tail -f -n 0 /var/log/squid/access.log`` 
+      .. code:: bash
+
+         clear
+         tail -f -n 0 /var/log/squid/access.log
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the **Ubuntu18.04 Client** machine and confirm that access is being logged. You should see log entries of the URLs visited.
    
@@ -25,10 +27,12 @@ Test new Service Chain and Security Policy rules
    
    -  Check the Squid access log to confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic. Enter the following commands in the Web Shell:
 
-         ``clear``
-         ``tail -f -n 0 /var/log/squid/access.log`` 
+      .. code:: bash
 
-      .. note: 
+         clear
+         tail -f -n 0 /var/log/squid/access.log
+
+      .. note::
          You may still see log entries for analytics web sites that are associated with the financial web site.
 
    -  Press Control+C to stop the *tail* tool.
@@ -40,7 +44,9 @@ Test new Service Chain and Security Policy rules
 
    -  Type the following command to verify that traffic is being sent to the TAP service:
 
-         ``tcpdump -nnXi ens9 not arp and not icmp``
+      .. code:: bash
+
+         tcpdump -nnXi ens9 not arp and not icmp
 
    -  Visit a financial institution website that is bypassed and verify that a copy of the traffic is seen on the TAP device
 
@@ -52,7 +58,9 @@ Test new Service Chain and Security Policy rules
 
    -  As another test, enter the following command:
 
-            ``tcpdump -nnXi ens9 not arp and not icmp | grep -i "agility"``
+      .. code:: bash
+
+         tcpdump -nnXi ens9 not arp and not icmp | grep -i "agility"
 
    -  Now, use Google to search for ``F5 Agility``. Since SSL Orchestrator is intercepting/decrypting this web site, you are able to see into the payload of this communication. The grep filter you applied should display output similar to the example below:
 

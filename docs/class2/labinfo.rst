@@ -9,6 +9,9 @@ The following is a visual representation of this lab environment. The numbers in
 .. image:: images/labinfo-1.png
    :align: left
 
+
+**Virtual lab infrastructure details (and credentials):**
+
 .. list-table:: **SSL Orchestrator**
    :header-rows: 0
    :widths: auto
@@ -173,4 +176,7 @@ The following is a visual representation of this lab environment. The numbers in
      - 1.6
    * - MAC Address
      - 12:12:12:12:12:12 (arbitrary if directly connected)
-     - 
+     -
+
+.. warning:
+   Simple passwords were used in this lab environment in order to make it easier for students to access the infrastructure. This does not follow recommended security practices of using strong passwords.
