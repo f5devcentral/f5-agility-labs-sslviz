@@ -84,8 +84,11 @@ Pre-existing environment validation
 
    -  Enter the following commands in the Web Shell:
 
-         ``clear``
-         ``tail -f -n 0 /var/log/squid/access.log`` 
+      .. code:: bash
+
+         clear
+         tail -f -n 0 /var/log/squid/access.log
+
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the **Ubuntu18.04 Client** machine and confirm that access is being logged even though we are visiting a secure website. You should see log entries of the sites and URLs visited, similar to the example below:
 
@@ -97,7 +100,7 @@ Pre-existing environment validation
 
    -  Confirm that the explicit proxy service is not seeing the bypassed (encrypted) traffic. There should be no log entries for the financial web site itself in the **access.log** file.
 
-      .. note: 
+      .. note::
          You may still see log entries for analytics web sites that are associated with the financial web site.
 
    -  Press Control+C to stop the *tail* tool.
