@@ -16,7 +16,7 @@ Traffic from source addresses matching the **appserver_list** data group will be
 
 .. tip::
 
-   If your previous RDP session timed out, the password for the **student** user is ``agility``.
+   If your previous RDP session timed out, refer to |credentials| for the **student** user password.
 
 -  Launch the **Firefox** web browser. Recall that the browser was configured to use **10.1.10.150:3128** as its Internet proxy. Since the new **Topology Director virtual server** is now listening on that address and on the **client-vlan** VLAN, it will accept the explicit proxy connections from the web browser and steer the traffic according to the logic defined in the iRule.
 
@@ -93,3 +93,8 @@ All of the traffic that doesn't match the application server conditions (i.e., s
    :width: 14px
    :height: 14px
    :alt: Firefox Menu
+
+
+.. |credentials| raw:: html
+
+      <a href="../labinfo.html#credentials" target="_blank"> User Credentials </a>

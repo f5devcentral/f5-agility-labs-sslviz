@@ -7,7 +7,9 @@ Associate new services to service chains (optional - time permitting)
 
 In this section, you will associate the newly created services to service chains.
 
-- Return to SSL Orchestrator Guided Configuration.  
+- Return to SSL Orchestrator Guided Configuration.
+
+- Select the :red:`demoL3` topology.
 
 - In the configuration summary, find the row labeled :red:`Service Chain` and click on the pencil at the far right.
 
@@ -23,7 +25,7 @@ In this section, you will associate the newly created services to service chains
 
 - Enter a name such as :red:`L2_services`
 
-- Select the :red:`FireEye` :red:`TAP services` in the :red:`Services Available` column to the :red:`Selected Service Chain Order` column.
+- Move the :red:`FireEye` and :red:`TAP services` from the :red:`Services Available` column to the :red:`Selected Service Chain Order` column.
 
 - Click :red:`Save`.
 

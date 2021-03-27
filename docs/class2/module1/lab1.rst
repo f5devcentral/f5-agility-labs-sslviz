@@ -6,7 +6,7 @@ Review the current SSL Orchestrator deployment
 
 -  Start a TMUI session on **SSL Orchestrator** and log in (*Components > SSL Orchestrator > ACCESS > TMUI*)
 
-      `Link to user credentials (if needed) <../labinfo.html>`_
+      |credentials_link|
 
 -  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**. When the SSL Orchestrator dashboard finishes loading, the following deployment should already be present.
 
@@ -32,3 +32,8 @@ Review the current SSL Orchestrator deployment
 
 .. |initial-security-policy| image:: ../images/initial-security-policy.png
    :alt: Security Policy Rules
+
+
+.. |credentials_link| raw:: html
+
+      <a href="../labinfo.html#credentials" target="_blank"> Link to user credentials (opens in new browser tab) </a>
