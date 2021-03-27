@@ -22,7 +22,7 @@ Pre-existing environment validation
 
 .. tip::
 
-   If the RDP session times out later, the password for the **student** user is ``agility``.
+   If the RDP session times out later, refer to |credentials| for the **student** user password.
 
 
 -  Open the **Firefox** browser
@@ -128,3 +128,8 @@ Pre-existing environment validation
 
 .. |proxy-access-log| image:: ../images/proxy-access-log.png
    :alt: Proxy Access Log
+
+
+.. |credentials| raw:: html
+
+      <a href="../labinfo.html#credentials" target="_blank"> User Credentials </a>
