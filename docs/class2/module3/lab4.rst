@@ -59,18 +59,17 @@ The topology steering iRule contains your steering logic and defines the topolog
 
 -  Click on the **Create** button to add a new Virtual Server and configure the following settings:
 
-   -  Name: ``Topology-Director_vs``
-   -  Type: **Standard**
-   -  Source: ``0.0.0.0/0``
-   -  Destination Address: ``10.1.10.150``
-   -  Destination Port: ``3128``
-   -  Protocol: **TCP**
-   -  HTTP Profile (Client): **sslo-default-http-explicit**
-   -  VLAN and Tunnel Traffic > **Enabled On...**: **client-vlan**
-   -  Address Translation: **disabled**
-   -  Port Translation: **disabled**
-   
-   -  iRule: **SSLO-layering-explicit**
+   -  **Name:** Enter ``Topology-Director_vs``
+   -  **Type:** Leave the default - **Standard**
+   -  **Source:** Leave the default - empty
+   -  **Destination Address:** Enter ``10.1.10.150``
+   -  **Destination Port:** Enter ``3128``
+   -  **Protocol:** Leave the default - **TCP**
+   -  **HTTP Profile (Client):** Select **sslo-default-http-explicit**
+   -  **VLAN and Tunnel Traffic:** Select **Enabled On...** and then move **client-vlan** to the **Selected** column.
+   -  **Address Translation:** Uncheck to disable
+   -  **Port Translation:** Uncheck to disable
+   -  **iRule:** Move the **SSLO-layering-explicit** iRule to the **Enabled** column.
 
 .. image:: ../images/topology-director-vs-1.png
    :alt: 
