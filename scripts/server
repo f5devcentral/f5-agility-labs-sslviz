@@ -8,7 +8,7 @@ fi
 
 if [ -d docs/_build ]; then
 	echo "Starting server on TCP/$PORT..."
-	echo "Enter <Ctrl+c> to stop the server..."
+	echo "Enter <<CTRL+C>> to stop the server..."
 	cd docs/_build 
 	for i in `cat ../../scripts/server-dependencies`
 	  do

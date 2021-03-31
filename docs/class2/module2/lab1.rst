@@ -6,7 +6,7 @@ Review the Access Policy and AAA configuration
 
 -  From the Main menu on the left, select **Access > Authentication > NTLM > NTLM Auth Configuration**.
 
--  Select :red:`f5labs.com_ntlm_aaa` from the NTLM Auth Configuration list. The following screen should appear:
+-  Select **f5labs.com_ntlm_aaa** from the NTLM Auth Configuration list. The following screen should appear:
 
    |f5labs.com_ntlm_aaa|
 
@@ -16,7 +16,7 @@ Review the Access Policy and AAA configuration
 
    |access_profile_list|
 
--  Click on the **Edit** button next to the :red:`f5labs-ntlm-ap` access profile. A new browser tab will appear showing the Access Policy in the Visual Policy Editor (VPE):
+-  Click on the **Edit** button next to the **f5labs-ntlm-ap** access profile. A new browser tab will appear showing the Access Policy in the Visual Policy Editor (VPE):
 
    |f5labs-ntlm-ap_vpe|
 

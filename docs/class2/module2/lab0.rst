@@ -16,7 +16,7 @@ Verify authentication is currently disabled
 
 .. important::
 
-   For this lab exercise, you will be using the :bred:`WINDOWS CLIENT` machine instead of the Ubuntu18.04 Client machine
+   For this lab exercise, you will be using the **WINDOWS CLIENT** machine instead of the **Ubuntu18.04 Client** machine
    that you used in the other lab exercises.
 
 
@@ -46,7 +46,7 @@ Verify authentication is currently disabled
 -  Using Chrome, browse to ``https:\\www.f5.com``.
 
 .. note::
-   Chrome is already configured to use 10.1.10.150 as its Internet access proxy.
+   Chrome is already configured to use the f5labs_explicit topology's proxy (10.1.10.150:3128) for Internet browsing.
 
 
 -  Refresh the previously shown TMUI screen. You should still see an **Active Session Count** of **0**.

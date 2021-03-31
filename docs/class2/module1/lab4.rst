@@ -10,11 +10,11 @@ You now need to create a new Service Chain containing only the Cisco Firepower T
 
 -  On the **Service Chain Properties** screen enter the following values:
 
-   -  **Name -** provide a unique name for this service chain (ex. :red:`CiscoFP_TAP`)
+   -  **Name -** enter ``CiscoFP_TAP`` as the service chain name
 
-   -  **Description -** provide a description for this service chain (ex. :red:`Cisco Firepower TAP only`)
+   -  **Description -** enter ``Cisco Firepower TAP only`` as the description.
 
-   -  **Services -** select the Cisco Firepower service (ex. :red:`ssloS_CiscoFP`) under **Services Available** and move it to **Selected Service Chain Order**
+   -  **Services -** select the Cisco Firepower service (**ssloS_CiscoFP**) under **Services Available** and click on the right arrow to move it to the **Selected Service Chain Order** side.
 
 -  Click the **Save** button
 

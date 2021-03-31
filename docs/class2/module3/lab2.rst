@@ -14,7 +14,7 @@ Modify the existing **f5labs_explicit** topology so that it uses a different IP 
 
    |topology-summary-IR-edit|
 
--  Change the **IPV4 Address** to :red:`10.1.10.151`.
+-  Change the **IPV4 Address** to ``10.1.10.151``.
 
 -  In the **VLANs** section, remove **client-vlan** from the **Selected** column.
 

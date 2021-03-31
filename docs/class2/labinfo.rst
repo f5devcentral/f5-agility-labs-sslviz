@@ -74,19 +74,24 @@ The following tables provide device/service network configuration details. Login
    * -
      - TAP service
      - 1.6
+   * - SSL Orchestrator Topology
+     - Name: f5labs_explicit
 
-.. list-table:: **Ubuntu18.04 Client** (used for most of the lab exercises)
+       Explicit Proxy: 10.1.10.150\:3128
+     - 
+
+.. list-table:: **Ubuntu18.04 Client**
    :header-rows: 0
-   :widths: 200 800
+   :widths: 200 600
 
    * - IP address
      - 10.1.10.50
    * - Login
      - student:agility
-     
-.. list-table:: **Windows Client** (only for NTLM Authentication lab exercise)
+
+.. list-table:: **Windows Client**
    :header-rows: 0
-   :widths: 200 400 400
+   :widths: 200 300 300
 
    * - IP address
      - 10.1.10.70
@@ -103,7 +108,7 @@ The following tables provide device/service network configuration details. Login
 
 .. list-table:: **Windows Server** (only for NTLM Authentication lab exercise)
    :header-rows: 0
-   :widths: 200 800
+   :widths: 200 600
 
    * - IP address
      - 10.1.10.80
