@@ -48,7 +48,7 @@ SSL Orchestrator does not pass authenticated usernames to a proxy service unless
    |proxy-access-log-mike|
 
 
--  Press Control+C to stop the *tail* tool.
+-  Press ``<CTRL+C>`` to stop the **tail** tool.
 
 
 .. attention::

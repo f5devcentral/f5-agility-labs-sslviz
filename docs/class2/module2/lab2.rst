@@ -14,7 +14,7 @@ The **f5labs_explicit** topology does not perform user authentication by default
 
    |topology-summary-IR-edit|
 
--  Select :red:`/Common/f5labs-ntlm-ap` from the **Access Profile** drop down menu
+-  Select **/Common/f5labs-ntlm-ap** from the **Access Profile** drop down menu
 
 
 .. image:: ../images/ntlm-access-profile.png

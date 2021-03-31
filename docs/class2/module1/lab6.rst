@@ -23,7 +23,7 @@ Test new Service Chain and Security Policy rules
 
    -  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the **Ubuntu18.04 Client** machine and confirm that access is being logged. You should see log entries of the URLs visited.
    
-   -  Visit a financial web site such as \https://www.bankofamerica.com and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see "Verified by: f5labs.com." because we are bypassing **Financial Data and Services** URLs in the SSL Orchestrator Security Policy.
+   -  Visit a financial web site such as ``https://www.bankofamerica.com`` and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see **Verified by: f5labs.com** because we are bypassing **Financial Data and Services** URLs in the SSL Orchestrator Security Policy.
    
    -  Check the Squid access log to confirm that the explicit proxy service is not seeing this bypassed (encrypted) traffic. Enter the following commands in the Web Shell:
 
@@ -35,7 +35,7 @@ Test new Service Chain and Security Policy rules
       .. note::
          You may still see log entries for analytics web sites that are associated with the financial web site.
 
-   -  Press Control+C to stop the *tail* tool.
+   -  Press ``<CTRL+C>`` to stop the **tail** tool.
 
 
 -  Verify that the Cisco Firepower TAP is seeing both intercepted and bypassed traffic:
@@ -54,7 +54,7 @@ Test new Service Chain and Security Policy rules
 
    -  Visit ``https://www.google.com/`` and you should see some recognizable text in the packet dump
    
-   -  Press Control+C to stop the *tcpdump* tool
+   -  Press ``<CTRL+C>`` to stop the **tcpdump** tool
 
    -  As another test, enter the following command:
 
@@ -66,7 +66,7 @@ Test new Service Chain and Security Policy rules
 
       |tcpdump-grep-agility|
 
-   -  Press Control+C to stop the *tcpdump* tool
+   -  Press ``<CTRL+C>`` to stop the **tcpdump** tool
 
 -  Close the web browser.
 
