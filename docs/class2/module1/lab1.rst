@@ -4,28 +4,39 @@
 Review the current SSL Orchestrator deployment
 ================================================================================
 
--  Start a TMUI session on **SSL Orchestrator** and log in (*Components > SSL Orchestrator > ACCESS > TMUI*)
+-  Start a TMUI session on **SSL Orchestrator** and log in as user **admin** (*Components > SSL Orchestrator > ACCESS > TMUI*)
 
       |credentials_link|
 
--  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**. When the SSL Orchestrator dashboard finishes loading, the following deployment should already be present.
+-  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**.
 
-   |config-dashboard|
+   |menu-sslo-config|
 
+   |
 
--  Select **Security Policies** from the horizontal menu. You should now be presented with following screen:
+-  When the SSL Orchestrator dashboard finishes loading, the following deployments should already be present.
+
+   |config-topologies|
+
+   |
+
+-  Click on **Security Policies** from the horizontal menu. You should now be presented with following screen:
 
    |security-policy-overview|
 
+   |
 
-   -  Click on **ssloP\_f5labs\_explicit** (in the **Name** column) and you will see the rules that are currently configured under this security policy.
+-  Click on **ssloP\_f5labs\_explicit** (in the **Name** column) and you will see the rules that are currently configured under this security policy.
 
    |initial-security-policy|
 
 
 
-.. |config-dashboard| image:: ../images/config-dashboard.png
-   :alt: SSL Orchestrator Configuration Dashboard
+.. |menu-sslo-config| image:: ../images/menu-sslo-config.png
+   :alt: SSL Orchestrator Configuration Menu
+
+.. |config-topologies| image:: ../images/config-topologies.png
+   :alt: SSL Orchestrator Topologies
 
 .. |security-policy-overview| image:: ../images/security-policy-overview.png
    :alt: Security Policy Overview

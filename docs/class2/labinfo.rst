@@ -38,7 +38,7 @@ The first interface is connected to the client-facing VLAN. The second interface
 Virtual Lab Infrastructure Details (and Credentials)
 --------------------------------------------------------------------------------
 
-The following tables provide device/service network configuration details. Login credentials are also provided for use when directed in the lab exercises.
+The following tables provide device/service network configuration details. Login credentials are also provided for use as directed in the lab exercises.
 
 .. list-table:: **SSL Orchestrator**
    :header-rows: 0
@@ -51,7 +51,7 @@ The following tables provide device/service network configuration details. Login
      - 10.1.20.1
      -
    * - Login
-     - admin:admin
+     - admin:agility
      -
    * - 
      - root:default
@@ -211,8 +211,10 @@ The following tables provide device/service network configuration details. Login
      - 12:12:12:12:12:12 (arbitrary if directly connected)
      -
 
-.. warning:
+.. warning::
    Simple passwords were used in this lab environment in order to make it easier for students to access the infrastructure. This does not follow recommended security practices of using strong passwords.
+
+   This lab environment is only accessible via an authenticated student login.
 
 
 .. |join_link| raw:: html
