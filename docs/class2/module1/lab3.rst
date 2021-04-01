@@ -10,11 +10,11 @@ You now need to create a new Service Chain containing the Squid Proxy and the Ci
    
 -  On the **Service Chain Properties** screen enter the following values:
 
-   -  **Name -** provide a unique name for this service chain (ex. :red:`All_Services`)
+   -  **Name -** enter ``All_Services`` as the service chain name.
 
-   -  **Description -** provide a description for this service chain (ex. :red:`All services`)
+   -  **Description -** enter ``All services`` as the description.
 
-   -  **Services -** select both services under **Services Available** and move them to **Selected Service Chain Order**
+   -  **Services -** select both services under **Services Available** and click on the right arrow to move them to the **Selected Service Chain Order** side.
 
 
 .. image:: ../images/ciscofp-3.png

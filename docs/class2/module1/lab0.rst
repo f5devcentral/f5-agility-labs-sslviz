@@ -11,7 +11,7 @@ Pre-existing environment validation
 
 .. image:: ../images/ubuntu-client-rdp-1.png
 
-- When prompted, save the RDP file to your local machine and then open it to to connect.
+- When prompted, save the RDP file to your local machine and then open it to connect.
 
 
 -  At the Ubuntu Login prompt, click on the **OK** button to continue.
@@ -22,7 +22,7 @@ Pre-existing environment validation
 
 .. tip::
 
-   If the RDP session times out later, the password for the **student** user is ``agility``.
+   If the RDP session times out later, refer to |credentials| for the **student** user password.
 
 
 -  Open the **Firefox** browser
@@ -63,7 +63,7 @@ Pre-existing environment validation
 
 -  Click the **OK** button
 
--  **Close and relaunch** the web browser
+-  Close and relaunch the web browser
 
 -  Browse to ``https://www.example.com/`` once again
 
@@ -96,14 +96,14 @@ Pre-existing environment validation
 
       |
 
-   -  Visit a financial web site such as \https://www.bankofamerica.com and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see "Verified by: f5labs.com." because we are bypassing **Financial Institutions** in the SSL Orchestrator Security Policy.
+   -  Visit a financial web site such as ``https://www.bankofamerica.com`` and verify that SSL Orchestrator is not intercepting TLS traffic. Confirm that the browser receives a server certificate that was issued by a trusted public CA. You should **not** see **Verified by: f5labs.com** because we are bypassing **Financial Data and Services** URLs in the SSL Orchestrator Security Policy.
 
    -  Confirm that the explicit proxy service is not seeing the bypassed (encrypted) traffic. There should be no log entries for the financial web site itself in the **access.log** file.
 
       .. note::
          You may still see log entries for analytics web sites that are associated with the financial web site.
 
-   -  Press Control+C to stop the *tail* tool.
+   -  Press ``<CTRL+C>`` to stop the **tail** tool.
 
 
 .. |ff-padlock| image:: ../images/ff-padlock.png
@@ -128,3 +128,8 @@ Pre-existing environment validation
 
 .. |proxy-access-log| image:: ../images/proxy-access-log.png
    :alt: Proxy Access Log
+
+
+.. |credentials| raw:: html
+
+      <a href="../labinfo.html#credentials" target="_blank"> User Credentials </a>

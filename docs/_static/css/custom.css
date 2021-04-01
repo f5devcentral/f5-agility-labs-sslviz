@@ -63,3 +63,8 @@ ul.simple {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+.with-border {
+   border: 1px solid;
+   padding: 20px
+ }

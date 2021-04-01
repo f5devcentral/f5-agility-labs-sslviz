@@ -8,22 +8,39 @@ Update the existing Security Policy rules to use the new Service Chains you just
 
 From the SSL Orchestrator Configuration screen:
 
--  Click the **Security Policies** tab in the middle of the main display area.
+-  Click on **Security Policies** from the horizontal menu.
 
 -  Click the Security Policy named **ssloP\_f5labs\_explicit**.
+
+   |security-policy-overview|
+
+   |
 
 -  Click on the pencil icon (|pencil|) next to the **Pinners\_Rule** to modify this rule.
 
 -  In the properties section that appears, select **ssloSC\_CiscoFP\_TAP** from the **Service Chain** dropdown.
 
+-  Click the **OK** button to accept the change.
+
    |policy-rule-CiscoFP-TAP|
 
+   |
 
--  Click the **OK** button
+-  Now edit the **Finance\_Bypass** rule. Click on the pencil icon (|pencil|) to modify this rule.
 
--  Repeat the same process for the **Finance\_Bypass** rule
+-  In the properties section that appears, select **ssloSC\_CiscoFP\_TAP** from the **Service Chain** dropdown.
 
--  Now modify the **All Traffic** rule and select the **ssloSC\_All\_Services** Service Chain and click the **OK** button.
+-  Click the **OK** button to accept the change.
+
+   |
+
+-  Now edit the **All Traffic**. Click on the pencil icon (|pencil|) to modify this rule.
+
+-  In the properties section that appears, select **ssloSC\_All\_Services** from the **Service Chain** dropdown.
+
+-  Click the **OK** button to accept the change.
+
+   |
 
 -  The Security Policy rules should now look like this:
 
@@ -41,6 +58,9 @@ From the SSL Orchestrator Configuration screen:
    :width: 20px
    :height: 20px
    :alt: pencil
+
+.. |security-policy-overview| image:: ../images/security-policy-overview.png
+   :alt: Security Policy Overview
 
 .. |policy-rule-CiscoFP-TAP| image:: ../images/policy-rule-CiscoFP-TAP.png
    :alt: Policy rule for Cisco Firepower TAP service 

@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-SSL Orchestrator v8 - SSLO 201: Real World Use Cases (Agility 2021 | 2 hours)
+SSL Orchestrator v8 - SSLO 201: Advanced Use Cases (Agility 2021 | 2 hours)
 ================================================================================
 
 .. note::
@@ -22,6 +22,9 @@ After completing the modules in this lab, you will be familiar with:
 
 Expected time to complete: **2 hours**
 
+Pre-requisite: Completion of the **SSL Orchestrator 101** lab is recommended prior to attending this lab.
+
+
 .. toctree::
    :numbered:
    :caption: This class covers the following topics:
@@ -31,4 +34,3 @@ Expected time to complete: **2 hours**
    labinfo
    module*/module*
    conclusion
-   appendix*/module*

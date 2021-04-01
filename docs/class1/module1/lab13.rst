@@ -10,10 +10,10 @@ This test will demonstrate that:
 
 - The "malicious" file will pass through the network-based scanner and be download to the client.
 
-RDP to the :red:`Ubuntu18.04 Client` machine
+RDP to the Client machine
 ---------------------------------------------------
 
-- From UDF, find the :red:`Ubuntu18.04Client`.
+- From UDF, find the :red:`Ubuntu18.04 Client`.
 
 - Click :red:`Access`.
 

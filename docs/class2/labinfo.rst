@@ -4,13 +4,41 @@
 SSL Orchestrator Lab Environment
 ================================================================================
 
-The following is a visual representation of this lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers assigned. The colored boxes to the right of the services indicate a few product examples for each respective service type.
+Accessing the Virtual Lab
+--------------------------------------------------------------------------------
+
+If you are not familiar with the process for joining a training course, refer to:
+
+- |join_link|
+- |interface_link|
+
+To access your lab and look up the necessary IP addresses, you should have received an email with your personal "Lab Portal Link". You will see the Lab Guide link and the VMs that will be used in this lab.
+
+.. note::
+
+   You will use your local web browser and Remove Desktop Protocol (RDP) client to perform the lab exercises.
+   
+   You will not need to use SSH to access the UDF lab environment, so no SSH Key needs to be configured.
+
+From the **DEPLOYMENT** tab, you will access the **Ubuntu18.04 Client** and **Windows Client** machines using RDP. You will also access the **Web Shell** for various systems as directed in the lab exercises. 
+
+
+Network Diagram
+--------------------------------------------------------------------------------
+
+Here is a visual representation of the Agility virtual lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers and VLAN tags (if applicable). The colored boxes to the right of the services respresent some product examples for each respective service type.
+
+The first interface is connected to the client-facing VLAN. The second interface is connected to the Internet-facing VLAN. The remaining interfaces are connected to various types of security services: L2, L3, HTTP, ICAP, and passive Tap. The SSL Orchestrator management interface is not shown.
 
 .. image:: images/labinfo-1.png
    :align: left
 
+.. _credentials:
 
-**Virtual lab infrastructure details (and credentials):**
+Virtual Lab Infrastructure Details (and Credentials)
+--------------------------------------------------------------------------------
+
+The following tables provide device/service network configuration details. Login credentials are also provided for use as directed in the lab exercises.
 
 .. list-table:: **SSL Orchestrator**
    :header-rows: 0
@@ -23,7 +51,7 @@ The following is a visual representation of this lab environment. The numbers in
      - 10.1.20.1
      -
    * - Login
-     - admin:admin
+     - admin:agility
      -
    * - 
      - root:default
@@ -46,19 +74,24 @@ The following is a visual representation of this lab environment. The numbers in
    * -
      - TAP service
      - 1.6
+   * - SSL Orchestrator Topology
+     - Name: f5labs_explicit
 
-.. list-table:: **Ubuntu18.04 Client** (used for most of the lab exercises)
+       Explicit Proxy: 10.1.10.150\:3128
+     - 
+
+.. list-table:: **Ubuntu18.04 Client**
    :header-rows: 0
-   :widths: 200 800
+   :widths: 200 600
 
    * - IP address
      - 10.1.10.50
    * - Login
      - student:agility
-     
-.. list-table:: **Windows Client** (only for NTLM Authentication lab exercise)
+
+.. list-table:: **Windows Client**
    :header-rows: 0
-   :widths: 200 400 400
+   :widths: 200 300 300
 
    * - IP address
      - 10.1.10.70
@@ -75,7 +108,7 @@ The following is a visual representation of this lab environment. The numbers in
 
 .. list-table:: **Windows Server** (only for NTLM Authentication lab exercise)
    :header-rows: 0
-   :widths: 200 800
+   :widths: 200 600
 
    * - IP address
      - 10.1.10.80
@@ -178,5 +211,17 @@ The following is a visual representation of this lab environment. The numbers in
      - 12:12:12:12:12:12 (arbitrary if directly connected)
      -
 
-.. warning:
+.. warning::
    Simple passwords were used in this lab environment in order to make it easier for students to access the infrastructure. This does not follow recommended security practices of using strong passwords.
+
+   This lab environment is only accessible via an authenticated student login.
+
+
+.. |join_link| raw:: html
+
+      <a href="https://help.udf.f5.com/en/articles/3832165-how-to-join-a-training-course" target="_blank"> How to join a training course </a>
+
+.. |interface_link| raw:: html
+
+      <a href="https://help.udf.f5.com/en/articles/3832340-training-course-interface" target="_blank"> How to use the training course interface </a>
+
