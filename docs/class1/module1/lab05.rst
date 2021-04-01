@@ -41,7 +41,7 @@ The **SSL** settings have now been configured.
 
 |
 
-.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the SSL Configurations.
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the SSL Configurations.
 
 Client-side SSL
 ~~~~~~~~~~~~~~~

@@ -22,7 +22,7 @@ The **Log Settings** have now been configured.
 
 -  Click :red:`Save & Next` to continue to the next stage.
 
-.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on Log Settings.
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on Log Settings.
 
 
 Multiple discreet logging options are available:

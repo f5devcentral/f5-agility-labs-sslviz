@@ -45,7 +45,7 @@ Click :red:`Save & Next` to continue to the next stage.
    :scale: 50 %
    :align: center
 
-.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the Topology.
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the Topology.
 
 
 The **Protocol** option presents four protocol types:

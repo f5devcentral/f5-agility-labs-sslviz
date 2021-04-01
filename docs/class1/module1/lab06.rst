@@ -67,7 +67,7 @@ The first :red:`Service` has now been configured.
    :scale: 50 %
    :align: center
 
-.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the ICAP Service.
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the ICAP Service.
 
 
 ICAP service
