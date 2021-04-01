@@ -23,7 +23,9 @@ In this section, you will associate the newly created services to service chains
 
 - Check :red:`Add` to add a new service chain.
 
-- Enter a name such as :red:`L2_services`
+- Enter a name such as :red:`L2_services`.
+
+.. note:: Guided configuration automatically adds a prefix to object names.  The complete name in this instance will be :red:`ssloSC_L2_services`.
 
 - Move the :red:`FireEye` and :red:`TAP services` from the :red:`Services Available` column to the :red:`Selected Service Chain Order` column.
 
