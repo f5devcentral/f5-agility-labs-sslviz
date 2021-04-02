@@ -52,9 +52,11 @@ The following tables provide device/service network configuration details. Login
      -
    * - Login
      - admin:agility
+
+       root:default
      -
-   * - 
-     - root:default
+   * - System DNS
+     - 10.1.10.80 (Windows DNS for NTLM/AD)
      -
    * - Interfaces
      - Client VLAN
@@ -78,6 +80,10 @@ The following tables provide device/service network configuration details. Login
      - Name: f5labs_explicit
 
        Explicit Proxy: 10.1.10.150\:3128
+
+       DNS: Forwarder - 10.1.10.80 
+
+       (Explicit proxy DNS requests only)
      - 
 
 .. list-table:: **Ubuntu18.04 Client**

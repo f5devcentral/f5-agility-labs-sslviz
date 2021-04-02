@@ -1,5 +1,5 @@
-SSL Orchestrator v8 - SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2021 | 2 hours)
-=========================================================================================================
+[v8] SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2021 | 2 hours)
+=========================================================================================
 
 .. note::
 
