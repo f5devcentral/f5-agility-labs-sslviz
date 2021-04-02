@@ -38,7 +38,7 @@ Services" and "Health and Medicine" URL categories.
 
 -  **SSL Forward Proxy Action** - select :red:`Bypass`.
 
--  **Service Chain** - select the :red:`all_services` service chain.
+-  **Service Chain** - select the :red:`ssloSC_all_services` service chain.
 
 -  Click :red:`OK`.
 
@@ -67,7 +67,7 @@ Financial and medical site test
 
 - Return to your Ubuntu client RDP session.
 
-- Open a web browser (e.g., Firefox, Chromium) on the outbound client system and navigate to https://bcbs.com. 
+- Open Chromium web browser on the outbound client system and navigate to https://bcbs.com. 
 
 - Once the site opens in the browser, check the server certificate of the site.
 

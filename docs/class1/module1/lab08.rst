@@ -57,7 +57,7 @@ Click :red:`Save & Next` to continue to the next stage.
    future guided configuration changes will overwrite the manual changes.
 
 
-.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the security policy.
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the security policy.
 
 Security policy
 ----------------

@@ -46,7 +46,7 @@ Server certificate test
 
 - Return to your Ubuntu client RDP session.
 
-- Open a web browser (e.g., Firefox, Chromium) on the outbound client system and :red:`open a new incognito or private browsing session`. This is to ensure the browser establishes an entirely new session and does not reuse cached content.
+- Open Chromium web browser on the outbound client system and :red:`open a new incognito or private browsing session`. This is to ensure the browser establishes an entirely new session and does not reuse cached content.
 
 - Once the site opens in the browser, check the server certificate of the site and verify that it is now issued by the local CA configured in SSLO. This confirms that the SSL forward proxy and certificate re-write functionality enabled by SSL Orchestrator is now working correctly.
 
@@ -59,7 +59,7 @@ Server certificate test
 Decrypted traffic test on the security service
 ----------------------------------------------
 
-- Open a web browser (e.g., Firefox, Chromium) on the outbound client system and :red:`open a new incognito or private browsing session`. This is to ensure the browser establishes an entirely new session and does not reuse cached content.
+- Open Chromium web browser on the outbound client system and :red:`open a new incognito or private browsing session`. This is to ensure the browser establishes an entirely new session and does not reuse cached content.
 
 - Navigate once again to https://eicar.org/?page_id=3950. Scroll down to the section labeled :red:`Download area using the secure, SSL enabled protocol HTTPS` and click on :red:`eicar.com`. 
 

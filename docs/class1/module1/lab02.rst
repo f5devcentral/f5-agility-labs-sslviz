@@ -9,7 +9,7 @@ using the UDF blueprint, most of these have been pre-configured for you.
 The only exception is the default route, which will be explicitly configured
 in a later section.
 
-.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the pre-requisites for a production environment.
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the pre-requisites for a production environment.
 
 -  **Import the CA certificate and private key** - in order to terminate and
    re-encrypt outbound SSL traffic, SSL Forward Proxy must re-issue, or rather

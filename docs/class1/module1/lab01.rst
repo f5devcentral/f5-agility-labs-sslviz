@@ -14,7 +14,7 @@ If needed, review the previous section
    
 -  Login as :red:`admin` with password :red:`agility`.
 
-.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context regarding how the UDF lab hosts are connected and how they relate to each other.
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context regarding how the UDF lab hosts are connected and how they relate to each other.
 
 -  The **Ubuntu18.04 Client** is attached to the :red:`10.1.10.0/24` network on 
    IP address :red:`10.1.10.50`, which is attached to the BIG-IP 

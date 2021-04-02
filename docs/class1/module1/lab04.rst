@@ -25,6 +25,12 @@ Properties page provides the following options:
 
 -  **Name**: Enter some name (ex. ":red:`demoL3`").
 
+.. TIP::
+
+   As a general rule, avoid using names with dashes (ex. sslo-demo-1)
+   while creating objects in SSL Orchestrator. Underscores (ex. sslo_demo_1)
+   and camel-casing (ex. ssloDemo1) are preferred.
+
 -  **Protocol**: Select :red:`Any` - this will create separate
    TCP, UDP and non-TCP/UDP interception rules.
 
@@ -45,7 +51,7 @@ Click :red:`Save & Next` to continue to the next stage.
    :scale: 50 %
    :align: center
 
-.. note:: There are no additional hands-on steps that need to be taken by the student before proceeding to the next section.  The information below is intended to provide additional context on the Topology.
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the Topology.
 
 
 The **Protocol** option presents four protocol types:

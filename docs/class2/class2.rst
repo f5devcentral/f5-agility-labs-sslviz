@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-SSL Orchestrator v8 - SSLO 201: Advanced Use Cases (Agility 2021 | 2 hours)
+[v8] SSLO 201: Advanced Use Cases with SSL Orchestrator (Agility 2021 | 2 hours)
 ================================================================================
 
 .. note::
