@@ -1,35 +1,32 @@
 .. role:: red
+.. role:: bred
 
-Review the Access Policy and AAA configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Create Two Empty VLANs
+================================================================================
 
--  From the Main menu on the left, select **Access > Authentication > NTLM > NTLM Auth Configuration**.
+A topology must be bound to a unique VLAN. Since the layer topologies won't be listening on actual client-facing VLANs, you will need to create a separate empty VLAN for each topology you intend to create. An empty VLAN has no interfaces assigned.
 
--  Select :red:`f5labs.com_ntlm_aaa` from the NTLM Auth Configuration list. The following screen should appear:
+- Navigate to **Network > VLANs** and click on the **Create** button to add a new VLAN.
 
-   |f5labs.com_ntlm_aaa|
+- Name this VLAN:  ``zzz-vlan`` and then click on **Finished**. Do not select any interfaces.
 
--  Machine Account Name is the name of the security object that is added to the domain as a Computer Account. Domain Controller FQDN List contains a list of the domain servers (in this lab there is only one).
+   .. image:: ../images/create-vlan.png
+      :alt: Empty VLAN
 
--  From the main menu select **Access > Profiles / Policies > Access Profiles (Per-Session Policies)**. The following screen should appear:
+- Since you are not attaching any interfaces to this VLAN, you will receive a confirmation pop-up.
 
-   |access_profile_list|
+   .. image:: ../images/vlan-confirm-empty.png
+      :alt: Empty VLAN Confirmation
 
--  Click on the **Edit** button next to the :red:`f5labs-ntlm-ap` access profile. The following Access Policy should appear in the Visual Policy Editor:
+-  Click on **OK** to continue and return to the VLAN List.
 
-   |f5labs-ntlm-ap_vpe|
+- Click on the **Create** button again to add a second empty VLAN.
 
--  Close the Visual Policy Editor
+- Name this VLAN:  ``yyy-vlan`` and then click on **Finished**.
 
-.. |f5labs.com_ntlm_aaa| image:: ../images/f5labs.com_ntlm_aaa.png
-   :width: 694px
-   :height: 386px
-   :alt: f5labs.com NTLM Auth Configuration
-.. |access_profile_list| image:: ../images/access_profile_list.png
-   :width: 806px
-   :height: 246px
-   :alt: Access Profile List
-.. |f5labs-ntlm-ap_vpe| image:: ../images/f5labs-ntlm-ap_vpe.png
-   :width: 752px
-   :height: 168px
-   :alt: f5labs-ntlm-ap Access Policy (VPE)
+- Since you are not attaching any interfaces to this VLAN, you will receive a confirmation pop-up. Click on **OK** to continue and return to the VLAN List.
+
+|
+
+.. image:: ../images/vlan-empty.png
+   :alt: Empty VLANs

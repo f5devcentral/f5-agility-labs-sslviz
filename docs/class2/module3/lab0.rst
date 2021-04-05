@@ -1,19 +1,35 @@
 .. role:: red
+.. role:: bred
 
-Verify authentication is currently disabled
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Verify Pre-requisite SSL Orchestrator Configuration
+================================================================================
 
--  Start a TMUI session on **SSL Orchestrator** and log in if prompted *(Components > SSL Orchestrator > ACCESS > TMUI)*
+-  If not already connected to the **SSL Orchestrator** TMUI, log into the TMUI *(Components > SSL Orchestrator > ACCESS > TMUI)*
 
--  From the Main menu on the left, select **Access > Overview > Active Sessions**. The following screen should appear. You should see an **Active Session Count** of **0** and that there are no sessions listed in the table.
+      |credentials_link|
 
-   |active-sessions-none|
 
--  On the **Windows 10 Desktop** browse to various websites using Firefox
+-  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**. When the SSL Orchestrator dashboard finishes loading, the following deployment should already be present.
 
--  Refresh the previously shown screen. You should still see an **Active Session Count** of **0**.
+   .. image:: ../images/config-dashboard.png
+      :alt: SSL Orchestrator Configuration Dashboard
 
-.. |active-sessions-none| image:: ../images/active-sessions-none.png
-   :width: 639px
-   :height: 330px
-   :alt: Active Sessions (None)
+
+-  Select **Security Policies** from the horizontal menu. You should now be presented with following screen:
+
+   .. image:: ../images/security-policy-overview.png
+      :alt: Security Policy Overview
+
+
+-  Click on **ssloP\_f5labs\_explicit** and you will see the rules that are currently configured under this security policy.
+
+   .. image:: ../images/updated-security-policy.png
+      :alt: Security Policy Rules
+
+-  Click on **Cancel** to return to the Topology list.
+
+
+
+.. |credentials_link| raw:: html
+
+      <a href="../labinfo.html#credentials" target="_blank"> Link to user credentials (opens in new browser tab) </a>

@@ -1,49 +1,68 @@
 .. role:: red
+.. role:: bred
 
-Enabling SSL Orchestrator connection summary logging
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enable and test authentication offload
+================================================================================
 
-Before enabling connection summary logging, view the logging activity when all SSL Orchestrator logging facilities are set to their default value of Error:
+-  Start a Web Shell to **Ubuntu18.04 Services** (**Systems > Ubuntu18.04 Services > ACCESS > Web Shell**)
 
-- Start a Web Shell to **SSL Orchestrator** (Components > SSL Orchestrator > ACCESS > Web Shell)
+   .. image:: ../images/ubuntu-services.png
+      :alt: Unbuntu Services Web Shell Access
 
-- Type the following command to watch for new output in /var/log/apm:
+-  Enter the following commands in the Web Shell:
 
-.. code-block:: bash
-  
-   tail -f /var/log/apm
+   .. code:: bash
 
-- In another window/tab, start an RDP session to the **Windows 10 Desktop** *(Components > Windows 10 Desktop > ACCESS > RDP)*
+      clear
+      tail -f -n 0 /var/log/squid/access.log
 
-- Open **Firefox** and browse to a few websites
+-  Visit a few secure (HTTPS) websites (non-banking) using Chrome on the Windows Client and confirm that access is still being logged. You should see log entries of the sites and URLs visited but the username field (immediately after the URI) will be blank ("-"), similar to the example below:
 
-- You shouldn't see any connection summary information at this point
+   |proxy-access-log-nouser|
 
-To enable SSL Orchestrator connection summary logging perform the following procedure:
+|
 
-- Start a TMUI session to **SSL Orchestrator** and log in if prompted *(Components > SSL Orchestrator > ACCESS > TMUI)*
+SSL Orchestrator does not pass authenticated usernames to a proxy service unless explicitly configured to do so. In the next step you will enable this feature.
 
-- From the Main menu on the left, select **SSL Orchestrator > Configuration**
+-  On SSL Orchestrator select **SSL Orchestrator > Configuration** from the Main menu on the left
 
-- Click on the existing topology (:red:`sslo_f5labs_explicit`)
+-  Click **Services** on the horizontal menu and then click on **ssloS_SquidProxy**. The Summary page will load for the Squid proxy service.
 
-- On the Summary screen that appears, click the edit icon (|pencil|) to the right of **Log Settings**
+-  Click the edit icon (|pencil|) to the right of **Service**
 
-- From the **SSL Orchestrator Generic** drop down, select :red:`Information`
+-  Scroll down the Service Properties screen and select the **Authentication Offload** checkbox. Doing so will cause SSL Orchestrator to inject an "X-Authenticated-User" header into the HTTP payload of traffic it directs to the Squid proxy service.
 
-- Click the **Save & Next** button
 
-- Click the **Deploy** button
+.. image:: ../images/auth-offload.png
+   :alt: Authentication Offload Option
 
-- After the you receive confirmation that the deployment was successful return to your **Windows 10 Desktop** RDP session and browse to a few more websites. This time you should see "Traffic summary" messages appearing in the log file, like the example below:
 
-  |sslo-generic-info-log|
+-  Click the **Save & Next** button and confirm by clicking the **OK** button in the pop-up that appears.
+
+-  The **Service Chain List** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button.
+
+-  Click **OK** to acknowledge the successful deployment.
+
+-  Visit a few more secure (HTTPS) websites (non-banking) using Chrome on the Windows Client. You should now see your username logged along with the HTTP requests you sent, similar to the example below:
+
+   |proxy-access-log-mike|
+
+
+-  Press ``<CTRL+C>`` to stop the **tail** tool.
+
+
+.. attention::
+   This is the end of the lab module.
+
+
+
+.. |proxy-access-log-nouser| image:: ../images/proxy-access-log-nouser.png
+   :alt: Proxy Access Log
 
 .. |pencil| image:: ../images/pencil.png
    :width: 20px
    :height: 20px
    :alt: Pencil Icon
-.. |sslo-generic-info-log| image:: ../images/sslo-generic-info-log.png
-   :width: 1188px
-   :height: 228px
-   :alt: SSL Orchestrator Generic Information Level Logging
+
+.. |proxy-access-log-mike| image:: ../images/proxy-access-log-mike.png
+   :alt: Proxy Access Log with Mike's Username

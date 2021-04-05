@@ -1,22 +1,33 @@
 .. role:: red
+.. role:: bred
 
 Create a new "Cisco Firepower" Service Chain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================================
+
 You now need to create a new Service Chain containing only the Cisco Firepower TAP service.
 
 -  On the **Service Chain List** screen click the **Add** button to create a new Service Chain
 
 -  On the **Service Chain Properties** screen enter the following values:
 
-   -  **Name -** provide a unique name for this service chain (ex. :red:`CiscoFP_TAP`)
+   -  **Name -** enter ``CiscoFP_TAP`` as the service chain name
 
-   -  **Description -** provide a description for this service chain (ex. :red:`Cisco Firepower TAP only`)
+   -  **Description -** enter ``Cisco Firepower TAP only`` as the description.
 
-   -  **Services -** select the Cisco Firepower service (ex. :red:`ssloS_CiscoFP`) under **Services Available** and move it to **Selected Service Chain Order**
+   -  **Services -** select the Cisco Firepower service (**ssloS_CiscoFP**) under **Services Available** and click on the right arrow to move it to the **Selected Service Chain Order** side.
 
 -  Click the **Save** button
 
--  You will be returned to the Service Chain List. You should now have three Service Chains in the Service Chain List
+
+.. image:: ../images/ciscofp-4.png
+   :alt: Cisco Firepower Service Configuration
+
+|
+
+-  You will return to the **Service Chain List** where you should see three Service Chains.
+
+   .. image:: ../images/new-service-chain-list.png
+      :alt: Updated Service Chain List
 
 -  Click the **Save & Next** button
 
@@ -24,10 +35,8 @@ You now need to create a new Service Chain containing only the Cisco Firepower T
 
 -  When successfully deployed, the following pop-up should appear:
 
-   |successful_deploy|
+   .. image:: ../images/successful_deploy.png
+      :alt: Successful Deployment
 
 -  Click the **OK** button to return to the SSL Orchestrator Configuration screen.
 
-.. |successful_deploy| image:: ../images/successful_deploy.png
-   :width: 374px
-   :height: 219px

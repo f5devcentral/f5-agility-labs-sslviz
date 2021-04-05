@@ -1,45 +1,97 @@
 .. role:: red
+.. role:: bred
 
-Enable authentication offload
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Layered Virtual Server and Topology Steering iRule
+================================================================================
 
--  Start a Web Shell to **Service - ExpProxy** *(Components > Service - ExpProxy > ACCESS > Web Shell)*
+.. note::
+   The **SSLOLIBEXP** and **sslo-layering-exp-rule** files from the `f5devcentral/sslo-script-tools <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_ Github repository have already been imported for you. You will review the contents of these iRules shortly.
 
--  Type the following command in the web console and hit Enter:
+-  Navigate to  **Local Traffic > iRules > Datagroup List** to view the data groups.
 
-      ``tail -f /var/log/squid3/access.log``
+.. image:: ../images/dg-appservers_list-1.png
+   :alt: View Data Groups
 
--  Visit a few secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop and confirm that access is still being logged. You should see log entries of the sites and URLs visited but the username field (immediately after the URI) will be blank ("-"), similar to the example below:
+-  Click on the **appserver_list** data group to view the list of server subnets/addresses. Traffic from these source IPs will be directed to the **appserver_explicit** topology. Note that IP address **10.1.10.50** is the **Ubuntu18.04 Client** machine (representing an application server).
 
-   |proxy-access-log-nouser|
+.. image:: ../images/dg-appservers_list-2.png
+   :alt: Data Group: appservers_list
 
--  SSL Orchestrator does not pass authenticated usernames to a proxy service unless explicitly configured to do so. In the next step you will enable this feature.
+-  Navigate to  **Local Traffic > iRules > iRules List** and review the two iRules.
 
--  On SSL Orchestrator select **SSL Orchestrator > Configuration** from the Main menu on the left
+.. image:: ../images/internal-layered-irules-1.png
+   :alt: Internal Layered Architecture iRules
 
--  Click **Services** on the horizontal menu and then click on **ssloS_SquidProxy**. The Summary page will load for the Squid proxy service.
+|
 
--  Click the edit icon (|pencil|) to the right of **Service**
+The SSLOLIBEXP iRule contains functions that allow the topology steering rule to easily match on various attributes and then target specific SSL Orchestrator topologies.
 
--  Scroll down the Service Properties screen and select the **Authentication Offload** checkbox. Doing so will cause SSL Orchestrator to inject an "X-Authenticated-User" header into the HTTP payload of traffic it directs to the Squid proxy service.
+.. warning::
+   Do not modify the SSLOLIBEXP iRule.
 
--  Click the **Save & Next** button and confirm by clicking the **OK** button in the pop-up that appears
+.. image:: ../images/irule-sslolib.png
+   :alt: View SSLOLIBEXP iRule
 
--  The **Service Chain List** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button.
+|
 
--  Visit a few more secure (HTTPS) websites (non-banking) using Firefox on the Windows 10 Desktop. You should now see your username logged along with the HTTP requests you sent, similar to the example below:
+The topology steering iRule contains your steering logic and defines the topology steering conditions.
 
-   |proxy-access-log-mike|
+-  Modify the **SSLO-layering-explicit** iRule with the following values:
 
-.. |proxy-access-log-nouser| image:: ../images/proxy-access-log-nouser.png
-   :width: 1076px
-   :height: 118px
-   :alt: Proxy Access Log
-.. |pencil| image:: ../images/pencil.png
-   :width: 20px
-   :height: 20px
-   :alt: Pencil Icon
-.. |proxy-access-log-mike| image:: ../images/proxy-access-log-mike.png
-   :width: 1100px
-   :height: 118px
-   :alt: Proxy Access Log with Mike's Username
+   -  **Line 21:** Replace ``interceptexp`` with ``f5labs_explicit`` (name of the original/existing L3 Explicit Topology). This defines the default SSL Orchestrator topology to use (if there is no other match).
+   -  Insert 2 blank lines after **line 41**.
+   -  Copy **line 45** into **line 42**.
+   -  **Line 42**: Uncomment this line by removing the '#' from the beginning of the line.
+   -  **Line 42**: Replace ``my-srcip-dg`` with ``appserver_list``. This defines the data group to check for source address matches.
+   -  **Line 42**: Replace ``bypassexp`` with ``appsvr_explicit`` (name of the new L3 Explicit Topology that you created in the previous section). This defines the topology to use if there is a source address match.
+
+.. attention::
+   Ensure that there are no typographical errors in the iRule, or it will not function properly.
+
+.. image:: ../images/irule-layering-explicit.png
+   :alt: Changes to SSLO-Topology-Director iRule
+
+-  Click on the **Update** button to save the iRule changes.
+
+|
+
+-  Navigate to **Local Traffic > Virtual Servers > Virtual Server List** to create the topology steering virtual server.
+
+-  Click on the **Create** button to add a new Virtual Server and configure the following settings:
+
+   -  **Name:** Enter ``Topology-Director_vs``
+   -  **Type:** Leave the default - **Standard**
+   -  **Source:** Leave the default - empty
+   -  **Destination Address:** Enter ``10.1.10.150``
+   -  **Destination Port:** Enter ``3128``
+   -  **Protocol:** Leave the default - **TCP**
+   -  **HTTP Profile (Client):** Select **sslo-default-http-explicit**
+   -  **VLAN and Tunnel Traffic:** Select **Enabled On...** and then move **client-vlan** to the **Selected** column.
+   -  **Address Translation:** Uncheck to disable
+   -  **Port Translation:** Uncheck to disable
+   -  **iRule:** Move the **SSLO-layering-explicit** iRule to the **Enabled** column.
+
+.. image:: ../images/topology-director-vs-1.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1a.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1b.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1c.png
+   :alt: 
+
+|
+
+.. image:: ../images/topology-director-vs-1d.png
+   :alt: 
+
+- Click on **Finished** to create the new virtual server.

@@ -1,14 +1,44 @@
+.. role:: red
 .. role:: bred
 
 SSL Orchestrator Lab Environment
-================================
+================================================================================
 
-The following is a visual representation of this lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers assigned. The colored boxes to the right of the services indicate a few product examples for each respective service type.
+Accessing the Virtual Lab
+--------------------------------------------------------------------------------
 
-The following information is based on a custom UDF blue print named :bred:`Agility 2020 - SSL Orchestrator 201`.
+If you are not familiar with the process for joining a training course, refer to:
 
-.. image:: images/labinfo-2.png
-   :align: center
+- |join_link|
+- |interface_link|
+
+To access your lab and look up the necessary IP addresses, you should have received an email with your personal "Lab Portal Link". You will see the Lab Guide link and the VMs that will be used in this lab.
+
+.. note::
+
+   You will use your local web browser and Remove Desktop Protocol (RDP) client to perform the lab exercises.
+   
+   You will not need to use SSH to access the UDF lab environment, so no SSH Key needs to be configured.
+
+From the **DEPLOYMENT** tab, you will access the **Ubuntu18.04 Client** and **Windows Client** machines using RDP. You will also access the **Web Shell** for various systems as directed in the lab exercises. 
+
+
+Network Diagram
+--------------------------------------------------------------------------------
+
+Here is a visual representation of the Agility virtual lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers and VLAN tags (if applicable). The colored boxes to the right of the services respresent some product examples for each respective service type.
+
+The first interface is connected to the client-facing VLAN. The second interface is connected to the Internet-facing VLAN. The remaining interfaces are connected to various types of security services: L2, L3, HTTP, ICAP, and passive Tap. The SSL Orchestrator management interface is not shown.
+
+.. image:: images/labinfo-1.png
+   :align: left
+
+.. _credentials:
+
+Virtual Lab Infrastructure Details (and Credentials)
+--------------------------------------------------------------------------------
+
+The following tables provide device/service network configuration details. Login credentials are also provided for use as directed in the lab exercises.
 
 .. list-table:: **SSL Orchestrator**
    :header-rows: 0
@@ -21,10 +51,12 @@ The following information is based on a custom UDF blue print named :bred:`Agili
      - 10.1.20.1
      -
    * - Login
-     - admin:admin
+     - admin:agility
+
+       root:default
      -
-   * - 
-     - root:default
+   * - System DNS
+     - 10.1.10.80 (Windows DNS for NTLM/AD)
      -
    * - Interfaces
      - Client VLAN
@@ -33,24 +65,42 @@ The following information is based on a custom UDF blue print named :bred:`Agili
      - Outbound VLAN
      - 1.2
    * -
+     - Inline L3, HTTP, and ICAP services
+     - 1.3 (tagged)
+   * -
      - Inline L2 service inbound
      - 1.4
    * -
      - Inline L2 service outbound
      - 1.5
    * -
-     - Inline L3/HTTP services
-     - 1.6 (tagged)
-   * -
      - TAP service
-     - 1.7
+     - 1.6
+   * - SSL Orchestrator Topology
+     - Name: f5labs_explicit
 
-.. list-table:: **Windows 10 client**
+       Explicit Proxy: 10.1.10.150\:3128
+
+       DNS: Forwarder - 10.1.10.80 
+
+       (Explicit proxy DNS requests only)
+     - 
+
+.. list-table:: **Ubuntu18.04 Client**
    :header-rows: 0
-   :widths: auto
+   :widths: 200 600
 
    * - IP address
      - 10.1.10.50
+   * - Login
+     - student:agility
+
+.. list-table:: **Windows Client**
+   :header-rows: 0
+   :widths: 200 300 300
+
+   * - IP address
+     - 10.1.10.70
      -
    * - Logins
      - **Username**
@@ -62,12 +112,30 @@ The following information is based on a custom UDF blue print named :bred:`Agili
      - F5LABS\\jane
      - agility
 
+.. list-table:: **Windows Server** (only for NTLM Authentication lab exercise)
+   :header-rows: 0
+   :widths: 200 600
+
+   * - IP address
+     - 10.1.10.80
+   * - Login
+     - N/A
+
 .. list-table:: **Inline Layer 2 service**
    :header-rows: 0
    :widths: auto
 
    * - Login
      - student:agility
+     - 
+   * - Interfaces
+     - Inbound (TO service) interface
+     - 1.4
+   * - 
+     - Outbound (FROM service) interface
+     - 1.5
+   
+
 
 .. list-table:: **Inline Layer 3 service**
    :header-rows: 0
@@ -78,13 +146,17 @@ The following information is based on a custom UDF blue print named :bred:`Agili
      -
      -
    * - Interfaces
-     - Inbound interface
-     - 1.6 tag 10
-     - 198.19.64.65/25
+     - Inbound (TO service) interface
+     - 1.3 tag 60
+     - 198.19.64.7/25
    * -
-     - Outbound interface
-     - 1.6 tag 20
-     - 198.19.64.130/25
+     - Outbound (FROM service) interface
+     - 1.3 tag 70
+     - 198.19.64.245/25
+   * - Services
+     - NGFW
+     - 
+     - 198.19.64.30/25
 
 .. list-table:: **Explicit proxy (HTTP) service**
    :header-rows: 0
@@ -95,21 +167,41 @@ The following information is based on a custom UDF blue print named :bred:`Agili
      -
      -
    * - Interfaces
-     - Inbound interface
-     - 1.6 tag 30
-     - 198.19.96.66/25
+     - Inbound (TO service) interface
+     - 1.3 tag 30
+     - 198.19.96.7/25
    * -
-     - Outbound interface
-     - 1.6 tag 40
-     - 198.19.96.131/25
+     - Outbound (FROM service) interface
+     - 1.3 tag 40
+     - 198.19.96.245/25
    * - Services
      - Squid
      - Port 3128
+     - 198.19.96.30
+
+.. list-table:: **ICAP service**
+   :header-rows: 0
+   :widths: auto
+
+   * - Login
+     - root:default
      -
-   * -
-     - DansGuardian
-     - Port 8080
      -
+   * - Interface
+     - Inbound (TO service) interface
+     - 1.3 tag 50
+     - 198.19.97.1/25
+   * - Services
+     - SquidClamAV
+     - Port 1433
+     - 198.19.97.50/25
+
+       Request Modification URI Path: /avscan
+
+       Response Modification URI Path: /avscan
+
+       Preview Max Length: 1048576
+
 
 .. list-table:: **Receive-only (TAP) service**
    :header-rows: 0
@@ -117,5 +209,25 @@ The following information is based on a custom UDF blue print named :bred:`Agili
 
    * - Login
      - root:default
+     - 
+   * - Interface
+     - Inbound (TO service) interface
+     - 1.6
    * - MAC Address
      - 12:12:12:12:12:12 (arbitrary if directly connected)
+     -
+
+.. warning::
+   Simple passwords were used in this lab environment in order to make it easier for students to access the infrastructure. This does not follow recommended security practices of using strong passwords.
+
+   This lab environment is only accessible via an authenticated student login.
+
+
+.. |join_link| raw:: html
+
+      <a href="https://help.udf.f5.com/en/articles/3832165-how-to-join-a-training-course" target="_blank"> How to join a training course </a>
+
+.. |interface_link| raw:: html
+
+      <a href="https://help.udf.f5.com/en/articles/3832340-training-course-interface" target="_blank"> How to use the training course interface </a>
+
