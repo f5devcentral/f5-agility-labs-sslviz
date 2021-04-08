@@ -9,14 +9,14 @@ Pre-existing environment validation
 
 -  Start an RDP session to the **Ubuntu18.04 Client** (*Components > Ubuntu18.04 Client > ACCESS > XRDP*)
 
-.. image:: ../images/ubuntu-client-rdp-1.png
+.. image:: ../images/udf-ubuntu-client-rdp.png
 
 - When prompted, save the RDP file to your local machine and then open it to connect.
 
 
 -  At the Ubuntu Login prompt, click on the **OK** button to continue.
 
-.. image:: ../images/ubuntu-client-rdp-2.png
+.. image:: ../images/udf-ubuntu-client-rdp2.png
 
 |
 
@@ -77,7 +77,7 @@ Pre-existing environment validation
 
    -  Start a Web Shell to **Ubuntu18.04 Services** (*Components > Ubuntu18.04 Services > ACCESS > Web Shell*)
 
-      .. image:: ../images/ubuntu-services.png
+      .. image:: ../images/udf-ubuntu-services-webshell.png
          :alt: Ubuntu18.04 Services Web Shell
 
       |

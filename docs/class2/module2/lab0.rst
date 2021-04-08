@@ -22,7 +22,7 @@ Verify authentication is currently disabled
 
 -  Start an RDP session to the **Windows Client** (*Systems > Windows Client > ACCESS > RDP*)
 
-.. image:: ../images/windows-client-rdp.png
+.. image:: ../images/udf-windows-client-rdp.png
    :alt: Windows Client RDP Access
 
 - Open the RDP file to connect.
