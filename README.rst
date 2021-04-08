@@ -24,7 +24,6 @@ Previous Versions
 
 - [Archived] SSL Orchestrator v7 - SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2020 | 2 hours)
 - [Archived] SSL Orchestrator v7 - SSLO 201: Real World Use Cases / Putting It to Use (Agility 2020 | 2 hours)
-- [Archived] SSL Orchestrator v6 (Ravello | 4 hours)
 - [Archived] SSL Orchestrator v5 (Ravello | 4 hours)
 - [Archived] SSL Orchestrator v4 (Agility 2018 | 4 hours)
 

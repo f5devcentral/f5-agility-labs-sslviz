@@ -6,7 +6,7 @@ Enable and test authentication offload
 
 -  Start a Web Shell to **Ubuntu18.04 Services** (**Systems > Ubuntu18.04 Services > ACCESS > Web Shell**)
 
-   .. image:: ../images/ubuntu-services.png
+   .. image:: ../images/udf-ubuntu-services-webshell.png
       :alt: Unbuntu Services Web Shell Access
 
 -  Enter the following commands in the Web Shell:

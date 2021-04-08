@@ -1,4 +1,4 @@
-[Archived] SSL Orchestrator v6 (Ravello | 4 hours)
+[Archived] SSL Orchestrator v5 (Ravello | 4 hours)
 ===================================================
 
 Created for use in Ravello

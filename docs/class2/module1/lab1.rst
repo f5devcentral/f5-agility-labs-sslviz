@@ -6,7 +6,13 @@ Review the current SSL Orchestrator deployment
 
 -  Start a TMUI session on **SSL Orchestrator** and log in as user **admin** (*Components > SSL Orchestrator > ACCESS > TMUI*)
 
-      |credentials_link|
+   |credentials_link|
+
+   |
+
+   |udf-sslo-tmui|
+
+   |
 
 -  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**.
 
@@ -44,6 +50,8 @@ Review the current SSL Orchestrator deployment
 .. |initial-security-policy| image:: ../images/initial-security-policy.png
    :alt: Security Policy Rules
 
+.. |udf-sslo-tmui| image:: ../images/udf-sslo-tmui.png
+   :alt: SSL Orchestrator TMUI Access
 
 .. |credentials_link| raw:: html
 
