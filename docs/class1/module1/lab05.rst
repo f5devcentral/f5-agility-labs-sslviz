@@ -21,7 +21,7 @@ available when "Show Advanced Settings" is enabled (top right).
 
 - Edit CA Certificate Key Chain (NOT Certificate Key Chain) - Click the pencil icon to Edit, then select subrsa.f5labs.com for both Certificate and Key, and click Done.
 
-.. note:: This is the self-signed CA certificate and private key that will by used by SSL Orchestrator to sign the re-issued or "forged" certificates delivered to clients for forward proxy (outbound) traffic.  This is also the CA certificate that will be imported into the client's browser certificate store.
+.. note:: This is a subordinate CA certificate and private key that will by used by SSL Orchestrator to sign the re-issued or "forged" certificates delivered to clients for forward proxy (outbound) traffic.  When using subordinate CA certificates, both the subordinate and root CA certificates must be imported into the client's browser certificate store.
 
 .. image:: ../images/module1-43.png
    :align: center
