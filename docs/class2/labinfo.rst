@@ -14,7 +14,7 @@ If you are not familiar with the process for joining a training course, refer to
 
 You should have received a course registration email that contains the UDF course link. Click on the link and log into the UDF student portal. 
 
-After joining the course, you will see the **Documentation** tab. Click on the link to open the Lab Guide for this course.
+After joining the course, you will see the **DOCUMENTATION** tab with some information about the lab resources and a link to the Lab Guide (this document).
 
 .. image:: images/udf-documentation.png
    :align: left
