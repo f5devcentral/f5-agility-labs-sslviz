@@ -12,7 +12,12 @@ If you are not familiar with the process for joining a training course, refer to
 - |join_link|
 - |interface_link|
 
-To access your lab and look up the necessary IP addresses, you should have received an email with your personal "Lab Portal Link". You will see the Lab Guide link and the VMs that will be used in this lab.
+You should have received a course registration email that contains the UDF course link. Click on the link and log into the UDF student portal. 
+
+After joining the course, you will see the **Documentation** tab. Click on the link to open the Lab Guide for this course.
+
+.. image:: images/udf-documentation.png
+   :align: left
 
 .. note::
 
@@ -20,7 +25,10 @@ To access your lab and look up the necessary IP addresses, you should have recei
    
    You will not need to use SSH to access the UDF lab environment, so no SSH Key needs to be configured.
 
-From the **DEPLOYMENT** tab, you will access the **Ubuntu18.04 Client** and **Windows Client** machines using RDP. You will also access the **Web Shell** for various systems as directed in the lab exercises. 
+Click on the **DEPLOYMENT** tab to see all of your lab resources. You will access the **Ubuntu18.04 Client** and **Windows Client** machines using **RDP**. You will also access the **Web Shell** for various systems as directed in the lab exercises. 
+
+.. image:: images/udf-deployment.png
+   :align: left
 
 
 Network Diagram
