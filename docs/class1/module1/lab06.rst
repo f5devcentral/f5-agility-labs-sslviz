@@ -102,13 +102,14 @@ Applying the new Per-Request policy to SSL Orchestrator
 -  Once the new Per-Request policy has been configured it can then be applied
    to the SSL Orchestrator Topology.
 
-  Testing URL filtering
+Testing URL filtering
 ===========================================================================
 
 - establish an **XRDP** session to the **Ubuntu14.04 Desktop Outbound**
   client
 
-- Launch
+- Launch either a web browser of your choice (Firefox, Chrome) and
+  test various URL's to ensure the URL Filters are being applied correctly
 
 
 
