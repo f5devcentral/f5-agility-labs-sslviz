@@ -383,6 +383,12 @@ section and select the **right arrow**.  Click on **Save & Next**
 
 The **Interception Rules** have now been configured.
 
+**Your Security Policy should look similar to the image below**
+
+
+.. image:: ../images/sso_security_policy.PNG
+
+
 
 Egress Setting
 ------------------
