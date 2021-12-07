@@ -386,7 +386,7 @@ The **Interception Rules** have now been configured.
 **Your Security Policy should look similar to the image below**
 
 
-.. image:: ../images/sso_security_policy.PNG
+.. image:: ../images/sslo_security_policy.PNG
 
 
 
