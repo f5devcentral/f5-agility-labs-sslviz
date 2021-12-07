@@ -49,12 +49,6 @@ Configuring custom SWG Per-Request Policies and URL Category Filters
   runs each time a user makes a URL request.
 
 
-
-.. image:: ../images/url-categories1.PNG
-   :align: center
-   :scale: 50
-
-
 .. image:: ../images/url-categories2.PNG
    :align: center
    :scale: 50
