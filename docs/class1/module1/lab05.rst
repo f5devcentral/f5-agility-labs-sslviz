@@ -389,14 +389,12 @@ The **Interception Rules** have now been configured.
 .. image:: ../images/sslo_security_policy.PNG
 
 
+.. image:: ../images/sslo_security_policy1.PNG
+   :align: center
+
 
   **The Default Rule should be set to Intercept
   and the Service Chain should the SSLOSC_f5OnlyChain**
-
-
-
-.. image:: ../images/sslo_security_policy1.PNG
-
 
 
 
