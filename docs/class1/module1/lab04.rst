@@ -86,4 +86,16 @@ observe the decrypted clear text traffic.
 -  Close out (exit) all Webshell windows.
 
 .. ATTENTION::
-   This is the end of the lab module.
+   This is the end of the lab module, but before we move on to the
+   next lab we will need to remove all previously configured sslo
+   topologies. This process is accomplished by selecting the **SSLO Orchestrator**
+   menu, clicking on **Configuration**, and in the top right corner of the
+   SSLO Guided Configuration UI clicking on the cleanup icon depicted
+   as **trashcan** icon which will cleanup all SSLO object.
+
+   **Note - the sslo cleanup process may take several minutes to complete**
+
+
+.. image:: ../images/sslo_cleanup.PNG
+   :scale: 50 %
+   :align: center
