@@ -48,15 +48,16 @@ Configuring custom SWG Per-Request Policies and URL Category Filters
 - To put a URL filter into effect, you must assign it in a per-request policy which
   runs each time a user makes a URL request.
 
-.. image:: ../images/url-categories1.PNG
-     :align: center
-     :scale: 50
 
+
+.. image:: ../images/url-categories1.PNG
+   :align: center
+   :scale: 50
 
 
 .. image:: ../images/url-categories2.PNG
-    :align: center
-    :scale: 50
+   :align: center
+   :scale: 50
 
 
 
