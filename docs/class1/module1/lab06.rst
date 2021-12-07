@@ -63,7 +63,7 @@ Creating an SWG per-request policy
    the **Create** button.
 
 -  **Name** enter a unique name
--  **Policy Type** select **All**
+-  **Policy Type** select **SSL Orchestrator**
 -  **Incomplete Action** select **All**
 -  **Customization Type** select the appropriate language(s)
 

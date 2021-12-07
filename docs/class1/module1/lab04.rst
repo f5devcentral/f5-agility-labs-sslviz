@@ -91,7 +91,7 @@ observe the decrypted clear text traffic.
    topologies. This process is accomplished by selecting the **SSLO Orchestrator**
    menu, clicking on **Configuration**, and in the top right corner of the
    SSLO Guided Configuration UI clicking on the cleanup icon depicted
-   as **trashcan** icon which will cleanup all SSLO object.
+   as a **trashcan** icon which will cleanup all SSLO object.
 
    **Note - the sslo cleanup process may take several minutes to complete**
 
