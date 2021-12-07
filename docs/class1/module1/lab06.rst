@@ -111,7 +111,8 @@ Testing URL filtering
 - Launch either a web browser of your choice (Firefox, Chrome) and
   test various URL's to ensure the URL Filters are being applied correctly
 
-
+.. ATTENTION::
+     This is the end of the lab.
 
 
 For detailed instructions on creating SWG policies, please see the following resources:
