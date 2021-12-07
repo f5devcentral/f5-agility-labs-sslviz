@@ -4,7 +4,7 @@
 Create the SSL Orchestrator deployment for Secure Web Gateway (SWG)
 ===========================================================================
 
-We will now use the SSL Orchestrator Guided Configuration to configure 
+We will now use the SSL Orchestrator Guided Configuration to configure
 the Secure Web Gateway Service.
 topology.
 
@@ -19,7 +19,7 @@ Initialization
 ------------------
 
 From the left-hand menu, navigate to
-:red:`SSL Orchestrator > Configuration`. 
+:red:`SSL Orchestrator > Configuration`.
 
 .. image:: ../images/module1-1.png
    :align: center
@@ -32,6 +32,9 @@ Take a moment to review the topology options and workflow configuration steps
 involved. Optionally satisfy any of the :red:`DNS, NTP and Route` prerequisites
 from this page. Keep in mind, however, that aside from NTP, the SSLO GC will
 provide an opportunity to define DNS and route settings later in the workflow.
+
+The SSLO Topology type for this lab will be **L3 Outbound Transparent Proxy**
+
 
 .. NOTE::
    DNS and NTP settings have already been defined in this lab.
@@ -101,7 +104,7 @@ topologies:
    provides a transparent path for outbound traffic flows.
 
    **IMPORTANT**
-   
+
    It is important to distinguish SSLO's layer 2 topology from those
    of other traditional layer 2 SSL visibility vendors. Layer 2
    solutions such as the Blue Coat SSL visibility appliance (SSLVA)
@@ -129,8 +132,8 @@ topologies:
 
 -  **Name**: Enter some name (ex. ":red:`sslo_SWGTest`").
 
--  **Protocol**: Select :red:`Any` - this will create separate
-   TCP, UDP and non-TCP/UDP interception rules.
+-  **Protocol**: Select :red:`TCP` - this will create a TCP
+   interception rule.
 
 -  **IP Family**: Select :red:`IPv4`
 
@@ -289,171 +292,57 @@ The **SSL** settings have now been configured.
 -  Click :red:`Save & Next` to continue to the next stage.
 
 
-- **Authentication List** 
+- **Authentication List**
 
    SSL Orchestrator now supports an option to include Authentication services such as
-   an **Online Certificate Status Protocol (OCSP)**.  For this lab we will not be 
+   an **Online Certificate Status Protocol (OCSP)**.  For this lab we will not be
    leveraging the **Authentication** option.   Click :red: `Save & Next`
-   
+
 
 .. image:: ../images/swg-authentication.PNG
 
 
 Services List
 -----------------
+The Services List page is used to define security
+services that attach to SSLO. For this lab we will use the SSLO Guided
+Configuration to insert the F5 Secure Web Gateway (SWG) as an inline security
+service in a service chain for decrypted traffic. This lab will create a
+Transparent Layer-3 SWG service as well as pre-configured Per-Session
+and a default Access Policy which can be modified once the deployment has been
+completed.
+
+
+  Click on the **F5** from the list of Service Properties and select
+  **F5 Secure Web Gateway** then click on Add, and click on Save.
+
 
 .. image:: ../images/swg-services-F5SWG.PNG
    :align: center
 
-The Services List page is used to define security
-services that attach to SSLO. For this lab we will use the SSLO Guided
-Configuration to insert the F5 Secure Web Gateway (SWG) as an inline security
-service in a service chain for decrypted traffic. 
 
-This lab will create a Transparent Layer-3 SWG service as well as default Per-Session
-and Per-Request Access Policies which can be modified once the deployment has been
-completed.  Click :red:`Add Service`, then select the **F5 Secure Web Gateway" servicce
-from the catalog and click :red:`Add`, or simply double-click the service to go
-to its configuration page.
+   Note the Access Profile and the Per Request Policy as follows
+   (/Common/ssloS_F5_SWG.app/ssloS_F5_SWG_M_accessProfile and /common/SWGTest1)
+
+   Enter **Default** for the **Named Scope**
+
+   Select the /Common/SWGTest1 Per Request Policy then click on Save
+
 
 .. image:: ../images/swg-services.PNG
 
 
-   - Click :red:`Done`.
-
-Security Policy
+Services Chain List
 -----------------
 
+  Click **Add** enter a name e.g. **SWGtestchain**
+  Ensure the **ssloS_F5_SWG** is selected the click
+  the right-arrow
 
--  **Device Monitor** - security service definitions can use
-   specific custom monitors. For this lab, leave it set to the default
-   :red:`/Common/gateway_icmp`.
+  Click on save
 
--  **Service Action Down** - SSLO also natively monitors the load balanced
-   pool of security devices, and if all pool members fail, can actively
-   bypass this service (**Ignore**), or stop all traffic (**Reset**,
-   **Drop**). For this lab, leave it set to :red:`Ignore`.
-
--  **Enable Port Remap** - this setting allows SSLO to remap the port of
-   HTTPS traffic flowing across this service. This is advantageous when a
-   security service defines port 443 traffic as encrypted HTTPS and natively
-   ignores it. By remapping HTTPS traffic to a different port number, the security
-   service will inspect the traffic. For this lab, :red:`enable (check)` this
-   option and enter a Remap Port value of :red:`8080`.
-
--  **iRules** - SSLO allows for the insertion of additional iRule logic
-   at different points. An iRule defined at the service only affects traffic
-   flowing across this service. It is important to understand, however, that
-   these iRules must not be used to control traffic flow (ex. pools, nodes,
-   virtuals, etc.), but rather should be used to view/modify application
-   layer protocol traffic. For example, an iRule assigned here could be used
-   to view and modify HTTP traffic flowing to/from the service. Additional
-   iRules are not required here so leave this :red:`empty`.
-
--  Click :red:`Save`.
-
-Inline layer 3 service
-~~~~~~~~~~~~~~~~~~~~~~
-
--  Click on :red:`Add Service`.
-
--  Select the :red:`Generic Inline Layer 3`
-   service from the catalog and click :red:`Add`, or simply double-click
-   it.
-
--  **Name** - enter a unique name to this service (example ":red:`IPS`").
-
--  **IP Family** - this setting defines the IP family used with this layer 3
-   service. Leave it set to :red:`IPv4`.
-
--  **Auto Manage Addresses** - when enabled the Auto Manage Addresses setting
-   provides a set of unique, non-overlapping, non-routable IP addresses to be
-   used by the security service. If disabled, the To and From IP addresses
-   must be configured manually. It is recommended to leave this option
-   :red:`enabled (checked)`.
-
-   **ATTENTION**
-   
-   In environments where SSLO is introduced to existing security
-   devices, it is a natural tendency to not want to have to move these
-   devices. And while SSLO certainly allows it, by not moving the security
-   devices into SSLO-protected enclaves, customers unintentionally run the
-   risk of exposing sensitive decrypted traffic to other devices that may
-   be connected to these existing networks. As a security best practice, it
-   is *highly* recommended to remove SSLO-integrated security devices from
-   existing networks and place them entirely within the isolated enclave
-   that is created and maintained by SSLO.
-
--  **To Service Configuration** - the "To Service" defines the network
-   connectivity from SSLO to the inline security device.
-
-   -  **To Service** - with the Auto Manage Addresses option enabled, this IP
-      address will be pre-defined, therefore the inbound side of the service
-      must match this IP subnet. With the Auto Manage Addresses option
-      disabled, the IP address must be defined manually. For this lab, leave
-      the :red:`198.19.64.7/25` address intact.
-
-   -  **VLAN** - select the :red:`Create New` option, provide a unique name
-      (ex. :red:`IPS_in`), select the F5 interface connecting to the inbound
-      side of the service, and add a VLAN tag value if required. For this lab,
-      select interface :red:`1.6` and VLAN tag :red:`10`.
-
--  **Service Down Action** - SSLO also natively monitors the load balanced
-   pool of security devices, and if all pool members fail, can actively
-   bypass this service (**Ignore**), or stop all traffic (**Reset**,
-   **Drop**). For this lab, leave it set to :red:`Ignore`.
-
--  **L3 Devices** - this defines the inbound-side IP address of the inline
-   layer 3 service, used for routing traffic to this device. Multiple load
-   balanced IP addresses can be defined here. Click :red:`Add`, enter
-   :red:`198.19.64.65`, then click :red:`Done`.
-
--  **Device Monitor** - security service definitions can use
-   specific custom monitors. For this lab, leave it set to the default
-   :red:`/Common/gateway_icmp`.
-
--  **From Service Configuration** - the "From Service" defines the network
-   connectivity from the inline security device to SSLO.
-
-   -  **From Service** - with the Auto Manage Addresses option enabled, this
-      IP address will be pre-defined, therefore the outbound side of the
-      service must match this IP subnet. With the Auto Manage Addresses
-      option disabled, the IP address must be defined manually. For this lab,
-      leave the :red:`198.19.64.245/25` address intact.
-
-   -  **VLAN** - select the :red:`Create New` option, provide a unique name
-      (ex. :red:`IPS_out`), select the F5 interface connecting to the outbound
-      side of the service, and add a VLAN tag value if required. For this lab,
-      select interface :red:`1.6` and VLAN tag :red:`20`.
-
--  **Enable Port Remap** - this setting allows SSLO to remap the port of
-   HTTPS traffic flowing across this service. This is advantageous when a
-   security service defines port 443 traffic as encrypted HTTPS and natively
-   ignores it. By remapping HTTPS traffic to a different port number, the security
-   service will inspect the traffic. For this lab, :red:`enable (check)` this
-   option and enter a Remap Port value of :red:`8181`.
-
--  **Manage SNAT Settings** - SSLO offers an option to enable SNAT
-   (source NAT) across an inline layer 3/HTTP service. The primary use case
-   for this is horizontal SSLO scaling, where independent SSLO devices are
-   scaled behind a separate load balancer but share the same inline layer
-   3/HTTP services. As these devices must route back to SSLO, there are now
-   multiple SSLO devices to route back to. SNAT allows the layer 3/HTTP
-   device to know which SSLO sent the packets for proper routing. SSLO
-   scaling also requires that the Auto Manage option be disabled, to provide
-   separate address spaces on each SSLO. For this lab, leave it set to
-   :red:`None`.
-
--  **iRules** - SSLO allows for the insertion of additional iRule logic
-   at different points. An iRule defined at the service only affects traffic
-   flowing across this service. It is important to understand, however, that
-   these iRules must not be used to control traffic flow (ex. pools, nodes,
-   virtuals, etc.), but rather should be used to view/modify application
-   layer protocol traffic. For example, an iRule assigned here could be used
-   to view and modify HTTP traffic flowing to/from the service. Additional
-   iRules are not required in this lab, so leave this :red:`empty`.
-
--  Click :red:`Save`.
+  The ssloSC_swgservicetext should already by added as the only
+  Service Chain element.
 
 
 Security Policy
@@ -462,8 +351,8 @@ Security Policy
 .. image:: ../images/gc-path-5.png
    :align: center
 
-Security policies are the set of rules that govern how traffic is processed in
-SSLO. The "actions" a rule can take include:
+   Security policies are the set of rules that govern how traffic is processed in
+   SSLO. The "actions" a rule can take include:
 
 - Whether or not to allow the traffic
 
@@ -471,65 +360,7 @@ SSLO. The "actions" a rule can take include:
 
 - Which service chain (if any) to pass the traffic through
 
-The SSLO Guided Configuration presents an intuitive rule-based, drag-and-drop
-user interface for the definition of security policies.
-
-.. image:: ../images/module1-9.png
-
-.. NOTE::
-   In the background, SSLO maintains these security policies as visual
-   per-request policies. If traffic processing is required that exceeds the
-   capabilities of the rule-based user interface, the underlying per-request
-   policy can be modified directly.
-
-.. ATTENTION::
-   If the per-request policy is modifed directly (outside of the
-   SSLO Guide Configuration UI), the SSLO UI can no longer be used afterwards
-   without losing your direct per-request policy modifications.
-
-Add a New Rule
-~~~~~~~~~~~~~~
-
-In this section of the lab, create a **Pinners** rule with the following settings:
-
-  **A Pinners_Rule checks to make sure the content is SSL/TLS. It also checks the category “Pinners” which contains websites with Pinned Certificates. Sites in the category Pinners are automatically set to Bypass decryption.**
-
-.. image:: ../images/module1-9.png
-
--  Click :red:`Save & Next` to create a new rule.
-
--  **Name** - provide a unique name for the rule (ex. ":red:`Pinners_Rule`").
-
--  **Conditions** - Select **Category Lookup SNI** from the drop-down list
-   and then add the :red:`Financial Data and Services` and :red:`Health and Medicine`
-   URL categories. Start typing the category name to narrow the list.
-
-   **NOTE**
-   
-      The **Category Lookup SNI** condition provides categorization for
-      TLS SNI, HTTP Connect and HTTP Host information.
-
--  **Action** - select :red:`Allow`.
-
--  **SSL Forward Proxy Action** - select :red:`Bypass`.
-
--  **Service Chain** - should be set to **None**
-
--  Click :red:`OK`.
-
-  
-The last **Security Policy** rue should be a for **All Traffic** that intercepts but
-does *not* send traffic to any service chain. 
-
-
--  Click :red:`OK`.
-
-   .. image:: ../images/module1-11.png
-
-
-The **Security Policy** has now been configured.
-
--  Click :red:`Save & Next` to continue to the next stage.
+  Enter a name for the Security Policy, then click on Save & Next
 
 
 Interception Rule
@@ -543,43 +374,14 @@ that accept and process different types of traffic (ex. TCP, UDP, other). The
 resulting LTM virtual servers will bind the SSL settings, VLANs, IPs, and
 security policies created in the topology workflow.
 
--  **Source Address** - the source address field provides a filter
-   for incoming traffic based on source address and/or source subnet.
-   It is usually appropriate to leave the default **0.0.0.0%0/0**
-   setting applied to allow traffic from all addresses to be processed.
+The only configuration option in this lab is to
+select the /Common/client-vlan within the **Ingress Network**
+section and select the **right arrow**.  Click on **Save & Next**
 
--  **Destination Address/Mask** - the destination address/mask field
-   provides a filter for incoming traffic based on destination
-   address and/or destination subnet. As this is a transparent
-   forward proxy configuration, it is appropriate to leave the
-   default **0.0.0.0%0/0** setting applied to allow all
-   outbound traffic to be processed.
-
--  **Ingress Network - VLANs** - this defines the VLANs through which traffic
-   will enter. For a transparent forward proxy topology, this would be a
-   client-side VLAN. Select :red:`client-vlan` and move it to the right-hand
-   side.
-
--  **Security Policy Settings - Access Profile** - the Access Profile
-   selection is exposed for both explicit and transparent forward
-   proxy topology deployments. In transparent forward proxy mode,
-   this allows selection of an access policy to support captive
-   portal authentication. For this lab, we will use the
-   
-      **/Common/sslo_SWGTest.app/sslo_SWGTest_accessProfile** 
-   
--  **L7 Interception Rules - Protocols** - FTP and email protocol traffic
-   are all "server-speaks-first" protocols, and therefore SSLO must process
-   these separately from typical client-speaks-first protocols like HTTP. This
-   *optional* selection enables processing of each of these protocols, which create
-   separate port-based listeners for each. In this lab, select :red:`FTP` and
-   move it to the right-hand side.
 
 .. image:: ../images/module1-12.png
 
 The **Interception Rules** have now been configured.
-
--  Click :red:`Save & Next` to continue to the next stage.
 
 
 Egress Setting
@@ -690,5 +492,3 @@ In the above list you will notice the following Virtual Servers have been create
 
 This completes the configuration of SSL Orchestrator deployment
 for Secure Web Gateway (SWG).
-
-
