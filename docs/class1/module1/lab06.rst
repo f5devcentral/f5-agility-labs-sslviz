@@ -112,7 +112,8 @@ Testing URL filtering
   test various URL's to ensure the URL Filters are being applied correctly
 
 
-
+This concludes the SSL Orchestrator lab.
+===========================================================================
 
 For detailed instructions on creating SWG policies, please see the following resources:
 
