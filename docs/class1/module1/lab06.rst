@@ -114,13 +114,13 @@ Applying the new Per-Request policy to SSL Orchestrator
 - establish an **XRDP** session to the **Ubuntu14.04 Desktop Outbound**
   client
 
-- Launch 
+- Launch
 
 
 
 
 For detailed instructions on creating SWG policies, please see the following resources:
 
-#. https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-secure-web-gateway/per-request- policy-configuration-for-swg.html
+#. `<https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-secure-web-gateway/per-request- policy-configuration-for-swg.html>`_
 
-#. https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-secure-web-gateway.html
+#. `https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-secure-web-gateway.html`_
