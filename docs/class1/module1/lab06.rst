@@ -117,7 +117,7 @@ Testing URL filtering
 
 This concludes the SSL Orchestrator lab.
 ===========================================================================
->>>>>>> 7ce22672b31cecf1a371a6184936c421227fdead
+
 
 For detailed instructions on creating SWG policies, please see the following resources:
 
