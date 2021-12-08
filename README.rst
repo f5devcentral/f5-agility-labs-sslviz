@@ -4,8 +4,8 @@ F5 SSL Orchestrator Training Lab Guide
 This repository contains the source for the F5 SSL Orchestrator Training
 Lab Guides.
 
-- SSL Orchestrator v8 - SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2021 | 2 hours)
-- SSL Orchestrator v8 - SSLO 201: Advanced Use Cases (Agility 2021 | 2 hours)
+- SSL Orchestrator v9 - SSLO 101: Essential SSL Visibility with SSL Orchestrator 
+
 
 These labs cover the following topics:
 
@@ -15,6 +15,9 @@ These labs cover the following topics:
 - Outbound and Inbound Use-cases
 - Authentication
 - Topology steering
+- Secure Web Gateway as a Service
+- Per-Request Policies
+- URL Filtering
 
 Expected time to complete: **2 hours or 4 hours** (depending on version)
 
