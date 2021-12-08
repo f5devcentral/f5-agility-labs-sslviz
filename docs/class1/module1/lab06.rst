@@ -110,13 +110,10 @@ Testing URL filtering
 
 - Launch either a web browser of your choice (Firefox, Chrome) and
   test various URL's to ensure the URL Filters are being applied correctly
-<<<<<<< HEAD
-- This concludes the SSL Orchestrator lab
-=======
 
-
-This concludes the SSL Orchestrator lab.
+This concludes the SSL Orchestrator lab
 ===========================================================================
+
 
 
 For detailed instructions on creating SWG policies, please see the following resources:
