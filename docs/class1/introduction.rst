@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-What is F5 SSL Orchestrator?
+**Consolidation of Security with F5 SSL Orchestrator Secure Web Gateway as a Service (SWGaaS)** 
 ================================
 
 Overview
