@@ -1,123 +1,142 @@
 .. role:: red
 .. role:: bred
 
-Configuring custom SWG Per-Request Policies and URL Category Filters
-===========================================================================
+Guided configuration services list
+===================================
 
-**Important Points**
+.. image:: ../images/gc-path-3.png
+   :align: center
+   :scale: 50
 
--  SWG must be licensed and provisioned
--  To get SWG reporting, URL Request logging must be configured
--  Per-Session Access Profiles with a simple **start - allow** are sufficient
-   since the Per-Request policy handles the bulk of SWG processing
--  **Access Profile Scope** - For this lab we will simply be using **Named** scopes
+The Services List page is used to define security
+services that attach to SSLO. The SSLO Guided Configuration includes a services catalog that contains common product
+integrations. Beneath each of these catalog options is one of the
+five basic service types. The service catalog also provides "generic"
+security services. Depending on screen resolution, it may be
+necessary to scroll down to see additional services.
 
--  The first task will be to create a custom URL category filter
+.. image:: ../images/module1-40.png
+   :scale: 50 %
+   :align: center
 
-  You configure a URL filter to specify whether to allow, block, or confirm requests
-  for URLs in URL categories. You can also configure multiple URL filters.  Default URL filters,
-  such as block-all and basic-security, are available.
+.. image:: ../images/module1-41.png
+   :scale: 50 %
+   :align: center
 
-- On the Main tab, click **Access, Policy, Secure Web Gateway, URL Filters.**
-- You can click the name of any filter to view its settings.
+We will initially create one ICAP security service. If time allows, you may create more services using the subsequent optional labs.  
 
-  The URL Filters screen displays.
+For this lab, 
 
-  To configure a new URL filter, click one of these options.
-
-- **Create button** Click to start with a URL filter that allows all categories.
-
-- In the **Name** field, type a unique name for the URL filter.
-
-- Click **Finished.**
-
-  The screen redisplays. An Associated Categories table displays.
-  It includes each URL category and the filtering action that is
-  currently assigned to it. The table includes a Sub-Category column.
-  Any URL categories that were added by administrators are subcategories
-  within Custom Categories. To block access to particular categories
-  or subcategories, select them and click Block.  When you select a category,
-  you also select the related subcategories. You can expand the category
-  and clear any subcategory selections.  Expand the category Miscellaneous,
-  select Uncategorized, and then click **Block.**  To allow access to particular
-  categories or subcategories, select them and click **Allow.**  To indicate that
-  you want a user to confirm that access is work-related or otherwise justified
-  before obtaining access to the URLs in a category, select the categories or
-  subcategories and click **Confirm.**
-
-- To put a URL filter into effect, you must assign it in a per-request policy which
-  runs each time a user makes a URL request.
+- Click :red:`Add`, and select Generic ICAP Service from the catalog and click :red:`Add`, or simply double-click the service to go to its configuration page.
 
 
-.. image:: ../images/url-categories2.PNG
+.. image:: ../images/module1-41.png
    :align: center
    :scale: 50
 
 
+.. note:: The only fields that need to be edited are the ones explicitly mentioned in these bullets.  The other fields may be left with their default value.
 
-Creating an SWG per-request policy
-===========================================================================
+- Name - CLAM_AV
 
-   From the left-hand menu, navigate to
-   **Access, Profiles/Policies, Per-Request Policies**. Click
-   the **Create** button.
+- ICAP Devices - Click :red:`Add`, enter :red:`198.19.97.50` for the IP Address, and :red:`1344` for the Port, and then click :red:`Done`.
 
--  **Name** enter a unique name
--  **Policy Type** select **SSL Orchestrator**
--  **Incomplete Action** select **All**
--  **Customization Type** select the appropriate language(s)
+- Request Modification URI Path - /avscan
 
-   Once complete, edit the new SWG per-request policy VPE.  You can begin
-   adding functionality directly, or you can start with one of the pre-built macro templates.
-   Click the **Add New Macro** button and select from one of the three templates and click
-   **save**.  Now add that macro to the primary policy flow to enable it.  Make any additional
-   modifications as requred.
+- Response Modification URI Path - /avscan
 
+- Preview Max Length(bytes) - 1048576
 
- .. image:: ../images/per-request1.PNG
+-  Click :red:`Save`.
 
+.. image:: ../images/module1-49.png
+   :scale: 50 %
+   :align: center
 
+The image below shows the service list with the new ICAP service.
 
- .. image:: ../images/url-categories3.PNG
+.. image:: ../images/module1-42.png
+   :scale: 50 %
+   :align: center
 
+The first :red:`Service` has now been configured.
 
+-  Click :red:`Save & Next` to continue to the next stage.
 
+.. image:: ../images/module1-4.png
+   :scale: 50 %
+   :align: center
 
-
--  While most options are possible within the SWG per-request policy
-   several are not appropriate for an inline SWG service including the list
-   below.
-
--  Assignment
-      **Pool Assignment**
--  General
-      **IP Based SSL Bypass Set, Server Cert Response Control, Server Cert Status, SSL Check, SSL Intercept Set, SSL Configuration Select**
--  Traffic Management
-      **Proxy Select, Service Connect, Session Check**
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the ICAP Service.
 
 
-Applying the new Per-Request policy to SSL Orchestrator
-===========================================================================
+ICAP service
+-------------
 
--  Once the new Per-Request policy has been configured it can then be applied
-   to the SSL Orchestrator Topology.
+An ICAP service is an RFC 3507-defined service that
+provides some set of services over the ICAP protocol.
 
-Testing URL filtering
-===========================================================================
+-  Click on :red:`Add Service`.
 
-- establish an **XRDP** session to the **Ubuntu14.04 Desktop Outbound**
-  client
+-  Select the :red:`Generic ICAP Service` from the
+   catalog and click :red:`Add`, or simply double-click it.
 
-- Launch either a web browser of your choice (Firefox, Chrome) and
-  test various URL's to ensure the URL Filters are being applied correctly
+-  **Name** - provide a unique name to this service (example ":red:`CLAM_AV`").
 
-This concludes the SSL Orchestrator lab
-===========================================================================
+- **IP Family** - this setting defines the IP family used with this layer 3
+   service. Leave it set to :red:`IPv4`.
 
+-  **ICAP Devices** - this defines the IP address of the ICAP service, used
+   for passing traffic to this device. Multiple load balanced IP addresses
+   can be defined here. Click :red:`Add`, enter :red:`198.19.97.50` for the
+   IP Address, and :red:`1344` for the Port, and then click :red:`Done`.
 
+-  **Device Monitor** - security service definitions can use
+   specific custom monitors. For this lab, leave it set to the default
+   :red:`/Common/tcp`.
 
-For detailed instructions on creating SWG policies, please see the following resources:
+-  **ICAP Headers** - options are **Default** or **Custom**. Selecting
+   **Custom** allows you to specify additional ICAP headers. For this lab,
+   leave the setting at :red:`Default`.
 
-#. `<https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-secure-web-gateway/per-request- policy-configuration-for-swg.html>`_
+-  **OneConnect** - the F5 OneConnect profile improves performance by reusing
+   TCP connections to ICAP servers to process multiple transactions. If the
+   ICAP servers do not support multiple ICAP transactions per TCP connection,
+   do not enable this option. For this lab, leave the OneConnect setting
+   :red:`enabled (checked)`.
 
-#. `https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-secure-web-gateway.html`_
+-  **Request Modification URI Path** - this is the RFC 3507-defined URI request path to
+   the ICAP service. Each ICAP security vendor will differ with respect to
+   request and response URIs, and preview length, so it is important to
+   review the vendor's documentation. In this lab, enter :red:`/avscan`.
+
+-  **Response Modification URI Path** - this is the RFC 3507-defined URI response path to
+   the ICAP service. Each ICAP security vendor will differ with respect to
+   request and response URIs, and preview length, so it is important to
+   review the vendor's documentation. In this lab, enter :red:`/avscan`.
+
+-  **Preview Max Length(bytes)** - this defines the maximum length of the
+   ICAP preview. Each ICAP security vendor will differ with respect to
+   request and response URIs, and preview length, so it is important to
+   review the vendor's documentation. A zero-length preview length implies
+   that data will be streamed to the ICAP service, similar to an HTTP
+   100/Expect process, while any positive integer preview length defines the
+   amount of data (in bytes) that are transmitted first, before streaming the
+   remaining content. The ICAP service in this lab environment does not
+   support a complete stream, so requires a modest amount of initial preview.
+   In this lab, enter :red:`1048576`.
+
+-  **Service Down Action** - SSLO also natively monitors the load balanced
+   pool of security devices. If all pool members fail, SSLO can actively
+   bypass this service (**Ignore**), or stop all traffic (**Reset**,
+   **Drop**). For this lab, leave it set to :red:`Ignore`.
+
+-  **HTTP Version** - this defines whether SSLO sends HTTP/1.1 or HTTP/1.0
+   requests to the ICAP service. The lab's ICAP service supports both.
+
+-  **ICAP Policy** - an ICAP policy is a pre-defined LTM CPM policy that can
+   be configured to control access to the ICAP service based on attributes of
+   the HTTP request or response. ICAP processing is enabled by default, so an
+   ICAP CPM policy can be used to disable the request and/or response ADAPT
+   profiles. Leave this :red:`blank (--Select--)`
+

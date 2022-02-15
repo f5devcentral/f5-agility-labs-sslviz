@@ -1,6 +1,11 @@
-SSL Orchestrator v9 - SSL Orchestrator Consolidated Services Architecture 
-==================================================================================================
+[v8] SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2021 | 2 hours)
+=========================================================================================
 
+.. note::
+
+   **Requires UDF Blueprint: "Agility 2021 - SSL Orchestrator 101"**
+
+   **BIG-IP 16.0 / SSL Orchestrator 8.3**
 
 As the volume of data continues to grow at a rapid pace, more organizations are
 deploying Secure Socket Layer (SSL) and Transport Layer Security (TLS) solutions
@@ -19,11 +24,7 @@ security, and reduces infrastructure efficiencies by:
 
 - Supporting multiple deployment modes for flexibility in integrating with complex architectures
 
-- As of SSL Orchestrator 9.2 you are now able to insert F5’s Secure Web Gateway (SWG) service
- 
-
-Attend this lab to get a hands-on introduction to the F5 SSL Orchestrator solution as well as gain hands-on experience
-configuring the Secure Web Gateway as an SSL Orchestrator Service. 
+Attend this lab to get a hands-on introduction to the F5 SSL Orchestrator solution.
 
 Expected time to complete: **2 hours**
 
