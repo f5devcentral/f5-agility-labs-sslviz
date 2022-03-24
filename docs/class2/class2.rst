@@ -1,14 +1,14 @@
 .. role:: red
 .. role:: bred
 
-[v8] SSLO 201: Advanced Use Cases with SSL Orchestrator (Agility 2021 | 2 hours)
+[v9] SSLO 201: Advanced Use Cases with SSL Orchestrator (Agility 2022 | 2 hours)
 ================================================================================
 
 .. note::
 
-   **Requires UDF Blueprint: "Agility 2021 - SSL Orchestrator 201"**
+   **Requires UDF Blueprint: "Agility 2022 - SSL Orchestrator 201"**
 
-   **BIG-IP 16.0 / SSL Orchestrator 8.3**
+   **BIG-IP 16.1 / SSL Orchestrator 9.2**
 
 As organizational requirements change, so does the need to update security polices and apply additional features to existing F5 SSL Orchestrator deployments.  There is no need to fear required maintenance and regular upkeep of your security strategy. Maintenance can be performed within the SSLO Dashboard. It also provides enhanced statistical information which is needed to differentiate between normal and abnormal traffic.
 
