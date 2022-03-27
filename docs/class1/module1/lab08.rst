@@ -1,88 +1,42 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration security policy
-=====================================
+Guided configuration service chain list
+=======================================
 
-.. image:: ../images/gc-path-5.png
+.. image:: ../images/sc-path.png
    :align: center
-   :scale: 50
+   :scale: 100
 
-Security policies are the set of rules that govern how traffic is processed in
-SSLO. The "actions" a rule can take include:
+Service chains are arbitrarily-ordered lists of security devices. Based on
+environmental requirements, different service chains may contain different
+re-used sets of services, and different types of traffic can be assigned to
+different service chains. For example, HTTP traffic may need to go through all
+of the security services, while non-HTTP traffic goes through a subset, and
+traffic destined to a financial service URL can bypass decryption and still
+flow through a smaller set of security services.
 
-- Whether or not to allow the traffic
+-  Click :red:`Add` to create a new service chain.
 
-- Whether or not to decrypt the traffic
+   -  **Name** - provide a unique name to this service chain
+      (ex.":red:`all_services`").
 
-- Which service chain (if any) to pass the traffic through
+   -  **Services** - select the :red:`CLAM_AV` ICAP service and click the 
+   -  :red:`rightward-pointing arrow` to move it to the :red:`Selected Service Chain Order` side.
 
-The SSLO Guided Configuration presents an intuitive rule-based, drag-and-drop
-user interface for the definition of security policies.
+   -  Click :red:`Save`.
 
-.. image:: ../images/module1-36.png
+.. image:: ../images/module1-38.png
+   :scale: 50 %
    :align: center
-   :scale: 50
-
--  In the Security Policy, click the pencil at the far right of the :red:`All Traffic` rule.
-
-.. image:: ../images/module1-37.png
+.. image:: ../images/module1-39.png
+   :scale: 50 %
    :align: center
-   :scale: 50
 
-- Select the :red:`SSL Forward Bypass Action` drop down menu and select :red:`Bypass`.
+The preliminary :red:`Service Chain` has now been configured.
 
-- Select the :red:`Service Chain` drop down menu and select :red:`ssloSC_all_services`.
-
--  Click :red:`OK`.
-
-The preliminary :red:`Security Policy` has now been configured.
-
-Click :red:`Save & Next` to continue to the next stage.
+-  Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png
    :scale: 50 %
    :align: center
-
-.. tip::
-   In the background, SSLO maintains these security policies as visual
-   per-request policies. If traffic processing is required that exceeds the
-   capabilities of the rule-based user interface, the underlying per-request
-   policy can be modified directly.
-
-.. warning::
-   In a production environment, additional policy customization is possible 
-   manually outside of guided configuration, but strong caution should be taken.
-   If the per-request policy is modified directly, any
-   future guided configuration changes will overwrite the manual changes.
-
-
-.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the security policy.
-
-Security policy
-----------------
-
-   .. NOTE::
-      The **Category Lookup (All)** condition provides categorization for
-      TLS SNI, HTTP Connect and HTTP Host information.
-
-In the list of rules, notice that the **All Traffic** rule intercepts but
-does *not* send traffic to any service chain. 
-
--  **Server Certificate Status Check** - this option
-   inserts additional security policy logic to validate the remote
-   server certificate and return a blocking page to the user if the
-   certificate is untrusted or expired. One or both of the Certificate
-   Response options on the SSL Configuration page (Expire Certificate
-   Response and Untrusted Certificate Response) must be set to 'ignore'.
-   SSLO will "mask" the server certificate's attributes in order to
-   present a blocking page with a valid forged certificate. For this lab,
-   leave this option disabled.
-
--  Proxy Connect - this option allow you to add an upstream explicit proxy
-   to your security rule chaining. You can add multiple proxy devices, or
-   pool members, as necessary. For this lab, leave this option disabled.
-
-
-
-

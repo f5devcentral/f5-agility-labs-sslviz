@@ -40,7 +40,7 @@ the BIG-IP GUI.
    make the lab simpler.
 
    The following information is based on a custom :bred:`UDF` blue print named
-   :bred:`Agility 2021 - SSL Orchestrator 101`.
+   :bred:`Agility 2022 - SSL Orchestrator 101`.
 
 -  **Client side VLAN and subnet are pre-defined** - this is the VLAN
    that an internal client connects to for outbound traffic flows. SSLO
