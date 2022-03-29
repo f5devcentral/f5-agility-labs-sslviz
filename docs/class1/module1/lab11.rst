@@ -1,62 +1,42 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration log settings
-======================================
+Guided configuration egress setting
+===================================
 
-.. image:: ../images/gc-path-8.png
+.. image:: ../images/egress-path.png
    :align: center
-   :scale: 50
+   :scale: 100
 
-Log settings are defined per-topology. In
-environments where multiple topologies are deployed, this can help to
-streamline troubleshooting by reducing debug logging to the affected
-topology.
+Traffic egress settings are defined per-topology and manage both the
+default gateway route and outbound SNAT settings.
 
+-  **Manage SNAT Settings** - enables per-topology instance SNAT settings. For
+   this lab, select :red:`Auto Map`.
 
-.. image:: ../images/module1-14.png
+-  **Gateways** - enables per-topology instance gateway routing. The options
+   include: use the system Default Route, use an existing gateway pool, or
+   create a new gateway. For this lab, select :red:`Create New`.
+
+-  **IPv4 Outbound Gateways** - when creating a new gateway, this section
+   provides the ratio and gateway address settings.
+
+   -  **Ratio** - multiple gateway IP addresses are load balanced in an LTM pool,
+      and the ratio setting allows SSLO to proportion traffic to the gateway
+      members, as required. A ratio of 1 for all members evenly distributes the
+      load across them. For this lab, select :red:`1`.
+
+   -  **Address** - this is the next hop gateway IP address. For this lab, enter
+      :red:`10.1.20.1`.
+
+.. image:: ../images/module1-48.png
    :scale: 50 %
    :align: center
 
-The **Log Settings** have now been configured.
+The **Egress Settings** have now been configured.
 
 -  Click :red:`Save & Next` to continue to the next stage.
 
-.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on Log Settings.
-
-
-Multiple discreet logging options are available:
-
--  **Per-Request Policy** - provides log settings for security policy
-   processing. In Debug mode, this log facility produces an enormous
-   amount of traffic, so it is recommended to only set Debug mode for
-   troubleshooting. Otherwise the most appropriate setting is :red:`Error`
-   to log only error conditions.
-
--  **FTP** - specifically logs error conditions for the built-in FTP
-   listener when FTP is selected among the additional protocols in
-   the Interception Rule configuration. The most appropriate setting
-   is :red:`Error` to log only error conditions.
-
--  **IMAP** - specifically logs error conditions for the built-in
-   IMAP listener when IMAP is selected among the additional protocols
-   in the Interception Rule configuration. The most appropriate
-   setting is :red:`Error` to log only error conditions.
-
--  **POP3** - specifically logs error conditions for the built-in
-   POP3 listener when POP3 is selected among the additional protocols
-   in the Interception Rule configuration. The most appropriate
-   setting is :red:`Error` to log only error conditions.
-
--  **SMTP** - specifically logs error conditions for the built-in
-   SMTP listener when SMTP is selected among the additional protocols
-   in the Interception Rule configuration. The most appropriate
-   setting is :red:`Error` to log only error conditions.
-
--  **SSL Orchestrator Generic** - provides log settings for generic
-   SSLO processing. If Per-Request Policy logging is set to Error,
-   and SSL Orchestrator Generic is set to Information, only the SSLO
-   packet summary will be logged. Otherwise the most appropriate
-   setting is :red:`Error` to log only error conditions.
-
-
+.. image:: ../images/module1-4.png
+   :scale: 100 %
+   :align: center
