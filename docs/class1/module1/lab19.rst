@@ -1,31 +1,47 @@
 .. role:: red
 .. role:: bred
 
-Test the new TAP service (optional - time permitting)
-============================================================
+Associate new services to service chains (optional - time permitting)
+=========================================================================
 
-One way to see if the security service is seeing decrypted traffic is to log into the 
-console shell and run a  tcpdump capture on the
-interface. A tcpdump capture usually requires *root* or *sudo* access.
+In this section, you will associate the newly created services to service chains.
 
+- Return to SSL Orchestrator Guided Configuration.
 
-Let's check if we see clear-text data on the TAP device.
+- Select the :red:`demoL3` topology.
 
--  In the UDF UI, select the :red:`Access` drop down selection on the :red:`Ubuntu18.04 Services` VM,
-   then select :red:`WEB SHELL`.
+- In the configuration summary, find the row labeled :red:`Service Chain` and click on the pencil at the far right.
 
--  In the web shell window, perform a packet capture using :red:`tcpdump`. The
-   client machine's IP address is :red:`10.1.10.50`.
+- Click on the :red:`ssloSC_all_services` service chain.
 
-.. code-block:: bash
+- Add all of the newly created services in the :red:`Services Available` column to the :red:`Selected Service Chain Order` column.
 
-   sudo tcpdump -lnni br0 -Xs0 host 10.1.10.50
+- Click :red:`Save`.
 
--  Browse to an HTTPS web site (e.g., https://www.cnn.com) from the
-   :red:`Ubuntu18.04 Client` machine (RDP session)
-   and notice that the TAP device is receiving traffic unencrypted.
+- Click :red:`OK` on the :red:`Continue Save?` confirmation.
 
--  Return to the web shell and press :red:`<CTRL-C>` to stop the tcpdump.
+- Check :red:`Add` to add a new service chain.
 
-.. ATTENTION::
-   This is the end of the lab.  Be sure to check out the SSL Orchestrator 201 lab for more.
+- Enter a name such as :red:`L2_services`.
+
+.. note:: Guided configuration automatically adds a prefix to object names.  The complete name in this instance will be :red:`ssloSC_L2_services`.
+
+- Move the :red:`FireEye` and :red:`TAP services` from the :red:`Services Available` column to the :red:`Selected Service Chain Order` column.
+
+- Click :red:`Save`.
+
+.. image:: ../images/module1-21.png
+   :scale: 50 %
+   :align: center
+
+The **Service Chains** have now been configured.
+
+- Pause for a few seconds and the yellow banner shown below will appear at the very top of the :red:`Interception Rule` settings.
+
+.. image:: ../images/module1-22.png
+   :scale: 50 %
+   :align: center
+
+- Click :red:`Deploy`.
+
+In the next section, you will test the newly created TAP service.

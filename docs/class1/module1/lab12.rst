@@ -1,54 +1,60 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration summary
-=============================
+Guided configuration log settings
+======================================
 
-.. image:: ../images/gc-path-9.png
+.. image:: ../images/log-path.png
    :align: center
-   :scale: 50
+   :scale: 100
 
-The summary page presents an expandable list of all of the workflow-configured
-objects. To expand the details for any given setting, click the corresponding
-arrow icon on the far right. To edit any given setting, click the corresponding
-pencil icon. Clicking the pencil icon will send the workflow back to the
-selected settings page.
-
-
-.. image:: ../images/module1-15.png
-   :scale: 50 %
-   :align: center
-
-- When satisfied with the defined settings, click :red:`Deploy`.
+Log settings are defined per-topology. In
+environments where multiple topologies are deployed, this can help to
+streamline troubleshooting by reducing debug logging to the affected
+topology.
 
 
-.. image:: ../images/module1-31.png
-
-Upon successfully deploying the configuration, SSL Orchestrator will now
-display a **Configure** view:
-
-.. image:: ../images/module1-46.png
-   :scale: 50 %
+.. image:: ../images/module1-14.png
+   :scale: 100 %
    :align: center
 
-The **Interception Rules** tab shows the listeners that were created per the
-selected topology.
+The **Log Settings** have now been configured.
 
-.. image:: ../images/module1-47.png
-   :scale: 50 %
-   :align: center
+-  Click :red:`Save & Next` to continue to the next stage.
 
-In the above list:
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on Log Settings.
 
-- The **-in-t-4** listener defines normal TCP IPv4 traffic.
 
-- The **-in-u-4** listener defines normal UDP IPv4 traffic.
+Multiple discreet logging options are available:
 
-- The **-ot-4** listener defines normal non-TCP/non-UDP IPv4 traffic.
+-  **Per-Request Policy** - provides log settings for security policy
+   processing. In Debug mode, this log facility produces an enormous
+   amount of traffic, so it is recommended to only set Debug mode for
+   troubleshooting. Otherwise the most appropriate setting is :red:`Error`
+   to log only error conditions.
 
-This completes the Guided Configuration of SSL Orchestrator as a
-transparent forward proxy.
+-  **FTP** - specifically logs error conditions for the built-in FTP
+   listener when FTP is selected among the additional protocols in
+   the Interception Rule configuration. The most appropriate setting
+   is :red:`Error` to log only error conditions.
 
-In the next section, you will use an internal client
-**(Ubuntu18.04 Client)** to browse to external (Internet)
-resources. Decrypted traffic will flow across the security service.
+-  **IMAP** - specifically logs error conditions for the built-in
+   IMAP listener when IMAP is selected among the additional protocols
+   in the Interception Rule configuration. The most appropriate
+   setting is :red:`Error` to log only error conditions.
+
+-  **POP3** - specifically logs error conditions for the built-in
+   POP3 listener when POP3 is selected among the additional protocols
+   in the Interception Rule configuration. The most appropriate
+   setting is :red:`Error` to log only error conditions.
+
+-  **SMTP** - specifically logs error conditions for the built-in
+   SMTP listener when SMTP is selected among the additional protocols
+   in the Interception Rule configuration. The most appropriate
+   setting is :red:`Error` to log only error conditions.
+
+-  **SSL Orchestrator Generic** - provides log settings for generic
+   SSLO processing. If Per-Request Policy logging is set to Error,
+   and SSL Orchestrator Generic is set to Information, only the SSLO
+   packet summary will be logged. Otherwise the most appropriate
+   setting is :red:`Error` to log only error conditions.

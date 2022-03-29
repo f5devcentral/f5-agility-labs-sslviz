@@ -4,9 +4,9 @@
 Guided configuration SSL configurations
 ==========================================
 
-.. image:: ../images/gc-path-2.png
+.. image:: ../images/ssl-path.png
    :align: center
-   :scale: 50
+   :scale: 100
 
 This page defines the specific SSL settings for the selected topology (in this
 case a forward proxy) and controls both client-side and server-side SSL

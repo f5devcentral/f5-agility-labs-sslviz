@@ -4,9 +4,9 @@
 Guided configuration topology
 ================================
 
-.. image:: ../images/gc-path-1.png
+.. image:: ../images/topology-path.png
    :align: center
-   :scale: 50
+   :scale: 100
 
 SSLO creates discrete configurations based
 on the selected topology. For example, in previous versions of SSLO,
