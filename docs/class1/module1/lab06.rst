@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration SSL configurations
+Guided configuration Authentication
 ==========================================
 
 .. image:: ../images/auth-path.png
