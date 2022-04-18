@@ -10,8 +10,7 @@ If needed, review the previous section
 **For this lab:**
 
 -  Using your web browser (Chrome/Chromium preferred), open a :red:`TMUI (HTTPS)` session 
-   to the :red:`SSLO Primary` component via UDF.
-   
+   to the :red:`SSLO Primary` component via UDF. 
 -  Login as :red:`admin` with password :red:`agility`.
 
 .. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context regarding how the UDF lab hosts are connected and how they relate to each other.
