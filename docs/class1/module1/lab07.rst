@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration services list
+Guided configuration Service
 ===================================
 
 .. image:: ../images/service-path.png
@@ -23,7 +23,7 @@ We will initially create one ICAP security service. If time allows, you may crea
 
 For this lab, 
 
-- Click :red:`Add`, and select Generic ICAP Service from the catalog and click :red:`Add`, or simply double-click the service to go to its configuration page.
+- Click :red:`Add`, and select "Generic ICAP Service" from the catalog under "ICAP" tab, and click :red:`Add`, or simply double-click the service to go to its configuration page.
 
 
 .. image:: ../images/service-icap.png

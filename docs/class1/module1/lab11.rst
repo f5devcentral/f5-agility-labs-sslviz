@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration egress setting
+Guided configuration Egress Setting
 ===================================
 
 .. image:: ../images/egress-path.png

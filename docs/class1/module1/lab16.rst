@@ -13,13 +13,13 @@ Enable SSL bypass
 
 - Click on the :red:`sslo_demoL3` topology.
 
-- In the configuration summary, find the row labeled :red:`Security Policy`.
+- In the configuration summary, find the row labeled :red:`Security Policy`, click on the pencil at the far right.
 
 Here, you will create a an additional rule for "Financial Data and
 Services" and "Health and Medicine" URL categories.
 
    .. image:: ../images/module1-30.png
-      :scale: 50 %
+      :scale: 100 %
       :align: center
 
 -  Click :red:`Add` to create a new rule.
@@ -48,7 +48,7 @@ Services" and "Health and Medicine" URL categories.
 
 Rule list after URL-based selective decryption
    .. image:: ../images/module1-28.png
-      :scale: 50 %
+      :scale: 100 %
       :align: center
 
 - Click :red:`Save & Next`.
@@ -57,7 +57,7 @@ Rule list after URL-based selective decryption
 
 
 .. image:: ../images/module1-22.png
-   :scale: 50 %
+   :scale: 100 %
    :align: center
 
 - Click :red:`Deploy`.

@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Enable Decryption and Test Behavior
+Enable decryption and test behavior
 ===================================
 
 This test will demonstrate that:
@@ -30,7 +30,7 @@ Enable decryption within the security policy
 - Pause for a few seconds and the yellow banner shown below will appear at the very top of the :red:`Interception Rule` settings.
 
 .. image:: ../images/module1-22.png
-   :scale: 50 %
+   :scale: 100 %
    :align: center
 
 - Click :red:`Deploy`.
@@ -48,7 +48,7 @@ Server certificate test
 
 - Open Chromium web browser on the outbound client system and :red:`open a new incognito or private browsing session`. This is to ensure the browser establishes an entirely new session and does not reuse cached content.
 
-- Once the site opens in the browser, check the server certificate of the site and verify that it is now issued by the local CA configured in SSLO. This confirms that the SSL forward proxy and certificate re-write functionality enabled by SSL Orchestrator is now working correctly.
+- Navigate to https://www.google.com. Once the site opens in the browser, check the server certificate of the site and verify that it is now issued by the local CA configured in SSLO. This confirms that the SSL forward proxy and certificate re-write functionality enabled by SSL Orchestrator is now working correctly.
 
 .. image:: ../images/module1-20.png
    :scale: 50 %
@@ -64,7 +64,7 @@ Decrypted traffic test on the security service
 - Navigate once again to https://eicar.org/?page_id=3950. Scroll down to the section labeled :red:`Download area using the secure, SSL enabled protocol HTTPS` and click on :red:`eicar.com`. 
 
 .. image:: ../images/module1-32.png
-   :scale: 50 %
+   :scale: 100 %
    :align: center
 
 **Notice that this time, the download is prevented and the user is presented a block page because the file was decrypted prior to scanning.**

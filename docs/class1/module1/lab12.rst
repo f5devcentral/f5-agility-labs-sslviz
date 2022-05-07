@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration log settings
+Guided configuration Log Settings
 ======================================
 
 .. image:: ../images/log-path.png

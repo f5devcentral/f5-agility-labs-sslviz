@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration security policy
+Guided configuration Security Policy
 =====================================
 
 .. image:: ../images/secpolicy-path.png
@@ -22,7 +22,7 @@ user interface for the definition of security policies.
 
 .. image:: ../images/module1-36.png
    :align: center
-   :scale: 50
+   :scale: 100
 
 -  In the Security Policy, click the pencil at the far right of the :red:`All Traffic` rule.
 
@@ -30,9 +30,9 @@ user interface for the definition of security policies.
    :align: center
    :scale: 100
 
-- Select the :red:`SSL Proxy Action` drop down menu and select :red:`Bypass`.
+- Click on the :red:`SSL Proxy Action` drop down menu and select :red:`Bypass`.
 
-- Select the :red:`Service Chain` drop down menu and select :red:`ssloSC_all_services`.
+- Click on the :red:`Service Chain` drop down menu and select :red:`ssloSC_all_services`.
 
 -  Click :red:`OK`.
 
