@@ -11,14 +11,14 @@ This lab will create one of each remaining type of security service.
 - Click on the :red:`sslo_demoL3` topology.
 
 - In the configuration summary, find the row labeled :red:`Service` and click on the pencil at the far right.
+- Click :red:`Add Service`, then select a service from the catalog.
 
 .. image:: ../images/add-service.png
    :scale: 100 %
    :align: center
 
-- Click :red:`Add Service`, then select a service from the catalog.
 
-- click :red:`Add`, or simply double-click the service to go to its configuration page.
+- click :red:`Add` at bottom right, or simply double-click the service to go to its configuration page.
 
 Inline layer 2 service
 --------------------------
@@ -86,7 +86,7 @@ Inline layer 3 service
 -  Click on :red:`Add Service`.
 
 -  Select the :red:`Generic Inline Layer 3`
-   service from the catalog and click :red:`Add`, or simply double-click
+   service from the catalog under "Inline L3" tab and click :red:`Add`, or simply double-click
    it.
 
 -  **Name** - enter a unique name to this service (example ":red:`IPS`").
@@ -188,7 +188,7 @@ An inline HTTP service is defined as an explicit or transparent proxy for HTTP (
 
 -  Click on :red:`Add Service`.
 
--  Select the :red:`Cisco WSA HTTP Proxy` service from the catalog
+-  Select the :red:`Cisco WSA HTTP Proxy` service from the catalog under "Inline HTTP" tab
    and click :red:`Add`, or simply double-click it.
 
    -  **Name** - provide a unique name to this service (example ":red:`Proxy`").
@@ -296,7 +296,7 @@ A TAP service is a passive device that simply receives a copy of traffic.
 -  Click on :red:`Add Service`.
 
 -  Select the :red:`Cisco Firepower Threat Defense TAP`
-   service from the catalog and click :red:`Add`, or simply double-click it.
+   service from the catalog under "TAP" tab and click :red:`Add`, or simply double-click it.
 
 -  **Name** - provide a unique name to this service (example ":red:`TAP`").
 

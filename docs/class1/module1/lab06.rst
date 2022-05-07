@@ -8,13 +8,13 @@ Guided configuration Authentication
    :align: center
    :scale: 100
 
-In 9.0 and above，a new Authentication List workflow exists to create authentication mechanisms
+In 9.0 and above, a new Authentication List workflow exists to create authentication mechanisms
 for  a  topology.  In  this  initial  release,  the  Authentication  List  simply  contains  an  OCSP  Responder 
 configuration. The list of authentication mechanisms will grow in subsequent versions.
 
 .. image:: ../images/auth-list.png
    :align: center
-   :scale: 5
+   :scale: 100
 
 Essentially, this OCSP Responder configuration creates an OCSP service on the client side. An iRule 
 is then added to the interception rule VIP that inserts the FQDN into the forged server certificate 

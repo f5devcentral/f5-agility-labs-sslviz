@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration service chain list
+Guided configuration Service Chain
 =======================================
 
 .. image:: ../images/sc-path.png
@@ -21,8 +21,7 @@ flow through a smaller set of security services.
    -  **Name** - provide a unique name to this service chain
       (ex.":red:`all_services`").
 
-   -  **Services** - select the :red:`CLAM_AV` ICAP service and click the 
-   -  :red:`rightward-pointing arrow` to move it to the :red:`Selected Service Chain Order` side.
+   -  **Services** - select the :red:`CLAM_AV` ICAP service and click the :red:`rightward-pointing arrow` to move it to the :red:`Selected Service Chain Order` side.
 
    -  Click :red:`Save`.
 

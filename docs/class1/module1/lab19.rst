@@ -6,11 +6,7 @@ Associate new services to service chains (optional - time permitting)
 
 In this section, you will associate the newly created services to service chains.
 
-- Return to SSL Orchestrator Guided Configuration.
-
-- Select the :red:`demoL3` topology.
-
-- In the configuration summary, find the row labeled :red:`Service Chain` and click on the pencil at the far right.
+- In the :red:`Service Chain List` section of the guided configuration
 
 - Click on the :red:`ssloSC_all_services` service chain.
 
@@ -39,7 +35,7 @@ The **Service Chains** have now been configured.
 - Pause for a few seconds and the yellow banner shown below will appear at the very top of the :red:`Interception Rule` settings.
 
 .. image:: ../images/module1-22.png
-   :scale: 50 %
+   :scale: 100 %
    :align: center
 
 - Click :red:`Deploy`.
