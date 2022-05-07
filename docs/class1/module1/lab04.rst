@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration topology
+Guided configuration Topology
 ================================
 
 .. image:: ../images/topology-path.png

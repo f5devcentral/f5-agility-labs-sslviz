@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration SSL configurations
+Guided configuration SSL Configuration
 ==========================================
 
 .. image:: ../images/ssl-path.png

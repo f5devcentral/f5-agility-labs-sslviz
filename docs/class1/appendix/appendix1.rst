@@ -90,7 +90,7 @@ There is simply nothing better than debug logging for troubleshooting SSL interc
    tail -f -n 0 /var/log/apm
 
 
-SSL Inspection
+SSL inspection
 --------------
 
 .. code-block:: bash
@@ -102,7 +102,7 @@ SSL Inspection
 TLS is rarely the issue, but a sight or configuration error may render some sites inaccessible.
 
 
-Control the URL Filtering Database
+Control the URL Filtering database
 ----------------------------------
 
 To show the current status of the database:
@@ -124,7 +124,7 @@ To verify that the URL DB is actively updating:
    tcpdump  -lnni 0.0 port 80 and host 204.15.67.80
 
 
-External Testing
+External testing
 ----------------
 
 Enter the site's address into the SSLLabs.com server test site at :red:`https://www.ssllabs.com/ssltest/` to see if the site has any unusual SSL/TLS requirements.

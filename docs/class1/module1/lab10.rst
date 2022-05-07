@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration interception rule
+Guided configuration Interception Rule
 ========================================
 
 .. image:: ../images/incrule-path.png

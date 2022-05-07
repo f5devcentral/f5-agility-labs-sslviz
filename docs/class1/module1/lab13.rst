@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration summary
+Guided configuration Summary
 =============================
 
 .. image:: ../images/summary-path.png
@@ -33,7 +33,7 @@ display a **Configure** view:
 The **Interception Rules** tab shows the listener that were created per the
 selected topology.
 
-.. image:: ../images/summary-2.png
+.. image:: ../images/summary-ir.png
    :scale: 100 %
    :align: center
 

@@ -20,7 +20,7 @@ For this lab:
 -  Review your dashboard, which should look similar to the image below.
 
 .. image:: ../images/module1-25.png
-   :scale: 50 %
+   :scale: 100 %
    :align: center
 
 .. note:: This is the end of the main section of this lab.  You are welcome to proceed to the remaining optional sections if time permits.
