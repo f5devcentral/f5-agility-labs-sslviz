@@ -1,44 +1,46 @@
 .. role:: red
 .. role:: bred
 
-Create a new Cisco Firepower Threat Defense TAP service
+Enable NTLM authentication on explicit proxy topology
 ================================================================================
 
--  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**
+The **f5labs_explicit** topology does not perform user authentication by default. You will now enable NTLM authentication for all users who connect to the explicit proxy.
 
--  Select the **Services** tab in the middle of the main display area. Notice that the already configured HTTP Service, **ssloS\_SquidProxy**, is already present.
+1.  From the Main menu on the left, select **SSL Orchestrator > Configuration**
 
--  Click the **Add** button above the list of services
+   |SSL-Orchestrator-Configuration|
 
--  Type  ``firepower`` in the **Search** box
+2.  In the Topology list click on **sslo_f5labs_explicit**. The topology summary screen will appear.
 
--  Select **Cisco Firepower Threat Defense TAP** and click the **Add** button
+3.  Click the edit icon (|pencil|) to the right of **Interception Rule**
 
-.. image:: ../images/ciscofp-1.png
-   :alt: Cisco Firepower Service Configuration
+   |topology-summary-IR-edit|
 
-|
-
--  On the **Service Properties** screen enter the following values:
-
-   -  **Name -** enter ``CiscoFP`` as the name for this service.
-
-   -  **Description -** enter ``Cisco Firepower TAP``.
-
-   -  **MAC Address -** for a TAP service that is not directly connected to F5 SSLO, enter the device's actual MAC address. For a TAP service that is directly connected to F5 SSLO, the MAC address does not matter and can be arbitrarily defined. For this lab, enter ``12:12:12:12:12:12``.
-
-   -  **VLAN -** this defines the interface connecting F5 SSLO to the TAP service. Select **Create New** and ``TAP_in`` as the name.
-
-   -  **Interface -** select the **1.6** interface.
-
-   -  **Tag -** this is the 802.1q VLAN tag for service. Leave it **empty** since this service is connected to an untagged interface.
-
-   -  **Enable Port Remap -** this setting allows SSLO to remap the port of HTTPS traffic flowing to this service. For this lab, leave the option **disabled** (unchecked).
+4.  Select **/Common/f5labs-ntlm-ap** from the **Access Profile** drop down menu
 
 
-.. image:: ../images/ciscofp-2.png
-   :alt: Cisco Firepower Service Configuration
+.. image:: ../images/ntlm-access-profile.png
+   :alt: Access Profile for NTLM Authentication
 
-|
 
--  Click the **Save & Next** button.
+5.  Click **Save & Next** at the bottom of the screen
+
+6.  The **Egress Settings** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button (see example below).
+
+   |egress-settings-deploy-ribbon|
+
+7.  Click **OK** to acknowledge the successful deployment.
+
+.. |topology-summary-IR-edit| image:: ../images/topology-summary-IR-edit.png
+   :alt: Edit Interception Rule from Topology Summary
+
+.. |pencil| image:: ../images/pencil.png
+   :width: 20px
+   :height: 20px
+   :alt: Pencil Icon
+
+.. |SSL-Orchestrator-Configuration| image:: ../images/SSL-Orchestrator-Configuration.png
+   :alt: SSL Orchestrator -> Configuration 
+
+.. |egress-settings-deploy-ribbon| image:: ../images/egress-settings-deploy-ribbon.png
+   :alt: Deploy Ribbon on Egress Settings

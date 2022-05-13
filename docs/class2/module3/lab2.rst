@@ -1,45 +1,102 @@
 .. role:: red
 .. role:: bred
 
-Modify Existing Topology
+Create Existing Application L3 Inbound Topology
 ================================================================================
 
-Modify the existing **f5labs_explicit** topology so that it uses a different IP address and listens on an empty VLAN. The current IP address will be re-assigned to the topology steering virtual server in a later step.
+Now that we have our WAFaaS device and security chain created, we will now create an **Existing Application** topology that will be used to protect our vulnerable **Juiceshop** application.
 
--  From the Main menu on the left, select **SSL Orchestrator > Configuration**
+1. Click on **SSL Orchestrator** and select **Configuration**
 
--  In the Topology list click on **sslo_f5labs_explicit**. The topology summary screen will appear.
+|SSL-Orchestrator-Configuration|
 
--  Click the edit icon (|pencil|) to the right of **Interception Rule**
+2. Click **Add** under the **Topologies** menu item.
 
-   |topology-summary-IR-edit|
+|add-topologies|
 
--  Change the **IPV4 Address** to ``10.1.10.151``.
+3. Click **Next** through the Topology Information page.
 
--  In the **VLANs** section, remove **client-vlan** from the **Selected** column.
+4. Next to **Name**,  ``WAFaaS_inbound``. Select **Existing Application** under **SSL Orchestrator Topologies**. CLick **Save & Next** once complete.
 
--  Add **yyy-vlan** to the **Selected** column.
+|Topology-Properties|
 
--  Click **Save & Next** at the bottom of the screen
+5. Since we already created the **WAFaaS** service, we can click **Save & Next** and go to the next page.
+
+|services-save|
+
+6. Since we already created the **WAFaaS** service chain, we can click **Save & Next** and go to the next page.
+
+|service-chain-save|
+
+7. We will need to adjust the **All Traffic** rule for our **WAFaaS_inbound** security policy. Click the |pencil| to the right of the **All Traffic** rule.
+
+|security-policy-pencil|
+
+8. Select the **ssloSC_WAFaaS** under **Service Chain** and click **OK**. Click **Save & Next** when complete.
+
+|security-policy-service-chain|
+
+9. Click **Deploy** to deploy your new **Existing Application** topology.
+
+|WAFaaS_Inbound-topology-deploy|
+
+10. Click **OK** to acknowledge the successful deployment.
+
+|OK-Deployment|
+
+|WAFaaS_Inbound-topology-complete|
+
+Now we just need to add the access policies associated with the **WAFaaS_Inbound** topology to the **Juiceshop** Virtual Server.
+
+11. Click on **Local Traffic>>Virtual Servers>>Virtual Server List**. Click on the link for the **juiceshop-vs** virtual server.
+
+|juiceshop-vs-01|
+
+12. Scroll down about 3/4 of the way down the page to find the **Access Policy** section. Next to **Access Profile**, select **ssloDefault_accessProfile** and also select **ssloP_WAFaaS_inbound_per_req_policy** next to **Per-Request Policy**. Click **Update** when done.
+
+|virtual-server-access-policy|
+
+Congratulations! You have now successfully deployed WAFaaS for an existing application. Let's now go back to the Ubuntu Client and run the same SQL-injection attack to see if WAF is doing its job.
 
 
-.. image:: ../images/intercept-new-ip-vlan.png
-   :alt: Proxy Server Settings - New IP and VLAN
 
 
--  The **Egress Settings** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button (see example below).
-
-   |egress-settings-deploy-ribbon|
-
--  Click **OK** to acknowledge the successful deployment.
-
-.. |topology-summary-IR-edit| image:: ../images/topology-summary-IR-edit.png
-   :alt: Edit Interception Rule from Topology Summary
 
 .. |pencil| image:: ../images/pencil.png
-   :width: 20px
-   :height: 20px
-   :alt: Pencil Icon
+   :alt: Pencil
 
-.. |egress-settings-deploy-ribbon| image:: ../images/egress-settings-deploy-ribbon.png
-   :alt: Deploy Ribbon on Egress Settings
+.. |add-topologies| image:: ../images/add-topologies.png
+   :alt: Under topologies, Click Add
+
+.. |SSL-Orchestrator-Configuration| image:: ../images/SSL-Orchestrator-Configuration.png
+   :alt: Go to SSL Orchestrator -> Configuration
+
+.. |Topology-Properties| image:: ../images/Topology-Properties.png
+   :alt: Adding Existing Application topology
+
+.. |services-save| image:: ../images/services-save.png
+   :alt: Services Save & Next
+
+.. |service-chain-save| image:: ../images/service-chain-save.png
+   :alt: Service Chain Save & Next
+
+.. |security-policy-pencil| image:: ../images/security-policy-pencil.png
+   :alt: Make changes to All Traffic rule
+
+.. |security-policy-service-chain| image:: ../images/security-policy-service-chain.png
+   :alt: Security Policy > Service Chain Save & Next
+
+.. |WAFaaS_Inbound-topology-deploy| image:: ../images/WAFaaS_Inbound-topology-deploy.png
+   :alt: WAFaaS_Inbound topology deploy
+
+.. |OK-Deployment| image:: ../images/OK-Deployment.png
+   :alt: OK deployment
+
+.. |WAFaaS_Inbound-topology-complete| image:: ../images/WAFaaS_Inbound-topology-complete.png
+   :alt: Deployment Complete
+
+.. |juiceshop-vs-01| image:: ../images/juiceshop-vs-01.png
+   :alt: Juiceshop Virtual Server
+
+.. |virtual-server-access-policy| image:: ../images/virtual-server-access-policy.png
+   :alt: Completed topology deployment
