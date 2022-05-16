@@ -1,14 +1,17 @@
 .. role:: red
 .. role:: bred
 
-Transparent Authentication Using NTLM
+Internal Layered SSL Orchestrator Architecture
 ================================================================================
 
-While SSL Orchestrator is providing visibility into SSL traffic, a large amount of data may be collected and logged by the orchestrated security services. The volume of data and lack of easily identifiable client traffic can hinder troubleshooting efforts, especially if there are shared computers in the workplace or if users are coming from behind a NAT. In addition to facilitating more detailed logging, security services may use this additional information to make policy decisions (ex. an HTTP proxy allowing access to specific resources based on username or group membership).
+In this lab, you will learn how to implement an *internal* layered SSL Orchestrator architecture to conditionally steer traffic to various SSLO topologies. This 2-tiered architecture enables support for more complex deployment scenarios, while also helping to simplify the SSL Orchestrator configuration.
 
-SSL Orchestrator, combined with BIG-IP Access Policy Manager (APM), provides the ability to enable transparent passwordless authentication via NTLM and Kerberos. Data from the authenticated user (ex. username) can then be passed on to security services, such as an HTTP proxy service.
 
-This lab takes you through the process required to enable NTLM authentication and to send the authenticated username to the Squid proxy service.
+.. note::
+   This methodology is documented in the following Github repository:
+   `f5devcentral/sslo-script-tools/internal-layered-architecture <https://github.com/f5devcentral/sslo-script-tools/tree/main/internal-layered-architecture>`_.
+   
+   It consists of a set of iRules which reduce deployment complexity by treating SSL Orchestrator topologies as functions.
 
 
 .. toctree::
