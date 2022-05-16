@@ -1,55 +1,33 @@
 .. role:: red
 .. role:: bred
 
-Verify authentication is currently disabled
+Verify Pre-requisite SSL Orchestrator Configuration
 ================================================================================
 
--  Start a TMUI session on **SSL Orchestrator** and log in if prompted (*Components > SSL Orchestrator > ACCESS > TMUI*)
+1.  If not already connected to the **SSL Orchestrator** TMUI, log into the TMUI *(Components > SSL Orchestrator > ACCESS > TMUI)*
 
       |credentials_link|
 
 
--  From the Main menu on the left, select **Access > Overview > Active Sessions**. The following screen should appear. You should see an **Active Session Count** of **0** and that there are no sessions listed in the table.
+2.  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**. When the SSL Orchestrator dashboard finishes loading, the following deployment should already be present.
 
-.. image:: ../images/active-sessions-none.png
-   :alt: Active Sessions (None)
-
-.. important::
-
-   For this lab exercise, you will be using the **WINDOWS CLIENT** machine instead of the **Ubuntu18.04 Client** machine
-   that you used in the other lab exercises.
+   .. image:: ../images/config-dashboard.png
+      :alt: SSL Orchestrator Configuration Dashboard
 
 
--  Start an RDP session to the **Windows Client** (*Systems > Windows Client > ACCESS > RDP*)
+3.  Select **Security Policies** from the horizontal menu. You should now be presented with following screen:
 
-.. image:: ../images/udf-windows-client-rdp.png
-   :alt: Windows Client RDP Access
-
-- Open the RDP file to connect.
-
-- At the authentication prompt, click on **More choices** to show additional logon options. Then click on **Use a different account**.
-
-.. image:: ../images/windows-logon-1.png
-   :alt: RDP Client Logon - Use a different account
-
--  Login in as user: ``F5LABS\mike`` with password: ``agility``
-
-.. image:: ../images/windows-logon-2.png
-   :alt: Windows Logon - domain\user and password
-
--  Accept any connection/security prompts.
-
-.. note::
-   Please be patient. The Windows machines are running with limited resources, so may be slow at times.
+   .. image:: ../images/security-policy-overview.png
+      :alt: Security Policy Overview
 
 
--  Using Chrome, browse to ``https:\\www.f5.com``.
+4.  Click on **ssloP\_f5labs\_explicit** and you will see the rules that are currently configured under this security policy.
 
-.. note::
-   Chrome is already configured to use the f5labs_explicit topology's proxy (10.1.10.150:3128) for Internet browsing.
+   .. image:: ../images/updated-security-policy.png
+      :alt: Security Policy Rules
 
+5.  Click on **Cancel** to return to the Topology list.
 
--  Refresh the previously shown TMUI screen. You should still see an **Active Session Count** of **0**.
 
 
 .. |credentials_link| raw:: html

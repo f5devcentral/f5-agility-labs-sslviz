@@ -1,27 +1,28 @@
 .. role:: red
 .. role:: bred
 
-Create a new "All Services" Service Chain
+Verify that user information is being identified on the F5 SSL Orchestrator
 ================================================================================
 
-You now need to create a new Service Chain containing the Squid Proxy and the Cisco Firepower TAP services.
+1.  On the **Windows Client**, use Chrome to browse to ``https:\\www.f5.com``.
 
--  On the **Service Chain List** screen click the **Add** button to create a new Service Chain
-   
--  On the **Service Chain Properties** screen enter the following values:
+2.  On SSL Orchestrator select, **Access > Overview > Active Sessions** from the Main menu on the left.
+  
+   You should now see an active session similar to the example below.
 
-   -  **Name -** enter ``All_Services`` as the service chain name.
+   |active-sessions-mike|
 
-   -  **Description -** enter ``All services`` as the description.
+.. tip::
 
-   -  **Services -** select both services under **Services Available** and click on the right arrow to move them to the **Selected Service Chain Order** side.
+   Click the **Refresh Session Table** button if the table is empty
 
 
-.. image:: ../images/ciscofp-3.png
-   :alt: Cisco Firepower Service Configuration
+3.  Click on the **View** link to the left of the username you are logged in with to see more attributes associated with that user's access session, including attributes retrieved from Active Directory, such as: memberOf, sAMAccountName, and userPrincipalName.
 
-|
+   |session-variables-mike|
 
--  Click the **Save** button
-      
--  You will return to the **Service Chain List** where you will add one more Service Chain (see next page).
+.. |active-sessions-mike| image:: ../images/active-sessions-mike.png
+   :alt: Active Sessions
+
+.. |session-variables-mike| image:: ../images/session-variables-mike.png
+   :alt: Mike's Session Variables
