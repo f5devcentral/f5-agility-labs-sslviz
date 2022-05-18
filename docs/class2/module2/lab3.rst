@@ -93,7 +93,7 @@ ICAP service
 
    -  Enter ``1048576`` in the **Preview Max Length(bytes)** field.  
 
-   .. image:: ../images/internal-layered-new-sc.png
+   .. image:: ../images/internal-layered-new-service.png
       :alt: ICAP Service
       :align: left
 
