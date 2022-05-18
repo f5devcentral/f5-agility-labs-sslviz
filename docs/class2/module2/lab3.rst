@@ -50,7 +50,7 @@ SSL Configurations
 Authentication List
 --------------------
 
-This section allows you to add Online Certificate Status Protocol (OCSP) Responders validate the revocation status of a digital certificate. Since we are not using certificate-based authentication in this lab, we will skip this section and click **Save & Next** at the bottom of the page.
+This section allows you to add Online Certificate Status Protocol (OCSP) Responders to validate the revocation status of a digital certificate. Since we are not using certificate-based authentication in this lab, we will skip this section and click **Save & Next** at the bottom of the page.
 
 .. image:: ../images/Authentication-List.png
    :align: left
@@ -86,16 +86,17 @@ ICAP service
    -  Leave the **Port** set to ``1344`` (default for ICAP).
 
    -  Click on **Done** to add the ICAP device.
-
-   .. image:: ../images/service-icap-2.png
-      :alt: ICAP Service
-      :align: left
-
+   
    -  Enter ``/avscan`` in the **Request Modification URI Path** field.
    
    -  Enter ``/avscan`` in the **Response Modification URI Path** field.
 
-   -  Enter ``1048576`` in the **Preview Max Length(bytes)** field.
+   -  Enter ``1048576`` in the **Preview Max Length(bytes)** field.  
+
+   .. image:: ../images/internal-layered-new-sc.png
+      :alt: ICAP Service
+      :align: left
+
 
    .. image:: ../images/service-icap-3.png
       :alt: ICAP Service
@@ -124,7 +125,7 @@ You now need to create a new Service Chain containing the CLAM_AV and Cisco Fire
 
    -  Enter ``ClamAV and Cisco Firepower TAP`` in the **Description** field.
 
-   -  **Services -** select the **CLAM_AV** and **CiscoFP_TAP** services under **Services Available** and move them to **Selected Service Chain Order**
+   -  **Services -** select the **CLAM_AV** and **CiscoFP** services under **Services Available** and move them to **Selected Service Chain Order**
 
    .. image:: ../images/internal-layered-new-sc.png
       :alt: New service chain for Clam AV and Cisco Firepower TAP

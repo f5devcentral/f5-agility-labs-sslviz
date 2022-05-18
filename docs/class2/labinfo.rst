@@ -21,7 +21,7 @@ After joining the course, you will see the **DOCUMENTATION** tab with some infor
 
 .. note::
 
-   You will use your local web browser and Remove Desktop Protocol (RDP) client to perform the lab exercises.
+   You will use your local web browser and Remote Desktop Protocol (RDP) client to perform the lab exercises.
    
    You will not need to use SSH to access the UDF lab environment, so no SSH Key needs to be configured.
 
@@ -53,7 +53,7 @@ The following tables provide device/service network configuration details. Login
    :widths: auto
 
    * - BIG-IP Management IP
-     - 10.1.1.11
+     - 10.1.1.4
      -
    * - Gateway IP/DNS
      - 10.1.20.1
