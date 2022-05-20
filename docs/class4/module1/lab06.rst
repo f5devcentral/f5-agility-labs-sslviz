@@ -120,4 +120,4 @@ For detailed instructions on creating SWG policies, please see the following res
 
 #. `<https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-secure-web-gateway/per-request- policy-configuration-for-swg.html>`_
 
-#. `https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-secure-web-gateway.html`_
+#. `<https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-secure-web-gateway.html>`_

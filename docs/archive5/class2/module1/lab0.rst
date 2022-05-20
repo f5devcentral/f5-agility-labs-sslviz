@@ -22,7 +22,7 @@ Pre-existing environment validation
 
 .. tip::
 
-   If the RDP session times out later, refer to |credentials| for the **student** user password.
+   If the RDP session times out later, refer to |credentials1| for the **student** user password.
 
 
 -  Open the **Firefox** browser
@@ -130,6 +130,6 @@ Pre-existing environment validation
    :alt: Proxy Access Log
 
 
-.. |credentials| raw:: html
+.. |credentials1| raw:: html
 
       <a href="../labinfo.html#credentials" target="_blank"> User Credentials </a>

@@ -33,7 +33,11 @@ server side OCSP configuration in order to report back actual revocation state t
    :align: center
 
 |
-.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the SSL Configurations.
+
+.. note::
+
+   There are no additional hands-on steps that need to be taken before proceeding to the next section. The information below is intended to provide additional context on the SSL Configurations.
+
 
 **OCSP Responder**
 

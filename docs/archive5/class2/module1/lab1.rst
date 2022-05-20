@@ -6,7 +6,7 @@ Review the current SSL Orchestrator deployment
 
 -  Start a TMUI session on **SSL Orchestrator** and log in as user **admin** (*Components > SSL Orchestrator > ACCESS > TMUI*)
 
-   |credentials_link|
+   |credentials_link1|
 
    |
 
@@ -53,6 +53,6 @@ Review the current SSL Orchestrator deployment
 .. |udf-sslo-tmui| image:: ../images/udf-sslo-tmui.png
    :alt: SSL Orchestrator TMUI Access
 
-.. |credentials_link| raw:: html
+.. |credentials_link1| raw:: html
 
       <a href="../labinfo.html#credentials" target="_blank"> Link to user credentials (opens in new browser tab) </a>
