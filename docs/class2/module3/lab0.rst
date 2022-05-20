@@ -50,4 +50,4 @@ This will cause the application to dump a list of users in the database to inclu
   .. image:: ../images/juiceshop-sql.png
 
 
-  .. warning:: An attacked could easily grab the hashed passwords and decrypt in a free password hash cracker widely available on the internet. We will take steps to protect this insecure application using SSL Orchestrator and WAFaaS. 
+  .. warning:: An attacker could easily grab the hashed passwords and decrypt in a free password hash cracker widely available on the internet. We will take steps to protect this insecure application using SSL Orchestrator and WAFaaS. 
