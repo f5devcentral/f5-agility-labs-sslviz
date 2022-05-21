@@ -6,7 +6,7 @@ Verify Pre-requisite SSL Orchestrator Configuration
 
 -  If not already connected to the **SSL Orchestrator** TMUI, log into the TMUI *(Components > SSL Orchestrator > ACCESS > TMUI)*
 
-      |credentials_link|
+      |credentials_link1|
 
 
 -  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**. When the SSL Orchestrator dashboard finishes loading, the following deployment should already be present.
@@ -30,6 +30,6 @@ Verify Pre-requisite SSL Orchestrator Configuration
 
 
 
-.. |credentials_link| raw:: html
+.. |credentials_link1| raw:: html
 
       <a href="../labinfo.html#credentials" target="_blank"> Link to user credentials (opens in new browser tab) </a>

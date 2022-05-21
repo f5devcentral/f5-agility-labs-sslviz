@@ -12,7 +12,16 @@ Application Server Test
 ------------------------
 Traffic from source addresses matching the **appserver_list** data group will be sent through the **appserver_explicit** topology.
 
-1.  RDP to the **Ubuntu18.04 Client** machine.
+1.  Start an RDP session to the **Ubuntu 18.04 CLient** (Components > Ubuntu18.04 Client > ACCESS > XRDP)
+
+   .. image:: ../images/udf-ubuntu-client-rdp.png
+      :alt: UDF Ubuntu Client RDP 
+
+-  When prompted, save the RDP file to your local machine and then open it to connect.
+-  At the Ubuntu Login prompt, click on the **OK** button to continue.
+
+   .. image:: ../images/udf-ubuntu-client-rdp2.png
+      :alt: UDF Ubuntu XRDP
 
 .. tip::
 
@@ -25,7 +34,7 @@ Traffic from source addresses matching the **appserver_list** data group will be
 .. note::
    You do not want this behavior for corporate user traffic since it may cause employee privacy concerns.
 
-4.  Browse to https://www.eicar.org/?page_id=3950 and attempt to download the **eicar.com** malware test file.
+4.  Browse to https://www.eicar.org/?page_id=3950 and attempt to download the **eicar_com.zip** malware test file.
 
 .. image:: ../images/test-eicar-download.png
    :alt: Eicar malware download test
@@ -69,7 +78,7 @@ All of the traffic that doesn't match the application server conditions (i.e., s
 
 10.  Browse to a financial website (ex: Bank of America) and check the certificate that was received. The issuer should **NOT** be **subrsa.f5labs.com** since the **f5labs_explicit** topology bypasses TLS decryption for financial websites.
 
-11.  Browse to https://www.eicar.org/?page_id=3950 and attempt to download the **eicar.com** malware test file. The request should **NOT** be blocked by the ClamAV antivirus service since it is not in the service chain for the **f5labs_explicit** topology.
+11.  Browse to https://www.eicar.org/?page_id=3950 and attempt to download the **eicar_com.zip** malware test file. The request should **NOT** be blocked by the ClamAV antivirus service since it is not in the service chain for the **f5labs_explicit** topology.
 
 
 .. image:: ../images/test-eicar-download.png
@@ -78,6 +87,8 @@ All of the traffic that doesn't match the application server conditions (i.e., s
 .. note::
    When the malware test file is downloaded to the **Windows Client** machine, the local antivirus software will block it. You will see a notification for that.
 
+.. image:: ../images/test-eicar-download-defender.png
+   :alt: Eicar malware download
 
 12.  In the SSL Orchestrator TMUI, check **Access > Overview > Active Sessions**. There should be a user session listed for user **mike**.
 

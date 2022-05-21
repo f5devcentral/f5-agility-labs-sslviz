@@ -18,9 +18,9 @@ A topology must be bound to a unique VLAN. Since the layer topologies won't be l
    .. image:: ../images/vlan-confirm-empty.png
       :alt: Empty VLAN Confirmation
 
-4.  Click on **OK** to continue and return to the VLAN List.
+4.  Click on **OK** to continue.
 
-5. By clicking **Repeat**, we are automatically ready to create the second empty VLAN.
+5. Since we clicked **Repeat**, we are automatically ready to create the second empty VLAN.
 
 6. Name this VLAN:  ``yyy-vlan`` and then click on **Finished**.
 

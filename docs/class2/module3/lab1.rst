@@ -4,7 +4,7 @@
 Create WAFaaS Security Device
 ================================================================================
 
-This next section of this lab will cover how to create a WAFaaS device. We will also attach a preconfigured WAF policy that will provide protection against attacks such as SQL-Injection and other OWASP Top 10 type vulnerabilities. 
+This next section of this lab will cover how to create a WAFaaS device. We will also attach a preconfigured WAF policy that will provide protection against attacks such as SQL-Injection and other OWASP Top 10 type vulnerabilities.
 
 Create the ICAP service
 ********************************************************************************
@@ -98,16 +98,11 @@ Adjust WAFaaS service profile
 
 |select-WAFaaS-service|
 
-1.  Change the **Settings>Type** to **F5 Module** and then click **Update**.
+2.  Change the **Settings>Type** to **F5 Module** and then click **Update**.
 
 |ssloS_WAFaaS-service-type|
 
 You have successfully create the WAFaaS ICAP device. Next, we will create a new L3 inbound Existing Application topology that will utilize our new WAFaaS service device.
-
-
-
-
-
 
 
 
@@ -156,16 +151,13 @@ You have successfully create the WAFaaS ICAP device. Next, we will create a new 
    :alt: Select the ssloS_WAFaaS-t-4 virtual server
 
 .. |select-WAFaaS-service| image:: ../images/select-WAFaaS-service.png
-   :alt: Select the ssloS_WAFaaS-t-4 service   
+   :alt: Select the ssloS_WAFaaS-t-4 service
 
 .. |adapt-profiles| image:: ../images/adapt-profiles.png
    :alt: remove adapt-profiles from the virtual server
 
 .. |ssloS_WAFaaS-service-type| image:: ../images/ssloS_WAFaaS-service-type.png
    :alt: Changed the type to F5 Module
-
-.. |select-WAFaaS-service| image:: ../images/select-WAFaaS-service.png
-   :alt: remove adapt-profiles from the ssloS_WAFaaS-t-4 virtual server
 
 .. |ssloS_WAFaaS-t-4-security| image:: ../images/ssloS_WAFaaS-t-4-security.png
    :alt: Select Security for Virtual Server
@@ -174,4 +166,5 @@ You have successfully create the WAFaaS ICAP device. Next, we will create a new 
    :alt: Add Policy and logging profile to ssloS_WAFaaS-t-4 virtual server
 
 .. |credentials| raw:: html
-      <a href="../labinfo.html#credentials" target="_blank"> User Credentials </a>   
+
+      <a href="../labinfo.html#credentials" target="_blank"> User Credentials </a>

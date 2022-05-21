@@ -41,7 +41,7 @@ The first interface is connected to the client-facing VLAN. The second interface
 .. image:: images/labinfo-1.png
    :align: left
 
-.. _credentials:
+.. _credentials1:
 
 Virtual Lab Infrastructure Details (and Credentials)
 --------------------------------------------------------------------------------

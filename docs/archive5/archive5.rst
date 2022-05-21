@@ -24,23 +24,12 @@ Bugs and Requests for enhancements are handled in two ways:
 
 |
 
-**Latest**
-
 .. toctree::
    :maxdepth: 1
+   :caption: Contents:
    :glob:
 
    class*/class*
-
-|
-
-**Archived**
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   archive*/archive*
 
 |
 
