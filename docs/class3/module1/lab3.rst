@@ -3,9 +3,13 @@ Subscribe to EC2 Instances
 
 Before you can deploy EC2 virtual machine instances, you must **subscribe** to the instances that you want to use.
 
-Type ``marketplace`` in the AWS Console search box at the top of the page. Select **AWS Marketplace Subscriptions** from the search results.
+Type ``marketplace`` in the AWS Console search box at the top of the page.
 
-Click on **Discover products** and then enter ``f5 all byol`` in the **AWS Marketplace products** search box.
+Select **AWS Marketplace Subscriptions** from the search results.
+
+Click on **Discover products**.
+
+Enter ``f5 all byol`` in the **AWS Marketplace products** search box.
 
 Click on **F5 BIG-IP VE - ALL (BYOL, 2 Boot Locations)**.
 
@@ -54,6 +58,8 @@ Subscribe to these additional EC2 instances:
 
    Ensure that all 3 subscriptions are successful (not **pending**) before proceeding to the next section.
 
+
+Keep your browser window open. You will need to return to it later.
 
 In the next section, you will use Terraform to build the AWS network infrastructure for this lab.
 

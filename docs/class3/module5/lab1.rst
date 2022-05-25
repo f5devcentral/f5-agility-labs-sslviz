@@ -1,7 +1,7 @@
 Delete the SSL Orchestrator Configuration (Ansible)
 ================================================================================
 
-The F5 Ansible collection also includes a utility module to delete the entire SSL Orchestrator configuration.
+The F5 Declarative Ansible collection also includes a utility module to delete the entire SSL Orchestrator configuration.
 
 In VSCode, click **playbooks > utility-sslo-delete-all.yaml** to view the example playbook.
 
@@ -20,9 +20,10 @@ The playbook tasks are described below:
      - Module Name
      - Description
    * - Delete SSLO configurations
-     - bigip_sslo_config_utility
+     - bigip_sslo_config_utility (delete-all utility)
      - Deletes the entire SSL Orchestrator configuration.
 
+|
 
 In the BASH Terminal, run the playbook:
 

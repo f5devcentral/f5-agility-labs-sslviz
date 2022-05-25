@@ -80,11 +80,10 @@ Create the first inspection service:
 
 - De-select the **Auto Manage Addresses** checkbox.
 
-In the **To Service** section:
-
+- In the **To Service** section, select the **Create New** radio button.
 - Enter ``dmz1`` in the self IP name field.
+- Select the **Use Existing** VLAN radio button (if not already selected).
 - Select the **/Common/dmz1** VLAN.
-- Select the **Use Existing** VLAN radio button.
 - Enter ``10.0.3.7`` in the **Self IP** address field.
 - Enter ``255.255.255.128`` in the **Netmask** field.
 
@@ -96,11 +95,10 @@ In the **To Service** section:
 .. image:: ./images/topology-svc1-5.png
    :align: left
 
-In the **From Service** section:
-
+- In the **From Service** section, select the **Create New** radio button.
 - Enter ``dmz2`` in the self IP name field.
+- Select the **Use Existing** VLAN radio button (if not already selected).
 - Select the **/Common/dmz2** VLAN.
-- Select the **Use Existing** VLAN radio button.
 - Enter ``10.0.3.245`` in the **Self IP** address field.
 - Enter ``255.255.255.128`` in the **Netmask** field.
 
@@ -121,29 +119,25 @@ Create the second L3 inspection service:
 - Select **Generic Inline Layer 3** from the service catalog and click on the **Add** button.
 - Enter ``SNORT2`` as the name for the service.
 
-In the **To Service** section:
-
+- In the **To Service** section, select the **Create New** radio button.
 - Enter ``dmz3`` in the self IP name field.
+- Select the **Use Existing** VLAN radio button (if not already selected).
 - Select the **/Common/dmz3** VLAN.
-- Select the **Use Existing** VLAN radio button.
 - Enter ``10.0.4.7`` in the **Self IP** address field.
 - Enter ``255.255.255.128`` in the **Netmask** field.
 
 .. image:: ./images/topology-svc2-3.png
    :align: left
 
-
 - Add an **L3 Device** with IP address of ``10.0.4.21`` (matches the value of the **inspection_service_ip_2** Terraform output)
 
 .. image:: ./images/topology-svc2-4.png
    :align: left
 
-
-In the **From Service** section:
-
+- In the **From Service** section, select the **Create New** radio button.
 - Enter ``dmz4`` in the self IP name field.
+- Select the **Use Existing** VLAN radio button (if not already selected).
 - Select the **/Common/dmz4** VLAN.
-- Select the **Use Existing** VLAN radio button.
 - Enter ``10.0.4.245`` in the **Self IP** address field.
 - Enter ``255.255.255.128`` in the **Netmask** field.
 
@@ -234,23 +228,31 @@ For the **Ingress Network**, select the **/Common/external** VLAN.
 .. image:: ./images/topology-int-2.png
    :align: left
 
-For the **L7 Profile**, select **/Common/http**. 
+For the **L7 Profile**, select **/Common/http**.
 
 .. image:: ./images/topology-int-3.png
    :align: left
 
+|
+
+.. important::
+
+   If you do not see the **Resources** section, then you need to return to the top of the page and click on the **Show Advanced Setting** link before continuing.
+
+
 In the **Resources** section, click on the Pool drop-down list and select **create new**.
 
-.. important:: 
+A new browser tab will open for you to create the pool:
 
-   If you do not see the **Resources** section, then you need to return to the top of the page and click on the **Show Advanced Setting** link.
+- Enter ``webapp`` as the pool name.
+- Enter ``192.168.1.200`` as the IP address for the pool member.
+- Enter ``443`` for the Port.
+- Save the configuration.
+- Close the pool configuration tab.
 
+|
 
-A new browser tab will open to allow you create the pool. Name the pool **webapp** and specify a pool member with IP address **192.168.1.200**.
-
-Save the configuration and close the browser tab to return to the SSL Orchestrator Guided Configuration.
-
-Click on the Pool drop-down list again and select the **webapp** pool.
+Back on the SSL Orchestrator Guided Configuration tab, click on the Pool drop-down list again and select the **webapp** pool.
 
 .. image:: ./images/topology-int-4.png
    :align: left
