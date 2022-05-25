@@ -1,6 +1,3 @@
-.. role:: red
-.. role:: bred
-
 [v9] SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud (Agility 2022 | 2 hours)
 ===============================================================================================
 

@@ -1,7 +1,7 @@
 Automating BIG-IP (SSL Orchestrator) Provisioning with Terraform
 ================================================================================
 
-An advantage of deploying into public cloud environments is that the virtual network and VM instance provisioning can be fully automated. 
+An advantage of deploying into public cloud environments is that the virtual network and VM instance provisioning can be fully automated.
 
 In this module, you will:
 

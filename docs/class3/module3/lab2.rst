@@ -194,7 +194,7 @@ Create a new rule above the default rule with the following options:
 - Set **SSL Forward Proxy Action** to **Intercept**.
 - Select **service_chain_1**.
 - Click on the **OK** button.
-  
+
 .. image:: ./images/topology-policy-1.png
    :align: left
 
@@ -239,9 +239,18 @@ For the **L7 Profile**, select **/Common/http**.
 .. image:: ./images/topology-int-3.png
    :align: left
 
-For the **Resources**, create a pool named **webapp** with pool member **192.168.1.100**.
+In the **Resources** section, click on the Pool drop-down list and select **create new**.
 
-Select the **webapp** pool..
+.. important:: 
+
+   If you do not see the **Resources** section, then you need to return to the top of the page and click on the **Show Advanced Setting** link.
+
+
+A new browser tab will open to allow you create the pool. Name the pool **webapp** and specify a pool member with IP address **192.168.1.200**.
+
+Save the configuration and close the browser tab to return to the SSL Orchestrator Guided Configuration.
+
+Click on the Pool drop-down list again and select the **webapp** pool.
 
 .. image:: ./images/topology-int-4.png
    :align: left
