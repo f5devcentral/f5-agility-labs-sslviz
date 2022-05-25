@@ -31,8 +31,15 @@ Review these files with **Visual Studio Code (VSCode)** by executing the followi
 
 Wait for VSCode to launch and display the file list in the left panel.
 
+.. tip::
+
+   If the font is too small or too large, you can adjust the size by pressing **<CTRL-+>** (control-plus) or **<CTRL-->** (control-minus).
+
+|
+
 Click on each file that corresponds to the sections below. VSCode provides Terraform syntax highlighting when the **HashiCorp Terraform extension** is installed.
 
+|
 
 Terraform Providers
 --------------------------------------------------------------------------------

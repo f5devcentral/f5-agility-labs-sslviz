@@ -191,9 +191,11 @@ This will take several minutes to complete.
 
    The **-auto-approve** (or **--auto-approve**) flag allows you to bypass the approval prompt that would be received before proeeding with the configuration changes.
 
+|
+
 .. attention::
 
-   If you receive an error similar to the following (for any of the EC2 instances), wait a few minutes and then try to ``apply`` again. It might require multiple attempts due to timing.
+   If you receive an error similar to the following (for any of the EC2 instances), wait about 5 minutes and then try to ``apply`` again. It might require multiple attempts due to timing.
 
       .. code-block:: bash
 

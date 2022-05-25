@@ -29,6 +29,9 @@ The complete module list is here: |f5_bigip_link|
 
 |
 
+This lab uses modules from both collections.
+
+
 **Additional references:**
 
 - |galaxy_f5_modules_link|

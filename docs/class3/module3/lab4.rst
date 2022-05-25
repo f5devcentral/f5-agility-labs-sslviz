@@ -1,9 +1,9 @@
 Delete the SSL Orchestrator Configuration
 ================================================================================
 
-You will need to delete the SSL Orchestrator configuration to prepare for the next lab module.
+You must delete the SSL Orchestrator configuration to prepare for the next lab module.
 
-Click on the delete icon and confirm deletion.
+Click on the Delete (trash can) icon and confirm deletion.
 
 .. image:: ./images/delete-1.png
    :align: left
