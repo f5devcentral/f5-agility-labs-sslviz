@@ -1,4 +1,4 @@
-Verify the SSL Orchestrator Configuration
+Verify the BIG-IP (SSL Orchestrator) Configuration
 ================================================================================
 
 The SSL Orchestrator's public management IP address was provided in the Terraform outputs. To show the Terraform output values again, execute ``terraform output`` in the BASH Terminal and look for **sslo_management_public_ip**.
@@ -57,14 +57,20 @@ Local Traffic > Pools
 
 Click on **Local Traffic > Pools** from the left panel menu and confirm that there are no pools configured.
 
-SSL Orchestrator will create a pool automatically for an inbound L3 Topology.
+   .. image:: ./images/bigip-pools.png
+      :align: left
+
+Later on, SSL Orchestrator will create a pool automatically for an inbound L3 Topology.
 
 Local Traffic > Virtual Servers
 --------------------------------------------------------------------------------
 
 Click on **Local Traffic > Virtual Servers** from the left panel menu and confirm that there are no Virtual Servers configured.
 
-SSL Orchestrator will create a Virtual Server automatically for an inbound L3 Topology.
+   .. image:: ./images/bigip-virtuals.png
+      :align: left
+
+Later on, SSL Orchestrator will create a Virtual Server automatically for an inbound L3 Topology.
 
 SSL Orchestrator > Configuration
 --------------------------------------------------------------------------------

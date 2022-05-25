@@ -91,7 +91,7 @@ The following tables provide device/service network configuration details. Login
 
        SNAT: Automap
 
-       Pool member: 192.168.1.100\:443
+       Pool member: 192.168.1.200\:443
 
        Service Chain 1: SNORT1
 
