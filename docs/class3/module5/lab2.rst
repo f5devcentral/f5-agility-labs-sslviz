@@ -7,12 +7,9 @@ The **sslo-cloud-templates** repository also includes an example playbook to rev
 
    The license that the instructor provided for this lab is a temporary license with a limited lifetime.
 
+|
+
 In VSCode, click **playbooks > utility-revoke-license.yaml** to view the example playbook.
-
-.. image:: ./images/ansible-revoke-1.png
-   :align: left
-
-This playbook relies on variable values provided by the previously reviewed **ansible_vars.yaml** file.
 
 The playbook tasks are described below:
 
@@ -27,6 +24,9 @@ The playbook tasks are described below:
      - bigip_command
      - Revokes the BIG-IP (SSL Orchestrator) license.
 
+This playbook relies on variable values provided by the previously reviewed **ansible_vars.yaml** file.
+
+|
 
 In the BASH Terminal, run the playbook:
 
@@ -35,9 +35,6 @@ In the BASH Terminal, run the playbook:
       ansible-playbook -e @ansible_vars.yaml playbooks/utility-revoke-license.yaml
 
 Wait for the Ansible playbook to complete.
-
-.. image:: ./images/ansible-revoke-2.png
-   :align: left
 
 |
 
