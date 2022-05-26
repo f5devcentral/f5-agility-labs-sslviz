@@ -1,4 +1,4 @@
-[v9] SSL Orchestrator with Secure Web Gateway (SWG) as a Service 
+SSL Orchestrator with Secure Web Gateway (SWG) as a Service 
 ==================================================================================================
 
 
