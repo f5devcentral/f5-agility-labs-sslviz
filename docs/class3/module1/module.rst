@@ -1,7 +1,7 @@
 Lab Environment Access and Initial Setup
 ================================================================================
 
-This lab consists of a two environments:
+This lab makes use of two environments:
 
 - F5 Unified Demo Framework (UDF)
 - Amazon Web Services (AWS) Cloud
