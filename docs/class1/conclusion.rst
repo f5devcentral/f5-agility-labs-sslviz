@@ -64,10 +64,10 @@ Revision History
      - Jack Fenimore, Nilesh Mistry, Jason Chiu
      - Updated to BIG-IP 15.1/SSLO 7.x, rebuilt in UDF, 2 hour duration
    * - SSLO 8.x (Agility 2021)
-     - Reed Shipley
+     - Reed Shipley, Nilesh Mistry
      - Updated to BIG-IP 16.0/SSLO 8.x
    * - SSLO 9.x (Agility 2022)
-     - Michael Wang
+     - Michael Wang, Nilesh Mistry
      - Updated to BIG-IP 16.1/SSLO 9.x
 
 |
