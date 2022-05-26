@@ -40,6 +40,15 @@ Press **<CTRL-S>** to save the file.
    .. image:: ./images/vscode-2.png
       :align: left
 
+|
+
+.. tip::
+
+   If you prefer to use the VSCode integrated terminal instead of a separate BASH Terminal window, that will also work. Just be sure that you are in the correct directory and execute all commands as if you were using the BASH Terminal window.
+
+   To open the integrated terminal, press <CTRL-\`> (back-tick) or select **View > Terminal** from the top menu.
+
+|
 
 Initialize the Terraform
 --------------------------------------------------------------------------------
