@@ -1,7 +1,7 @@
 .. role:: red
 .. role:: bred
 
-[v9] SSLO 201: Advanced Use Cases with SSL Orchestrator (Agility 2022 | 2 hours)
+SSLO 201: Advanced Use Cases with SSL Orchestrator (Agility 2022 | 2 hours)
 ================================================================================
 
 .. note::
