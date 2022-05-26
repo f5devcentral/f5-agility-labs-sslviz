@@ -6,7 +6,7 @@ To work with Ansible in this lab environment, you must first change the Ansible 
    .. code-block:: bash
 
       cd ~/sslo-cloud-templates
-      chmod o-x ansible
+      chmod o-w ansible
       cd ansible
 
 
