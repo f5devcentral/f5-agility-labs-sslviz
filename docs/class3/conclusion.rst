@@ -17,11 +17,21 @@ The lab environment will also shut down automatically at the end of the schedule
 
 |
 
+SSL Orchestrator Labs
+================================================================================
+
+To learn more about SSL Orchestrator, consider attending one of the other labs in this series:
+
+- `SSLO 101: Essential SSL Visibility with SSL Orchestrator <../class1/class1.html>`_
+- `SSLO 201: Advanced Use Cases with SSL Orchestrator <../class2/class2.html>`_
+- `SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud <../class3/class3.html>`_
+
+|
 
 Contributors
 ================================================================================
 
-This lab and related content (|sslo-cloud-templates|) wouldn't exist without the dedication of the following individuals:
+This lab and related content (presentation, |sslo-cloud-templates|) wouldn't exist without the dedication of the following individuals:
 
 - Jason Chiu
 - Arnulfo Hernandez
@@ -40,20 +50,12 @@ Revision History
    :widths: auto
 
    * - **Version**
-     - **Contributor**
-     - **Notes**
-   * - 1.0 (May, 2022)
+     - **Contributors**
+     - **Changes**
+   * - 1.0 (Agility 2022)
      - Jason Chiu
-     - Lab Created
-   * - 
-     - 
-     - 
-   * - 
-     - 
-     - 
-   * - 
-     - 
-     - 
+     - Lab created - BIG-IP 15.1/SSLO 7.x due to Ansible preview limitations
+
 
 Lab Guide Repository (GitHub)
 ================================================================================

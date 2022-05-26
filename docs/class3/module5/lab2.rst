@@ -22,7 +22,7 @@ The playbook tasks are described below:
      - Description
    * - Remove the license from the system
      - bigip_command
-     - Revokes the BIG-IP (SSL Orchestrator) license.
+     - Revokes the BIG-IP (SSL Orchestrator) license using a TMSH command.
 
 This playbook relies on variable values provided by the previously reviewed **ansible_vars.yaml** file.
 
