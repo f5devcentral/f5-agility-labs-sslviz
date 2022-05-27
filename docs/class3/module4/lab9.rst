@@ -26,13 +26,13 @@ Accept the warnings and then you should see the demo Wordpress web site.
 View Decrypted Traffic
 --------------------------------------------------------------------------------
 
-To verify that decrypted traffic is flowing through the L3 services, you can run **tcpdump** on the SSL Orchestrator **FROM Service** VLANs (**dmz2** and **dmz4**).
+To verify that decrypted traffic is flowing through the L3 services, you can run **tcpdump** on the SSL Orchestrator **FROM Service** VLANs (**dmz2** and **dmz4**). You will need the Public IP address of the BIG-IP (<sslo_management_public_ip>).
 
-Open a new BASH Terminal and SSH to the BIG-IP (SSL Orchestrator):
+Open a new BASH Terminal and SSH to the BIG-IP:
 
    .. code-block:: bash
 
-      cd ~/sslo-cloud-templates/
+      cd ~/sslo-cloud-templates/terraform-aws-sslo
       terraform output
       ssh -i sslo-keypair.key admin@<sslo_management_public_ip>
 

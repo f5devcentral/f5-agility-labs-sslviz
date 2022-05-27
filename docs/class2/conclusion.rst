@@ -53,7 +53,7 @@ Revision History
      - **Contributors**
      - **Changes**
    * - SSLO 7.x (Agility 2020)
-     - Regan Anderson
+     - Regan Anderson, Syed Ghani
      - Lab created (2 hr duration) – UDF, BIG-IP 15.1/SSLO 7.x
    * - SSLO 8.x (Agility 2021)
      - Jason Chiu, Nilesh Mistry
