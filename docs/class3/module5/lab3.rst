@@ -75,7 +75,7 @@ You will see output similar to the following:
 
       Destroy complete! Resources: 61 destroyed.
 
-Return to the **AWS Console** to confirm that your **VPCs** and **EC2 Instances** were deleted.
+Return to the **AWS Console** dashboards to confirm that your **EC2 Instances** and **VPCs** were deleted.
 
 |
 

@@ -42,11 +42,15 @@ Press **<CTRL-S>** to save the file.
 
 |
 
+Review the other variables that are defined in this file. The comments describe the purpose of each variable.
+
+|
+
 .. tip::
 
-   If you prefer to use the VSCode integrated terminal instead of a separate BASH Terminal window, that will also work. Just be sure that you are in the correct directory and execute all commands as if you were using the BASH Terminal window.
+   If you prefer to use the VSCode integrated terminal instead of a separate BASH Terminal window, that will also work. Just ensure that you are in the correct directory and execute all commands as if you were using the BASH Terminal window.
 
-   To open the integrated terminal, press <CTRL-\`> (back-tick) or select **View > Terminal** from the top menu.
+   To open the integrated terminal, press <CTRL-\`> (back-tick) or select **View > Terminal** from the top menu. You will start in the **/home/f5admin** directory, so you will have to execute ``cd ~/sslo-cloud-templates/terraform-aws-sslo`` again.
 
 |
 
@@ -198,7 +202,7 @@ This will take several minutes to complete.
 
 .. note::
 
-   The **-auto-approve** (or **--auto-approve**) flag allows you to bypass the approval prompt that would be received before proeeding with the configuration changes.
+   The **-auto-approve** (or **--auto-approve**) flag allows you to bypass the approval prompt that would be received before proceeding with the configuration changes.
 
 |
 

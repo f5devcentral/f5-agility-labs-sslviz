@@ -8,6 +8,8 @@ In VSCode, click **playbooks > utility-sslo-delete-all.yaml** to view the exampl
 .. image:: ./images/ansible-delete-1.png
    :align: left
 
+|
+
 This playbook relies on variable values provided by the previously reviewed **ansible_vars.yaml** file.
 
 The playbook tasks are described below:

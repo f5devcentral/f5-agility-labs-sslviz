@@ -78,3 +78,9 @@ Click on the **SSL Configurations** tab.
    :align: left
 
 Confirm that the **ssloT_ssloconfig** SSL Configuration was created.
+
+|
+
+.. note::
+
+   If you click on some of the individual components (for example, Services), you will see a red banner stating the configuration is in read-only mode. This is because the configuration was created outside of the SSL Orchestrator Guided Configuration UI.

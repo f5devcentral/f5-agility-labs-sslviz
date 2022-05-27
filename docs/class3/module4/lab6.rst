@@ -6,6 +6,8 @@ Click on **playbooks > config-sslo-inbound-l3-complete.yaml** to view the playbo
 .. image:: ./images/ansible-3.png
    :align: left
 
+|
+
 This playbook relies on variable values provided by the previously reviewed **ansible_vars.yaml** file. Variables to be substituted are denoted by **{{var_name}}**.
 
 The playbook tasks are described below:
@@ -44,6 +46,3 @@ The playbook tasks are described below:
    * - Create SSLO Topology
      - bigip_sslo_config_topology
      - Creates an Inbound L3 Topology (reverse proxy) with listener address 10.0.2.200/32 and TCP port 443. SNAT Automap is enabled. The Topology references the previously created Pool, SSL Profile, and Security Policy.
-   * - Add pool to topology VIP
-     - bigip_virtual_server
-     - This is a temporary workaround to address an issue with the **bigip_sslo_config_topology** module (which normally would associate the Pool). This task explicity adds the Pool to the Topology Virtual Server.

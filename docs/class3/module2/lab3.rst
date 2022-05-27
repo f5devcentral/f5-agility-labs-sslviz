@@ -10,7 +10,7 @@ In the BASH terminal, change to the Terraform directory.
 
    .. code-block:: bash
 
-      cd ~/sslo-cloud-templates/terraform-aws-sslo/
+      cd ~/sslo-cloud-templates/terraform-aws-sslo
       ls
 
 You should see several Terraform (\*.tf) files listed.
