@@ -72,18 +72,18 @@ You should see output similar to the following:
       Initializing the backend...
 
       Initializing provider plugins...
-      - Finding latest version of hashicorp/tls...
       - Finding latest version of hashicorp/template...
       - Finding hashicorp/aws versions matching "~> 3.0"...
+      - Finding latest version of hashicorp/tls...
       - Finding latest version of hashicorp/local...
-      - Installing hashicorp/tls v3.3.0...
-      - Installed hashicorp/tls v3.3.0 (signed by HashiCorp)
+      - Installing hashicorp/aws v3.75.2...
+      - Installed hashicorp/aws v3.75.2 (signed by HashiCorp)
+      - Installing hashicorp/tls v3.4.0...
+      - Installed hashicorp/tls v3.4.0 (signed by HashiCorp)
+      - Installing hashicorp/local v2.2.3...
+      - Installed hashicorp/local v2.2.3 (signed by HashiCorp)
       - Installing hashicorp/template v2.2.0...
       - Installed hashicorp/template v2.2.0 (signed by HashiCorp)
-      - Installing hashicorp/aws v3.75.1...
-      - Installed hashicorp/aws v3.75.1 (signed by HashiCorp)
-      - Installing hashicorp/local v2.2.2...
-      - Installed hashicorp/local v2.2.2 (signed by HashiCorp)
 
       Terraform has created a lock file .terraform.lock.hcl to record the provider
       selections it made above. Include this file in your version control repository
@@ -100,10 +100,13 @@ You should see output similar to the following:
       rerun this command to reinitialize your working directory. If you forget, other
       commands will detect it and remind you to do so if necessary.
 
+|
+
 .. attention::
 
    Do not proceed if this process fails. There may be an error in one (or more) of the Terraform configuration files which will require further investigation.
 
+|
 
 Validate the Terraform
 --------------------------------------------------------------------------------
@@ -122,12 +125,13 @@ You should see output similar to the following:
 
       Success! The configuration is valid.
 
+|
 
 .. attention::
 
    Do not proceed if this process fails. There may be an error in one (or more) of the Terraform configuration files which will require further investigation.
 
-
+|
 
 Review the Terraform Plan
 --------------------------------------------------------------------------------
@@ -183,11 +187,13 @@ You should see output similar to the following:
       Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if
       you run "terraform apply" now.
 
+|
 
 .. attention::
 
    Do not proceed if this process fails. There may be an error in one (or more) of the Terraform configuration files which will require further investigation.
 
+|
 
 Apply the Terraform Plan
 --------------------------------------------------------------------------------
@@ -267,6 +273,7 @@ After successful completion, you should see output similar to the following:
       sslo_vip = "x.x.x.x"
       webapp_internal = "192.168.1.200"
 
+|
 
 Terraform Outputs
 --------------------------------------------------------------------------------
