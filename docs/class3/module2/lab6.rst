@@ -15,9 +15,10 @@ Log in using the following credentials:
   | Password:  | f5Twister! |
   +------------+------------+
 
+  |
 
-   .. image:: ./images/bigip-login-2.png
-      :align: left
+  .. image:: ./images/bigip-login-2.png
+     :align: left
 
 |
 
