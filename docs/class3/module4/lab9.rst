@@ -12,9 +12,19 @@ On the Windows jump host, open another web browser window and connect to: **http
 
 You should see an SSL warning since the certificate is not trusted (using default self-signed certificate).
 
-.. image:: ./images/webapp-1.png
+.. image:: ./images/webapp-1a.png
    :align: left
    :scale: 65 %
+
+|
+
+Click on **View Certificate** to look at the custom certificate that was installed by the Ansible playbook.
+
+.. image:: ./images/webapp-1b.png
+   :align: left
+   :scale: 65 %
+
+|
 
 Accept the warnings and then you should see the demo Wordpress web site.
 
@@ -22,6 +32,7 @@ Accept the warnings and then you should see the demo Wordpress web site.
    :align: left
    :scale: 60 %
 
+|
 
 View Decrypted Traffic
 --------------------------------------------------------------------------------
