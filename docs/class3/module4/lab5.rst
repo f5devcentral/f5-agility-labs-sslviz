@@ -45,3 +45,5 @@ Variables are set as follows:
      - The **TO Service** IP address of the second L3 inspection device
    * - webapp_pool
      - The private IP address of the Wordpress application server
+   * - sslo_vip
+     - The private IP address of the BIG-IP (SSL Orchestrator) Virtual Server
