@@ -37,6 +37,7 @@ Contributors
 This lab and related presentation content wouldn't exist without the dedication of the following individuals:
 
 - Regan Anderson
+- Syed Ghani
 - Jason Chiu
 - Nilesh Mistry
 - Chris Sheehan
