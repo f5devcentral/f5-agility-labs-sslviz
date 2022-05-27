@@ -19,12 +19,12 @@ The playbook tasks are described below:
    * - Task Name
      - Module Name
      - Description
-   * - Create web app pool
-     - bigip_pool
-     - Creates an application Pool with an HTTPS monitor.
-   * - Add member to webapp pool
-     - bigip_pool_member
-     - Creates pool member - port 443.
+   * - Import server cert/key
+     - bigip_ssl_key_cert
+     - Imports application certificate and key files for \*.f5labs.com
+   * - Create webapp pool (via as3)
+     - bigip_as3_deploy
+     - Creates an application Pool with an HTTPS monitor using AS3 (declarative API).
    * - Create an SSLO SSL config with reverse proxy
      - bigip_sslo_config_ssl
      - Creates SSL Profile for reverse proxy.
@@ -42,7 +42,7 @@ The playbook tasks are described below:
      - Creates Service Chain 2 containing both the *SNORT1* and *SNORT2* services.
    * - SSLO config policy
      - bigip_sslo_config_policy
-     - Creates a Security Policy with 2 rules. The first rule sends clients from 10.0.0.0/8 to Service Chain #1. The second rule sends all other trafic (not matching the first rule) to Service Chain #2.
+     - Creates a Security Policy with 2 rules. The first rule sends clients from 10.0.0.0/8 to Service Chain #1. The second rule (default rule) sends all other trafic (not matching the first rule) to Service Chain #2.
    * - Create SSLO Topology
      - bigip_sslo_config_topology
      - Creates an Inbound L3 Topology (reverse proxy) with listener address 10.0.2.200/32 and TCP port 443. SNAT Automap is enabled. The Topology references the previously created Pool, SSL Profile, and Security Policy.
