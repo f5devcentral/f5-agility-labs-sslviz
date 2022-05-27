@@ -14,43 +14,53 @@ Enter ``f5 all byol`` in the **AWS Marketplace products** search box.
 Click on **F5 BIG-IP VE - ALL (BYOL, 2 Boot Locations)**.
 
 .. image:: ./images/aws-mkt-1.png
-     :align: left
+   :align: left
 
 
 Click on **Continue to Subscribe**.
 
 .. image:: ./images/aws-mkt-2.png
-     :align: left
+   :align: left
 
 Click on **Accept Terms**.
 
 .. image:: ./images/aws-mkt-3.png
-     :align: left
+   :align: left
+
+
+.. note::
+
+   If you see an error message, click on **Accept Terms** again.
+
+   .. image:: ./images/aws-mkt-error.png
+      :align: left
+
+|
 
 When you are subscribed, you will see the **Effective Date** change from **Pending** to the current date.
 
 .. image:: ./images/aws-mkt-4.png
-     :align: left
+   :align: left
 
 .. image:: ./images/aws-mkt-5.png
-     :align: left
+   :align: left
 
 
 For future reference, this is the link to the same EC2 subscription: |ec2-bigip|
 
 
-Subscribe to these additional EC2 instances:
+Subscribe to these additional EC2 instances (open each of them in new browser tabs so you can easily check the status of all 3):
 
 - |ec2-wordpress|
 - |ec2-snort|
 
 .. image:: ./images/aws-mkt-6.png
-     :align: left
+   :align: left
 
 |
 
 .. image:: ./images/aws-mkt-7.png
-     :align: left
+   :align: left
 
 
 
