@@ -19,6 +19,15 @@ Log in using the following credentials:
    .. image:: ./images/bigip-login-2.png
       :align: left
 
+|
+
+.. attention::
+
+   If you are unable to authenticate to the BIG-IP TMUI, then it is possible that the onboarding process has not completed yet. Wait a few minutes and try again.
+
+   If more than 10 minutes has elapsed since attempting to log in, consult your lab instructor for additional troubleshooting help. Some part of the onboarding process may have failed (for example, due to invalid BIG-IP license key).
+
+|
 
 VLANs
 --------------------------------------------------------------------------------
