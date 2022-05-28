@@ -19,13 +19,12 @@ You should see output similar to the following:
    .. code-block:: bash
 
       Cloning into 'sslo-cloud-templates'...
-      remote: Enumerating objects: 1879, done.
-      remote: Counting objects: 100% (1879/1879), done.
-      remote: Compressing objects: 100% (1039/1039), done.
-      remote: Total 1879 (delta 776), reused 1868 (delta 765), pack-reused 0
-      Receiving objects: 100% (1879/1879), 2.59 MiB | 20.07 MiB/s, done.
-      Resolving deltas: 100% (776/776), done.
-      Updating files: 100% (1783/1783), done.
+      remote: Enumerating objects: 1903, done.
+      remote: Counting objects: 100% (1903/1903), done.
+      remote: Compressing objects: 100% (1057/1057), done.
+      remote: Total 1903 (delta 790), reused 1883 (delta 771), pack-reused 0
+      Receiving objects: 100% (1903/1903), 2.59 MiB | 8.91 MiB/s, done.
+      Resolving deltas: 100% (790/790), done.
 
 |
 
