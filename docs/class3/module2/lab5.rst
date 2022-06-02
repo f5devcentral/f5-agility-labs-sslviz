@@ -134,9 +134,7 @@ The **webapp** server uses 1 NIC (application).
 
 Elastic IP Addresses
 --------------------------------------------------------------------------------
-Scroll down in the left panel menu to find and click on **Elastic IPs**.
-
-Confirm that the following resources were created:
+Click on **Elastic IPs** from the left panel menu and confirm that the following resources were created:
 
    .. image:: ./images/aws-ec2-eip.png
       :align: left
