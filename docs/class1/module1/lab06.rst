@@ -1,142 +1,61 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration services list
-===================================
+Guided configuration Authentication
+==========================================
 
-.. image:: ../images/gc-path-3.png
+.. image:: ../images/auth-path.png
    :align: center
-   :scale: 50
+   :scale: 100
 
-The Services List page is used to define security
-services that attach to SSLO. The SSLO Guided Configuration includes a services catalog that contains common product
-integrations. Beneath each of these catalog options is one of the
-five basic service types. The service catalog also provides "generic"
-security services. Depending on screen resolution, it may be
-necessary to scroll down to see additional services.
+In 9.0 and above, a new Authentication List workflow exists to create authentication mechanisms
+for  a  topology.  In  this  initial  release,  the  Authentication  List  simply  contains  an  OCSP  Responder 
+configuration. The list of authentication mechanisms will grow in subsequent versions.
 
-.. image:: ../images/module1-40.png
-   :scale: 50 %
+.. image:: ../images/auth-list.png
    :align: center
+   :scale: 100
 
-.. image:: ../images/module1-41.png
-   :scale: 50 %
-   :align: center
+Essentially, this OCSP Responder configuration creates an OCSP service on the client side. An iRule 
+is then added to the interception rule VIP that inserts the FQDN into the forged server certificate 
+that should resolve to the destination IP address defined in the setting, which is itself a separate 
+virtual server with OCSP profile configuration.The applied SSL settings must also contain a valid 
+server side OCSP configuration in order to report back actual revocation state to the OCSP profile.
 
-We will initially create one ICAP security service. If time allows, you may create more services using the subsequent optional labs.  
+**For this lab:**
 
-For this lab, 
-
-- Click :red:`Add`, and select Generic ICAP Service from the catalog and click :red:`Add`, or simply double-click the service to go to its configuration page.
-
-
-.. image:: ../images/module1-41.png
-   :align: center
-   :scale: 50
-
-
-.. note:: The only fields that need to be edited are the ones explicitly mentioned in these bullets.  The other fields may be left with their default value.
-
-- Name - CLAM_AV
-
-- ICAP Devices - Click :red:`Add`, enter :red:`198.19.97.50` for the IP Address, and :red:`1344` for the Port, and then click :red:`Done`.
-
-- Request Modification URI Path - /avscan
-
-- Response Modification URI Path - /avscan
-
-- Preview Max Length(bytes) - 1048576
-
--  Click :red:`Save`.
-
-.. image:: ../images/module1-49.png
-   :scale: 50 %
-   :align: center
-
-The image below shows the service list with the new ICAP service.
-
-.. image:: ../images/module1-42.png
-   :scale: 50 %
-   :align: center
-
-The first :red:`Service` has now been configured.
+.. note:: You can leave everything as default on this page.
 
 -  Click :red:`Save & Next` to continue to the next stage.
 
-.. image:: ../images/module1-4.png
-   :scale: 50 %
+.. image:: ../images/auth-save.png
+   :scale: 100 %
    :align: center
 
-.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the ICAP Service.
+|
+
+.. note::
+
+   There are no additional hands-on steps that need to be taken before proceeding to the next section. The information below is intended to provide additional context on the SSL Configurations.
 
 
-ICAP service
--------------
+**OCSP Responder**
 
-An ICAP service is an RFC 3507-defined service that
-provides some set of services over the ICAP protocol.
+You can configure a Local Online Certificate Status Protocol (OCSP) Responder and  associate  a  Local  OCSP  Responder  to  a  virtual  server.  OCSP  is  an  Internet  protocol  used  to obtain the revocation status of a digital certificate. When the validity of a certificate is requested, an OCSP request is sent to an OCSP Responder and checks the specific certificate with a trusted certificate  authority.  This  results  in  an  OCSP  response  being  sent  back  of  good,  revoked,  or unknown. To configure OCSP, you must select TCP or Any as your Protocol and either L2 Outbound, L3 Outbound, or L3 Explicit Proxy as your SSL Orchestrator topology from the Topology Properties screen. To create a new authentication, click Add. The Authentication Properties screen appears where you canselect OCSP Responder (for the Client). Click OCSP Responder and click Add. The Authentication Properties screen appears where you can configure a new OCSP Responder. Later when  configuring  the  Interception  Rule,  you  may  select  from  the  Authentication  section  OCSP Responder list to associate a Local OCSP Responder into the Interception Rule. This action adds a new iRule to the virtual server. In addition, you may configure authentication using the mini-flow Authentication tab without creating a topology and may utilize the existing iRule item-selector to select the OCSP iRule.
 
--  Click on :red:`Add Service`.
+-  **FQDN** - Enter an FQDN that will be injected into the authorityInfoAccess (AIA) field of the forged server certificate. This should resolve to the virtual server address listed below.
 
--  Select the :red:`Generic ICAP Service` from the
-   catalog and click :red:`Add`, or simply double-click it.
+-  **Source** - Enter a source address filter here, as required. Otherwise leave as 0.0.0.0%0/0 to allow access from any source.§Destination Address/Mask: Enter the destination address and mask here that will match the FQDN value in the forged AIA value.
 
--  **Name** - provide a unique name to this service (example ":red:`CLAM_AV`").
+-  **Port** - Enter  the  destination  port  here  for  the  OCSP  service.  This  will  almost  always  be unencrypted HTTP on port 80.
 
-- **IP Family** - this setting defines the IP family used with this layer 3
-   service. Leave it set to :red:`IPv4`.
+-  **VLANs** - Select the client facing VLAN.§SSL  Configuration: Select  the  SSL  configuration  previously  created  for  this  topology workflow.
 
--  **ICAP Devices** - this defines the IP address of the ICAP service, used
-   for passing traffic to this device. Multiple load balanced IP addresses
-   can be defined here. Click :red:`Add`, enter :red:`198.19.97.50` for the
-   IP Address, and :red:`1344` for the Port, and then click :red:`Done`.
+-  **OCSP Profile** - Select Create Newor Use Existingas required.
 
--  **Device Monitor** - security service definitions can use
-   specific custom monitors. For this lab, leave it set to the default
-   :red:`/Common/tcp`.
+-  **Max Age in Seconds** - Enter a value in seconds for max age of the OCSP response.§Nonce: Enable or disable OCSP response nonce, as required.
 
--  **ICAP Headers** - options are **Default** or **Custom**. Selecting
-   **Custom** allows you to specify additional ICAP headers. For this lab,
-   leave the setting at :red:`Default`.
+-  **[Advanced] Client TCP Profile** - Select an alternate client-side TCP profile, as required.§[Advanced] Server TCP Profile: Select an alternate server-side TCP profile, as required.
 
--  **OneConnect** - the F5 OneConnect profile improves performance by reusing
-   TCP connections to ICAP servers to process multiple transactions. If the
-   ICAP servers do not support multiple ICAP transactions per TCP connection,
-   do not enable this option. For this lab, leave the OneConnect setting
-   :red:`enabled (checked)`.
-
--  **Request Modification URI Path** - this is the RFC 3507-defined URI request path to
-   the ICAP service. Each ICAP security vendor will differ with respect to
-   request and response URIs, and preview length, so it is important to
-   review the vendor's documentation. In this lab, enter :red:`/avscan`.
-
--  **Response Modification URI Path** - this is the RFC 3507-defined URI response path to
-   the ICAP service. Each ICAP security vendor will differ with respect to
-   request and response URIs, and preview length, so it is important to
-   review the vendor's documentation. In this lab, enter :red:`/avscan`.
-
--  **Preview Max Length(bytes)** - this defines the maximum length of the
-   ICAP preview. Each ICAP security vendor will differ with respect to
-   request and response URIs, and preview length, so it is important to
-   review the vendor's documentation. A zero-length preview length implies
-   that data will be streamed to the ICAP service, similar to an HTTP
-   100/Expect process, while any positive integer preview length defines the
-   amount of data (in bytes) that are transmitted first, before streaming the
-   remaining content. The ICAP service in this lab environment does not
-   support a complete stream, so requires a modest amount of initial preview.
-   In this lab, enter :red:`1048576`.
-
--  **Service Down Action** - SSLO also natively monitors the load balanced
-   pool of security devices. If all pool members fail, SSLO can actively
-   bypass this service (**Ignore**), or stop all traffic (**Reset**,
-   **Drop**). For this lab, leave it set to :red:`Ignore`.
-
--  **HTTP Version** - this defines whether SSLO sends HTTP/1.1 or HTTP/1.0
-   requests to the ICAP service. The lab's ICAP service supports both.
-
--  **ICAP Policy** - an ICAP policy is a pre-defined LTM CPM policy that can
-   be configured to control access to the ICAP service based on attributes of
-   the HTTP request or response. ICAP processing is enabled by default, so an
-   ICAP CPM policy can be used to disable the request and/or response ADAPT
-   profiles. Leave this :red:`blank (--Select--)`
+-  **[Advanced] HTTP Profile** - Select an alternate HTTP profile, as required.
 

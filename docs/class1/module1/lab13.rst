@@ -1,78 +1,53 @@
 .. role:: red
 .. role:: bred
 
-Review behavior prior to decryption
-===================================
+Guided configuration Summary
+=============================
 
-This test will demonstrate that:
+.. image:: ../images/summary-path.png
+   :align: center
+   :scale: 100
 
-- Traffic is not being decrypted
+The summary page presents an expandable list of all of the workflow-configured
+objects. To expand the details for any given setting, click the corresponding
+arrow icon on the far right. To edit any given setting, click the corresponding
+pencil icon. Clicking the pencil icon will send the workflow back to the
+selected settings page.
 
-- The "malicious" file will pass through the network-based scanner and be download to the client.
-
-RDP to the Client machine
----------------------------------------------------
-
-- From UDF, find the :red:`Ubuntu18.04 Client`.
-
-- Click :red:`Access`.
-
-- Under xRDP, choose your preferred resolution.
-
-.. image:: ../images/module1-50.png
-   :scale: 50 %
-   :align: center 
-
-- At the **Login to xrdp** window, click on the :red:`OK` button.
-
-.. image:: ../images/module1-18.png
-   :scale: 50 %
+.. image:: ../images/summary.png
+   :scale: 100 %
    :align: center
 
+- When satisfied with the defined settings, click :red:`Deploy`.
 
-You will then see the Client desktop.
 
-.. image:: ../images/module1-19.png
-   :scale: 50 %
+.. image:: ../images/module1-31.png
+
+Upon successfully deploying the configuration, SSL Orchestrator will now
+display a **Configure** view:
+
+.. image:: ../images/summary-1.png
+   :scale: 100 %
    :align: center
 
+The **Interception Rules** tab shows the listener that were created per the
+selected topology.
 
-
-Server certificate test
------------------------
-
-Open Chromium web browser on the outbound client system and
-navigate to any remote HTTPS site (e.g., https://www.google.com). Once the
-site opens in the browser, click the padlock to the left of the URL.  
-
-.. image:: ../images/module1-33.png
-   :scale: 50 %
+.. image:: ../images/summary-ir.png
+   :scale: 100 %
    :align: center
 
-- Click :red:`Certificate (Valid)`.
-   
-.. image:: ../images/module1-51.png
-   :scale: 50 %
-   :align: center
+In the above list:
 
-- Review the server certificate of the site and notice that it is signed by a public certificate authority (CA). 
+- The **-in-t-4** listener defines normal TCP IPv4 traffic.
 
-**This confirms that the certificate re-write and SSL forward proxy decryption functionality provided by SSL Orchestrator is currently disabled.**
+- The **-in-u-4** listener defines normal UDP IPv4 traffic.
 
+- The **-ot-4** listener defines normal non-TCP/non-UDP IPv4 traffic.
 
-Encrypted traffic test on the security service
-----------------------------------------------
+This completes the Guided Configuration of SSL Orchestrator as a
+transparent forward proxy.
 
-Open Chromium web browser on the outbound client system and
-navigate to https://eicar.org/?page_id=3950. Scroll down to the section labeled 
-:red:`Download area using the secure, SSL enabled protocol HTTPS` and click on :red:`eicar.com`. 
-This is a non-malicious file that antivirus products will detect for testing purposes. 
-
-.. image:: ../images/module1-34.png
-   :scale: 50 %
-   :align: center
-
-**Notice that the encrypted malware test file is scanned by CLAM_AV and downloaded 
-to the client without issue.**
-
-In the next section, you will perform the same test after enabling decryption.
+In the next section, you will use an internal client
+**(Ubuntu18.04 Client)** to browse to external (Internet)
+resources. Decrypted traffic will flow across the security service.

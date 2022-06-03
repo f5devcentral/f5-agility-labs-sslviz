@@ -1,58 +1,35 @@
 .. role:: red
 .. role:: bred
 
-Review the current SSL Orchestrator deployment
+Review the Access Policy and AAA configuration
 ================================================================================
 
--  Start a TMUI session on **SSL Orchestrator** and log in as user **admin** (*Components > SSL Orchestrator > ACCESS > TMUI*)
+1.  From the Main menu on the left, select **Access > Authentication > NTLM > NTLM Auth Configuration**.
 
-   |credentials_link|
+2.  Select **f5labs.com_ntlm_aaa** from the NTLM Auth Configuration list. The following screen should appear:
 
-   |
+   |f5labs.com_ntlm_aaa|
 
-   |udf-sslo-tmui|
+   **Machine Account Name** is the name of the security object that is added to the domain as a Computer Account. **Domain Controller FQDN List** contains a list of the Windows domain servers (there is only one in this lab environment).
 
-   |
+3.  From the main menu select **Access > Profiles / Policies > Access Profiles (Per-Session Policies)**. The following screen should appear:
 
--  Select **SSL Orchestrator** from the left-hand menu and then click on **Configuration**.
+   |access_profile_list|
 
-   |menu-sslo-config|
+4.  Click on the **Edit** button next to the **f5labs-ntlm-ap** access profile. A new browser tab will appear showing the Access Policy in the Visual Policy Editor (VPE):
 
-   |
+   |f5labs-ntlm-ap_vpe|
 
--  When the SSL Orchestrator dashboard finishes loading, the following deployments should already be present.
+   The **NTLM Auth Result** agent check whether NTLM authentication was successful. If it was, the next action is an **AD Query** to gather more information about the user from Microsoft Active Directory.
 
-   |config-topologies|
-
-   |
-
--  Click on **Security Policies** from the horizontal menu. You should now be presented with following screen:
-
-   |security-policy-overview|
-
-   |
-
--  Click on **ssloP\_f5labs\_explicit** (in the **Name** column) and you will see the rules that are currently configured under this security policy.
-
-   |initial-security-policy|
+5.  Click on the **Close** button to exit the Visual Policy Editor.
 
 
+.. |f5labs.com_ntlm_aaa| image:: ../images/f5labs.com_ntlm_aaa.png
+   :alt: f5labs.com NTLM Auth Configuration
 
-.. |menu-sslo-config| image:: ../images/menu-sslo-config.png
-   :alt: SSL Orchestrator Configuration Menu
+.. |access_profile_list| image:: ../images/access_profile_list.png
+   :alt: Access Profile List
 
-.. |config-topologies| image:: ../images/config-topologies.png
-   :alt: SSL Orchestrator Topologies
-
-.. |security-policy-overview| image:: ../images/security-policy-overview.png
-   :alt: Security Policy Overview
-
-.. |initial-security-policy| image:: ../images/initial-security-policy.png
-   :alt: Security Policy Rules
-
-.. |udf-sslo-tmui| image:: ../images/udf-sslo-tmui.png
-   :alt: SSL Orchestrator TMUI Access
-
-.. |credentials_link| raw:: html
-
-      <a href="../labinfo.html#credentials" target="_blank"> Link to user credentials (opens in new browser tab) </a>
+.. |f5labs-ntlm-ap_vpe| image:: ../images/f5labs-ntlm-ap_vpe.png
+   :alt: f5labs-ntlm-ap Access Policy (VPE)

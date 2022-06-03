@@ -317,9 +317,8 @@ completed.
   **F5 Secure Web Gateway** then click on Add, and click on Save.
 
 
-.. image:: ../images/swg-services-F5SWG.PNG
-   :align: center
-
+    .. image:: ../images/swg-services-F5SWG.PNG
+       :align: center
 
    Note the Access Profile and the Per Request Policy as follows
    (/Common/ssloS_F5_SWG.app/ssloS_F5_SWG_M_accessProfile and /common/SWGTest1)
@@ -333,7 +332,7 @@ completed.
 
 
 Services Chain List
------------------
+-----------------------
 
   Click **Add** enter a name e.g. **SWGtestchain**
   Ensure the **ssloS_F5_SWG** is selected the click
@@ -351,8 +350,8 @@ Security Policy
 .. image:: ../images/gc-path-5.png
    :align: center
 
-   Security policies are the set of rules that govern how traffic is processed in
-   SSLO. The "actions" a rule can take include:
+Security policies are the set of rules that govern how traffic is processed in
+SSLO. The "actions" a rule can take include:
 
 - Whether or not to allow the traffic
 
@@ -393,9 +392,7 @@ The **Interception Rules** have now been configured.
    :align: center
 
 
-  **The Default Rule should be set to Intercept
-  and the Service Chain should the SSLOSC_f5OnlyChain**
-
+**The Default Rule should be set to Intercept and the Service Chain should the SSLOSC_f5OnlyChain**
 
 
 Egress Setting

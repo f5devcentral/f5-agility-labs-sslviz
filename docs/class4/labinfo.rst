@@ -102,15 +102,15 @@ TIP
    * -
      - outbound VLAN
      - 1.2
-    * -
+   * -
      - dlp-vlan
      - 1.3 tag 50
    * -
      - web-vlan
      - 1.3 tag 80
-
    * - Login
      - student:agility
+     - 
 
 SSL Orchestrator Consolidated Services Architecture (UDF Version)
 

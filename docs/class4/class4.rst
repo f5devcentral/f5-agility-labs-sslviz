@@ -1,10 +1,10 @@
-[v9] SSL Orchestrator with Secure Web Gateway (SWG) as a Service 
+SSL Orchestrator with Secure Web Gateway (SWG) as a Service 
 ==================================================================================================
 
 
 .. note::
 
-   **Requires UDF Blueprint: "<TBD>"**
+   **Requires UDF Blueprint: "SSLO: Essential SSL Visibility and SWG as a Service"**
 
    **BIG-IP 16.1 / SSL Orchestrator 9.2**
 

@@ -1,43 +1,59 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration egress setting
-===================================
+Guided configuration Interception Rule
+========================================
 
-.. image:: ../images/gc-path-7.png
+.. image:: ../images/incrule-path.png
    :align: center
-   :scale: 50
+   :scale: 100
 
-Traffic egress settings are defined per-topology and manage both the
-default gateway route and outbound SNAT settings.
+Interception rules are based on the selected topology and define the "listeners"
+that accept and process different types of traffic (ex. TCP, UDP, other). The
+resulting LTM virtual servers will bind the SSL settings, VLANs, IPs, and
+security policies created in the topology workflow.
 
--  **Manage SNAT Settings** - enables per-topology instance SNAT settings. For
-   this lab, select :red:`Auto Map`.
+-  **Source Address** - the source address field provides a filter
+   for incoming traffic based on source address and/or source subnet.
+   It is usually appropriate to leave the default :red:`0.0.0.0%0/0`
+   setting applied to allow traffic from all addresses to be processed.
 
--  **Gateways** - enables per-topology instance gateway routing. The options
-   include: use the system Default Route, use an existing gateway pool, or
-   create a new gateway. For this lab, select :red:`Create New`.
+-  **Destination Address/Mask** - the destination address/mask field
+   provides a filter for incoming traffic based on destination
+   address and/or destination subnet. As this is a transparent
+   forward proxy configuration, it is appropriate to leave the
+   default :red:`0.0.0.0%0/0` setting applied to allow all
+   outbound traffic to be processed.
 
--  **IPv4 Outbound Gateways** - when creating a new gateway, this section
-   provides the ratio and gateway address settings.
+-  **Ingress Network - VLANs** - this defines the VLANs through which traffic
+   will enter. For a transparent forward proxy topology, this would be a
+   client-side VLAN. Select :red:`client-vlan` and move it to the right-hand
+   side.
 
-   -  **Ratio** - multiple gateway IP addresses are load balanced in an LTM pool,
-      and the ratio setting allows SSLO to proportion traffic to the gateway
-      members, as required. A ratio of 1 for all members evenly distributes the
-      load across them. For this lab, select :red:`1`.
+-  **Security Policy Settings - Access Profile** - the Access Profile
+   selection is exposed for both explicit and transparent forward
+   proxy topology deployments. In transparent forward proxy mode,
+   this allows selection of an access policy to support captive
+   portal authentication. For this lab,
+   leave the default selection.
 
-   -  **Address** - this is the next hop gateway IP address. For this lab, enter
-      :red:`10.1.20.1`.
+-  **L7 Interception Rules - Protocols** - FTP and email protocol traffic
+   are all "server-speaks-first" protocols, and therefore SSLO must process
+   these separately from typical client-speaks-first protocols like HTTP. This
+   *optional* selection enables processing of each of these protocols, which create
+   separate port-based listeners for each. For this lab,
+   leave the default selection.
 
-.. image:: ../images/module1-48.png
-   :scale: 50 %
+.. image:: ../images/incrule-1.png
+   :scale: 100 %
+   :align: center
+.. image:: ../images/incrule-2.png
+   :scale: 100 %
    :align: center
 
-The **Egress Settings** have now been configured.
-
--  Click :red:`Save & Next` to continue to the next stage.
-
+The **Interception Rule** has now been configured.
+Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png
-   :scale: 50 %
+   :scale: 100 %
    :align: center

@@ -1,11 +1,13 @@
-[v8] SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2021 | 2 hours)
+SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2022 | 2 hours)
 =========================================================================================
 
 .. note::
 
-   **Requires UDF Blueprint: "Agility 2021 - SSL Orchestrator 101"**
+   **Requires UDF Blueprint: "Agility 2022 - SSL Orchestrator 101"**
 
-   **BIG-IP 16.0 / SSL Orchestrator 8.3**
+   **BIG-IP 16.1 / SSL Orchestrator 9.2**
+
+|
 
 As the volume of data continues to grow at a rapid pace, more organizations are
 deploying Secure Socket Layer (SSL) and Transport Layer Security (TLS) solutions
@@ -28,9 +30,11 @@ Attend this lab to get a hands-on introduction to the F5 SSL Orchestrator soluti
 
 Expected time to complete: **2 hours**
 
+|
+
 .. toctree::
    :numbered:
-   :caption: This class covers the following topics:
+   :caption: CONTENTS
    :maxdepth: 2
    :glob:
 

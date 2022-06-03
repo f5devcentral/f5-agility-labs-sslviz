@@ -1,35 +1,37 @@
 .. role:: red
 .. role:: bred
 
-Enable NTLM authentication on explicit proxy topology
+Modify Existing Topology
 ================================================================================
 
-The **f5labs_explicit** topology does not perform user authentication by default. You will now enable NTLM authentication for all users who connect to the explicit proxy.
+Modify the existing **f5labs_explicit** topology so that it uses a different IP address and listens on an empty VLAN. The current IP address will be re-assigned to the topology steering virtual server in a later step.
 
--  From the Main menu on the left, select **SSL Orchestrator > Configuration**
+1.  From the Main menu on the left, select **SSL Orchestrator > Configuration**
 
--  In the Topology list click on **sslo_f5labs_explicit**. The topology summary screen will appear.
+2.  In the Topology list click on **sslo_f5labs_explicit**. The topology summary screen will appear.
 
--  Click the edit icon (|pencil|) to the right of **Interception Rule**
+3.  Click the edit icon (|pencil|) to the right of **Interception Rule**
 
    |topology-summary-IR-edit|
 
--  Select **/Common/f5labs-ntlm-ap** from the **Access Profile** drop down menu
+4.  Change the **IPV4 Address** to ``10.1.10.151``.
+
+5.  In the **VLANs** section, remove **client-vlan** from the **Selected** column.
+
+6.  Add **yyy-vlan** to the **Selected** column.
+
+7.  Click **Save & Next** at the bottom of the screen
 
 
-.. image:: ../images/ntlm-access-profile.png
-   :alt: Access Profile for NTLM Authentication
+.. image:: ../images/intercept-new-ip-vlan.png
+   :alt: Proxy Server Settings - New IP and VLAN
 
 
--  Click **Save & Next** at the bottom of the screen
-
-|
-
--  The **Egress Settings** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button (see example below).
+8.  The **Egress Settings** screen will load. Wait a moment for the yellow "Deploy" ribbon to appear. When it does, click the **Deploy** button (see example below).
 
    |egress-settings-deploy-ribbon|
 
--  Click **OK** to acknowledge the successful deployment.
+9.  Click **OK** to acknowledge the successful deployment.
 
 .. |topology-summary-IR-edit| image:: ../images/topology-summary-IR-edit.png
    :alt: Edit Interception Rule from Topology Summary

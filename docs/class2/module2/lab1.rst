@@ -1,35 +1,32 @@
 .. role:: red
 .. role:: bred
 
-Review the Access Policy and AAA configuration
+Create Two Empty VLANs
 ================================================================================
 
--  From the Main menu on the left, select **Access > Authentication > NTLM > NTLM Auth Configuration**.
+A topology must be bound to a unique VLAN. Since the layer topologies won't be listening on actual client-facing VLANs, you will need to create a separate empty VLAN for each topology you intend to create. An empty VLAN has no interfaces assigned.
 
--  Select **f5labs.com_ntlm_aaa** from the NTLM Auth Configuration list. The following screen should appear:
+1. Navigate to **Network > VLANs** and click on the **Create** button to add a new VLAN.
 
-   |f5labs.com_ntlm_aaa|
+2. Name this VLAN:  ``zzz-vlan`` and then click on **Repeat**. Do not select any interfaces.
 
-   **Machine Account Name** is the name of the security object that is added to the domain as a Computer Account. **Domain Controller FQDN List** contains a list of the Windows domain servers (there is only one in this lab environment).
+   .. image:: ../images/create-vlan.png
+      :alt: Empty VLAN
 
--  From the main menu select **Access > Profiles / Policies > Access Profiles (Per-Session Policies)**. The following screen should appear:
+3. Since you are not attaching any interfaces to this VLAN, you will receive a confirmation pop-up.
 
-   |access_profile_list|
+   .. image:: ../images/vlan-confirm-empty.png
+      :alt: Empty VLAN Confirmation
 
--  Click on the **Edit** button next to the **f5labs-ntlm-ap** access profile. A new browser tab will appear showing the Access Policy in the Visual Policy Editor (VPE):
+4.  Click on **OK** to continue.
 
-   |f5labs-ntlm-ap_vpe|
+5. Since we clicked **Repeat**, we are automatically ready to create the second empty VLAN.
 
-   The **NTLM Auth Result** agent check whether NTLM authentication was successful. If it was, the next action is an **AD Query** to gather more information about the user from Microsoft Active Directory.
+6. Name this VLAN:  ``yyy-vlan`` and then click on **Finished**.
 
--  Click on the **Close** button to exit the Visual Policy Editor.
+7. Since you are not attaching any interfaces to this VLAN, you will receive a confirmation pop-up. Click on **OK** to continue and return to the VLAN List.
 
+|
 
-.. |f5labs.com_ntlm_aaa| image:: ../images/f5labs.com_ntlm_aaa.png
-   :alt: f5labs.com NTLM Auth Configuration
-
-.. |access_profile_list| image:: ../images/access_profile_list.png
-   :alt: Access Profile List
-
-.. |f5labs-ntlm-ap_vpe| image:: ../images/f5labs-ntlm-ap_vpe.png
-   :alt: f5labs-ntlm-ap Access Policy (VPE)
+.. image:: ../images/vlan-empty.png
+   :alt: Empty VLANs

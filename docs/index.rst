@@ -44,8 +44,8 @@ Bugs and Requests for enhancements are handled in two ways:
 
 |
 
-(c) 2016-2021 F5 Networks, Inc. All rights reserved. F5, F5 Networks, and the F5
-logo are trademarks of F5 Networks, Inc. in the U.S. and in certain
+(c) 2016-2022 F5, Inc. All rights reserved. F5, F5 Networks, and the F5
+logo are trademarks of F5, Inc. in the U.S. and in certain
 other countries. Other F5 trademarks are identified at f5.com.
 
 Any other products, services, or company names referenced herein may be

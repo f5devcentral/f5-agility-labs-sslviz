@@ -1,56 +1,88 @@
 .. role:: red
 .. role:: bred
 
-Guided configuration interception rule
-========================================
+Guided configuration Security Policy
+=====================================
 
-.. image:: ../images/gc-path-6.png
+.. image:: ../images/secpolicy-path.png
    :align: center
-   :scale: 50
+   :scale: 100
 
-Interception rules are based on the selected topology and define the "listeners"
-that accept and process different types of traffic (ex. TCP, UDP, other). The
-resulting LTM virtual servers will bind the SSL settings, VLANs, IPs, and
-security policies created in the topology workflow.
+Security policies are the set of rules that govern how traffic is processed in
+SSLO. The "actions" a rule can take include:
 
--  **Source Address** - the source address field provides a filter
-   for incoming traffic based on source address and/or source subnet.
-   It is usually appropriate to leave the default :red:`0.0.0.0%0/0`
-   setting applied to allow traffic from all addresses to be processed.
+- Whether or not to allow the traffic
 
--  **Destination Address/Mask** - the destination address/mask field
-   provides a filter for incoming traffic based on destination
-   address and/or destination subnet. As this is a transparent
-   forward proxy configuration, it is appropriate to leave the
-   default :red:`0.0.0.0%0/0` setting applied to allow all
-   outbound traffic to be processed.
+- Whether or not to decrypt the traffic
 
--  **Ingress Network - VLANs** - this defines the VLANs through which traffic
-   will enter. For a transparent forward proxy topology, this would be a
-   client-side VLAN. Select :red:`client-vlan` and move it to the right-hand
-   side.
+- Which service chain (if any) to pass the traffic through
 
--  **Security Policy Settings - Access Profile** - the Access Profile
-   selection is exposed for both explicit and transparent forward
-   proxy topology deployments. In transparent forward proxy mode,
-   this allows selection of an access policy to support captive
-   portal authentication. For this lab,
-   leave the default selection.
+The SSLO Guided Configuration presents an intuitive rule-based, drag-and-drop
+user interface for the definition of security policies.
 
--  **L7 Interception Rules - Protocols** - FTP and email protocol traffic
-   are all "server-speaks-first" protocols, and therefore SSLO must process
-   these separately from typical client-speaks-first protocols like HTTP. This
-   *optional* selection enables processing of each of these protocols, which create
-   separate port-based listeners for each. For this lab,
-   leave the default selection.
-
-.. image:: ../images/module1-35.png
-   :scale: 50 %
+.. image:: ../images/module1-36.png
    :align: center
+   :scale: 100
 
-The **Interception Rule** has now been configured.
+-  In the Security Policy, click the pencil at the far right of the :red:`All Traffic` rule.
+
+.. image:: ../images/secpolicy.png
+   :align: center
+   :scale: 100
+
+- Click on the :red:`SSL Proxy Action` drop down menu and select :red:`Bypass`.
+
+- Click on the :red:`Service Chain` drop down menu and select :red:`ssloSC_all_services`.
+
+-  Click :red:`OK`.
+
+The preliminary :red:`Security Policy` has now been configured.
+
 Click :red:`Save & Next` to continue to the next stage.
 
 .. image:: ../images/module1-4.png
    :scale: 50 %
    :align: center
+
+.. tip::
+   In the background, SSLO maintains these security policies as visual
+   per-request policies. If traffic processing is required that exceeds the
+   capabilities of the rule-based user interface, the underlying per-request
+   policy can be modified directly.
+
+.. warning::
+   In a production environment, additional policy customization is possible 
+   manually outside of guided configuration, but strong caution should be taken.
+   If the per-request policy is modified directly, any
+   future guided configuration changes will overwrite the manual changes.
+
+
+.. note:: There are no additional hands-on steps that need to be taken before proceeding to the next section.  The information below is intended to provide additional context on the security policy.
+
+Security policy
+----------------
+
+   .. NOTE::
+      The **Category Lookup (All)** condition provides categorization for
+      TLS SNI, HTTP Connect and HTTP Host information.
+
+In the list of rules, notice that the **All Traffic** rule intercepts but
+does *not* send traffic to any service chain. 
+
+-  **Server Certificate Status Check** - this option
+   inserts additional security policy logic to validate the remote
+   server certificate and return a blocking page to the user if the
+   certificate is untrusted or expired. One or both of the Certificate
+   Response options on the SSL Configuration page (Expire Certificate
+   Response and Untrusted Certificate Response) must be set to 'ignore'.
+   SSLO will "mask" the server certificate's attributes in order to
+   present a blocking page with a valid forged certificate. For this lab,
+   leave this option disabled.
+
+-  Proxy Connect - this option allow you to add an upstream explicit proxy
+   to your security rule chaining. You can add multiple proxy devices, or
+   pool members, as necessary. For this lab, leave this option disabled.
+
+
+
+
