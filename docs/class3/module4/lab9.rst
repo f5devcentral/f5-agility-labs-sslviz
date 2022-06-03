@@ -39,7 +39,7 @@ View Decrypted Traffic
 
 To verify that decrypted traffic is flowing through the L3 services, you can run **tcpdump** on the SSL Orchestrator **FROM Service** VLANs (**dmz2** and **dmz4**). You will need the Public IP address of the BIG-IP (from Terraform output: <sslo_management_public_ip>).
 
-Open a new BASH Terminal and SSH to the BIG-IP:
+Launch **another** BASH Terminal and SSH to the BIG-IP:
 
    .. code-block:: bash
 
@@ -90,7 +90,7 @@ You should see plaintext content similar to the following:
 
 |
 
-Close this BASH Terminal window.
+Close **this** BASH Terminal window.
 
 |
 

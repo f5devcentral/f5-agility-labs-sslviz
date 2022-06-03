@@ -156,6 +156,8 @@ Create the second L3 inspection service:
 - Select **Generic Inline Layer 3** from the service catalog and click on the **Add** button.
 - Enter ``SNORT2`` as the name for the service.
 
+- De-select the **Auto Manage Addresses** checkbox.
+
 - In the **To Service** section, select the **Create New** radio button.
 - Enter ``dmz3`` in the self IP name field.
 - Select the **Use Existing** VLAN radio button (if not already selected).
@@ -198,6 +200,7 @@ Create Service Chains
 
 Create first service chain:
 
+- Click on the **Add** button.
 - Enter ``service_chain_1`` in the name field.
 - Add the **SNORT1** service to the service chain.
 - Click on the **Save** button.
@@ -208,6 +211,7 @@ Create first service chain:
 
 Create second service chain:
 
+- Click on the **Add** button.
 - Enter ``service_chain_2`` in the name field.
 - Add the **SNORT1** and **SNORT2** services to the service chain.
 - Click on the **Save** button.

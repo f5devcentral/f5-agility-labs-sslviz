@@ -7,6 +7,11 @@ Type ``marketplace`` in the AWS Console search box at the top of the page.
 
 Select **AWS Marketplace Subscriptions** from the search results.
 
+Click on the *hamburger* menu icon at the top left.
+
+.. image:: ./images/aws-mkt-0.png
+   :align: left
+
 Click on **Discover products**.
 
 Enter ``f5 all byol`` in the **AWS Marketplace products** search box.

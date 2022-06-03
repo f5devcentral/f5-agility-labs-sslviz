@@ -3,6 +3,8 @@ Install F5 Ansible Collections
 
 To work with Ansible in this lab environment, you must first change the Ansible directory permissions and then switch to that directory.
 
+In the BASH Terminal, execute the following:
+
    .. code-block:: bash
 
       cd ~/sslo-cloud-templates
