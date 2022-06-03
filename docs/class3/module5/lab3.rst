@@ -3,7 +3,7 @@ Delete the AWS Deployment (Terraform)
 
 The |destroy_link| command deletes the resources that were created by the Terraform configuration.
 
-Execute the following:
+In the BASH Terminal, execute the following:
 
    .. code-block:: bash
 

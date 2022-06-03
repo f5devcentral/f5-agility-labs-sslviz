@@ -27,7 +27,7 @@ The playbook tasks are described below:
 
 |
 
-In the BASH Terminal, run the playbook:
+Return to the BASH Terminal session that you used earlier to deploy the SSL Orchestrator Topology configuration to execute the following:
 
    .. code-block:: bash
 
