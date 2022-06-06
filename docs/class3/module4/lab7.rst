@@ -1,7 +1,7 @@
 Deploy SSL Orchestrator Topology
 ================================================================================
 
-In the BASH Terminal, deploy an Inbound L3 Topology by executing the following:
+Return to the BASH Terminal (you should still be in the *ansible* directory) to deploy an Inbound L3 Topology by executing the following:
 
    .. code-block:: bash
 
