@@ -3,9 +3,9 @@ F5 SSL Orchestrator Training Lab Guide
 
 This repository contains the source for the F5 SSL Orchestrator Training Lab Guides.
 
-- SSL Orchestrator v9 - SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2022 | 2 hours)
-- SSL Orchestrator v9 - SSLO 201: Advanced Use Cases (Agility 2022 | 2 hours)
-- SSL Orchestrator v9 - SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud (Agility 2022 | 2 hours)
+- SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2022 | 2 hours)
+- SSLO 201: Advanced Use Cases (Agility 2022 | 2 hours)
+- SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud (Agility 2022 | 2 hours)
 
 These labs cover the following topics:
 
@@ -14,8 +14,8 @@ These labs cover the following topics:
 - Classification and interception rules
 - Outbound and inbound use-cases
 - Authentication
-- Topology steering
-- Public cloud deployments with Terraform and Ansible
+- Topology steering with a layered architecture
+- Public cloud deployments with Terraform and Ansible automation
 
 Expected time to complete: **2 hours or 4 hours** (depending on version)
 
