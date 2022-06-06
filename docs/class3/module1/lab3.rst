@@ -5,14 +5,12 @@ Before you can deploy EC2 virtual machine instances, you must **subscribe** to t
 
 Type ``marketplace`` in the AWS Console search box at the top of the page.
 
-Select **AWS Marketplace Subscriptions** from the search results.
-
-Click on the *hamburger* menu icon at the top left.
+Click on **AWS Marketplace Subscriptions** from the search results.
 
 .. image:: ./images/aws-mkt-0.png
    :align: left
 
-Click on **Discover products**.
+In the menu to the left, click on **Discover products**. If you do not see this menu, click on the |hamburger| (*hamburger*) menu icon first.
 
 Enter ``f5 all byol`` in the **AWS Marketplace products** search box.
 
@@ -78,6 +76,10 @@ Keep your browser window open. You will need to return to it later.
 
 In the next section, you will use Terraform to build the AWS network infrastructure for this lab.
 
+
+
+
+.. |hamburger| image:: ./images/aws-mkt-menu.png
 
 .. |ec2-bigip| raw:: html
 
