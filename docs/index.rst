@@ -30,7 +30,11 @@ Bugs and Requests for enhancements are handled in two ways:
    :maxdepth: 1
    :glob:
 
-   class*/class*
+   class1/class*
+   class5/class*
+   class2/class*
+   class3/class*
+   class4/class*
 
 |
 
