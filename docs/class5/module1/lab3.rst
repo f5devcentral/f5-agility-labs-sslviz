@@ -4,7 +4,7 @@ What's new in SSL Orchestrator?
 BIG-IP Next SSL Orchestrator Features
 ------------------------------------------------------------------------------
 
-The flagship **SSL Orchestrator** release on BIG-IP Next provides the following features:
+The **BIG-IP Next SSL Orchestrator (BIG-IP Next 20.1)** release on BIG-IP Next provides the following features:
 
 - **Inbound Application Mode**: SSL Orchestrator security policy can natively attach to a standard BIG-IP Next application workflow.
 
@@ -25,7 +25,5 @@ The flagship **SSL Orchestrator** release on BIG-IP Next provides the following 
   - Assign the traffic to a “service chain” of inspection devices
 
 - **High Availability Support**: High availability is the ability to pair BIG-IP instances for greater availability and protection against unintended outages.
-
-- **Journeys Configuration Migration Support**: The Journeys migration tool allows customers to move an existing BIG-IP SSL Orchestrator configuration to BIG-IP Next.
 
 - **iRules Support**: BIG-IP Next carries forward the full extensibility of F5 iRules to provide programmatic access to the BIG-IP data plane. iRules present an unparalleled flexibility within the F5 BIG-IP full proxy architecture to tune and adjust traffic flows, and even application behavior, at wire speed.

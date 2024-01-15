@@ -39,7 +39,7 @@ through the Central Manager.
    and then click the **Submit** button.
 
 #. In the following drawer, under **Management Credentials**, enter a
-   new admin-cm password (use 'Welcome123!' for consistency, then click
+   new admin-cm password (**use 'Welcome123!' for consistency**, then click
    the **Add Instance** button.
 
 #. Once the instance has been added, click the BIG-IP instance name link

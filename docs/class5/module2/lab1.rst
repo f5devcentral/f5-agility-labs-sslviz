@@ -1,16 +1,8 @@
 .. role:: red
 .. role:: bred
 
-
-.. todo:: 
-
-   Instructions and screenshots pending completion of the UDF blueprint
-
-
-
 Accessing the Virtual Lab
 ================================================================================
-
 
 If you are not familiar with the process for joining a training course, refer to:
 
