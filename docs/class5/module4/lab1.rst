@@ -1,4 +1,4 @@
-Inbound Application Mode
+About Inbound Application Mode
 ==============================================================================
 
 The SSL Orchestrator **inbound application mode** deployment describes a

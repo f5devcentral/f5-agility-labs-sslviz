@@ -1,4 +1,4 @@
-Define Traffic Policy
+Defining a Traffic Policy
 ================================================================================
 
 Create an SSL Orchestrator Traffic Policy

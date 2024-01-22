@@ -1,4 +1,4 @@
-Define Service Chain(s)
+Defining a Service Chain
 ================================================================================
 
 Create a Service Chain

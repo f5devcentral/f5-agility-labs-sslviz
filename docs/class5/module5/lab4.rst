@@ -1,4 +1,4 @@
-Define Traffic Policy
+Defining a Traffic Policy
 ================================================================================
 
 
@@ -53,9 +53,3 @@ The SSL Orchestrator traffic policy is a combination of multiple rulesets, each 
 
 #. The traffic policy is now complete for the sake of this lab, but other traffic and logging rules can also be applied, as required. When done, click Save & Finish. The traffic policy is now saved to CM and will be deployed to a BIG-IP instance when it is associated with an application.
 
-
-
-|
-
-.. attention::
-   This is the end of the lab module.

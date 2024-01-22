@@ -17,7 +17,7 @@ Note that the lab environment will also shut down automatically at the end of th
 
 |
 
-More SSL Orchestrator Labs
+Explore More SSL Orchestrator Labs
 ================================================================================
 
 To learn more about SSL Orchestrator, consider attending one of the other labs in this series:
@@ -53,7 +53,7 @@ Revision History
      - **Changes**
    * - 1.0 (AppWorld 2024)
      - Kevin Stewart, Jason Chiu
-     - Lab created - BIG-IP Next 20.2 - SSL Orchestrator (Limited Availability release)
+     - Lab created - BIG-IP Next 20.1 - SSL Orchestrator (Limited Availability release)
 
 
 Lab Guide Repository (GitHub)

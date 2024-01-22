@@ -1,4 +1,4 @@
-Define Inspection Service(s)
+Defining an Inspection Service
 ================================================================================
 
 The first step in this journey is to create the SSL Orchestrator inspection services. As previously noted, an inspection service will have network attributes that are specific to a BIG-IP Next instance (i.e., interfaces, VLANs, self-IPs). When creating an inspection service in CM, you will deploy these direct to the BIG-IP Next instance before the application is defined.

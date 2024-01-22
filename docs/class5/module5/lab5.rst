@@ -1,4 +1,4 @@
-Create Inbound Gateway Deployment
+Creating an Inbound Gateway Deployment
 ================================================================================
 
 

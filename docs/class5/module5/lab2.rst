@@ -1,4 +1,4 @@
-Define Inspection Service(s)
+Defining an Inspection Service
 ================================================================================
 
 

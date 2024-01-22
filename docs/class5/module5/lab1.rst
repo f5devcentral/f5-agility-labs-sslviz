@@ -1,4 +1,4 @@
-Inbound Gateway Mode
+About Inbound Gateway Mode
 ==============================================================================
 
 The SSL Orchestrator **inbound gateway mode** deployment describes a

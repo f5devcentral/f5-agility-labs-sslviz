@@ -1,4 +1,4 @@
-Define Service Chain(s)
+Defining a Service Chain
 ================================================================================
 
 With inspection services created, we will create a service chain that contains both of these in a specific order.

@@ -1,4 +1,4 @@
-Test Inbound Gateway Deployment
+Testing the Inbound Gateway Deployment
 ================================================================================
 
 
