@@ -44,34 +44,31 @@ It's now time to create a simple HTTPS application. Follow these steps:
 
 #. Navigate to the **Pools** column and click on **+ Create**.
 
-#. Enter a unique name for your web server pool and change the **Service Port** to **443**.
+   #. Enter ``my_pool`` as the **Pool** name and change the **Service Port** to **443**.
 
-#. Navigate back to the **Virtual Servers** column and enter a unique
-   name for your new application.
+   #. Change the **Monitor Type** to **icmp**.
 
-#. Select the previously created pool,
-   and then change the **Virtual Port** to **443**.
+#. Navigate back to the **Virtual Servers** column and enter ``my_app`` for your new application.
 
-#. In the **Protocols & Profiles** column, click the tool icon to open a
-   new Protocols & Profiles drawer.
+   #. Select the previously created pool and change the **Virtual Port** to **443**.
 
-#. Enable the **Enable HTTPS (Client-Side TLS)** option, then click on the **Add** button.
+#. In the **Protocols & Profiles** column, click the tool icon to open the configuration
+   settings drawer.
 
-#. In the **Add Client-Side TLS** drawer, enter ``wildcard.f5labs.com`` as the name and
-   then select the **wildcard.f5labs.com** RSA certificate. This certificate was included as part of your lab environment.
+   #. Enable the **Enable HTTPS (Client-Side TLS)** option, then click on the **Add** button.
 
-#. Enable the **Enable Server-side TLS** option.
+   #. In the **Add Client-Side TLS** drawer, enter ``wildcard.f5labs.com`` as the name and
+      then select the **wildcard.f5labs.com** RSA certificate. This certificate was included as part of your lab environment.
 
-#. Enable the **Enable SNAT** and **Enable Auto SNAT** options.
+   #. Enable the **Enable Server-side TLS** option.
 
-#. Disable the **Enable Connection Mirroring** option.
+   #. Enable the **Enable SNAT** and **Enable Auto SNAT** options.
+
+   #. Disable the **Enable Connection Mirroring** option.
 
 #. Click the **Save** button to the close the **Protocols & Profiles** drawer.
 
-#. Click the **Review & Deploy** button in the bottom right of the
-   **Add Application** drawer.
-
-#. In the **Deploy** drawer:
+#. At the bottom right corner, click the **Review & Deploy** button to open the **Deploy** drawer:
 
    #. Click the **Start Adding** button and select the BIG-IP Next instance.
 
@@ -79,71 +76,20 @@ It's now time to create a simple HTTPS application. Follow these steps:
 
    #. Enter the ``10.1.10.20`` in the **Virtual Address** field.
 
-   #. In the **Members** column, click the down arrow and click **+ Pool Members**.
+   #. In the **Members** column, click the down arrow and then click **+ Pool Members**.
 
-   #. In the **Pool Member** drawer:
+   #. In the **New Pool Member** drawer, click the **+ Add Row** button 3 times to create additional entries.
 
-      #. Click the **+ Add Row** button 3 times to create additional entries
-      #. Add the following entries:
+   #. Add the following entries:
 
-         - Name: ``mbr_192.168.100.11``, IP Address: ``192.168.100.11``
+      - Name: ``mbr_192.168.100.11``, IP Address: ``192.168.100.11``
 
-         - Name: ``mbr_192.168.100.12``, IP Address: ``192.168.100.12``
+      - Name: ``mbr_192.168.100.12``, IP Address: ``192.168.100.12``
 
-         - Name: ``mbr_192.168.100.13``, IP Address: ``192.168.100.13``
+      - Name: ``mbr_192.168.100.13``, IP Address: ``192.168.100.13``
 
-      #. Click the **Save** bottom to close the **Pool Member** drawer.
+  #. Click the **Save** bottom to close the **Pool Member** drawer.
 
 #. Click the **Deploy Changes** button to send the application
    definition to the BIG-IP Next instance.
 
-
-Log into the Client and Test Access to the HTTPS Application
---------------------------------------------------------------------------------
-
-Congratulations! You've just deployed a simple HTTPS application on
-BIG-IP Next. The next step is to test your application from a client
-environment. The UDF lab provides a unique client VM instance running a
-version of Ubuntu Linux, access to an interactive shell for command line
-testing, and a user desktop to run GUI browsers and other tools. Follow
-these options to access either the client command line shell or desktop
-GUI in the UDF lab:
-
--  **To access the Client VM shell**: In the UDF deployment window, find
-   the Ubuntu **Client** instance and then find the **Web Shell** access
-   option. This will open a console shell window to the client VM in a
-   separate browser tab.
-
--  **To access the Client VM desktop**: In the UDF deployment window,
-   find the Ubuntu **Server** instance and then find the **WebRDP** access
-   option. This opens a new browser window to an instance of Guacamole
-   running on the Ubuntu server with remote desktop access to the client
-   desktop GUI. Enter the username (``user``) and password (``user``) to access
-   the client desktop through the browser window.
-
-The simplest test of the HTTPS application can be done with a command
-line cURL request. In the VM shell, or a shell running in the client
-desktop, enter the following command:
-
-   .. code-block:: bash
-
-      curl -vk https://10.1.10.20
-
-|
-
-The output of this command will contain the full payload of the webpage.
-
-To see just the headers and TLS handshake output, add the **I** flag:
-
-   .. code-block:: bash
-
-      curl -vkI https://10.1.10.20
-
-|
-
-In the **Server certificate** section, you will see that the **subject** field is *\*.f5labs.com*. This confirms that the site is being presented from the BIG-IP deployed application.
-
-|
-
-.. attention::
-   This is the end of the lab module.

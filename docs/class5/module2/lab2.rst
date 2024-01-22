@@ -30,9 +30,7 @@ this lab guide with your own environment, please ensure that you create these ob
 
 -  **Client side VLAN and subnet are pre-defined** - This is the VLAN
    that a client connects to for traffic flows. SSL Orchestrator does
-   not define the client-side VLAN(s) and self-IP(s). A web server also
-   exists to facilitate an inbound (reverse proxy) use case - external
-   client to an internal set of websites.
+   not define the client-side VLAN(s) and self-IP(s).
 
 -  **Server side VLAN and subnet are pre-defined** - This is the VLAN
    that traffic egresses from the F5 BIG-IP to the web servers. SSL
@@ -63,7 +61,7 @@ this lab guide with your own environment, please ensure that you create these ob
    existing security services. However, while possible, passing this
    decrypted traffic to points on an existing network architecture could
    create multiple points of data exposure. Usernames, passwords, credit
-   card numbers and other sensitive information could be exposed to
+   card numbers and other personally identifiable information (PII) could be exposed to
    other devices on that network. It is thus recommended that security
    devices exist in a "private enclave" local to the BIG-IP Next
    instance(s). Please keep this in mind when defining the network

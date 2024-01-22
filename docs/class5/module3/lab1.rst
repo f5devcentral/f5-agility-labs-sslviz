@@ -1,13 +1,6 @@
 BIG-IP Next Instance Onboarding
 ==============================================================================
 
-.. note::
-
-   As there are far more comprehensive resources for describing the setup and configuration of BIG-IP Next and Central Manager, this guide seeks only to provide an abbreviated set of instructions for the sole purpose of standing up an SSL Orchestrator environment. Please see official BIG-IP Next documentation for complete information on the platform:
-
-   https://clouddocs.f5.com/bigip-next/latest/
-
-
 The following instructions assume basic connectivity to the lab
 environment, and administrative access to the lab's network and virtual
 machine configurations.
@@ -32,15 +25,14 @@ through the Central Manager.
 #. Click the **Start Adding Instances** button to add a new BIG-IP Next
    instance.
 
-#. In the new Add Instance drawer, type in the IP address of the BIG-IP
-   Next instance (10.1.1.7) and click the **Connect** button.
+#. In the new **Add Instance** drawer, enter ``10.1.1.7`` as the IP address of the BIG-IP
+   Next instance and click the **Connect** button.
 
-#. In the following drawer, enter the Username and Password information,
+#. In the following drawer, enter the **Username** and **Password** information,
    and then click the **Submit** button.
 
-#. In the following drawer, under **Management Credentials**, enter a
-   new admin-cm password (**use 'Welcome123!' for consistency**, then click
-   the **Add Instance** button.
+#. In the following drawer, under **Management Credentials**, you will need to enter a
+   new password for the **admin-cm** user. Enter ``Welcome123!`` (for consistency in this lab), then click the **Add Instance** button.
 
 #. Once the instance has been added, click the BIG-IP instance name link
    under the **Name** column. This will open a new Properties drawer.
@@ -50,7 +42,7 @@ through the Central Manager.
 
 #. Click the **Next** button in the **Activate License** drawer.
 
-#. Copy the contents of the JWT token into the JST window, then provide a unique name and
-   click the **Activate** button.
+#. Copy the contents of the JWT token into the JST window and provide a unique name.
 
+#. Click the **Activate** button.
 
