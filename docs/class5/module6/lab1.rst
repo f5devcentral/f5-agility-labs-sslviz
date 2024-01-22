@@ -1,4 +1,4 @@
-Automating a Deployment via API
+About SSL Orchestrator Configuration Automation
 ==============================================================================
 
 Automation support adds an exciting new perspective to the F5 BIG-IP SSL

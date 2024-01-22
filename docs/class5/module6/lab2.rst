@@ -1,4 +1,4 @@
-Accessing the API Client
+Setting up the API Client
 ================================================================================
 
 
