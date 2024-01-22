@@ -9,7 +9,7 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 
 #. In the top left corner of the CM UI, click the workspace menu tool (9 dots) and click **Applications**. An application may already exist from the previous lab, but in any case either click the **Start Adding Apps** button (no existing applications), or the **+ Create** button (existing applications).
 
-#. In the **Add Application** drawer, enter ``my-sslo-lab2-app`` for the application name and and optional description.
+#. In the **Add Application** drawer, enter ``my-sslo-lab2-app`` for the application name and an optional description.
 
 #. Click the **Start Creating** button.
 
@@ -35,7 +35,7 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 
 #. In the **Security Policies** column, click the tool icon to open a new **Security Profiles** drawer.
 
-#. Enable the **Use an SSL Orchestrator Policy** option and then select your SSL Orchestrator traffic policy
+#. Enable the **Use an SSL Orchestrator Policy** option and then select your SSL Orchestrator traffic policy.
 
 #. Click **Save**.
 
@@ -59,7 +59,7 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 
 #. In the **Configure** column, click the tool icon. 
 
-#. Enable the **Enable VLANs to listen on** option and select **clientside**
+#. Enable the **Enable VLANs to listen on** option and select **clientside**.
 
 #. Click **Save**.
 

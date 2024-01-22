@@ -22,9 +22,8 @@ Create a Service Chain
 
 #. Select the previously created inspection service.
 
+#.	Click the **Save** button to save the service chain configuration.
+
+
 .. note::
    Multiple service chains could be created here, but you will only create one for this lab module.
-
-   |
-
-#.	Click the **Save** button to save the service chain configuration.

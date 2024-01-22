@@ -14,9 +14,11 @@ The SSL Orchestrator traffic policy enables policy-based traffic steering to the
 
 #. Ensure the **Type** is set to **Inbound Application**. 
 
-#. Click the Next button to continue.
+#. Click the **Next** button to continue.
 
-   The SSL Orchestrator traffic policy is a combination of multiple rulesets, each with same or similar traffic conditions, but different potential actions. The Traffic Rules ruleset controls blocking, TLS decrypt decisions, and steering to inspection services. The Logging Rules ruleset controls logging behavior. The Traffic Rules ruleset contains a single, immovable “All Traffic” condition that applies to all traffic flows that do not match any other (higher) condition. Its default and adjustable behavior is to Allow traffic and decrypt. Now, make a few modifications to the Traffic Rules ruleset.
+   .. note::
+
+      The SSL Orchestrator traffic policy is a combination of multiple rulesets, each with same or similar traffic conditions, but different potential actions. The Traffic Rules ruleset controls blocking, TLS decrypt decisions, and steering to inspection services. The Logging Rules ruleset controls logging behavior. The Traffic Rules ruleset contains a single, immovable “All Traffic” condition that applies to all traffic flows that do not match any other (higher) condition. Its default and adjustable behavior is to Allow traffic and decrypt. Let us now make a few modifications to the Traffic Rules ruleset.
 
 #. Click the **+ Create** button to create a new traffic condition.
 
@@ -42,7 +44,7 @@ The SSL Orchestrator traffic policy enables policy-based traffic steering to the
 
 #. Click the **All Traffic** condition to modify it, and assign a service chain.
 
-#. Now, create a single Logging Rules condition to log all incoming traffic. In the **Logging Rules** ruleset, click the **Start Creating** button.
+#. Now, create a single **Logging Rules** condition to log all incoming traffic. In the **Logging Rules** ruleset, click the **Start Creating** button.
 
 #. Enter ``all-logging`` in the **Name** field, and optional description.
 
