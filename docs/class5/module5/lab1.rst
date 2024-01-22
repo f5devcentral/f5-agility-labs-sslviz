@@ -1,10 +1,10 @@
-Define an Inbound Gateway Mode Deployment
+About Inbound Gateway Mode
 ==============================================================================
 
 The SSL Orchestrator **inbound gateway mode** deployment describes a
 scenario where the F5 BIG-IP functions in a routing mode. The
-destination address is behind the BIG-IP and traffic is routed through
-as a next hop. Effectively, this is a departure from the standard
+destination addresses are behind the BIG-IP and traffic is forwarded through
+as a routed next hop. Effectively, this is a departure from the standard
 application deployment with the following attributes:
 
 -  The virtual server listens on a wildcard (0.0.0.0/0) IP subnet, and
@@ -20,19 +20,8 @@ attached in exactly the same way as other application workflows.
 
 .. image:: ./images/inbound-gw-mode.png
 
+
 The following instructions assume basic connectivity to the lab
 environment, and administrative access to the lab's network and virtual
 machine configurations.
 
-
-TBD
---------------------------------------------------------------------------------
-
-#. TBD
-
-
-
-|
-
-.. attention::
-   This is the end of the lab module.
