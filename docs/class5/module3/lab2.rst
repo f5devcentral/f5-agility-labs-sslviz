@@ -7,11 +7,11 @@ Install Certificates and Keys
 With the BIG-IP Next instance activated, follow these steps to install the
 certificate and private key needed to host an HTTPS application.
 
-#. In the top left corner of the CM UI, click the workspace menu tool (9
+#. In the top left corner of the CM UI, click on the workspace menu tool (9
    dots) and click **Applications**, then click **Certificates & Keys**
    in the left menu.
 
-#. Click the **Add Certificates** button, then in the following drawer
+#. Click on the **Add Certificates** button, then in the following panel
    select **Import a Certificate**.
 
    - **Name**: Create New. Enter a unique name.
@@ -26,7 +26,7 @@ certificate and private key needed to host an HTTPS application.
 
    - **Key Security Type**: Normal
 
-#. Click the **Save** button.
+#. Click on the **Save** button.
 
 
 Create an HTTPS Application
@@ -34,62 +34,83 @@ Create an HTTPS Application
 
 It's now time to create a simple HTTPS application. Follow these steps:
 
-#. In the Applications UI, click **My Application Services** under the
+#. In the Applications UI, click on **My Application Services** under the
    **Applications** menu.
 
-#. Click the **Start Adding Apps** button.
+   .. image:: ./images/applications-menu.png
 
-#. In the **Add Application** drawer, enter ``my-app-1`` and an optional description. Then,
-   click the **Start Creating** button.
+#. Click on the **Start Adding Apps** button to open the **Add Application** panel.
 
-#. Navigate to the **Pools** column and click on **+ Create**.
+#. Enter ``my-app-1`` in the **Application Service Name** field.
 
-   #. Enter ``my_pool`` as the **Pool** name and change the **Service Port** to **443**.
+#. Leave the **Application Service** type selection as **Standard** (default).
 
-   #. Change the **Monitor Type** to **icmp**.
+#. Click on the **Start Creating** button to open the **Application Service Properties** panel.
 
-#. Navigate back to the **Virtual Servers** column and enter ``my_app`` for your new application.
+#. Enter ``My first application`` in the **Description** field.
 
-   #. Select the previously created pool and change the **Virtual Port** to **443**.
+#. Click on the **Start Creating** button to reveal the **Virtual Server** and **Pool** configuration options.
 
-#. In the **Protocols & Profiles** column, click the tool icon to open the configuration
-   settings drawer.
+#. Click on **Pools** to switch to reveal Pool configuration options.
 
-   #. Enable the **Enable HTTPS (Client-Side TLS)** option, then click on the **Add** button.
+#. Click on **+ Create** to add a new Pool.
 
-   #. In the **Add Client-Side TLS** drawer, enter ``wildcard.f5labs.com`` as the name and
-      then select the **wildcard.f5labs.com** RSA certificate. This certificate was included as part of your lab environment.
+   - Enter ``my-pool`` in the **Pool Name** field.
+   - Change the **Service Port** to ``443`` (default value was **80**)
+   - In the **Monitor Type** field, click on the down arrow to show the available options.
+   - Deselect **http** and select **icmp**
+   - Click outside of the list to use the selected options.
 
-   #. Enable the **Enable Server-side TLS** option.
+#. Click on **Virtual Servers** to switch to back to the Virtual Server configuration options.
 
-   #. Enable the **Enable SNAT** and **Enable Auto SNAT** options.
+   - Enter ``my-app`` in the **Virtual Server Name** field.
+   - In the **Pool** field, select the **my-pool** pool.
+   - Change the **Virtual Port** to ``443`` (default value was **80**)
 
-   #. Disable the **Enable Connection Mirroring** option.
+#. In the **Protocols & Profiles** field, click on the edit icon to open the settings panel.
 
-#. Click the **Save** button to the close the **Protocols & Profiles** drawer.
+#. Enable the **Enable HTTPS (Client-Side TLS)** option to show additional settings.
 
-#. At the bottom right corner, click the **Review & Deploy** button to open the **Deploy** drawer:
+   - Click on the **Add** button to open the configuration panel.
+   - In the **Add Client-Side TLS** panel, enter ``wildcard.f5labs.com`` as the name
+   - Select **wildcard.f5labs.com** in the **RSA certificate** dropdown list box. This certificate was pre-installed in your lab environment.
+   - Click on the **Save** button to close the panel.
 
-   #. Click the **Start Adding** button and select the BIG-IP Next instance.
+#. Scroll down to see the other **Protocol & Profiles** options.
 
-   #. Click the **+ Add to List** button.
+#. Enable the **Enable Server-side TLS** option.
 
-   #. Enter the ``10.1.10.20`` in the **Virtual Address** field.
+#. Ensure that the **Enable SNAT** and **Enable Auto SNAT** options are enabled (default).
 
-   #. In the **Members** column, click the down arrow and then click **+ Pool Members**.
+#. Disable the **Enable Connection Mirroring** option.
 
-   #. In the **New Pool Member** drawer, click the **+ Add Row** button 3 times to create additional entries.
+#. Click on the **Save** button to the close the **Protocols & Profiles** panel. 
 
-   #. Add the following entries:
+   Notice that the **TLS** and **HTTPS** badges were added, and **MIRRORING** was removed.
 
-      - Name: ``mbr_192.168.100.11``, IP Address: ``192.168.100.11``
+#. At the bottom right corner, click on the **Review & Deploy** button to open the **Deploy** panel.
 
-      - Name: ``mbr_192.168.100.12``, IP Address: ``192.168.100.12``
+   - Click on the **Start Adding** button.
+   - Select the instance named **bigip-next.f5labs.com**.
+   - Click on the **+ Add to List** button.
+   - Enter ``10.1.10.20`` in the **Virtual Address** field.
 
-      - Name: ``mbr_192.168.100.13``, IP Address: ``192.168.100.13``
+#. In the **Members** column, click on the down arrow and then click **+ Pool Members** to open the settings panel.
 
-  #. Click the **Save** bottom to close the **Pool Member** drawer.
+   - Click on the **+ Add Row** button 3 times to create empty entries.
 
-#. Click the **Deploy Changes** button to send the application
-   definition to the BIG-IP Next instance.
+   - Add the following entries:
+
+      - Name: ``mbr-192.168.100.11``, IP Address: ``192.168.100.11``
+
+      - Name: ``mbr-192.168.100.12``, IP Address: ``192.168.100.12``
+
+      - Name: ``mbr-192.168.100.13``, IP Address: ``192.168.100.13``
+
+   - Click on the **Save** button to close the Pool settings panel.
+
+#. Click on the **Validate All** button to validate the pending configuration changes.
+
+#. Once successful, click on the **Deploy Changes** button and then the **Yes, Deploy** 
+   button to send the application definition to the BIG-IP Next instance.
 

@@ -4,7 +4,7 @@ SSLO 102: BIG-IP Next SSL Orchestrator (AppWorld 2024 | 2 hours)
 
 .. note::
 
-   This lab relies on UDF Blueprint: **AppWorld 2024 - SSL Orchestrator Next**
+   This lab relies on UDF Blueprint: **AppWorld2024 - SSL Orchestrator on BIG-IP Next**
 
    The code provided for this lab was tested with **BIG-IP Next 20.1 / SSL Orchestrator 20.1**.
 
