@@ -27,6 +27,7 @@ GUI in the UDF lab:
    desktop GUI. Enter the username (``user``) and password (``user``) to access
    the client desktop through the browser window.
 
+
 The simplest test of the HTTPS application can be done with a command
 line cURL request.
 
@@ -40,6 +41,7 @@ line cURL request.
 
    The output of this command will contain the full payload of the webpage.
 
+
 #. To see just the headers and TLS handshake output, add the **I** flag:
 
    .. code-block:: bash
@@ -49,6 +51,8 @@ line cURL request.
    |
 
 #. Look for the **Server certificate** section. You should see that the **subject** field is **\*.f5labs.com**. This confirms that the site is being presented from the BIG-IP deployed application.
+
+   .. image:: ./images/add-app-12.png
 
 |
 

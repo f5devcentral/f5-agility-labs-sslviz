@@ -1,4 +1,4 @@
-SSLO 102: BIG-IP Next SSL Orchestrator (AppWorld 2024 | 2 hours)
+SSLO 102: Diving into SSL Orchestrator for BIG-IP Next (AppWorld 2024 | 2 hours)
 ===============================================================================================
 
 
