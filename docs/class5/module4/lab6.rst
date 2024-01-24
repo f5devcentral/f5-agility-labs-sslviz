@@ -13,9 +13,9 @@ You have just deployed an SSL Orchestrator HTTPS application on BIG-IP Next, wit
 
 The simplest test of the HTTPS application can be done with a command line cURL request. In the VM shell, or a shell running in the client desktop, enter the following command:
 
-.. code-block:: text
+   .. code-block:: text
 
-   curl -vk https://10.1.10.21
+      curl -vk https://10.1.10.21
 
 If you prefer, the client has been configured to resolve the above IP address to **www.f5labs.com** and **test.f5labs.com**. Recall from the traffic rule creation that a condition was defined that does a TLS bypass on this second hostname. We will get into BIG-IP testing Debug Utility appendix, but for now an easy way to see traffic flowing to inspection services is at these inspection services.
 
@@ -45,6 +45,7 @@ If you prefer, the client has been configured to resolve the above IP address to
 #. Access the BIG-IP application using one of the two provided hostnames: www.f5labs.com or test.f5labs.com. The tcpdump packet capture will show this traffic flowing across the layer 3 service.
 
 
+   .. image:: ./images/second-app-5.png
 
 
 

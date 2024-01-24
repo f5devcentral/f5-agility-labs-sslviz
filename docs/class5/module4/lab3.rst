@@ -10,20 +10,27 @@ With inspection services created, we will create a service chain that contains b
 Create a Service Chain
 --------------------------------------------------------------------------------
 
-#.	Click **Service Chains** under **SSL Orchestrator** in the left menu.
 
-#.	Click the **Start Creating** button.
-
-#.	Enter ``my-service-chain-lab2`` in the **Name** field
-
-#. Enter ``sc-ngfw-only`` in the **Description** field (optional).
-
-#.	In the **Inspection Services** section, click the **Start Adding** button.
-
-#. Select the previously created inspection service.
-
-#.	Click the **Save** button to save the service chain configuration.
+#. In the **SSL Orchestrator** menu, click on **Service Chains**.
 
 
-.. note::
-   Multiple service chains could be created here, but you will only create one for this lab module.
+#. Click the **Start Creating** button to open the **Create Service Chain** panel.
+
+   - Enter ``my-service-chain-lab2`` in the **Name** field
+
+   - Enter ``sc-ngfw-only`` in the **Description** field (optional).
+
+
+   .. image:: ./images/service-chain-1.png
+
+#. In the **Inspection Services** section, click the **Start Adding** button.
+
+#. Select the previously created inspection service and click **Add to List**.
+
+   .. image:: ./images/service-chain-2.png
+
+
+#. Click the **Save** button to save the service chain configuration.
+
+   .. image:: ./images/service-chain-3.png
+
