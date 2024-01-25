@@ -9,7 +9,7 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 
 #. In the top left corner of the BIG-IP Central Manager (CM) UI, click on the **Workspace** icon to show the **Workspace Menu**.
 
-#. Click on **Applications** to navigate to the Applications workspace. You should see the application that you created in the previous lab.
+#. Click on **Applications** to navigate to the Applications workspace. You should see the application that you created in the previous lab module.
 
 #. Click on **+ Add Application** to open the **Add Application** panel.
 
@@ -90,8 +90,6 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 
    .. image:: ./images/second-app-3.png
 
-
-#. Click the **Deploy Changes** button to push the application definition to the BIG-IP Next instance.
 
 #. If Validation is successful, click on the **Deploy Changes** button. Then, click on the **Yes, Deploy** button to send the application definition to the BIG-IP Next instance.
 

@@ -1,28 +1,37 @@
 Defining a Service Chain
 ================================================================================
 
-Create a Service Chain
---------------------------------------------------------------------------------
-
-With the TAP inspection service created, you will create a service chain that contains this service.
-
 .. note::
    Service chains and traffic policies are only deployed to a BIG-IP Next instance when associated to an application.
 
-.. note::
-   If continuing from the previous lab module, you should already an **Inline L3** and an **ICAP** inspection service. You can optionally add these to your new service chain.
 
-#. Click **Service Chains** under **SSL Orchestrator** in the left menu.
+Create a Service Chain
+--------------------------------------------------------------------------------
 
-#. Click the **Start Creating** button.
+With the ICAP inspection service created, you will create a new service chain that contains this inspection service. If continuing from the previous lab module, you should also be able to add the **Inline L3** service.
 
-#. Enter ``my-service-chain-lab3`` in the **Name** field.
 
-#. Enter ``service chain for lab 3`` in the **Description** field.
+#. In the **SSL Orchestrator** menu, click on **Service Chains**.
 
-#. In the **Inspection Services** section, click the **Start Adding** button and
-   select both of the previously created inspection services. Once applied, they
-   can be re-ordered as required. Note that multiple service chains can also be
-   created, as required.
+#. Click the **Start Creating** button to open the **Create Service Chain** panel.
 
-#. Click the **Save** button to save the new service chain configuration.
+   - Enter ``my-service-chain-lab3`` in the **Name** field.
+
+   - Enter ``L3 and ICAP service chain`` in the **Description** field (optional).
+
+
+   .. image:: ./images/service-chain-1.png
+
+#. In the **Inspection Services** section, click the **Start Adding** button.
+
+#. Select the both of the previously created inspection services and then click **Add to List**. Once applied, they can be re-ordered as needed.
+
+   .. image:: ./images/service-chain-2.png
+
+
+#. Click the **Save** button to save the service chain configuration.
+
+   .. image:: ./images/service-chain-3.png
+
+
+.. todo:: add screenshots

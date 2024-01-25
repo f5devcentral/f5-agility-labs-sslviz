@@ -14,9 +14,9 @@ Now, you will create an ICAP inspection service.
 #. In the subsequent drawer, enter the following:
 
    - Name: ``my-sslo-icap``
-   - Description: ``icap service`` (optional)
-   - Request Modification URI Path: ``avscan``
-   - Response Modification URI Path: ``avscan``
+   - Description (optional): ``ICAP service``
+   - Request Modification URI Path: ``/avscan``
+   - Response Modification URI Path: ``/avscan``
 
 #. Click the **Save & Continue** button.
 
