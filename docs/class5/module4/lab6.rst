@@ -18,7 +18,7 @@ You will now test the HTTPS application by sending a command line **cURL** reque
 
    You should see HTML payload of the web page returned.
 
-#. Under the **Ubuntu-Server** resource, click on the **Web Shell** access option. This will open a console shell window to the Server VM (in a separate browser tab).
+#. Under the **Ubuntu-Server** resource of the UDF Deployment tab, click on Access -> **Web Shell**. This will open a console shell window to the Server VM (in a separate browser tab).
 
    .. note::
       The **Ubuntu-Server** VM instance leverages a set of Docker containers that are running various tools to emulate real world inspection services. In order to view the traffic flowing through these services, you will need to connect to the Docker containers.

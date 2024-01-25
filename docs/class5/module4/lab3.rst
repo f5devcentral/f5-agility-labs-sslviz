@@ -1,8 +1,6 @@
 Defining a Service Chain
 ================================================================================
 
-With inspection services created, we will create a service chain that contains both of these in a specific order.
-
 .. note::
    Service chains and traffic policies are only deployed to a BIG-IP Next instance when associated to an application.
 
@@ -10,9 +8,10 @@ With inspection services created, we will create a service chain that contains b
 Create a Service Chain
 --------------------------------------------------------------------------------
 
+With the **Inline L3** inspection service created, you will now create a service chain that contains the service.
+
 
 #. In the **SSL Orchestrator** menu, click on **Service Chains**.
-
 
 #. Click the **Start Creating** button to open the **Create Service Chain** panel.
 

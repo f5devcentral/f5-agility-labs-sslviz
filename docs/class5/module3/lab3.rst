@@ -14,7 +14,7 @@ If you want to use the Client desktop GUI option, click on the **WebRDP** access
 
 For this lab module, we recommend using the **Web Shell** access method.
 
-#. Under the **Ubuntu-Client** resource, click on the **Web Shell** access option. This will open a console shell window to the Client VM (in a separate browser tab).
+#. Under the **Ubuntu-Client** resource of the UDF Deployment tab, click on Access -> **Web Shell**. This will open a console shell window to the Client VM (in a separate browser tab).
 
 
 Test Access to the HTTPS Application

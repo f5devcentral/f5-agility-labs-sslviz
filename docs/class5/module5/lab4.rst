@@ -1,24 +1,42 @@
 Defining a Traffic Policy
 ================================================================================
 
+The SSL Orchestrator traffic policy enables policy-based traffic steering to the inspection services. The policy defines traffic conditions, and each condition defines a set of actions to take on matching flow.
+
+A traffic policy is a combination of multiple rulesets, each with same or similar traffic conditions, but different potential actions.
+
+   - The Traffic Rules ruleset controls blocking, TLS decrypt decisions, and steering to inspection services.
+   - The Traffic Rules ruleset contains a single, immovable **All Traffic** condition that applies to all traffic flows that do not match any other (higher) condition. Its default and adjustable behavior is to Allow traffic and decrypt.
+   - The Logging Rules ruleset controls logging behavior. 
+
+
 Create an SSL Orchestrator Traffic Policy
 --------------------------------------------------------------------------------
 
-The SSL Orchestrator traffic policy enabled policy-based traffic steering to the inspection services. The policy defines traffic conditions, and each condition defines a set of actions to take on matching flow.
+You will now create a traffic policy with a TLS decryption bypass rule for a specific hostname. The default rule will decrypt all other traffic.
 
-#. Click **Policies** under **SSL Orchestrator** in the left menu.
+#. In the **SSL Orchestrator** menu, click on **Policies**.
 
 #. Click the **Start Creating** button.
 
-#. Enter ``my-sslo-policy-lab3`` for the policy name, and an optional description
+#. Click the **Start Creating** button.
 
-#. Ensure the **Type** is set to **Inbound Gateway**.
+   - Enter ``my-sslo-policy-lab3`` in the **Name** field and an optional description
+   - Enter ``Traffic policy for lab 3`` in the **Description** field (optional).
+   - Set the **Type** to **Inbound Gateway**. 
+
+   .. image:: ./images/policy-1.png
+
 
 #. Click the **Next** button to continue.
 
-   .. note::
+   .. image:: ./images/policy-2.png
 
-      The SSL Orchestrator traffic policy is a combination of multiple rulesets, each with same or similar traffic conditions, but different potential actions. The Traffic Rules ruleset controls blocking, TLS decrypt decisions, and steering to inspection services. The Logging Rules ruleset controls logging behavior. The Traffic Rules ruleset contains a single, immovable “All Traffic” condition that applies to all traffic flows that do not match any other (higher) condition. Its default and adjustable behavior is to Allow traffic and decrypt. Let us now make a few modifications to the Traffic Rules ruleset.
+
+Create a Traffic Condition Rule - TLS Decryption Bypass
+--------------------------------------------------------------------------------
+
+A traffic condition is generally made up of three parts, depending on the type of condition - the condition type (ex. IP Protocol), expression (ex. equals), and evaluation (what is being tested).
 
 #. Click the **+ Create** button to create a new traffic condition.
 
@@ -28,7 +46,7 @@ The SSL Orchestrator traffic policy enabled policy-based traffic steering to the
 
 #. In **Conditions and Actions**, click the **Start Creating** button.
 
-#. A traffic condition is generally made up of three parts, depending on the type of condition - the condition type (ex. IP Protocol), expression (ex. equals), and evaluation (what is being tested). For this simple demonstration, select the following:
+#. To create a TLS bypass rule for **test.f5labs.com**, select the following:
 
    - Type: **Server Name (TLS ClientHello)**
    - Expression: **Equals**
@@ -38,11 +56,29 @@ The SSL Orchestrator traffic policy enabled policy-based traffic steering to the
 
    - Flow Action: **Allow**
    - SSL Action: **Bypass**
-   - Service Chain: **Select your service chain**
+   - Service Chain: **my-service-chain-lab3**
+
+   .. image:: ./images/policy-3.png
 
 #. Click the **Save** button.
 
-#. Click the **All Traffic** condition to modify it, and assign a service chain.
+
+Edit Traffic Condition Rule - All Traffic (Default)
+--------------------------------------------------------------------------------
+
+#. Now, you want to ensure that all other traffic flows through a service chain (none selected by default). Click the **All Traffic** condition to modify it.
+
+#. Click on **Conditions and Actions**
+
+#. Select the **my-service-chain-lab3** service chain.
+
+   .. image:: ./images/policy-4.png
+
+#. Click the **Save** button to close the **Traffic Rules** panel.
+
+
+Create a Logging Rule - Log all TCP traffic
+--------------------------------------------------------------------------------
 
 #. Now, create a single **Logging Rules** condition to log all incoming traffic. In the **Logging Rules** ruleset, click the **Start Creating** button.
 
@@ -52,14 +88,25 @@ The SSL Orchestrator traffic policy enabled policy-based traffic steering to the
 
 #. In **Conditions and Actions**, click the **Start Creating** button.
 
-#. Again, a traffic condition is generally made up of three parts, depending on the type of condition - the condition type (ex. IP Protocol), expression (equals), and evaluation (what is being tested). For this simple demonstration, and to log ALL traffic, select the following:
+#. Configure a rule to log all TCP traffic.
 
    - Type: **IP Protocol**
    - Expression: **Equals**
    - Evaluation: **TCP**
 
-#. Click the **Save** button.
+   .. image:: ./images/policy-5.png
 
-#. The traffic policy is now complete for the sake of this lab, but other traffic and logging rules can also be applied, as required. 
+#. Click the **Save** button to close the **Logging Rules** panel.
 
-#. When done, click **Save & Finish**. The traffic policy is now saved to CM and will be deployed to a BIG-IP instance when it is associated with an application.
+   .. image:: ./images/policy-6.png
+
+
+Finish the Traffic Policy
+--------------------------------------------------------------------------------
+
+The traffic policy is now complete with respect to this lab module, but other traffic and logging rules can also be applied (as required). 
+
+#. Click **Save & Finish**. The traffic policy is now saved to CM and will be deployed to a BIG-IP instance when it is associated with an application.
+
+   .. image:: ./images/policy-7.png
+
