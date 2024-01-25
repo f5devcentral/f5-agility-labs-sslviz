@@ -1,34 +1,37 @@
 Testing the Inbound Application Deployment
 ================================================================================
 
+You have now deployed an SSL Orchestrator HTTPS application with a traffic policy that steers decrypted traffic to an Inline L3 inspection service. The next step is to test your application from a client environment and verify that decrypted traffic is visible to the inspection service.
+
 
 Test Access to the HTTPS Application
 --------------------------------------------------------------------------------
 
-You have just deployed an SSL Orchestrator HTTPS application on BIG-IP Next, with a traffic policy steering decrypted traffic to an Inline L3 and an ICAP inspection service. The next step is to test your application from a client environment. The UDF lab provides a unique client VM instance running a version of Ubuntu Linux, access to an interactive shell for command line testing, and a user desktop to run GUI browsers and other tools. Follow these options to access either the client command line shell or desktop GUI in the UDF lab:
+You will now test the HTTPS application by sending a command line **cURL** request to the BIG-IP Virtual Server. 
 
-- **To access the Client VM shell**: In the UDF deployment window, find the Ubuntu Client instance and then find the Web Shell access option. This will open a console shell window to the client VM in a separate browser tab.
 
-- **To access the Client VM desktop**: In the UDF deployment window, find the Ubuntu Server instance and then find the WebRDP access option. This opens a new browser window to an instance of Guacamole running on the Ubuntu server with remote desktop access to the client desktop GUI. Enter the username (``user``) and password (``user``) to access the client desktop through the browser window.
-
-The simplest test of the HTTPS application can be done with a command line cURL request. In the VM shell, or a shell running in the client desktop, enter the following command:
+#. In the **Client VM shell** (or a shell running in the Client VM desktop), enter the following command:
 
    .. code-block:: text
 
       curl -vk https://10.1.10.21
 
-If you prefer, the client has been configured to resolve the above IP address to **www.f5labs.com** and **test.f5labs.com**. Recall from the traffic rule creation that a condition was defined that does a TLS bypass on this second hostname. We will get into BIG-IP testing Debug Utility appendix, but for now an easy way to see traffic flowing to inspection services is at these inspection services.
+   You should see HTML payload of the web page returned.
 
-#. **Access the Server VM shell**: In the UDF deployment window, find the Ubuntu **Server** instance and then find the Web Shell access option. This will open a console shell window to the server VM in a separate browser tab.
+#. Under the **Ubuntu-Server** resource, click on the **Web Shell** access option. This will open a console shell window to the Server VM (in a separate browser tab).
 
-#. **Access the layer3 service container**: The consolidated lab architecture is a set of Docker containers running various utilities to emulate real world inspection services. The Inline Layer 3 inspection service is named **layer3**. To access this:
+   .. note::
+      The **Ubuntu-Server** VM instance leverages a set of Docker containers that are running various tools to emulate real world inspection services. In order to view the traffic flowing through these services, you will need to connect to the Docker containers.
+
+
+#. The **Inline Layer 3 inspection service** runs inside a container named **layer3**. Execute the following command to access the container shell:
 
    .. code-block:: text
 
       docker exec -it layer3 /bin/bash
 
 
-#. Initiate a tcpdump packet capture: From inside the layer 3 inspection service, initiate a tcpdump packet capture on the service's **inbound** interface:
+#. From inside the layer3 service, initiate a tcpdump packet capture on the service's **inbound** interface (eth1):
 
    .. code-block:: text
 
@@ -42,11 +45,29 @@ If you prefer, the client has been configured to resolve the above IP address to
       tcpdump -lnni eth1 -Xs0
 
 
-#. Access the BIG-IP application using one of the two provided hostnames: www.f5labs.com or test.f5labs.com. The tcpdump packet capture will show this traffic flowing across the layer 3 service.
+   .. note::
 
+      The Client VM has been configured to resolve hostnames **www.f5labs.com** and **test.f5labs.com** to the BIG-IP's VIP address.
+
+
+#. From the **Client VM Web Shell**, test the BIG-IP application using the hostname **www.f5labs.com**. Enter:
+
+   .. code-block:: text
+
+      curl -vk https://www.f5labs.com
+
+   The packet capture (tcpdump) running on the **layer3** service will show the decrypted HTML payload flowing across its inbound interface.
 
    .. image:: ./images/second-app-5.png
 
+
+#. From the **Client VM Web Shell**, test the BIG-IP application using the hostname **test.f5labs.com.**. Enter:
+
+   .. code-block:: text
+
+      curl -vk https://test.f5labs.com
+
+   Recall that you previously defined a traffic rule with a condition to bypass TLS decryption for **test.f5labs.com**. The packet capture (tcpdump) running on the **layer3** service will now show the encrypted payload flowing across its inbound interface.
 
 
 |

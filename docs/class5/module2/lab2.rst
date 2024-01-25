@@ -85,22 +85,31 @@ this lab guide with your own environment, please ensure that you create these ob
 The following tables provide device/service network configuration details. Login credentials are also provided for use as directed in the lab exercises.
 
 
-.. list-table:: **F5 BIG-IP Next Central Manager**
-   :header-rows: 0
+**F5 BIG-IP Next Central Manager**
+
+.. list-table:: 
+   :header-rows: 1
    :widths: auto
 
-   * - Login
-     - **Username**
-     - **Password**
-   * -
-     - admin
+   * - Username
+     - Password
+     - Description
+   * - admin
      - Welcome123!
-   * - **Interfaces**
-     - **Self IP**
-     - **Notes**
-   * - *Management*
+     - Admin account
+
+|
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: auto
+
+   * - Interface/Resource
+     - IP
+     - Notes
+   * - Management IP
      - 10.1.1.6/24
-     - Management
+     - Management VLAN
    * - System DNS
      - 10.1.1.1
      - 
@@ -108,104 +117,145 @@ The following tables provide device/service network configuration details. Login
      - 10.1.1.1
      - 
 
+|
 
-.. list-table:: **F5 BIG-IP Next SSL Orchestrator**
-   :header-rows: 0
+**F5 BIG-IP Next SSL Orchestrator**
+
+.. list-table:: 
+   :header-rows: 1
    :widths: auto
 
-   * - **Credentials**
-     - **Username**
-     - **Password**
-   * - *Admin User*
-     - admin
+   * - Username
+     - Password
+     - Description
+   * - admin
      - Welcome123!
-   * - **Interfaces**
-     - **Self IP**
-     - **Notes**
-   * - *Management*
+     - Admin account (pre-onboarding)
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Interface
+     - IP
+     - Description
+   * - Management
      - 10.1.1.7/24
      - Management VLAN
-   * - *1.1*
+   * - 1.1
      - 10.0.10.7/24
-     - Client-Side VLAN (lab client)
-   * - *1.2 (Tag 80)*
+     - Client-Side VLAN (Ubuntu-Client)
+   * - 1.2 (Tag 30)
+     - 198.19.96.7/25
+     - Inline HTTP service - Inbound
+   * - 1.2 (Tag 40)
+     - 198.19.96.245/25
+     - Inline HTTP service - Outbound
+   * - 1.2 (Tag 50)
+     - 198.19.97.7/25
+     - ICAP Service - Inbound/Outbound
+   * - 1.2 (Tag 60)
+     - 198.19.64.7/25
+     - Inline L3 service - Inbound
+   * - 1.2 (Tag 70)
+     - 198.19.64.245/25
+     - Inline L3 service - Outbound
+   * - 1.2 (Tag 80)
      - 192.168.100.7/24
-     - Service-side (lab webservers)
-   * - *1.2 (Tag 50)*
-     - TBD
-     - ICAP Service
-   * - *1.2 (Tags 60 and 70)*
-     - TBD
-     - Inline L3 services
-   * - *1.2 (Tags 30 and 40)*
-     - TBD
-     - Inline L3 services
-   * - *1.3*
-     - TBD
-     - TAP service
-   * - *1.4* / Future
-     - TBD
+     - Server-side (lab webservers)
+   * - 1.3
+     - 10.1.30.7/24
+     - TAP service - Inbound
+   * - 1.4 / Future
+     - TBD (10.1.40.0/24)
      - Inline L2 service - Inbound
-   * - *1.5* / Future
-     - TBD
+   * - 1.5 / Future
+     - TBD (10.1.50.0/24)
      - Inline L2 service - Outbound
-   * - *1.6* / Future
-     - TBD
-     - Outbound Internet
+   * - 1.6 / Future
+     - TBD (10.1.60.0/24)
+     - Internet
 
+|
 
-.. list-table:: **Client (inbound/outbound)**
-   :header-rows: 0
+**Client (inbound/outbound)**
+
+.. list-table::
+   :header-rows: 1
    :widths: 200 300 300
 
-   * - **Interfaces**
-     - **IP Address**
-     - **VLAN**
-   * - *eth1*
+   * - Interfaces
+     - IP Address
+     - VLAN
+   * - eth1
      - 10.1.10.50
      - Client-Side VLAN
-   * - **Access**
-     - **Username**
-     - **Password**
-   * - *SSH (UDF Web Console)*
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Access
+     - Username
+     - Password
+   * - WEB SHELL
      - N/A
      - N/A
-   * - *Client Desktop (WebRDP)*
-     - guacadmin
-     - guacadmin
-   * - *Admin Desktop (WebRDP)*
-     - guacadmin
-     - guacadmin
+   * - RDP (XRDP)
+     - user
+     - user
 
+|
 
-.. list-table:: **Ubuntu Server (Consolidated Services)**
-   :header-rows: 0
+**Ubuntu Server (Consolidated Services)**
+
+.. list-table:: 
+   :header-rows: 1
    :widths: 200 300 300
 
-   * - **Interfaces**
-     - **IP Address**
-     - **VLAN**
-   * - *eth1*
+   * - Interfaces
+     - IP Address
+     - VLAN
+   * - eth1
      - 10.1.20.50
      - Inline L3 services
-   * - *eth2*
+   * - eth2
      - 10.1.30.50
-     - Tap service
-   * - *eth3*
+     - TAP service
+   * - eth3
      - 10.1.40.50
      - Inline L2 service - Inbound
-   * - *eth4*
+   * - eth4
      - 10.1.50.50
      - Inline L2 service - Outbound
-   * - **Access**
-     - **Username**
-     - **Password**
-   * - *SSH (UDF Web Console)*
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Access
+     - Username
+     - Password
+   * - WEB SHELL
      - N/A
      - N/A
+   * - WEBRDP (Client Desktop Access)
+     - user
+     - user
 
+The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu Server. This acts as a web-based RDP client that connects to the Client VM.
 
-.. list-table:: **Inline Layer 2 Service**
+|
+
+**Inline Layer 2 Service**
+
+.. list-table::
    :header-rows: 0
    :widths: auto
 
@@ -215,27 +265,44 @@ The following tables provide device/service network configuration details. Login
        br0 (bridge) tied to ens8 and ens9 interfaces on host
    * - Services
      - Suricata
-   * - **Traffic Flow**
-     - **BIG-IP Interface**
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Traffic Flow
+     - BIG-IP Interface
    * - Inbound
      - TBD
    * - Outbound
      - TBD
 
+|
 
-.. list-table:: **Inline Layer 3 Service**
+**Inline Layer 3 Service**
+
+.. list-table::
    :header-rows: 0
    :widths: auto
 
    * - Description
      - Ubuntu server host -- ens6.60 and ens6.70
-     - $ ``docker exec -it layer3 /bin/bash``
    * - Services
      - Firewall
-     - 
-   * - **Traffic Flow**
-     - **BIG-IP Interface**
-     - **Service IP Address**
+   * - Access
+     - $ ``docker exec -it layer3 /bin/bash``
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Traffic Flow
+     - BIG-IP Interface
+     - Service IP Address
    * - Inbound
      - 1.2 tag 60
      - 198.19.64.30/25
@@ -243,19 +310,30 @@ The following tables provide device/service network configuration details. Login
      - 1.2 tag 70
      - 198.19.64.130/25
 
-.. list-table:: **HTTP Explicit Proxy Service**
+|
+
+**HTTP Explicit Proxy Service**
+
+.. list-table::
    :header-rows: 0
    :widths: auto
 
    * - Description
      - Ubuntu server host -- ens6.30 and ens6.40
-     - $ ``docker exec -it explicit-proxy /bin/bash``
    * - Services
-     - Squid
-     - Port 3128
-   * - **Traffic Flow**
-     - **BIG-IP Interface**
-     - **Service IP Address**
+     - Squid - Port 3128
+   * - Access
+     - $ ``docker exec -it explicit-proxy /bin/bash``
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Traffic Flow
+     - BIG-IP Interface
+     - Service IP Address
    * - Inbound
      - 1.2 tag 30
      - 198.19.96.30/25
@@ -264,37 +342,58 @@ The following tables provide device/service network configuration details. Login
      - 198.19.96.130/25
 
 
-.. list-table:: **TAP Service**
+|
+
+**TAP Service**
+
+.. list-table::
    :header-rows: 0
    :widths: auto
 
    * - Description
      - Ubuntu server host -- ens7
-     - ens7 interface tied to tap service on host
+
+       ens7 interface tied to tap service on host
    * - Services
      - Passive TAP
-     - 
-   * - **Traffic Flow**
-     - **BIG-IP Interface**
-     - **MAC Address**
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Traffic Flow
+     - BIG-IP Interface
+     - MAC Address
    * - In/Out
      - 1.3
      - 12:12:12:12:12:12 (arbitrary if directly connected)
 
+|
 
-.. list-table:: **ICAP Service**
+**ICAP Service**
+
+.. list-table::
    :header-rows: 0
    :widths: auto
 
    * - Description
      - Ubuntu server host -- ens6.50
-     - $ ``docker exec -it icap /bin/bash``
    * - Services
      - ICAP Clamav
-     - 
-   * - **Traffic Flow**
-     - **BIG-IP Interface**
-     - **Service IP Address**
+   * - Access
+     - $ ``docker exec -it icap /bin/bash``
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Traffic Flow
+     - BIG-IP Interface
+     - Service IP Address
    * - In/Out
      - 1.2 (Tag 50)
      - 198.19.97.50
@@ -302,19 +401,32 @@ The following tables provide device/service network configuration details. Login
      - /avscan
      - Port 1344
 
-.. list-table:: **Internal Web Server**
+|
+
+**Internal Web Server**
+
+.. list-table::
    :header-rows: 0
    :widths: auto
 
    * - Description
      - Ubuntu server host -- ens6.80
-     - $ ``docker exec -it apache /bin/bash``
    * - Services
      - Apache web server
-     - \*.f5labs.com
-   * - **Traffic Flow**
-     - **BIG-IP Interface**
-     - **Service IP Address**
+
+       \*.f5labs.com
+   * - Access
+     - $ ``docker exec -it apache /bin/bash``
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Traffic Flow
+     - BIG-IP Interface
+     - Service IP Address
    * - In/Out
      - 1.2 (Tag 80)
      - 192.168.100.11 : Ports 80 & 443
@@ -323,25 +435,35 @@ The following tables provide device/service network configuration details. Login
 
        192.168.100.13 : Ports 80 & 443
 
+|
 
-.. list-table:: **Juiceshop**
+**Juiceshop**
+
+.. list-table::
    :header-rows: 0
    :widths: auto
 
    * - Description
      - Ubuntu server host -- ens6.80
-     - $ ``docker exec -it nginx /bin/sh``
    * - Services
      - NGINX app
-     - 
-   * - **Traffic Flow**
-     - **BIG-IP Interface**
-     - **Service IP Address**
+   * - Access
+     - $ ``docker exec -it nginx /bin/sh``
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Traffic Flow
+     - BIG-IP Interface
+     - Service IP Address
    * - In/Out
      - 1.2 (Tag 80)
      - 192.168.100.20 : Ports 80 & 8443
 
-
+|
 .. warning::
    Simple passwords were used in this lab environment in order to make it easier for students to access the infrastructure. This does not follow recommended security practices of using strong passwords.
 

@@ -14,18 +14,17 @@ through the Central Manager.
 
 #. Log into Central Manager with username: ``admin`` and password: ``Welcome123!``.
 
-   .. image:: ./images/bigip-login.png
+   .. image:: ./images/cm-login.png
 
 
 #. On the Home screen, click the **Manage Instances** button.
 
-   .. image:: ./images/bigip-home.png
+   .. image:: ./images/cm-home.png
 
 
-#. Since no BIG-IP Next instances have been added yet, click the
-   **Start Adding Instances** button.
+#. Since no BIG-IP Next instances have been added yet, click the **Start Adding Instances** button to open the **Add Instance** panel
 
-#. In the **Add Instance** panel, enter ``10.1.1.7`` as the IP address of the BIG-IP Next instance to add.
+#. Enter ``10.1.1.7`` as the IP address of the BIG-IP Next instance to add.
 
 #. Click the **Connect** button.
 
