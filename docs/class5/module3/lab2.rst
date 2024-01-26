@@ -66,7 +66,7 @@ Now, you will create a simple HTTPS application.
    - In the **Pool** field, select the **my-pool** pool.
    - Change the **Virtual Port** to ``443`` (default value was **80**)
 
-#. In the **Protocols & Profiles** field, click on the edit icon to open the settings panel.
+#. In the **Protocols & Profiles** field, click on the **edit icon** to open the settings panel.
 
    .. image:: ./images/add-app-4.png
 
