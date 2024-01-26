@@ -259,11 +259,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host  -- ens8 and ens9
 
        br0 (bridge) tied to ens8 and ens9 interfaces on host
-   * - Services
+   * - **Services**
      - Suricata
 
 |
@@ -287,11 +287,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.60 and ens6.70
-   * - Services
+   * - **Services**
      - Firewall
-   * - Access
+   * - **Access**
      - $ ``docker exec -it layer3 /bin/bash``
 
 |
@@ -318,11 +318,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.30 and ens6.40
-   * - Services
+   * - **Services**
      - Squid - Port 3128
-   * - Access
+   * - **Access**
      - $ ``docker exec -it explicit-proxy /bin/bash``
 
 |
@@ -350,11 +350,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens7
 
        ens7 interface tied to tap service on host
-   * - Services
+   * - **Services**
      - Passive TAP
 
 |
@@ -378,11 +378,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.50
-   * - Services
+   * - **Services**
      - ICAP Clamav
-   * - Access
+   * - **Access**
      - $ ``docker exec -it icap /bin/bash``
 
 |
@@ -409,13 +409,13 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.80
-   * - Services
+   * - **Services**
      - Apache web server
 
        \*.f5labs.com
-   * - Access
+   * - **Access**
      - $ ``docker exec -it apache /bin/bash``
 
 |
@@ -443,11 +443,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.80
-   * - Services
+   * - **Services**
      - NGINX app
-   * - Access
+   * - **Access**
      - $ ``docker exec -it nginx /bin/sh``
 
 |

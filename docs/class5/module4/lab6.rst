@@ -40,12 +40,13 @@ You will now test the HTTPS application by sending a command line **cURL** reque
    
    The ``-Xs0`` (capital 'x', lowercase 's', zero) flag allows you to view the unencrypted payload.
 
-|
+   |
 
    .. note::
 
       The Client VM has been configured to resolve hostnames **www.f5labs.com** and **test.f5labs.com** to the BIG-IP's VIP address.
 
+   |
 
 #. From the **Client VM Web Shell**, test the BIG-IP application using the hostname **www.f5labs.com**. Enter:
 
