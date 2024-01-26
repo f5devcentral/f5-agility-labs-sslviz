@@ -27,7 +27,7 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 #. In the **Virtual Servers** box, enter ``my-service`` for the name of your new application
    and set the **Virtual Port** to ``443``. 
 
-#. In the **Protocols & Profiles** field, click on the edit icon to open the settings panel.
+#. In the **Protocols & Profiles** field, click on the **edit icon** to open the settings panel.
 
 #. Enable the **Enable HTTPS (Client-Side TLS)** option to show additional settings.
 
@@ -50,7 +50,7 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
    Notice that the **TLS** and **HTTPS** badges were added, and **MIRRORING** was removed.
 
 
-#. In the **Security Policies** column, click the edit icon to open the **Security Profiles** panel.
+#. In the **Security Policies** column, click the **edit icon** to open the **Security Profiles** panel.
 
 #. Enable the **Use an SSL Orchestrator Policy** option and then select your SSL Orchestrator traffic policy.
 
@@ -70,7 +70,7 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 
 #. In the **Deploy** panel, enter ``0.0.0.0/0`` for the **Virtual Address**. This will create a listener for all incoming addresses.
 
-#. In the **Configure** column, click the edit icon. 
+#. In the **Configure** column, click the **edit icon**. 
 
 #. Enable the **Enable VLANs to listen on** option and select **clientside**.
 
