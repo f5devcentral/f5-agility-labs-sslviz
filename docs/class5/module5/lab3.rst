@@ -13,7 +13,7 @@ With the ICAP inspection service created, you will create a new service chain th
 
 #. In the **SSL Orchestrator** menu, click on **Service Chains**.
 
-#. Click the **Start Creating** button to open the **Create Service Chain** panel.
+#. Click the **+ Create** in the top right to open the **Create Service Chain** panel.
 
    - Enter ``my-service-chain-lab3`` in the **Name** field.
 
@@ -21,6 +21,7 @@ With the ICAP inspection service created, you will create a new service chain th
 
 
    .. image:: ./images/service-chain-1.png
+
 
 #. In the **Inspection Services** section, click the **Start Adding** button.
 

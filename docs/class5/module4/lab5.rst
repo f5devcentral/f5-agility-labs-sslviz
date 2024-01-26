@@ -39,22 +39,40 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
    - In the **Pool** field, select the **my-pool** pool.
    - Change the **Virtual Port** to ``443`` (default value was **80**)
 
-#. In the **Protocols & Profiles** field, click on the edit icon to open the settings panel.
+#. In the **Protocols & Profiles** field, click on the **edit icon** to open the settings panel.
 
-#. Enable the **Enable HTTPS (Client-Side TLS)** option to show additional settings.
+#. Enable (toggle on) the **Enable HTTPS (Client-Side TLS)** option to show additional settings.
 
    - Click on the **Add** button to open the configuration panel.
    - In the **Add Client-Side TLS** panel, enter ``wildcard.f5labs.com`` as the name
    - Select **wildcard.f5labs.com** in the **RSA certificate** dropdown list box. This certificate was pre-installed in your lab environment.
    - Click on the **Save** button to close the panel.
 
-#. In the **Security Policies** column, click the edit icon to open the **Security Profiles** panel.
+#. Scroll down to see the other **Protocol & Profiles** options.
 
-#. Enable the **Use an SSL Orchestrator Policy** option and then select your SSL Orchestrator traffic policy.
+#. Enable (toggle on) the **Enable Server-side TLS** option.
+
+#. Ensure that the **Enable SNAT** and **Enable Auto SNAT** options are enabled (default).
+
+#. Disable (toggle off) the **Enable Connection Mirroring** option.
+
+#. Click on the **Save** button to the close the **Protocols & Profiles** panel. 
+
+   Notice that the **TLS** and **HTTPS** badges were added, and **MIRRORING** was removed.
+
+
+#. In the **Security Policies** column, click the **edit icon** to open the **Security Profiles** panel.
+
+   .. image:: ./images/second-app-0.png
+
+
+#. Enable (toggle on) the **Use an SSL Orchestrator Policy** option and then select your SSL Orchestrator traffic policy.
 
    .. image:: ./images/second-app-1.png
 
-#. Click **Save**.
+#. Click **Save** to close the panel.
+
+   Notice that the **SSLO** label now shows in the **Security Policies** column.
 
    .. image:: ./images/second-app-2.png
 
@@ -79,9 +97,9 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
    - Click on the **Save** button to close the Pool settings panel.
 
 
-#. In the **Configure** column, click the edit icon. 
+#. In the **Configure** column, click the **edit icon**. 
 
-#. Enable the **Enable VLANs to listen on** option and select **clientside**.
+#. Enable (toggle on) the **Enable VLANs to listen on** option and select **clientside**.
 
 #. Click **Save**.
 

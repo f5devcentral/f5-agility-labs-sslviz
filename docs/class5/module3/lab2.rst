@@ -7,7 +7,7 @@ TLS Certificates and Keys
 .. note::
    The **wildcard.f5labs.com** certificate and key has been pre-loaded into the BIG-IP CM, so you will not need to import any certificates at this time.
 
-#. In the top left corner of the BIG-IP Central Manager (CM) UI, click on the **Workspace** icon (it looks like a waffle pattern) to show the **Workspace Menu**.
+#. In the top left corner of the BIG-IP Central Manager GUI, click on the **Workspace** icon (it looks like a waffle pattern) to show the **Workspace Menu**.
 
    .. image:: ./images/workspace-menu-1.png
 
@@ -71,7 +71,7 @@ Now, you will create a simple HTTPS application.
    .. image:: ./images/add-app-4.png
 
 
-#. Enable the **Enable HTTPS (Client-Side TLS)** option to show additional settings.
+#. Enable (toggle on) the **Enable HTTPS (Client-Side TLS)** option to show additional settings.
 
    - Click on the **Add** button to open the configuration panel.
    - In the **Add Client-Side TLS** panel, enter ``wildcard.f5labs.com`` as the name
@@ -82,11 +82,11 @@ Now, you will create a simple HTTPS application.
 
 #. Scroll down to see the other **Protocol & Profiles** options.
 
-#. Enable the **Enable Server-side TLS** option.
+#. Enable (toggle on) the **Enable Server-side TLS** option.
 
 #. Ensure that the **Enable SNAT** and **Enable Auto SNAT** options are enabled (default).
 
-#. Disable the **Enable Connection Mirroring** option.
+#. Disable (toggle off) the **Enable Connection Mirroring** option.
 
    .. image:: ./images/add-app-6.png
 

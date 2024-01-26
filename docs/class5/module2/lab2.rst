@@ -15,7 +15,7 @@ Network Diagram
 
 Here is a visual representation of the virtual lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers and VLAN tags (if applicable). The colored boxes to the right of the services respresent some product examples for each respective service type.
 
-The first interface is connected to the client-facing VLAN. The second interface is connected to the Internet-facing VLAN. The remaining interfaces are connected to various types of security services: L2, L3, HTTP, ICAP, and passive Tap. The SSL Orchestrator management interface is not shown.
+The first interface is connected to the client-facing VLAN. The last interface is connected to the Internet-facing VLAN. One of the tagged interfaces connects to the application server VLAN. The remaining interfaces are connected to various types of security services: L2, L3, HTTP, ICAP, and passive Tap. The SSL Orchestrator management interface is not shown.
 
 .. image:: ./images/labinfo-1.png
    :align: left
@@ -76,7 +76,7 @@ this lab guide with your own environment, please ensure that you create these ob
    configuration state. In most cases, objects created in CM (like iRules) are only deployed to a
    Next instance when they are associated to an application. With respect to SSL Orchestrator, this
    also applies to service chains and traffic policies. The exemption to this is inspection
-   services. While inspection services can be saves to CM and deployed later, they are generally
+   services. While inspection services can be saved to CM and deployed later, they are generally
    deployed direct to an instance on creation, irrespective of applications, as they have network
    attributes that are typically specific to a BIG-IP Next instance. This will be made evident in
    the upcoming labs.
@@ -168,14 +168,14 @@ The following tables provide device/service network configuration details. Login
    * - 1.3
      - 10.1.30.7/24
      - TAP service - Inbound
-   * - 1.4 / Future
-     - TBD (10.1.40.0/24)
+   * - 1.4
+     - Future (10.1.40.0/24)
      - Inline L2 service - Inbound
-   * - 1.5 / Future
-     - TBD (10.1.50.0/24)
+   * - 1.5
+     - Future (10.1.50.0/24)
      - Inline L2 service - Outbound
-   * - 1.6 / Future
-     - TBD (10.1.60.0/24)
+   * - 1.6
+     - Future (10.1.60.0/24)
      - Internet
 
 |
@@ -259,11 +259,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host  -- ens8 and ens9
 
        br0 (bridge) tied to ens8 and ens9 interfaces on host
-   * - Services
+   * - **Services**
      - Suricata
 
 |
@@ -275,9 +275,9 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    * - Traffic Flow
      - BIG-IP Interface
    * - Inbound
-     - TBD
+     - Future
    * - Outbound
-     - TBD
+     - Future
 
 |
 
@@ -287,11 +287,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.60 and ens6.70
-   * - Services
+   * - **Services**
      - Firewall
-   * - Access
+   * - **Access**
      - $ ``docker exec -it layer3 /bin/bash``
 
 |
@@ -318,11 +318,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.30 and ens6.40
-   * - Services
+   * - **Services**
      - Squid - Port 3128
-   * - Access
+   * - **Access**
      - $ ``docker exec -it explicit-proxy /bin/bash``
 
 |
@@ -350,11 +350,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens7
 
        ens7 interface tied to tap service on host
-   * - Services
+   * - **Services**
      - Passive TAP
 
 |
@@ -378,11 +378,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.50
-   * - Services
+   * - **Services**
      - ICAP Clamav
-   * - Access
+   * - **Access**
      - $ ``docker exec -it icap /bin/bash``
 
 |
@@ -409,13 +409,13 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.80
-   * - Services
+   * - **Services**
      - Apache web server
 
        \*.f5labs.com
-   * - Access
+   * - **Access**
      - $ ``docker exec -it apache /bin/bash``
 
 |
@@ -443,11 +443,11 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    :header-rows: 0
    :widths: auto
 
-   * - Description
+   * - **Description**
      - Ubuntu server host -- ens6.80
-   * - Services
+   * - **Services**
      - NGINX app
-   * - Access
+   * - **Access**
      - $ ``docker exec -it nginx /bin/sh``
 
 |

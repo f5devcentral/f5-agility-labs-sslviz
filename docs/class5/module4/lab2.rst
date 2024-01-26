@@ -7,7 +7,7 @@ The first step in this journey is to create the SSL Orchestrator inspection serv
 Create an Inline L3 Inspection Service
 --------------------------------------------------------------------------------
 
-#. In the top left corner of the BIG-IP Central Manager (CM) UI, click on the **Workspace** icon to show the **Workspace Menu**.
+#. In the top left corner of the BIG-IP Central Manager GUI, click on the **Workspace** icon to show the **Workspace Menu**.
 
 #. Click on **Security** to navigate to the Security workspace.
 
@@ -23,17 +23,16 @@ Create an Inline L3 Inspection Service
 
 #. In the **Create Inspection Service** panel, select **Generic Inline L3** and then click the **Start Creating** button to open the configuration settings panel.
 
+#. In the **General Properties** section:
+
    - Enter ``my-sslo-ngfw`` in the service name field.
 
    - Enter ``next-gen firewall`` in the description field (optional).
 
+   - Click the **Save & Continue** button.
+
+
    .. image:: ./images/service-3.png
-
-
-#. Click the **Save & Continue** button.
-
-
-   .. image:: ./images/service-4.png
 
 
 #. In the **Network** settings:
@@ -43,16 +42,21 @@ Create an Inline L3 Inspection Service
    - Enter ``sslo-insp-l3-out`` in the **From: VLAN** Name field.
 
    .. note::
-      In the future, the VLAN names will be selectable from a list.
+      VLAN names are 'SSLO-INSP-L3-IN' and 'SSLO-INSP-L3-OUT' (but lowercase).
 
+      In the future, the VLAN names will be selectable from a list.
 
    - Select **ICMP** for the **Device Monitor**.
 
-   - In the **Inspection Service Endpoints** section, click the **Start Adding** button.
+   .. image:: ./images/service-4.png
+
+
+#. In the **Inspection Service Endpoints** section above, click the **Start Adding** button.
 
    - Enter ``198.19.64.30`` in the **Server Address** field.
 
    .. image:: ./images/service-5.png
+
 
 #. Click the **Review & Deploy** button.
 
@@ -60,14 +64,19 @@ Create an Inline L3 Inspection Service
 
    - Click the checkbox to the left of the assigned instance and then click the **Validate** button.
 
-   - If Validation is successful, click the **Deploy Changes** button to push this inspection service configuration to the BIG-IP Next instance.
-
    .. image:: ./images/service-6.png
 
+   - If Validation is successful, click the **Deploy Changes** button to push this inspection service configuration to the BIG-IP Next instance.
+
+   - Click the **Start Adding** button
+   - Select the instance named **bigip-next.f5labs.com**.
+   - Click on the **+ Add to List** button.
+
    - At the **Deploy Inspection Service?** prompt, click on the **Yes, Deploy** button and wait for the task to complete.
+
+     |
 
      After deployment, the new inspection service will appear in the list.
 
    .. image:: ./images/service-7.png
-
 

@@ -12,6 +12,11 @@ Instantiating a BIG-IP Next Instance
 Follow these steps to instantiate and activate a BIG-IP Next instance
 through the Central Manager.
 
+#. In the UDF **Deployment** tab, access the **BIG-IP Central Manager** VM by clicking on the **ACCESS** link and then selecting **GUI**. A new browser tab will open.
+
+   .. image:: ./images/udf-access-cm.png
+
+
 #. Log into Central Manager with username: ``admin`` and password: ``Welcome123!``.
 
    .. image:: ./images/cm-login.png
