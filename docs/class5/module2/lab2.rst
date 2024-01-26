@@ -15,7 +15,7 @@ Network Diagram
 
 Here is a visual representation of the virtual lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers and VLAN tags (if applicable). The colored boxes to the right of the services respresent some product examples for each respective service type.
 
-The first interface is connected to the client-facing VLAN. The second interface is connected to the Internet-facing VLAN. The remaining interfaces are connected to various types of security services: L2, L3, HTTP, ICAP, and passive Tap. The SSL Orchestrator management interface is not shown.
+The first interface is connected to the client-facing VLAN. The last interface is connected to the Internet-facing VLAN. One of the tagged interfaces connects to the application server VLAN. The remaining interfaces are connected to various types of security services: L2, L3, HTTP, ICAP, and passive Tap. The SSL Orchestrator management interface is not shown.
 
 .. image:: ./images/labinfo-1.png
    :align: left
@@ -76,7 +76,7 @@ this lab guide with your own environment, please ensure that you create these ob
    configuration state. In most cases, objects created in CM (like iRules) are only deployed to a
    Next instance when they are associated to an application. With respect to SSL Orchestrator, this
    also applies to service chains and traffic policies. The exemption to this is inspection
-   services. While inspection services can be saves to CM and deployed later, they are generally
+   services. While inspection services can be saved to CM and deployed later, they are generally
    deployed direct to an instance on creation, irrespective of applications, as they have network
    attributes that are typically specific to a BIG-IP Next instance. This will be made evident in
    the upcoming labs.
@@ -168,14 +168,14 @@ The following tables provide device/service network configuration details. Login
    * - 1.3
      - 10.1.30.7/24
      - TAP service - Inbound
-   * - 1.4 / Future
-     - TBD (10.1.40.0/24)
+   * - 1.4
+     - Future (10.1.40.0/24)
      - Inline L2 service - Inbound
-   * - 1.5 / Future
-     - TBD (10.1.50.0/24)
+   * - 1.5
+     - Future (10.1.50.0/24)
      - Inline L2 service - Outbound
-   * - 1.6 / Future
-     - TBD (10.1.60.0/24)
+   * - 1.6
+     - Future (10.1.60.0/24)
      - Internet
 
 |
@@ -275,9 +275,9 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
    * - Traffic Flow
      - BIG-IP Interface
    * - Inbound
-     - TBD
+     - Future
    * - Outbound
-     - TBD
+     - Future
 
 |
 

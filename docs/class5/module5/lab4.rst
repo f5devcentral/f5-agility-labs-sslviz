@@ -17,9 +17,7 @@ You will now create a traffic policy with a TLS decryption bypass rule for a spe
 
 #. In the **SSL Orchestrator** menu, click on **Policies**.
 
-#. Click the **Start Creating** button.
-
-#. Click the **Start Creating** button.
+#. Click the **+ Create** button in the top right to open the **Create Policy** pane.
 
    - Enter ``my-sslo-policy-lab3`` in the **Name** field and an optional description
    - Enter ``Traffic policy for lab 3`` in the **Description** field (optional).

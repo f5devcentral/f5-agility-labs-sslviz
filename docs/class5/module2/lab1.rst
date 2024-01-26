@@ -9,27 +9,55 @@ If you are not familiar with the process for joining a training course, refer to
 - |join_link|
 - |interface_link|
 
-You should have received a course registration email that contains the UDF course link. Click on the link and log into the UDF student portal.
+#. You should have received a course registration email that contains the **UDF course link**. Click on the link and log into the UDF student portal.
 
-After you **JOIN** the course, you will see the **DOCUMENTATION** tab with some information about the lab resources and a link to the Lab Guide (this document).
-
-.. image:: ./images/udf-documentation.png
-   :align: left
-
-.. note::
-   You will only need your local web browser to perform the lab exercises.
+.. important::
+   If MFA is not configured for your account, you will be asked to set it up before proceeding.
 
 
-#. Click on the **DEPLOYMENT** tab to see all of your lab resources:
+#. Click on the **JOIN** button to enter the lab session. You will see 3 tabs: **Overview**, **Documentation**, and **Deployment**. The **Overview** tab will be shown.
 
-   - **BIG-IP Next Central Manager** - Access via web browser
-   - **BIG-IP Next instance** - Access via Web Shell
-   - **Ubuntu-Client** - Access via Web Shell and WebRDP
-   - **Ubuntu-Server** - Access via Web Shell
-   
+   .. image:: ./images/udf-overview.png
+      :align: left
+
+
+#. Click on the **Documentation** tab to view lab information and a link to the Lab Guide (this document).
+
+   .. image:: ./images/udf-documentation.png
+      :align: left
+
+
+#. Click on the **DEPLOYMENT** tab to see all of your lab resources.
+
    .. image:: ./images/udf-deployment.png
       :align: left
 
+
+   .. list-table::
+      :header-rows: 1
+      :widths: auto
+
+      * - Virtual Machines
+        - Access Methods Used In this Lab
+      * - BIG-IP Central Manager
+        - GUI
+      * - BIG-IP Next instance
+        - Web Shell
+      * - Ubuntu-Client
+        - Web Shell
+      * - Ubuntu-Server
+        - Web Shell,
+
+          WebRDP (to *Ubuntu-Client* desktop)
+
+   To access a lab VM, click on the **ACCESS** link to view the remote access methods. Then, click on the desired option. Here is an example:
+
+   .. image:: ./images/udf-access.png
+      :align: left
+
+
+ .. note::
+    You will only need your local web browser access the lab VMs.
 
 
 .. |join_link| raw:: html

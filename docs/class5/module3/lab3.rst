@@ -3,7 +3,7 @@ Testing the Application Deployment
 
 Congratulations! You have now deployed a simple HTTPS application on BIG-IP Next. The next step is to test your application from a client environment and verify that everything is working properly.
 
-Accesing the Client VM
+Accessing the Client VM
 --------------------------------------------------------------------------------
 
 The UDF lab environment provides an Ubuntu Linux VM instance (**Ubuntu-Client**) with access to an interactive shell for command line testing, as well as a GUI desktop to run web browsers and other tools.

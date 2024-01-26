@@ -29,17 +29,17 @@ You will now create a traffic policy with a TLS decryption bypass rule for a spe
 
 #. Click the **Next** button to continue.
 
-   .. image:: ./images/policy-2.png
-
 
 Create a Traffic Condition Rule - TLS Decryption Bypass
 --------------------------------------------------------------------------------
 
-A traffic condition is generally made up of three parts, depending on the type of condition - the condition type (ex. IP Protocol), expression (ex. equals), and evaluation (what is being tested).
+A traffic condition rule is generally made up of three parts, depending on the type of condition - the condition type (ex. IP Protocol), expression (ex. equals), and evaluation (what is being tested).
 
 #. Click the **+ Create** button to create a new traffic condition.
 
-#. Enter ``rule1`` as the name for this condition, and an optional description
+   .. image:: ./images/policy-2.png
+
+#. Enter ``rule1`` as the name for this condition, and an optional description.
 
 #. Click **Save & Continue**.
 
@@ -65,7 +65,7 @@ A traffic condition is generally made up of three parts, depending on the type o
 Edit Traffic Condition Rule - All Traffic (Default)
 --------------------------------------------------------------------------------
 
-#. Now, you want to ensure that all other traffic flows through a service chain (none selected by default). Click the **All Traffic** condition to modify it.
+#. Now, you want to ensure that all other traffic flows through a service chain (none selected by default). Click the **All Traffic** rule to modify it.
 
 #. Click on **Conditions and Actions**
 
@@ -93,9 +93,12 @@ Create a Logging Rule - Log all TCP traffic
    - Expression: **Equals**
    - Evaluation: **TCP**
 
+#. Click the **Save** button.
+
    .. image:: ./images/policy-5.png
 
-#. Click the **Save** button to close the **Logging Rules** panel.
+
+#. Click the **Save and Continue** button to close the **Logging Rules** panel.
 
    .. image:: ./images/policy-6.png
 
