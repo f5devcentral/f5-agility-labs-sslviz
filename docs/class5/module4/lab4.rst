@@ -18,7 +18,9 @@ You will now create a traffic policy with a TLS decryption bypass rule for a spe
 
 #. In the **SSL Orchestrator** menu, click on **Policies**.
 
-#. Click the **Start Creating** button.
+#. Since there are no **Service Chain** yet, click on the **Start Creating** button to get started.
+
+#. In the **Create Policy** panel's **General Properties** section:
 
    - Enter ``my-sslo-policy-lab2`` in the **Name** field and an optional description
    - Enter ``Traffic policy for lab 2`` in the **Description** field (optional).
@@ -27,88 +29,110 @@ You will now create a traffic policy with a TLS decryption bypass rule for a spe
    .. image:: ./images/policy-1.png
 
 
-#. Click the **Next** button to continue.
+#. Click the **Next** button to continue to the **Rules** configuration.
 
 
-Create a Traffic Condition Rule - TLS Decryption Bypass
+Create a Traffic Rule - TLS Decryption Bypass
 --------------------------------------------------------------------------------
 
-A traffic condition rule is generally made up of three parts, depending on the type of condition - the condition type (ex. IP Protocol), expression (ex. equals), and evaluation (what is being tested).
+A **Traffic Rule** is generally made up of three parts, depending on the type of condition - the condition type (e.g., 'IP Protocol'), expression (e.g., 'equals'), and evaluation (what is being tested).
 
-#. Click the **+ Create** button to create a new traffic condition.
+Now, you will create a TLS bypass rule for traffic destined for **test.f5labs.com**
+
+
+#. Click the **+ Create** button to create a new traffic rule.
 
    .. image:: ./images/policy-2.png
 
-#. Enter ``rule1`` as the name for this condition, and an optional description.
+#. In the **Rule Properties** section of the **Create Traffic Rule** panel:
 
-#. Click **Save & Continue**.
+   - Enter ``rule1`` in the **Name** field.
+   - Enter ``TLS bypass for test.f5labs.com`` in the **Description** field.
 
-#. In **Conditions and Actions**, click the **Start Creating** button.
+   .. image:: ./images/policy-2a.png
 
-#. Create a TLS bypass rule for **test.f5labs.com** by selecting:
+#. Click on the **Save & Continue** button to continue to **Conditions and Actions**.
 
-   - Type: **Server Name (TLS ClientHello)**
-   - Expression: **Equals**
-   - Evaluation: ``test.f5labs.com``
+   .. image:: ./images/policy-2b.png
 
-#. To complete this condition, define the set of actions to take:
 
-   - Flow Action: **Allow**
-   - SSL Action: **Bypass**
-   - Service Chain: **my-service-chain-lab2**
+#. In the **Conditions** section, click the **Start Creating** button and create a conditional expression:
+
+   - Select a condition type of **Server Name (TLS ClientHello)**.
+   - Select an expression of **Equals**.
+   - Enter an evaluation value of ``test.f5labs.com``.
+
+#. If you not see the **Action** section, scroll down.
+
+#. Define the action to take when this conditional expression matches:
+
+   - Set the **Flow Action** to **Allow**. This will allow the traffic to pass.
+   - Set the **SSL Action** to **Bypass**. This will disable decryption of the traffic.
+   - Set the **Service Chain** to **my-service-chain-lab2**. This will send the traffic through a specified Service Chain.
 
    .. image:: ./images/policy-3.png
 
 #. Click the **Save** button.
 
+You will now see 2 **Traffic Rules** (**rule1** and **All Traffic**).
+
+   .. image:: ./images/policy-3b.png
+
 
 Edit Traffic Condition Rule - All Traffic (Default)
 --------------------------------------------------------------------------------
 
-#. Now, you want to ensure that all other traffic flows through a service chain (none selected by default). Click the **All Traffic** rule to modify it.
+By default, the **All Traffic** rule does not have a Service Chain selected. Let's attach a Service Chain to ensure that traffic flows not matching other rules is sent through a service chain.
 
-#. Click on **Conditions and Actions**
+#. Click the **All Traffic** rule to modify it.
 
-#. Select the **my-service-chain-lab2** service chain.
+#. Click on **Conditions and Actions**.
+
+#. Set the **Service Chain** to **my-service-chain-lab2**.
 
    .. image:: ./images/policy-4.png
 
-#. Click the **Save** button to close the **Traffic Rules** panel.
+#. Click the **Save** button to close the panel.
 
 
 Create a Logging Rule - Log all TCP traffic
 --------------------------------------------------------------------------------
 
+Finally, you will configure a rule to log all TCP traffic.
+
 #. In the **Logging Rules** section, click the **Start Creating** button.
 
-#. Enter ``all-logging`` in the **Name** field, and optional description.
+#. Enter ``all-logging`` in the **Name** field
 
-#. Click **Save & Continue**.
+#. Enter ``Log all traffic`` in the **Description** field.
 
-#. In **Conditions and Actions**, click the **Start Creating** button.
+#. Click on the **Save & Continue** button to continue to **Conditions and Actions**.
 
-#. Configure a rule to log all TCP traffic.
+#. In the **Conditions** section, click the **Start Creating** button and create a conditional expression:
 
-   - Type: **IP Protocol**
-   - Expression: **Equals**
-   - Evaluation: **TCP**
+   - Select a condition type of **IP Protocol**.
+   - Select an expression of **Equals**.
+   - Select the evaluation value to **TCP**.
 
-#. Click the **Save** button.
+#. Click the **Save** button to close the **Logging Rules** panel.
 
    .. image:: ./images/policy-5.png
-
-
-#. Click the **Save and Continue** button to close the **Logging Rules** panel.
-
-   .. image:: ./images/policy-6.png
 
 
 Finish the Traffic Policy
 --------------------------------------------------------------------------------
 
-The traffic policy is now complete with respect to this lab module, but other traffic and logging rules can also be applied (as required). 
+#. Click the **Save and Finish** button.
 
-#. Click **Save & Finish**. The traffic policy is now saved to CM and will be deployed to a BIG-IP instance when it is associated with an application.
+   .. image:: ./images/policy-6.png
+
+
+The traffic policy is now saved to CM and will be deployed to a BIG-IP instance when it is associated with an application.
 
    .. image:: ./images/policy-7.png
+
+
+
+.. note::
+   The traffic policy is now complete with respect to this lab module, but other traffic and logging rules can also be applied (as required). 
 

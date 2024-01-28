@@ -2,14 +2,18 @@ Creating an Inbound Application Deployment
 ================================================================================
 
 
+You have completed the create of SSL Orchestrator Inspection Services, Service Chain, and Traffic Policy. The next step is to apply this to an application.
+
+
 Create an Inbound Application with SSL Orchestrator Policy
 --------------------------------------------------------------------------------
 
-SSL Orchestrator inspection services, service chain, and traffic policy creation are now done, and now it is time to apply this to an application.
-
-#. In the top left corner of the BIG-IP Central Manager GUI, click on the **Workspace** icon to show the **Workspace Menu**.
+#. In the BIG-IP Central Manager GUI, click on the **Workspace** icon to show the **Workspace Menu**.
 
 #. Click on **Applications** to navigate to the Applications workspace. You should see the application that you created in the previous lab module.
+
+   .. image:: ./images/second-app-0a.png
+
 
 #. Click on **+ Add Application** to open the **Add Application** panel.
 
@@ -29,8 +33,8 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 
    - Enter ``my-pool`` in the **Pool Name** field.
    - Change the **Service Port** to ``443`` (default value was **80**)
-   - In the **Monitor Type** field, click on the down arrow to show the available options.
-   - Deselect **http** and select **icmp**
+   - Click on the **Monitor Type** field to show the available options.
+   - De-select **http** and select **icmp**
    - Click outside of the list to use the selected options.
 
 #. Click on **Virtual Servers** to switch to back to the Virtual Server configuration options.
@@ -81,9 +85,9 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
    - Click on the **Start Adding** button.
    - Select the instance named **bigip-next.f5labs.com**.
    - Click on the **+ Add to List** button.
-   - Enter ``10.1.10.21`` in the **Virtual Address** field.
 
-
+#. In the **Virtual Address** field, enter ``10.1.10.21`` .
+   
 #. In the **Members** column, click on the down arrow and then click **+ Pool Members** to open the settings panel.
 
    - Click on the **+ Add Row** button 3 times to create empty entries.
@@ -99,9 +103,8 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 
 #. In the **Configure** column, click the **edit icon**. 
 
-#. Enable (toggle on) the **Enable VLANs to listen on** option and select **clientside**.
-
-#. Click **Save**.
+   - Enable (toggle on) the **Enable VLANs to listen on** option and select **clientside**.
+   - Click **Save**.
 
 
 #. Click on the **Validate All** button to validate the pending configuration changes.
@@ -109,9 +112,11 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
    .. image:: ./images/second-app-3.png
 
 
-#. If Validation is successful, click on the **Deploy Changes** button. Then, click on the **Yes, Deploy** button to send the application definition to the BIG-IP Next instance.
+#. If validation is successful, you will see **Validated** and a link to **View Results**. You may optionally click on the link to view the configuration, then click **Exit** to close the results panel.
+
+#. Click on the **Deploy Changes** button. Then, click on the **Yes, Deploy** button to send the application configuration to the BIG-IP Next instance.
 
 
-After deployment, the **Application Services** dashboard will show the status of your application.
+When the deployment has completed, the **Application Services** dashboard will show the status of the application.
 
    .. image:: ./images/second-app-4.png
