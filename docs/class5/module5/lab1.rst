@@ -5,7 +5,7 @@ The SSL Orchestrator **Inbound Gateway Mode** deployment describes a
 scenario where the F5 BIG-IP functions in routing mode. The
 destination addresses are behind the BIG-IP and traffic is forwarded through
 as a routed next hop. This is different from the standard
-application deployment because of the following attributes:
+application deployment because of the following characteristics:
 
 -  The virtual server listens on a wildcard (0.0.0.0/0) IP subnet, and
    optionally a wildcard (any) port.
@@ -35,4 +35,4 @@ to the |sslo-dg2|.
 
 .. |sslo-dg2| raw:: html
 
-      <a href="https://clouddocs.f5.com/sslo-deployment-guide/" target="_blank"> SSL Orchestrator Deployment Guide </a>
+      <a href="https://clouddocs.f5.com/sslo-deployment-guide/" target="_blank"> SSL Orchestrator Deployment Guide</a>

@@ -7,7 +7,7 @@ A traffic policy is a combination of multiple rulesets, each with same or simila
 
    - The Traffic Rules ruleset controls blocking, TLS decrypt decisions, and steering to inspection services.
    - The Traffic Rules ruleset contains a single, immovable **All Traffic** condition that applies to all traffic flows that do not match any other (higher) condition. Its default and adjustable behavior is to Allow traffic and decrypt.
-   - The Logging Rules ruleset controls logging behavior. 
+   - The Logging Rules ruleset controls logging behavior.
 
 
 Create an SSL Orchestrator Traffic Policy
@@ -17,7 +17,9 @@ You will now create a traffic policy with a TLS decryption bypass rule for a spe
 
 #. In the **SSL Orchestrator** menu, click on **Policies**.
 
-#. Click the **+ Create** button in the top right to open the **Create Policy** pane.
+#. Click **+ Create** in the top right to add a new traffic policy.
+
+#. In the **Create Policy** pane:
 
    - Enter ``my-sslo-policy-lab3`` in the **Name** field and an optional description
    - Enter ``Traffic policy for lab 3`` in the **Description** field (optional).
@@ -26,53 +28,68 @@ You will now create a traffic policy with a TLS decryption bypass rule for a spe
    .. image:: ./images/policy-1.png
 
 
-#. Click the **Next** button to continue.
-
-   .. image:: ./images/policy-2.png
+#. Click the **Next** button to continue to the **Rules** configuration.
 
 
 Create a Traffic Condition Rule - TLS Decryption Bypass
 --------------------------------------------------------------------------------
 
-A traffic condition is generally made up of three parts, depending on the type of condition - the condition type (ex. IP Protocol), expression (ex. equals), and evaluation (what is being tested).
+A **Traffic Rule** is generally made up of three parts, depending on the type of condition - the condition type (e.g., 'IP Protocol'), expression (e.g., 'equals'), and evaluation (what is being tested).
 
-#. Click the **+ Create** button to create a new traffic condition.
+Now, you will create a TLS bypass rule for traffic destined for **gwapp3.f5labs.com**
 
-#. Enter ``rule1`` as the name for this condition, and an optional description
 
-#. Click **Save & Continue**.
+#. Click the **+ Create** button to create a new traffic rule.
 
-#. In **Conditions and Actions**, click the **Start Creating** button.
+   .. image:: ./images/policy-2.png
 
-#. To create a TLS bypass rule for **test.f5labs.com**, select the following:
 
-   - Type: **Server Name (TLS ClientHello)**
-   - Expression: **Equals**
-   - Evaluation: ``gwapp3.f5labs.com``
+#. In the **Rule Properties** section of the **Create Traffic Rule** panel:
 
-#. To complete this condition, define the set of actions to take:
+   - Enter ``gwapp3`` in the **Name** field.
+   - Enter ``TLS bypass for gwapp3.f5labs.com`` in the **Description** field.
+   
+#. Click on the **Save & Continue** button to continue to **Conditions and Actions**.
 
-   - Flow Action: **Allow**
-   - SSL Action: **Bypass**
-   - Service Chain: **my-service-chain-lab3**
+#. In the **Conditions** section, click the **Start Creating** button and create a conditional expression:
+
+   - Select a condition type of **Server Name (TLS ClientHello)**.
+   - Select an expression of **Equals**.
+   - Enter an evaluation value of ``gwapp3.f5labs.com``.
+
+
+#. Define the action to take when this conditional expression matches:
+
+   .. hint::
+      Scroll down if you not see the **Actions** section.
+
+   - Set the **Flow Action** to **Allow**. This will allow the traffic to pass.
+   - Set the **SSL Action** to **Bypass**. This will disable decryption of the traffic.
+   - Set the **Service Chain** to **my-service-chain-lab3**. This will send the traffic through a specified Service Chain.
 
    .. image:: ./images/policy-3.png
 
 #. Click the **Save** button.
 
+You will now see 2 **Traffic Rules** (**gwapp3** and **All Traffic**).
+
+   .. image:: ./images/policy-3b.png
+
 
 Edit Traffic Condition Rule - All Traffic (Default)
 --------------------------------------------------------------------------------
 
-#. Now, you want to ensure that all other traffic flows through a service chain (none selected by default). Click the **All Traffic** condition to modify it.
+By default, the **All Traffic** rule does not have a Service Chain selected. Let's attach a Service Chain to ensure that traffic flows not matching other rules is sent through a service chain.
 
-#. Click on **Conditions and Actions**
+#. Click the **All Traffic** rule to modify it.
 
-#. Select the **my-service-chain-lab3** service chain.
+#. Click on **Conditions and Actions**.
+
+#. Set the **Service Chain** to **my-service-chain-lab3**.
 
    .. image:: ./images/policy-4.png
 
-#. Click the **Save** button to close the **Traffic Rules** panel.
+#. Click the **Save** button to close the panel.
 
 
 Create a Logging Rule - Log all TCP traffic
@@ -92,19 +109,25 @@ Create a Logging Rule - Log all TCP traffic
    - Expression: **Equals**
    - Evaluation: **TCP**
 
-   .. image:: ./images/policy-5.png
-
 #. Click the **Save** button to close the **Logging Rules** panel.
 
-   .. image:: ./images/policy-6.png
+   .. image:: ./images/policy-5.png
 
 
 Finish the Traffic Policy
 --------------------------------------------------------------------------------
 
-The traffic policy is now complete with respect to this lab module, but other traffic and logging rules can also be applied (as required). 
+#. Click the **Save and Finish** button.
 
-#. Click **Save & Finish**. The traffic policy is now saved to CM and will be deployed to a BIG-IP instance when it is associated with an application.
+   .. image:: ./images/policy-6.png
+
+
+The traffic policy is now saved to the BIG-IP Central Manager. In the next section, you will deploy it to a BIG-IP instance by associating it with an application.
 
    .. image:: ./images/policy-7.png
+
+
+
+.. note::
+   The traffic policy is now complete with respect to this lab module, but other traffic and logging rules can also be applied (as required). 
 
