@@ -26,11 +26,8 @@ Create an Inline L3 Inspection Service
 #. In the **General Properties** section of the **Create Inspection Service: 'Generic L3'** panel:
 
    - Enter ``my-sslo-ngfw`` in the **Name** field.
-
    - Enter ``next-gen firewall`` in the **Description** field (optional).
-
    - Click the **Save & Continue** button.
-
 
    .. image:: ./images/service-3.png
 
@@ -69,8 +66,6 @@ Create an Inline L3 Inspection Service
    - Click on the **+ Add to List** button.
 
    .. image:: ./images/service-7.png
-
-
 
 
    - Click the checkbox to the left of the assigned instance and then click the **Validate** button.

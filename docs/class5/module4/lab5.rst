@@ -23,7 +23,7 @@ Create an Inbound Application with SSL Orchestrator Policy
 
 #. Click on the **Start Creating** button to open the **Application Service Properties** panel.
 
-#. Enter ``My second application`` in the **Description** field.
+#. Enter ``My SSLO inbound application`` in the **Description** field.
 
 #. Click on the **Start Creating** button to reveal the **Virtual Server** and **Pool** configuration options.
 
@@ -112,11 +112,13 @@ Create an Inbound Application with SSL Orchestrator Policy
    .. image:: ./images/second-app-3.png
 
 
-#. If validation is successful, you will see **Validated** and a link to **View Results**. You may optionally click on the link to view the configuration, then click **Exit** to close the results panel.
+#. If validation is successful, you will see **Validated**.
+
+#. [Optional] Click on the **View Results** link to view the configuration and then click **Exit** to close the results panel.
 
 #. Click on the **Deploy Changes** button. Then, click on the **Yes, Deploy** button to send the application configuration to the BIG-IP Next instance.
 
 
-When the deployment has completed, the **Application Services** dashboard will show the status of the application.
+When the deployment has completed, the **Application Services** dashboard will show the status of the new application.
 
    .. image:: ./images/second-app-4.png

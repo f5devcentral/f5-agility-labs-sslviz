@@ -144,6 +144,6 @@ Now, you will create a simple HTTPS application.
    .. image:: ./images/add-app-12.png
 
 
-When the deployment has completed, the **Application Services** dashboard will show the status of the application.
+When the deployment has completed, the **Application Services** dashboard will show the status of the new application.
 
 .. image:: ./images/add-app-13.png

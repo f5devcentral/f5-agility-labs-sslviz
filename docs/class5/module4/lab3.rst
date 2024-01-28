@@ -13,7 +13,7 @@ With the **Inline L3** inspection service created, you will now create a service
 
 #. In the **SSL Orchestrator** menu, click on **Service Chains**.
 
-#. Since there are no **Service Chain** yet, click on the **Start Creating** button to get started.
+#. Since there are no **Service Chains** yet, click on the **Start Creating** button to get started.
 
    .. image:: ./images/service-chain-0.png
 
@@ -21,7 +21,6 @@ With the **Inline L3** inspection service created, you will now create a service
 #. In the **Create Service Chain** panel:
 
    - Enter ``my-service-chain-lab2`` in the **Name** field
-
    - Enter ``sc-ngfw-only`` in the **Description** field (optional).
 
 

@@ -1,7 +1,7 @@
 Testing the Inbound Application Deployment
 ================================================================================
 
-You have now deployed an SSL Orchestrator HTTPS application with a traffic policy that steers decrypted traffic to an Inline L3 inspection service. The next step is to test your application from a client environment and verify that decrypted traffic is visible to the inspection service.
+You have now deployed an HTTPS application with an **Inbound Application Mode** SSL Orchestrator configuration. A traffic policy steers decrypted traffic to a Service Chain that contains a single Inline L3 inspection service. The next step is to test your application from a client environment and verify that decrypted traffic is visible to the inspection service.
 
 
 Test Access to the HTTPS Application

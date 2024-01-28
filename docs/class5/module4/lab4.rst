@@ -7,8 +7,7 @@ A traffic policy is a combination of multiple rulesets, each with same or simila
 
    - The Traffic Rules ruleset controls blocking, TLS decrypt decisions, and steering to inspection services.
    - The Traffic Rules ruleset contains a single, immovable **All Traffic** condition that applies to all traffic flows that do not match any other (higher) condition. Its default and adjustable behavior is to Allow traffic and decrypt.
-   - The Logging Rules ruleset controls logging behavior. 
-
+   - The Logging Rules ruleset controls logging behavior.
 
 
 Create an SSL Orchestrator Traffic Policy
@@ -18,7 +17,7 @@ You will now create a traffic policy with a TLS decryption bypass rule for a spe
 
 #. In the **SSL Orchestrator** menu, click on **Policies**.
 
-#. Since there are no **Service Chain** yet, click on the **Start Creating** button to get started.
+#. Since there are no **Service Chains** yet, click on the **Start Creating** button to get started.
 
 #. In the **Create Policy** panel's **General Properties** section:
 
@@ -62,9 +61,11 @@ Now, you will create a TLS bypass rule for traffic destined for **test.f5labs.co
    - Select an expression of **Equals**.
    - Enter an evaluation value of ``test.f5labs.com``.
 
-#. If you not see the **Action** section, scroll down.
 
 #. Define the action to take when this conditional expression matches:
+
+   .. hint::
+      Scroll down if you not see the **Actions** section.
 
    - Set the **Flow Action** to **Allow**. This will allow the traffic to pass.
    - Set the **SSL Action** to **Bypass**. This will disable decryption of the traffic.
@@ -127,7 +128,7 @@ Finish the Traffic Policy
    .. image:: ./images/policy-6.png
 
 
-The traffic policy is now saved to CM and will be deployed to a BIG-IP instance when it is associated with an application.
+The traffic policy is now saved to the BIG-IP Central Manager. In the next section, you will deploy it to a BIG-IP instance by associating it with an application.
 
    .. image:: ./images/policy-7.png
 
