@@ -6,15 +6,21 @@ Congratulations! You have now deployed a simple HTTPS application on BIG-IP Next
 Accessing the Client VM
 --------------------------------------------------------------------------------
 
-The UDF lab environment provides an Ubuntu Linux VM instance (**Ubuntu-Client**) with access to an interactive shell for command line testing, as well as a GUI desktop to run web browsers and other tools.
+The UDF lab environment provides an Client VM (Ubuntu Linux) instance with access to an interactive shell for command line testing, as well as a GUI desktop to run web browsers and other tools.
 
-In the UDF Deployment tab, find the Client VM resource. The application tests performed in the next section will require you to execute commands from the Linux shell. The shell session can be accessed via either a **Web Shell** or a **terminal shell** within a **WebRDP** desktop GUI session.
-
-If you want to use the Client desktop GUI option, click on the **WebRDP** access method under the **Ubuntu-Server** resource. This opens a new browser tab providing a view of the client desktop GUI. Enter the username (``user``) and password (``user``) to login. From the client desktop, you can launch a Linux **Terminal** window to issue shell commands.
+The application tests performed in the next section will require you to execute commands from the Linux shell. The shell session can be accessed via either a **Web Shell** or a **Terminal** shell from within a **WebRDP** desktop GUI session.
 
 For this lab module, we recommend using the **Web Shell** access method.
 
-#. Under the **Ubuntu-Client** resource of the UDF Deployment tab, click on Access -> **Web Shell**. This will open a console shell window to the Client VM (in a separate browser tab).
+#. In the UDF **Deployment** tab, find the **Ubuntu-Client** resource.
+
+#. Under **Ubuntu-Client**, click on **ACCESS** to see the list of available access methods.
+
+#. Click on **Web Shell** to open a new web browser tab that connects to the console shell of the Client VM.
+
+
+.. note::
+   If you want to use the Client desktop GUI option instead, click on the **WebRDP** access method under the **Ubuntu-Server** (not the **Ubuntu-Client**) resource. This opens a new browser tab that connects to the Client desktop GUI. Enter the username (``user``) and password (``user``) to login. From the Client desktop, you can launch a Linux **Terminal** window to issue shell commands.
 
 
 Test Access to the HTTPS Application
@@ -22,7 +28,7 @@ Test Access to the HTTPS Application
 
 You will now test the HTTPS application by sending a command line **cURL** request to the BIG-IP Virtual Server. 
 
-#. In the **Client VM shell** (or a Terminal shell running on the Client VM desktop), enter the following command:
+#. In the **Client VM** shell (or a Terminal shell running on the Client VM desktop), enter the following command:
 
    .. code-block:: bash
 
@@ -38,9 +44,11 @@ You will now test the HTTPS application by sending a command line **cURL** reque
       curl -vkI https://10.1.10.20
 
 
-#. Look for the **Server certificate** section. You should see that the **subject** field's **Common Name (CN)** attribute is **\*.f5labs.com**. This confirms that the site is being presented from the BIG-IP deployed application.
+#. Look for the **Server certificate** section. You should see that the **subject** field's **Common Name (CN)** attribute is **\*.f5labs.com**.
 
-   .. image:: ./images/add-app-12.png
+   .. image:: ./images/test-app-1.png
+
+   This confirms that the site is being presented from the BIG-IP deployed application.
 
 |
 

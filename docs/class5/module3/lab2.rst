@@ -45,6 +45,8 @@ Now, you will create a simple HTTPS application.
 
 #. Click on the **Start Creating** button to reveal the **Virtual Server** and **Pool** configuration options.
 
+   .. image:: ./images/add-app-1b.png
+
 #. Click on **Pools** to show the Pool configuration options.
 
    .. image:: ./images/add-app-2.png
@@ -53,8 +55,8 @@ Now, you will create a simple HTTPS application.
 
    - Enter ``my-pool`` in the **Pool Name** field.
    - Change the **Service Port** to ``443`` (default value was **80**)
-   - In the **Monitor Type** field, click on the down arrow to show the available options.
-   - Deselect **http** and select **icmp**
+   - Click on the **Monitor Type** field to show the available options.
+   - De-select **http** and select **icmp**
    - Click outside of the list to use the selected options.
 
    .. image:: ./images/add-app-3.png
@@ -66,7 +68,9 @@ Now, you will create a simple HTTPS application.
    - In the **Pool** field, select the **my-pool** pool.
    - Change the **Virtual Port** to ``443`` (default value was **80**)
 
-#. In the **Protocols & Profiles** field, click on the **edit icon** to open the settings panel.
+#. In the **Protocols & Profiles** field, click on |edit-icon| (**edit icon**) to open the settings panel.
+
+   .. |edit-icon| image:: ./images/edit-icon.png
 
    .. image:: ./images/add-app-4.png
 
@@ -100,12 +104,16 @@ Now, you will create a simple HTTPS application.
 
    - Click on the **Start Adding** button.
    - Select the instance named **bigip-next.f5labs.com**.
-   - Click on the **+ Add to List** button.
-   - Enter ``10.1.10.20`` in the **Virtual Address** field.
+   - Click on the **+ Add to List** button to see the additional deployment settings.
+
+   .. image:: ./images/add-app-7b.png
+
+
+#. In the **Virtual Address** field, enter ``10.1.10.20`` .
 
    .. image:: ./images/add-app-8.png
 
-#. In the **Members** column, click on the down arrow and then click **+ Pool Members** to open the settings panel.
+#. You will see **0** in the **Members** column, click on the down arrow and then click **+ Pool Members** to define Pool Members.
 
    - Click on the **+ Add Row** button 3 times to create empty entries.
 
@@ -124,8 +132,18 @@ Now, you will create a simple HTTPS application.
    .. image:: ./images/add-app-10.png
 
 
-#. If Validation is successful, click on the **Deploy Changes** button. Then, click on the **Yes, Deploy** button to send the application definition to the BIG-IP Next instance.
-
-   After deployment, the **Application Services** dashboard will show the status of your application.
+#. If validation is successful, you will see **Validated** and a link to **View Results**. Click on the link to view the configuration (JSON format) in a new panel.
 
    .. image:: ./images/add-app-11.png
+
+#. Click on the **Exit** button to close the panel.
+
+
+#. Click on the **Deploy Changes** button. Then, click on the **Yes, Deploy** button to send the application configuration to the BIG-IP Next instance.
+
+   .. image:: ./images/add-app-12.png
+
+
+When the deployment has completed, the **Application Services** dashboard will show the status of the application.
+
+.. image:: ./images/add-app-13.png
