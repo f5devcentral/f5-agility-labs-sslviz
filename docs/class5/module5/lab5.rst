@@ -7,7 +7,7 @@ Create an Inbound Gateway Application with SSL Orchestrator Policy
 
 SSL Orchestrator inspection services, service chain, and traffic policy creation are now done, and it is time to apply this to a gateway application.
 
-#. In the top left corner of the BIG-IP Central Manager (CM) UI, click on the **Workspace** icon to show the **Workspace Menu**.
+#. In the top left corner of the BIG-IP Central Manager GUI, click on the **Workspace** icon to show the **Workspace Menu**.
 
 #. Click on **Applications** to navigate to the Applications workspace. You should see the applications that you created in the previous lab modules.
 

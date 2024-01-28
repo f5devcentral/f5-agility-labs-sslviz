@@ -13,12 +13,12 @@ With the **Inline L3** inspection service created, you will now create a service
 
 #. In the **SSL Orchestrator** menu, click on **Service Chains**.
 
-   .. image:: ./images/service-chain-1.png
+#. Since there are no **Service Chain** yet, click on the **Start Creating** button to get started.
+
+   .. image:: ./images/service-chain-0.png
 
 
-
-
-#. Click the **Start Creating** button to open the **Create Service Chain** panel.
+#. In the **Create Service Chain** panel:
 
    - Enter ``my-service-chain-lab2`` in the **Name** field
 

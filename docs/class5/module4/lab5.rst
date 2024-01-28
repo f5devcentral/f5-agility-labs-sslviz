@@ -7,7 +7,7 @@ Create an Inbound Application with SSL Orchestrator Policy
 
 SSL Orchestrator inspection services, service chain, and traffic policy creation are now done, and now it is time to apply this to an application.
 
-#. In the top left corner of the BIG-IP Central Manager (CM) UI, click on the **Workspace** icon to show the **Workspace Menu**.
+#. In the top left corner of the BIG-IP Central Manager GUI, click on the **Workspace** icon to show the **Workspace Menu**.
 
 #. Click on **Applications** to navigate to the Applications workspace. You should see the application that you created in the previous lab module.
 
@@ -111,6 +111,7 @@ SSL Orchestrator inspection services, service chain, and traffic policy creation
 
 #. If Validation is successful, click on the **Deploy Changes** button. Then, click on the **Yes, Deploy** button to send the application definition to the BIG-IP Next instance.
 
-   After deployment, the **Application Services** dashboard will show the status of your application.
+
+After deployment, the **Application Services** dashboard will show the status of your application.
 
    .. image:: ./images/second-app-4.png
