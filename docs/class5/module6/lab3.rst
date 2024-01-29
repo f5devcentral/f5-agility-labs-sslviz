@@ -39,7 +39,7 @@ Here is the what that API request looks like:
 
 A similar API request has already been created for you and is stored in the SSL Orchestrator Collection.
 
-#. In the **Collections** > **Create SSLO Deployment** folder, click on the **CM Login** request to select it.
+#. In the **Create SSLO Deployment** folder, click on the **CM Login** request to select it.
 
    .. image:: ./images/login-1.png
 
