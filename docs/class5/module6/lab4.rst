@@ -2,47 +2,53 @@ Creating a Deployment via API
 ================================================================================
 
 
-Create an SSL Orchestrator Inspection Service
+Create an Inspection Service
 --------------------------------------------------------------------------------
 
-The first step in your adventure into BIG-IP Next SSL Orchestrator automation is to create inspection services. These are the set of external security devices that will receive decrypted traffic. Inspection services are applied to service chains, service chains are applied to security policies, and security policies are applied to applications. 
+Creation of an SSL Orchestrator Inspection Service involves two steps:
+- Create the Inspection Service definition
+- Deploy it to a BIG-IP Next instance
 
-Creation of an SSL Orchestrator inspection service involves two steps: creating the inspection service definition and deploying to an instance. We will create a TAP inspection service in this lab.
 
-#. To create the TAP inspection service, generate the following API call to CM (remember your **Authorization: Bearer** token):
 
+#. To create a TAP Inspection Service, send the following API call to BIG-IP CM (remember your **Authorization: Bearer** token):
 
    .. code-block:: text
 
       POST https://{{CM}}/api/v1/spaces/default/security/inspection-services
       {
          "name": "my-sslo-tap",
-         "description": "My SSLO Tap Inspection Service",
+         "description": "My SSLO TAP Inspection Service",
          "type": "tap-vlan",
          "network": {
             "vlan": "sslo-insp-tap"
          }
       }
 
-   **Type** defines either **tap-vlan** (default) or **tap-clone-pool**. The former minimally requires a specified **vlan**. The latter requires **vlan**, **destinationMacAddress**, and **endpoints/address values**. The **tap-vlan** option is the preferred TAP configuration, so we'll use this here.
+   Parameters:
 
+   - **Type** defines either **tap-vlan** (default) or **tap-clone-pool**. The former minimally requires a specified **vlan**. The latter requires **vlan**, **destinationMacAddress**, and **endpoints/address values**. The **tap-vlan** option is the preferred TAP configuration, so we'll use this here.
 
    .. note::
-      Online documentation for this TAP inspection service API can be found at:
+      Online documentation for this TAP Inspection Service API can be found at:
       https://clouddocs.f5.com/products/big-iq/mgmt-api/v0.0.1/ApiReferences/bigip_public_api_ref/r_openapi-next.html#operation/CreateInspectionService
 
 
-#. Once defined in CM, the inspection service must then be deployed to a BIG-IP Next instance. The above API call will return a JSON payload containing the id value of the new TAP inspection service object. Copy this value as it'll be needed in the instance deploy API call, as well as the service chain creation API call. 
 
 
-#. The instance deployment also requires knowledge of the BIG-IP Next instance ID. To get that, make the following request:
+#. Once defined in BIG-IP CM, the Inspection Service must then be deployed to a BIG-IP Next instance. The above API call will return a JSON payload containing the **id** value of the new TAP Inspection Service object. Copy this value because you it will be needed in the instance deploy API call, as well as the service chain creation API call. 
+
+
+#. The instance deployment also requires knowledge of the BIG-IP Next instance **id**. To retrive that, send the **Get BIG-IP Instances** request from the **Collection**.
+
+   To get that, make the following request:
 
    .. code-block:: text
 
       GET https://{{CM}}/api/v1/spaces/default/instances?select=hostname,id
 
 
-#. The returned JSON payload will include a listing for each associated BIG-IP Next instance, by hostname and id value. Copy the BIG-IP Next instance id value for use in the next API call.
+#. The returned JSON payload will include a listing for each associated BIG-IP Next instance, by hostname and **id** value. Copy the BIG-IP Next instance **id** value for use in the next API call.
 
 #. Deploy TAP Inspection Service to the BIG-IP Next instsance using the following API call:
 
@@ -58,16 +64,16 @@ Creation of an SSL Orchestrator inspection service involves two steps: creating 
 
    Variables:
 
-   - ``{{insp-tap-id}}``: The **id** value of the created TAP inspection service from the TAP creation request. The value inside the **deploy-instances** array is the **id** value of the BIG-IP Next instance. This would be a comma-delimited array if deploying to multiple instances.
+   - ``{{insp-tap-id}}``: The **id** value of the created TAP Inspection Service from the TAP creation request. The value inside the **deploy-instances** array is the **id** value of the BIG-IP Next instance. This would be a comma-delimited array if deploying to multiple instances.
 
    .. note::
-      This same API call is used for deploying and un-deploying inspection services from BIG-IP Next instances. While not expressly required for automation practices, it is useful at this point in the lab to open up the CM UI again, navigate to the Inspection Services page under SSL Orchestrator in the Security workspace, and view the freshly created (and deployed) TAP inspection service.
+      This same API call is used for deploying and un-deploying inspection services from BIG-IP Next instances. While not expressly required for automation practices, it is useful at this point in the lab to open up the CM UI again, navigate to the Inspection Services page under SSL Orchestrator in the Security workspace, and view the freshly created (and deployed) TAP Inspection Service.
 
 
    Next, you will add this inspection service to a service chain.
 
 
-Create an SSL Orchestrator Service Chain
+Create a Service Chain
 --------------------------------------------------------------------------------
 
 With one or more inspection services created, it's now time to create a service chain that will define an ordered set of these for use in a security policy. Service chain creation minimally requires the **name** of the service chain and the **id** value of each inspection service in an array block. You would have captured this **id** value in the initial inspection service creation step above.
@@ -84,7 +90,7 @@ With one or more inspection services created, it's now time to create a service 
          ]
       }
 
-#. If you didn't get a chance to copy the **id** value of the inspection service earlier, or want to add additional inspection services to this service chain, the inspection services and their respective **id** values can be obtained with the following API call:
+#. If you didn't get a chance to copy the **id** value of the Inspection Service earlier, or want to add additional inspection services to this service chain, the Inspection Services and their respective **id** values can be obtained with the following API call:
 
    .. code-block:: text
 
@@ -93,10 +99,10 @@ With one or more inspection services created, it's now time to create a service 
    The services in the service chain are ordered as they appear in this array.
 
 
-Create an SSL Orchestrator Security Policy
+Create a Traffic Policy
 --------------------------------------------------------------------------------
 
-You will now create an SSL Orchestrator security policy. This is the set of traffic condition rules that will control TLS decryption and bypass decisions, and dynamic service chaining to the inspection services. 
+You will now create an SSL Orchestrator security policy. This is the set of traffic condition rules that will control TLS decryption and bypass decisions, and dynamic service chaining to the Inspection Services. 
 
 A policy is constructed based on the following schema:
 
@@ -234,10 +240,10 @@ Please note the following *rules* for creating SSL Orchestrator policies via API
 
 
 
-Create an Application and Assign Security Policy
+Create an Application with an SSL Orchestrator Policy
 --------------------------------------------------------------------------------
 
-The last API step is to apply the security policy to an application. However, now you will using the CM API (instead of the GUI) to create a new HTTPS application. The following represents the most basic form of application API declaration, including association with the SSL Orchestrator traffic policy. Note that the following API call creates the application in CM. A subsequent request is needed to deploy that application to a BIG-IP Next instance.
+The last API step is to apply the security policy to an application. However, now you will using the CM API (instead of the GUI) to create a new HTTPS application. The following represents the most basic form of application API declaration, including association with the SSL Orchestrator traffic policy. Note that the following API call creates the application in BIG-IP CM. A subsequent request is needed to deploy that application to a BIG-IP Next instance.
 
 Note here that BIG-IP automation will generally define a set of endpoints:
 
@@ -310,7 +316,7 @@ In this lab, we will focus on the first two (security and AS3) API endpoints. Th
             ],
             "persistenceMethods": [],
             "policySslOrchestrator": {
-               "cm": " my-api-policy"
+               "cm": "my-api-policy"
             },
             "clientTLS": "my_client_tls",
             "pool": "my_pool",
@@ -367,7 +373,7 @@ The individual blocks in the AS3 declaration may also reference other objects in
 
 - **BIG-IP instance reference** (``bigip``) - where the declaration references an object already deployed on a target BIG-IP Next instance. Using the above example, the **allowNetworks** object in the **Service_HTTPS** class references the **Default L3-Network** that exists on the target BIG-IP. Note that in a strict *fleet management* perspective, where objects are only deployed to a BIG-IP when associated with a deployed application, the ``bigip`` reference is not used often. This will typically be used to target existing (onboarded) networks.
 
-- **Central Manager references** (``cm``) - where the declaration references an object defined at the CM. Using the above example, the **Certificate class** references the ``wildcard.f5labs.com`` certificate and key imported to CM. Likewise, the **policySslOrchestrator** object inside the **Service_HTTPS** class references the ``my-sslo-policy`` SSL Orchestrator policy that only exists on the BIG-IP CM. When the application is deployed, all ``cm`` referenced objects will also be deployed to the target BIG-IP Next instance.
+- **Central Manager references** (``cm``) - where the declaration references an object defined at the CM. Using the above example, the **Certificate class** references the ``wildcard.f5labs.com`` certificate and key imported to BIG-IP CM. Likewise, the **policySslOrchestrator** object inside the **Service_HTTPS** class references the ``my-sslo-policy`` SSL Orchestrator policy that only exists on the BIG-IP CM. When the application is deployed, all ``cm`` referenced objects will also be deployed to the target BIG-IP Next instance.
 
 
 #. The request to create the AS3 application will return a JSON payload. Record the **application id** produced in that JSON response, as this will be needed for your next API request.

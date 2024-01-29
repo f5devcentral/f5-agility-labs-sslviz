@@ -17,9 +17,12 @@ The following order of operations is prescribed below:
 - Delete the inspection services
 
 
-API requests matching the above tasks are saved in the **Thunder Client**.
+API requests matching the above tasks are saved in the **Delete SSLO Deployment** Collections folder.
 
-#. Execute each API request in the order listed.
+.. image:: ./images/delete-1.png
+
+
+#. **Send** each API request in the order listed to remove the previously deployed SSL Orchestrator deployment.
 
 
 |
