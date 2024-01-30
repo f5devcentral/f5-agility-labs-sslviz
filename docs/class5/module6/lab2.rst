@@ -43,7 +43,7 @@ You will now set up the **Thunder Client** extension in **VS Code**.
 
 
    .. caution::
-      **VS Code** might notify you that a software update is available. Do NOT install the update because a newer version might break this lab.
+      **VS Code** might display a notification (bottom-right corner) that a newer version is available for download. Do **NOT** install the update because it might break this lab. Just ignore the notification pop-up and it will close automatically.
 
 
 #. In **VS Code** , click on the **Thunder Client** icon in the left side bar to see the extension's interface.
@@ -56,32 +56,38 @@ About Thunder Client Environment Variables
 
 **Environment** variables provide shortcuts by substituting stored values into API requests when they are sent. Several variables are provided in the included SSL Orchestrator **Environment** file.
 
-#. To view these Environment values, click on the **Env** tab in the Thunder Client top menu bar (under the **New Request** button), and then click on **sslo-environment**. The list will contain both user-defined variables, and variables captured dynamically from API responses.
+#. To view these Environment values, click on the **Env** tab in the Thunder Client top menu bar (under the **New Request** button), and then click on **sslo-environment**.
 
    .. image:: ./images/thunder-env.png
 
 
-.. note:: 
-   All of the API calls in the SSL Orchestrator **Collection** will minimally include a **{{CM}}** variable that contains the management IP address of the BIG-IP CM.
+The list will contain both user-defined variable with static values, and variables whose values are captured/updated dynamically when certain API requests (from the SSL Orchestrator Collection) are sent.
+
+The **{{CM}}** static variable contains the management IP address of the BIG-IP CM. All of the API calls in the Collection use this variable in the request URL.
+
+The dynamic variables in the Collection are referenced by subsequent API requests that depend on data returned from a previous API request. For example, the **{{authToken}}** variable is updated by the **CM Login** API request and then used in the access token header of other API requests.
+
 
 
 About Thunder Client API Collections
 --------------------------------------------------------------------------------
 
-#. Click on the **Collections** tab in the Thunber Client top menu bar. You will see a pre-loaded collection called **sslo-api-collection-v1**.
+#. Click on the **Collections** tab in the Thunber Client top menu bar, and then click on the pre-loaded collection called **sslo-api-collection-v1** to expand it.
 
-#. There are several folders within this collection. Click on the **Create SSLO Deployment** collection to expand it.
+#. There are several folders within this collection. Click on the **Create SSLO Deployment** folder to expand it.
 
    .. image:: ./images/vscode-5.png
 
+   These are all of the API requests that need to be sent to the BIG-IP CM API in order create an **Inbound Application Mode** deployment.
 
-The **Thunder Client** vscode extension is now configured for the remaining steps of the lab.
+
+The **Thunder Client** VS Code extension is now configured for the remaining steps of the lab.
 
 
 Additional Files (For Reference)
 --------------------------------------------------------------------------------
 
-The **API** folder (**/home/student/Documents/API**) contains the **Thunder Client** SSL Orchestrator API collection and related environment variables files. cURL scripts are also provided as a command-line alternative to the GUI-based **Thunder Client** tool. 
+The **API** folder (**/home/student/Documents/API**) on the **Client VM** contains the **Thunder Client** SSL Orchestrator API Collection and related Environment files.
 
    .. list-table::
       :header-rows: 1
@@ -93,10 +99,4 @@ The **API** folder (**/home/student/Documents/API**) contains the **Thunder Clie
         - Thunder Client API environment
       * - thunder-collection_sslo-collection-v1.json
         - Thunder Client API collection 
-      * - api-curl-scripts-basic-application.txt
-        - cURL scripts to create a basic BIG-IP Next application through CM
-
-   |
-
-   .. image:: ./images/vscode-6.png
 

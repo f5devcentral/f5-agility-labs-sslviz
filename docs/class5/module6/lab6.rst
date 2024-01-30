@@ -1,31 +1,38 @@
-Deleting Configuration via API
+Testing the API-based Deployment
 ================================================================================
 
-Delete the Application, Policy, Service Chain, and Inspection Service
+You will now send some traffic to the applications and view the decrypted payloads flowing across inspection services.
+
+
+Test Access to the HTTPS Application
 --------------------------------------------------------------------------------
 
-You will now use the API to remove the configuration that you created.
-As a general rule, objects must be deleted in order of their dependencies. 
-
-The following order of operations is prescribed below:
-
-- Un-deploy the application from the BIG-IP Next instances
-- Delete the application
-- Delete the SSL Orchestrator policy
-- Delete the SSL Orchestrator service chain
-- Un-deploy the inspection services from the BIG-IP Next instances
-- Delete the inspection services
+You will now test the HTTPS application by sending a command line **cURL** request to the BIG-IP Virtual Server. 
 
 
-API requests matching the above tasks are saved in the **Delete SSLO Deployment** Collections folder.
+#. In the **Client VM shell** (or a shell running in the Client VM desktop), enter the following command:
 
-.. image:: ./images/delete-1.png
+   .. code-block:: text
+
+      curl -vk https://10.1.10.22
+
+   You should see HTML payload of the web page returned.
 
 
-#. **Send** each API request in the order listed to remove the previously deployed SSL Orchestrator deployment.
+#. Under the **Ubuntu-Server** resource of the UDF Deployment tab, click on Access -> **Web Shell**. This will open a console shell window to the Server VM (in a separate browser tab).
 
+#. Observe decrypted traffic to the TAP inspection device by initiating a tcpdump packet
+   capture: The **TAP** interface is **ens7** directly on the host server VM:
 
-|
+   .. code-block:: text
 
-.. attention::
-   This is the end of the lab module.
+      tcpdump -lnni ens7 -Xs0
+
+#. In the **Client VM shell** (or a shell running in the Client VM desktop), send another cURL request:
+
+   .. code-block:: text
+
+      curl -vk https://10.1.10.22
+
+   You should see decrypted traffic in the tcpdump packet capture (in the Server VM shell).
+

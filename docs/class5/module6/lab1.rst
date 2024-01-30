@@ -19,9 +19,7 @@ There are two main drivers for programmability:
    various events. Administrators can programmatically adjust the
    policy to reflect real-time traffic conditions.
 
-This module explores some basic programmability aspects of the BIG-IP Next SSL
-Orchestrator, both to control configuration, and to manipulate the
-policy. 
+This module explores some basic programmability aspects of the BIG-IP Next SSL Orchestrator to control configuration. Policy manipulation content may be added in the future.
 
 |
 
