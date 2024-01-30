@@ -17,7 +17,7 @@ You will now create a traffic policy with a TLS decryption bypass rule for a spe
 
 #. In the **SSL Orchestrator** menu, click on **Policies**.
 
-#. Since there are no **Service Chains** yet, click on the **Start Creating** button to get started.
+#. Since there are no **Policies** yet, click on the **Start Creating** button to get started.
 
 #. In the **Create Policy** panel's **General Properties** section:
 

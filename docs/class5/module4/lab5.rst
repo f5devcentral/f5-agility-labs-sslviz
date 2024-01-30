@@ -62,7 +62,7 @@ Create an Inbound Application with SSL Orchestrator Policy
 
 #. Click on the **Save** button to the close the **Protocols & Profiles** panel. 
 
-   Notice that the **TLS** and **HTTPS** badges were added, and **MIRRORING** was removed.
+   Notice that the **TLS** and **HTTPS** labels were added, and **MIRRORING** was removed.
 
 
 #. In the **Security Policies** column, click the **edit icon** to open the **Security Profiles** panel.

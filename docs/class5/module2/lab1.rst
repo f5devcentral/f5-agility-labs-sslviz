@@ -57,7 +57,7 @@ If you are not familiar with the process for joining a training course, refer to
 
 
  .. note::
-    You will only need your local web browser access the lab VMs.
+    You will only need your local web browser to access the lab VMs.
 
 
 .. |join_link| raw:: html

@@ -145,7 +145,7 @@ The following tables provide device/service network configuration details. Login
      - 10.1.1.7/24
      - Management VLAN
    * - 1.1
-     - 10.0.10.7/24
+     - 10.1.10.7/24
      - Client-Side VLAN (Ubuntu-Client)
    * - 1.2 (Tag 30)
      - 198.19.96.7/25

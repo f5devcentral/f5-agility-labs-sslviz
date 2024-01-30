@@ -77,7 +77,7 @@ Now, you will create a simple HTTPS application.
 
 #. Enable (toggle on) the **Enable HTTPS (Client-Side TLS)** option to show additional settings.
 
-   - Click on the **Add** button to open the configuration panel.
+   - In the **SPECIFY THE CERTIFICATES DETAILS FOR THIS APPLICATION** section, click on the **Add** button to open the configuration panel.
    - In the **Add Client-Side TLS** panel, enter ``wildcard.f5labs.com`` as the name
    - Select **wildcard.f5labs.com** in the **RSA certificate** dropdown list box. This certificate was pre-installed in your lab environment.
    - Click on the **Save** button to close the panel.
@@ -96,7 +96,7 @@ Now, you will create a simple HTTPS application.
 
 #. Click on the **Save** button to the close the **Protocols & Profiles** panel. 
 
-   Notice that the **TLS** and **HTTPS** badges were added, and **MIRRORING** was removed.
+   Notice that the **TLS** and **HTTPS** labels were added, and **MIRRORING** was removed.
 
    .. image:: ./images/add-app-7.png
 

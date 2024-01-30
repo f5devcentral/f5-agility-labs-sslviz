@@ -11,6 +11,18 @@ Creation of an SSL Orchestrator Inspection Service involves two steps:
 
 
 
+
+#. In the **Create SSLO Deployment** folder, click on the **Create SSLO Inspection Service - TAP** request to select it.
+
+   .. image:: ./images/api-tap-1.png
+
+#. Click on the **Send** button to submit the request to the BIG-IP CM API. 
+
+
+
+
+
+
 #. To create a TAP Inspection Service, send the following API call to BIG-IP CM (remember your **Authorization: Bearer** token):
 
    .. code-block:: text
@@ -36,7 +48,7 @@ Creation of an SSL Orchestrator Inspection Service involves two steps:
 
 
 
-#. Once defined in BIG-IP CM, the Inspection Service must then be deployed to a BIG-IP Next instance. The above API call will return a JSON payload containing the **id** value of the new TAP Inspection Service object. Copy this value because you it will be needed in the instance deploy API call, as well as the service chain creation API call. 
+#. Once defined in BIG-IP CM, the Inspection Service must then be deployed to a BIG-IP Next instance. The above API call will return a JSON payload containing the **id** value of the new TAP Inspection Service object. Copy this value because it will be needed in the instance deploy API call, as well as the service chain creation API call. 
 
 
 #. The instance deployment also requires knowledge of the BIG-IP Next instance **id**. To retrive that, send the **Get BIG-IP Instances** request from the **Collection**.
