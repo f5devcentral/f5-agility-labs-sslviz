@@ -22,16 +22,20 @@ The following order of operations is prescribed below:
 - Un-deploy the Inspection Service from the BIG-IP Next instances
 - Delete the Inspection Service
 
-
 API requests matching the above tasks are saved in the **Delete SSLO Deployment** Collections folder.
+
+
+.. note::
+   The above **GET** API requests can return multiple objects in the response.
+
+   The **test scripts** in these API requests populate variables using the object **id** retrieved from the first element (index 0) in the response. However, the objects created via the API might not appear as the first element in the response. In that case, you will need to modify the **test scripts** to pick the correct object **id** based on its position in the response and re-send the API call to update the environment variable.
+
 
 .. image:: ./images/delete-1.png
 
 
-#. **Send** each API request in the order listed to remove the previously deployed SSL Orchestrator deployment.
+#. **Send** each API request in the order listed to remove the previously deployed SSL Orchestrator deployment. Don't forget to update the **test script** (in the relevant **GET** API calls).
 
-  .. note::
-     The *test scripts* populate variables using the object **id** retrieved from the first element (index 0) in the responses to the **GET** API requests. The objects created via the API might not appear as the first element in the responses. In that case, you need to modify the *test scripts* to pick the correct object **id** based on the position in the response.
 
 
 |
