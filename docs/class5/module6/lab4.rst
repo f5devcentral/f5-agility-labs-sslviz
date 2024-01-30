@@ -101,7 +101,7 @@ With one or more inspection services created, it's now time to create a service 
 
 
 .. note::
-   The **id** attribute gets saved to the **{{insp-tap-id}}** environment variable and will be used in the *instance deploy* API call, as well as the *service chain creation* API call.
+   The **id** attribute gets saved to the **{{as3_document_id}}** environment variable and will be used in the *instance deploy* API call, as well as the *service chain creation* API call.
 
 
 Create a Traffic Policy
