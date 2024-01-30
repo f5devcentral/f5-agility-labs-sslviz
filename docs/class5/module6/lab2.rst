@@ -1,9 +1,9 @@
-Accessing the Rest API Client
+Accessing the REST API Client
 ================================================================================
 
-In this lab, you will need to log into the **Client VM desktop** to launch **VS Code** and access the **Thunder Client** extension. Then, you will send Rest API requests to the **F5 BIG-IP Central Manager** in order to create and deploy an SSL Orchestrator configuration (with an HTTPS application).
+In this lab, you will need to log into the **Client VM desktop** to launch **VS Code** and access the **Thunder Client** extension. Then, you will send REST API requests to the **F5 BIG-IP Central Manager** in order to create and deploy an SSL Orchestrator configuration (with an HTTPS application).
 
-|thunder-client| is a lightweight Rest API client for testing APIs. It has a similar look and feel to the **Postman** Rest API tool, but implemented as a |vscode| extension. If you choose to use **Postman** outside of the F5 UDF lab environment, the **Thunder Client** can convert its collections and environments to **Postman** format.
+|thunder-client| is a lightweight REST API client for testing APIs. It has a similar look and feel to the **Postman** REST API tool, but implemented as a |vscode| extension. If you choose to use **Postman** outside of the F5 UDF lab environment, the **Thunder Client** can convert its collections and environments to **Postman** format.
 
 .. |vscode| raw:: html
 

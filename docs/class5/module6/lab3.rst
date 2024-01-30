@@ -14,8 +14,8 @@ Here is the what that API call looks like:
    Content-Type: application/json
 
    {
-      "username": "{{CM username}",
-      "password": "{{CM password}"
+      "username": "{{CMUser}",
+      "password": "{{CMUser}"
    }
 
 A similar API request has already been created for you and is stored in the SSL Orchestrator Collection.
