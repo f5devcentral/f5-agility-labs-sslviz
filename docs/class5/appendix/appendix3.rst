@@ -1,6 +1,9 @@
 Appendix 3 - Additional API reference
 ================================================================================
 
+This appendix contains additional details about the API requests used for SSL Orchestrator configuration deployment and modification.
+
+
 Inspection Service - Step 1
 --------------------------------------------------------------------------------
 
@@ -316,7 +319,7 @@ Let us now walk through some of the parts of this request to get a better unders
 
 An Application is constructed based on the following schema:
 
-.. image:: ./images/application-service-schema.png
+.. image:: ./images/schema-application-service.png
 
 
 
@@ -359,3 +362,47 @@ The individual blocks in the AS3 declaration may also reference other objects in
       }
 
 The ``{{app_id}}`` value is the JSON id returned from the application creation. The ``{{Next}}`` value is the IP address of the target BIG-IP Next instance.
+
+
+
+Modifying the SSL Orchestrator Security Policy
+--------------------------------------------------------------------------------
+
+So far, you have focused on API-based configuration which is mostly useful in cloud and other orchestrated environments where programmability is critically important. But now that traffic is flowing and SSL Orchestrator is doing its job, you might need to **tune** the security policy to adjust for different traffic demands. 
+
+In this section, you will use the security policy API to apply real time updates 
+to the active policy and observe the changes in policy behavior. Fortunately, modifying an existing deployed policy is fairly straightforward.
+
+First get the policy **id** values for all of the defined SSL Orchestrator policies. You can then make your changes to the JSON. In the next API call, you will reference the target policy by its **id**.
+
+#. Send the following API call to GET the SSL Orchestrator policies:
+
+   .. code-block:: text
+
+      GET https://{{CM}}/api/v1/spaces/default/security/policies?select=name,id
+
+#. Record the **id** value of your intended policy.
+
+
+#. GET the original policy contents via the BIG-IP CM API, specifying the **policy id** {{policy-id}} in the request URL:
+
+   .. code-block:: text
+
+      GET https://{{CM}}/api/v1/spaces/default/security/policies/{{policy-id}}
+
+
+#. Edit the original policy contents as required and POST it back to the BIG-IP CM API, specifying the **policy id** {{policy-id}} in the API URL:
+
+   .. code-block:: text
+
+      POST https://{{CM}}/api/v1/spaces/default/security/policies/{{policy-id}}
+
+   The updated policy is now stored on BIG-IP CM and needs to be pushed to each BIG-IP Next instance that references it.
+
+
+#. Deploy the updated policy to the associated BIG-IP Next instances:
+
+   .. code-block:: text
+
+      POST https://{{CM}}/api/v1/spaces/default/security/ssl-orchestrator-policies/{{policy-id}}/deploy
+

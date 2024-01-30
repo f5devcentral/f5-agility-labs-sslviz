@@ -1,7 +1,7 @@
 Conclusion
 ================================================================================
 
-Congratulations! You made it to the end of the **SSL Orchestrator on BIG-IP Next** lab.
+Congratulations! You made it to the end of the **Diving into SSL Orchestrator on BIG-IP Next** lab.
 
 Please click on the **Leave and Delete** button to exit the UDF lab.
 
