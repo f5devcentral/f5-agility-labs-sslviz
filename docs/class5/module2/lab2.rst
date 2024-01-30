@@ -464,6 +464,7 @@ The **WebRDP** service leverages an instance of Guacamole running on the Ubuntu 
      - 192.168.100.20 : Ports 80 & 8443
 
 |
+
 .. warning::
    Simple passwords were used in this lab environment in order to make it easier for students to access the infrastructure. This does not follow recommended security practices of using strong passwords.
 

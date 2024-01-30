@@ -11,27 +11,23 @@ they can provide access to environments on an as-needed basis.
 
 |
 
-Lab Guides
+Getting Started
 --------------------------------------------------------------------------------
 
-The following labs are available:
+All lab guides can be accessed from the left-side navigation panel (click on the links) or from the |lgindex| index page.
 
-- SSLO 101: Essential SSL Visibility with SSL Orchestrator
-- SSLO 102: Diving into SSL Orchestrator for BIG-IP Next
-- SSLO 201: Advanced Use Cases with SSL Orchestrator
-- SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud
-- SSL Orchestrator with Secure Web Gateway (SWG) as a Service
-- SSL Orchestrator Lab Guide Archive
 
-Refer to the left-side navigation panel for **links** to the individual lab guides.
+.. |lgindex| raw:: html
 
+      <a href="./classes.html"><b>All SSL Orchestrator Lab Guides</b></a>
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :hidden:
    :glob:
 
+   classes
    class1/class*
    class5/class*
    class2/class*
