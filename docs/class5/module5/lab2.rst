@@ -56,13 +56,10 @@ Now, you will create an ICAP inspection service.
 
    - If Validation is successful, click the **Deploy Changes** button to push this inspection service configuration to the BIG-IP Next instance.
 
-     .. image:: ./images/icap-4.png
-
-
    - At the **Deploy Inspection Service?** prompt, click on the **Yes, Deploy** button and wait for the task to complete.
 
 
 After deployment, the new inspection service will appear in the list.
 
-   .. image:: ./images/icap-5.png
+   .. image:: ./images/icap-4.png
 

@@ -8,6 +8,43 @@ visibility into the encrypted traffic on their networks. If you require
 a pre-built lab environment, please contact your F5 account team and
 they can provide access to environments on an as-needed basis.
 
+
+|
+
+Lab Guides
+--------------------------------------------------------------------------------
+
+The following labs are available:
+
+- SSLO 101: Essential SSL Visibility with SSL Orchestrator
+- SSLO 102: Diving into SSL Orchestrator for BIG-IP Next
+- SSLO 201: Advanced Use Cases with SSL Orchestrator
+- SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud
+- SSL Orchestrator with Secure Web Gateway (SWG) as a Service
+- SSL Orchestrator Lab Guide Archive
+
+Refer to the left-side navigation panel for **links** to the individual lab guides.
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :glob:
+
+   class1/class*
+   class5/class*
+   class2/class*
+   class3/class*
+   class4/class*
+   archived
+
+
+|
+
+Documentation Repository
+--------------------------------------------------------------------------------
+
 The content contained here adheres to a DevOps methodology and
 automation pipeline.  All content contained here is sourced from the
 following GitHub repository:
@@ -22,33 +59,11 @@ Bugs and Requests for enhancements are handled in two ways:
 
 - Open an :issues:`Issue <>` within the repository.
 
-|
-
-**Latest**
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   class1/class*
-   class5/class*
-   class2/class*
-   class3/class*
-   class4/class*
 
 |
-
-**Archived**
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   archive*/archive*
-
 |
 
-(c) 2016-2022 F5, Inc. All rights reserved. F5, F5 Networks, and the F5
+(c) 2016-2024 F5, Inc. All rights reserved. F5, F5 Networks, and the F5
 logo are trademarks of F5, Inc. in the U.S. and in certain
 other countries. Other F5 trademarks are identified at f5.com.
 

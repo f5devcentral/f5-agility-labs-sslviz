@@ -51,6 +51,7 @@ A similar API request has already been created for you and is stored in the SSL 
 
    .. image:: ./images/login-2.png
 
-   .. note::
-      The token will expire after a few minutes, so it may be necessary to regenerate this request periodically and fetch a new bearer token for subsequent API calls.
+
+   .. important::
+      The token will expire after a few minutes, so it will be necessary to resend this request periodically to fetch a new bearer token for subsequent API calls.
 

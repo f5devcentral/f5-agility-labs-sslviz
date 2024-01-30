@@ -1,7 +1,7 @@
 Creating an Inbound Gateway Deployment
 ================================================================================
 
-You have completed the create of SSL Orchestrator Inspection Services, Service Chain, and Traffic Policy. The next step is to apply this to an application.
+You have created an SSL Orchestrator Inspection Service, a Service Chain, and a Traffic Policy. The next step is to apply this to an application.
 
 Create an Inbound Gateway Application with SSL Orchestrator Policy
 --------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ Create an Inbound Gateway Application with SSL Orchestrator Policy
 
 #. Click on the **Save** button to the close the **Protocols & Profiles** panel. 
 
-   Notice that the **TLS** and **HTTPS** badges were added.
+   Notice that the **TLS** and **HTTPS** labels were added.
 
    .. image:: ./images/igm-app-4.png
 

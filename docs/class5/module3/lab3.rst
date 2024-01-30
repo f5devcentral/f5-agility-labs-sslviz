@@ -34,6 +34,15 @@ You will now test the HTTPS application by sending a command line **cURL** reque
 
       curl -vk https://10.1.10.20
 
+
+   .. tip::
+      To avoid errors in typing the shell commands, hover your mouse over the right side of the gray text block to reveal the **copy** shortcut. Click on it to copy the text block to your local workstation's clipboard.
+
+      You can **paste** into the **Web Shell** with the following keyboard shortcuts:
+
+      - Windows: **<Control-Shift-V>** or **<Shift-Insert>**
+      - Mac: **<Control-V>**
+
    The output of this command will contain the full HTML payload of the web page.
 
 
