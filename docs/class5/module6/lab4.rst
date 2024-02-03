@@ -55,11 +55,12 @@ Once defined in BIG-IP CM, the Inspection Service must then be deployed to a BIG
 
 #. In the API request URL, you will see the **{{insp-tap-id}}** variable. This variable contains the **id** value of the previously created TAP Inspection Service definition.
 
-#. In the **JSON Content** panel, review the body of the API call. Notice that the **deploy-instances** attribute references the **{{my_instance_id}}** variable.
+#. In the **JSON Content** panel, review the body of the API call. Notice that the **deploy-instances** attribute has a placeholder value of "**[add bigip-instance-id here]**". Replace the placeholder (everything between the quotes) with the BIG-IP Next instance **id** from the **Get BIG-IP Instances** response.
 
-   .. note::
-      If you see an **id** instead of **{{my_instance_id}}**, then replace the **id** value with ``{{my_instance_id}}``. This will be corrected in a future update.
+   .. hint::
+      You can switch to that request tab to retrieve the **id** value.
 
+   .. image:: ./images/api-tap-2a.png
 
    .. note::
       The **deploy-instances** array can accept a comma-delimited list of instance IDs (if deploying to multiple instances).
@@ -85,9 +86,12 @@ With one or more inspection services created, it's now time to create a service 
 
 #. In the **JSON Content** panel, review the body of the API call. Notice that the **inspection services** attribute references the **{{insp-tap-id}}** variable.
 
-   .. note::
-      If you see an **id** value instead of **{{insp-tap-id}}**, then replace the **id** value with ``{{insp-tap-id}}``. This will be corrected in a future update.
+Notice that the **inspection services** attribute has a placeholder value of "**[add inspection-service-id here]**". Replace the placeholder (everything between the quotes) with the inspection service **id** from the **Create SSLO Inspection Service - TAP** response.
 
+   .. hint::
+      You can switch to that request tab to retrieve the **id** value.
+
+   .. image:: ./images/api-sc-1a.png
 
    .. note::
       The **inspection services** array can accept a comma-delimited and ordered list of inspection service IDs (if adding multiple inspection services to the service chain).
@@ -100,9 +104,6 @@ With one or more inspection services created, it's now time to create a service 
    .. image:: ./images/api-sc-1.png
 
 
-.. note::
-   The **id** attribute gets saved to the **{{as3_document_id}}** environment variable and will be used in the *instance deploy* API call, as well as the *service chain creation* API call.
-
 
 Create a Traffic Policy
 --------------------------------------------------------------------------------
@@ -114,11 +115,13 @@ You will now create an SSL Orchestrator traffic policy for an inbound applicatio
 
 #. In the **JSON Content** panel, review the body of the API call. This API call is much larger than the page viewer, so you will need to scroll down to see all of it.
 
+   Notice that there are **2** traffic rules: **rule1** and **All Traffic**. Each rule contains the **serviceChain** attribute with a placeholder value of "**[add service-chain-id here]**". Replace the **2** placeholders (everything between the quotes) with the service chain **id** from the **Create SSLO Service Chain** response.
 
-   Notice that there are 2 traffic rules: **rule1** and **All Traffic**. Each rule contains the **serviceChain** attribute and references the **{{as3_document_id}}** variable.
+   .. hint::
+      You can switch to that request tab to retrieve the **id** value.
 
-   .. note::
-      If you see an **id** value instead of **{{as3_document_id}}**, then replace the **id** value with ``{{as3_document_id}}``. This will be corrected in a future update. The name of the variable will also be changed to better reflect its purpose.
+   .. image:: ./images/api-policy-1a.png
+
 
    There is also a logging rule that logs for port 443 traffic.
 

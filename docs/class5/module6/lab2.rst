@@ -72,7 +72,7 @@ The dynamic variables in the Collection are referenced by subsequent API request
 About Thunder Client API Collections
 --------------------------------------------------------------------------------
 
-#. Click on the **Collections** tab in the Thunber Client top menu bar, and then click on the pre-loaded collection called **sslo-api-collection-v1** to expand it.
+#. Click on the **Collections** tab in the Thunder Client top menu bar, and then click on the pre-loaded collection called **sslo-api-collection-v1** to expand it.
 
 #. There are several folders within this collection. Click on the **Create SSLO Deployment** folder to expand it.
 

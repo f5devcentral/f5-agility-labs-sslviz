@@ -39,7 +39,9 @@ You will now test the HTTPS application by sending a command line **cURL** reque
 
    .. code-block:: text
 
-      sudo tcpdump -lnni ens6.50
+      sudo tcpdump -lnni ens6.50 -Xs0
+
+   The ``-Xs0`` (capital 'x', lowercase 's', zero) flag allows you to view the unencrypted payload.
 
    .. note::
       An ICAP server will not receive encrypted traffic, so by design traffic to the **gwapp3.f5labs.com** URL per the above policy will not be seen in ICAP captures. To see this encrypted traffic, use the Inline Layer 3 inspection service.

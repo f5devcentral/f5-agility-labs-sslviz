@@ -15,7 +15,7 @@ Here is the what that API call looks like:
 
    {
       "username": "{{CMUser}",
-      "password": "{{CMUser}"
+      "password": "{{CMPass}"
    }
 
 A similar API request has already been created for you and is stored in the SSL Orchestrator Collection.
