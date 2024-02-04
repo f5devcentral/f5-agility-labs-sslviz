@@ -8,6 +8,39 @@ visibility into the encrypted traffic on their networks. If you require
 a pre-built lab environment, please contact your F5 account team and
 they can provide access to environments on an as-needed basis.
 
+
+|
+
+Getting Started
+--------------------------------------------------------------------------------
+
+All lab guides can be accessed from the left-side navigation panel (click on the links) or from the |lgindex| index page.
+
+
+.. |lgindex| raw:: html
+
+      <a href="./classes.html"><b>All SSL Orchestrator Lab Guides</b></a>
+
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+   :glob:
+
+   classes
+   class1/class*
+   class5/class*
+   class2/class*
+   class3/class*
+   class4/class*
+   archived
+
+
+|
+
+Documentation Repository
+--------------------------------------------------------------------------------
+
 The content contained here adheres to a DevOps methodology and
 automation pipeline.  All content contained here is sourced from the
 following GitHub repository:
@@ -22,29 +55,11 @@ Bugs and Requests for enhancements are handled in two ways:
 
 - Open an :issues:`Issue <>` within the repository.
 
-|
-
-**Latest**
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   class*/class*
 
 |
-
-**Archived**
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   archive*/archive*
-
 |
 
-(c) 2016-2022 F5, Inc. All rights reserved. F5, F5 Networks, and the F5
+(c) 2016-2024 F5, Inc. All rights reserved. F5, F5 Networks, and the F5
 logo are trademarks of F5, Inc. in the U.S. and in certain
 other countries. Other F5 trademarks are identified at f5.com.
 
