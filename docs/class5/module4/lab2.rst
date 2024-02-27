@@ -78,7 +78,7 @@ Create an Inline L3 Inspection Service
      .. image:: ./images/service-8b.png
 
 
-   - At the **Deploy Inspection Service** prompt, click on the **Yes, Deploy** button and wait for the task to complete.
+   - At the **Deploy Inspection Service** prompt, click on the **Deploy Changes** button and wait for the task to complete.
 
 
 After deployment, the new inspection service will appear in the list.
