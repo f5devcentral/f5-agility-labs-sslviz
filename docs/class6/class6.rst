@@ -1,4 +1,4 @@
-SSLO 202: More Use-cases with F5 BIG-IP SSL Orchestrator (AppWorld 2025 | 2 hours)
+SSLO 202: More Use Cases with F5 BIG-IP SSL Orchestrator (AppWorld 2025 | 2 hours)
 ===============================================================================================
 
 |
