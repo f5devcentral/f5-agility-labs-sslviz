@@ -1,68 +1,156 @@
-Enable User Justification
+Implement User Coaching
 ==============================================================================
 
-To take the **user coaching** functionality a step further, you will enable the **user justification** option which requires the user to provide a reason for accessing that destination.
+You will now enable and test the **user coaching** functionlity. This will produce a prompt in the web browser when a user attempts to connect to a *risky* web site.
 
 
-Modify User Coaching iRule
+
+Modify Interception Rule
 --------------------------------------------------------------------------------
 
-#. In the **BIG-IP TMUI**, navigate to **Local Traffic > iRules**.
+#. In the **SSL Orchestrator UI**, click on the **Interception Rules** tab.
 
-#. Click on the **user-coaching-rule** iRule to edit it.
-
-   .. image:: ./images/user-justification-1.png
+   .. image:: ./images/user-coaching-1.png
       :align: left
 
-#. Notice that the coaching message text is defined as a variable called **COACHING_MESSAGE**. This allows you to customize the message based on your organziation's policies. Do not change it at this time.
 
-   .. image:: ./images/user-justification-2.png
+#. Click on the **sslo_l3_outbound-in-t-4** Interception Rule to view the **Summary** page.
+
+   .. image:: ./images/user-coaching-2.png
       :align: left
 
-#. Notice that the **JUSTIFICATION_LOGGING** variable is set to **""** (empty string).
 
-   .. image:: ./images/user-justification-3.png
+#. Click on the **Edit** (pencil) icon to view the settings.
+
+#. Scroll down to the **Resources > iRules** section and double-click on the **/Common/user-coaching-ja4t-rule** iRule to add it to the **Selected** panel.
+
+
+   .. image:: ./images/user-coaching-3.png
       :align: left
 
-#. In between the double quotation marks, enter ``on`` to enable this feature.
 
-   .. image:: ./images/user-justification-4.png
+#. Click on the **Save & Next** button to return to the **Summary** page.
+
+   .. image:: ./images/user-coaching-4.png
       :align: left
 
-#. Click on the **Update** button to save your change.
 
-   .. image:: ./images/user-justification-5.png
-      :align: left
+#. Click on the **Deploy** button.
+
+#. When the deployment has completed, click on the **OK** button to close the dialog box and return to the **Topologies** list.
+
 
 |
 
-Test User Justification
+Add User Coaching Inspection Service to a Service Chain
+--------------------------------------------------------------------------------
+
+Create a new service chain that contains the user coaching service.
+
+
+#. Click on the **Service Chains** tab.
+
+   .. image:: ./images/user-coaching-5.png
+      :align: left
+
+
+#. From the **Service Chain List**, click on the **Add** button.
+
+#. Enter ``user_coaching`` in the **Name** field.
+
+#. Double-click on the **ssloS_F5_UC** and **ssloS_F5_FEYE** Inspection Services to add them to the Service Chain. The **ssloS_F5_AWAF** service will not be used for outbound inspection.
+
+   .. image:: ./images/user-coaching-6.png
+      :align: left
+
+
+#. Click on the **Deploy** button.
+
+#. When the deployment has completed, click on the **OK** button to close the dialog box and return to the **Topologies** list.
+
+#. Click on the **Service Chains** tab to confirm that the new **Service Chain** was created.
+
+   .. image:: ./images/user-coaching-7.png
+      :align: left
+
+
+Update the Security Policy
+--------------------------------------------------------------------------------
+
+The final step is to add a rule to the **Security Policy** that references the new **Service Chain**.
+
+#. Click on the **Security Policies** tab to view the list of policies.
+
+#. Click on the **ssloP_l3_outbound** policy to edit it.
+
+   .. image:: ./images/user-coaching-8.png
+      :align: left
+
+
+#. Click on the **Add** button on the right side of the page to create a new rule.
+
+#. Enter ``user_coaching`` in the rule **Name** field.
+
+#. Select the **Category Lookup (SNI)** condition.
+
+#. Enter ``gen`` in the category field to filter the category options. Select each of the following URL categories (one at a time):
+
+   - **Generative AI - Conversation**
+   - **Generative AI - Multimedia**
+   - **Generative AI - Text & Code**
+
+   .. image:: ./images/user-coaching-9.png
+      :align: left
+
+
+#. Set **SSL Proxy Action** to **Intercept**.
+
+#. Set **Service Chain** to **ssloSC_user_coaching**.
+
+   .. image:: ./images/user-coaching-10.png
+      :align: left
+
+#. Click on the **OK** button to exit edit mode.
+
+   |
+
+   Your **Security Policy** should now look like the following:
+
+   .. image:: ./images/user-coaching-11.png
+      :align: left
+
+
+#. Click on the **Deploy** button and then click on **Deploy** again to accept the warning.
+
+   .. image:: ./images/user-coaching-12.png
+      :align: left
+
+#. When the deployment has completed, click on the **OK** button to close the dialog box and return to the **Topologies** list.
+
+
+|
+
+Test User Coaching
 --------------------------------------------------------------------------------
 
 #. Return to the **Ubuntu-Client** WEBRDP session.
 
 #. Close the **Firefox** browser window and restart the application.
 
-#. Navigate to https://chatgpt.com/ again. Since you acknowledged the user coaching prompt previously, you will not be prompted again.
+#. Navigate to https://copilot.microsoft.com/. You should receive the SSL Orchestrator user coaching prompt as follows:
 
-#. Navigate to a new site: https://www.jasper.ai. Now, the user coaching prompt appears but also includes a text box for users to enter a justification/reason for accessing that destination.
-
-   .. image:: ./images/user-justification-6.png
+   .. image:: ./images/user-coaching-13.png
       :align: left
 
-#. Enter ``research and testing`` in the text box and click on the **Submit** button to acknowledge the warning and terms of use policy. You will then be presented with the requested destination web site.
 
-|
+#. Click on the **Agree** button to acknowledge the warning and terms of use policy. You will then be presented with the Microsoft Copilot site.
 
-Review User Coaching Logs
---------------------------------------------------------------------------------
-
-The user coaching iRule has logging enabled (currently local logging, but could be sent to an external log collector or SIEM). Let's take a look at what has been logged.
-
-#. Return to the **BIG-IP SSL Orchestrator** **Web Shell** tab.
-
-#. Enter ``grep ALERT-COACHING-TRIGGER /var/log/ltm`` to extract the user coaching logs from the LTM log file. You should see log entries with the same format as the following:
-
-   .. image:: ./images/user-justification-7.png
+   .. image:: ./images/user-coaching-14.png
       :align: left
+
+#. Restart **Firefox** and browse to Copilot again. You should not see the prompt reappear because the original user coaching acknowledgement has not expired yet.
+
+   .. note::
+
+      The default user coaching session timeout setting is 3600 seconds. This value is configurable in the **user-coaching-rule** iRule.
 

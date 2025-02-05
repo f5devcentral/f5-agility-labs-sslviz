@@ -1,28 +1,86 @@
-Module Completion
+Testing the Deployment
 ================================================================================
 
-In this lab module, you completed the following tasks:
-
-- Created an on-box F5 Advanced WAF policy using a violation rating-based template.
-- Created an **Inbound Gateway** Topology deployment.
-- Created an on-box F5 WAF Inspection Services.
-- Create two service chains: (1) FireEye service only and (2) FireEye and F5 WAF services.
-- Created Security Policy with rules for two backend application instances (jsapp1 and jsapp2).
-- Created SSL profiles with unique client-side TLS certificates for each application to support SNI-based certificate association.
-- Verified that SSL Orchestrator is handling traffic for both applications via per-application inspection rules by sending SQL injection attacks to both applications.
+You will now test the SSL Orchestrator Topology and perfom an attack against the applications to see the difference in behavior between the two Service Chains.
 
 
-.. note::
+Access the Ubuntu-client Desktop
+--------------------------------------------------------------------------------
 
-   For more information about **F5 Advanced WAF** policy creation, please check out our comprehensive WAF labs on `Clouddocs <https://clouddocs.f5.com/training/community/waf/html/>`_.
+#. From the **Deployment** tab in the UDF console, select **ACCESS > WEBRDP** for the **Ubuntu-Server** resource (*Components > Ubuntu-Server > ACCESS > WEBRDP*).
+
+   A new tab will open and present the Guacamole login screen.
+
+   .. note::
+
+      The **Guacamole** application is hosted on the **Server** machine, but creates an RDP connection to the **Client** machine.
 
 
-.. note::
-   
-   This lab features the **OWASP Juice Shop**: a modern insecure web application designed to demonstrate common security vulnerabilities that can easily be exploited. Read more about it here:  `OWASP Juice Shop <https://owasp.org/www-project-juice-shop/>`_.
+#. Log in as ``user`` with password ``user``.
+
+   .. image:: images/webrdp-login-1.png
+      :align: left
+
+#. If you are prompted for permission to copy/paste, you should allow it to make it easier to perform later lab steps.
+
+
+You should now see the desktop of the **Client** machine.
+
+   .. image:: images/webrdp-login-2.png
+      :align: left
 
 
 
+Attack Juiceshop Application #1 (jsapp1.f5labs.com)
+--------------------------------------------------------------------------------
 
-This is the end of this lab module.
+You will now perform a SQL Injection (SQLi) attack to test the inspection services associated with **jsapp1**.
+
+#. Launch the **Firefox** browser and browse to the following URL:
+
+   .. code-block:: text
+
+      https://jsapp1.f5labs.com/rest/products/search?q=qwert')) UNION SELECT id, email, password, '4', '5', '6', '7', '8', '9' FROM Users--
+
+
+   .. tip::
+
+      Click the **copy** icon in the URL text box above and paste it into the Ubuntu-Client browser address bar.
+
+
+#. If you see a TLS security warning, accept it and continue. The lab's private Certificate Authority certificate might not be installed in **Firefox**.
+
+
+You should see that the attack reached the application server and returned unauthorized data from user account database. This is a major vulnerability in the application.
+
+   .. image:: images/sqli-1.png
+      :align: left
+
+
+Recall that **Service Chain 1** contained only the IPS service, which isn't sufficient to protect against this type of attack.
+
+
+Attack Juiceshop Application #2 (jsapp2.f5labs.com)
+--------------------------------------------------------------------------------
+
+You will now perform a SQL Injection attack to test the inspection services associated with **jsapp2**.
+
+#. Launch the Firefox browser and browse to the following URL:
+
+   .. code-block:: text
+
+      https://jsapp2.f5labs.com/rest/products/search?q=qwert')) UNION SELECT id, email, password, '4', '5', '6', '7', '8', '9' FROM Users--
+
+   |
+
+   Recall that **Service Chain 2** contained both the **FireEye** and **F5 Advanced WAF** inspection services. This time, the attack was blocked by the WAF policy.
+
+   .. image:: images/sqli-2.png
+      :align: left
+
+
+#. In the BIG-IP TMUI, navigate to **Security > Event Logs** to view the WAF violation details.
+
+   .. image:: images/sqli-3.png
+      :align: left
 
