@@ -1,100 +1,22 @@
-Pre-requisite Configuration
+Inbound Gateway Scenario
 ================================================================================
 
-Before you can create the SSL Orchestrator topology for this module, you must meet some pre-requisites.
+**Challenge**
 
+In previous **inbound** SSL Orchestrator deployments, you used the **Existing Application** topology to attach SSL Orchestrator
+security policies and services to an existing application (LTM virtual server) that resided on the same BIG-IP instance.
+However, that method required you to add the SSL Orchestrator module to an existing BIG-IP that was already be handling
+a lot of workloads. To avoid the risk of performance issues due to high resource utilization, your manager has asked for
+an alternative implementation that decouples SSL Orchestrator functionality from the LTM application delivery functionality.
 
-Create an F5 Advanced WAF Policy
---------------------------------------------------------------------------------
+|
 
-Since you will be using the on-box WAF module as an inspection service, you will need to create a WAF policy that can be selected during the SSL Orchestrator **Services** configuration step.
+**Solution**
 
-#. Let's first get logged into the BIG-IP UI. From the **Deployment** tab in the UDF console, select **ACCESS > TMUI** for the **BIG-IP SSLO** resource (*Components > SSL Orchestrator > ACCESS > TMUI*). A new tab will open and present the BIG-IP login screen.
+The **L3 Inbound - Gateway Mode** topology allows SSL Orchestrator to be implemented as a router in front of your existing
+BIG-IP ADC deployment. This allows the backend application delivery solution to be separately managed by, potentially,
+a different team than the SSL Orchestrator (network/applications vs security roles). The SSL Orchestrator would still
+have the ability to apply different inspection services to each application based on security policy rules.
 
-#. Log in as ``admin`` with password ``admin``.
-
-   .. image:: images/tmui-login.png
-      :align: left
-
-
-#. In the left panel menu, click on on **Security** to see the available options.
-
-#. Navigate to **Application Security > Security Policies** to view the Policies List.
-
-#. Click on the **Create** button to see the policy configuration options.
-
-#. Create a violation rating-based WAF policy:
-
-   - Enter ``rating_waf_policy`` in the **Policy Name** field.
-
-   - Click on the **Policy Template** drop-down menu and select **Rating Based Policy**.
-
-   .. image:: images/waf-policy-create-1.png
-      :align: left
-
-   - Click on **OK** to accept the template change warning.
-
-
-   - Notice that the **Enforcement Mode** is set to **Blocking**.
-
-   - Click on the **Save** button at the top of the form and wait for the policy to be created.
-
-
-You will see the Policy List as follows:
-
-.. image:: images/waf-policy-create-3.png
-   :align: left
-
-
-
-Configure the Pre-requisite Dependencies for SSL Orchestrator
---------------------------------------------------------------------------------
-
-The base network configurations has been pre-configured on the BIG-IP. However, the settings for **NTP** and **Default Route** are missing.
-
-#. In the left panel menu, click on **SSL Orchestrator** to see the available options.
-
-#. Click on **Configuration** to initialize the **SSL Orchestrator Guided Configuration UI**.
-
-#. Review the **Required Configuration** section on the right side of the screen. Note that there are some dependences that have not been met.
-
-   .. image:: images/config-intro-1.png
-      :align: left
-
-#. To define the NTP server configuration:
-
-   - Click on **Click to configure** beside **NTP** to edit the settings. A new browser tab will open.
-
-   - Enter ``pool.ntp.org`` in the **Address** field.
-
-   - Click on the **Add** button and then click on the **Update** button.
-
-   .. image:: images/config-ntp.png
-      :align: left
-
-   - Close this browser tab to return to the SSL Orchestrator **Configuration** screen.
-
-#. To define a default route for SSL Orchestrator access the Internet:
-
-   - Click on **Click to configure** beside **Route** to edit the settings. A new browser tab will open.
-
-   - Enter ``default`` in the **Name** field.
-
-   - Enter ``0.0.0.0`` in the **Destination** field.
-
-   - Enter ``0.0.0.0`` in the **Netmask** field.
-
-   - Enter ``10.1.60.1`` in the **Gateway Address** field.
-
-   .. image:: images/config-route.png
-      :align: left
-
-   - Click on the **Finished** button to save the new route.
-
-   - Close this browser tab to return to the SSL Orchestrator **Configuration** screen.
-
-
-You should now see that the NTP and Route configuration requirements are satisfied.
-
-.. image:: images/config-intro-2.png
+.. image:: images/inbound-gateway-mode.png
    :align: left

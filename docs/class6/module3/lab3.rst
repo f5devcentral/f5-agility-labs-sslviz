@@ -1,56 +1,213 @@
-Verify Outbound Topology Functionality
+Deploy a Basic L3 Outbound Proxy Topology
 ================================================================================
 
-Route Client Traffic via BIG-IP SSL Orchestrator
---------------------------------------------------------------------------------
-
-In order to route outbound traffic through the BIG-IP SSL Orchestrator, you will need to change the default gateway on the **Ubuntu-Client** machine.
-
-#. Return to the **Ubuntu-Client** WEBRDP session.
-
-#. Click on the **Terminal** icon at the bottom of the screen to open a new Terminal shell session.
-
-   .. image:: ./images/ubuntu-route-1.png
-      :align: left
-
-
-#. Enter ``sudo ip route change default via 10.1.10.7`` to change the default route.
-
-#. When prompted, enter ``agility`` as the password.
-
-#. Enter ``ip route`` to verify that the default route has changed.
-
-   .. image:: ./images/ubuntu-route-2.png
-      :align: left
-
-#. Close the **Terminal** window.
+In this section, you will create a basic SSL Orchestrator **Topology** to verify that outbound client traffic is being intercepted before enabling the **user coaching** function.
 
 |
 
-Test Internet Access
+Create Topology
 --------------------------------------------------------------------------------
 
-#. Close the **Firefox** browser window and restart the application.
+#. In the **SSL Orchestrator UI**, click on the **Topologies** tab.
 
-#. Navigate to https://www.f5.com.
-
-   .. Important::
-
-      Do not continue if you cannot browse the Internet from the Ubuntu-Client machine. If you are not able to resolve this on your own, reach out to the lab instructor/assistants to help troubleshoot.
-
-#. Hover the mouse pointer over the padlock icon on the address bar and verify that it displays **Verified by: f5labs.com**. This confirms that SSL Orchestrator is perforning TLS interception (decrypt & inspect) for outbound traffic. The TLS certificate for https://www.f5.com was forged by the subrsa CA certificate, which is trusted by the client machine.
-
-   .. image:: ./images/l3outbound-test-1.png
+   .. image:: ./images/l3outbound.png
       :align: left
 
 
-#. Now, test a generative AI web site. Navigate to https://chatgpt.com and verify that it is accessible without any restrictions.
+#. Click on the **Add** button to start creating a new Topology.
+
+#. Scroll to the bottom of the **Configuration** introduction page and click on the **Next** button to start creating a new Topology.
+
+#. Enter ``l3_outbound`` as the topology name.
+
+#. Select the **L3 Outbound** topology type.
+
+   .. image:: ./images/l3outbound-create.png
+      :align: left
+
+#. Scroll down to the bottom of the page and click on the **Save & Next** button to proceed to the next step in the configuration workflow.
+
+|
+
+Create SSL Configuration
+--------------------------------------------------------------------------------
+
+On the **SSL Configurations** page, create the **Client-side SSL** profile for the L3 outbound (transparent) forward proxy.
+
+
+#. In the **Name** field, leave the default value as ``l3_outbound``.
+
+#. In the **Certificate Key Chain** section, leave the default settings as is (default certificate and key).
+
+   |
+
+   .. important::
+
+      Since this is an outbound forward proxy deployment, the SSL Orchestrator will be using a subordinate CA certificate and private key to sign the re-issued ('forged') certificates delivered to clients for outbound traffic. This is configured in the **CA Certificate Key Chains** section, **not** the **Certificate Key Chains** section.
+
+   |
 
    .. note::
 
-      You will test this again after enabling the **user coaching** functionality.
+      When using subordinate CA certificates, both the subordinate and root CA certificates must be imported into the client's browser certificate store. The Ubuntu-Client machine in the lab environment trusts has these already installed.
+
+   |
+
+#. In the **CA Certificate Key Chain** section, click on the **Edit** (pencil) icon.
+
+#. In the **Certificate** drop-down list, select **subrsa.f5labs.com** to replace the default value.
+
+#. In the **Key** drop-down list, select **subrsa.f5labs.com** to replace the default value.
+
+#. Click on the **Done** button to apply the config change.
+
+   .. image:: ./images/l3outbound-ssl.png
+      :align: left
+
+
+#. Leave the default **Server-side SSL** settings.
+
+#. Click on the **Save & Next** button to proceed to the next step in the configuration workflow.
 
 |
 
+User Authentication
+--------------------------------------------------------------------------------
 
-This completes the basic L3 Outbound Topology configuration.
+No user authentication will be enabled at this time.
+
+#. Click on the **Save & Next** button to proceed to the next step in the configuration workflow.
+
+|
+
+Create Services
+--------------------------------------------------------------------------------
+
+There are 3 Inspection Services. The **ssloS_FEYE** and **ssloS_F5_AWAF** services were created in the previous lab module. Recall that the **ssloS_F5_UC** service was created by the **SSLO User Coaching** script.
+
+   .. image:: ./images/l3outbound-services.png
+      :align: left
+
+No additional services need to be created at this time.
+
+#. Scroll down to the bottom of the page and click on the **Save & Next** button to proceed to the next step in the configuration workflow.
+
+|
+
+Create Service Chains
+--------------------------------------------------------------------------------
+
+There are 2 Service Chains: **ssloSC_service_chain_1** and **ssloSC_service_chain_2**. These were created in the previous lab module.
+
+   .. image:: ./images/l3outbound-chain.png
+      :align: left
+
+No additional Service Chains need to be created at this time.
+
+#. Scroll down to the bottom of the page and click on the **Save & Next** button to proceed to the next step in the configuration workflow.
+
+|
+
+Create Security Policy
+--------------------------------------------------------------------------------
+
+The **Security Policy** contains 2 default rules: **Pinners_Rule** and **All Traffic**.
+
+   .. image:: ./images/l3outbound-policy-1.png
+      :align: left
+
+#. Click on the **Edit** (pencil) icon for the **All Traffic** rule.
+
+#. Set **Service Chain** to **ssloSC_service_chain_1**. Recall that this Service Chain contains only the **ssloS_FEYE** service.
+
+   .. image:: ./images/l3outbound-policy-2.png
+      :align: left
+
+
+#. Click on the **OK** button to exit edit mode.
+
+
+   Your **Security Policy** rules should now look like the following:
+
+   .. image:: ./images/l3outbound-policy-3.png
+      :align: left
+
+
+#. Click on the **Save & Next** button to continue.
+
+|
+
+Create Interception Rule
+--------------------------------------------------------------------------------
+
+The **Interception Rule** determines which traffic to process. For an L3 Outbound topology, you will accept traffic for all destinations and ports.
+
+#. Leave the default **Destination Address/mask** value as ``0.0.0.0%0/0``.
+
+#. Leave the default **Port** as ``0``.
+
+#. In the **Ingress Network** section, select the **client-vlan** VLAN.
+
+   .. image:: ./images/l3outbound-int-1.png
+      :align: left
+
+
+#. Leave the default values for the remaining sections:
+
+   - **Protocol Settings**
+   - **Security Policy Settings**
+   - **Authentication**
+   - **L7 Interception Rules**
+
+   |
+
+   .. image:: ./images/l3outbound-int-2.png
+      :align: left
+
+
+#. Click on the **Save & Next** button to continue.
+
+|
+
+Create Egress Settings
+--------------------------------------------------------------------------------
+
+You will use SNAT all egress traffic and use the default route as a gateway.
+
+#. In the **Manage SNAT Settings** drop-down list, select **Auto Map**.
+
+#. Leave the default **Gateways** setting.
+
+   .. image:: ./images/l3outbound-egress.png
+      :align: left
+
+#. Click on the **Save & Next** button to continue.
+
+|
+
+Create Log Settings
+--------------------------------------------------------------------------------
+
+#. Leave the default log settings.
+
+   .. image:: ./images/l3outbound-log.png
+      :align: left
+
+
+#. Click on the **Save & Next** button to continue.
+
+|
+
+Deploy Topology
+--------------------------------------------------------------------------------
+
+#. Click on the **Deploy** button to create the new topology configuration.
+
+   .. image:: ./images/l3outbound-deploy-1.png
+      :align: left
+
+#. When the deployment has completed, click on the **OK** button to close the dialog box and return to the **Topologies** list.
+
+   .. image:: ./images/l3outbound-deploy-2.png
+      :align: left
+
