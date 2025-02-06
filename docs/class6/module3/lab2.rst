@@ -83,14 +83,6 @@ Verify Object Creation
       :align: left
 
 
-#. Click on the **user-coaching-rule** iRule to view it.
-
-#. Notice that the **CATEGORIES** variable determines which URL categories to enforce user coaching on.
-
-   .. image:: images/uc-install-verify-1b.png
-      :align: left
-
-
 #. Click on the **iFile List** tab and verify that the **user-coaching-html** iFile is present.
 
    .. image:: images/uc-install-verify-2.png

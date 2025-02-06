@@ -120,6 +120,28 @@ The final step is to update the **Security Policy** to use the new **Service Cha
 
 |
 
+Trigger Conditions for User Coaching
+--------------------------------------------------------------------------------
+
+The presentation of the user coaching prompt is determined by a URL category match. The category list is defined in the **user-coaching-rule** iRule.
+
+#. Navigate to **Local Traffic > iRules** and verify that the following iRules are present.
+
+#. Click on the **user-coaching-rule** iRule to view it.
+
+#. Notice that the **CATEGORIES** variable defines an array of URL categories.
+
+   .. image:: images/user-coaching-trigger.png
+      :align: left
+
+   |
+
+   .. note::
+
+      Per the iRule comments, you can query the URL Category Database to determine the category names to use here. Do not change anything at this time.
+
+|
+
 Test User Coaching
 --------------------------------------------------------------------------------
 
