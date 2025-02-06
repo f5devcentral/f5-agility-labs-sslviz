@@ -83,13 +83,21 @@ Verify Object Creation
       :align: left
 
 
+#. Click on the **user-coaching-rule** iRule to view it.
+
+#. Notice that the **CATEGORIES** variable determines which URL categories to enforce user coaching on.
+
+   .. image:: images/uc-install-verify-1b.png
+      :align: left
+
+
 #. Click on the **iFile List** tab and verify that the **user-coaching-html** iFile is present.
 
    .. image:: images/uc-install-verify-2.png
       :align: left
 
 
-#. Navigate to **SSL Orchestrator > Configuration** to see the **Topologies** tab. You should see the **ssloS_F5_UC** Inspection Service (along with the others that you previously deployed) in the diagram above.
+#. Navigate to **SSL Orchestrator > Configuration**. In the diagram, you should see the **ssloS_F5_UC** Inspection Service icon (along with the others that you previously deployed).
 
 #. Click on the **Services** tab and verify that the **ssloS_F5_UC** Inspection Service is present.
 
