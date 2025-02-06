@@ -77,7 +77,7 @@ Create a new service chain that contains the user coaching service.
 Update the Security Policy
 --------------------------------------------------------------------------------
 
-The final step is to add a rule to the **Security Policy** that references the new **Service Chain**.
+The final step is to update the **Security Policy** to use the new **Service Chain**.
 
 #. Click on the **Security Policies** tab to view the list of policies.
 
@@ -86,18 +86,8 @@ The final step is to add a rule to the **Security Policy** that references the n
    .. image:: ./images/user-coaching-8.png
       :align: left
 
+#. Click on the **Edit** (pencil) icon for the **All Traffic** rule.
 
-#. Click on the **Add** button on the right side of the page to create a new rule.
-
-#. Enter ``user_coaching`` in the rule **Name** field.
-
-#. Select the **Category Lookup (SNI)** condition.
-
-#. Enter ``gen`` in the category field to filter the category options. Select each of the following URL categories (one at a time):
-
-   - **Generative AI - Conversation**
-   - **Generative AI - Multimedia**
-   - **Generative AI - Text & Code**
 
    .. image:: ./images/user-coaching-9.png
       :align: left
@@ -127,6 +117,28 @@ The final step is to add a rule to the **Security Policy** that references the n
 
 #. When the deployment has completed, click on the **OK** button to close the dialog box and return to the **Topologies** list.
 
+
+|
+
+Trigger Conditions for User Coaching
+--------------------------------------------------------------------------------
+
+The presentation of the user coaching prompt is determined by a URL category match. The category list is defined in the **user-coaching-rule** iRule.
+
+#. Navigate to **Local Traffic > iRules** and verify that the following iRules are present.
+
+#. Click on the **user-coaching-rule** iRule to view it.
+
+#. Notice that the **CATEGORIES** variable defines an array of URL categories.
+
+   .. image:: images/user-coaching-trigger.png
+      :align: left
+
+   |
+
+   .. note::
+
+      Per the iRule comments, you can query the URL Category Database to determine the category names to use here. Do not change anything at this time.
 
 |
 
