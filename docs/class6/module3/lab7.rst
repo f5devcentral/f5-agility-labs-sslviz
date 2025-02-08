@@ -5,5 +5,10 @@ Congratulations! You have achieved the security objective that your manager has 
 
 In this lab module, you completed the following tasks:
 
-- Created an **L3 Outbound** (transparent forward proxy) topology deployment with **user coaching** functionality to inform users when they are attempting to connect to a risky web site.
+- Created an **L3 Outbound** (transparent forward proxy) topology deployment with a **service extension** for **user coaching** to inform users when they are attempting to connect to a risky web site.
+
 - Customized the deployment to require user justification before permitting access to risky sites.
+
+|
+
+This is the end of this lab module.

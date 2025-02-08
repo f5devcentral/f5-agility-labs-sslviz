@@ -1,7 +1,7 @@
 Testing the Deployment
 ================================================================================
 
-You will now test the SSL Orchestrator Topology and perfom an attack against the applications to see the difference in behavior between the two Service Chains.
+You will now test the SSL Orchestrator Topology and perform an attack against the applications to see the difference in behavior between the two Service Chains.
 
 
 Access the Ubuntu-client Desktop

@@ -1,7 +1,7 @@
 Implement User Coaching
 ==============================================================================
 
-You will now enable and test the **user coaching** functionlity. This will produce a prompt in the web browser when a user attempts to connect to a *risky* web site.
+You will now enable and test the **user coaching** functionality. This will produce a prompt in the web browser when a user attempts to connect to a *risky* web site.
 
 
 

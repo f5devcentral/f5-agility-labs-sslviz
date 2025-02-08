@@ -10,7 +10,7 @@ Lab Environment Details
 Network Diagram
 --------------------------------------------------------------------------------
 
-Here is a visual representation of the virtual lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers and VLAN tags (if applicable). The colored boxes to the right of the services respresent some product examples for each respective service type.
+Here is a visual representation of the virtual lab environment. The numbers inside the right edge of the SSL Orchestrator box indicate the port numbers and VLAN tags (if applicable). The colored boxes to the right of the services represent some product examples for each respective service type.
 
 The first interface is connected to the client-facing VLAN. The last interface is connected to the Internet-facing VLAN. One of the tagged interfaces connects to the application server VLAN. The remaining interfaces are connected to various types of security services: L2, L3, HTTP, ICAP, and passive Tap. The SSL Orchestrator management interface is not shown.
 
@@ -50,7 +50,7 @@ this lab guide with your own environment, please ensure that you create these ob
    to facilitate using any name under the "*f5labs.com*"
    sub-domain. 
 
-   Invidual server certificates are also included for the following applications: jsapp1.f5labs.com, jsapp2.f5labs.com, gwapp1.f5labs.com, gwapp2.f5labs.com, and gwapp3.f5labs.com.
+   Individual server certificates are also included for the following applications: jsapp1.f5labs.com, jsapp2.f5labs.com, gwapp1.f5labs.com, gwapp2.f5labs.com, and gwapp3.f5labs.com.
 
 |
 

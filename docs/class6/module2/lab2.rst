@@ -17,7 +17,7 @@ Since you will be using the on-box WAF module as an inspection service, you will
       :align: left
 
 
-#. In the left panel menu, click on on **Security** to see the available options.
+#. In the left panel menu, click on **Security** to see the available options.
 
 #. Navigate to **Application Security > Security Policies** to view the Policies List.
 
@@ -56,7 +56,7 @@ You will see the Policy List as follows:
 Configure the Pre-requisite Dependencies for SSL Orchestrator
 --------------------------------------------------------------------------------
 
-The base network configurations has been pre-configured on the BIG-IP. However, the settings for **NTP** and **Default Route** are missing.
+The base network configurations have been pre-configured on the BIG-IP. However, the settings for **NTP** and **Default Route** are missing.
 
 #. In the left panel menu, click on **SSL Orchestrator** to see the available options.
 
@@ -80,7 +80,7 @@ The base network configurations has been pre-configured on the BIG-IP. However, 
 
    - Close this browser tab to return to the SSL Orchestrator **Configuration** screen.
 
-#. To define a default route for SSL Orchestrator access the Internet:
+#. To define a default route for SSL Orchestrator to access the Internet:
 
    - Click on **Click to configure** beside **Route** to edit the settings. A new browser tab will open.
 
