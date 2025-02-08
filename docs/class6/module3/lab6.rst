@@ -14,7 +14,7 @@ Modify User Coaching iRule
    .. image:: ./images/user-justification-1.png
       :align: left
 
-#. Notice that the coaching message text is defined as a variable called **COACHING_MESSAGE**. This allows you to customize the message based on your organziation's policies. Do not change it at this time.
+#. Notice that the coaching message text is defined as a variable called **COACHING_MESSAGE**. This allows you to customize the message based on your organization's policies. Do not change it at this time.
 
    .. image:: ./images/user-justification-2.png
       :align: left

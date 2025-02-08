@@ -38,7 +38,7 @@ Test Internet Access
 
       Do not continue if you cannot browse the Internet from the Ubuntu-Client machine. If you are not able to resolve this on your own, reach out to the lab instructor/assistants to help troubleshoot.
 
-#. Hover the mouse pointer over the padlock icon on the address bar and verify that it displays **Verified by: f5labs.com**. This confirms that SSL Orchestrator is perforning TLS interception (decrypt & inspect) for outbound traffic. The TLS certificate for https://www.f5.com was forged by the subrsa CA certificate, which is trusted by the client machine.
+#. Hover the mouse pointer over the padlock icon on the address bar and verify that it displays **Verified by: f5labs.com**. This confirms that SSL Orchestrator is performing TLS interception (decrypt & inspect) for outbound traffic. The TLS certificate for https://www.f5.com was forged by the subrsa CA certificate, which is trusted by the client machine.
 
    .. image:: ./images/l3outbound-test-1.png
       :align: left

@@ -8,8 +8,8 @@ If you are not familiar with the process for joining an F5 UDF-based training co
 
 #. You should have received a course registration email that contains the **UDF Course link**. Click on the link and log into the UDF student portal.
 
-.. important::
-   If MFA is not configured for your account, you will be asked to set it up before proceeding.
+   .. important::
+      If MFA is not configured for your account, you will be asked to set it up before proceeding.
 
 
 #. Click on the **JOIN** button to enter the lab session. You will see 3 tabs: **Overview**, **Documentation**, and **Deployment**. The **Overview** tab will be shown.
@@ -33,7 +33,7 @@ If you are not familiar with the process for joining an F5 UDF-based training co
 
    .. note::
 
-      It takes about 10 minutes for the lab resources to be provisioned and start up. Please wait until you see the green triangle beside all of the resources.
+      It takes about 10 minutes for the lab resources to be provisioned and start up. Please wait until you see the green indicator beside all of the resources.
 
    |
 
@@ -44,17 +44,19 @@ If you are not familiar with the process for joining an F5 UDF-based training co
       * - Virtual Machines
         - Access Methods Used In this Lab
       * - BIG-IP SSL Orchestrator
-        - TMUI, WEB SHELL
-      * - Ubuntu-Server
-        - WEB SHELL,
+        - WEB SHELL - Browser-based SSH session
 
-          WEBRDP (to *Ubuntu-Client* desktop)
+          TMUI - Browser-based GUI session
+      * - Ubuntu-Server
+        - WEB SHELL - Browser-based SSH session
+
+          WEBRDP - Browser-based RDP to **Ubuntu-Client** Desktop
       * - Ubuntu-Client
-        - WEB SHELL
+        - WEB SHELL - Browser-based SSH session
 
    |
 
-   To access a lab VM, click on the **ACCESS** link to view the remote access methods. Then, click on the desired option. Here is an example:
+   To access a lab VM, click on the **ACCESS** link to view the remote access methods and then click on the desired option. Here is an example:
 
    .. image:: ./images/udf-access-1.png
       :align: left
@@ -63,7 +65,7 @@ If you are not familiar with the process for joining an F5 UDF-based training co
 
  .. note::
 
-    You will only need your local web browser to access the lab resources. Browser-based Remote Desktop Access to the **Ubuntu-Client** is provided via the Guacamole service (**WEBRDP** access link) that runs on the **Ubuntu-Server** instance.
+    You will only need your local web browser to access the lab resources. Browser-based Remote Desktop access to the **Ubuntu-Client** is provided via the Guacamole service (**WEBRDP** access link) that runs on the **Ubuntu-Server** instance.
 
     .. image:: ./images/udf-access-2.png
        :align: left

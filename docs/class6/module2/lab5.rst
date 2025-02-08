@@ -22,7 +22,7 @@ In this lab module, you completed the following tasks:
    This lab features the **OWASP Juice Shop**: a modern insecure web application designed to demonstrate common security vulnerabilities that can easily be exploited. Read more about it here:  `OWASP Juice Shop <https://owasp.org/www-project-juice-shop/>`_.
 
 
-
+|
 
 This is the end of this lab module.
 

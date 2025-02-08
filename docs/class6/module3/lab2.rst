@@ -8,10 +8,10 @@ User Coaching Script
 
 The script creates the following objects:
 
-   - Inspection Service - faciliates the user coaching functionality for decrypted outbound SSO Orchestrator flows.
-   - iFile - contains the user coaching form HTML template
-   - User coaching iRule - injects the user coaching prompt and justificiation input form.
-   - TLS fingerprinting iRule - determines if a user has already completed the user coaching flow for risk web sites.
+   - Inspection Service - facilitates the user coaching functionality for decrypted outbound SSL Orchestrator flows.
+   - iFile - contains the user coaching form HTML template.
+   - User coaching iRule - injects the user coaching prompt and optional justification input requirement, as well as logging.
+   - TLS fingerprinting iRule - determines if a user has already completed the user coaching flow.
 
 
 Download the Installation Script

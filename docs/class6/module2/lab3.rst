@@ -450,7 +450,7 @@ Update the Interception Rule
 
 Now, you need to add the second **SSL Configuration** to the **Interception Rule**.
 
-#. Click on the **Interception Rule** tab.
+#. Click on the **Interception Rules** tab.
 
    .. image:: ./images/ibgw-int-a.png
       :align: left
