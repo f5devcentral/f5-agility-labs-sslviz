@@ -6,7 +6,7 @@ Route Client Traffic via BIG-IP SSL Orchestrator
 
 In order to route outbound traffic through the BIG-IP SSL Orchestrator, you will need to change the default gateway on the **Ubuntu-Client** machine.
 
-#. Return to the **Ubuntu-Client** WEBRDP session.
+#. Return to the **Ubuntu-Client** RDP tab (originally launched from the **Ubuntu-Server > WEBRDP** link).
 
 #. Click on the **Terminal** icon at the bottom of the screen to open a new Terminal shell session.
 
