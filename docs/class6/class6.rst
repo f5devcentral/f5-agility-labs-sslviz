@@ -19,9 +19,9 @@ In this lab, you will learn how to:
 
 - Deploy an **inbound gateway mode** (reverse-proxy) Topology to perform TLS inspection for multiple backend applications
 - Implement an **L3 outbound** (transparent forward proxy) Topology with user confirmation for suspicious destinations
-- Automate SSL Orchestrator configuration changes using Ansible
 
-Expected time to complete: **2 hours**
+
+Expected time to complete: **90 minutes** (excluding lab instructor presentations)
 
 Pre-requisite: Basic familiarity with SSL Orchestrator is recommended, but not required.
 
