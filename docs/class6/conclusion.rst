@@ -34,8 +34,8 @@ Contributors
 
 This lab and related content wouldn't exist without the dedication of the following individuals:
 
-- Kevin Stewart
 - Jason Chiu
+- Kevin Stewart
 - Countless lab testers
 
 
