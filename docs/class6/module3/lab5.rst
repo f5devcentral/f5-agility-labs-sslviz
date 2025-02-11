@@ -129,7 +129,7 @@ The presentation of the user coaching prompt is determined by a URL category mat
 
 #. Click on the **user-coaching-rule** iRule to view it.
 
-#. Notice that the **CATEGORIES** variable defines an array of URL categories.
+#. Notice that the **COACHING_CATEGORIES** variable defines an array of URL categories.
 
    .. image:: images/user-coaching-trigger.png
       :align: left
