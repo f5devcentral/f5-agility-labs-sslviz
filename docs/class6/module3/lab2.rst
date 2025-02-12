@@ -4,14 +4,15 @@ Deploy User Coaching Objects
 User Coaching Script
 --------------------------------------------------------------------------------
 
-**User coaching** functionality is an extension to SSL Orchestrator. An **SSLO User Coaching** script automates the creation of the configuration objects needed to enable this functionality.
+**User coaching** functionality is a Service Extension for SSL Orchestrator. An installation script automates the creation of the configuration objects needed to implement this functionality.
 
 The script creates the following objects:
 
-   - Inspection Service - facilitates the user coaching functionality for decrypted outbound SSL Orchestrator flows.
-   - iFile - contains the user coaching form HTML template.
-   - User coaching iRule - injects the user coaching prompt and optional justification input requirement, as well as logging.
+   - F5_UC Inspection Service - the user coaching Service Extension to interact with decrypted traffic flows.
+   - User coaching iRule - injects the user blocking and coaching prompts, as well as optional logging.
    - TLS fingerprinting iRule - determines if a user has already completed the user coaching flow.
+   - user-coaching-html iFile - contains the user coaching HTML template.
+   - user-blocking-html iFile - contains the user blocking HTML template
 
 
 Download the Installation Script
@@ -29,7 +30,7 @@ Download the Installation Script
 
       cd /tmp
 
-      curl -sk https://raw.githubusercontent.com/kevingstewart/sslo-user-coaching/refs/heads/main/user-coaching-installer.sh -o user-coaching-installer.sh
+      curl -sk https://raw.githubusercontent.com/f5devcentral/sslo-service-extensions/refs/heads/main/user-coaching/user-coaching-installer.sh -o user-coaching-installer.sh
 
 
    .. tip::
@@ -83,7 +84,7 @@ Verify Object Creation
       :align: left
 
 
-#. Click on the **iFile List** tab and verify that the **user-coaching-html** iFile is present.
+#. Click on the **iFile List** tab and verify that the **user-coaching-html** and **user-blocking-html** iFiles are present.
 
    .. image:: images/uc-install-verify-2.png
       :align: left

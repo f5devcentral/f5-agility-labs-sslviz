@@ -21,7 +21,7 @@ Access the Ubuntu-client Desktop
    .. image:: images/webrdp-login-1.png
       :align: left
 
-#. If you are prompted for permission to copy/paste, you should allow it to make it easier to perform later lab steps.
+#. The first time that you connect to the desktop, you will be prompted for permission to **"See text and images copied to the clipboard"**. Click on the **Allow** button to close the dialog box.
 
 
 You should now see the desktop of the **Client** machine.
