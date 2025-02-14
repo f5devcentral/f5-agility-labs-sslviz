@@ -51,7 +51,7 @@ You will now perform a SQL Injection (SQLi) attack to test the inspection servic
 #. If you see a TLS security warning, accept it and continue. The lab's private Certificate Authority certificate might not be installed in **Firefox**.
 
 
-You should see that the attack reached the application server and returned unauthorized data from user account database. This is a major vulnerability in the application.
+You should see that the attack reached the application server and returned unauthorized data from the user account database. This is a major vulnerability in the application.
 
    .. image:: images/sqli-1.png
       :align: left
