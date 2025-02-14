@@ -1,11 +1,14 @@
 Module Completion
 ================================================================================
 
+Congratulations! You now have a more robust architecture by decoupling the SSL visibility/orchestration functions from the application delivery/LB functions. The Security team can now fully manage the SSL Orchestrator platform configuration and software lifecycle without impacting the application delivery platform implementation.
+
+
 In this lab module, you completed the following tasks:
 
 - Created an on-box F5 Advanced WAF policy using a violation rating-based template.
 - Created an **Inbound Gateway** Topology deployment.
-- Created an on-box F5 WAF Inspection Services.
+- Created an on-box F5 WAF Inspection Service.
 - Create two service chains: (1) FireEye service only and (2) FireEye and F5 WAF services.
 - Created Security Policy with rules for two backend application instances (jsapp1 and jsapp2).
 - Created SSL profiles with unique client-side TLS certificates for each application to support SNI-based certificate association.
