@@ -48,8 +48,8 @@ rst_prolog = """
 .. |ve|  replace:: Virtual Edition
 .. |icr| replace:: iControl REST API
 .. |ics| replace:: iControl SOAP API
-.. |f5|  replace:: F5 Networks
-.. |f5i| replace:: F5 Networks, Inc.
+.. |f5|  replace:: F5
+.. |f5i| replace:: F5, Inc.
 .. |year| replace:: %s
 .. |github_repo| replace:: %s
 """ % (classname,
@@ -171,8 +171,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = classname
-copyright = '2019-2024, F5 Networks, Inc.'
-author = 'F5 Networks, Inc.'
+copyright = '2019-2025, F5, Inc.'
+author = 'F5, Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -207,7 +207,7 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-html4_writer = True
+#html4_writer = True
 html_theme = 'f5_sphinx_theme'
 html_theme_path = f5_sphinx_theme.get_html_theme_path()
 html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html']}
@@ -284,7 +284,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, '%s.tex' % cleanname, '%s Documentation' % classname,
-     'F5 Networks, Inc.', 'manual', True),
+     'F5, Inc.', 'manual', True),
 ]
 
 # -- Options for manual page output ---------------------------------------

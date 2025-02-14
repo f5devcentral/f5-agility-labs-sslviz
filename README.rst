@@ -5,6 +5,7 @@ This repository contains the source for the F5 SSL Orchestrator Training Lab Gui
 
 - SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2022 | 2 hours)
 - SSLO 201: Advanced Use Cases (Agility 2022 | 2 hours)
+- SSLO 202: More Use Cases with F5 BIG-IP SSL Orchestrator (AppWorld 2025 | 2 hours)
 - SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud (Agility 2022 | 2 hours)
 
 These labs cover the following topics:

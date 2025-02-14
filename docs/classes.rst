@@ -11,6 +11,7 @@ Latest Labs
    class1/class*
    class5/class*
    class2/class*
+   class6/class*
    class3/class*
    class4/class*
 

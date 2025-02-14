@@ -31,6 +31,7 @@ All lab guides can be accessed from the left-side navigation panel (click on the
    class1/class*
    class5/class*
    class2/class*
+   class6/class*
    class3/class*
    class4/class*
    archived
@@ -59,7 +60,7 @@ Bugs and Requests for enhancements are handled in two ways:
 |
 |
 
-(c) 2016-2024 F5, Inc. All rights reserved. F5, F5 Networks, and the F5
+(c) 2016-2025 F5, Inc. All rights reserved. F5, F5 Networks, and the F5
 logo are trademarks of F5, Inc. in the U.S. and in certain
 other countries. Other F5 trademarks are identified at f5.com.
 
