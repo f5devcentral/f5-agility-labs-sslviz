@@ -13,7 +13,7 @@ Access the Ubuntu-client Desktop
 
    .. note::
 
-      The **Guacamole** application is hosted on the **Server** machine, but creates an RDP connection to the **Client** machine.
+      The **Guacamole** application is hosted on the **Ubuntu-Server** machine, but creates an RDP connection to the desktop of the **Ubuntu-Client** machine.
 
 
 #. Log in as ``user`` with password ``user``.
@@ -45,7 +45,23 @@ You will now perform a SQL Injection (SQLi) attack to test the inspection servic
 
    .. tip::
 
-      Click the **copy** icon in the URL text box above and paste it into the Ubuntu-Client browser address bar.
+      Hover your mouse pointer over the above text box to reveal the **copy** icon and then click on it. Now, paste it into the Firefox address bar.
+
+      The method used to **paste** will vary based on your local computer's operating system and target.
+
+      .. list-table::
+         :header-rows: 1
+         :widths: auto
+
+         * - Paste Into
+           - Windows
+           - MacOS
+         * - Firefox (WEBRDP)
+           - CTRL-V (or Right-Mouse-Click and then select **Paste**)
+           - CTRL-CMD-SHIFT to bring up Guacamole menu, select **Text Input**, and then CMD-V
+         * - WEB SHELL
+           - CTRL-SHIFT-V
+           - CMD-V
 
 
 #. If you see a TLS security warning, accept it and continue. The lab's private Certificate Authority certificate might not be installed in **Firefox**.

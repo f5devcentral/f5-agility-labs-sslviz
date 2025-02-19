@@ -392,7 +392,7 @@ The **WEBRDP** service leverages an instance of Guacamole running on the Ubuntu-
 
 |
 
-**Juiceshop Vulnerable Application (2 instances)**
+**Juice Shop Vulnerable Application (2 instances)**
 
 .. list-table::
    :header-rows: 0
@@ -401,7 +401,7 @@ The **WEBRDP** service leverages an instance of Guacamole running on the Ubuntu-
    * - **Description**
      - Ubuntu server host -- ens6.80
    * - **Services**
-     - NGINX app
+     - `OWASP Juice Shop <https://owasp.org/www-project-juice-shop/>`_ (running on NGINX): This is a modern insecure web application designed to demonstrate common security vulnerabilities that can easily be exploited.
    * - **Access**
      - $ ``docker exec -it nginx /bin/sh``
 
