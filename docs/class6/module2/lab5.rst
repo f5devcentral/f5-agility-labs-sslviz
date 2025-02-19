@@ -20,11 +20,6 @@ In this lab module, you completed the following tasks:
    For more information about **F5 Advanced WAF** policy creation, please check out our comprehensive WAF labs on `Clouddocs <https://clouddocs.f5.com/training/community/waf/html/>`_.
 
 
-.. note::
-   
-   This lab features the **OWASP Juice Shop**: a modern insecure web application designed to demonstrate common security vulnerabilities that can easily be exploited. Read more about it here:  `OWASP Juice Shop <https://owasp.org/www-project-juice-shop/>`_.
-
-
 |
 
 This is the end of this lab module.
