@@ -11,7 +11,7 @@ SSLO 202: More Use Cases with F5 BIG-IP SSL Orchestrator (AppWorld 2025 | 2 hour
 
 |
 
-SSL Orchestrator was built to protect your organization from encrypted threats. In previous labs, you learned how to deploy an **inbound application mode** (reverse-proxy) and **outbound explicit** (forward proxy) Topologies with security Inspection Services based on simple policies. Now, let's dive into some additional use-cases.
+SSL Orchestrator was built to protect your organization from encrypted threats. In previous labs, you learned how to deploy **inbound application mode** (reverse-proxy) and **outbound explicit** (forward proxy) Topologies with security Inspection Services based on simple policies. Now, let's dive into some additional use-cases.
 
 |
 
