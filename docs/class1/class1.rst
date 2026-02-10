@@ -1,11 +1,13 @@
-SSLO 101: Essential SSL Visibility with SSL Orchestrator (Agility 2022 | 2 hours)
+SSLO 101: Introduction to SSL Visibility with SSL Orchestrator (AppWorld 2026 | 2 hours)
 =========================================================================================
+
+|
 
 .. note::
 
-   **Requires UDF Blueprint: "Agility 2022 - SSL Orchestrator 101"**
+   This lab relies on UDF Blueprint: **AppWorld 2026 - SSL Orchestrator 101**
 
-   **BIG-IP 16.1 / SSL Orchestrator 9.2**
+   Developed and tested with **BIG-IP 21.0 / SSL Orchestrator 13.0**.
 
 |
 
@@ -26,9 +28,14 @@ security, and reduces infrastructure efficiencies by:
 
 - Supporting multiple deployment modes for flexibility in integrating with complex architectures
 
-Attend this lab to get a hands-on introduction to the F5 SSL Orchestrator solution.
+
+This lab offers a hands-on introduction to the F5 SSL Orchestrator solution.
+
 
 Expected time to complete: **2 hours**
+
+
+Pre-requisites: None.
 
 |
 
@@ -38,9 +45,6 @@ Expected time to complete: **2 hours**
    :maxdepth: 2
    :glob:
 
-   introduction
-   labinfo
    module*/module*
-   conclusion
-   appendix/appendix*
-
+   conclusion.rst
+   appendix/appendices.rst

@@ -1,5 +1,4 @@
-.. role:: red
-.. role:: bred
+
 
 Appendix 1 - Common Testing Commands
 ====================================
@@ -127,7 +126,7 @@ To verify that the URL DB is actively updating:
 External testing
 ----------------
 
-Enter the site's address into the SSLLabs.com server test site at :red:`https://www.ssllabs.com/ssltest/` to see if the site has any unusual SSL/TLS requirements.
+Enter the site's address into the SSLLabs.com server test site at `https://www.ssllabs.com/ssltest/` to see if the site has any unusual SSL/TLS requirements.
 
 General troubleshooting
 -----------------------
