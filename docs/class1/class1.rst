@@ -47,4 +47,4 @@ Pre-requisites: None.
 
    module*/module*
    conclusion.rst
-   appendix/appendices.rst
+   appendix/appendix*
