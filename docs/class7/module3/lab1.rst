@@ -1,5 +1,5 @@
-Using Advanced Blocking Pages
-=============================
+Using SSLO with DNS-over-HTTPS Guardian
+=======================================
 |
 
 Challenge

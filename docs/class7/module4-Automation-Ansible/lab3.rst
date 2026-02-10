@@ -12,17 +12,11 @@ The |GitHub| SSLO API Reference repository contains sets of example playbooks to
 
   - *inspection-service-inlinel2.yaml*: Deploys an Inline Layer 2 Inspection Service
   - |inline-l2-topology-link|: Inline Layer 2 Inspection Service Playbook
-
-- **Modify Existing Outbound Topology**
-
+  - This allows for a direct link to a wireshark inspection of live *decrypted* traffic through the proxy.  
 
 - **Delete** Utility
 
   - *utility-sslo-delete-all.yaml*: Delete all SSL Orchestrator configuration objects.
-
-- **Revoke license** Utility
-
-  - *utility-revoke-license.yaml*: Revoke BIG-IP license so that it can be re-used.
 
 
 .. |GitHub| raw:: html

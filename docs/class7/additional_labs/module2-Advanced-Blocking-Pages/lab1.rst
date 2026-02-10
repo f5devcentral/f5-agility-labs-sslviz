@@ -1,4 +1,4 @@
-Advanced Blocking Pages Scenario
+Addtional Lab 2: Advanced Blocking Pages Scenario
 ================================
 
 |
