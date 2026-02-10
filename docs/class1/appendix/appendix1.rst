@@ -1,6 +1,4 @@
-
-
-Appendix 1 - Common Testing Commands
+Common Testing Commands
 ====================================
 
 The following are some simple, but powerful commands that are useful in developing and troubleshooting SSL visibility projects.

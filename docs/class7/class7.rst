@@ -1,4 +1,4 @@
-SSLO Service Extensions: Plug, Play, Automate (AppWorld 2026 | 2 hours)
+SSLO 203: F5 BIG-IP SSL Orchestrator: Plug, play, automate (AppWorld 2026 | 2 hours)
 ===============================================================================================
 
 |
@@ -20,7 +20,7 @@ In this lab, you will learn how to:
 - Deploy an **L3 outbound** (transparent forward proxy) Topology as a base to build upon.
 - Implement user coaching for AI Chatbot sites (ChatGPT, Gemini, etc.)
 - Implement a Service to inspect, protect, and block DNS-over-HTTPS requests
-- Deploy additional SSLO Services using the Ansible Automation tool.  
+- Deploy additional SSL Orchestrator Services using the Ansible Automation tool.  
 
 
 Expected time to complete: **90 minutes** (excluding lab instructor presentations)
