@@ -30,8 +30,7 @@ Explore More SSL Orchestrator Labs
 
 To learn more about SSL Orchestrator, consider attending one of the other labs in this series:
 
-- `Essential SSL Visibility with SSL Orchestrator <https://github.com/f5devcentral/f5-agility-labs-sslviz/blob/develop/docs/class1/class1.rst>`_
-- `Advanced Use Cases with SSL Orchestrator <https://github.com/f5devcentral/f5-agility-labs-sslviz/blob/develop/docs/class2/class2.rst>`_
+- `All SSL Orchestrator Lab Guides <../classes.html>`_
 
 
 Contributors
