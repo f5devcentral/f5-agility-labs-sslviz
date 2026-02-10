@@ -7,5 +7,5 @@ The following Lab Guides apply to older/deprecated versions of F5 SSL Orchestrat
    :maxdepth: 1
    :glob:
 
-   archive*/archive*
+   archived/archive*/archive*
 
