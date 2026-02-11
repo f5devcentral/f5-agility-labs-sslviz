@@ -2,6 +2,7 @@ Implement User Coaching with Default Cookie Persistence Method
 ==============================================================================
 
 You will now enable and test the **user coaching** functionality. This will produce a prompt in the web browser when a user attempts to connect to a *risky AI* web site.
+With the cookie method, the user will be prompted on every new browser session since the persistence is based on cookies that expire when the browser is closed.  
 
 
 Add User Coaching Inspection Service to a Service Chain

@@ -22,10 +22,7 @@ Explore More SSL Orchestrator Labs
 
 To learn more about SSL Orchestrator, consider attending one of the other labs in this series:
 
-- `SSLO 201: Advanced Use Cases with SSL Orchestrator <../class2/class2.html>`_
-- `SSLO 202: More Use Cases with F5 BIG-IP SSL Orchestrator <../class6/class6.html>`_
-- `SSLO 203: F5 BIG-IP SSL Orchestrator: Plug, play, automate <../class7/class7.html>`_
-- `SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud <../class3/class3.html>`_
+- `All SSL Orchestrator Lab Guides <../classes.html>`_
 
 |
 
