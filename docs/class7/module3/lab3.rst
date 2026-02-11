@@ -83,7 +83,7 @@ Now that we have confirmed the DoH Guardian configuration objects were successfu
    .. image:: images/doh-service-chain-add.png
       :align: left
 
-#. Double click the **ssloS_F5_DoH** in the Services Available list to add it to the Selected Service Chain Order.
+#. Double click the **ssloS_F5_DoH** in the Services Available list to add it to the Selected Service Chain Order. 
 
    .. image:: images/doh-service-chain-add-1.png
       :align: left
@@ -117,7 +117,7 @@ Configure the Firefox browser in the Ubuntu-Client to use Google's DoH server
 
 #. After configuring, close and reopen **Firefox**.
 
-#. Take a moment to browse to any website to confirm that DNS isn't broken, and to generate some DoH requests for the logs we are about to review.
+#. Take a moment to browse to any website to confirm that DNS changes we made to the browser didn't break anything. Additionally, this generates DoH requests to the /var/log/ltm logs we are about to review.
 
 
 Test the DoH Guardian Service Extension logging functionality
