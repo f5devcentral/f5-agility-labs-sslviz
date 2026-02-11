@@ -29,6 +29,7 @@ The |GitHub| SSLO API Reference repository contains sets of example playbooks to
 - **Delete** Utility
 
   - *utility-sslo-delete-all.yaml*: Delete all SSL Orchestrator configuration objects.
+  - |delete all SSLO config|: Delete all SSL Orchestrator configuration objects Playbook
   - This is a Nuke and Pave option.
 
 
@@ -38,16 +39,20 @@ The |GitHub| SSLO API Reference repository contains sets of example playbooks to
 
 .. |outbound-l3-topology-link| raw:: html
 
-      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/applications/sslo-config-ssl-outbound.yaml" target="_blank"> Outbound Layer 3 Transparent Proxy Topology Playbook </a>
+      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/applications/sslo-config-ssl-outbound.yaml" target="_blank"> Outbound Layer 3 Transparent Proxy </a>
 
 .. |inline-l2-inspection-service-link| raw:: html
 
-      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/inspection-services/sslo-inspection-service-inlinel2.yaml" target="_blank"> Inline Layer 2 Inspection Service Playbook </a>
+      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/inspection-services/sslo-inspection-service-inlinel2.yaml" target="_blank"> Inline Layer 2 Inspection Service </a>
 
 .. |inline-l2-wireshark-link| raw:: html
 
-      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/inspection-services/sslo-inspection-service-tap.yaml" target="_blank"> Inline Layer 2 Wireshark TAP Service Playbook </a>
+      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/inspection-services/sslo-inspection-service-tap.yaml" target="_blank"> Inline TAP Wireshark Service </a>
 
 .. |swgaas-link| raw:: html
 
-      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/inspection-services/sslo-inspection-service-swg.yaml" target="_blank"> SWGaaS Service Playbook </a>
+      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/inspection-services/sslo-inspection-service-swg.yaml" target="_blank"> SWGaaS Service </a>
+
+.. |delete all SSLO config| raw:: html
+
+      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/utilities/sslo-delete-all.yaml" target="_blank"> Delete SSLO Playbook </a> 
