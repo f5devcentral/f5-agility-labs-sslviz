@@ -23,7 +23,7 @@ All lab guides can be accessed from the left-side navigation panel (click on the
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :hidden:
    :glob:
 
