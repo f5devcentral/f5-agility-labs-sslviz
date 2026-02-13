@@ -16,7 +16,7 @@ The |GitHub| SSLO API Reference repository contains sets of example playbooks to
 - **Inline Layer 2 FireEye NX**
 
   - Deploys an Inline Layer 2 Inspection Service
-  - |inline-l2-inspection-service-link|: Inline Layer 2 Inspection Service Playbook
+  - |inline-l2-inspection-service-link| - Inline Layer 2 Inspection Service Playbook
   - Inline Layer 2 - an inline L2 device does not have IP addresses and does not participate in routing. It is effectively no more than a physical presence on the wire. This is specifically for the FireEye service running on 
 
 |
@@ -24,7 +24,7 @@ The |GitHub| SSLO API Reference repository contains sets of example playbooks to
 - **Inline Layer 2 Wireshark TAP Service**
 
   - Deploys an Inline Layer 2 Wireshark TAP Service
-  - |inline-l2-wireshark-link|: Inline Layer 2 TAP Service Playbook
+  - |inline-l2-wireshark-link|- Inline Layer 2 TAP Service Playbook
   - This is a great option for testing and learning how to build your own custom inspection services. It is also a great option for troubleshooting and learning how to use the API.
 
 |
@@ -32,7 +32,7 @@ The |GitHub| SSLO API Reference repository contains sets of example playbooks to
 - **Secure Web Gateway as a Service (SWGaaS)**
 
   - Deploys an SWGaaS Service.
-  - |swgaas-link|: SWGaaS Service Playbook
+  - |swgaas-link| - SWGaaS Service Playbook
   - This playbook has dependencies on an existing Secure Web Gateway Per-Request Policy. This is provided within the Lab BIG-IP.  
 
 |
@@ -40,7 +40,7 @@ The |GitHub| SSLO API Reference repository contains sets of example playbooks to
 - **Delete** Utility
 
   - Deletes **all** SSL Orchestrator configuration objects.
-  - |delete all SSLO config|: Delete all SSL Orchestrator configuration objects Playbook
+  - |delete all SSLO config| - Delete all SSL Orchestrator configuration objects Playbook
   - This is a Nuke and Pave option.
 
 

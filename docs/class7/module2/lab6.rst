@@ -1,4 +1,4 @@
-OPTIONAL: Implement User Coaching with JA4 Persistence Method
+Implement User Coaching with JA4 Persistence Method
 ==============================================================================
 
 You will now enable and test the **user coaching** functionality using the JA4 persistence method. This will produce the same kind of prompt as with the Cookie persistence method, but the JA4 method will persist the user coaching acknowledgement based on the JA4 fingerprint of the client device. This means that the user coaching prompt will not be presented again for that device even across multiple browser sessions until the JA4 session expires (default 3600 seconds).

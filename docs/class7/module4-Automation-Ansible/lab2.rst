@@ -32,7 +32,7 @@ The complete F5 CloudDocs module list is here: |f5_bigip_link|
 |
 
 
-This lab uses modules from f5networks.f5_bigip collections.
+This lab uses modules from both f5networks.f5_modules and f5networks.f5_bigip collections.
 
 
 

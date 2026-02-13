@@ -17,18 +17,28 @@ Access the Ubuntu-Client WebRDP Session and open VScode
 
    .. image:: images/ubuntu-client-vscode-1.png
       :align: left
+
+   .. image:: images/vscode-readme.png
+      :align: left
+
 |
 
 Initialize the Ansible Environment
 ----------------------------------
 
-#. In the terminal pane of VScode, ensure you are in the proper working directory for the Ansible Playbooks:
+#. In the terminal pane of VScode, ensure you are in the proper working directory for the Ansible Playbooks **~/Documents/API/Ansible-Playbooks**. If you are not in the correct directory, use the following command to navigate to the Ansible Playbooks directory.
+
+   .. image:: images/vscode-correct-directory.png
+      :align: left
+
+   .. note:: If you are not in the correct directory, use the below command to navigate to the Ansible Playbooks directory.
 
    .. code-block:: text
 
-      cd ~/Desktop/Ansible-Playbooks
+      cd ~/Documents/API/Ansible-Playbooks
 
-#. Run the source command to initialize the Ansible environment and set the necessary environment variables:
+
+#. Run the source command to initialize the Ansible python environment and set the necessary environment variables:
 
    .. code-block:: text
 
@@ -43,9 +53,41 @@ Initialize the Ansible Environment
       export BIGUSER='admin'   
 
 
+#. After running the above commands, you should see the terminal prompt change to indicate that you are now in the Ansible virtual environment. You can now proceed to execute the Ansible Playbooks as needed for this module.
+
+   .. image:: images/ansible-venv-activated.png
+      :align: left
 
 
-Setup environment.  
+Explore Ansible Playbooks for F5 BIG-IP SSL Orchestrator
+-------------------------------------------------------------------------------
 
-Destroy current SSLO environment?
---If destroy, setup up new L3 Outbound Transparent Proxy Topology.
+#. Within VScode, there are several directories within the Explorer pane on the left.  The **appworld_ansible_playbooks** directory contains the Ansible Playbooks that will be used in this lab. The **playbooks** directory contains the playbook files related to the |f5_bigip_link| collection.
+
+   .. image:: images/vscode-playbooks.png
+      :align: left
+
+   .. 
+      Comment: This images/vscode-playbooks.png screenshot might need to be revised for updates to the appworld_ansible_playbooks. 
+      2/12/2026
+
+
+#. Take a few moments to explore both the **appworld_ansible_playbooks** and **playbooks** directories to familiarize yourself with the structure and contents of the Ansible Playbooks that will be used in this module. This will help you understand how the playbooks are organized and how they interact with the F5 BIG-IP SSL Orchestrator environment.
+
+Here is an example of the structure of the Ansible Playbooks within the **appworld_ansible_playbooks** directory:
+
+.. image:: images/vscode-playbook-structure.png
+   :align: left
+
+|
+
+Completion of this section
+--------------------------------
+
+Now that we have enabled the Ansible environment and explored the playbooks, we are ready to move on to the next section where we will execute several Ansible Playbooks to automate tasks within the F5 BIG-IP SSL Orchestrator environment.
+
+
+
+.. |f5_bigip_link| raw:: html
+
+      <a href="https://clouddocs.f5.com/products/orchestration/ansible/devel/f5_bigip/modules_2_0/module_index.html" target="_blank"> f5.bigip</a>

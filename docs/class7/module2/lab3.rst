@@ -89,7 +89,7 @@ No user authentication will be enabled at this time.
 
 |
 
-Create Services
+Services List
 --------------------------------------------------------------------------------
 
 #. There will be one Inspection Service **ssloS_F5_UC**.  Recall that this service was created by the **SSLO User Coaching** script.
@@ -103,7 +103,7 @@ No additional services need to be created at this time.
 
 |
 
-Create Service Chains
+Service Chains List
 --------------------------------------------------------------------------------
 
 #. This section is blank, because we have not yet created any Service Chains. We will create one in a upcoming section to demonstrate the **user coaching** function.

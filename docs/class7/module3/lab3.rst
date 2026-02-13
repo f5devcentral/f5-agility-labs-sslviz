@@ -78,7 +78,7 @@ Now that we have confirmed the DoH Guardian configuration objects were successfu
 
 #. Go to the **BIG-IP SSLO** GUI tab in your web browser and navigate to **SSL Orchestrator > Configuration**. 
 
-#. Click on **Service Chains** and then click on the **ssloSC_user_coaching** Service Chain.  
+#. Click on **Service Chains** and then click on the **ssloSC_combined_chain** Service Chain.  
 
    .. image:: images/doh-service-chain-add.png
       :align: left
