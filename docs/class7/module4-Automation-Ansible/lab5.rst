@@ -82,14 +82,13 @@ Example Wireshark filters to try:
    - ip.src == <client IP address>
    - ip.dst == <destination IP address>
    - ip.src == <client IP address> && http
+   - ip.src == <client IP address> && http.host contains "<host of interest>"
 
 |
 
-This Wireshark TAP service provides a powerful tool for gaining visibility into the traffic flowing through your environment, allowing you to analyze and understand the behavior of the traffic in detail. This can be invaluable for troubleshooting, performance analysis, and security monitoring. 
+This Wireshark TAP service provides a powerful tool for gaining visibility into the traffic flowing through your environment, allowing you to analyze and understand the behavior of the traffic in detail. This can be invaluable for client behaviors, troubleshooting, and security monitoring. 
 
 .. note:: For Example: you can use this capability to create more complex Services, Service Chains, and Security Policies to isolate and inspect specific users of interest (Client IP Subnet Match), and use this Wireshark TAP service to gain insights into that traffic for further analysis.
-
-
 
 |
 
@@ -98,4 +97,4 @@ Conclusion and Next Steps
 
 Within the lab, you have successfully deployed a new L3 Outbound Transparent Proxy Topology with an inline TAP Service using Ansible Playbooks, and verified the functionality of the Wireshark TAP service by capturing and analyzing traffic live within a Wireshark endpoint. This demonstrates the power of automation as well as the value of having a TAP service to gain visibility into the traffic flowing through your environment. 
 
-Our next steps will involve deploying a Secure Web Gateway (SWG) service and modifying the Service Chain to pick and choose which Services we will use. This will allow us to see how we can use Ansible to modify existing configurations and add new components to further customize our SSL Orchestrator deployment.
+Our next steps will involve deploying a new Secure Web Gateway (SWG) service and modifying the Service Chain to pick and choose which Services we will use. This will allow us to see how we can use Ansible to modify existing configurations and add new components to further customize our SSL Orchestrator deployment.

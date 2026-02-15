@@ -94,17 +94,16 @@ Completion of this section and Lab Reset
 Now that we have enabled the Ansible environment and explored the playbooks, we are ready to move on to the next section where we will execute several Ansible Playbooks to automate tasks within the F5 BIG-IP SSL Orchestrator environment.
 
 In order to have a fresh environment to work with, we will first execute the **remove-previous-config.yaml** playbook which will delete all existing Topologies, Security Policies, and SSL Configurations related to everything we've built so far. This will allow us to start with a clean slate as we work through the next sections of this module.
-   
-.. note:: 
-      
-   This will keep the existing Services and Service Chains intact. This is intentional as it allows you to reuse services if needed if you want to rebuild or explore options.  
-
-|
 
 .. code-block:: text
 
    ansible-playbook -i notahost, appworld_ansible_playbooks/remove-previous-config.yaml
-   
+
+|
+
+.. note:: This will keep the existing Services and Service Chains intact. This is intentional as it allows you to reuse services if needed if you want to rebuild or explore options.  
+
+|   
 
 .. |f5_bigip_link| raw:: html
 
