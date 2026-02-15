@@ -40,4 +40,4 @@ There are additional labs if you want to explore other Service Extensions. They 
    module*/module*
    conclusion.rst
    appendix/appendices.rst
-   additional_labs/module*
+   additional_labs/module.rst
