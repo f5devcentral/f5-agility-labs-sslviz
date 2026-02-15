@@ -19,7 +19,7 @@ In this lab, you will the existing L3 Outbound Topology that was created in prev
 
 .. toctree::
    :caption: CONTENTS
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
 
   module*/module*

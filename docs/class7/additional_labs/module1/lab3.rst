@@ -62,12 +62,12 @@ View the reported headers before adding the SaaS Tenant Isolation Service
 Click on the **SSL Orchestrator** tab on the left side of the GUI, and then click **Configuration**.
 
 
-Add SaaS Tenant Isolation to the existing *User Coaching* Service Chain
+Add SaaS Tenant Isolation to the existing *combined_chain* Service Chain
 --------------------------------------------------------------------------------
 
 It's time to add the SaaS Isolation Service to the existing Service Chain that was created in the previous lab.
 
-#. Click on the **Service Chains** tab and click the existing Service Chain **ssloSC_user_coaching**.
+#. Click on the **Service Chains** tab and click the existing Service Chain **ssloSC_combined_chain**.
 
    .. image:: ./images/saas-service-chain.png
       :align: left

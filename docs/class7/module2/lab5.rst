@@ -19,7 +19,7 @@ Create a new Service Chain that contains the user coaching service (ssloS_F5_UC)
 
 #. From the **Service Chain List**, click on the **Add** button.
 
-#. Enter ``user_coaching`` in the **Name** field.
+#. Enter ``combined_chain`` in the **Name** field.
 
 #. Double-click on the **ssloS_F5_UC** Service to add it to the Service Chain. 
 
@@ -56,9 +56,9 @@ The final step is to update the **Security Policy** to use the new **Service Cha
       :align: left
 
 
-#. Set **SSL Proxy Action** to **Intercept**.
+#. Ensure **SSL Proxy Action** is set to **Intercept**.
 
-#. Set **Service Chain** to **ssloSC_user_coaching**.
+#. Set **Service Chain** to **ssloSC_combined_chain**.
 
    .. image:: ./images/user-coaching-10.png
       :align: left
