@@ -99,7 +99,7 @@ The following tables provide device/service network configuration details. Login
      - IP
      - Description
    * - Management
-     - 10.1.1.7/24
+     - 10.1.1.6/24
      - Management VLAN
    * - 1.1
      - 10.1.10.7/24

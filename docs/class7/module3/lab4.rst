@@ -83,7 +83,7 @@ With the **Sinkhole** configuration created, we need to create a new L3 Outbound
 
 #. Scroll down to the bottom of the page and click on the **Save & Next** button.
 
-#. In the SSL Configurations section, click on the **Show Advanced Settings** button in the top right of the page. Leave the name as ``doh-sinkhole``.
+#. In the SSL Configurations section, click on the **Show Advanced Settings** button in the top right of the page. Leave the name as ``doh_sinkhole``.
 
    .. image:: images/doh-sinkhole-ssl-adv-setting.png
       :align: left 

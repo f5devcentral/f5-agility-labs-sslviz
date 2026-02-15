@@ -5,7 +5,7 @@ In the previous module, you manually created and deployed two **Outbound Layer 3
 
 - SSL configurations
 
-- Outbound Layer 3 Services (User Coaching and DNS-over-HTTPS Guardian)
+- Outbound Layer 3 Services
 
 - Service Chains
 
@@ -20,6 +20,11 @@ In the previous module, you manually created and deployed two **Outbound Layer 3
 
 
 In this module, we will explore the ability to automate specific functions of the SSL Orchestrator using Ansible.
+
+Examples of automation with Ansible include:
+- Automating the deployment of new topologies, services, and policies
+- Modifying existing configurations to add new services, or other components
+- Automating the deletion of existing configurations to reset the environment for new deployments or testing
 
 |
 
