@@ -1,7 +1,12 @@
-Automating a new L3 Outbound Deployment
+Automating a new L3 Outbound Deployment with TAP Service
 ================================================================================
 
 In this section, we are working with a clean slate of configuration on the BIG-IP SSL Orchestrator. We will be deploying a fresh Outbound Layer 3 Transparent Proxy Topology with a TAP Service for sending a constant stream of data to a Wireshark instance. 
+
+You will accomplish the following:
+ - Review Ansible playbooks needed for this deployment
+ - Deploy a new complete L3 Outbound Topology with TAP Inspection Service using automation
+ - Confirm TAP Inspection Service functionality by analyzing traffic in Wireshark
 
 |
 
