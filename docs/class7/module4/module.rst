@@ -1,4 +1,4 @@
-Lab 3: Automation with Ansible
+Lab 3: SSL Orchestrator Automation with Ansible
 ================================================================================
 
 In the previous module, you manually created and deployed two **Outbound Layer 3 Topologies** with the following:
