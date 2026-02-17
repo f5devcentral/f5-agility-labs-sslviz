@@ -27,7 +27,15 @@ Expected time to complete: **90 minutes** (excluding lab instructor presentation
 
 Pre-requisite: Basic familiarity with SSL Orchestrator is recommended, but not required.
 
-There are additional labs if you want to explore other Service Extensions. They are located in the *additional* section if you have time after completing the other modules in this class.  They build upon the existing **L3 Outbound** Topology.
+|
+
+Optional Labs
+-------------
+
+There are additional optional labs if you want to explore other Service Extensions if you have time after completing the other modules in this class.  They build upon the any existing **L3 Outbound** Topology built in **Lab #1** or **Lab #3**.
+
+  - Optional Lab Exercise #1: SaaS Tenant Isolation
+  - Optional Lab Exercise #2: Advanced Blocking Pages
 
 |
 
@@ -40,4 +48,3 @@ There are additional labs if you want to explore other Service Extensions. They 
    module*/module*
    conclusion.rst
    appendix/appendices.rst
-   additional_labs/module*
