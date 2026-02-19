@@ -76,7 +76,7 @@ Test Internet Access
 
 
    .. warning::
-      If the browser prompts you to **Refresh Firefox**, please **do not do it!!!**. Just  cancel the prompt.
+      If the browser prompts you to **Refresh Firefox**, please **do not do it!!!**. Just cancel the prompt.
 
       If you refresh **Firefox**, the pre-configured **subrsa.f5labs.com CA** certificate will be removed from the trusted CAs store and forged server certificates will not be trusted by the client. This lab will not work as expected.
 

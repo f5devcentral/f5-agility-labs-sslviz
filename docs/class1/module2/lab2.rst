@@ -2,17 +2,19 @@ Lab Environment Details
 ================================================================================
 
 
-BIG-IP SSL Orchestrator
+About the Lab Blueprint
 --------------------------------------------------------------------------------
 
-
-.. note::
-   This corresponding UDF blueprint is prepared using a containerized services architecture. All security services are consolidated into a single Ubuntu server instance and built using a Docker Compose file which is made available `here <https://github.com/kevingstewart/sslo-consolidated-services>`_.
-
-   Since this UDF blueprint is shared across multiple AppWorld SSL Orchestrator courses, you will only use a subset of these interfaces and services in this course. The relevant resources will be noted in each lab module.
+This section acts as reference for the configuration and resources used in multiple AppWorld SSL Orchestrator labs. The corresponding UDF blueprint supports both both outbound and inbound SSL visibility and inspection use-cases.
 
 |
 
+.. note::
+   **You will only use a subset of these interfaces and services in this course, so the relevant resources are noted at the beginning of each lab module.**
+
+|
+
+To simplify the creation of inspection services for this lab, this UDF blueprint uses a containerized services architecture. All security services are consolidated into a single Ubuntu server instance and built using a Docker Compose file which is made available `here <https://github.com/kevingstewart/sslo-consolidated-services>`_.
 
 This is a diagram of the virtual lab environment from the perspective of the BIG-IP SSL Orchestrator. The numbers inside the SSL Orchestrator box indicate the interface  numbers and VLAN tags (if applicable). The VLANs and IP subnets are either pre-configured or will be configured as you work through the lab exercises.
 
