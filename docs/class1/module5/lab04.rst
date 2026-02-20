@@ -28,6 +28,8 @@ You must associate the new **malware_scan** **Service Chain** with a **Security 
 
    |
 
+#. Click on the **OK** button to accept the changes.
+
 #. Scroll down to the bottom and click on the **Deploy** button.
 
 #. When prompted for confirmation, click on **Deploy** again.

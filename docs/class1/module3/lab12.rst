@@ -19,7 +19,7 @@ The following levels describe the message severity (lowest to highest):
    - **Information**: Messages that contain useful information, but may be ignored.
    - **Debug**: Messages that are only necessary for troubleshooting.
 
-Generally, higher levels contain all the messages for lower levels. For example, the **Alert** level will generally also report all messages from the **Emergency** level, and the **Debug** level will generally report all messages for all levels.
+Generally, the options that are further down the list include all of the messages for the options that appear higher up on the list. For example, the **Alert** level will generally also report all messages from the **Emergency** level, and the **Debug** level will generally report all messages for all levels.
 
 #. Leave the default log settings.
 

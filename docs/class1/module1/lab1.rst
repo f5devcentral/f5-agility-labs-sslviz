@@ -31,9 +31,18 @@ Dynamic service chaining effectively breaks the daisy chain paradigm by
 processing specific connections based on context provided by the
 Security Policy, that then allows specific types of traffic to flow
 through arbitrary chains of services. These service chains can include
-five types of services: layer 2 inline services, layer 3 inline
-services, receive-only services, ICAP services, and HTTP web proxy
-services.
+the following service types:
+
+.. hlist::
+   :columns: 2
+
+   - Inline Layer 2 (e.g., L2 IPS)
+   - Inline Layer 3 (e.g., NGFW)
+   - Inline HTTP (e.g., web proxy/URL filter)
+   - ICAP (e.g., Antivirus, DLP)
+   - Receive-only Tap (e.g., forensic monitoring)
+   - F5 on-box module (e.g., Advanced WAF).
+
 
 **Topologies**
 
@@ -53,6 +62,7 @@ options:
    - Inbound reverse proxy
    - Existing application
    - Inbound layer 2
+
 
 **Security Policy**
    The SSLO Security Policy provides a rich set of context-aware methods to
