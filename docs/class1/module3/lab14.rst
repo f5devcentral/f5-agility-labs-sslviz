@@ -78,7 +78,12 @@ Test Internet Access
    .. warning::
       If the browser prompts you to **Refresh Firefox**, please **do not do it!!!**. Just cancel the prompt.
 
-      If you refresh **Firefox**, the pre-configured **subrsa.f5labs.com CA** certificate will be removed from the trusted CAs store and forged server certificates will not be trusted by the client. This lab will not work as expected.
+      If you refresh **Firefox**, the pre-configured **subrsa.f5labs.com and f5labs.com CA** certificates will be removed from the trusted CAs store and forged server certificates will not be trusted by the client. This lab will not work as expected.
+
+
+   .. note::
+      Firefox automatic updates are enabled (for security). If you see a **Welcome back** pop-up, click on the **Not now** link or **X** button. **Do not click** on the *Open my links* button.
+
 
 #. Enter https://www.f5.com in the browser address bar.
 
@@ -102,6 +107,9 @@ Test Internet Access
    
    |
 
+#. Close the **Certificate** information tab and the **Page Info** window.
+
+|
 
 .. Note::
    You can also connect using the **Chrome** browser and verify that the **subrsa.f5labs.com CA** certificate is being used to forge remote server certificates.
@@ -116,4 +124,4 @@ Test Internet Access
 
 This the end of Lab 1.
 
-You now have a working layer 3 outbound transparent forward proxy that is able to decrypt client traffic. In the next lab module, you will continue to build on this deployment.
+You now have a working layer 3 outbound transparent forward proxy that is able to decrypt client traffic. In the next lab module, you will build on this deployment.

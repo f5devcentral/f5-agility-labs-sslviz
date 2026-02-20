@@ -6,7 +6,7 @@ Create Interception Rule
 
 |
 
-The **Interception Rule** determines which traffic to process. For an L3 Outbound topology, you will accept traffic from and to all destinations and ports on the client-facing interface.
+The **Interception Rule** determines which traffic to process. For an L3 Outbound topology, you will accept traffic on the client-facing interface that is destined for any IP address and any L4 port.
 
 
 #. Leave the default **Destination Address/mask** value as ``0.0.0.0%0/0``.

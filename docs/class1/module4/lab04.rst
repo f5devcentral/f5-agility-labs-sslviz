@@ -5,6 +5,11 @@ The SSL Orchestrator Dashboard provides valuable at-a-glance information regardi
 
 #. Navigate to the SSL Orchestrator **Dashboard** tab and review the analytics provided.
 
+   .. note::
+      If no data is shown in the Dashboard, change the time period from **Last day** to **Last hour**.
+
+   |
+
    .. image:: ./images/dashboard-1.png
       :align: center
 

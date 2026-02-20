@@ -103,12 +103,27 @@ You will now add the Wireshark **TAP** service to a **Service Chain**.
 
 #. Click on the **Save** button to return to the list of **Service Chains**.
 
+   |
+
+   .. attention::
+      |
+
+      A yellow "pending changes" notification banner will appear below the **Guided Configuration** workflow path.
+
+      .. image:: ./images/pending-changes.png
+         :align: center
+
+      **DO NOT click** on the Deploy button at this time.
+
+      |
+
    .. image:: ./images/sc-3.png
       :align: center
 
    |
 
 #. Click on the **Save & Next** button to continue.
+
 
 
 Edit the Security Policy

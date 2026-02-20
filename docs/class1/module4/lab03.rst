@@ -20,7 +20,7 @@ Connect to the Wireshark Service
 
    |
 
-#. In the Wireshark filter bar, enter ``tcp.port == 443`` so that only relevant traffic is displayed.
+#. In the Wireshark filter bar, enter ``tcp.port == 443 and http`` so that only relevant traffic is displayed.
 
    .. image:: ./images/ws-2.png
       :align: center
@@ -42,7 +42,7 @@ Display Decrypted Traffic
 
 #. Switch to your **WIRESHARK TAP** tab and review the traffic.
 
-   You should see some cleartext HTML in the packet capture. This was decrypted by SSL Orchestrator and sent to the **wireshark TAP** Service for inspection (and visualized in the Wireshark web interface).
+   You should see some cleartext HTML in the packet capture (with Protocol **HTTP**, but **Dst Port: 443**). This was decrypted by SSL Orchestrator and sent to the **wireshark TAP** Service for inspection and visualized in the Wireshark web interface.
 
    .. image:: ./images/ws-3.png
       :align: center
@@ -54,7 +54,9 @@ Display Decrypted Traffic
 Verify the Bypass Rule
 --------------------------------------------------------------------------------
 
-#. Before performing your next test, click on the **restart** button in Wireshark to clear the capture log. Do not save the capture.
+#. Before performing your next test, change the Wireshark filter to ``tcp.port == 443`` in order to see both encrypted and decrypted traffic.
+
+#. Click on the **restart** button to clear the capture log. Do not save the capture.
 
    .. image:: ./images/ws-4.png
       :align: center
@@ -77,7 +79,7 @@ Verify the Bypass Rule
 
 #. Switch to your **WIRESHARK TAP** tab and review the traffic.
 
-   You should not see any cleartext HTML in the packet capture. All packets on TCP port 443 is identified as **TLS** (encrypted) traffic.
+   Find the **Client Hello** packet that contains and **SNI** value with a **bankofamerica.com** domain name. All related packets are identified as **TLS** (encrypted) traffic. You will still see decrypted traffic for other URLs (3rd party domains) that do not match the **urlf_bypass** rule.
 
    .. image:: ./images/ws-5.png
       :align: center
