@@ -6,25 +6,17 @@ If you are not familiar with the process for joining an F5 UDF-based course, ref
 - |join_link|
 - |interface_link|
 
-#. You should have received a course registration email that contains the **UDF Course link**. Click on the link and log into the UDF student portal.
+#. You should have received a course registration email that contains the course link. Click on the link and log into the UDF student portal.
 
    .. important::
       If MFA is not configured for your account, you will be asked to set it up before proceeding.
 
 
-#. Click on the **JOIN** button to enter the lab session. You will see 3 tabs: **Overview**, **Documentation**, and **Deployment**. The **Overview** tab will be shown.
+#. In the UDF Dashboard, you will see a list of sessions that you are registered for. Find the session for this lab and click on the **Launch** link.
 
-   .. image:: ./images/udf-overview.png
-      :align: center
+#. Click on the **JOIN** button to enter the lab session.
 
-   |
-
-#. Click on the **Documentation** tab to view lab information and a link to the Lab Guide (this document).
-
-   .. image:: ./images/udf-documentation.png
-      :align: center
-
-   |
+#. Review the information provided in the **Documentation** tab. It will also include a link to the Lab Guide (this document).
 
 #. Click on the **DEPLOYMENT** tab to see all of your lab resources.
 
@@ -40,11 +32,21 @@ If you are not familiar with the process for joining an F5 UDF-based course, ref
 
 |
 
+
+You will only need your local web browser to access the lab resources.
+
 To access a lab VM, click on the **ACCESS** link to view the remote access methods and then click on the desired option. Here is an example:
 
 .. image:: ./images/udf-access-1.png
    :align: left
 
+
+|
+
+Browser-based Remote Desktop access to the **Ubuntu-Client** is provided via the Guacamole service (**WEBRDP** access link) that runs on the **Ubuntu-Client** instance.
+
+.. image:: ./images/udf-access-2.png
+   :align: left
 
 |
 
@@ -60,14 +62,6 @@ To access a lab VM, click on the **ACCESS** link to view the remote access metho
      - WEBRDP - Browser-based RDP to **Ubuntu-Client** Desktop
    * - Ubuntu-Server
      - WIRESHARK TAP - Wireshark Web Interface
-
-|
-
-.. note::
-
-   You will only need your local web browser to access the lab resources. Browser-based Remote Desktop access to the **Ubuntu-Client** is provided via the Guacamole service (**WEBRDP** access link) that runs on the **Ubuntu-Client** instance.
-
-
 
 
 
