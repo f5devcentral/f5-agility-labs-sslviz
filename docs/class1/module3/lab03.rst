@@ -12,6 +12,15 @@ Let's first get logged into the BIG-IP SSL Orchestrator system.
    .. image:: images/initial-0.png
       :align: center
 
+   |
+
+   .. attention::
+
+      Simple passwords were used in this lab environment in order to make it easier for students to access the infrastructure. This does not follow recommended security practices of using strong passwords.
+
+      However, keep in mind that this lab environment is only accessible via an authenticated UDF login.
+
+   |
 
 #. In the left-hand menu, click on **SSL Orchestrator** to see the available options.
 
