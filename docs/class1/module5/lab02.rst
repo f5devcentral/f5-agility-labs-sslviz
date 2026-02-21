@@ -72,7 +72,7 @@ Use the following steps to create an **ICAP** inspection **Service**.
 
    |
 
-#. Enter ``/avscan`` for the **Request Modification URI Path**.
+#. Scroll down to the **Request Modification URI Path** field and enter ``/avscan``.
 
 #. Enter ``/avscan`` for the **Response Modification URI Path**.
 
@@ -85,18 +85,16 @@ Use the following steps to create an **ICAP** inspection **Service**.
 
 #. Click **Save** to return to the **Service** list.
 
+   |
 
    .. attention::
-      |
 
-      A yellow "pending changes" notification banner will appear below the **Guided Configuration** workflow path.
+      A yellow "pending changes to deploy" notification banner will appear below the **Guided Configuration** workflow path. As tempting as it may be, **DO NOT click** on the Deploy button until instructed to (later on).
 
       .. image:: ./images/service-icap-8.png
          :align: center
 
-      **DO NOT click** on the Deploy button because you will be creating another **Service** in the next section.
-
-      |
+   |
 
 |
 
@@ -130,7 +128,7 @@ Now you will create an **Inline L2** service for a **FireEye NX** appliance.
    |
 
 
-#. Click on the **Add** button in the **Network Configuration** section and use the following settings:
+#. In the **Network Configuration** section, click on the **Add** button and use the following settings:
 
    - Under **From BIGIP VLAN**, click on the **Create New** radio button.
    - Enter ``FEYE_in`` in the **Name** field.

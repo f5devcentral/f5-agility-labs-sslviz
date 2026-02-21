@@ -31,14 +31,14 @@ Now, you will create a TAP service for a Wireshark instance.
 
    |
 
-   The **Services List** page is used to define security services that SSL Orchestrator can steer traffic to. To simplify the service configuration, common product integration templates are provided in a service catalog which is separated into 6 service types:
+   The **Services List** page is used to define security services that SSL Orchestrator can steer traffic to. To simplify the service configuration, common product integration templates are provided in a service catalog which is grouped by service type:
 
-      - Inline L2
-      - Inline L3
-      - Inline HTTP
-      - ICAP
-      - TAP
-      - F5
+      - Inline Layer 2 (e.g., L2 IPS)
+      - Inline Layer 3 (e.g., NGFW)
+      - Inline HTTP (e.g., web proxy/URL filter)
+      - ICAP (e.g., Antivirus, DLP)
+      - Receive-only Tap (e.g., forensic monitoring)
+      - F5 on-box module (e.g., Advanced WAF).
 
    The service catalog also provides "generic" security service options. Depending on your computer's screen resolution, it may be necessary to scroll down to see additional services.
 
@@ -71,6 +71,17 @@ Now, you will create a TAP service for a Wireshark instance.
 
 #. Click on the **Save** button to return to the **Services** list.
 
+   |
+
+   .. attention::
+      
+      A yellow "pending changes to deploy" notification banner will appear below the **Guided Configuration** workflow path. As tempting as it may be, **DO NOT click** on the Deploy button until instructed to (later on).
+
+      .. image:: ./images/pending-changes.png
+         :align: center
+
+   |
+
    .. image:: ./images/service-tap-4.png
       :align: center
 
@@ -87,6 +98,8 @@ You will now add the Wireshark **TAP** service to a **Service Chain**.
 
 #. Click on the **Add** button to create a new **Service Chain**.
 
+   |
+
    .. image:: ./images/sc-1.png
       :align: center
 
@@ -95,6 +108,8 @@ You will now add the Wireshark **TAP** service to a **Service Chain**.
 #. Enter ``tap_only`` in the **Name** field.
 
 #. Double-click on the **ssloS_wireshark** service to move it from the **Services Available** column to the **Selected Service Chain Order** column.
+
+   |
 
    .. image:: ./images/sc-2.png
       :align: center
@@ -106,16 +121,10 @@ You will now add the Wireshark **TAP** service to a **Service Chain**.
    |
 
    .. attention::
-      |
+      
+      The yellow "pending changes to deploy" notification banner will continue to appear below the **Guided Configuration** workflow path. Ignore it until instructed to deploy the configuration changes.
 
-      A yellow "pending changes" notification banner will appear below the **Guided Configuration** workflow path.
-
-      .. image:: ./images/pending-changes.png
-         :align: center
-
-      **DO NOT click** on the Deploy button at this time.
-
-      |
+   |
 
    .. image:: ./images/sc-3.png
       :align: center
@@ -160,7 +169,7 @@ You must associate the **tap_only** **Service Chain** with **Security Policy** r
 
 #. Click on the **Add** button to create a new rule. This rule will be used to bypass decryption for web sites categorized as **Financial Data and Services** or **Health and Medicine**.
 
-#. Enter ``url_bypass`` in the **Name** field.
+#. Enter ``urlf_bypass`` in the **Name** field.
 
 #. Select **Category Lookup (All)** from the **Conditions** drop-down list and then add the **Financial Data and Services** and **Health and Medicine** URL categories. Start typing the category name to narrow the list.
 
@@ -177,6 +186,8 @@ You must associate the **tap_only** **Service Chain** with **Security Policy** r
 
    |
 
+#. The **SSL Proxy Action** is already set to **Bypass**, so there is no need to select it.
+
 #. Click on the **OK** button to return to the **Security Policy** list.
 
 
@@ -188,7 +199,7 @@ You must associate the **tap_only** **Service Chain** with **Security Policy** r
 #. Click on the **Save & Next** button to continue.
 
 
-#. In a few moments, a yellow notification banner will appear below the **Guided Configuration** workflow path. Click on the **Deploy** button to apply the changes.
+#. In a moment, the yellow notification banner will re-appear below the **Guided Configuration** workflow path. All of the necessary changes have been made, so now you can click on the **Deploy** button to apply them. You do not need to continue through the entire workflow before deploying.
 
 
    .. image:: ./images/sp-6.png
