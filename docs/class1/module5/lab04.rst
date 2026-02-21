@@ -7,7 +7,9 @@ Modify Default Rule
 You must associate the new **malware_scan** **Service Chain** with a **Security Policy** rule to send traffic to the **Services** in the **Service Chain**.
 
 
-#. Click on the **Security Policies** tab.
+#. Click on the **Security Policies** tab to view the policies list.
+
+#. Click on the **l3_outbound** policy to edit it.
 
    .. image:: ./images/policy2-1.png
       :align: center
@@ -21,7 +23,7 @@ You must associate the new **malware_scan** **Service Chain** with a **Security 
 
    |
 
-#. Edit the **All Traffic** rule and change the **Service Chain** setting to **ssloSC_malware_scan**.
+#. Edit the **All Traffic** rule and select the **malware_scan** **Service Chain**.
 
    .. image:: ./images/policy2-3.png
       :align: center

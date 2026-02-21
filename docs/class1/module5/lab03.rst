@@ -1,7 +1,7 @@
 Create a New Service Chain
 ================================================================================
 
-You will create a new **Service Chain** that contains all three **Services**.
+You will create a new **Service Chain** that contains all three **Services**. However, instead of stepping through the **Guided Configuration** wizard, you will go directly to the **Service Chains** object list to create it.
 
 
 #. Click on the **Service Chains** tab.

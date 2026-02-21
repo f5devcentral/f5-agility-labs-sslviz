@@ -3,17 +3,20 @@ Test the Configuration
 
 Test the Antivirus (ICAP) **Service** by attempting to download a virus-infected file.
 
+.. note::
+   The file download is only a test file and does not contain real malware.
+
 |
 
 Test Antivirus Service
 --------------------------------------------------------------------------------
 
-#. On the **Ubuntu-Client** WEBRDP tab, open the following link in the **Firefox** web browser: ``https://www.eicar.org/download-anti-malware-testfile/``
+#. On the **Ubuntu-Client** WEBRDP tab, open the following URL in the **Firefox** web browser: ``https://www.eicar.org/download-anti-malware-testfile/``
 
 #. When the web page appears, **hover** the mouse pointer over the padlock icon on the address bar and verify that it displays **Verified by: f5labs.com**. This confirms that SSL Orchestrator is performing TLS interception for outbound traffic.
 
 
-#. Scroll down to the section labeled **DOWNLOAD AREA**, and click on **EICAR.COM**.
+#. Scroll down to the section labeled **DOWNLOAD AREA**, and click on the **DOWNLOAD** button under **EICAR.COM**.
 
    .. image:: ./images/test-av-1.png
       :align: center
@@ -35,4 +38,4 @@ Test Antivirus Service
 
 This the end of Lab 3.
 
-You now have a working layer 3 outbound transparent forward proxy that is able to *selectively* decrypt client traffic and send it to a **Service Chain** containing 3 inspection tools (TAP, ICAP, and Inline L2).
+You now have a working **layer 3 outbound transparent forward proxy** that is able to *selectively* decrypt user traffic and send it to a **Service Chain** containing 3 inspection **Services** (TAP, ICAP, and Inline L2).
