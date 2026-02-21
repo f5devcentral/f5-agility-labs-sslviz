@@ -11,9 +11,9 @@ For this lab exercise, you will leverage the pre-configured settings as describe
 
 -  **CA certificate and private key**
 
-   In order to terminate and re-encrypt outbound SSL traffic, the SSL Forward Proxy must re-issue (forge) remote server certificates that the internal client trusts. In order to perform this re-issuance process, the BIG-IP must possess a Certificate Authority (CA) certificate and associated private key. The client must also trust this CA certificate.
+   In order to terminate and re-encrypt outbound SSL traffic, the SSL Forward Proxy must re-issue (forge) remote server certificates that the internal clients trust. Therefore, the BIG-IP must possess a Certificate Authority (CA) certificate and associated private key. The CA certificate must also be installed in the trusted CA certificates store on all clients.
 
-   A CA certificate and private key has been pre-loaded and stored in the  **subrsa.f5labs.com** object. The client machine also has a copy of the CA certificate in its trusted CAs store.
+   A CA certificate and private key has been pre-installed on the BIG-IP  (**subrsa.f5labs.com** certificate and key object). The client machine also has a copy of the CA certificate deployed in its trusted CAs store.
 
    |
 
@@ -34,3 +34,17 @@ For this lab exercise, you will leverage the pre-configured settings as describe
 
    The Guided Configuration wizard provides the option to leverage a defined gateway pool or use the system default route to reach Internet destinations.
    A system default route has been pre-configured and will be used in this lab module.
+
+   |
+
+-  **TAP service VLAN is pre-defined**
+
+   This is the VLAN that traffic egresses from the BIG-IP to the TAP inspection service.
+
+   |
+
+-  **All other VLANs and interfaces**
+
+   These objects will be configured automatically via the SSL Orchestrator UI.
+
+   |

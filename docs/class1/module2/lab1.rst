@@ -1,7 +1,7 @@
 Accessing the Virtual Lab
 ================================================================================
 
-If you are not familiar with the process for joining an F5 UDF-based training course, refer to:
+If you are not familiar with the process for joining an F5 UDF-based course, refer to:
 
 - |join_link|
 - |interface_link|
