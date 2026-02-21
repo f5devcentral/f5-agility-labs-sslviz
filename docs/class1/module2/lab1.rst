@@ -17,12 +17,14 @@ If you are not familiar with the process for joining an F5 UDF-based training co
    .. image:: ./images/udf-overview.png
       :align: center
 
+   |
 
 #. Click on the **Documentation** tab to view lab information and a link to the Lab Guide (this document).
 
    .. image:: ./images/udf-documentation.png
       :align: center
 
+   |
 
 #. Click on the **DEPLOYMENT** tab to see all of your lab resources.
 
@@ -35,40 +37,38 @@ If you are not familiar with the process for joining an F5 UDF-based training co
 
       It takes about 10 minutes for the lab resources to be provisioned and start up. Please wait until you see the green indicator beside all of the resources.
 
-   |
-
-   .. list-table::
-      :header-rows: 1
-      :widths: auto
-
-      * - Virtual Machines
-        - Access Methods Used In this Lab
-      * - BIG-IP SSL Orchestrator
-        - WEB SHELL - Browser-based SSH session
-
-          TMUI - Browser-based GUI session
-      * - Ubuntu-Server
-        - WEB SHELL - Browser-based SSH session
-
-          WEBRDP - Browser-based RDP to **Ubuntu-Client** Desktop
-      * - Ubuntu-Client
-        - WEB SHELL - Browser-based SSH session
-
-   |
-
-   To access a lab VM, click on the **ACCESS** link to view the remote access methods and then click on the desired option. Here is an example:
-
-   .. image:: ./images/udf-access-1.png
-      :align: center
 
 |
 
- .. note::
+To access a lab VM, click on the **ACCESS** link to view the remote access methods and then click on the desired option. Here is an example:
 
-    You will only need your local web browser to access the lab resources. Browser-based Remote Desktop access to the **Ubuntu-Client** is provided via the Guacamole service (**WEBRDP** access link) that runs on the **Ubuntu-Client** instance.
+.. image:: ./images/udf-access-1.png
+   :align: left
 
-    .. image:: ./images/udf-access-2.png
-       :align: center
+
+|
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Virtual Machines
+     - Access Methods Used In this Lab
+   * - BIG-IP SSL Orchestrator
+     - TMUI - Browser-based GUI session
+   * - Ubuntu-Client
+     - WEBRDP - Browser-based RDP to **Ubuntu-Client** Desktop
+   * - Ubuntu-Server
+     - WIRESHARK TAP - Wireshark Web Interface
+
+|
+
+.. note::
+
+   You will only need your local web browser to access the lab resources. Browser-based Remote Desktop access to the **Ubuntu-Client** is provided via the Guacamole service (**WEBRDP** access link) that runs on the **Ubuntu-Client** instance.
+
+
+
 
 
 .. |join_link| raw:: html
