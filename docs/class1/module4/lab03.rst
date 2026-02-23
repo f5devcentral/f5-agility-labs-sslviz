@@ -5,22 +5,29 @@ Test the Configuration
 Connect to the Wireshark Service
 --------------------------------------------------------------------------------
 
-#. From the **Deployment** tab in the UDF console, select **ACCESS > WIRESHARK TAP** for the **Ubuntu-Server** resource (*Components > Ubuntu-Server > ACCESS > WIRESHARK TAP*).
-
-   .. note::
-      This resource connects to a containerized version of Wireshark.
+#. From the **Deployment** tab in the UDF console, select **ACCESS > WIRESHARK TAP** for the **Ubuntu-Server** resource (*Components > Ubuntu-Server > ACCESS > WIRESHARK TAP*). This resource connects to a containerized version of Wireshark.
 
    A new tab will open showing the **Wireshark** web interface.
 
 
-#. Double-click on the **eth1** interface to start capturing traffic. **Do NOT select the eth0** interface because that is used for remote access to the web interface.
+#. Double-click on the **eth1** interface to start capturing traffic. 
+
+   .. attention::
+
+      **Do NOT select the eth0** interface because that is used for remote access to the web interface.
+
+   |
 
    .. image:: ./images/ws-1.png
       :align: center
 
    |
 
-#. In the Wireshark filter bar, enter ``tcp.port == 443 and http`` so that only relevant traffic is displayed.
+#. You will be prompted for permission to **"See text and images copied to the clipboard"**. Click on the **Allow** button to close the dialog box.
+
+#. In the Wireshark filter bar, enter ``tcp.port == 443 and http`` so that only relevant traffic is displayed. Don't forget to press <Enter> to apply the filter.
+
+   |
 
    .. image:: ./images/ws-2.png
       :align: center
@@ -40,7 +47,7 @@ Display Decrypted Traffic
 
    |
 
-#. Switch to your **WIRESHARK TAP** tab and review the traffic.
+#. Switch to your **Wireshark** browser tab and review the traffic.
 
    You should see some cleartext HTML in the packet capture (with Protocol **HTTP**, but **Dst Port: 443**). This was decrypted by SSL Orchestrator and sent to the **wireshark TAP** Service for inspection and visualized in the Wireshark web interface.
 
@@ -77,12 +84,15 @@ Verify the Bypass Rule
 
    |
 
-#. Switch to your **WIRESHARK TAP** tab and review the traffic.
+#. Switch to your **Wireshark** browser tab and click on the **red square** button to stop the packet capture.
 
-   Find the **Client Hello** packet that contains and **SNI** value with a **bankofamerica.com** domain name. All related packets are identified as **TLS** (encrypted) traffic. You will still see decrypted traffic for other URLs (3rd party domains) that do not match the **urlf_bypass** rule.
-
+#. Scroll up in the packet list until you find the **Client Hello** packet that contains and **SNI** value with a **bankofamerica.com** domain name. This is the start of the TLS Handshake. All related packets are identified as **TLS** (encrypted) traffic.
+   
    .. image:: ./images/ws-5.png
       :align: center
 
    |
 
+   .. note::
+
+      You will still see some decrypted traffic for other URLs (3rd party domains) that do not match the **urlf_bypass** rule.
