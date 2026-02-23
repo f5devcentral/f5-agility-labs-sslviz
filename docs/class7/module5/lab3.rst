@@ -5,14 +5,14 @@ You will now enable and test the **tenant isolation** functionality. This will i
 
 We are going to inspect the iRule to get an idea of the various services you can configure, and what we will use for testing the functionality in this lab. 
 
-You will then test before configuring SSLO by going to https://httpbin.org/headers in your **Ubuntu-Client** WEBRDP session. This will show the missing tenant control headers. Then, after modifying the configuration, you will test against that site again to show how the headers are properly inserted.
+You will then test before configuring SSL Orchestrator by going to https://httpbin.org/headers in your **Ubuntu-Client** WEBRDP session. This will show the missing tenant control headers. Then, after modifying the configuration, you will test against that site again to show how the headers are properly inserted.
 
 
 
 Inspect iRule *saas-tenant-rule*
 --------------------------------------------------------------------------------
 
-#. Go to your **BIG-IP SSLO** GUI tab and navigate to **Local Traffic > iRules** and click on the **saas-tenant-irule** iRule to view the contents. There are 250 lines to the rule, and most of that is comments to help the user understand the functionality of the iRule.  
+#. Go to your **BIG-IP SSL Orchestrator** GUI tab and navigate to **Local Traffic > iRules** and click on the **saas-tenant-irule** iRule to view the contents. There are 250 lines to the rule, and most of that is comments to help the user understand the functionality of the iRule.  
 
    .. note::
 

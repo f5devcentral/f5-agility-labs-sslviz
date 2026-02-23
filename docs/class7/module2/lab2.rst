@@ -40,7 +40,7 @@ Download the Installation Script
 
    .. tip::
 
-      Click the **copy** icon in the URL text box above and paste it into the **BIG-IP SSLO - Web Shell** session. If your local machine is Windows, press the <CTRL>-<SHIFT>-V combination to paste.
+      Click the **copy** icon in the URL text box above and paste it into the **BIG-IP SSL Orchestrator - Web Shell** session. If your local machine is Windows, press the <CTRL>-<SHIFT>-V combination to paste.
 
 
 

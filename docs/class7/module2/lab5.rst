@@ -136,4 +136,4 @@ Test User Coaching
 
       Since this persistence method is based on cookies, the user will be prompted again when the user closes and restarts the browser.  
 
-#. If the desire is to have the user only be prompted once per assigned time period, then the JA4 persistence method should be used instead.  See **Optional** Lab 6 for more information and steps to accomplish.
+#. If the desire is to have the user only be prompted once per assigned time period, then the JA4 persistence method should be used instead.  Clicking on the Next button shows the JA4 persistence instructions. 

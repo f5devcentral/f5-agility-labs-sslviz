@@ -47,8 +47,6 @@ If you are not familiar with the process for joining an F5 UDF-based training co
         - WEB SHELL - Browser-based SSH session
 
           TMUI - Browser-based GUI session
-      * - Ubuntu-Server
-        - WEB SHELL - Browser-based SSH session
       * - Ubuntu-Client
         - WEB SHELL - Browser-based SSH session
 

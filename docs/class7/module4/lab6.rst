@@ -20,7 +20,7 @@ Secure Web Gateway (SWG) is a forward-proxy security solution that provides prot
 Building a new SWG Service - Prerequisites
 -------------------------------------------------------------------------------
 
-#. To build this new SWG, we will need to ensure there is a necessary prerequisite configuration in place. The BIG-IP SSLO SWGaaS Service relies on a pre-existing SWG Per-Request policy built in side the Access portion of BIG-IP. We will confirm it is in place and inspect the flow of the policy to understand how it works.  
+#. To build this new SWG, we will need to ensure there is a necessary prerequisite configuration in place. The BIG-IP SSL Orchestrator SWGaaS Service relies on a pre-existing SWG Per-Request policy built in side the Access portion of BIG-IP. We will confirm it is in place and inspect the flow of the policy to understand how it works.  
 
 #. Go to your BIG-IP SSL Orchestrator GUI a go to Access > Profiles / Policies > Per-Request Policies. You should see the ``swg_insp_polciy`` in place. This is the policy that the SWGaaS Service will rely on to trigger traffic to be sent to the SWGaaS service for inspection. 
 

@@ -1,4 +1,4 @@
-Ansible Environment Setup and Reset of Existing SSLO Configuration
+Ansible Environment Setup and Reset of Existing SSL Orchestrator Configuration
 ================================================================================
 
 In order to ensure the proper execution of the Ansible Playbooks within this module, it is important to have a properly configured environment. This environment is provided through the **Ubuntu-Client** WebRDP session. This client is running VScode and will be the tool used to execute the Ansible Playbooks.

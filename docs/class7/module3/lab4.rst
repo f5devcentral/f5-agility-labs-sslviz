@@ -1,13 +1,13 @@
 Implement Sinkhole mode for DoH Guardian
 ========================================
 
-We have confirmed **BIG-IP SSLO** can successfully *blackhole* DoH requests we deem necessary, we will now build upon the existing DoH Guardian Service Extension by adding the capability to sinkhole DoH requests. This will allow you to display a custom blocking page to the user when a DoH request matches a specified URL Category.
+We have confirmed **BIG-IP SSL Orchestrator** can successfully *blackhole* DoH requests we deem necessary, we will now build upon the existing DoH Guardian Service Extension by adding the capability to sinkhole DoH requests. This will allow you to display a custom blocking page to the user when a DoH request matches a specified URL Category.
 
 During this portion, we will perform the following tasks:
    - Understand how *sinkhole* differs from *blackhole*.
    - Download and run the Sinkhole installation script. 
    - Configure the **Sinkhole** mode on the DoH Guardian iRule to block any DoH requests that are categorized as *Sports* or *Information Technology*.
-   - Test the new *sinkhole* finctionality by going to any site that is categorized as *Sports* or *Information Technology* by **BIG-IP SSLO**.
+   - Test the new *sinkhole* finctionality by going to any site that is categorized as *Sports* or *Information Technology* by **BIG-IP SSL Orchestrator**.
 
 
 |
@@ -25,7 +25,7 @@ The SSL Orchestrator solution requires two configurations:
 Download and run the *Sinkhole* installation script
 ---------------------------------------------------
 
-#. Go back to the **BIG-IP SSLO** *Web Shell* and run the following commands:
+#. Go back to the **BIG-IP SSL Orchestrator** *Web Shell* and run the following commands:
 
    .. code-block:: text
 
@@ -48,9 +48,9 @@ Download and run the *Sinkhole* installation script
       ./doh-create-sinkhole-internal-config.sh
 
 
-#. This will create several resources on the BIG-IP SSLO:
+#. This will create several resources on the BIG-IP SSL Orchestrator:
    - A new virtual server with the name ``sinkhole-internal-vip``
-   - A new SSL Certificate and Key named ``sinkhole-cert`` that contains an empty subject field for SSLO to dynamically modify the SAN field.  
+   - A new SSL Certificate and Key named ``sinkhole-cert`` that contains an empty subject field for SSL Orchestrator to dynamically modify the SAN field.  
    - A new Client SSL configuration named ``sinkhole-clientssl`` with the newly created sinkhole-cert (cert and key combo)
    - A new iRule named ``sinkhole-target-rule`` 
 
@@ -61,13 +61,7 @@ Create a new L3 Outbound Proxy Topology for to sinkhole functionality
 
 With the **Sinkhole** configuration created, we need to create a new L3 Outbound Proxy Topology to identify the DoH requests that need to be blocked.
 
-#. From the UDF **Deployment** tab, access the TMUI of the **BIG-IP SSL Orchestrator** and login with **admin/admin**.
-
-   .. image:: images/udf-sslo-tmui.png
-      :align: left
-
-
-#. Navigate to **SSL Orchestrator > Configuration**. Click on **Topologies**, then **add**.
+#. Return the **BIG-IP SSL Orchestrator** tab and navigate to **SSL Orchestrator > Configuration**. Click on **Topologies**, then **add**.
 
    .. image:: images/doh-sinkhole-create-topology.png
       :align: left

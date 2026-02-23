@@ -15,7 +15,7 @@ SaaS Tenant Isolation Script
 Download the Installation Script
 --------------------------------------------------------------------------------
 
-#. From the UDF **Deployment** tab, access the Web Shell of the **BIG-IP SSLO** resource. This will open a new browser tab with an SSH session (logged in as the **root** user).
+#. From the UDF **Deployment** tab, access the Web Shell of the **BIG-IP SSL Orchestrator** resource. This will open a new browser tab with an SSH session (logged in as the **root** user).
 
    .. image:: images/udf-sslo-webshell-1.png
       :align: left
@@ -37,7 +37,7 @@ Download the Installation Script
 
    .. tip::
 
-      Click the **copy** icon in the URL text box above and paste it into the **BIG-IP SSLO - Web Shell** session. If your local machine is Windows, press the <CTRL>-<SHIFT>-V combination to paste.
+      Click the **copy** icon in the URL text box above and paste it into the **BIG-IP SSL Orchestrator - Web Shell** session. If your local machine is Windows, press the <CTRL>-<SHIFT>-V combination to paste.
 
 
 Run the Installation Script
@@ -72,7 +72,7 @@ Run the Installation Script
 Verify Object Creation
 --------------------------------------------------------------------------------
 
-#. From the UDF **Deployment** tab, access the TMUI of the **BIG-IP SSLO** resource. This will open a new browser tab with a GUI session.  As before, login with **admin** / **admin**.
+#. From the UDF **Deployment** tab, access the TMUI of the **BIG-IP SSL Orchestrator** resource. This will open a new browser tab with a GUI session.  As before, login with **admin** / **admin**.
 
     .. image:: images/udf-sslo-tmui.png
       :align: left

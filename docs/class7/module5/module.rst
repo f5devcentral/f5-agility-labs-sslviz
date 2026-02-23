@@ -6,7 +6,7 @@ In this optional lab module, you will the existing L3 Outbound Topology that was
 |
 
 .. note::
-   This lab builds upon the existing **BIG-IP SSLO L3 Outbound Proxy** configuration from the previous labs:
+   This lab builds upon the existing **BIG-IP SSL Orchestrator L3 Outbound Proxy** configuration from the previous labs:
 
    - ``Lab 1: Outbound Transparent Forward Proxy with User Coaching``
    - ``Lab 2: DNS-over-HTTPS (DoH) Guardian``
