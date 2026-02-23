@@ -2,7 +2,7 @@
 Implement DoH Guardian
 ======================
 
-We have confirmed the DoH Guardian configuration objects were successfully added to BIG-IP SSLO.  We now configure the existing **L3 Outbound Proxy** to use the new service.  
+We have confirmed the DoH Guardian configuration objects were successfully added to BIG-IP SSL Orchestrator.  We now configure the existing **L3 Outbound Proxy** to use the new service.  
 
 During this lab, we will perform the following actions:
    - Review the **doh-guardian-rule** to see the various controls available.
@@ -16,7 +16,7 @@ During this lab, we will perform the following actions:
 Review the DoH Guardian iRule: *doh-guardian-irule*
 ---------------------------------------------------
 
-#. Go to the **BIG-IP SSLO** GUI tab and navigate to **Local Traffic > iRules** and click on the **doh-guardian-irule** iRule to view the contents.
+#. Go to the **BIG-IP SSL Orchestrator** GUI tab and navigate to **Local Traffic > iRules** and click on the **doh-guardian-irule** iRule to view the contents.
 
    .. note:: 
 
@@ -74,9 +74,9 @@ DOH_ANOMALY_CONDITION_UNCOMMON_TYPE_ACTION:
 Add the DoH Guardian Service to the existing Service Chain
 ----------------------------------------------------------
 
-Now that we have confirmed the DoH Guardian configuration objects were successfully added to BIG-IP SSLO, we will add the DoH Guardian Service to the existing Service Chain.  
+Now that we have confirmed the DoH Guardian configuration objects were successfully added to BIG-IP SSL Orchestrator, we will add the DoH Guardian Service to the existing Service Chain.  
 
-#. Go to the **BIG-IP SSLO** GUI tab in your web browser and navigate to **SSL Orchestrator > Configuration**. 
+#. Go to the **BIG-IP SSL Orchestrator** GUI tab in your web browser and navigate to **SSL Orchestrator > Configuration**. 
 
 #. Click on **Service Chains** and then click on the **ssloSC_combined_chain** Service Chain.  
 
@@ -102,7 +102,7 @@ Configure the Firefox browser in the Ubuntu-Client to use Google's DoH server
    .. image:: images/doh-firefox-configure.png
       :align: left
 
-#. In order to force all browsing to use DNS-over-HTTPS, click the **Max Protection** radial button. 
+#. In order to force all browsing to use DNS-over-HTTPS, click the **Max Protection** radio button. 
 
 #. In the **Choose provider** text box, type the following:
 
@@ -127,7 +127,7 @@ So far, we have inspected the **doh-guardian-irule**,  added the **ssloS_F5_DoH*
 
 This lab is automatically configured to log all DNS-over-HTTPS requests to the local log file (/var/log/ltm). 
 
-#. Go back to your **BIG-IP SSLO** in your UDF Environment and open the **Web Shell**.  From there you can view the running logs with the following command.  
+#. Go back to your **BIG-IP SSL Orchestrator** in your UDF Environment and open the **Web Shell**.  From there you can view the running logs with the following command.  
 
    .. code-block:: text
 

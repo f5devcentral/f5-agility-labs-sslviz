@@ -1,7 +1,7 @@
 Ansible Playbooks we can use in this lab
 =========================================
 
-The |GitHub| SSLO API Reference repository contains sets of example playbooks to configure SSL Orchestrator:
+The |GitHub| SSL Orchestrator API Reference repository contains sets of example playbooks to configure SSL Orchestrator:
 
 |
 
@@ -66,4 +66,4 @@ The |GitHub| SSLO API Reference repository contains sets of example playbooks to
 
 .. |delete all SSLO config| raw:: html
 
-      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/utilities/sslo-delete-all.yaml" target="_blank"> Delete SSLO Playbook</a> 
+      <a href="https://github.com/f5devcentral/sslo-api-reference/blob/main/utilities/sslo-delete-all.yaml" target="_blank"> Delete SSL Orchestrator Playbook</a> 

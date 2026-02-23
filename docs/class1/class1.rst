@@ -20,8 +20,7 @@ SSL Orchestrator helps to mitigate inbound and outbound threats including exploi
 This lab provides a hands-on introduction to the F5 BIG-IP SSL Orchestrator solution.
 
 
-Expected time to complete: **2 hours**
-
+Expected time to complete: **90 minutes** (excluding lab instructor presentations)
 
 Pre-requisites: None.
 

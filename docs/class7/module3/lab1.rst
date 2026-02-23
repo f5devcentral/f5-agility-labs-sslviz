@@ -1,4 +1,4 @@
-Using SSLO with DNS-over-HTTPS Guardian
+Using SSL Orchestrator with DNS-over-HTTPS Guardian
 =======================================
 |
 

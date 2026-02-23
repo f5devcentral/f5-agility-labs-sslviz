@@ -92,7 +92,7 @@ No user authentication will be enabled at this time.
 Services List
 --------------------------------------------------------------------------------
 
-#. There will be one Inspection Service **ssloS_F5_UC**.  Recall that this service was created by the **SSLO User Coaching** script.
+#. There will be one Inspection Service **ssloS_F5_UC**.  Recall that this service was created by the **SSL Orchestrator User Coaching** script.
 
    .. image:: ./images/l3outbound-services.png
       :align: left

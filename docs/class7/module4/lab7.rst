@@ -1,7 +1,7 @@
 Conclusion
 =============================
 
-To conclude this lab, we have successfully built new SSLO Services using Ansible automation playbooks.  
+To conclude this lab, we have successfully built new SSL Orchestrator Services using Ansible automation playbooks.  
 
 We demonstrated to ability to dynamically modify configuration objects within SSL Orchestrator. This is a critical capability to have when you are looking to operationalize your forward proxy deployment with various services to scale and adapt to the needs of your environment.
 

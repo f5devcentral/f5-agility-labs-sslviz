@@ -3,18 +3,19 @@ Deploy DoH Guardian Configuration Objects
 
 |
 
-The **Serivce Extension** DNS-over-HTTPS (**DoH**) Guardian provides the functionality to detect DoH requests and apply policies for logging, management, and anomaly detection. There is a one-line script that we will use to deploy the necessary objects.
+The **Service Extension** DNS-over-HTTPS (**DoH**) Guardian provides the functionality to detect DoH requests and apply policies for logging, management, and anomaly detection. There is a one-line script that we will use to deploy the necessary objects.
 
 - The script creates the following objects:
 
-asdfasdfa
+- iRule: ``doh-guardian-rule``
+- SSL Orchestrator Service: ``ssloS_F5_DoH``
 
 |
 
 Download the installation script
 --------------------------------
 
-#. From the UDF **Deployment** tab, access the web shell of the **BIG-IP SSLO** resource. This will open a new browser tab with an SSH session (logged in as the **root** user).
+#. From the UDF **Deployment** tab, access the web shell of the **BIG-IP SSL Orchestrator** resource. This will open a new browser tab with an SSH session (logged in as the **root** user).
 
    .. image:: images/udf-sslo-webshell-1.png
       :align: left
@@ -36,7 +37,7 @@ Download the installation script
 
    .. tip::
 
-      Click the **copy** icon in the URL text box above and paste it into the **BIG-IP SSLO - Web Shell** session. If your local machine is Windows, press the <CTRL>-<SHIFT>-V combination to paste.
+      Click the **copy** icon in the URL text box above and paste it into the **BIG-IP SSL Orchestrator - Web Shell** session. If your local machine is Windows, press the <CTRL>-<SHIFT>-V combination to paste.
 
 |
 
@@ -71,13 +72,7 @@ Run the Installation Script
 Verify Object Creation
 ----------------------
 
-#. From the UDF **Deployment** tab, access the TMUI of the **BIG-IP SSLO** resource. This will open a new browser tab with a GUI session.  As before, login with **admin** / **admin**.
-
-   .. image:: images/udf-sslo-tmui.png
-      :align: left
-
-
-#. Navigate to **Local Traffic > iRules** and verify that the following iRules are present.
+#. Return the BIG-IP TMUI page and navigate to **Local Traffic > iRules** and verify that the following iRules are present.
 
    - **doh-guardian-rule**
 
