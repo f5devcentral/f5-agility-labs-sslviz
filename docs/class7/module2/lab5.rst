@@ -100,13 +100,15 @@ The presentation of the user coaching prompt is determined by a URL category mat
 
       Unencrypted Cookie Value Settings
 
-#. Alternatively, you can encrypt the cookie value with an AES value of your choice. In this example, remove the comment from the ``set static::COOKIE_KEY "AES 128 b55c4753cba6adaa0e4ea7640504d9b4"`` and add a comment to the ``set static::COOKIE_KEY ""`` line.
+#. Optionally, *and not required for the lab*, you can encrypt the cookie value with an AES value of your choice. In this example, remove the comment from the ``set static::COOKIE_KEY "AES 128 b55c4753cba6adaa0e4ea7640504d9b4"`` and add a comment to the ``set static::COOKIE_KEY ""`` line.
 
    .. figure:: images/uc-cookie-key-2.png
       :alt: Encrypted Cookie Value
       :align: left
 
       Encrypted Cookie Value Settings
+
+.. note:: Encrypting the cookie is not a requirement of this lab. It is here to offer additional options if your organization requires cookies to be encrypted.  
 
 #. Whichever method you decide to use, *encrypted* or *unencrypted*, ensure you click on the **Update** button to save any changes.
 
