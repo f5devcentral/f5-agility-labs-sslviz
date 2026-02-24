@@ -14,6 +14,26 @@ User Coaching Script
    - user-coaching-html iFile - contains the user coaching HTML template.
    - user-blocking-html iFile - contains the user blocking HTML template.
 
+|
+
+Quick Prerequisite check
+-------------------------
+
+After your lab is spun up, we need to ensure the SSL Orchestrator Module is ready to configure.
+
+|
+
+#. From the UDF **Deployment** tab, access the TMUI of the **BIG-IP SSL Orchestrator** resource and login as the **admin** user with the password **admin**.
+
+   .. image:: images/udf-sslo-tmui.png
+      :align: left
+
+#. Click on **SSL Orchestrator** and check the top right icons. If there is a red icon in the top right, click it and follow the prompts to fully initialize the module.
+
+   .. image:: images/initialize_sslo.png
+      :align: left
+
+|
 
 Download the Installation Script
 --------------------------------------------------------------------------------
