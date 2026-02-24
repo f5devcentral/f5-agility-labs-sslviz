@@ -149,6 +149,10 @@ Modify Interception Rule
 
 #. Click **Deploy**
 
+.. note:: 
+   You will see a new information bubble next to the ``sslo_doh_sinkhole`` Topology.  This is expected as we have manually modified how the interception rules will occur with the Topology.
+   
+
 Modify the *doh-guardian-rule* iRule
 ------------------------------------
 

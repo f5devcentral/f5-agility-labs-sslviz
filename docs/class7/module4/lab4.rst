@@ -50,7 +50,7 @@ Initialize the Ansible Environment
 
    .. code-block:: text
 
-      export BIGUSER='admin'   
+      export BIGPASS='admin'   
 
 
 #. After running the above commands, you should see the terminal prompt change to indicate that you are now in the Ansible virtual environment. You can now proceed to execute the Ansible Playbooks as needed for this module.

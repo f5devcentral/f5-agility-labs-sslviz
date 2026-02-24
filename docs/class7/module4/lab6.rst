@@ -27,6 +27,8 @@ Building a new SWG Service - Prerequisites
 .. image:: images/per-request-gui.png
    :align: left
 
+|
+
 .. note:: Please let an instructor know if the policy is not in place, as it is a necessary prerequisite for the SWGaaS Service to function properly.   
 
 .. 
@@ -36,6 +38,8 @@ Building a new SWG Service - Prerequisites
 
 .. image:: images/swg_policy_vpe.png
    :align left
+
+|
 
 #. Now that we have confirmed the necessary prerequisite configuration is in place, we can move on to deploying the new SWGaaS Service.
 
@@ -55,10 +59,14 @@ Building a new SWGaaS Service - Install and Assign
 .. image:: images/swg-install.png
    :align: left
 
+|
+
 #. After the playbook has completed successfully, take a few moments to explore the new configuration on the BIG-IP SSL Orchestrator through the GUI. You should see the new SWG Service in place and ready to go. 
 
 .. image:: images/swg-install-confirm.png
    :align: left
+
+|
 
 #. Now that the new service is installed, we will need to attach it to the existing Service Chain ``ansible_chain``.  Additionally, we will modify the Service Chain to *only* use the new SWG Service.  
 
