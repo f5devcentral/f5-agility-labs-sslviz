@@ -33,7 +33,6 @@ Pre-requisite: Basic familiarity with SSL Orchestrator is recommended, but not r
 There are additional optional labs if you want to explore other Service Extensions if you have time after completing the other modules in this class.  They build upon the any existing **L3 Outbound** Topology built in **Lab #1** or **Lab #3**.
 
   - Optional Lab Exercise #1: SaaS Tenant Isolation
-  - Optional Lab Exercise #2: Advanced Blocking Pages
 
 |
 

@@ -69,8 +69,8 @@ Wireshark TAP Inspection Service Flow Diagram
 
 #. This will open a new browser tab and display the Wireshark interfaces available on the Ubuntu Server. Select the interface that corresponds to the incoming TAP service (it will be labeled ``eth1``) and double click on it to start viewing traffic.
 
-.. image:: images/wireshark-screem.png
-      :align: left
+.. image:: images/wireshark-screen.png
+   :align: left
 
 .. note:: You may not see any traffic immediately. This is because the TAP service only captures traffic that is flowing through the new L3 Outbound Transparent Proxy Topology, so we will need to generate some traffic to see it in action.
 

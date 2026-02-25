@@ -37,7 +37,7 @@ Building a new SWG Service - Prerequisites
 #. Here is the example of the flow of the SWG Per-Request policy.
 
 .. image:: images/swg_policy_vpe.png
-   :align left
+   :align: left
 
 |
 
