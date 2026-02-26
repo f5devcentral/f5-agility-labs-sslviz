@@ -1,47 +1,43 @@
-.. role:: red
-.. role:: bred
-
 Conclusion
 ================================================================================
 
-This is the end of the **SSLO 101: Essential SSL Visibility with SSL Orchestrator** lab. Thank you for participating!
+Congratulations! You made it to the end of the lab.
 
-You may now close your RDP session and log out of the UDF lab environment.
+Please click on the **Leave and Delete** button to exit the UDF lab.
 
-The lab environment will also shut down automatically at the end of the scheduled class time.
+Note that the lab environment will also shut down automatically at the end of the scheduled class time.
 
 |
 
 .. attention::
 
-   Please complete the **Agility Labs Survey** and provide your feedback to help us make this lab even better.
+   Please complete the **AppWorld Survey** and provide your feedback to help us make this lab even better.
 
    Thank you for participating!
 
 |
 
-SSL Orchestrator Labs
+Explore More SSL Orchestrator Labs
 ================================================================================
 
 To learn more about SSL Orchestrator, consider attending one of the other labs in this series:
 
-- `SSLO 101: Essential SSL Visibility with SSL Orchestrator <../class1/class1.html>`_
-- `SSLO 201: Advanced Use Cases with SSL Orchestrator <../class2/class2.html>`_
-- `SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud <../class3/class3.html>`_
+- `All SSL Orchestrator Lab Guides <../classes.html>`_
 
 |
 
 Contributors
 ================================================================================
 
-This lab and related presentation content wouldn't exist without the dedication of the following individuals:
+This lab and related content wouldn't exist without the dedication of the following individuals:
 
 - Kevin Stewart
-- Jack Fenimore
-- Nilesh Mistry
 - Jason Chiu
+- Nilesh Mistry
+- Jack Fenimore
 - Reed Shipley
 - Michael Wang
+- Countless lab testers
 
 
 Revision History
@@ -69,6 +65,9 @@ Revision History
    * - SSLO 9.x (Agility 2022)
      - Michael Wang, Nilesh Mistry
      - Updated to BIG-IP 16.1/SSLO 9.x
+   * - SSLO 13.x (AppWorld 2026)
+     - Jason Chiu, Nilesh Mistry
+     - Updated to BIG-IP 21.0/SSLO 13.x
 
 |
 

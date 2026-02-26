@@ -25,9 +25,7 @@ SSL Orchestrator Labs
 
 To learn more about SSL Orchestrator, consider attending one of the other labs in this series:
 
-- `SSLO 101: Essential SSL Visibility with SSL Orchestrator <../class1/class1.html>`_
-- `SSLO 201: Advanced Use Cases with SSL Orchestrator <../class2/class2.html>`_
-- `SSLO 301: Automating SSL Orchestrator Deployments in Public Cloud <../class3/class3.html>`_
+- `All SSL Orchestrator Lab Guides <../classes.html>`_
 
 |
 

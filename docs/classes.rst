@@ -9,19 +9,15 @@ Latest Labs
    :glob:
 
    class1/class*
-   class5/class*
    class2/class*
    class6/class*
+   class7/class*
    class3/class*
-   class4/class*
 
 
 Archived Labs
 --------------------------------------------------------------------------------
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
+- `Deprecated Lab Guides - Older SSL Orchestrator Versions <./archived.html>`_
 
-   archive*/archive*
 
