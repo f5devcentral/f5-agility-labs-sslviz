@@ -125,3 +125,48 @@ This supplemental content covers concepts related to the lab exercises and promo
 .. image:: ./images/slide24.png
    :align: left
 
+|
+
+.. image:: ./images/slide25.png
+   :align: left
+
+|
+
+.. image:: ./images/slide26.png
+   :align: left
+
+|
+
+.. image:: ./images/slide27.png
+   :align: left
+
+|
+
+.. image:: ./images/slide28.png
+   :align: left
+
+|
+
+.. image:: ./images/slide29.png
+   :align: left
+
+|
+
+.. image:: ./images/slide30.png
+   :align: left
+
+|
+
+.. image:: ./images/slide31.png
+   :align: left
+
+|
+.. image:: ./images/slide32.png
+   :align: left
+
+|
+
+.. image:: ./images/slide33.png
+   :align: left
+
+|
