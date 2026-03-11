@@ -28,6 +28,9 @@ To define topology properties:
 
 #. Select **Any** from the **Protocol** drop-down list. This will allow the SSL Orchestrator to accept TCP, UDP, and non-TCP/non-UDP traffic.
 
+   .. attention::
+      Double-check that you selected **Any**. If you do not, your Ping tests later in this lab exercise will fail. You cannot edit this setting after you have deployed the Topology. To change it, you will have to rebuild the Topology.
+
 #. Leave the default **IP Family** setting (IPv4).
 
 #. Select the **L3 Outbound** topology type.
